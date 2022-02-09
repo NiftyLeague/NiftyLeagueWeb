@@ -143,9 +143,15 @@ function MobileNav() {
   );
 }
 
-export default function Header({ children }: { children: React.ReactNode }) {
+export default function Header({
+  children,
+  classes,
+}: {
+  children: React.ReactNode;
+  classes?: { header: string };
+}) {
   return (
-    <div className="header">
+    <header className={`header ${classes?.header || ''}`}>
       <img
         className="position-absolute eclipse-location"
         src="/img/eclipses-header.svg"
@@ -157,6 +163,6 @@ export default function Header({ children }: { children: React.ReactNode }) {
       <Navbar />
       <MobileNav />
       {children}
-    </div>
+    </header>
   );
 }

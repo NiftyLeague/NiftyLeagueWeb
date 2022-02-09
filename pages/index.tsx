@@ -125,7 +125,7 @@ const Home: NextPage = () => {
           </h2>
 
           <div className="browse-single browse-single1 subject desktop-block">
-            <img src="/img/browse-single-1-mob.svg" />
+            <img src="/img/browse-single-1-mob.svg" className="pixelated" />
           </div>
 
           <div className="browse-single browse-single3 subject desktop-block">
@@ -153,7 +153,7 @@ const Home: NextPage = () => {
           <div className="row m-0 p-0 position-relative">
             <div className="col-sm-6">
               <img
-                className="nifty-special-2 desktop"
+                className="nifty-special-2 desktop pixelated"
                 src="/img/nifty-special-2.png"
               />
             </div>
@@ -325,7 +325,7 @@ const Home: NextPage = () => {
                       <label>9/22/2021 2:49 PM</label>
                     </div>
 
-                    <img className="px-sm-4" src="/img/cribbit.png" />
+                    <img className="px-sm-4 pixelated" src="/img/cribbit.png" />
                     <div className="d-flex px-sm-4 py-3">
                       <h4 className="color-purple me-auto">4</h4>
                       <select className="ms-auto">
@@ -371,7 +371,7 @@ const Home: NextPage = () => {
                       <label>9/22/2021 2:49 PM</label>
                     </div>
 
-                    <img className="px-sm-4" src="/img/sonic.png" />
+                    <img className="px-sm-4 pixelated" src="/img/sonic.png" />
                     <div className="d-flex px-sm-4 py-3">
                       <h4 className="color-purple me-auto">4</h4>
                       <select className="ms-auto">
@@ -417,7 +417,10 @@ const Home: NextPage = () => {
                       <label>9/22/2021 2:49 PM</label>
                     </div>
 
-                    <img className="px-sm-4" src="/img/kingkong.png" />
+                    <img
+                      className="px-sm-4 pixelated"
+                      src="/img/kingkong.png"
+                    />
                     <div className="d-flex px-sm-4 py-3">
                       <h4 className="color-purple me-auto">4</h4>
                       <select className="ms-auto">
@@ -463,7 +466,10 @@ const Home: NextPage = () => {
                       <label>9/22/2021 2:49 PM</label>
                     </div>
 
-                    <img className="px-sm-4" src="/img/grimReaper.png" />
+                    <img
+                      className="px-sm-4 pixelated"
+                      src="/img/grimReaper.png"
+                    />
                     <div className="d-flex px-sm-4 py-3">
                       <h4 className="color-purple me-auto">4</h4>
                       <select className="ms-auto">
@@ -509,7 +515,7 @@ const Home: NextPage = () => {
                       <label>9/22/2021 2:49 PM</label>
                     </div>
 
-                    <img className="px-sm-4" src="/img/grapes.png" />
+                    <img className="px-sm-4 pixelated" src="/img/grapes.png" />
                     <div className="d-flex px-sm-4 py-3">
                       <h4 className="color-purple me-auto">4</h4>
                       <select className="ms-auto">
@@ -555,7 +561,7 @@ const Home: NextPage = () => {
                       <label>9/22/2021 2:49 PM</label>
                     </div>
 
-                    <img className="px-sm-4" src="/img/patches.png" />
+                    <img className="px-sm-4 pixelated" src="/img/patches.png" />
                     <div className="d-flex px-sm-4 py-3">
                       <h4 className="color-purple me-auto">4</h4>
                       <select className="ms-auto">
@@ -572,7 +578,7 @@ const Home: NextPage = () => {
             style={{ marginTop: -100, zIndex: 3 }}
           >
             <img
-              className="nifty-charact"
+              className="nifty-charact pixelated"
               src="/img/nifty-character.png"
               style={{ marginBottom: -250 }}
             />
@@ -610,8 +616,14 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row m-0 p-0 position-relative stay-informed-section">
-        <img src="/img/footer-img1.png" className="p-0 w-100 h-auto mobile" />
-        <img src="/img/footer-img.png" className="p-0 w-100 h-auto desktop" />
+        <img
+          src="/img/footer-img1.png"
+          className="p-0 w-100 h-auto mobile pixelated"
+        />
+        <img
+          src="/img/footer-img.png"
+          className="p-0 w-100 h-auto desktop pixelated"
+        />
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
           <h2 className="mt-4">Stay informed</h2>
           <p className="my-3 text-m-center">
