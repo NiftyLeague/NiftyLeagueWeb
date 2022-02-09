@@ -30,11 +30,13 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                   Browse collection
                 </button>
               </a>
-              <a href="https://app.niftyleague.com">
-                <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">
-                  Launch App
-                </button>
-              </a>
+              <Link href="/app">
+                <a>
+                  <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">
+                    Launch App
+                  </button>
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -57,26 +59,31 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           </div>
           <div className="col-sm-2 px-sm-5 col-6  px-0 pt-sm-0 pt-5">
             <div className="row m-0 p-0 position-relative">
-              <a href="#">Blog</a>
-              <a href="#" className="mt-2">
-                Merch
-              </a>
-              <a href="#" className="mt-2">
-                Docs
-              </a>
-              <a href="#" className="mt-2">
-                Join us
-              </a>
+              <Link href="/blog">
+                <a>Blog</a>
+              </Link>
+              <Link href="/shop">
+                <a className="mt-2">Merch</a>
+              </Link>
+              <Link href="/docs">
+                <a className="mt-2">Docs</a>
+              </Link>
+              <Link href="/feedback">
+                <a className="mt-2">Feedback</a>
+              </Link>
             </div>
           </div>
           <div className="col-sm-5 px-sm-5 col-12  px-0 pt-sm-0 pt-5">
             <div className="row m-0 p-0 position-relative">
-              <a href="#">Terms&nbsp;and&nbsp;Conditions</a>
+              <a href="#">Terms&nbsp;of Service</a>
+              <a href="#" className="mt-2">
+                Disclaimer
+              </a>
               <a href="#" className="mt-2">
                 Privacy Policy
               </a>
               <a href="#" className="mt-2">
-                Press Kit
+                Brand Guidelines
               </a>
             </div>
           </div>
