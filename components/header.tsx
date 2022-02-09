@@ -62,17 +62,23 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link mx-4">Blog</a>
+              <Link href="/blog">
+                <a className="nav-link mx-4">Blog</a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link mx-4">Merch</a>
+              <Link href="/shop">
+                <a className="nav-link mx-4">Merch</a>
+              </Link>
             </li>
           </ul>
-          <a href="https://app.niftyleague.com">
-            <button className="btn theme-btn-white my-3 mr-auto">
-              Launch App
-            </button>
-          </a>
+          <Link href="/app">
+            <a>
+              <button className="btn theme-btn-white my-3 mr-auto">
+                Launch App
+              </button>
+            </a>
+          </Link>
         </div>
       </div>
     </nav>
@@ -135,7 +141,9 @@ function MobileNav() {
             <a>Blog</a>
           </li>
           <li>
-            <a>Merch</a>
+            <Link href="/merch">
+              <a>Merch</a>
+            </Link>
           </li>
         </ul>
       </nav>
