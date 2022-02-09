@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-export default function Footer() {
+export default function Footer({ classes }: { classes?: { footer?: string } }) {
   return (
-    <footer className="bg-white">
+    <footer className={`bg-white ${classes?.footer || ''}`}>
       <div className="container" style={{ maxWidth: '100%' }}>
         <div className="row m-0 p-sm-5 footer-row position-relative">
           <div className="col-sm-8 px-sm-5 col-12 my-sm-0 my-2 mt-5 mt-sm-0">

@@ -231,7 +231,7 @@ const Community: NextPage = () => {
               style={{ marginBottom: 550 }}
             >
               <section
-                className="spons-slider slider px-0 my-5"
+                className="degens-slider slider px-0 my-5"
                 style={{ alignItems: 'center', maxWidth: '100%' }}
               >
                 <div className="slide">
@@ -532,7 +532,7 @@ const Community: NextPage = () => {
               style={{ marginTop: -100, zIndex: 3 }}
             >
               <img
-                className="nifty-charact pixelated"
+                className="nifty-character pixelated"
                 src="/img/community/character.png"
                 style={{ marginBottom: -250 }}
               />

@@ -1,6 +1,8 @@
 import '../styles/mdb.min.css';
 import '../styles/style.css';
 import '../styles/slick.css';
+import '../styles/roadmap.css';
+import '../styles/satoshi-right.css';
 import type { AppProps } from 'next/app';
 import Script from 'next/script';
 
@@ -86,15 +88,15 @@ function MyApp({ Component, pageProps }: AppProps) {
             });
         }`}
       </Script>
-      <Script id="spons-slider" type="text/javascript" strategy="lazyOnload">
+      <Script id="degens-slider" type="text/javascript" strategy="lazyOnload">
         {`$(document).ready(function() {
-            $('.spons-slider').slick({
+            $('.degens-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                centerMode: false,
+                centerMode: true,
                 variableWidth: true,
                 autoplay: true,
-                autoplaySpeed: 2500,
+                autoplaySpeed: 1000,
                 arrows: false,
                 dots: false,
                 pauseOnHover: false,
@@ -112,12 +114,12 @@ function MyApp({ Component, pageProps }: AppProps) {
             });
         });`}
       </Script>
-      <Script id="spons-slider2" type="text/javascript" strategy="lazyOnload">
+      <Script id="spons-slider" type="text/javascript" strategy="lazyOnload">
         {`$(document).ready(function() {
-            $('.spons-slider2').slick({
+            $('.spons-slider').slick({
                 slidesToShow: 4,
                 slidesToScroll: 1,
-                centerMode: false,
+                centerMode: true,
                 variableWidth: true,
                 autoplay: true,
                 autoplaySpeed: 1500,
