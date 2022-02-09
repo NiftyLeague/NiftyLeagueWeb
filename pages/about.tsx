@@ -116,7 +116,7 @@ const About: NextPage = () => {
               style={{ marginBottom: 550 }}
             >
               <section
-                className="spons-slider slider px-0 my-5"
+                className="degens-slider slider px-0 my-5"
                 style={{ alignItems: 'center', maxWidth: '100%' }}
               >
                 <div className="slide">
@@ -565,7 +565,7 @@ const About: NextPage = () => {
               <div className="nifty-teams d-flex flex-column p-5">
                 <img src="/img/about/team1.png" className="w-100 pixelated" />
                 <h3 className="mt-5">Nifty Andy</h3>
-                <label className="font-20">Web3 Dev, Game Theory</label>
+                <label className="font-20">Co-Founder, CEO</label>
                 <label className="uppercase mt-5 pt-3">fomerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">3 years</label>
@@ -575,7 +575,7 @@ const About: NextPage = () => {
               <div className="nifty-teams d-flex flex-column p-5">
                 <img src="/img/about/team2.png" className="w-100 pixelated" />
                 <h3 className="mt-5">Snarfy</h3>
-                <label className="font-20">Game Dev</label>
+                <label className="font-20">Co-Founder, CTO</label>
                 <label className="uppercase mt-5 pt-3">fomerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">8 years</label>
@@ -585,7 +585,7 @@ const About: NextPage = () => {
               <div className="nifty-teams d-flex flex-column p-5">
                 <img src="/img/about/team3.png" className="w-100 pixelated" />
                 <h3 className="mt-5">Nifty Spike</h3>
-                <label className="font-20">Creative &amp; Design</label>
+                <label className="font-20">Co-Founder, Creative Director</label>
                 <label className="uppercase mt-5 pt-3">Former clients</label>
                 <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
                 <img src="/img/about/disney.svg" className="w-100" />
@@ -601,7 +601,7 @@ const About: NextPage = () => {
                 <div className="nifty-teams d-flex flex-column p-sm-5 p-2">
                   <img src="/img/about/team1.png" className="w-100" />
                   <h3 className="mt-5">Nifty Andy</h3>
-                  <label className="font-20">Web3 Dev, Game Theory</label>
+                  <label className="font-20">Co-Founder, CEO</label>
                   <label className="uppercase mt-5 pt-3">fomerly</label>
                   <img src="/img/about/activision.svg" className="w-100 my-2" />
                   <label className="uppercase">3 years</label>
@@ -613,7 +613,7 @@ const About: NextPage = () => {
                 <div className="nifty-teams d-flex flex-column  p-sm-5 p-2">
                   <img src="/img/about/team2.png" className="w-100" />
                   <h3 className="mt-5">Snarfy</h3>
-                  <label className="font-20">Game Dev</label>
+                  <label className="font-20">Co-Founder, CTO</label>
                   <label className="uppercase mt-5 pt-3">fomerly</label>
                   <img src="/img/about/activision.svg" className="w-100 my-2" />
                   <label className="uppercase">8 years</label>
@@ -625,7 +625,9 @@ const About: NextPage = () => {
                 <div className="nifty-teams d-flex flex-column  p-sm-5 p-2">
                   <img src="/img/about/team3.png" className="w-100" />
                   <h3 className="mt-5">Nifty Spike</h3>
-                  <label className="font-20">Creative &amp; Design</label>
+                  <label className="font-20">
+                    Co-Founder, Creative Director
+                  </label>
                   <label className="uppercase mt-5 pt-3">Former clients</label>
                   <img
                     src="/img/about/nickelodeon.svg"

@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+import Image from 'next/image';
 import Layout from '../components/layout';
 
 function Header() {
@@ -227,7 +228,7 @@ const Home: NextPage = () => {
           />
           <h3 className="my-sm-5 mb-5">Nifty League is proudly backed by</h3>
           <section
-            className="spons-slider2 slider px-0 "
+            className="spons-slider slider px-0 "
             style={{ alignItems: 'center' }}
           >
             <div className="slide">
@@ -286,7 +287,7 @@ const Home: NextPage = () => {
             style={{ marginBottom: 550 }}
           >
             <section
-              className="spons-slider slider px-0 my-5"
+              className="degens-slider slider px-0 my-5"
               style={{ alignItems: 'center', maxWidth: '100%' }}
             >
               <div className="slide">
@@ -578,9 +579,10 @@ const Home: NextPage = () => {
             style={{ marginTop: -100, zIndex: 3 }}
           >
             <img
-              className="nifty-charact pixelated"
-              src="/img/nifty-character.png"
-              style={{ marginBottom: -250 }}
+              className="nifty-character pixelated"
+              src="/img/1004.png"
+              alt="Mario Degen"
+              style={{ marginBottom: -230 }}
             />
 
             <h1>

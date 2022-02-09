@@ -148,7 +148,7 @@ export default function Header({
   classes,
 }: {
   children: React.ReactNode;
-  classes?: { header: string };
+  classes?: { header?: string };
 }) {
   return (
     <header className={`header ${classes?.header || ''}`}>
