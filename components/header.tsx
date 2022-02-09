@@ -118,6 +118,11 @@ function MobileNav() {
         />
         <ul>
           <li>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/roadmap">
               <a>Roadmap</a>
             </Link>
