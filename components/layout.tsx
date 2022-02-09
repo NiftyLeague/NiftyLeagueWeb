@@ -7,11 +7,11 @@ export default function Layout({
   header,
 }: {
   children: React.ReactNode;
-  classes?: { header?: string; footer?: string };
+  classes?: { root?: string; header?: string; footer?: string };
   header: React.ReactNode;
 }) {
   return (
-    <div className="index-pg p-0 black-bg1">
+    <div className={`p-0 black-bg1 ${classes?.root || ''}`}>
       <Header classes={classes}>{header}</Header>
       <main>{children}</main>
       <Footer classes={classes} />
