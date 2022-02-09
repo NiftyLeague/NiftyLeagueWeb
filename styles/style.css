@@ -233,7 +233,7 @@ a {
   background: none;
 }
 .league-special-content .collapsible:after {
-  content: url(../public/img/vector-down.svg);
+  content: url(/img/vector-down.svg);
   color: #7cda24;
   font-weight: 600;
   float: right;
@@ -243,7 +243,7 @@ a {
   line-height: 0;
 }
 .league-special-content .collapsible.active:after {
-  content: url(../public/img/vector-up.svg);
+  content: url(/img/vector-up.svg);
   color: #620edf;
 }
 .league-special-content .collapsible.active h4 {
@@ -334,15 +334,26 @@ a {
   font-size: 14px;
   margin-top: -10px;
 }
-/*************************************** Learn**********************************************/
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+}
+/*************************************** Learn **********************************************/
 .header-learn {
   min-height: 705px;
   background: #191b1f;
-  background-image: url(../public/img/nifty-learn/learn-banner-desktop.png);
+  background-image: url(/img/nifty-learn/learn-banner-desktop.png);
+}
+.header-learn .eclipse-location {
+  display: none;
 }
 .learn-section {
   background: #191b1f;
-  background-image: url(../public/img/nifty-learn/learn-section.png);
+  background-image: url(/img/nifty-learn/learn-section.png);
 }
 .learn-content {
   max-height: 310px;
@@ -378,7 +389,7 @@ a {
   background: none;
 }
 .faq-content .collapsible:after {
-  content: url(../public/img/vector-down.svg);
+  content: url(/img/vector-down.svg);
   color: #7cda24;
   font-weight: 600;
   float: right;
@@ -387,7 +398,7 @@ a {
   line-height: 0;
 }
 .faq-content .collapsible.active:after {
-  content: url(../public/img/vector-up.svg);
+  content: url(/img/vector-up.svg);
   color: #620edf;
 }
 .faq-content .collapsible.active h4 {
@@ -572,14 +583,20 @@ a {
 }
 
 .sliding-background-desktop {
-  background: url(../public/img/icons-set.png) repeat-x;
+  background: url(/img/icons-set.png) repeat-x;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
 
   height: 100%;
   width: 5076px;
   animation: slide 60s linear infinite;
 }
 .sliding-background-mobile {
-  background: url(../public/img/icons-set-mb.png) repeat-x;
+  background: url(/img/icons-set-mb.png) repeat-x;
 
   height: 100%;
   width: 5076px;

@@ -39,14 +39,38 @@ function Header() {
         </div>
 
         <div className="icons-placement">
-          <img className="icon1 desktop" src="img/about/header-gif/icon1.png" />
-          <img className="icon2 desktop" src="img/about/header-gif/icon2.png" />
-          <img className="icon3 desktop" src="img/about/header-gif/icon3.png" />
-          <img className="icon4 desktop" src="img/about/header-gif/icon4.png" />
-          <img className="icon5 " src="img/about/header-gif/icon5.png" />
-          <img className="icon6 " src="img/about/header-gif/icon6.png" />
-          <img className="icon7 " src="img/about/header-gif/icon7.png" />
-          <img className="icon8 " src="img/about/header-gif/icon8.png" />
+          <img
+            className="icon1 desktop pixelated"
+            src="/img/about/header-gif/icon1.png"
+          />
+          <img
+            className="icon2 desktop pixelated"
+            src="/img/about/header-gif/icon2.png"
+          />
+          <img
+            className="icon3 desktop pixelated"
+            src="/img/about/header-gif/icon3.png"
+          />
+          <img
+            className="icon4 desktop pixelated"
+            src="/img/about/header-gif/icon4.png"
+          />
+          <img
+            className="icon5 pixelated "
+            src="/img/about/header-gif/icon5.png"
+          />
+          <img
+            className="icon6 pixelated "
+            src="/img/about/header-gif/icon6.png"
+          />
+          <img
+            className="icon7 pixelated "
+            src="/img/about/header-gif/icon7.png"
+          />
+          <img
+            className="icon8 pixelated "
+            src="/img/about/header-gif/icon8.png"
+          />
         </div>
       </div>
     </div>
@@ -61,7 +85,7 @@ const About: NextPage = () => {
         <meta name="description" content="About Nifty League and our team" />
       </Head>
 
-      <main className="about-pg">
+      <div className="about-pg">
         <div
           className="video-details row m-0 p-0 position-relative text-center"
           style={{ marginTop: -2 }}
@@ -73,17 +97,20 @@ const About: NextPage = () => {
 
           <div className="container video-detail-container section-margin">
             <a href="">
-              <img src="img/about/youtube-video.png" />
+              <img className="pixelated" src="/img/about/youtube-video.png" />
             </a>
           </div>
-          <img className="p-0 video-bg" src="img/about/youtube-bg.png" />
+          <img
+            className="p-0 video-bg pixelated"
+            src="/img/about/youtube-bg.png"
+          />
         </div>
         <div
           className="container p-0 desktop-block"
           style={{ maxWidth: '100%', background: '#191B1F' }}
         >
           <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5">
-            <img className="sushi-shade-1" src="img/about/sushi-1.svg" />
+            <img className="sushi-shade-1" src="/img/about/sushi-1.svg" />
             <div
               className="row m-0 p-0 position-relative py-5 py-sm-0"
               style={{ marginBottom: 550 }}
@@ -128,7 +155,10 @@ const About: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/cribbit.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/cribbit.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -174,7 +204,7 @@ const About: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/sonic.png" />
+                      <img className="px-sm-4 pixelated" src="/img/sonic.png" />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -220,7 +250,10 @@ const About: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/kingkong.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/kingkong.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -266,7 +299,10 @@ const About: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/grimReaper.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/grimReaper.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -312,7 +348,10 @@ const About: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/grapes.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/grapes.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -358,7 +397,10 @@ const About: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/patches.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/patches.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -376,7 +418,7 @@ const About: NextPage = () => {
         <div className="container">
           <div className="row m-0 position-relative section-margin nifty-degan">
             <div className="col-sm-6 position-relative">
-              <img src="img/about/nifty-degans.svg" />
+              <img src="/img/about/nifty-degans.svg" className="pixelated" />
             </div>
             <div className="col-sm-6 mt-5 mt-sm-0">
               <h2 className="text-m-left">Nifty</h2>
@@ -416,12 +458,12 @@ const About: NextPage = () => {
             </div>
             <div className="col-sm-6 position-relative nr-banner">
               <img
-                className="nifty-rental-banner"
-                src="img/about/niftyRentals.png"
+                className="nifty-rental-banner pixelated"
+                src="/img/about/niftyRentals.png"
               />
               <img
                 className="rental-grad"
-                src="img/about/niftyRentals-gradient.svg"
+                src="/img/about/niftyRentals-gradient.svg"
               />
             </div>
           </div>
@@ -429,11 +471,11 @@ const About: NextPage = () => {
           <div className="d-flex section-margin">
             <div className="ms-auto nifty-rentals-img">
               <div className="icons-placement1" style={{ display: 'none' }}>
-                <img className="icon8" src="img/about/header-gif/icon8.png" />
-                <img className="icon1" src="img/about/header-gif/icon1.png" />
-                <img className="icon2" src="img/about/header-gif/icon2.png" />
-                <img className="icon3" src="img/about/header-gif/icon3.png" />
-                <img className="icon4" src="img/about/header-gif/icon4.png" />
+                <img className="icon8" src="/img/about/header-gif/icon8.png" />
+                <img className="icon1" src="/img/about/header-gif/icon1.png" />
+                <img className="icon2" src="/img/about/header-gif/icon2.png" />
+                <img className="icon3" src="/img/about/header-gif/icon3.png" />
+                <img className="icon4" src="/img/about/header-gif/icon4.png" />
               </div>
             </div>
           </div>
@@ -477,8 +519,11 @@ const About: NextPage = () => {
           </div>
         </div>
         <div className="row m-0 p-0 position-relative text-center DAO-section">
-          <img src="img/about/bg-DAO.png" className="p-0 desktop" />
-          <img src="img/about/bg-DAO-mb.png" className="p-0 mobile" />
+          <img src="/img/about/bg-DAO.png" className="p-0 desktop pixelated" />
+          <img
+            src="/img/about/bg-DAO-mb.png"
+            className="p-0 mobile pixelated"
+          />
           <div className="position-absolute my-sm-5">
             <h1 className="font-64 my-5">Nifty DAO</h1>
             <p>
@@ -496,11 +541,11 @@ const About: NextPage = () => {
         <div className="container position-relative">
           <img
             className="abt-grad-2 desktop"
-            src="img/about/about-grad-2.svg"
+            src="/img/about/about-grad-2.svg"
           />
           <img
             className="abt-grad-2 mobile"
-            src="img/about/about-grad-2-mobile.svg"
+            src="/img/about/about-grad-2-mobile.svg"
           />
           <div className="row m-0 p-0 position-relative text-center my-5 team-section">
             <h1 className="font-64 my-5">Meet the Nifty Team</h1>
@@ -518,32 +563,32 @@ const About: NextPage = () => {
           <div className="row m-0 p-0 position-relative text-center my-5 desktop">
             <div className="col-sm-4">
               <div className="nifty-teams d-flex flex-column p-5">
-                <img src="img/about/team1.png" className="w-100" />
+                <img src="/img/about/team1.png" className="w-100 pixelated" />
                 <h3 className="mt-5">Nifty Andy</h3>
                 <label className="font-20">Web3 Dev, Game Theory</label>
                 <label className="uppercase mt-5 pt-3">fomerly</label>
-                <img src="img/about/activision.svg" className="w-100 my-2" />
+                <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">3 years</label>
               </div>
             </div>
             <div className="col-sm-4">
               <div className="nifty-teams d-flex flex-column p-5">
-                <img src="img/about/team2.png" className="w-100" />
+                <img src="/img/about/team2.png" className="w-100 pixelated" />
                 <h3 className="mt-5">Snarfy</h3>
                 <label className="font-20">Game Dev</label>
                 <label className="uppercase mt-5 pt-3">fomerly</label>
-                <img src="img/about/activision.svg" className="w-100 my-2" />
+                <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">8 years</label>
               </div>
             </div>
             <div className="col-sm-4">
               <div className="nifty-teams d-flex flex-column p-5">
-                <img src="img/about/team3.png" className="w-100" />
+                <img src="/img/about/team3.png" className="w-100 pixelated" />
                 <h3 className="mt-5">Nifty Spike</h3>
                 <label className="font-20">Creative &amp; Design</label>
                 <label className="uppercase mt-5 pt-3">Former clients</label>
-                <img src="img/about/nickelodeon.svg" className="w-100 my-2" />
-                <img src="img/about/disney.svg" className="w-100" />
+                <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
+                <img src="/img/about/disney.svg" className="w-100" />
               </div>
             </div>
           </div>
@@ -554,11 +599,11 @@ const About: NextPage = () => {
             <div className="slide">
               <div className="slide-content">
                 <div className="nifty-teams d-flex flex-column p-sm-5 p-2">
-                  <img src="img/about/team1.png" className="w-100" />
+                  <img src="/img/about/team1.png" className="w-100" />
                   <h3 className="mt-5">Nifty Andy</h3>
                   <label className="font-20">Web3 Dev, Game Theory</label>
                   <label className="uppercase mt-5 pt-3">fomerly</label>
-                  <img src="img/about/activision.svg" className="w-100 my-2" />
+                  <img src="/img/about/activision.svg" className="w-100 my-2" />
                   <label className="uppercase">3 years</label>
                 </div>
               </div>
@@ -566,11 +611,11 @@ const About: NextPage = () => {
             <div className="slide">
               <div className="slide-content">
                 <div className="nifty-teams d-flex flex-column  p-sm-5 p-2">
-                  <img src="img/about/team2.png" className="w-100" />
+                  <img src="/img/about/team2.png" className="w-100" />
                   <h3 className="mt-5">Snarfy</h3>
                   <label className="font-20">Game Dev</label>
                   <label className="uppercase mt-5 pt-3">fomerly</label>
-                  <img src="img/about/activision.svg" className="w-100 my-2" />
+                  <img src="/img/about/activision.svg" className="w-100 my-2" />
                   <label className="uppercase">8 years</label>
                 </div>
               </div>
@@ -578,18 +623,21 @@ const About: NextPage = () => {
             <div className="slide">
               <div className="slide-content">
                 <div className="nifty-teams d-flex flex-column  p-sm-5 p-2">
-                  <img src="img/about/team3.png" className="w-100" />
+                  <img src="/img/about/team3.png" className="w-100" />
                   <h3 className="mt-5">Nifty Spike</h3>
                   <label className="font-20">Creative &amp; Design</label>
                   <label className="uppercase mt-5 pt-3">Former clients</label>
-                  <img src="img/about/nickelodeon.svg" className="w-100 my-2" />
-                  <img src="img/about/disney.svg" className="w-100" />
+                  <img
+                    src="/img/about/nickelodeon.svg"
+                    className="w-100 my-2"
+                  />
+                  <img src="/img/about/disney.svg" className="w-100" />
                 </div>
               </div>
             </div>
           </section>
         </div>
-      </main>
+      </div>
     </Layout>
   );
 };

@@ -18,16 +18,16 @@ function Header() {
             </p>
           </div>
           <div className="col-sm-6 position-relative text-center com-banner">
-            <img src="img/community/moon.png" />
-            <img className="moon-grad" src="img/community/moon-grad.svg" />
+            <img src="/img/community/moon.png" />
+            <img className="moon-grad" src="/img/community/moon-grad.svg" />
           </div>
         </div>
       </div>
       <img
-        src="img/community/community-bg-1.png"
+        src="/img/community/community-bg-1.png"
         className="w-100 h-auto earth-com"
       />
-      <img className="earth-grad" src="img/community/earth-grad.svg" />
+      <img className="earth-grad" src="/img/community/earth-grad.svg" />
     </>
   );
 }
@@ -43,7 +43,7 @@ const Community: NextPage = () => {
         />
       </Head>
 
-      <main className="com-pg">
+      <div className="com-pg">
         <div className="container com-content" style={{ maxWidth: '100%' }}>
           <div className="row m-0 p-0 position-relative text-center coversation-container">
             <div className="">
@@ -60,7 +60,7 @@ const Community: NextPage = () => {
             </div>
           </div>
         </div>
-        <img className="com-grad-1" src="img/community/com-grad-1.svg" />
+        <img className="com-grad-1" src="/img/community/com-grad-1.svg" />
         <div className="container my-5">
           <div className="container d-flex flex-column align-items-center my-sm-0 mt-sm-5">
             <a href="">
@@ -75,12 +75,12 @@ const Community: NextPage = () => {
                   </div>
                   <div className="ms-auto d-flex align-items-center">
                     <img
-                      src="img/game.svg"
+                      src="/img/game.svg"
                       className="desktop"
                       style={{ width: 63, height: 48 }}
                     />
                     <img
-                      src="img/game.svg"
+                      src="/img/game.svg"
                       className="mobile"
                       style={{ width: 40, height: 40 }}
                     />
@@ -100,12 +100,12 @@ const Community: NextPage = () => {
                   </div>
                   <div className="ms-auto d-flex align-items-center">
                     <img
-                      src="img/boat.svg"
+                      src="/img/boat.svg"
                       className="desktop"
                       style={{ width: 63, height: 48 }}
                     />
                     <img
-                      src="img/boat.svg"
+                      src="/img/boat.svg"
                       className="mobile"
                       style={{ width: 40, height: 40 }}
                     />
@@ -126,12 +126,12 @@ const Community: NextPage = () => {
                   </div>
                   <div className="ms-auto d-flex align-items-center">
                     <img
-                      src="img/twitter.svg"
+                      src="/img/twitter.svg"
                       className="desktop"
                       style={{ width: 63, height: 48 }}
                     />
                     <img
-                      src="img/twitter.svg"
+                      src="/img/twitter.svg"
                       className="mobile"
                       style={{ width: 40, height: 40 }}
                     />
@@ -152,12 +152,12 @@ const Community: NextPage = () => {
                   </div>
                   <div className="ms-auto d-flex align-items-center">
                     <img
-                      src="img/twitch.svg"
+                      src="/img/twitch.svg"
                       className="desktop"
                       style={{ width: 63, height: 48 }}
                     />
                     <img
-                      src="img/twitch.svg"
+                      src="/img/twitch.svg"
                       className="mobile"
                       style={{ width: 40, height: 40 }}
                     />
@@ -175,12 +175,12 @@ const Community: NextPage = () => {
                   </div>
                   <div className="ms-auto d-flex align-items-center">
                     <img
-                      src="img/youtube.svg"
+                      src="/img/youtube.svg"
                       className="desktop"
                       style={{ width: 63, height: 48 }}
                     />
                     <img
-                      src="img/youtube.svg"
+                      src="/img/youtube.svg"
                       className="mobile"
                       style={{ width: 40, height: 40 }}
                     />
@@ -201,12 +201,12 @@ const Community: NextPage = () => {
                   </div>
                   <div className="ms-auto d-flex align-items-center">
                     <img
-                      src="img/reddit.svg"
+                      src="/img/reddit.svg"
                       className="desktop"
                       style={{ width: 63, height: 48 }}
                     />
                     <img
-                      src="img/reddit.svg"
+                      src="/img/reddit.svg"
                       className="mobile"
                       style={{ width: 40, height: 40 }}
                     />
@@ -225,7 +225,7 @@ const Community: NextPage = () => {
             className="row m-0 p-0 position-relative nifty-league-browse py-sm-5"
             style={{ minHeight: 900 }}
           >
-            <img className="sushi-shade-1" src="img/sushi-shade-1.svg" />
+            <img className="sushi-shade-1" src="/img/sushi-shade-1.svg" />
             <div
               className="row m-0 p-0 position-relative py-5"
               style={{ marginBottom: 550 }}
@@ -270,7 +270,10 @@ const Community: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/cribbit.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/cribbit.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -316,7 +319,7 @@ const Community: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/sonic.png" />
+                      <img className="px-sm-4 pixelated" src="/img/sonic.png" />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -362,7 +365,10 @@ const Community: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/kingkong.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/kingkong.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -408,7 +414,10 @@ const Community: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/grimReaper.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/grimReaper.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -454,7 +463,10 @@ const Community: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/grapes.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/grapes.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -500,7 +512,10 @@ const Community: NextPage = () => {
                         <label>9/22/2021 2:49 PM</label>
                       </div>
 
-                      <img className="px-sm-4" src="img/patches.png" />
+                      <img
+                        className="px-sm-4 pixelated"
+                        src="/img/patches.png"
+                      />
                       <div className="d-flex px-sm-4 py-3">
                         <h4 className="color-purple me-auto">4</h4>
                         <select className="ms-auto">
@@ -517,8 +532,8 @@ const Community: NextPage = () => {
               style={{ marginTop: -100, zIndex: 3 }}
             >
               <img
-                className="nifty-charact"
-                src="img/community/character.png"
+                className="nifty-charact pixelated"
+                src="/img/community/character.png"
                 style={{ marginBottom: -250 }}
               />
               <h1 className="">
@@ -556,7 +571,7 @@ const Community: NextPage = () => {
 
         <div className="container my-5">
           <div className="community-footer d-flex align-items-center text-center flex-column p-5">
-            <img className="mb-5" src="img/logo-blue.svg" />
+            <img className="mb-5" src="/img/logo-blue.svg" />
             <h3>Download Brand Assets</h3>
             <p className="font-16 mt-1">
               Commonly used where the Nifty League Branding needs to be
@@ -567,7 +582,7 @@ const Community: NextPage = () => {
             </button>
           </div>
         </div>
-      </main>
+      </div>
     </Layout>
   );
 };
