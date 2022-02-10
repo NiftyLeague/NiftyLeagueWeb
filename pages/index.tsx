@@ -84,7 +84,10 @@ const Home: NextPage = () => {
   return (
     <Layout
       header={<Header />}
-      classes={{ root: 'index-pg', header: 'header-main' }}
+      classes={{
+        root: 'index-pg',
+        footer: 'index-footer',
+      }}
     >
       <Head>
         <title>Nifty League | NFT Gaming</title>
