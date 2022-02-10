@@ -12,6 +12,9 @@
     "@emotion/styled": "^11.6.0",
     "@mui/icons-material": "^5.4.1",
     "@mui/material": "^5.4.1",
+    "classnames": "^2.3.1",
+    "date-fns": "^2.28.0",
+    "mdb-react-ui-kit": "^2.3.0",
     "next": "12.0.10",
     "react": "17.0.2",
     "react-dom": "17.0.2"

@@ -1,10 +1,12 @@
+@import '~mdb-react-ui-kit/dist/css/mdb.min.css';
+
 * {
   box-sizing: border-box;
 }
-/*************************************Font Style*************************************/
+/************************************* Font Style *************************************/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/*************************************Scroll Style*************************************/
+/************************************* Scroll Style *************************************/
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -23,7 +25,7 @@
   background: #620edf;
 }
 
-/*************************************Body, Heading, Fonts*************************************/
+/************************************* Body, Heading, Fonts *************************************/
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: white;
@@ -69,7 +71,7 @@ a {
   font-size: 16px;
 }
 
-/*************************************Font Sizes, Colors, Backgrounds*************************************/
+/************************************* Font Sizes, Colors, Backgrounds *************************************/
 .color-white {
   color: #ffffff;
 }
@@ -139,7 +141,7 @@ a {
 .header a:hover path {
   fill: #620edf;
 }
-/*************************************Themes Items*************************************/
+/************************************* Themes Items *************************************/
 .theme-btn-white {
   color: #620edf;
   background: #ffffff;
@@ -612,12 +614,29 @@ a {
 }
 /*************************************** Footer **********************************************/
 
+footer {
+  min-height: 530px;
+}
+
 footer a {
   font-family: 'Roboto', sans-serif;
   color: #707070;
 }
 
-/*************************************Navigation*************************************/
+.index-footer {
+  margin-top: 0;
+}
+
+@media (width: 1024px) {
+  footer .col-sm-8 {
+    width: 50%;
+  }
+  footer .col-sm-4 {
+    width: 50%;
+  }
+}
+
+/************************************* Navigation *************************************/
 
 .baker-shade {
   position: absolute;
@@ -633,9 +652,7 @@ footer a {
 .baker-shade.right {
   right: 0;
 }
-footer {
-  min-height: 530px;
-}
+
 .sushi-shade-1 {
   position: absolute;
   top: auto;
@@ -807,13 +824,6 @@ footer {
   .browse-single2 img {
     max-width: 220px;
   }
-  footer .col-sm-8 {
-    width: 50%;
-  }
-  footer .col-sm-4 {
-    width: 50%;
-  }
-
   .icons-placement .icon1 {
     top: 60px;
     left: 666px;
@@ -1648,7 +1658,7 @@ footer {
   }
 }
 
-/**************Mobile Nav*******************/
+/************** Mobile Nav *******************/
 .mobile-nav nav {
   background: #191b1f;
   position: fixed;
@@ -1753,7 +1763,7 @@ footer {
   background-color: white;
 }
 
-/*************************************Animation*************************************/
+/************************************* Animation *************************************/
 
 .animation-element.bounce-up .subject {
   opacity: 0;
