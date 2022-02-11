@@ -1,6 +1,14 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    domains: ['secure.gravatar.com', 'nleagueblog.wpengine.com'],
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
+  },
   async rewrites() {
     return [
       {
@@ -14,10 +22,6 @@ const nextConfig = {
       {
         source: '/docs',
         destination: 'https://docs.niftyleague.com',
-      },
-      {
-        source: '/blog',
-        destination: 'https://blog.niftyleague.com',
       },
       {
         source: '/feedback',

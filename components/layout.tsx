@@ -8,7 +8,7 @@ export default function Layout({
 }: {
   children: React.ReactNode;
   classes?: { root?: string; header?: string; footer?: string };
-  header: React.ReactNode;
+  header?: React.ReactNode;
 }) {
   return (
     <div className={`p-0 black-bg1 ${classes?.root || ''}`}>

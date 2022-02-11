@@ -1,10 +1,12 @@
+@import '~mdb-react-ui-kit/dist/css/mdb.min.css';
+
 * {
   box-sizing: border-box;
 }
-/*************************************Font Style*************************************/
+/************************************* Font Style *************************************/
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-/*************************************Scroll Style*************************************/
+/************************************* Scroll Style *************************************/
 
 ::-webkit-scrollbar {
   width: 8px;
@@ -23,7 +25,7 @@
   background: #620edf;
 }
 
-/*************************************Body, Heading, Fonts*************************************/
+/************************************* Body, Heading, Fonts *************************************/
 body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: white;
@@ -69,7 +71,7 @@ a {
   font-size: 16px;
 }
 
-/*************************************Font Sizes, Colors, Backgrounds*************************************/
+/************************************* Font Sizes, Colors, Backgrounds *************************************/
 .color-white {
   color: #ffffff;
 }
@@ -139,7 +141,7 @@ a {
 .header a:hover path {
   fill: #620edf;
 }
-/*************************************Themes Items*************************************/
+/************************************* Themes Items *************************************/
 .theme-btn-white {
   color: #620edf;
   background: #ffffff;
@@ -373,10 +375,9 @@ a {
     ),
     rgba(36, 37, 38, 0.6);
   backdrop-filter: blur(65.0688px);
+  /* Note: backdrop-filter has minimal browser support */
   max-width: 898px;
   min-height: 148px;
-  /* Note: backdrop-filter has minimal browser support */
-
   border-radius: 8px;
 }
 .faq-content .collapsible {
@@ -411,6 +412,8 @@ a {
   transition: max-height 0.2s ease-out;
 }
 
+/*************************************** Community **********************************************/
+
 .header-community {
   height: auto;
   background: #191b1f;
@@ -444,6 +447,8 @@ a {
 .community-footer img {
   width: 112px;
 }
+
+/*************************************** About **********************************************/
 
 .about-header {
   min-height: 1050px;
@@ -535,12 +540,7 @@ a {
   opacity: 0.9;
 }
 
-/*
-
-.browse-single1{background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%), rgba(26, 27, 28, 0.7); ; min-height: 450px;  top: 430px; left: 190px; position: absolute;backdrop-filter: blur(65.0688px);}
-.browse-single2{min-height: 400px; top: 590px; left: 1000px; position: absolute;backdrop-filter: blur(65.0688px);}
-.browse-single3{min-height: 297px; top: 400px; left: 1230px; position: absolute; backdrop-filter: blur(65.0688px);}
-*/
+/*************************************** Home **********************************************/
 
 .browse-single1 {
   top: 430px;
@@ -612,12 +612,29 @@ a {
 }
 /*************************************** Footer **********************************************/
 
+footer {
+  min-height: 530px;
+}
+
 footer a {
   font-family: 'Roboto', sans-serif;
   color: #707070;
 }
 
-/*************************************Navigation*************************************/
+.index-footer {
+  margin-top: 0;
+}
+
+@media (width: 1024px) {
+  footer .col-sm-8 {
+    width: 50%;
+  }
+  footer .col-sm-4 {
+    width: 50%;
+  }
+}
+
+/************************************* Navigation *************************************/
 
 .baker-shade {
   position: absolute;
@@ -633,9 +650,7 @@ footer a {
 .baker-shade.right {
   right: 0;
 }
-footer {
-  min-height: 530px;
-}
+
 .sushi-shade-1 {
   position: absolute;
   top: auto;
@@ -807,13 +822,6 @@ footer {
   .browse-single2 img {
     max-width: 220px;
   }
-  footer .col-sm-8 {
-    width: 50%;
-  }
-  footer .col-sm-4 {
-    width: 50%;
-  }
-
   .icons-placement .icon1 {
     top: 60px;
     left: 666px;
@@ -1648,7 +1656,7 @@ footer {
   }
 }
 
-/**************Mobile Nav*******************/
+/************** Mobile Nav *******************/
 .mobile-nav nav {
   background: #191b1f;
   position: fixed;
@@ -1751,160 +1759,4 @@ footer {
 }
 #toggle:checked + label.toggle-btn .bar {
   background-color: white;
-}
-
-/*************************************Animation*************************************/
-
-.animation-element.bounce-up .subject {
-  opacity: 0;
-  -moz-transition: all 700ms ease-out;
-  -webkit-transition: all 700ms ease-out;
-  -o-transition: all 700ms ease-out;
-  transition: all 700ms ease-out;
-  -moz-transform: translate3d(0px, 200px, 0px);
-  -webkit-transform: translate3d(0px, 200px, 0px);
-  -o-transform: translate(0px, 200px);
-  -ms-transform: translate(0px, 200px);
-  transform: translate3d(0px, 200, 0px);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.animation-element.in-view .subject {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.animation-element.bounce-right .subject {
-  opacity: 0;
-  -moz-transition: all 700ms ease-out;
-  -webkit-transition: all 700ms ease-out;
-  -o-transition: all 700ms ease-out;
-  transition: all 700ms ease-out;
-  -moz-transform: translate3d(200px, 0px, 0px);
-  -webkit-transform: translate3d(200px, 0px, 0px);
-  -o-transform: translate(0px, 200px);
-  -ms-transform: translate(0px, 200px);
-  transform: translate3d(200px, 0, 0px);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.animation-element.bounce-right.in-view .subject {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.animation-element.bounce-left .subject {
-  opacity: 0;
-  -moz-transition: all 700ms ease-out;
-  -webkit-transition: all 700ms ease-out;
-  -o-transition: all 700ms ease-out;
-  transition: all 700ms ease-out;
-  -moz-transform: translate3d(-200px, 0px, 0px);
-  -webkit-transform: translate3d(-200px, 0px, 0px);
-  -o-transform: translate(0px, 200px);
-  -ms-transform: translate(0px, 200px);
-  transform: translate3d(-200px, 0px, 0px);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.animation-element.bounce-left.in-view .subject {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.animation-element.bounce-down .subject {
-  opacity: 0;
-  -moz-transition: all 700ms ease-out;
-  -webkit-transition: all 700ms ease-out;
-  -o-transition: all 700ms ease-out;
-  transition: all 700ms ease-out;
-  -moz-transform: translate3d(0px, -200px, 0px);
-  -webkit-transform: translate3d(0px, -200px, 0px);
-  -o-transform: translate(0px, -200px);
-  -ms-transform: translate(0px, -200px);
-  transform: translate3d(0px, -200px, 0px);
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.animation-element.in-view .subject {
-  opacity: 1;
-  -moz-transform: translate3d(0px, 0px, 0px);
-  -webkit-transform: translate3d(0px, 0px, 0px);
-  -o-transform: translate(0px, 0px);
-  -ms-transform: translate(0px, 0px);
-  transform: translate3d(0px, 0px, 0px);
-}
-
-.fade-in-animate {
-  display: inline-block;
-  animation: fadeIn linear 1s;
-  -webkit-animation: fadeIn linear 1s;
-  -moz-animation: fadeIn linear 1s;
-  -o-animation: fadeIn linear 1s;
-  -ms-animation: fadeIn linear 1s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
