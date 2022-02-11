@@ -1,5 +1,7 @@
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
+import cn from 'classnames';
 
 function Notification() {
   return (
@@ -22,6 +24,7 @@ function Notification() {
 }
 
 function Navbar() {
+  const { pathname } = useRouter();
   return (
     <nav className="row m-0 p-0 position-relative navbar navbar-expand-lg m-0 desktop">
       <div className="container-fluid" style={{ borderStyle: 'none' }}>
@@ -41,32 +44,57 @@ function Navbar() {
             </a>
           </Link>
           <ul className="navbar-nav m-auto">
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('roadmap'),
+              })}
+            >
               <Link href="/roadmap">
                 <a className="nav-link mx-4">Roadmap</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('about'),
+              })}
+            >
               <Link href="/about">
                 <a className="nav-link mx-4">About</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('community'),
+              })}
+            >
               <Link href="/community">
                 <a className="nav-link mx-4">Community</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('learn'),
+              })}
+            >
               <Link href="/learn">
                 <a className="nav-link mx-4">Learn</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']:
+                  pathname.includes('blog') || pathname.includes('posts'),
+              })}
+            >
               <Link href="/blog">
                 <a className="nav-link mx-4">Blog</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('merch'),
+              })}
+            >
               <Link href="/shop">
                 <a className="nav-link mx-4">Merch</a>
               </Link>
@@ -166,11 +194,9 @@ export default function Header() {
         width={668}
         height={666}
       />
-      <div style={{ zIndex: 3 }}>
-        <Notification />
-        <Navbar />
-        <MobileNav />
-      </div>
+      <Notification />
+      <Navbar />
+      <MobileNav />
     </header>
   );
 }
