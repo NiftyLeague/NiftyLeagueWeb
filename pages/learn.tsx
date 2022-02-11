@@ -3,16 +3,18 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Header() {
+function Intro() {
   return (
-    <div className="container my-5">
-      <div className="row m-0 p-0 position-relative d-flex flex-column py-5">
-        <h1 className="text-m-center">Learn</h1>
-        <h4 className="text-m-center">How to join Nifty League</h4>
-        <p className="my-3 text-m-center">
-          The Nifty League community is an ecosystem of users/gamers,
-          <br /> developers, designers, and educators.
-        </p>
+    <div className="learn-intro">
+      <div className="container my-5">
+        <div className="row m-0 p-0 position-relative d-flex flex-column py-5">
+          <h1 className="text-m-center">Learn</h1>
+          <h4 className="text-m-center">How to join Nifty League</h4>
+          <p className="my-3 text-m-center">
+            The Nifty League community is an ecosystem of users/gamers,
+            <br /> developers, designers, and educators.
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -20,7 +22,7 @@ function Header() {
 
 const Learn: NextPage = () => {
   return (
-    <Layout header={<Header />} classes={{ header: 'header-learn' }}>
+    <Layout classes={{ root: 'learn-pg' }}>
       <Head>
         <title>Nifty League | Learn</title>
         <meta
@@ -28,6 +30,8 @@ const Learn: NextPage = () => {
           content="Learn how to join and play games at Nifty League"
         />
       </Head>
+
+      <Intro />
 
       <div
         className="container learn-section"

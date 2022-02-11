@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Header() {
+function Intro() {
   return (
     <>
-      <div className="container px-sm-5 com-header" style={{ maxWidth: '90%' }}>
+      <div className="container px-sm-5 com-intro" style={{ maxWidth: '90%' }}>
         <div className="row m-0 position-relative">
           <div className="col-sm-6">
             <h4 className="mt-5 text-m-center">The Nifty League</h4>
@@ -34,7 +34,7 @@ function Header() {
 
 const Community: NextPage = () => {
   return (
-    <Layout header={<Header />} classes={{ root: 'com-pg' }}>
+    <Layout classes={{ root: 'com-pg' }}>
       <Head>
         <title>Nifty League | Community</title>
         <meta
@@ -42,6 +42,8 @@ const Community: NextPage = () => {
           content="Community comes first at Nifty League"
         />
       </Head>
+
+      <Intro />
 
       <div className="container com-content" style={{ maxWidth: '100%' }}>
         <div className="row m-0 p-0 position-relative text-center coversation-container">
