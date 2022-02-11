@@ -172,9 +172,11 @@ export default function Header({
         width={668}
         height={666}
       />
-      <Notification />
-      <Navbar />
-      <MobileNav />
+      <div style={{ zIndex: 3 }}>
+        <Notification />
+        <Navbar />
+        <MobileNav />
+      </div>
       {children}
     </header>
   );
