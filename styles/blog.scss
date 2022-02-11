@@ -1,12 +1,12 @@
 .blog-pg {
-  .header {
+  .header .eclipse-location {
+    display: none;
+  }
+  .blog-intro {
     min-height: 842px;
     background: #191b1f;
     background-size: cover;
     background-image: url(/img/blog-header.png);
-  }
-  .header .eclipse-location {
-    display: none;
   }
   .overlay-dark {
     width: 100%;

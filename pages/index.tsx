@@ -4,9 +4,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Header() {
+function Intro() {
   return (
-    <div className="row m-0 p-0 position-relative mt-5">
+    <div className="row m-0 p-0 position-relative mt-5 home-intro">
       <div className="d-flex flex-column align-items-center text-center my-3 my-sm-5">
         <h1 className="mt-sm-4 mt-0">The Nifty League</h1>
         <h4 className="mt-2">By Gamers. For Gamers.</h4>
@@ -83,9 +83,8 @@ function Header() {
 const Home: NextPage = () => {
   return (
     <Layout
-      header={<Header />}
       classes={{
-        root: 'index-pg',
+        root: 'home-pg',
         footer: 'index-footer',
       }}
     >
@@ -96,6 +95,8 @@ const Home: NextPage = () => {
           content="NFT gaming universe brought to you by the Nifty League"
         />
       </Head>
+
+      <Intro />
 
       <div className="row m-0 p-0 position-relative desktop sliding-nfts">
         <div className="wrapper my-5">

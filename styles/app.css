@@ -141,6 +141,9 @@ a {
 .header a:hover path {
   fill: #620edf;
 }
+.header a:active path {
+  fill: #620edf;
+}
 /************************************* Themes Items *************************************/
 .theme-btn-white {
   color: #620edf;
@@ -197,7 +200,6 @@ a {
 }
 .header {
   background-color: #191b1f;
-  min-height: 100vh;
 }
 .header .eclipse-location {
   left: 300px;
@@ -345,13 +347,13 @@ a {
   image-rendering: pixelated;
 }
 /*************************************** Learn **********************************************/
-.header-learn {
-  min-height: 705px;
+.learn-pg .header .eclipse-location {
+  display: none;
+}
+.learn-pg .learn-intro {
   background: #191b1f;
   background-image: url(/img/nifty-learn/learn-banner-desktop.png);
-}
-.header-learn .eclipse-location {
-  display: none;
+  min-height: 842px;
 }
 .learn-section {
   background: #191b1f;
@@ -414,11 +416,7 @@ a {
 
 /*************************************** Community **********************************************/
 
-.header-community {
-  height: auto;
-  background: #191b1f;
-}
-.header-community .eclipse-location {
+.com-pg .header .eclipse-location {
   left: 0px;
   margin-top: 10px;
 }
@@ -450,10 +448,7 @@ a {
 
 /*************************************** About **********************************************/
 
-.about-header {
-  min-height: 1050px;
-}
-.about-header .eclipse-location {
+.about-pg .header .eclipse-location {
   left: 200px;
   top: 30px;
 }
@@ -863,10 +858,10 @@ footer a {
     display: none;
   }
 
-  .com-header {
+  .com-intro {
     max-width: 100% !important;
   }
-  .com-header p br {
+  .com-intro p br {
     display: none;
   }
   .com-grad-1 {
@@ -900,7 +895,7 @@ footer a {
   .footer-buttons {
     display: flex;
   }
-  .display-buttons button {
+  .about-intro .display-buttons button {
     width: auto;
   }
   .nifty-league-community {
@@ -1015,16 +1010,12 @@ footer a {
   .community-data {
     min-width: auto;
   }
-  .header-community h1 {
+  .com-pg .com-intro h1 {
     font-size: 64px;
     text-align: center;
   }
-  .header-community h4 {
+  .com-pg .com-intro h4 {
     font-size: 15px;
-    text-align: center;
-  }
-  .header-community .header-data p {
-    font-size: 20px;
     text-align: center;
   }
   .video-details h4 {
@@ -1147,17 +1138,13 @@ footer a {
     max-width: 145px;
     height: auto;
   }
-  .about-pg .header-content p.p1 {
+  .about-pg .about-intro p.p1 {
     margin-top: 100px !important;
   }
-  .about-header {
-    min-height: inherit;
-    height: auto;
-  }
-  .about-header .theme-btn-aqua {
+  .about-pg .about-intro .theme-btn-aqua {
     width: auto;
   }
-  .about-header .display-buttons {
+  .about-pg .about-intro .display-buttons {
     justify-content: center;
   }
   .video-detail-container a img {
@@ -1206,10 +1193,10 @@ footer a {
     width: 100%;
     height: auto;
   }
-  .com-header {
+  .com-intro {
     max-width: 100% !important;
   }
-  .com-header p br {
+  .com-intro p br {
     display: none;
   }
   .com-banner img:not(.moon-grad) {
@@ -1234,14 +1221,11 @@ footer a {
   .text-m-left {
     text-align: left;
   }
-  .index-pg .header {
-    min-height: auto;
-  }
   .header .eclipse-location {
     left: 0;
     top: 185px;
   }
-  .index-pg .header .theme-btn-aqua {
+  .home-pg .home-intro .theme-btn-aqua {
     width: 195px;
   }
   .wrapper {
@@ -1515,16 +1499,12 @@ footer a {
   .community-data {
     min-width: auto;
   }
-  .header-community h1 {
+  .com-pg .com-intro h1 {
     font-size: 64px;
     text-align: center;
   }
-  .header-community h4 {
+  .com-pg .com-intro h4 {
     font-size: 15px;
-    text-align: center;
-  }
-  .header-community .header-data p {
-    font-size: 20px;
     text-align: center;
   }
   .icons-placement {
