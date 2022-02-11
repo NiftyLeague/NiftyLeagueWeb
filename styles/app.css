@@ -30,6 +30,7 @@ body {
   font-family: 'IBM Plex Sans', sans-serif;
   color: white;
   background: #191b1f;
+  overflow-x: hidden;
 }
 h1 {
   font-size: 96px;
@@ -192,9 +193,6 @@ a {
 .notification-frame {
   background: #232529;
   height: 48px;
-}
-.header {
-  background-color: #191b1f;
 }
 .header .eclipse-location {
   left: 300px;
@@ -774,12 +772,16 @@ footer a {
 }
 .navbar {
   box-shadow: none;
+  z-index: 99;
 }
 .navbar a {
   color: #ffffff;
 }
 .navbar a:hover {
   color: #620edf;
+}
+.dark-nav {
+  background-color: #191b1f;
 }
 
 @media (width: 1024px) {
