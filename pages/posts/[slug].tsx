@@ -21,7 +21,7 @@ import {
   PostFormatToPostConnectionEdge,
 } from '../../types/generated/graphql';
 
-export default function Post({
+export default function PostView({
   post,
   posts,
   preview,

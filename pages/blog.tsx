@@ -21,9 +21,6 @@ export default function Index({
   const heroPost = edges ? edges[0]?.node : ({} as Post);
   const morePosts = edges?.slice(1);
 
-  console.log('heroPost', heroPost);
-  console.log('morePosts', morePosts);
-
   return (
     <>
       <Layout header={<Intro />} classes={{ root: 'blog-pg' }}>
