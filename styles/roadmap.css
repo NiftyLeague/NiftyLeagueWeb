@@ -3,15 +3,15 @@
 Background
 
 -------------------------------- */
-.roadmap-header {
+.roadmap-pg .header {
   min-height: 146px;
 }
-.roadmap-header .eclipse-location {
+.roadmap-pg .header .eclipse-location {
   display: none;
 }
-.roadmap-header .notification-frame,
-.roadmap-header nav,
-.roadmap-header .mobile-nav {
+.roadmap-pg .header .notification-frame,
+.roadmap-pg .header nav,
+.roadmap-pg .header .mobile-nav {
   z-index: 3;
 }
 .roadmap-footer {

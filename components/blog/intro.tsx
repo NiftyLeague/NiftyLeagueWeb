@@ -1,6 +1,6 @@
 export default function Intro() {
   return (
-    <>
+    <div className="blog-intro">
       <div className="overlay-dark" />
       <div className="overlay-gradient-top" />
       <div className="overlay-gradient-bottom" />
@@ -15,6 +15,6 @@ export default function Intro() {
         </div>
       </div>
       <img className="earth-grad" src="/img/community/earth-grad.svg" />
-    </>
+    </div>
   );
 }

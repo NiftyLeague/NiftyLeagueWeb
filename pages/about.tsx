@@ -3,10 +3,10 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Header() {
+function Intro() {
   return (
-    <div className="container">
-      <div className="row m-0 p-0 position-relative d-flex header-content flex-column">
+    <div className="container about-intro">
+      <div className="row m-0 p-0 position-relative d-flex flex-column">
         <h4 className="mt-5 text-m-center">Welcome to</h4>
         <h1 className="text-m-center">
           The Nifty
@@ -79,14 +79,13 @@ function Header() {
 
 const About: NextPage = () => {
   return (
-    <Layout
-      header={<Header />}
-      classes={{ root: 'about-pg', header: 'about-header' }}
-    >
+    <Layout classes={{ root: 'about-pg' }}>
       <Head>
         <title>Nifty League | About</title>
         <meta name="description" content="About Nifty League and our team" />
       </Head>
+
+      <Intro />
 
       <div
         className="video-details row m-0 p-0 position-relative text-center"
