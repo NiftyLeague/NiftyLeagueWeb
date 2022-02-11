@@ -138,12 +138,7 @@ a {
 .uppercase {
   text-transform: uppercase;
 }
-.header a:hover path {
-  fill: #620edf;
-}
-.header a:active path {
-  fill: #620edf;
-}
+
 /************************************* Themes Items *************************************/
 .theme-btn-white {
   color: #620edf;
