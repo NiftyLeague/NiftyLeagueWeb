@@ -1,14 +1,14 @@
 import Image from 'next/image';
-import { Author } from '../../types/blog';
+import { Maybe, User } from '../../types/generated/graphql';
 
-export default function Avatar({ author }: { author: Author['node'] }) {
+export default function Avatar({ author }: { author?: Maybe<User> }) {
   const name = author
     ? author.firstName && author.lastName
       ? `${author.firstName} ${author.lastName}`
       : author.name
     : null;
 
-  return (
+  return author?.avatar?.url ? (
     <div className="d-flex align-items-center mb-2">
       <Image
         src={author.avatar.url}
@@ -19,5 +19,5 @@ export default function Avatar({ author }: { author: Author['node'] }) {
       />
       <div className="text-xl fw-bold mx-3">{name}</div>
     </div>
-  );
+  ) : null;
 }

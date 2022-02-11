@@ -1,17 +1,18 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FeaturedImage } from '../../types/blog';
+import { Maybe, MediaItem } from '../../types/generated/graphql';
 
 export default function CoverImage({
   title,
   coverImage,
   slug,
 }: {
-  title: string;
-  coverImage: FeaturedImage['node'];
-  slug?: string;
+  title?: Maybe<string>;
+  coverImage: MediaItem;
+  slug?: Maybe<string>;
 }) {
+  if (!coverImage.sourceUrl) return null;
   const image = (
     <Image
       width={2000}
@@ -27,7 +28,7 @@ export default function CoverImage({
     <div className="mx-sm-0">
       {slug ? (
         <Link href={`/posts/${slug}`}>
-          <a aria-label={title}>{image}</a>
+          <a aria-label={title || 'unknown'}>{image}</a>
         </Link>
       ) : (
         image
