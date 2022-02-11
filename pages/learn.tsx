@@ -7,8 +7,8 @@ function Header() {
   return (
     <div className="container my-5">
       <div className="row m-0 p-0 position-relative d-flex flex-column py-5">
-        <h4 className="text-m-center">The Nifty League</h4>
         <h1 className="text-m-center">Learn</h1>
+        <h4 className="text-m-center">How to join Nifty League</h4>
         <p className="my-3 text-m-center">
           The Nifty League community is an ecosystem of users/gamers,
           <br /> developers, designers, and educators.
