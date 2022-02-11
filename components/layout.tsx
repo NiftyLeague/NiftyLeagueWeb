@@ -12,7 +12,6 @@ export default function Layout({
     <div className={`p-0 black-bg1 ${classes?.root || ''}`}>
       <Header />
       <main>{children}</main>
-      {/* <main style={{ marginTop: -148 }}>{children}</main> */}
       <Footer classes={classes} />
     </div>
   );

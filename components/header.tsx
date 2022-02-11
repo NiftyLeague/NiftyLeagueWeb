@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -25,8 +26,27 @@ function Notification() {
 
 function Navbar() {
   const { pathname } = useRouter();
+
+  useEffect(() => {
+    const nav = document.getElementById('nav');
+    const sticky = nav?.offsetTop || 0;
+    const fixOnScroll = () => {
+      if (window.pageYOffset > sticky) {
+        nav?.classList.add('fixed-top', 'dark-nav');
+        nav?.classList.remove('position-absolute');
+      } else {
+        nav?.classList.remove('fixed-top', 'dark-nav');
+        nav?.classList.add('position-absolute');
+      }
+    };
+    window.addEventListener('scroll', fixOnScroll, false);
+  }, []);
+
   return (
-    <nav className="row m-0 p-0 position-relative navbar navbar-expand-lg m-0 desktop">
+    <nav
+      id="nav"
+      className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop"
+    >
       <div className="container-fluid" style={{ borderStyle: 'none' }}>
         <div
           className="navbar-nav collapse navbar-collapse px-4 mt-4"
