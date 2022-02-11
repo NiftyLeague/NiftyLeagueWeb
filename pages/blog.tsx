@@ -5,7 +5,6 @@ import HeroPost from '../components/blog/hero-post';
 import Intro from '../components/blog/intro';
 import Layout from '../components/layout';
 import { getAllPostsForHome } from '../lib/api';
-import { CMS_NAME } from '../lib/constants';
 import { Posts } from '../types/blog';
 
 export default function Index({
@@ -23,12 +22,12 @@ export default function Index({
 
   return (
     <>
-      <Layout header={<div />}>
+      <Layout header={<Intro />} classes={{ root: 'blog-pg' }}>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Nifty League | Blog</title>
+          <meta name="description" content="Nifty League Blog" />
         </Head>
         <Container>
-          <Intro />
           {heroPost && (
             <HeroPost
               title={heroPost.title}

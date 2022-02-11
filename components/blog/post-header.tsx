@@ -20,11 +20,11 @@ export default function PostHeader({
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <div className="hidden md:block md:mb-12">
+      <div className="hidden md:block mb-md-12">
         <Avatar author={author} />
       </div>
       {coverImage && (
-        <div className="mb-8 md:mb-16 sm:mx-0">
+        <div className="mb-8 mb-md-16 mx-sm-0">
           <CoverImage title={title} coverImage={coverImage} />
         </div>
       )}

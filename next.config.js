@@ -1,8 +1,13 @@
+const path = require('path');
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: ['secure.gravatar.com', 'nleagueblog.wpengine.com'],
+  },
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
   async rewrites() {
     return [
