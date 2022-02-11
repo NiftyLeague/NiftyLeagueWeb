@@ -2,7 +2,7 @@ import Avatar from './avatar';
 import Date from './date';
 import CoverImage from './cover-image';
 import Link from 'next/link';
-import { Author, FeaturedImage } from '../../types/blog';
+import { Maybe, User, MediaItem } from '../../types/generated/graphql';
 
 export default function HeroPost({
   title,
@@ -13,11 +13,11 @@ export default function HeroPost({
   slug,
 }: {
   title: string;
-  coverImage?: FeaturedImage['node'];
-  date: string;
-  excerpt: string;
-  author: Author['node'];
-  slug: string;
+  coverImage?: Maybe<MediaItem>;
+  date?: Maybe<string>;
+  excerpt?: Maybe<string>;
+  author?: Maybe<User>;
+  slug?: Maybe<string>;
 }) {
   return (
     <section>
@@ -41,10 +41,12 @@ export default function HeroPost({
           </div>
         </div>
         <div>
-          <div
-            className="text-lg leading-relaxed mb-4"
-            dangerouslySetInnerHTML={{ __html: excerpt }}
-          />
+          {excerpt && (
+            <div
+              className="text-lg leading-relaxed mb-4"
+              dangerouslySetInnerHTML={{ __html: excerpt }}
+            />
+          )}
           <Avatar author={author} />
         </div>
       </div>

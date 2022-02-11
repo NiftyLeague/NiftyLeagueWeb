@@ -5,17 +5,21 @@ import HeroPost from '../components/blog/hero-post';
 import Intro from '../components/blog/intro';
 import Layout from '../components/layout';
 import { getAllPostsForHome } from '../lib/api';
-import { Posts } from '../types/blog';
+import {
+  Post,
+  PostFormatToPostConnection,
+  PostFormatToPostConnectionEdge,
+} from '../types/generated/graphql';
 
 export default function Index({
   allPosts: { edges },
   preview,
 }: {
-  allPosts: Posts;
+  allPosts: PostFormatToPostConnection;
   preview: boolean;
 }) {
-  const heroPost = edges[0]?.node;
-  const morePosts = edges.slice(1);
+  const heroPost = edges ? edges[0]?.node : ({} as Post);
+  const morePosts = edges?.slice(1);
 
   console.log('heroPost', heroPost);
   console.log('morePosts', morePosts);
@@ -30,15 +34,19 @@ export default function Index({
         <Container>
           {heroPost && (
             <HeroPost
-              title={heroPost.title}
+              title={heroPost.title as string}
               coverImage={heroPost.featuredImage?.node}
-              date={heroPost.date}
+              date={heroPost.date as string}
               author={heroPost.author?.node}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
+              slug={heroPost.slug as string}
+              excerpt={heroPost.excerpt as string}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts && morePosts.length > 0 && (
+            <MoreStories
+              posts={morePosts as PostFormatToPostConnectionEdge[]}
+            />
+          )}
         </Container>
       </Layout>
     </>

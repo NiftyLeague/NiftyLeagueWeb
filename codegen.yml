@@ -1,0 +1,7 @@
+overwrite: true
+schema: 'https://nleagueblog.wpengine.com/graphql'
+generates:
+  types/generated/graphql.tsx:
+    plugins:
+      - 'typescript'
+      - 'typescript-react-apollo'

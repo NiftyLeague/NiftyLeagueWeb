@@ -38,6 +38,11 @@ WORDPRESS_API_URL=...
 # WORDPRESS_PREVIEW_SECRET=
 ```
 
+### TypeScript
+
+WordPress schema typings are generated using `@graphql-codegen`  
+Anytime you want to regenerate the types (such as if you make changes to the GraphQL schema or install a WPGraphQL extension), you can run `yarn generate` again. This will overwrite your current `types/generated/graphql.ts` file.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

@@ -3,7 +3,12 @@ import Date from './date';
 import CoverImage from './cover-image';
 import PostTitle from './post-title';
 import Categories from './categories';
-import { Author, FeaturedImage } from '../../types/blog';
+import {
+  Maybe,
+  User,
+  MediaItem,
+  PostToCategoryConnection,
+} from '../../types/generated/graphql';
 
 export default function PostHeader({
   author,
@@ -12,14 +17,15 @@ export default function PostHeader({
   date,
   title,
 }: {
-  author: Author['node'];
-  coverImage?: FeaturedImage['node'];
-  date: string;
-  title: string;
+  author?: Maybe<User>;
+  categories?: Maybe<PostToCategoryConnection>;
+  coverImage?: Maybe<MediaItem>;
+  date?: Maybe<string>;
+  title?: Maybe<string>;
 }) {
   return (
     <>
-      <PostTitle>{title}</PostTitle>
+      {title && <PostTitle>{title}</PostTitle>}
       <div className="hidden md:block mb-md-12">
         <Avatar author={author} />
       </div>
@@ -34,7 +40,7 @@ export default function PostHeader({
         </div>
         <div className="mb-6 text-lg">
           Posted <Date dateString={date} />
-          <Categories categories={categories} />
+          {categories && <Categories categories={categories} />}
         </div>
       </div>
     </>
