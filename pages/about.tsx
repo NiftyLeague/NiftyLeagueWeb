@@ -5,37 +5,39 @@ import Layout from '../components/layout';
 
 function Intro() {
   return (
-    <div className="container about-intro">
-      <div className="row m-0 p-0 position-relative d-flex flex-column">
-        <h4 className="mt-5 text-m-center">Welcome to</h4>
-        <h1 className="text-m-center">
-          The Nifty
-          <br /> League
-        </h1>
-        <p className="mt-sm-2 mt-5 text-m-center p1">
-          Our mission is to create a leading NFT gaming platform through
-          <br /> community governance and development. Nifty League prides
-          itself
-          <br /> on being one of the first GameFi platforms offering interactive
-          play
-          <br />
-          -to-earn games with customizable characters.
-        </p>
-        <p className="text-m-center">
-          Advance your gaming skills and join our community to earn daily
-          <br /> NFTL rewards from the Nifty DAO!
-        </p>
+    <div className="container about-intro min-vh-100 mt-5 py-5">
+      <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
+        <div className="about-intro-content">
+          <h4 className="mt-5 text-m-center">Welcome to</h4>
+          <h1 className="text-m-center">
+            The Nifty
+            <br /> League
+          </h1>
+          <p className="mt-sm-2 mt-5 text-m-center p1">
+            Our mission is to create a leading NFT gaming platform through
+            <br /> community governance and development. Nifty League prides
+            itself
+            <br /> on being one of the first GameFi platforms offering
+            interactive play
+            <br />
+            -to-earn games with customizable characters.
+          </p>
+          <p className="text-m-center">
+            Advance your gaming skills and join our community to earn daily
+            <br /> NFTL rewards from the Nifty DAO!
+          </p>
 
-        <div className="display-buttons my-3 d-flex desktop">
-          <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
-          <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
-            Download the whitepaper
-          </button>
-        </div>
-        <div className="display-buttons my-3 d-flex mobile">
-          <button className="btn theme-btn-aqua mx-sm-2">
-            Browse Collection
-          </button>
+          <div className="display-buttons my-3 d-flex desktop">
+            <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
+            <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
+              Download the whitepaper
+            </button>
+          </div>
+          <div className="display-buttons my-3 d-flex mobile">
+            <button className="btn theme-btn-aqua mx-sm-2">
+              Browse Collection
+            </button>
+          </div>
         </div>
 
         <div className="icons-placement">
