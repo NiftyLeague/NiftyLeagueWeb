@@ -11,9 +11,6 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
-::-webkit-scrollbar:focus {
-  height: 50px;
-}
 ::-webkit-scrollbar-track {
   background: black;
 }
@@ -193,6 +190,7 @@ a {
 .notification-frame {
   background: #232529;
   height: 48px;
+  z-index: 99;
 }
 .header .eclipse-location {
   left: 300px;
@@ -411,7 +409,13 @@ a {
 
 .com-pg .header .eclipse-location {
   left: 0px;
-  margin-top: 10px;
+}
+.com-intro {
+  min-height: 95vh;
+}
+.com-intro-content,
+.com-intro-text {
+  z-index: 2;
 }
 .community-data {
   border-radius: 8px;
@@ -445,8 +449,12 @@ a {
   left: 200px;
   top: 30px;
 }
+.about-intro-content {
+  z-index: 2;
+}
 .icons-placement {
   overflow: hidden;
+  z-index: 1;
 }
 .icons-placement img {
   position: absolute;
@@ -530,6 +538,10 @@ a {
 
 /*************************************** Home **********************************************/
 
+.home-intro {
+  min-height: 90vh;
+}
+
 .browse-single1 {
   top: 430px;
   left: 60px;
@@ -596,29 +608,6 @@ a {
   }
   100% {
     transform: translate3d(-1692px, 0, 0);
-  }
-}
-/*************************************** Footer **********************************************/
-
-footer {
-  min-height: 530px;
-}
-
-footer a {
-  font-family: 'Roboto', sans-serif;
-  color: #707070;
-}
-
-.index-footer {
-  margin-top: 0;
-}
-
-@media (width: 1024px) {
-  footer .col-sm-8 {
-    width: 50%;
-  }
-  footer .col-sm-4 {
-    width: 50%;
   }
 }
 
@@ -746,7 +735,7 @@ footer a {
   z-index: -1;
 }
 .com-content {
-  margin-top: -150px;
+  margin-top: -100px;
 }
 .earth-grad {
   position: absolute;
@@ -772,7 +761,7 @@ footer a {
 }
 .navbar {
   box-shadow: none;
-  z-index: 99;
+  z-index: 99 !important;
 }
 .navbar a {
   color: #ffffff;
@@ -886,12 +875,6 @@ footer a {
   .mobile-nav {
     display: none !important;
   }
-  .footer-buttons {
-    display: flex;
-  }
-  .footer-buttons {
-    display: flex;
-  }
   .about-intro .display-buttons button {
     width: auto;
   }
@@ -935,15 +918,6 @@ footer a {
   p br {
     display: none;
   }
-  footer .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  footer a {
-    text-align: center;
-  }
   .theme-btn-aqua {
     width: 325px;
     display: flex;
@@ -955,9 +929,6 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .footer-button {
-    display: block;
   }
   .eclipse-location {
     left: 0px;
@@ -998,11 +969,6 @@ footer a {
   }
   .learn-section .faq-content h4 {
     font-size: 18px;
-  }
-  .container-footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
   .community-data {
     min-width: auto;
@@ -1328,9 +1294,6 @@ footer a {
   .mobile-view {
     margin-top: 25px !important;
   }
-  footer {
-    min-height: 730px;
-  }
 }
 
 @media (width: 768px) {
@@ -1365,20 +1328,6 @@ footer a {
   }
   .browse-single2 img {
     max-width: 220px !important;
-  }
-  footer .col-sm-8 {
-    width: 50% !important;
-  }
-  footer .col-sm-4 {
-    width: 50% !important;
-  }
-  .footer-buttons {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer-buttons button {
-    margin: 0 !important;
-    margin-bottom: 30px !important;
   }
   .league-special-container .eclipse-location {
     display: none;
@@ -1424,15 +1373,6 @@ footer a {
   p br {
     display: none;
   }
-  footer .footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
-  footer a {
-    text-align: center;
-  }
   .theme-btn-aqua {
     width: 325px;
     display: flex;
@@ -1444,9 +1384,6 @@ footer a {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .footer-button {
-    display: block;
   }
   .eclipse-location {
     left: 0px;
@@ -1487,11 +1424,6 @@ footer a {
   }
   .learn-section .faq-content h4 {
     font-size: 18px;
-  }
-  .container-footer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
   }
   .community-data {
     min-width: auto;
@@ -1609,20 +1541,6 @@ footer a {
   }
   .browse-single2 img {
     max-width: 220px !important;
-  }
-  footer .col-sm-8 {
-    width: 50% !important;
-  }
-  footer .col-sm-4 {
-    width: 50% !important;
-  }
-  .footer-buttons {
-    display: flex;
-    flex-direction: column;
-  }
-  .footer-buttons button {
-    margin: 0 !important;
-    margin-bottom: 30px !important;
   }
   .league-special-container .eclipse-location {
     display: none;

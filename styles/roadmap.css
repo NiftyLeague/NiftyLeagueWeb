@@ -3,19 +3,8 @@
 Background
 
 -------------------------------- */
-.roadmap-pg .header {
-  min-height: 146px;
-}
 .roadmap-pg .header .eclipse-location {
   display: none;
-}
-.roadmap-pg .header .notification-frame,
-.roadmap-pg .header nav,
-.roadmap-pg .header .mobile-nav {
-  z-index: 3;
-}
-.roadmap-footer {
-  margin-top: 0;
 }
 .space {
   margin-top: -100px;
@@ -437,10 +426,6 @@ Timeline
   .cd-timeline-content .about-video .play-video img {
     width: 100px;
   }
-}
-
-footer {
-  margin-top: 100px;
 }
 
 .fade-in {

@@ -6,9 +6,9 @@ import Layout from '../components/layout';
 
 function Intro() {
   return (
-    <div className="row m-0 p-0 position-relative mt-5 home-intro">
-      <div className="d-flex flex-column align-items-center text-center my-3 my-sm-5">
-        <h1 className="mt-sm-4 mt-0">The Nifty League</h1>
+    <div className="row m-0 p-0 position-relative pt-5 home-intro">
+      <div className="d-flex flex-column align-items-center text-center my-auto py-3 pt-md-5">
+        <h1 className="mt-0 mt-sm-4 mt-md-5">The Nifty League</h1>
         <h4 className="mt-2">By Gamers. For Gamers.</h4>
         <p className="my-5 text-m-center">
           Design, mint, and play to compete and earn rewards within our
@@ -82,12 +82,7 @@ function Intro() {
 
 const Home: NextPage = () => {
   return (
-    <Layout
-      classes={{
-        root: 'home-pg',
-        footer: 'index-footer',
-      }}
-    >
+    <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League | NFT Gaming</title>
         <meta
