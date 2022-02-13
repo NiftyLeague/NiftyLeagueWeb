@@ -3,12 +3,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Header() {
+function Intro() {
   return (
-    <>
-      <div className="container px-sm-5 com-header" style={{ maxWidth: '90%' }}>
-        <div className="row m-0 position-relative">
-          <div className="col-sm-6">
+    <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
+      <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
+        <div className="row m-0 position-relative com-intro-content">
+          <div className="col-sm-6 com-intro-text">
             <h4 className="mt-5 text-m-center">The Nifty League</h4>
             <h1 className="text-m-center">Community</h1>
             <p className="my-3 text-m-center">
@@ -25,16 +25,16 @@ function Header() {
       </div>
       <img
         src="/img/community/community-bg-1.png"
-        className="w-100 h-auto earth-com"
+        className="w-100 h-auto position-absolute bottom-0 earth-com"
       />
       <img className="earth-grad" src="/img/community/earth-grad.svg" />
-    </>
+    </div>
   );
 }
 
 const Community: NextPage = () => {
   return (
-    <Layout header={<Header />} classes={{ root: 'com-pg' }}>
+    <Layout classes={{ root: 'com-pg' }}>
       <Head>
         <title>Nifty League | Community</title>
         <meta
@@ -42,6 +42,8 @@ const Community: NextPage = () => {
           content="Community comes first at Nifty League"
         />
       </Head>
+
+      <Intro />
 
       <div className="container com-content" style={{ maxWidth: '100%' }}>
         <div className="row m-0 p-0 position-relative text-center coversation-container">
