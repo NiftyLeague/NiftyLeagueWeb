@@ -462,7 +462,6 @@ a {
   z-index: 2;
 }
 .icons-placement {
-  overflow: hidden;
   z-index: 1;
 }
 .icons-placement img {
@@ -471,34 +470,42 @@ a {
 .icons-placement .icon8 {
   top: 90px;
   left: 560px;
+  position: absolute;
 }
 .icons-placement .icon1 {
   top: -145px;
   left: 950px;
+  position: absolute;
 }
 .icons-placement .icon3 {
   top: 370px;
   left: 750px;
+  position: absolute;
 }
 .icons-placement .icon2 {
   top: 250px;
   left: 1100px;
+  position: absolute;
 }
 .icons-placement .icon5 {
   top: 250px;
   left: -230px;
+  position: absolute;
 }
 .icons-placement .icon7 {
   top: 650px;
   left: 30px;
+  position: absolute;
 }
 .icons-placement .icon4 {
   top: 530px;
   left: 1050px;
+  position: absolute;
 }
 .icons-placement .icon6 {
   top: 590px;
   left: 550px;
+  position: absolute;
 }
 .about-nifty-degens .browse-single1 {
   top: 18px;
