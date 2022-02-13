@@ -3,22 +3,7 @@
 Background
 
 -------------------------------- */
-.roadmap-header {
-  min-height: 146px;
-}
-.roadmap-header .eclipse-location {
-  display: none;
-}
-.roadmap-header .notification-frame,
-.roadmap-header nav,
-.roadmap-header .mobile-nav {
-  z-index: 3;
-}
-.roadmap-footer {
-  margin-top: 0;
-}
 .space {
-  margin-top: -100px;
   background-image: url('/img/roadmap/space.png');
   display: flex;
   flex-direction: column;
@@ -33,7 +18,6 @@ Background
 }
 .stars2 {
   background-image: url('/img/roadmap/stars_02.png');
-  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: repeat;
   text-align: center;
@@ -437,10 +421,6 @@ Timeline
   .cd-timeline-content .about-video .play-video img {
     width: 100px;
   }
-}
-
-footer {
-  margin-top: 100px;
 }
 
 .fade-in {
