@@ -263,14 +263,6 @@ a {
   right: -30px;
 }
 
-.nifty-league-browse .eclipse-location {
-  left: 0px;
-  margin-top: 10px;
-}
-.nifty-league-community .eclipse-location {
-  left: 0px;
-  margin-top: -250px;
-}
 .slide-content .browse-single {
   min-height: 400px;
   background: linear-gradient(
@@ -340,6 +332,16 @@ a {
 
 /*************************************** Learn **********************************************/
 
+.learn-pg .header .eclipse-location {
+  left: 0px;
+}
+
+@media (min-width: 992px) {
+  .learn-pg .header .eclipse-location {
+    left: 300px;
+  }
+}
+
 .learn-pg .learn-intro {
   min-height: 94vh;
 }
@@ -403,6 +405,9 @@ a {
 
 /*************************************** Community **********************************************/
 
+.com-pg {
+  overflow-x: hidden;
+}
 .com-pg .header .eclipse-location {
   left: 0px;
 }
@@ -441,9 +446,17 @@ a {
 
 /*************************************** About **********************************************/
 
+.about-pg {
+  overflow-x: hidden;
+}
 .about-pg .header .eclipse-location {
-  left: 200px;
+  left: 0px;
   top: 30px;
+}
+@media (min-width: 992px) {
+  .about-pg .header .eclipse-location {
+    left: 200px;
+  }
 }
 .about-intro-content {
   z-index: 2;
@@ -601,9 +614,6 @@ a {
     bottom: -380px;
     right: 0px !important;
   }
-  .about-pg {
-    overflow-x: hidden;
-  }
 }
 
 .wrapper {
@@ -753,7 +763,8 @@ a {
 .com-grad-1 {
   position: absolute;
   top: 1500px;
-  left: 300px;
+  left: 0;
+  max-width: 100%;
   right: 0;
   bottom: auto;
 }
@@ -1284,7 +1295,8 @@ a {
     display: none;
   }
   .nifty-character {
-    max-width: 260px;
+    /* max-width: 260px; */
+    max-width: 95%;
     min-height: 250px;
     height: auto;
     margin-bottom: -250px;
@@ -1537,10 +1549,6 @@ a {
   .discord-btn {
     max-width: 250px;
     white-space: normal;
-  }
-
-  .header .eclipse-location {
-    left: 0;
   }
   .browse-single1 {
     min-height: auto !important;
