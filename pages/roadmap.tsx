@@ -6,10 +6,7 @@ import Layout from '../components/layout';
 
 const Roadmap: NextPage = () => {
   return (
-    <Layout
-      header={<div />}
-      classes={{ header: 'roadmap-header', footer: 'roadmap-footer' }}
-    >
+    <Layout classes={{ root: 'roadmap-pg' }}>
       <Head>
         <title>Nifty League | Roadmap</title>
         <meta

@@ -3,24 +3,109 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Header() {
+function Intro() {
   return (
-    <div className="container my-5">
-      <div className="row m-0 p-0 position-relative d-flex flex-column py-5">
-        <h4 className="text-m-center">The Nifty League</h4>
-        <h1 className="text-m-center">Learn</h1>
-        <p className="my-3 text-m-center">
-          The Nifty League community is an ecosystem of users/gamers,
-          <br /> developers, designers, and educators.
-        </p>
+    <div className="learn-intro pt-md-5">
+      <div className="container py-3 py-sm-5 min-vh-100 d-flex align-items-center">
+        <div className="row m-0 p-0 position-relative">
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+            <div className="learn-content position-relative">
+              <img
+                className="position-absolute desktop w-100 h-100"
+                src="/img/learn/getting-started.png"
+              />
+              <img
+                className="position-absolute mobile w-100 h-100"
+                src="/img/learn/getting-started.png"
+              />
+              <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
+                <h3 className="mt-sm-4 mt-2 text-m-center">Getting started</h3>
+                <p className="font-16 text-m-center">
+                  Here, you&apos;ll find curated how-to guides and
+                  <br /> information to help get you started.
+                </p>
+                <button className="btn theme-btn-aqua my-sm-2 my-0">
+                  Begin
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+            <div className="learn-content position-relative">
+              <img
+                className="position-absolute desktop w-100 h-100"
+                src="/img/learn/gitbook.png"
+              />
+              <img
+                className="position-absolute mobile w-100 h-100"
+                src="/img/learn/gitbook.png"
+              />
+              <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
+                <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
+                <p className="font-16 text-m-center">
+                  Here, you&apos;ll find curated how-to guides and
+                  <br /> information to help get you started.
+                </p>
+                <button className="btn theme-btn-aqua my-sm-2 my-0">
+                  visit gitbook
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+            <div className="learn-content position-relative">
+              <img
+                className="position-absolute desktop w-100 h-100"
+                src="/img/learn/tutorials.png"
+              />
+              <img
+                className="position-absolute mobile w-100 h-100"
+                src="/img/learn/tutorials.png"
+              />
+              <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
+                <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
+                <p className="font-16 text-m-center">
+                  Here, you&apos;ll find curated how-to guides and
+                  <br /> information to help get you started.
+                </p>
+                <button className="btn theme-btn-aqua my-sm-2 my-0">
+                  see tutorials
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+            <div className="learn-content position-relative">
+              <img
+                className="position-absolute desktop w-100 h-100"
+                src="/img/learn/community.png"
+              />
+              <img
+                className="position-absolute mobile w-100 h-100"
+                src="/img/learn/community.png"
+              />
+              <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
+                <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
+                <p className="font-16 text-m-center">
+                  Here, you&apos;ll find curated how-to guides and
+                  <br /> information to help get you started.
+                </p>
+                <button className="btn theme-btn-aqua my-sm-2 my-0">
+                  get involved
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+      <img className="earth-grad" src="/img/community/earth-grad.svg" />
     </div>
   );
 }
 
 const Learn: NextPage = () => {
   return (
-    <Layout header={<Header />} classes={{ header: 'header-learn' }}>
+    <Layout classes={{ root: 'learn-pg' }}>
       <Head>
         <title>Nifty League | Learn</title>
         <meta
@@ -29,109 +114,12 @@ const Learn: NextPage = () => {
         />
       </Head>
 
-      <div
-        className="container learn-section"
-        style={{ marginTop: -150, maxWidth: '100%' }}
-      >
-        <div className="container py-5">
-          <div className="row m-0 p-0 position-relative ">
-            <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
-              <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/nifty-learn/getting-started.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/nifty-learn/getting-started.png"
-                />
-                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">
-                    Getting started
-                  </h3>
-                  <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
-                  </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    Begin
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
-              <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/nifty-learn/gitbook.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/nifty-learn/gitbook.png"
-                />
-                <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
-                  <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
-                  </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    visit gitbook
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
-              <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/nifty-learn/tutorials.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/nifty-learn/tutorials.png"
-                />
-                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
-                  <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
-                  </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    see tutorials
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
-              <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/nifty-learn/community.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/nifty-learn/community.png"
-                />
-                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
-                  <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
-                  </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    get involved
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="container learn-section" style={{ maxWidth: '100%' }}>
+      <Intro />
+
+      <div className="container learn-section">
         <div className="container py-sm-5 py-0">
           <div className="text-center">
-            <h2 className="my-3 pt-5">Frequently Asked Questions</h2>
+            <h2 className="my-3">Frequently Asked Questions</h2>
             <p className="text-m-center">
               The Nifty League&apos;s global and vibrant community drives the
               success

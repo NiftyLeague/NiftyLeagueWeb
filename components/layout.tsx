@@ -4,15 +4,13 @@ import Footer from './footer';
 export default function Layout({
   children,
   classes,
-  header,
 }: {
   children: React.ReactNode;
-  classes?: { root?: string; header?: string; footer?: string };
-  header: React.ReactNode;
+  classes?: { root?: string; footer?: string };
 }) {
   return (
     <div className={`p-0 black-bg1 ${classes?.root || ''}`}>
-      <Header classes={classes}>{header}</Header>
+      <Header />
       <main>{children}</main>
       <Footer classes={classes} />
     </div>
