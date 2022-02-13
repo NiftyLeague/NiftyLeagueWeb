@@ -15,7 +15,7 @@
 @media (min-width: 768px) {
   .header .eclipse-location {
     left: 300px;
-    top: 20px;
+    top: 102px;
   }
 }
 @media (min-width: 992px) {
@@ -80,6 +80,9 @@
 
 /************************************* Mobile Nav *************************************/
 
+.mobile-nav {
+  width: 100%;
+}
 .mobile-nav nav {
   background: #191b1f;
   position: fixed;
@@ -127,11 +130,13 @@
   width: 32px;
   height: 32px;
 }
+.mobile-nav .theme-btn-white {
+  z-index: 5;
+}
 .toggle-btn {
   display: block;
-  position: fixed;
   z-index: 10;
-  left: 25px;
+  margin-left: 25px;
   cursor: pointer;
 }
 .toggle-btn .bar {
