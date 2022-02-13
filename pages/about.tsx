@@ -41,38 +41,86 @@ function Intro() {
         </div>
 
         <div className="icons-placement">
-          <img
+          <div
             className="icon1 desktop pixelated"
-            src="/img/about/header-gif/icon1.png"
-          />
-          <img
+          >
+            <Image
+              src="/img/about/header/icon1.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
             className="icon2 desktop pixelated"
-            src="/img/about/header-gif/icon2.png"
-          />
-          <img
+          >
+            <Image
+              src="/img/about/header/icon2.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
             className="icon3 desktop pixelated"
-            src="/img/about/header-gif/icon3.png"
-          />
-          <img
+          >
+            <Image
+              src="/img/about/header/icon3.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
             className="icon4 desktop pixelated"
-            src="/img/about/header-gif/icon4.png"
-          />
-          <img
-            className="icon5 pixelated "
-            src="/img/about/header-gif/icon5.png"
-          />
-          <img
-            className="icon6 pixelated "
-            src="/img/about/header-gif/icon6.png"
-          />
-          <img
-            className="icon7 pixelated "
-            src="/img/about/header-gif/icon7.png"
-          />
-          <img
-            className="icon8 pixelated "
-            src="/img/about/header-gif/icon8.png"
-          />
+          >
+            <Image
+              src="/img/about/header/icon4.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon5 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon5.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon6 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon6.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon7 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon7.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon8 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon8.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -464,11 +512,11 @@ const About: NextPage = () => {
         <div className="d-flex section-margin">
           <div className="ms-auto nifty-rentals-img">
             <div className="icons-placement1" style={{ display: 'none' }}>
-              <img className="icon8" src="/img/about/header-gif/icon8.png" />
-              <img className="icon1" src="/img/about/header-gif/icon1.png" />
-              <img className="icon2" src="/img/about/header-gif/icon2.png" />
-              <img className="icon3" src="/img/about/header-gif/icon3.png" />
-              <img className="icon4" src="/img/about/header-gif/icon4.png" />
+              <img className="icon8" src="/img/about/header/icon8.png" />
+              <img className="icon1" src="/img/about/header/icon1.png" />
+              <img className="icon2" src="/img/about/header/icon2.png" />
+              <img className="icon3" src="/img/about/header/icon3.png" />
+              <img className="icon4" src="/img/about/header/icon4.png" />
             </div>
           </div>
         </div>
