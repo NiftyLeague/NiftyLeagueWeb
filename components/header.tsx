@@ -110,15 +110,6 @@ function Navbar() {
                 <a className="nav-link mx-4">Blog</a>
               </Link>
             </li>
-            <li
-              className={cn('nav-item', {
-                ['active']: pathname.includes('merch'),
-              })}
-            >
-              <Link href="/shop">
-                <a className="nav-link mx-4">Merch</a>
-              </Link>
-            </li>
           </ul>
           <Link href="/app">
             <a>
@@ -191,10 +182,12 @@ function MobileNav() {
             </Link>
           </li>
           <li>
-            <a>Blog</a>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </li>
           <li>
-            <Link href="/merch">
+            <Link href="/shop">
               <a>Merch</a>
             </Link>
           </li>
