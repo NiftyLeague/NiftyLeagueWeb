@@ -5,8 +5,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
   return (
     <footer className={`bg-white ${classes?.footer || ''}`}>
       <div className="container" style={{ maxWidth: '100%' }}>
-        <div className="row m-0 p-sm-5 footer-row position-relative">
-          <div className="col-sm-8 px-sm-5 col-12 my-sm-0 my-2 mt-5 mt-sm-0">
+        <div className="row m-0 p-md-5 footer-row position-relative">
+          <div className="col-md-6 px-sm-5 col-12 my-md-0 my-2 mt-5 mt-md-0">
             <div className="container-footer">
               <Image
                 src="/img/logo-blue.svg"
@@ -19,14 +19,14 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               </p>
             </div>
           </div>
-          <div className="col-sm-4 px-sm-5 px-3 col-12">
-            <div className="footer-buttons">
+          <div className="col-12 col-md-6 px-3 px-sm-5 px-md-0 px-lg-5 ps-md-5">
+            <div className="footer-buttons text-center">
               <a
                 href="https://opensea.io/collection/niftydegen"
                 target="_blank"
                 rel="noreferrer"
               >
-                <button className="btn theme-btn-aqua ms-sm-5 mx-sm-4 ms-0 mx-0">
+                <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">
                   Browse collection
                 </button>
               </a>
@@ -40,8 +40,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
             </div>
           </div>
         </div>
-        <div className="row m-0 p-sm-5 pt-0 position-relative mb-5">
-          <div className="col-sm-2 px-sm-5 col-6 px-0 pt-sm-0 pt-5">
+        <div className="row m-0 p-md-5 pt-0 position-relative">
+          <div className="col-6 col-sm-4 col-md-2 px-md-5  px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
               <Link href="/roadmap">
                 <a>Roadmap</a>
@@ -57,7 +57,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               </Link>
             </div>
           </div>
-          <div className="col-sm-2 px-sm-5 col-6  px-0 pt-sm-0 pt-5">
+          <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
               <Link href="/blog">
                 <a>Blog</a>
@@ -73,7 +73,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               </Link>
             </div>
           </div>
-          <div className="col-sm-5 px-sm-5 col-12  px-0 pt-sm-0 pt-5">
+          <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
               <a href="#">Terms&nbsp;of Service</a>
               <a href="#" className="mt-2">
@@ -87,8 +87,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               </a>
             </div>
           </div>
-          <div className="col-sm-3 d-flex align-items-center justify-content-center ps-sm-5 ps-0 ">
-            <div className="d-flex align-items-center mt-sm-4 mt-5 mb-5 ps-3 ps-sm-5">
+          <div className="col-md-3 d-flex align-items-center justify-content-center ps-0">
+            <div className="d-flex align-items-center mt-5 mt-lg-0 mb-5 mb-lg-auto ps-3 ps-sm-5">
               <a
                 className="pe-3"
                 href="https://opensea.io/collection/niftydegen"

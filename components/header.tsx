@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
+import cn from 'classnames';
 
 function Notification() {
   return (
@@ -22,8 +25,28 @@ function Notification() {
 }
 
 function Navbar() {
+  const { pathname } = useRouter();
+
+  useEffect(() => {
+    const nav = document.getElementById('nav');
+    const sticky = nav?.offsetTop || 0;
+    const fixOnScroll = () => {
+      if (window.pageYOffset > sticky) {
+        nav?.classList.add('fixed-top', 'dark-nav');
+        nav?.classList.remove('position-absolute');
+      } else {
+        nav?.classList.remove('fixed-top', 'dark-nav');
+        nav?.classList.add('position-absolute');
+      }
+    };
+    window.addEventListener('scroll', fixOnScroll, false);
+  }, []);
+
   return (
-    <nav className="row m-0 p-0 position-relative navbar navbar-expand-lg m-0 desktop">
+    <nav
+      id="nav"
+      className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop"
+    >
       <div className="container-fluid" style={{ borderStyle: 'none' }}>
         <div
           className="navbar-nav collapse navbar-collapse px-4 mt-4"
@@ -41,32 +64,57 @@ function Navbar() {
             </a>
           </Link>
           <ul className="navbar-nav m-auto">
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('roadmap'),
+              })}
+            >
               <Link href="/roadmap">
                 <a className="nav-link mx-4">Roadmap</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('about'),
+              })}
+            >
               <Link href="/about">
                 <a className="nav-link mx-4">About</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('community'),
+              })}
+            >
               <Link href="/community">
                 <a className="nav-link mx-4">Community</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('learn'),
+              })}
+            >
               <Link href="/learn">
                 <a className="nav-link mx-4">Learn</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']:
+                  pathname.includes('blog') || pathname.includes('posts'),
+              })}
+            >
               <Link href="/blog">
                 <a className="nav-link mx-4">Blog</a>
               </Link>
             </li>
-            <li className="nav-item">
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('merch'),
+              })}
+            >
               <Link href="/shop">
                 <a className="nav-link mx-4">Merch</a>
               </Link>
@@ -156,15 +204,9 @@ function MobileNav() {
   );
 }
 
-export default function Header({
-  children,
-  classes,
-}: {
-  children: React.ReactNode;
-  classes?: { header?: string };
-}) {
+export default function Header() {
   return (
-    <header className={`header ${classes?.header || ''}`}>
+    <header className="header">
       <img
         className="position-absolute eclipse-location"
         src="/img/eclipses-header.svg"
@@ -172,12 +214,9 @@ export default function Header({
         width={668}
         height={666}
       />
-      <div style={{ zIndex: 3 }}>
-        <Notification />
-        <Navbar />
-        <MobileNav />
-      </div>
-      {children}
+      <Notification />
+      <Navbar />
+      <MobileNav />
     </header>
   );
 }

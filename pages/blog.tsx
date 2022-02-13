@@ -23,11 +23,13 @@ export default function Index({
 
   return (
     <>
-      <Layout header={<Intro />} classes={{ root: 'blog-pg' }}>
+      <Layout classes={{ root: 'blog-pg' }}>
         <Head>
           <title>Nifty League | Blog</title>
           <meta name="description" content="Nifty League Blog" />
         </Head>
+
+        <Intro />
         <Container>
           {heroPost && (
             <HeroPost
