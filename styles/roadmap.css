@@ -3,11 +3,7 @@
 Background
 
 -------------------------------- */
-.roadmap-pg .header .eclipse-location {
-  display: none;
-}
 .space {
-  margin-top: -100px;
   background-image: url('/img/roadmap/space.png');
   display: flex;
   flex-direction: column;
@@ -22,7 +18,6 @@ Background
 }
 .stars2 {
   background-image: url('/img/roadmap/stars_02.png');
-  /* background-attachment: fixed; */
   background-position: center;
   background-repeat: repeat;
   text-align: center;
