@@ -7,10 +7,13 @@ import Layout from '../components/layout';
 function Intro() {
   return (
     <div className="row m-0 p-0 position-relative pt-5 home-intro">
-      <div className="d-flex flex-column align-items-center text-center my-auto py-3 pt-md-5">
-        <h1 className="mt-0 mt-sm-4 mt-md-5">The Nifty League</h1>
+      <div className="overlay-dark min-vh-100" />
+      <div className="overlay-gradient-top" />
+      <div className="overlay-gradient-bottom" />
+      <div className="d-flex flex-column align-items-center text-center my-auto py-3 pt-md-5 home-content">
+        <h1 className="mt-0 mt-sm-4 mt-md-5">Nifty League</h1>
         <h4 className="mt-2">By Gamers. For Gamers.</h4>
-        <p className="my-5 text-m-center">
+        <p className="my-4 text-center">
           Design, mint, and play to compete and earn rewards within our
           <br /> community including our ecosystem&apos;s token; NFTL.
         </p>

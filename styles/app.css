@@ -337,18 +337,14 @@ a {
   -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
   image-rendering: pixelated;
 }
+
 /*************************************** Learn **********************************************/
-.learn-pg .header .eclipse-location {
-  display: none;
-}
+
 .learn-pg .learn-intro {
-  background: #191b1f;
-  background-image: url(/img/nifty-learn/learn-banner-desktop.png);
-  min-height: 842px;
+  min-height: 94vh;
 }
 .learn-section {
-  background: #191b1f;
-  background-image: url(/img/nifty-learn/learn-section.png);
+  max-width: 100%;
 }
 .learn-content {
   max-height: 310px;
@@ -539,7 +535,40 @@ a {
 /*************************************** Home **********************************************/
 
 .home-intro {
-  min-height: 90vh;
+  background: #191b1f;
+  background-size: cover;
+  background-image: url(/img/home-banner-desktop.png);
+  min-height: 94vh;
+}
+.home-intro .overlay-dark {
+  width: 100%;
+  height: 100vh;
+  background: rgba(25, 27, 31, 1);
+  opacity: 0.8999999761581421;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-intro .overlay-gradient-top {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(rgba(25, 27, 31, 1), rgba(25, 27, 31, 0));
+  opacity: 0.75;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-intro .overlay-gradient-bottom {
+  width: 100%;
+  height: 562px;
+  background: linear-gradient(rgba(25, 27, 31, 0), rgba(25, 27, 31, 1));
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+.home-content {
+  z-index: 3;
 }
 
 .browse-single1 {
