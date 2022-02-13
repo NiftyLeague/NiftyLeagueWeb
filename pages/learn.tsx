@@ -5,10 +5,10 @@ import Layout from '../components/layout';
 
 function Intro() {
   return (
-    <div className="learn-intro pt-5">
-      <div className="container py-5 min-vh-100 d-flex align-items-center">
+    <div className="learn-intro pt-md-5">
+      <div className="container py-3 py-sm-5 min-vh-100 d-flex align-items-center">
         <div className="row m-0 p-0 position-relative">
-          <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
             <div className="learn-content position-relative">
               <img
                 className="position-absolute desktop w-100 h-100"
@@ -30,7 +30,7 @@ function Intro() {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
             <div className="learn-content position-relative">
               <img
                 className="position-absolute desktop w-100 h-100"
@@ -52,7 +52,7 @@ function Intro() {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
             <div className="learn-content position-relative">
               <img
                 className="position-absolute desktop w-100 h-100"
@@ -74,7 +74,7 @@ function Intro() {
               </div>
             </div>
           </div>
-          <div className="col-sm-6 p-sm-3 py-4 py-sm-0 mb-4">
+          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
             <div className="learn-content position-relative">
               <img
                 className="position-absolute desktop w-100 h-100"
