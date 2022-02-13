@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Notification() {
   return (
@@ -26,21 +27,6 @@ function Notification() {
 
 function Navbar() {
   const { pathname } = useRouter();
-
-  useEffect(() => {
-    const nav = document.getElementById('nav');
-    const sticky = nav?.offsetTop || 0;
-    const fixOnScroll = () => {
-      if (window.pageYOffset > sticky) {
-        nav?.classList.add('fixed-top', 'dark-nav');
-        nav?.classList.remove('position-absolute');
-      } else {
-        nav?.classList.remove('fixed-top', 'dark-nav');
-        nav?.classList.add('position-absolute');
-      }
-    };
-    window.addEventListener('scroll', fixOnScroll, false);
-  }, []);
 
   return (
     <nav
@@ -110,15 +96,6 @@ function Navbar() {
                 <a className="nav-link mx-4">Blog</a>
               </Link>
             </li>
-            <li
-              className={cn('nav-item', {
-                ['active']: pathname.includes('merch'),
-              })}
-            >
-              <Link href="/shop">
-                <a className="nav-link mx-4">Merch</a>
-              </Link>
-            </li>
           </ul>
           <Link href="/app">
             <a>
@@ -135,7 +112,7 @@ function Navbar() {
 
 function MobileNav() {
   return (
-    <div className="mobile-nav align-items-center d-flex">
+    <div id="nav" className="mobile-nav align-items-center d-flex">
       <input type="checkbox" id="toggle" style={{ display: 'none' }} />
       <label className="toggle-btn toggle-btn__cross font-18" htmlFor="toggle">
         <svg
@@ -160,10 +137,6 @@ function MobileNav() {
       </button>
 
       <nav>
-        <img
-          className="position-absolute eclipse-location"
-          src="/img/eclipses-header.svg"
-        />
         <ul>
           <li>
             <Link href="/">
@@ -191,10 +164,12 @@ function MobileNav() {
             </Link>
           </li>
           <li>
-            <a>Blog</a>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </li>
           <li>
-            <Link href="/merch">
+            <Link href="/shop">
               <a>Merch</a>
             </Link>
           </li>
@@ -205,6 +180,26 @@ function MobileNav() {
 }
 
 export default function Header() {
+  const expanded = useMediaQuery('(min-width:992px)');
+
+  useEffect(() => {
+    const nav = document.getElementById('nav');
+    const sticky = nav?.offsetTop || 0;
+    const fixOnScroll = () => {
+      if (window.pageYOffset > sticky) {
+        nav?.classList.add('fixed-top', 'dark-nav');
+        nav?.classList.remove('position-absolute');
+      } else {
+        nav?.classList.remove('fixed-top', 'dark-nav');
+        nav?.classList.add('position-absolute');
+      }
+    };
+    window.addEventListener('scroll', fixOnScroll, false);
+    return () => {
+      window.removeEventListener('scroll', fixOnScroll, false);
+    };
+  }, [expanded]);
+
   return (
     <header className="header">
       <img
@@ -215,8 +210,7 @@ export default function Header() {
         height={666}
       />
       <Notification />
-      <Navbar />
-      <MobileNav />
+      {expanded ? <Navbar /> : <MobileNav />}
     </header>
   );
 }
