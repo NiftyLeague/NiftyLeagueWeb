@@ -1,3 +1,5 @@
+declare var $: any;
+import { useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -5,6 +7,31 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 
 function Intro() {
+  useEffect(() => {
+    $('.spons-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+    });
+  }, []);
+
   return (
     <div className="row m-0 p-0 position-relative pt-5 home-intro">
       <div className="overlay-dark min-vh-100" />
