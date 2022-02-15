@@ -12,9 +12,7 @@ function Intro() {
             <h4 className="mt-5 text-m-center">The Nifty League</h4>
             <h1 className="text-m-center">Community</h1>
             <p className="my-3 text-m-center">
-              The Nifty League community is an ecosystem of users/gamers,
-              <br />
-              developers, designers, and educators.
+              Meet our global community of gamers
             </p>
           </div>
           <div className="col-sm-6 position-relative text-center com-banner">
@@ -50,13 +48,8 @@ const Community: NextPage = () => {
           <div className="">
             <h2 className="">Join the conversation</h2>
             <p className="text-m-center">
-              The Nifty League&apos;s global and vibrant community drives the
-              success
-              <br />
-              of the system. Join the conversation on Discord and Twitter; and
-              find
-              <br />
-              the complete collection on OpenSea.
+              Nifty League&apos;s community is unlike any other. Get your
+              questions answers and connect with fellow DEGENs!
             </p>
           </div>
         </div>
@@ -64,14 +57,17 @@ const Community: NextPage = () => {
       <img className="com-grad-1" src="/img/community/com-grad-1.svg" />
       <div className="container my-5">
         <div className="container d-flex flex-column align-items-center my-sm-0 mt-sm-5">
-          <a href="">
+          <a
+            href="https://discord.gg/niftyleague"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Discord</h4>
                   <p className="color-white">
-                    Ask questions and engage with the Nifty league Community on
-                    Discord
+                    Ask questions, meet the community, and follow team updates
                   </p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
@@ -90,13 +86,17 @@ const Community: NextPage = () => {
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="https://opensea.io/collection/niftydegen"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">OpenSea</h4>
                   <p className="color-white">
-                    See the complete degen collection on OpenSea
+                    Browse our collection of DEGEN NFTs on OpenSea
                   </p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
@@ -115,14 +115,17 @@ const Community: NextPage = () => {
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="https://twitter.com/NiftyLeague"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Twitter</h4>
                   <p className="color-white">
-                    Ask questions and engage with the Nifty league Community on
-                    Twitter
+                    Follow us for partnership and community updates on Twitter
                   </p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
@@ -141,14 +144,17 @@ const Community: NextPage = () => {
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="https://www.twitch.tv/niftyleagueofficial"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Twitch</h4>
                   <p className="color-white">
-                    Ask questions and engage with the Nifty league Community on
-                    Twitch
+                    Watch and engage with streamers playing Nifty Smashers
                   </p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
@@ -167,12 +173,18 @@ const Community: NextPage = () => {
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="https://www.youtube.com/c/NiftyLeague/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Youtube</h4>
-                  <p className="color-white">See our videos on YouTube</p>
+                  <p className="color-white">
+                    Watch gameplay and catch up on past community events
+                  </p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
                   <img
@@ -190,14 +202,17 @@ const Community: NextPage = () => {
             </div>
           </a>
 
-          <a href="">
+          <a
+            href="https://www.reddit.com/r/niftyleague/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Reddit</h4>
                   <p className="color-white">
-                    Ask questions and engage with the Nifty league Community on
-                    Reddit
+                    Hold discussions and ask questions on Reddit
                   </p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
@@ -534,12 +549,11 @@ const Community: NextPage = () => {
               the Community
             </h1>
             <p className="my-sm-5 my-2 text-m-center">
-              Nifty League community members contribute and express
-              <br />
-              themselves through degens in a play-to-earn smash brawl.
+              Grab your Nifty League DEGEN and join us in the Lair in Discord!
+              We&apos;re ready to meet you.
             </p>
             <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
-              <span className="me-2">learn Community nifty smashers</span>
+              <span className="me-2">View on OpenSea</span>
               <svg
                 width="27"
                 height="24"
@@ -561,7 +575,7 @@ const Community: NextPage = () => {
         </div>
       </div>
 
-      <div className="container my-5">
+      {/* <div className="container my-5">
         <div className="community-footer d-flex align-items-center text-center flex-column p-5">
           <img className="mb-5" src="/img/logo-blue.svg" />
           <h3>Download Brand Assets</h3>
@@ -572,7 +586,7 @@ const Community: NextPage = () => {
             download brand assets
           </button>
         </div>
-      </div>
+      </div> */}
     </Layout>
   );
 };
