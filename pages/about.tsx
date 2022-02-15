@@ -47,7 +47,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon1.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -57,7 +57,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon2.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -67,7 +67,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon3.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -77,7 +77,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon4.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -87,7 +87,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon5.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -97,7 +97,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon6.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -107,7 +107,7 @@ function Intro() {
             <Image
               src="/img/about/header/icon7.png"
               layout="fixed"
-              height="320"
+              height="300"
               width="300"
             />
           </div>
@@ -151,10 +151,14 @@ const About: NextPage = () => {
             <img className="pixelated" src="/img/about/youtube-video.png" />
           </a>
         </div>
-        <img
+        <div
           className="p-0 video-bg pixelated"
-          src="/img/about/youtube-bg.png"
-        />
+        >
+          <Image
+            src="/img/about/youtube-bg.png"
+            layout="fill"
+          />
+        </div>
       </div>
       <div
         className="container p-0 desktop-block"
@@ -460,7 +464,16 @@ const About: NextPage = () => {
       <div className="container">
         <div className="row m-0 position-relative section-margin nifty-degan">
           <div className="col-sm-6 position-relative">
-            <img src="/img/about/nifty-degans.svg" className="pixelated" />
+            <div
+              className="pixelated"
+            >
+              <Image
+                src="/img/about/nifty-degans.svg"
+                layout="fixed"
+                width="500px"
+                height="500px"
+              />
+            </div>
           </div>
           <div className="col-sm-6 mt-5 mt-sm-0">
             <h2 className="text-m-left">Nifty</h2>
@@ -498,10 +511,16 @@ const About: NextPage = () => {
             </button>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
-            <img
+            <div
               className="nifty-rental-banner pixelated"
-              src="/img/about/niftyRentals.png"
-            />
+            >
+              <Image
+                src="/img/about/niftyRentals.png"
+                layout="fixed"
+                width="450px"
+                height="450px"
+              />
+            </div>
             <img
               className="rental-grad"
               src="/img/about/niftyRentals-gradient.svg"
