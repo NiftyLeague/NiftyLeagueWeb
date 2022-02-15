@@ -8,7 +8,32 @@ import Layout from '../components/layout';
 
 function Intro() {
   useEffect(() => {
-    $('.spons-slider').slick({
+    if ($('.degens-slider')) {
+      $('.degens-slider')?.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+    if ($('.spons-slider')) {
+      $('.spons-slider')?.slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,
@@ -29,7 +54,8 @@ function Intro() {
                 slidesToShow: 1
             }
         }]
-    });
+      });
+    }
   }, []);
 
   return (

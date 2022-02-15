@@ -1,9 +1,62 @@
+declare var $: any;
+import { useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
 function Intro() {
+  useEffect(() => {
+    if ($('.degens-slider')) {
+      $('.degens-slider')?.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+    if ($('.teams-slider')) {
+      $('.teams-slider')?.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+  
+        autoplay: false,
+        autoplaySpeed: 3500,
+        arrows: false,
+        dots: true,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+  }, []);
+
   return (
     <div className="container about-intro min-vh-100 mt-5 py-5">
       <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">

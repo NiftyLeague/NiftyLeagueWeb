@@ -1,9 +1,39 @@
+declare var $: any;
+import { useEffect } from 'react';
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
 function Intro() {
+  useEffect(() => {
+    if ($('.degens-slider')) {
+      $('.degens-slider')?.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+  }, []);
+
   return (
     <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
       <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
