@@ -75,16 +75,15 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           </div>
           <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <a href="#">Terms&nbsp;of Service</a>
-              <a href="#" className="mt-2">
-                Disclaimer
-              </a>
-              <a href="#" className="mt-2">
-                Privacy Policy
-              </a>
-              <a href="#" className="mt-2">
-                Brand Guidelines
-              </a>
+              <Link href="/tos">
+                <a className="mt-2">Terms&nbsp;of Service</a>
+              </Link>
+              <Link href="/disclaimer">
+                <a className="mt-2">Disclaimer</a>
+              </Link>
+              <Link href="/privacy-policy">
+                <a className="mt-2">Privacy Policy</a>
+              </Link>
             </div>
           </div>
           <div className="col-md-3 d-flex align-items-center justify-content-center ps-0">
