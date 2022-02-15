@@ -10,7 +10,6 @@ import type { AppProps } from 'next/app';
 import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   return (
     <>
       <Component {...pageProps} />
@@ -23,10 +22,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         type="text/javascript"
         src="/js/jquery.min.js"
         strategy="beforeInteractive"
-      />
-      <Script
-        type="text/javascript"
-        src="//cdn.jsdelivr.net/npm/jquery.marquee@1.6.0/jquery.marquee.min.js"
       />
       <Script
         type="text/javascript"
@@ -58,22 +53,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
         $window.trigger('scroll');`}
       </Script>
-      <Script id="marquee" strategy="lazyOnload">
-        {`$(document).ready(function() {
-            $('.marquee').marquee({
-              //speed in milliseconds of the marquee
-              duration: 5000,
-              //gap in pixels between the tickers
-              gap: 50,
-              //time in milliseconds before the marquee will start animating
-              delayBeforeStart: 0,
-              //'left' or 'right'
-              direction: 'up',
-              //true or false - should the marquee be duplicated to show an effect of continues flow
-              duplicated: true
-            });
-          });`}
-      </Script>
       <Script id="collapsible" type="text/javascript" strategy="lazyOnload">
         {`var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -88,58 +67,6 @@ function MyApp({ Component, pageProps }: AppProps) {
                 }
             });
         }`}
-      </Script>
-      <Script id="degens-slider" type="text/javascript" strategy="lazyOnload">
-        {`$(document).ready(function() {
-            $('.degens-slider').slick({
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                centerMode: true,
-                variableWidth: true,
-                autoplay: true,
-                autoplaySpeed: 1000,
-                arrows: false,
-                dots: false,
-                pauseOnHover: false,
-                responsive: [{
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
-        });`}
-      </Script>
-      <Script id="teams-slider" type="text/javascript" strategy="lazyOnload">
-        {`$(document).ready(function() {
-            $('.teams-slider').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                centerMode: false,
-
-                autoplay: false,
-                autoplaySpeed: 3500,
-                arrows: false,
-                dots: true,
-                pauseOnHover: false,
-                responsive: [{
-                    breakpoint: 769,
-                    settings: {
-                        slidesToShow: 2,
-                    }
-                }, {
-                    breakpoint: 520,
-                    settings: {
-                        slidesToShow: 1
-                    }
-                }]
-            });
-        });`}
       </Script>
     </>
   );
