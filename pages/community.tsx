@@ -7,11 +7,12 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 
 const Community: NextPage = () => {
-  const [isDegenSliderLoaded, setIsDegenSliderLoaded] = useState<boolean>(false);
+  const [isDegenSliderLoaded, setIsDegenSliderLoaded] =
+    useState<boolean>(false);
 
   useEffect(() => {
     if ($('.degens-slider')) {
-      $('.degens-slider').on("init", () => {
+      $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
 
@@ -25,17 +26,20 @@ const Community: NextPage = () => {
         arrows: false,
         dots: false,
         pauseOnHover: false,
-        responsive: [{
+        responsive: [
+          {
             breakpoint: 769,
             settings: {
-                slidesToShow: 2,
-            }
-        }, {
+              slidesToShow: 2,
+            },
+          },
+          {
             breakpoint: 520,
             settings: {
-                slidesToShow: 1
-            }
-        }]
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
     }
   }, []);
@@ -51,15 +55,16 @@ const Community: NextPage = () => {
       </Head>
 
       <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
-        <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
+        <div
+          className="container pt-5 mt-5 px-sm-5"
+          style={{ maxWidth: '90%' }}
+        >
           <div className="row m-0 position-relative com-intro-content">
             <div className="col-sm-6 com-intro-text">
-              <h4 className="mt-5 text-m-center">The Nifty League</h4>
+              <h4 className="mt-5 text-m-center">Nifty League</h4>
               <h1 className="text-m-center">Community</h1>
               <p className="my-3 text-m-center">
-                The Nifty League community is an ecosystem of users/gamers,
-                <br />
-                developers, designers, and educators.
+                Meet our global community of gamers
               </p>
             </div>
             <div className="col-sm-6 position-relative text-center com-banner">
@@ -283,7 +288,7 @@ const Community: NextPage = () => {
               style={{
                 alignItems: 'center',
                 maxWidth: '100%',
-                display: isDegenSliderLoaded ? "" : "none"
+                display: isDegenSliderLoaded ? '' : 'none',
               }}
             >
               <div className="slide">
