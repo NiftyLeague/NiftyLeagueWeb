@@ -1,30 +1,10 @@
-import { useEffect } from 'react';
-
+import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
 const Learn: NextPage = () => {
-  useEffect(() => {
-    let coll = document.getElementsByClassName("collapsible");
-    for (let i = 0; i < coll.length; i++) {
-      if (coll[i]) {
-        coll[i].addEventListener("click", function() {
-          coll[i].classList.toggle("active");
-          let content = (coll[i].nextElementSibling) as HTMLElement;
-          if (content) {
-            if (content.style.maxHeight) {
-              content.style.maxHeight = "";
-            } else {
-                content.style.maxHeight = content.scrollHeight + "px";
-            }
-          }
-        });
-      }
-    }
-  }, []);
-
   return (
     <Layout classes={{ root: 'learn-pg' }}>
       <Head>
@@ -35,8 +15,8 @@ const Learn: NextPage = () => {
         />
       </Head>
 
-      <div className="learn-intro pt-md-5">
-        <div className="container py-3 py-sm-5 min-vh-100 d-flex align-items-center">
+      <div className="container pt-md-5 d-flex learn-intro">
+        <div className="d-flex align-items-center">
           <div className="row m-0 p-0 position-relative">
             <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
               <div className="learn-content position-relative">
@@ -49,14 +29,16 @@ const Learn: NextPage = () => {
                   src="/img/learn/getting-started.png"
                 />
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Getting started</h3>
+                  <h3 className="mt-sm-4 mt-2 text-m-center">Overview</h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Here, you&apos;ll find curated how-to guides and information
+                    to help get you started.
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    Begin
-                  </button>
+                  <a href="https://docs.niftyleague.com/overview/intro">
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      Learn More
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -71,14 +53,18 @@ const Learn: NextPage = () => {
                   src="/img/learn/gitbook.png"
                 />
                 <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
+                  <h3 className="mt-sm-4 mt-2 text-m-center">
+                    Getting Started
+                  </h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Setup your Ethereum wallet and buy or rent a DEGEN to play
+                    for NFTL
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    visit gitbook
-                  </button>
+                  <a href="https://docs.niftyleague.com/guides/set-up">
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      Begin
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -93,14 +79,17 @@ const Learn: NextPage = () => {
                   src="/img/learn/tutorials.png"
                 />
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
+                  <h3 className="mt-sm-4 mt-2 text-m-center">
+                    Nifty Smashers Guide
+                  </h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Learn about Smashers gameplay and how points are counted
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    see tutorials
-                  </button>
+                  <a href="https://docs.niftyleague.com/guides/nifty-smashers/general-info">
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      See tutorials
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -117,12 +106,18 @@ const Learn: NextPage = () => {
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
                   <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Join our Discord server to get your questions answered live
+                    by our community
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    get involved
-                  </button>
+                  <a
+                    href="https://discord.gg/niftyleague"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      get involved
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -131,110 +126,87 @@ const Learn: NextPage = () => {
         <img className="earth-grad" src="/img/community/earth-grad.svg" />
       </div>
 
-      <div className="container learn-section">
-        <div className="container py-sm-5 py-0">
-          <div className="text-center">
-            <h2 className="my-3">Frequently Asked Questions</h2>
-          </div>
-          <div className="faq-content d-flex align-items-center flex-column py-5">
-            <div className="w-100 panel py-4 my-2">
-              <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-3">What is Nifty League?</h4>
-              </button>
-              <div className="content ">
-                <p className="color-white mt-4">
-                  Nifty League is leading competitive gaming in the metaverse -
-                  moving away from play-to-earn into a new era of play-and-earn
-                  by offering a fun and engaging gaming ecosystem. The
-                  Niftyverse is centered around nostalgia where builders,
-                  players, and owners spend time connecting, gaming, and earning
-                  in Web3. Learn more{' '}
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://docs.niftyleague.com/overview/intro"
-                  >
-                    here
-                  </a>
-                  .
-                </p>
-              </div>
-            </div>
-            <div className="w-100 panel py-4 my-2">
-              <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-4">
-                  What is NFTL and how do I earn it by playing Nifty League
-                  games?
-                </h4>
-              </button>
-              <div className="content ">
-                <p className="color-white mt-4">
-                  NFTL is our platform-wide governance token, which is currently
-                  available to trade and stake on SushiSwap.
-                  <br />
-                  <br />
-                  Players earn NFTL by landing hits and winning matches in our
-                  game Nifty Smashers. The more you play and improve your skills
-                  the better your chances of earning NFTL tokens through
-                  gameplay! NFTL can be used to purchase in-game items and
-                  bonuses, trade with other players, or &apos;cash out&apos; of
-                  the ecosystem for other cryptocurrencies.
-                  <br />
-                  <br />
-                  In the future, NFTL will serve to give users voting rights on
-                  upcoming games and tournaments, and for platform-wide
-                  expenses. For now, this only includes naming characters, but
-                  will soon be expanded to be used for purchasing additional
-                  in-game items and collectibles.
-                  <br />
-                  <br />
-                  NFTL Learn more{' '}
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://docs.niftyleague.com/overview/nftl/overview"
-                  >
-                    here
-                  </a>
-                  .
-                </p>
-              </div>
-            </div>
-            <div className="w-100 panel py-4 my-2">
-              <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-4">What is Nifty Smashers?</h4>
-              </button>
-              <div className="content ">
-                <p className="color-white mt-4">
-                  Nifty Smashers is the first title offered by Nifty League
-                  based off of the popular game Super Smash Bros.
-                  <br />
-                  <br />
-                  Battle it out amongst the community and get in as many bat
-                  bonks on your friends as you can! Nifty Smashers takes
-                  inspiration from the classic Super Smash Bros game where the
-                  objective is to knock your opponents off the map to score
-                  points.
-                </p>
-              </div>
-            </div>
-            <div className="w-100 panel py-4 my-2">
-              <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-4">
-                  Does it cost money to play Nifty Smashers?
-                </h4>
-              </button>
-              <div className="content ">
-                <p className="color-white mt-4">
-                  Rather than inflating the character supply as some projects
-                  may do, we are introducing a bespoke rental system allowing
-                  DEGEN holders to earn NFTL daily through fees.{' '}
-                </p>
-              </div>
-            </div>
-          </div>
+      <div className="container pb-3 pb-sm-5">
+        <div className="text-center">
+          <h2 className="my-3">Frequently Asked Questions</h2>
         </div>
+        <MDBAccordion flush className="faq-accordion">
+          <MDBAccordionItem
+            collapseId="flush-collapse1"
+            headerTitle="What is Nifty League?"
+          >
+            Nifty League is leading competitive gaming in the metaverse - moving
+            away from play-to-earn into a new era of play-and-earn by offering a
+            fun and engaging gaming ecosystem. The Niftyverse is centered around
+            nostalgia where builders, players, and owners spend time connecting,
+            gaming, and earning in Web3. Learn more{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://docs.niftyleague.com/overview/intro"
+            >
+              here
+            </a>
+            .
+          </MDBAccordionItem>
+          <MDBAccordionItem
+            collapseId="flush-collapse2"
+            headerTitle="What is NFTL and how do I earn it by playing Nifty League
+                  games?"
+          >
+            NFTL is our platform-wide governance token, which is currently
+            available to trade and stake on SushiSwap.
+            <br />
+            <br />
+            Players earn NFTL by landing hits and winning matches in our game
+            Nifty Smashers. The more you play and improve your skills the better
+            your chances of earning NFTL tokens through gameplay! NFTL can be
+            used to purchase in-game items and bonuses, trade with other
+            players, or &apos;cash out&apos; of the ecosystem for other
+            cryptocurrencies.
+            <br />
+            <br />
+            In the future, NFTL will serve to give users voting rights on
+            upcoming games and tournaments, and for platform-wide expenses. For
+            now, this only includes naming characters, but will soon be expanded
+            to be used for purchasing additional in-game items and collectibles.
+            <br />
+            <br />
+            NFTL Learn more{' '}
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://docs.niftyleague.com/overview/nftl/overview"
+            >
+              here
+            </a>
+            .
+          </MDBAccordionItem>
+          <MDBAccordionItem
+            collapseId="flush-collapse3"
+            headerTitle="What is Nifty Smashers?"
+          >
+            Nifty Smashers is the first title offered by Nifty League based off
+            of the popular game Super Smash Bros.
+            <br />
+            <br />
+            Battle it out amongst the community and get in as many bat bonks on
+            your friends as you can! Nifty Smashers takes inspiration from the
+            classic Super Smash Bros game where the objective is to knock your
+            opponents off the map to score points.
+          </MDBAccordionItem>
+          <MDBAccordionItem
+            collapseId="flush-collapse4"
+            headerTitle="Does it cost money to play your games?"
+          >
+            At the moment you will either need to own or rent a DEGEN to play
+            any games on our platform. A free-2-play version will be coming soon
+            enabling players around the world to hop in our game servers and
+            earn a small amount of NFTL for playing.
+          </MDBAccordionItem>
+        </MDBAccordion>
       </div>
+
       <div className="row m-0 p-0 position-relative stay-informed-section">
         <img src="/img/footer-img1.png" className="p-0 w-100 h-auto mobile" />
         <img
