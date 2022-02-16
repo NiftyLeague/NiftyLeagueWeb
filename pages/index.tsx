@@ -209,24 +209,43 @@ const Home: NextPage = () => {
             builders, players, and owners spend time connecting, gaming, and
             earning in Web3.
           </h2>
+          <div className="position-relative flex-grow-1">
+            <div className="browse-single browse-andy desktop">
+              <Image
+                alt="Andy DEGEN"
+                className="pixelated"
+                layout="fill"
+                objectFit="cover"
+                src="/img/browse-single-1-mob.svg"
+              />
+            </div>
 
-          <div className="browse-single browse-andy desktop">
-            <img src="/img/browse-single-1-mob.svg" className="pixelated" />
-          </div>
-
-          <div className="browse-single browse-spike desktop">
-            <img src="/img/browse-single-3-mob.svg" className="pixelated" />
-          </div>
-          <div className="browse-single browse-snarfy desktop">
-            <img src="/img/browse-single-2-mob.svg" className="pixelated" />
+            <div className="browse-single browse-spike desktop">
+              <Image
+                alt="Spike DEGEN"
+                className="pixelated"
+                layout="fill"
+                objectFit="cover"
+                src="/img/browse-single-3-mob.svg"
+              />
+            </div>
+            <div className="browse-single browse-snarfy desktop">
+              <Image
+                alt="Snarfy DEGEN"
+                className="pixelated"
+                layout="fill"
+                objectFit="cover"
+                src="/img/browse-single-2-mob.svg"
+              />
+            </div>
           </div>
 
           <div className="position-relative flex-grow-1 league-floating-nfts mobile">
             <Image
-              src="/img/browse-single-mob.svg"
+              alt="Mobile group floating degens"
               layout="fill"
               objectFit="cover"
-              alt="Mobile group floating degens"
+              src="/img/browse-single-mob.svg"
             />
           </div>
         </div>
