@@ -188,10 +188,6 @@ a {
   fill: #620edf;
 }
 
-.gif-section {
-  background: linear-gradient(180deg, #191b1f 22.27%, rgba(25, 27, 31, 0) 100%);
-}
-
 .spons-single {
   padding: 25px 40px;
 }
@@ -216,15 +212,6 @@ a {
   border-radius: 8px;
 }
 
-.sliding-nfts {
-  background: #191b1f;
-}
-.dark-shade-1 {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
 .section-margin {
   margin-top: 150px !important;
   margin-bottom: 150px !important;
@@ -502,6 +489,13 @@ a {
   bottom: -380px;
   right: -220px;
 }
+@media (min-width: 1280px) and (max-width: 1800px) {
+  .about-pg .rental-grad {
+    position: absolute;
+    bottom: -380px;
+    right: 0px !important;
+  }
+}
 .abt-grad-2 {
   position: absolute;
   left: auto;
@@ -601,11 +595,18 @@ a {
   z-index: 3;
 }
 
-.sliding-background-wrapper {
-  overflow: hidden;
-  min-height: 110vh;
+.sliding-nfts {
+  background: #191b1f;
 }
-.sliding-background-desktop {
+.sliding-nfts .sliding-background-wrapper-desktop {
+  overflow: hidden;
+  min-height: 94vh;
+}
+.sliding-nfts .sliding-background-wrapper-mobile {
+  overflow: hidden;
+  min-height: 520px;
+}
+.sliding-background-wrapper-desktop .sliding-background {
   background: url(/img/icons-set.png) repeat-x;
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges; /* Firefox */
@@ -618,9 +619,8 @@ a {
   width: 5076px;
   animation: slide 60s linear infinite;
 }
-.sliding-background-mobile {
+.sliding-background-wrapper-mobile .sliding-background {
   background: url(/img/icons-set-mb.png) repeat-x;
-
   height: 100%;
   width: 5076px;
   animation: slide 60s linear infinite;
@@ -634,75 +634,101 @@ a {
   }
 }
 
-.browse-andy {
-  top: 430px;
-  left: 60px;
+.sushi-gif-section {
+  background: linear-gradient(180deg, #191b1f 22.27%, rgba(25, 27, 31, 0) 100%);
+}
+.sushi-gif {
+  opacity: 0.35;
+}
+.sushi-dark-shade-wrapper {
   position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 65%;
+}
+
+.browse-andy {
+  position: absolute;
+  top: 430px;
+  left: 12%;
+}
+.browse-andy img {
+  max-width: 350px;
 }
 .browse-snarfy {
-  top: 590px;
-  left: 1000px;
+  top: 505px;
+  left: 40%;
   position: absolute;
+}
+.browse-snarfy img {
+  max-width: 275px;
 }
 .browse-spike {
-  top: 400px;
-  left: 1230px;
+  top: 420px;
+  left: 55%;
   position: absolute;
 }
-
-@media (max-width: 768px) {
-  .browse-andy {
-    min-height: 223px;
-    top: 100px;
-    left: 0px;
-  }
+.browse-spike img {
+  max-width: 200px;
 }
 
-@media (min-width: 1280px) and (max-width: 1800px) {
-  .browse-snarfy {
-    left: 800px;
-    position: absolute;
-  }
-  .browse-spike {
-    left: 1030px;
-    position: absolute;
-  }
-  .about-pg .rental-grad {
-    position: absolute;
-    bottom: -380px;
-    right: 0px !important;
-  }
+.league-floating-nfts {
+  display: flex;
+  height: 100%;
 }
 
-@media (width: 1024px) {
+@media (min-width: 992px) {
   .browse-andy {
-    min-height: auto;
-    top: 320px;
-    left: 50px;
-  }
-  .browse-snarfy {
-    min-height: auto;
-    top: 380px;
-    left: auto;
-    right: 375px;
-  }
-  .browse-spike {
-    min-height: auto;
-    top: 280px;
-    left: auto;
-    right: 75px;
-  }
-  .browse-snarfy .p-5 {
-    padding: 15px !important;
+    position: absolute;
+    top: 350px;
+    left: 12%;
   }
   .browse-andy img {
-    max-width: 220px;
+    max-width: 420px;
   }
-  .browse-spike img {
-    max-width: 220px;
+  .browse-snarfy {
+    top: 420px;
+    left: 40%;
+    position: absolute;
   }
   .browse-snarfy img {
-    max-width: 220px;
+    max-width: 350px;
+  }
+  .browse-spike {
+    top: 400px;
+    left: 55%;
+    position: absolute;
+  }
+  .browse-spike img {
+    max-width: 275px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .browse-andy {
+    position: absolute;
+    top: 250px;
+    left: 12%;
+  }
+  .browse-andy img {
+    max-width: 500px;
+  }
+  .browse-snarfy {
+    top: 380px;
+    left: 40%;
+    position: absolute;
+  }
+  .browse-snarfy img {
+    max-width: 400px;
+  }
+  .browse-spike {
+    top: 320px;
+    left: 55%;
+    position: absolute;
+  }
+  .browse-spike img {
+    max-width: 320px;
   }
 }
 
@@ -715,8 +741,9 @@ a {
   width: 100%;
 }
 .league-special-container .eclipse-location {
-  margin-left: 70px;
+  margin-left: 20%;
   margin-top: -30px;
+  max-width: 79%;
 }
 .league-special-accordion .accordion-item {
   border-bottom: 1px solid rgb(211 205 205 / 13%);
@@ -881,14 +908,14 @@ a {
     margin-top: 110px;
     line-height: 1;
   }
-  .gif-section {
+  .sushi-gif-section {
     min-height: 679px;
   }
-  .gif-section h2 {
+  .sushi-gif-section h2 {
     font-size: 28px;
     padding: 7px;
   }
-  .gif-section h2 br {
+  .sushi-gif-section h2 br {
     display: none;
   }
   .browse-single h5 {
@@ -916,14 +943,6 @@ a {
   .about-nifty-degens .browse-single {
     position: relative;
   }
-  .about-nifty-degens .browse-andy {
-    left: 0px;
-    top: 0px;
-  }
-  .about-nifty-degens .browse-spike {
-    left: 0px;
-    top: 0px;
-  }
   .about-nifty-degens h2,
   h4,
   p {
@@ -942,15 +961,6 @@ a {
   }
   .team-section p {
     text-align: center;
-  }
-  .browse-andy {
-    min-height: 223px;
-  }
-  .browse-snarfy {
-    min-height: 192px;
-  }
-  .browse-spike {
-    min-height: 143px;
   }
   label {
     font-size: 13px;
@@ -1106,44 +1116,6 @@ a {
   .wrapper {
     min-height: 460px;
   }
-  .sushi-gif {
-    object-fit: cover;
-    opacity: 0.35;
-  }
-  .browse-andy {
-    min-height: auto !important;
-    top: 320px !important;
-    left: 50px !important;
-  }
-  .browse-snarfy {
-    display: none;
-    min-height: auto !important;
-    top: 380px !important;
-    left: auto !important;
-    right: 375px !important;
-  }
-  .browse-spike {
-    display: none;
-    min-height: auto !important;
-    top: 280px !important;
-    left: auto !important;
-    right: 75px !important;
-  }
-  .browse-snarfy .p-5 {
-    padding: 15px !important;
-  }
-  .browse-andy img {
-    max-width: 125px !important;
-  }
-  .browse-spike img {
-    max-width: 220px !important;
-  }
-  .browse-snarfy img {
-    max-width: 220px !important;
-  }
-  .league-floating-nfts img {
-    margin-left: -30px;
-  }
   .section-margin {
     margin-top: 60px !important;
     margin-bottom: 60px !important;
@@ -1206,35 +1178,6 @@ a {
 }
 
 @media (width: 768px) {
-  .browse-andy {
-    min-height: auto !important;
-    top: 320px !important;
-    left: 50px !important;
-  }
-  .browse-snarfy {
-    min-height: auto !important;
-    top: 380px !important;
-    left: auto !important;
-    right: 375px !important;
-  }
-  .browse-spike {
-    min-height: auto !important;
-    top: 280px !important;
-    left: auto !important;
-    right: 75px !important;
-  }
-  .browse-snarfy .p-5 {
-    padding: 15px !important;
-  }
-  .browse-andy img {
-    max-width: 220px !important;
-  }
-  .browse-spike img {
-    max-width: 220px !important;
-  }
-  .browse-snarfy img {
-    max-width: 220px !important;
-  }
   .league-special-container .eclipse-location {
     display: none;
   }
@@ -1289,14 +1232,14 @@ a {
     margin-top: 110px;
     line-height: 1;
   }
-  .gif-section {
+  .sushi-gif-section {
     min-height: 679px;
   }
-  .gif-section h2 {
+  .sushi-gif-section h2 {
     font-size: 28px;
     padding: 7px;
   }
-  .gif-section h2 br {
+  .sushi-gif-section h2 br {
     display: none;
   }
   .browse-single h5 {
@@ -1332,14 +1275,6 @@ a {
   .about-nifty-degens .browse-single {
     position: relative;
   }
-  .about-nifty-degens .browse-andy {
-    left: 0px;
-    top: 0px;
-  }
-  .about-nifty-degens .browse-spike {
-    left: 0px;
-    top: 0px;
-  }
   .about-nifty-degens h2,
   h4,
   p {
@@ -1359,15 +1294,6 @@ a {
   .team-section p {
     text-align: center;
   }
-  .browse-andy {
-    min-height: 223px;
-  }
-  .browse-snarfy {
-    min-height: 192px;
-  }
-  .browse-spike {
-    min-height: 143px;
-  }
   label {
     font-size: 13px;
   }
@@ -1384,35 +1310,6 @@ a {
   .discord-btn {
     max-width: 250px;
     white-space: normal;
-  }
-  .browse-andy {
-    min-height: auto !important;
-    top: 320px !important;
-    left: 50px !important;
-  }
-  .browse-snarfy {
-    min-height: auto !important;
-    top: 380px !important;
-    left: auto !important;
-    right: 375px !important;
-  }
-  .browse-spike {
-    min-height: auto !important;
-    top: 280px !important;
-    left: auto !important;
-    right: 75px !important;
-  }
-  .browse-snarfy .p-5 {
-    padding: 15px !important;
-  }
-  .browse-andy img {
-    max-width: 220px !important;
-  }
-  .browse-spike img {
-    max-width: 220px !important;
-  }
-  .browse-snarfy img {
-    max-width: 220px !important;
   }
   .league-special-container .eclipse-location {
     display: none;
