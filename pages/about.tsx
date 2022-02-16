@@ -6,12 +6,13 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 
 const About: NextPage = () => {
-  const [isDegenSliderLoaded, setIsDegenSliderLoaded] = useState<boolean>(false);
+  const [isDegenSliderLoaded, setIsDegenSliderLoaded] =
+    useState<boolean>(false);
   const [isTeamSliderLoaded, setIsTeamSliderLoaded] = useState<boolean>(false);
 
   useEffect(() => {
     if ($('.degens-slider')) {
-      $('.degens-slider').on("init", () => {
+      $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
 
@@ -25,21 +26,24 @@ const About: NextPage = () => {
         arrows: false,
         dots: false,
         pauseOnHover: false,
-        responsive: [{
+        responsive: [
+          {
             breakpoint: 769,
             settings: {
-                slidesToShow: 2,
-            }
-        }, {
+              slidesToShow: 2,
+            },
+          },
+          {
             breakpoint: 520,
             settings: {
-                slidesToShow: 1
-            }
-        }]
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
     }
     if ($('.teams-slider')) {
-      $('.teams-slider').on("init", () => {
+      $('.teams-slider').on('init', () => {
         setIsTeamSliderLoaded(true);
       });
 
@@ -47,23 +51,26 @@ const About: NextPage = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: false,
-  
+
         autoplay: false,
         autoplaySpeed: 3500,
         arrows: false,
         dots: true,
         pauseOnHover: false,
-        responsive: [{
+        responsive: [
+          {
             breakpoint: 769,
             settings: {
-                slidesToShow: 2,
-            }
-        }, {
+              slidesToShow: 2,
+            },
+          },
+          {
             breakpoint: 520,
             settings: {
-                slidesToShow: 1
-            }
-        }]
+              slidesToShow: 1,
+            },
+          },
+        ],
       });
     }
   }, []);
@@ -79,116 +86,117 @@ const About: NextPage = () => {
         <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
           <div className="about-intro-content">
             <h4 className="mt-5 text-m-center">Welcome to</h4>
-            <h1 className="text-m-center">
-              The Nifty
-              <br /> League
-            </h1>
+            <h1 className="text-m-center">Nifty League</h1>
             <p className="mt-sm-2 mt-5 text-m-center p1">
               Our mission is to create a leading NFT gaming platform through
               <br /> community governance and development. Nifty League prides
               itself
               <br /> on being one of the first GameFi platforms offering
-              interactive play
+              interactive
               <br />
-              -to-earn games with customizable characters.
+              play-and-earn games with customizable characters.
             </p>
             <p className="text-m-center">
               Advance your gaming skills and join our community to earn daily
-              <br /> NFTL rewards from the Nifty DAO!
+              NFTL rewards!
             </p>
 
             <div className="display-buttons my-3 d-flex desktop">
-              <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
-              <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
-                Download the whitepaper
-              </button>
+              <a href="https://docs.niftyleague.com/">
+                <button className="btn theme-btn-aqua mx-sm-2">
+                  Check our docs
+                </button>
+              </a>
+              <a href="/whitepaper.pdf">
+                <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
+                  Download the whitepaper
+                </button>
+              </a>
             </div>
             <div className="display-buttons my-3 d-flex mobile">
-              <button className="btn theme-btn-aqua mx-sm-2">
-                Browse Collection
-              </button>
+              <a
+                href="https://opensea.io/collection/niftydegen"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="btn theme-btn-aqua mx-sm-2">
+                  Browse Collection
+                </button>
+              </a>
             </div>
           </div>
 
           <div className="icons-placement">
-            <div
-              className="icon1 desktop pixelated"
-            >
+            <div className="icon1 desktop pixelated">
               <Image
                 src="/img/about/header/icon1.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon2 desktop pixelated"
-            >
+            <div className="icon2 desktop pixelated">
               <Image
                 src="/img/about/header/icon2.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon3 desktop pixelated"
-            >
+            <div className="icon3 desktop pixelated">
               <Image
                 src="/img/about/header/icon3.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon4 desktop pixelated"
-            >
+            <div className="icon4 desktop pixelated">
               <Image
                 src="/img/about/header/icon4.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon5 desktop pixelated"
-            >
+            <div className="icon5 desktop pixelated">
               <Image
                 src="/img/about/header/icon5.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon6 desktop pixelated"
-            >
+            <div className="icon6 desktop pixelated">
               <Image
                 src="/img/about/header/icon6.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon7 desktop pixelated"
-            >
+            <div className="icon7 desktop pixelated">
               <Image
                 src="/img/about/header/icon7.png"
                 layout="fixed"
                 height="300"
                 width="300"
+                alt="degen image"
               />
             </div>
-            <div
-              className="icon8 desktop pixelated"
-            >
+            <div className="icon8 desktop pixelated">
               <Image
                 src="/img/about/header/icon8.png"
                 layout="fixed"
                 height="320"
                 width="300"
+                alt="degen image"
               />
             </div>
           </div>
@@ -206,15 +214,18 @@ const About: NextPage = () => {
 
         <div className="container video-detail-container section-margin">
           <a href="">
-            <img className="pixelated" src="/img/about/youtube-video.png" />
+            <img
+              className="pixelated"
+              src="/img/about/youtube-video.png"
+              alt="Nifty Smashers Video Clip"
+            />
           </a>
         </div>
-        <div
-          className="p-0 video-bg pixelated"
-        >
+        <div className="p-0 video-bg pixelated">
           <Image
             src="/img/about/youtube-bg.png"
             layout="fill"
+            alt="Ape level background"
           />
         </div>
       </div>
@@ -233,7 +244,7 @@ const About: NextPage = () => {
               style={{
                 alignItems: 'center',
                 maxWidth: '100%',
-                display: isDegenSliderLoaded ? "" : "none",
+                display: isDegenSliderLoaded ? '' : 'none',
               }}
             >
               <div className="slide">
@@ -526,9 +537,7 @@ const About: NextPage = () => {
       <div className="container">
         <div className="row m-0 position-relative section-margin nifty-degan">
           <div className="col-sm-6 position-relative">
-            <div
-              className="pixelated"
-            >
+            <div className="pixelated">
               <Image
                 src="/img/about/nifty-degans.svg"
                 layout="fixed"
@@ -574,9 +583,7 @@ const About: NextPage = () => {
             </a>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
-            <div
-              className="nifty-rental-banner pixelated"
-            >
+            <div className="nifty-rental-banner pixelated">
               <Image
                 src="/img/about/niftyRentals.png"
                 layout="fixed"
@@ -704,7 +711,7 @@ const About: NextPage = () => {
           style={{
             alignItems: 'center',
             maxWidth: '100%',
-            display: isTeamSliderLoaded ? "" : "none",
+            display: isTeamSliderLoaded ? '' : 'none',
           }}
         >
           <div className="slide">

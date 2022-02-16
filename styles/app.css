@@ -191,56 +191,7 @@ a {
 .gif-section {
   background: linear-gradient(180deg, #191b1f 22.27%, rgba(25, 27, 31, 0) 100%);
 }
-.league-special-row {
-  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 96.39%),
-    #000000;
-}
-.league-special-container {
-  max-width: 1280px;
-}
-.league-special-container .eclipse-location {
-  margin-left: 70px;
-  margin-top: -30px;
-}
-.league-special-content h4 {
-  color: white;
-}
-.league-special-content .panel {
-  padding-bottom: 0px;
-  border-bottom: 1px solid #555555;
-}
-.league-special-content .collapsible {
-  cursor: pointer;
-  padding: 5px 0 0 5px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  background: none;
-}
-.league-special-content .collapsible:after {
-  content: url(/img/vector-down.svg);
-  color: #7cda24;
-  font-weight: 600;
-  float: right;
-  margin-right: 250px;
-  font-size: 24px;
-  margin-top: -18px;
-  line-height: 0;
-}
-.league-special-content .collapsible.active:after {
-  content: url(/img/vector-up.svg);
-  color: #620edf;
-}
-.league-special-content .collapsible.active h4 {
-  color: #620edf;
-}
-.league-special-content .content {
-  padding: 0 18px 0 5px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-}
+
 .spons-single {
   padding: 25px 40px;
 }
@@ -326,20 +277,16 @@ a {
 .learn-pg .learn-intro {
   min-height: 94vh;
 }
-.learn-section {
-  max-width: 100%;
-}
 .learn-content {
   max-height: 310px;
 }
 .learn-content button {
   width: auto;
 }
-.faq-content h4 {
-  color: #620edf;
-}
-.faq-content .panel {
-  padding: 40px;
+
+.faq-accordion .accordion-item {
+  border: none;
+  margin-bottom: 12px;
   background: linear-gradient(
       26.04deg,
       rgba(110, 51, 237, 0.05) -0.03%,
@@ -347,41 +294,16 @@ a {
     ),
     rgba(36, 37, 38, 0.6);
   backdrop-filter: blur(65.0688px);
-  /* Note: backdrop-filter has minimal browser support */
-  max-width: 898px;
-  min-height: 148px;
   border-radius: 8px;
 }
-.faq-content .collapsible {
-  cursor: pointer;
-  padding: 5px 0 0 5px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  background: none;
-}
-.faq-content .collapsible:after {
-  content: url(/img/vector-down.svg);
-  color: #7cda24;
-  font-weight: 600;
-  float: right;
-  font-size: 24px;
-  margin-top: -18px;
-  line-height: 0;
-}
-.faq-content .collapsible.active:after {
-  content: url(/img/vector-up.svg);
+.faq-accordion .accordion-header button {
   color: #620edf;
-}
-.faq-content .collapsible.active h4 {
-  color: #620edf;
-}
-.faq-content .content {
-  padding: 0 18px 0 5px;
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: 400;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
+  padding: 2rem 1.5rem;
 }
 
 /*************************************** Community **********************************************/
@@ -590,6 +512,38 @@ a {
     bottom: -380px;
     right: 0px !important;
   }
+}
+
+.league-special-row {
+  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 96.39%),
+    #000000;
+}
+.league-special-container {
+  max-width: 1280px;
+  width: 100%;
+}
+.league-special-container .eclipse-location {
+  margin-left: 70px;
+  margin-top: -30px;
+}
+.league-special-accordion .accordion-item {
+  border-bottom: 1px solid rgb(211 205 205 / 13%);
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+.league-special-accordion .accordion-header button {
+  color: #620edf;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
+}
+.league-special-accordion .accordion-header button.collapsed {
+  color: white;
+}
+.league-special-accordion .accordion-body button {
+  margin-top: 8px;
 }
 
 .wrapper {
@@ -948,16 +902,6 @@ a {
     top: 100px;
     left: 0px;
   }
-  .league-special-content button {
-    width: auto;
-  }
-  .league-special-content .collapsible:after {
-    margin-top: -13px;
-    margin-right: 40px;
-  }
-  .learn-section .faq-content h4 {
-    font-size: 18px;
-  }
   .community-data {
     min-width: auto;
   }
@@ -1207,10 +1151,6 @@ a {
   .league-floating-nfts img {
     margin-left: -30px;
   }
-  .nifty-special-2 {
-    width: 100%;
-    height: auto;
-  }
   .section-margin {
     margin-top: 60px !important;
     margin-bottom: 60px !important;
@@ -1305,10 +1245,6 @@ a {
   .league-special-container .eclipse-location {
     display: none;
   }
-  .nifty-special-2 {
-    width: 100%;
-    height: auto;
-  }
 }
 
 @media (orientation: landscape) and (max-height: 550px) {
@@ -1360,7 +1296,6 @@ a {
     margin-top: 110px;
     line-height: 1;
   }
-  /*    .mobile-view h1 br{display: none;}*/
   .gif-section {
     min-height: 679px;
   }
@@ -1379,16 +1314,6 @@ a {
     min-height: 223px;
     top: 100px;
     left: 0px;
-  }
-  .league-special-content button {
-    width: auto;
-  }
-  .league-special-content .collapsible:after {
-    margin-top: -13px;
-    margin-right: 40px;
-  }
-  .learn-section .faq-content h4 {
-    font-size: 18px;
   }
   .community-data {
     min-width: auto;
@@ -1498,9 +1423,5 @@ a {
   }
   .league-special-container .eclipse-location {
     display: none;
-  }
-  .nifty-special-2 {
-    width: 100%;
-    height: auto;
   }
 }
