@@ -1,5 +1,4 @@
 import '../styles/app.css';
-import '../styles/animation.css';
 import '../styles/slick.css';
 import '../styles/roadmap.css';
 import '../styles/satoshi-right.css';
