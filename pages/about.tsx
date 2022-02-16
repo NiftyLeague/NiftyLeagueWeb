@@ -1,9 +1,62 @@
+declare var $: any;
+import { useEffect } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
 function Intro() {
+  useEffect(() => {
+    if ($('.degens-slider')) {
+      $('.degens-slider')?.slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+    if ($('.teams-slider')) {
+      $('.teams-slider')?.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+  
+        autoplay: false,
+        autoplaySpeed: 3500,
+        arrows: false,
+        dots: true,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+  }, []);
+
   return (
     <div className="container about-intro min-vh-100 mt-5 py-5">
       <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
@@ -42,38 +95,86 @@ function Intro() {
         </div>
 
         <div className="icons-placement">
-          <img
+          <div
             className="icon1 desktop pixelated"
-            src="/img/about/header-gif/icon1.png"
-          />
-          <img
+          >
+            <Image
+              src="/img/about/header/icon1.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
             className="icon2 desktop pixelated"
-            src="/img/about/header-gif/icon2.png"
-          />
-          <img
+          >
+            <Image
+              src="/img/about/header/icon2.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
             className="icon3 desktop pixelated"
-            src="/img/about/header-gif/icon3.png"
-          />
-          <img
+          >
+            <Image
+              src="/img/about/header/icon3.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
             className="icon4 desktop pixelated"
-            src="/img/about/header-gif/icon4.png"
-          />
-          <img
-            className="icon5 pixelated "
-            src="/img/about/header-gif/icon5.png"
-          />
-          <img
-            className="icon6 pixelated "
-            src="/img/about/header-gif/icon6.png"
-          />
-          <img
-            className="icon7 pixelated "
-            src="/img/about/header-gif/icon7.png"
-          />
-          <img
-            className="icon8 pixelated "
-            src="/img/about/header-gif/icon8.png"
-          />
+          >
+            <Image
+              src="/img/about/header/icon4.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon5 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon5.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon6 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon6.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon7 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon7.png"
+              layout="fixed"
+              height="300"
+              width="300"
+            />
+          </div>
+          <div
+            className="icon8 desktop pixelated"
+          >
+            <Image
+              src="/img/about/header/icon8.png"
+              layout="fixed"
+              height="320"
+              width="300"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -104,10 +205,14 @@ const About: NextPage = () => {
             <img className="pixelated" src="/img/about/youtube-video.png" />
           </a>
         </div>
-        <img
+        <div
           className="p-0 video-bg pixelated"
-          src="/img/about/youtube-bg.png"
-        />
+        >
+          <Image
+            src="/img/about/youtube-bg.png"
+            layout="fill"
+          />
+        </div>
       </div>
       <div
         className="container p-0 desktop-block"
@@ -413,7 +518,16 @@ const About: NextPage = () => {
       <div className="container">
         <div className="row m-0 position-relative section-margin nifty-degan">
           <div className="col-sm-6 position-relative">
-            <img src="/img/about/nifty-degans.svg" className="pixelated" />
+            <div
+              className="pixelated"
+            >
+              <Image
+                src="/img/about/nifty-degans.svg"
+                layout="fixed"
+                width="500px"
+                height="500px"
+              />
+            </div>
           </div>
           <div className="col-sm-6 mt-5 mt-sm-0">
             <h2 className="text-m-left">Nifty</h2>
@@ -452,10 +566,16 @@ const About: NextPage = () => {
             </a>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
-            <img
+            <div
               className="nifty-rental-banner pixelated"
-              src="/img/about/niftyRentals.png"
-            />
+            >
+              <Image
+                src="/img/about/niftyRentals.png"
+                layout="fixed"
+                width="450px"
+                height="450px"
+              />
+            </div>
             <img
               className="rental-grad"
               src="/img/about/niftyRentals-gradient.svg"
@@ -466,11 +586,11 @@ const About: NextPage = () => {
         <div className="d-flex section-margin">
           <div className="ms-auto nifty-rentals-img">
             <div className="icons-placement1" style={{ display: 'none' }}>
-              <img className="icon8" src="/img/about/header-gif/icon8.png" />
-              <img className="icon1" src="/img/about/header-gif/icon1.png" />
-              <img className="icon2" src="/img/about/header-gif/icon2.png" />
-              <img className="icon3" src="/img/about/header-gif/icon3.png" />
-              <img className="icon4" src="/img/about/header-gif/icon4.png" />
+              <img className="icon8" src="/img/about/header/icon8.png" />
+              <img className="icon1" src="/img/about/header/icon1.png" />
+              <img className="icon2" src="/img/about/header/icon2.png" />
+              <img className="icon3" src="/img/about/header/icon3.png" />
+              <img className="icon4" src="/img/about/header/icon4.png" />
             </div>
           </div>
         </div>
