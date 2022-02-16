@@ -1,6 +1,7 @@
 declare var $: any;
 import { useEffect, useState } from 'react';
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,90 +9,75 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 
 const Home: NextPage = () => {
+  const desktop = useMediaQuery('(min-width:769px)');
   const [isDegenSliderLoaded, setIsDegenSliderLoaded] =
     useState<boolean>(false);
   const [isSponsSliderLoaded, setIsSponsSliderLoaded] =
     useState<boolean>(false);
 
   useEffect(() => {
-    let coll = document.getElementsByClassName('collapsible');
-    for (let i = 0; i < coll.length; i++) {
-      if (coll[i]) {
-        coll[i].addEventListener('click', function () {
-          coll[i].classList.toggle('active');
-          let content = coll[i].nextElementSibling as HTMLElement;
-          if (content) {
-            if (content.style.maxHeight) {
-              content.style.maxHeight = '';
-            } else {
-              content.style.maxHeight = content.scrollHeight + 'px';
-            }
-          }
-        });
-      }
+    if ($('.degens-slider')) {
+      $('.degens-slider').on('init', () => {
+        setIsDegenSliderLoaded(true);
+      });
+
+      $('.degens-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [
+          {
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
     }
-    // if ($('.degens-slider')) {
-    //   $('.degens-slider').on('init', () => {
-    //     setIsDegenSliderLoaded(true);
-    //   });
+    if ($('.spons-slider')) {
+      $('.spons-slider').on('init', () => {
+        setIsSponsSliderLoaded(true);
+      });
 
-    //   $('.degens-slider').slick({
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     centerMode: true,
-    //     variableWidth: true,
-    //     autoplay: true,
-    //     autoplaySpeed: 1000,
-    //     arrows: false,
-    //     dots: false,
-    //     pauseOnHover: false,
-    //     responsive: [
-    //       {
-    //         breakpoint: 769,
-    //         settings: {
-    //           slidesToShow: 2,
-    //         },
-    //       },
-    //       {
-    //         breakpoint: 520,
-    //         settings: {
-    //           slidesToShow: 1,
-    //         },
-    //       },
-    //     ],
-    //   });
-    // }
-    // if ($('.spons-slider')) {
-    //   $('.spons-slider').on('init', () => {
-    //     setIsSponsSliderLoaded(true);
-    //   });
-
-    //   $('.spons-slider').slick({
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     centerMode: true,
-    //     variableWidth: true,
-    //     autoplay: true,
-    //     autoplaySpeed: 1500,
-    //     arrows: false,
-    //     dots: false,
-    //     pauseOnHover: false,
-    //     responsive: [
-    //       {
-    //         breakpoint: 769,
-    //         settings: {
-    //           slidesToShow: 2,
-    //         },
-    //       },
-    //       {
-    //         breakpoint: 520,
-    //         settings: {
-    //           slidesToShow: 1,
-    //         },
-    //       },
-    //     ],
-    //   });
-    // }
+      $('.spons-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [
+          {
+            breakpoint: 769,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 520,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      });
+    }
   }, []);
 
   return (
@@ -245,16 +231,17 @@ const Home: NextPage = () => {
             src="/img/eclipses-header.svg"
           />
           <div className="row m-0 p-0 position-relative">
-            <div className="col-sm-6 position-relative">
-              <Image
-                className="desktop"
-                src="/img/nifty-special-2.png"
-                alt="Ecosystem Degen Image"
-                layout="responsive"
-                width={474}
-                height={467}
-              />
-            </div>
+            {desktop && (
+              <div className="col-sm-6 position-relative">
+                <Image
+                  src="/img/nifty-special-2.png"
+                  alt="Ecosystem Degen Image"
+                  layout="responsive"
+                  width={474}
+                  height={467}
+                />
+              </div>
+            )}
             <div className="col-sm-6">
               <h2 className="my-3 text-m-left">Nifty League Ecosystem</h2>
               <MDBAccordion
@@ -266,14 +253,16 @@ const Home: NextPage = () => {
                   collapseId="flush-collapse1"
                   headerTitle="DEGEN Rentals"
                 >
-                  <Image
-                    className="py-2 mobile"
-                    src="/img/nifty-special-2.png"
-                    alt="Ecosystem Degen Image"
-                    layout="responsive"
-                    width={474}
-                    height={467}
-                  />
+                  {!desktop && (
+                    <Image
+                      className="py-2"
+                      src="/img/nifty-special-2.png"
+                      alt="Ecosystem Degen Image"
+                      layout="responsive"
+                      width={474}
+                      height={467}
+                    />
+                  )}
                   Players can rent a DEGEN from owners directly via smart
                   contract technology, opening up game play at an attractive
                   rate for players globally.{' '}
