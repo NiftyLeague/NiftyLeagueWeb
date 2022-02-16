@@ -67,10 +67,16 @@ function Intro() {
         <h1 className="mt-0 mt-sm-4 mt-md-5">Nifty League</h1>
         <h4 className="mt-2">By Gamers. For Gamers.</h4>
         <p className="my-4 text-center">
-          Design, mint, and play to compete and earn rewards within our
-          <br /> community including our ecosystem&apos;s token; NFTL.
+          Nifty League is bringing competitive gaming to Web3
+          <br /> while offering fun and engaging games for all play styles.
         </p>
-        <button className="btn theme-btn-aqua my-3">Browse collection</button>
+        <a
+          href="https://opensea.io/collection/niftydegen"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="btn theme-btn-aqua my-3">Browse collection</button>
+        </a>
         <div className="d-flex align-items-center mt-4 mb-5">
           <a className="pe-3" href="#">
             <svg
@@ -177,10 +183,10 @@ const Home: NextPage = () => {
           style={{ zIndex: 2 }}
         >
           <h2 className="font-48 my-5">
-            The Nifty League is a set of 10,000
-            <br /> programmatically generated and unique
-            <br /> NFTs that will be playable avatars in the
-            <br /> Nifty Smashers video game.
+            Our 9.9k DEGEN NFTs act as players in our games such as Nifty
+            Smashers. Our ecosystem is centered around nostalgia - where
+            builders, players, and owners spend time connecting, gaming, and
+            earning in Web3.
           </h2>
 
           <div className="browse-single browse-single1 subject desktop-block">
@@ -217,36 +223,42 @@ const Home: NextPage = () => {
               />
             </div>
             <div className="col-sm-6">
-              <h2 className="my-3 text-m-left">Nifty League Specials</h2>
+              <h2 className="my-3 text-m-left">Nifty League Ecosystem</h2>
               <div className="row m-0 p-0 position-relative league-special-content">
                 <div className="w-100 panel py-4">
-                  <button className="collapsible">
-                    <h4 className="letter-0 mb-0">Degen Rentals</h4>
-                  </button>
+                  <Link href="/about">
+                    <button className="collapsible">
+                      <h4 className="letter-0 mb-0">DEGEN Rentals</h4>
+                    </button>
+                  </Link>
                   <div className="content ">
                     <img
                       className="mobile py-2"
                       src="/img/Degen%20Rentals.png"
                     />
                     <p className="color-white mt-4">
-                      Rather than inflating the character supply as some
-                      projects may do, we are introducing a bespoke rental
-                      system allowing DEGEN holders to earn NFTL daily through
-                      fees.{' '}
+                      Players can rent a DEGEN from owners directly via smart
+                      contract technology, opening up game play at an attractive
+                      rate for players globally.
                     </p>
-                    <button className="btn theme-btn-white">Learn More</button>
+                    <Link href="/about">
+                      <button className="btn theme-btn-white">
+                        Learn More
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="w-100 panel py-4">
-                  <button className="collapsible">
-                    <h4 className="letter-0 mb-0">Play-to-earn</h4>
-                  </button>
+                  <Link href="/about">
+                    <button className="collapsible">
+                      <h4 className="letter-0 mb-0">Play-and-earn</h4>
+                    </button>
+                  </Link>
                   <div className="content ">
                     <p className="color-white mt-4">
-                      Rather than inflating the character supply as some
-                      projects may do, we are introducing a bespoke rental
-                      system allowing DEGEN holders to earn NFTL daily through
-                      fees.{' '}
+                      Players earn NFTL by landing hits and winning matches in
+                      our game Nifty Smashers. Join in on weekly community
+                      tournaments sponsored by some amazing rewards!
                     </p>
                     <button className="btn theme-btn-white">Learn More</button>
                   </div>
@@ -256,11 +268,11 @@ const Home: NextPage = () => {
                     <h4 className="letter-0 mb-0">Games</h4>
                   </button>
                   <div className="content ">
+                    <img className="mobile py-2" src="/img/roadmap.png" />
                     <p className="color-white mt-4">
-                      Rather than inflating the character supply as some
-                      projects may do, we are introducing a bespoke rental
-                      system allowing DEGEN holders to earn NFTL daily through
-                      fees.{' '}
+                      Check our roadmap for some more exciting games coming in
+                      2022! Get playing immediately with our first title, Nifty
+                      Smashers, based off of the popular game Super Smash Bros.
                     </p>
                     <button className="btn theme-btn-white">Learn More</button>
                   </div>
@@ -284,7 +296,7 @@ const Home: NextPage = () => {
             className="baker-shade right"
             src="/img/bakers-arr-right-shade.svg"
           />
-          <h3 className="my-sm-5 mb-5">Nifty League is proudly backed by</h3>
+          <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
           <section
             className="spons-slider slider px-0 "
             style={{ alignItems: 'center' }}
@@ -325,9 +337,6 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <button className="btn theme-btn-white w-auto mb-5">
-            view all backers
-          </button>
         </div>
       </div>
 
@@ -643,14 +652,12 @@ const Home: NextPage = () => {
               style={{ marginBottom: -230 }}
             />
 
-            <h1>
-              Enter The
-              <br />
-              Nifty League
-            </h1>
+            <h1>Join Nifty League</h1>
             <p className="my-sm-5 my-2 text-m-center">
-              Design, mint, and play to compete and earn rewards within
-              <br /> our community including our ecosystem&apos;s token; NFTL.
+              The minting process for Nifty League allowed minters the ability
+              to design their own DEGEN using our Mint-O-Matic, which our
+              community absolutely loved! You can purchase a DEGEN NFT on
+              OpenSea.
             </p>
             <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
               <span className="me-2">Browse opensea collection</span>
@@ -685,15 +692,12 @@ const Home: NextPage = () => {
           className="p-0 w-100 h-auto desktop pixelated"
         />
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
-          <h2 className="mt-4">Stay informed</h2>
+          <h2 className="mt-4">Our Community</h2>
           <p className="my-3 text-m-center">
-            Join the community and keep up-to-date <br /> with our development
-            process.
+            Meet our community and stay up-to-date with our roadmap.
           </p>
           <button className="btn theme-btn-aqua w-auto bg-black my-3 discord-btn">
-            <span className="me-2">
-              join the nifty league community on discord
-            </span>
+            <span className="me-2">Join Our Discord Server</span>
 
             <svg
               width="33"
