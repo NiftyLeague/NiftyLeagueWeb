@@ -1,14 +1,21 @@
 declare var $: any;
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Intro() {
+const About: NextPage = () => {
+  const [isDegenSliderLoaded, setIsDegenSliderLoaded] = useState<boolean>(false);
+  const [isTeamSliderLoaded, setIsTeamSliderLoaded] = useState<boolean>(false);
+
   useEffect(() => {
     if ($('.degens-slider')) {
-      $('.degens-slider')?.slick({
+      $('.degens-slider').on("init", () => {
+        setIsDegenSliderLoaded(true);
+      });
+
+      $('.degens-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,
@@ -32,6 +39,10 @@ function Intro() {
       });
     }
     if ($('.teams-slider')) {
+      $('.teams-slider').on("init", () => {
+        setIsTeamSliderLoaded(true);
+      });
+
       $('.teams-slider')?.slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -58,138 +69,131 @@ function Intro() {
   }, []);
 
   return (
-    <div className="container about-intro min-vh-100 mt-5 py-5">
-      <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
-        <div className="about-intro-content">
-          <h4 className="mt-5 text-m-center">Welcome to</h4>
-          <h1 className="text-m-center">Nifty League</h1>
-          <p className="mt-sm-2 mt-5 text-m-center p1">
-            Our mission is to create a leading NFT gaming platform through
-            <br /> community governance and development. Nifty League prides
-            itself
-            <br /> on being one of the first GameFi platforms offering
-            interactive
-            <br />
-            play-and-earn games with customizable characters.
-          </p>
-          <p className="text-m-center">
-            Advance your gaming skills and join our community to earn daily NFTL
-            rewards!
-          </p>
-
-          <div className="display-buttons my-3 d-flex desktop">
-            <a href="https://docs.niftyleague.com/">
-              <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
-            </a>
-            <a href="/whitepaper.pdf">
-              <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
-                Download the whitepaper
-              </button>
-            </a>
-          </div>
-          <div className="display-buttons my-3 d-flex mobile">
-            <button className="btn theme-btn-aqua mx-sm-2">
-              Browse Collection
-            </button>
-          </div>
-        </div>
-
-        <div className="icons-placement">
-          <div
-            className="icon1 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon1.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon2 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon2.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon3 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon3.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon4 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon4.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon5 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon5.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon6 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon6.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon7 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon7.png"
-              layout="fixed"
-              height="300"
-              width="300"
-            />
-          </div>
-          <div
-            className="icon8 desktop pixelated"
-          >
-            <Image
-              src="/img/about/header/icon8.png"
-              layout="fixed"
-              height="320"
-              width="300"
-            />
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const About: NextPage = () => {
-  return (
     <Layout classes={{ root: 'about-pg' }}>
       <Head>
         <title>Nifty League | About</title>
         <meta name="description" content="About Nifty League and our team" />
       </Head>
 
-      <Intro />
+      <div className="container about-intro min-vh-100 mt-5 py-5">
+        <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
+          <div className="about-intro-content">
+            <h4 className="mt-5 text-m-center">Welcome to</h4>
+            <h1 className="text-m-center">
+              The Nifty
+              <br /> League
+            </h1>
+            <p className="mt-sm-2 mt-5 text-m-center p1">
+              Our mission is to create a leading NFT gaming platform through
+              <br /> community governance and development. Nifty League prides
+              itself
+              <br /> on being one of the first GameFi platforms offering
+              interactive play
+              <br />
+              -to-earn games with customizable characters.
+            </p>
+            <p className="text-m-center">
+              Advance your gaming skills and join our community to earn daily
+              <br /> NFTL rewards from the Nifty DAO!
+            </p>
+
+            <div className="display-buttons my-3 d-flex desktop">
+              <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
+              <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
+                Download the whitepaper
+              </button>
+            </div>
+            <div className="display-buttons my-3 d-flex mobile">
+              <button className="btn theme-btn-aqua mx-sm-2">
+                Browse Collection
+              </button>
+            </div>
+          </div>
+
+          <div className="icons-placement">
+            <div
+              className="icon1 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon1.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon2 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon2.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon3 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon3.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon4 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon4.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon5 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon5.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon6 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon6.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon7 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon7.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon8 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon8.png"
+                layout="fixed"
+                height="320"
+                width="300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div
         className="video-details row m-0 p-0 position-relative text-center"
@@ -226,7 +230,11 @@ const About: NextPage = () => {
           >
             <section
               className="degens-slider slider px-0 my-5"
-              style={{ alignItems: 'center', maxWidth: '100%' }}
+              style={{
+                alignItems: 'center',
+                maxWidth: '100%',
+                display: isDegenSliderLoaded ? "" : "none",
+              }}
             >
               <div className="slide">
                 <div className="slide-content">
@@ -665,7 +673,7 @@ const About: NextPage = () => {
               <img src="/img/about/team1.png" className="w-100 pixelated" />
               <h3 className="mt-5">Nifty Andy</h3>
               <label className="font-20">Co-Founder, CEO</label>
-              <label className="uppercase mt-5 pt-3">fomerly</label>
+              <label className="uppercase mt-5 pt-3">formerly</label>
               <img src="/img/about/activision.svg" className="w-100 my-2" />
               <label className="uppercase">3 years</label>
             </div>
@@ -675,7 +683,7 @@ const About: NextPage = () => {
               <img src="/img/about/team2.png" className="w-100 pixelated" />
               <h3 className="mt-5">Snarfy</h3>
               <label className="font-20">Co-Founder, CTO</label>
-              <label className="uppercase mt-5 pt-3">fomerly</label>
+              <label className="uppercase mt-5 pt-3">formerly</label>
               <img src="/img/about/activision.svg" className="w-100 my-2" />
               <label className="uppercase">8 years</label>
             </div>
@@ -693,7 +701,11 @@ const About: NextPage = () => {
         </div>
         <section
           className="teams-slider slider px-0 mobile-block "
-          style={{ alignItems: 'center', maxWidth: '100%' }}
+          style={{
+            alignItems: 'center',
+            maxWidth: '100%',
+            display: isTeamSliderLoaded ? "" : "none",
+          }}
         >
           <div className="slide">
             <div className="slide-content">
@@ -701,7 +713,7 @@ const About: NextPage = () => {
                 <img src="/img/about/team1.png" className="w-100" />
                 <h3 className="mt-5">Nifty Andy</h3>
                 <label className="font-20">Co-Founder, CEO</label>
-                <label className="uppercase mt-5 pt-3">fomerly</label>
+                <label className="uppercase mt-5 pt-3">formerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">3 years</label>
               </div>
@@ -713,7 +725,7 @@ const About: NextPage = () => {
                 <img src="/img/about/team2.png" className="w-100" />
                 <h3 className="mt-5">Snarfy</h3>
                 <label className="font-20">Co-Founder, CTO</label>
-                <label className="uppercase mt-5 pt-3">fomerly</label>
+                <label className="uppercase mt-5 pt-3">formerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">8 years</label>
               </div>
