@@ -174,13 +174,13 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row m-0 p-0 position-relative desktop sliding-nfts">
-        <div className="wrapper my-5">
+        <div className="sliding-background-wrapper my-5">
           <div className="sliding-background-desktop"></div>
         </div>
       </div>
 
       <div className="row m-0 p-0 position-relative mobile sliding-nfts">
-        <div className="wrapper my-0">
+        <div className="sliding-background-wrapper my-0">
           <div className="sliding-background-mobile"></div>
         </div>
       </div>
@@ -207,14 +207,14 @@ const Home: NextPage = () => {
             earning in Web3.
           </h2>
 
-          <div className="browse-single browse-single1 subject desktop-block">
+          <div className="browse-single browse-andy subject desktop-block">
             <img src="/img/browse-single-1-mob.svg" className="pixelated" />
           </div>
 
-          <div className="browse-single browse-single3 subject desktop-block">
+          <div className="browse-single browse-spike subject desktop-block">
             <img src="/img/browse-single-3-mob.svg" />
           </div>
-          <div className="browse-single browse-single2 subject desktop-block">
+          <div className="browse-single browse-snarfy subject desktop-block">
             <img src="/img/browse-single-2-mob.svg" />
           </div>
 
