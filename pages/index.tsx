@@ -1,5 +1,6 @@
 declare var $: any;
 import { useEffect, useState } from 'react';
+import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -7,82 +8,90 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 
 const Home: NextPage = () => {
-  const [isDegenSliderLoaded, setIsDegenSliderLoaded] = useState<boolean>(false);
-  const [isSponsSliderLoaded, setIsSponsSliderLoaded] = useState<boolean>(false);
+  const [isDegenSliderLoaded, setIsDegenSliderLoaded] =
+    useState<boolean>(false);
+  const [isSponsSliderLoaded, setIsSponsSliderLoaded] =
+    useState<boolean>(false);
 
   useEffect(() => {
-    let coll = document.getElementsByClassName("collapsible");
+    let coll = document.getElementsByClassName('collapsible');
     for (let i = 0; i < coll.length; i++) {
       if (coll[i]) {
-        coll[i].addEventListener("click", function() {
-          coll[i].classList.toggle("active");
-          let content = (coll[i].nextElementSibling) as HTMLElement;
+        coll[i].addEventListener('click', function () {
+          coll[i].classList.toggle('active');
+          let content = coll[i].nextElementSibling as HTMLElement;
           if (content) {
             if (content.style.maxHeight) {
-              content.style.maxHeight = "";
+              content.style.maxHeight = '';
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+              content.style.maxHeight = content.scrollHeight + 'px';
             }
           }
         });
       }
     }
-    if ($('.degens-slider')) {
-      $('.degens-slider').on("init", () => {
-        setIsDegenSliderLoaded(true);
-      });
+    // if ($('.degens-slider')) {
+    //   $('.degens-slider').on('init', () => {
+    //     setIsDegenSliderLoaded(true);
+    //   });
 
-      $('.degens-slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        centerMode: true,
-        variableWidth: true,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 2,
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-      });
-    }
-    if ($('.spons-slider')) {
-      $('.sponns-slider').on("init", () => {
-        setIsSponsSliderLoaded(true);
-      });
+    //   $('.degens-slider').slick({
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     centerMode: true,
+    //     variableWidth: true,
+    //     autoplay: true,
+    //     autoplaySpeed: 1000,
+    //     arrows: false,
+    //     dots: false,
+    //     pauseOnHover: false,
+    //     responsive: [
+    //       {
+    //         breakpoint: 769,
+    //         settings: {
+    //           slidesToShow: 2,
+    //         },
+    //       },
+    //       {
+    //         breakpoint: 520,
+    //         settings: {
+    //           slidesToShow: 1,
+    //         },
+    //       },
+    //     ],
+    //   });
+    // }
+    // if ($('.spons-slider')) {
+    //   $('.spons-slider').on('init', () => {
+    //     setIsSponsSliderLoaded(true);
+    //   });
 
-      $('.spons-slider').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        centerMode: true,
-        variableWidth: true,
-        autoplay: true,
-        autoplaySpeed: 1500,
-        arrows: false,
-        dots: false,
-        pauseOnHover: false,
-        responsive: [{
-            breakpoint: 769,
-            settings: {
-                slidesToShow: 2,
-            }
-        }, {
-            breakpoint: 520,
-            settings: {
-                slidesToShow: 1
-            }
-        }]
-      });
-    }
+    //   $('.spons-slider').slick({
+    //     slidesToShow: 4,
+    //     slidesToScroll: 1,
+    //     centerMode: true,
+    //     variableWidth: true,
+    //     autoplay: true,
+    //     autoplaySpeed: 1500,
+    //     arrows: false,
+    //     dots: false,
+    //     pauseOnHover: false,
+    //     responsive: [
+    //       {
+    //         breakpoint: 769,
+    //         settings: {
+    //           slidesToShow: 2,
+    //         },
+    //       },
+    //       {
+    //         breakpoint: 520,
+    //         settings: {
+    //           slidesToShow: 1,
+    //         },
+    //       },
+    //     ],
+    //   });
+    // }
   }, []);
 
   return (
@@ -103,10 +112,18 @@ const Home: NextPage = () => {
           <h1 className="mt-0 mt-sm-4 mt-md-5">Nifty League</h1>
           <h4 className="mt-2">By Gamers. For Gamers.</h4>
           <p className="my-4 text-center">
-            Design, mint, and play to compete and earn rewards within our
-            <br /> community including our ecosystem&apos;s token; NFTL.
+            Nifty League is bringing competitive gaming to Web3
+            <br /> while offering fun and engaging games for all play styles.
           </p>
-          <button className="btn theme-btn-aqua my-3">Browse collection</button>
+          <a
+            href="https://opensea.io/collection/niftydegen"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <button className="btn theme-btn-aqua my-3">
+              Browse collection
+            </button>
+          </a>
           <div className="d-flex align-items-center mt-4 mb-5">
             <a className="pe-3" href="#">
               <svg
@@ -198,10 +215,10 @@ const Home: NextPage = () => {
           style={{ zIndex: 2 }}
         >
           <h2 className="font-48 my-5">
-            The Nifty League is a set of 10,000
-            <br /> programmatically generated and unique
-            <br /> NFTs that will be playable avatars in the
-            <br /> Nifty Smashers video game.
+            Our 9.9k DEGEN NFTs act as players in our games such as Nifty
+            Smashers. Our ecosystem is centered around nostalgia - where
+            builders, players, and owners spend time connecting, gaming, and
+            earning in Web3.
           </h2>
 
           <div className="browse-single browse-single1 subject desktop-block">
@@ -222,71 +239,71 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row m-0 position-relative league-special-row">
-        <div
-          className="container league-special-container my-5 section-margin"
-          style={{ width: '100%' }}
-        >
+        <div className="container league-special-container my-5 section-margin">
           <img
             className="position-absolute eclipse-location"
             src="/img/eclipses-header.svg"
           />
           <div className="row m-0 p-0 position-relative">
-            <div className="col-sm-6">
-              <img
-                className="nifty-special-2 desktop pixelated"
+            <div className="col-sm-6 position-relative">
+              <Image
+                className="desktop"
                 src="/img/nifty-special-2.png"
+                alt="Ecosystem Degen Image"
+                layout="responsive"
+                width={474}
+                height={467}
               />
             </div>
             <div className="col-sm-6">
-              <h2 className="my-3 text-m-left">Nifty League Specials</h2>
-              <div className="row m-0 p-0 position-relative league-special-content">
-                <div className="w-100 panel py-4">
-                  <button className="collapsible">
-                    <h4 className="letter-0 mb-0">Degen Rentals</h4>
-                  </button>
-                  <div className="content ">
-                    <img
-                      className="mobile py-2"
-                      src="/img/Degen%20Rentals.png"
-                    />
-                    <p className="color-white mt-4">
-                      Rather than inflating the character supply as some
-                      projects may do, we are introducing a bespoke rental
-                      system allowing DEGEN holders to earn NFTL daily through
-                      fees.{' '}
-                    </p>
+              <h2 className="my-3 text-m-left">Nifty League Ecosystem</h2>
+              <MDBAccordion
+                flush
+                className="league-special-accordion"
+                initialActive="flush-collapse1"
+              >
+                <MDBAccordionItem
+                  collapseId="flush-collapse1"
+                  headerTitle="DEGEN Rentals"
+                >
+                  <Image
+                    className="py-2 mobile"
+                    src="/img/nifty-special-2.png"
+                    alt="Ecosystem Degen Image"
+                    layout="responsive"
+                    width={474}
+                    height={467}
+                  />
+                  Players can rent a DEGEN from owners directly via smart
+                  contract technology, opening up game play at an attractive
+                  rate for players globally.{' '}
+                  <Link href="/about" passHref>
                     <button className="btn theme-btn-white">Learn More</button>
-                  </div>
-                </div>
-                <div className="w-100 panel py-4">
-                  <button className="collapsible">
-                    <h4 className="letter-0 mb-0">Play-to-earn</h4>
-                  </button>
-                  <div className="content ">
-                    <p className="color-white mt-4">
-                      Rather than inflating the character supply as some
-                      projects may do, we are introducing a bespoke rental
-                      system allowing DEGEN holders to earn NFTL daily through
-                      fees.{' '}
-                    </p>
+                  </Link>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  collapseId="flush-collapse2"
+                  headerTitle="Play-and-earn"
+                >
+                  Players earn NFTL by landing hits and winning matches in our
+                  game Nifty Smashers. Join in on weekly community tournaments
+                  sponsored by some amazing rewards!{' '}
+                  <Link href="/about" passHref>
                     <button className="btn theme-btn-white">Learn More</button>
-                  </div>
-                </div>
-                <div className="w-100 panel py-4">
-                  <button className="collapsible">
-                    <h4 className="letter-0 mb-0">Games</h4>
-                  </button>
-                  <div className="content ">
-                    <p className="color-white mt-4">
-                      Rather than inflating the character supply as some
-                      projects may do, we are introducing a bespoke rental
-                      system allowing DEGEN holders to earn NFTL daily through
-                      fees.{' '}
-                    </p>
+                  </Link>
+                </MDBAccordionItem>
+                <MDBAccordionItem
+                  collapseId="flush-collapse3"
+                  headerTitle="Games"
+                >
+                  Check our roadmap for some more exciting games coming in 2022!
+                  Get playing immediately with our first title, Nifty Smashers,
+                  based off of the popular game Super Smash Bros.
+                  <Link href="/about" passHref>
                     <button className="btn theme-btn-white">Learn More</button>
-                  </div>
-                </div>
-              </div>
+                  </Link>
+                </MDBAccordionItem>
+              </MDBAccordion>
             </div>
           </div>
         </div>
@@ -305,12 +322,12 @@ const Home: NextPage = () => {
             className="baker-shade right"
             src="/img/bakers-arr-right-shade.svg"
           />
-          <h3 className="my-sm-5 mb-5">Nifty League is proudly backed by</h3>
+          <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
           <section
             className="spons-slider slider px-0 "
             style={{
               alignItems: 'center',
-              display: isSponsSliderLoaded ? "" : "none"
+              display: isSponsSliderLoaded ? '' : 'none',
             }}
           >
             <div className="slide">
@@ -349,9 +366,6 @@ const Home: NextPage = () => {
               </div>
             </div>
           </section>
-          <button className="btn theme-btn-white w-auto mb-5">
-            view all backers
-          </button>
         </div>
       </div>
 
@@ -373,8 +387,7 @@ const Home: NextPage = () => {
               style={{
                 alignItems: 'center',
                 maxWidth: '100%',
-                display: isDegenSliderLoaded ? "" : "none",
-
+                display: isDegenSliderLoaded ? '' : 'none',
               }}
             >
               <div className="slide">
@@ -672,34 +685,38 @@ const Home: NextPage = () => {
               style={{ marginBottom: -230 }}
             />
 
-            <h1>
-              Enter The
-              <br />
-              Nifty League
-            </h1>
+            <h1>Join Nifty League</h1>
             <p className="my-sm-5 my-2 text-m-center">
-              Design, mint, and play to compete and earn rewards within
-              <br /> our community including our ecosystem&apos;s token; NFTL.
+              The minting process for Nifty League allowed minters the ability
+              to design their own DEGEN using our Mint-O-Matic, which our
+              community absolutely loved! You can purchase a DEGEN NFT on
+              OpenSea.
             </p>
-            <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
-              <span className="me-2">Browse opensea collection</span>
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.58666 13.7045L1.67997 13.5578L7.30665 4.7556C7.38888 4.62673 7.5822 4.64006 7.64441 4.78004C8.58442 6.8867 9.39553 9.50672 9.01554 11.1378C8.85332 11.809 8.40888 12.7178 7.90885 13.5578C7.84444 13.6801 7.77332 13.8001 7.69775 13.9156C7.66219 13.969 7.60219 14.0001 7.53774 14.0001H1.75109C1.59553 14.0001 1.50443 13.8312 1.58666 13.7045Z"
-                  fill="white"
-                />
-                <path
-                  d="M26.6666 15.34V16.7333C26.6666 16.8133 26.6178 16.8844 26.5466 16.9155C26.1111 17.1022 24.62 17.7866 24 18.6489C22.4178 20.8511 21.2089 24 18.5066 24H7.23331C3.23779 24 0 20.7511 0 16.7422V16.6133C0 16.5067 0.0866472 16.42 0.193323 16.42H6.47779C6.60221 16.42 6.69331 16.5356 6.68224 16.6578C6.63777 17.0666 6.71334 17.4844 6.90666 17.8644C7.27999 18.6222 8.05332 19.0956 8.88887 19.0956H12V16.6667H8.92443C8.76666 16.6667 8.67335 16.4844 8.76446 16.3556C8.79777 16.3044 8.83557 16.2511 8.87554 16.1911C9.16668 15.7778 9.58222 15.1356 9.99556 14.4045C10.2778 13.9111 10.5511 13.3845 10.7711 12.8556C10.8156 12.76 10.8511 12.6622 10.8866 12.5666C10.9466 12.3978 11.0089 12.24 11.0533 12.0822C11.0978 11.9489 11.1333 11.8089 11.1689 11.6778C11.2733 11.2289 11.3178 10.7533 11.3178 10.26C11.3178 10.0667 11.3089 9.86444 11.2911 9.67112C11.2822 9.46001 11.2556 9.24887 11.2289 9.03776C11.2111 8.8511 11.1778 8.66665 11.1422 8.47332C11.0978 8.1911 11.0355 7.91113 10.9644 7.62887L10.94 7.52223C10.8866 7.32887 10.8422 7.14445 10.78 6.95113C10.6044 6.34443 10.4022 5.75334 10.1889 5.20001C10.1111 4.98 10.0222 4.7689 9.93331 4.55779C9.80224 4.24001 9.66887 3.95113 9.54666 3.67778C9.48446 3.55332 9.43112 3.43999 9.37778 3.32444C9.31778 3.19332 9.25557 3.06221 9.19332 2.93779C9.1489 2.84224 9.09776 2.75334 9.06221 2.66444L8.68222 1.96222C8.62888 1.86666 8.71778 1.75332 8.82221 1.78222L11.2 2.42665H11.2067C11.2111 2.42665 11.2133 2.4289 11.2155 2.4289L11.5289 2.51554L11.8733 2.61335L12 2.64887V1.23556C12 0.553323 12.5467 0 13.2222 0C13.56 0 13.8667 0.137779 14.0867 0.362206C14.3066 0.586676 14.4444 0.893338 14.4444 1.23556V3.33335L14.6978 3.40443C14.7178 3.41113 14.7378 3.42 14.7555 3.43332C14.8178 3.48 14.9066 3.54887 15.02 3.63335C15.1089 3.70443 15.2044 3.79112 15.32 3.88001C15.5489 4.06443 15.8222 4.30222 16.1222 4.57557C16.2022 4.64444 16.28 4.71556 16.3511 4.78668C16.7378 5.14668 17.1711 5.56888 17.5845 6.03556C17.7 6.16668 17.8133 6.3 17.9289 6.43999C18.0444 6.58222 18.1667 6.72221 18.2733 6.86224C18.4133 7.0489 18.5644 7.24222 18.6956 7.44445C18.7578 7.54001 18.8289 7.63778 18.8889 7.73334C19.0578 7.98887 19.2067 8.25335 19.3489 8.51779C19.4089 8.64 19.4711 8.77332 19.5244 8.90444C19.6822 9.25778 19.8067 9.61778 19.8866 9.97778C19.9111 10.0556 19.9289 10.14 19.9378 10.2156V10.2334C19.9644 10.34 19.9733 10.4533 19.9822 10.5689C20.0178 10.9378 20 11.3066 19.92 11.6778C19.8866 11.8356 19.8422 11.9844 19.7889 12.1422C19.7355 12.2933 19.6822 12.4511 19.6133 12.6C19.48 12.9089 19.3222 13.2178 19.1355 13.5067C19.0755 13.6133 19.0044 13.7267 18.9333 13.8334C18.8555 13.9466 18.7755 14.0533 18.7044 14.1578C18.6067 14.2911 18.5022 14.4311 18.3956 14.5556C18.3 14.6867 18.2022 14.8178 18.0956 14.9333C17.9467 15.1089 17.8044 15.2756 17.6555 15.4356C17.5667 15.54 17.4711 15.6467 17.3733 15.7422C17.2778 15.8489 17.18 15.9444 17.0911 16.0333C16.9422 16.1822 16.8178 16.2978 16.7133 16.3933L16.4689 16.6178C16.4333 16.6489 16.3867 16.6667 16.3378 16.6667H14.4444V19.0956H16.8266C17.36 19.0956 17.8667 18.9067 18.2756 18.56C18.4155 18.4378 19.0267 17.9089 19.7489 17.1111C19.7733 17.0844 19.8045 17.0644 19.84 17.0556L26.42 15.1534C26.5422 15.1178 26.6666 15.2111 26.6666 15.34Z"
-                  fill="white"
-                />
-              </svg>
-            </button>
+            <a
+              href="https://opensea.io/collection/niftydegen"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
+                <span className="me-2">Browse OpenSea collection</span>
+                <svg
+                  width="27"
+                  height="24"
+                  viewBox="0 0 27 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.58666 13.7045L1.67997 13.5578L7.30665 4.7556C7.38888 4.62673 7.5822 4.64006 7.64441 4.78004C8.58442 6.8867 9.39553 9.50672 9.01554 11.1378C8.85332 11.809 8.40888 12.7178 7.90885 13.5578C7.84444 13.6801 7.77332 13.8001 7.69775 13.9156C7.66219 13.969 7.60219 14.0001 7.53774 14.0001H1.75109C1.59553 14.0001 1.50443 13.8312 1.58666 13.7045Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M26.6666 15.34V16.7333C26.6666 16.8133 26.6178 16.8844 26.5466 16.9155C26.1111 17.1022 24.62 17.7866 24 18.6489C22.4178 20.8511 21.2089 24 18.5066 24H7.23331C3.23779 24 0 20.7511 0 16.7422V16.6133C0 16.5067 0.0866472 16.42 0.193323 16.42H6.47779C6.60221 16.42 6.69331 16.5356 6.68224 16.6578C6.63777 17.0666 6.71334 17.4844 6.90666 17.8644C7.27999 18.6222 8.05332 19.0956 8.88887 19.0956H12V16.6667H8.92443C8.76666 16.6667 8.67335 16.4844 8.76446 16.3556C8.79777 16.3044 8.83557 16.2511 8.87554 16.1911C9.16668 15.7778 9.58222 15.1356 9.99556 14.4045C10.2778 13.9111 10.5511 13.3845 10.7711 12.8556C10.8156 12.76 10.8511 12.6622 10.8866 12.5666C10.9466 12.3978 11.0089 12.24 11.0533 12.0822C11.0978 11.9489 11.1333 11.8089 11.1689 11.6778C11.2733 11.2289 11.3178 10.7533 11.3178 10.26C11.3178 10.0667 11.3089 9.86444 11.2911 9.67112C11.2822 9.46001 11.2556 9.24887 11.2289 9.03776C11.2111 8.8511 11.1778 8.66665 11.1422 8.47332C11.0978 8.1911 11.0355 7.91113 10.9644 7.62887L10.94 7.52223C10.8866 7.32887 10.8422 7.14445 10.78 6.95113C10.6044 6.34443 10.4022 5.75334 10.1889 5.20001C10.1111 4.98 10.0222 4.7689 9.93331 4.55779C9.80224 4.24001 9.66887 3.95113 9.54666 3.67778C9.48446 3.55332 9.43112 3.43999 9.37778 3.32444C9.31778 3.19332 9.25557 3.06221 9.19332 2.93779C9.1489 2.84224 9.09776 2.75334 9.06221 2.66444L8.68222 1.96222C8.62888 1.86666 8.71778 1.75332 8.82221 1.78222L11.2 2.42665H11.2067C11.2111 2.42665 11.2133 2.4289 11.2155 2.4289L11.5289 2.51554L11.8733 2.61335L12 2.64887V1.23556C12 0.553323 12.5467 0 13.2222 0C13.56 0 13.8667 0.137779 14.0867 0.362206C14.3066 0.586676 14.4444 0.893338 14.4444 1.23556V3.33335L14.6978 3.40443C14.7178 3.41113 14.7378 3.42 14.7555 3.43332C14.8178 3.48 14.9066 3.54887 15.02 3.63335C15.1089 3.70443 15.2044 3.79112 15.32 3.88001C15.5489 4.06443 15.8222 4.30222 16.1222 4.57557C16.2022 4.64444 16.28 4.71556 16.3511 4.78668C16.7378 5.14668 17.1711 5.56888 17.5845 6.03556C17.7 6.16668 17.8133 6.3 17.9289 6.43999C18.0444 6.58222 18.1667 6.72221 18.2733 6.86224C18.4133 7.0489 18.5644 7.24222 18.6956 7.44445C18.7578 7.54001 18.8289 7.63778 18.8889 7.73334C19.0578 7.98887 19.2067 8.25335 19.3489 8.51779C19.4089 8.64 19.4711 8.77332 19.5244 8.90444C19.6822 9.25778 19.8067 9.61778 19.8866 9.97778C19.9111 10.0556 19.9289 10.14 19.9378 10.2156V10.2334C19.9644 10.34 19.9733 10.4533 19.9822 10.5689C20.0178 10.9378 20 11.3066 19.92 11.6778C19.8866 11.8356 19.8422 11.9844 19.7889 12.1422C19.7355 12.2933 19.6822 12.4511 19.6133 12.6C19.48 12.9089 19.3222 13.2178 19.1355 13.5067C19.0755 13.6133 19.0044 13.7267 18.9333 13.8334C18.8555 13.9466 18.7755 14.0533 18.7044 14.1578C18.6067 14.2911 18.5022 14.4311 18.3956 14.5556C18.3 14.6867 18.2022 14.8178 18.0956 14.9333C17.9467 15.1089 17.8044 15.2756 17.6555 15.4356C17.5667 15.54 17.4711 15.6467 17.3733 15.7422C17.2778 15.8489 17.18 15.9444 17.0911 16.0333C16.9422 16.1822 16.8178 16.2978 16.7133 16.3933L16.4689 16.6178C16.4333 16.6489 16.3867 16.6667 16.3378 16.6667H14.4444V19.0956H16.8266C17.36 19.0956 17.8667 18.9067 18.2756 18.56C18.4155 18.4378 19.0267 17.9089 19.7489 17.1111C19.7733 17.0844 19.8045 17.0644 19.84 17.0556L26.42 15.1534C26.5422 15.1178 26.6666 15.2111 26.6666 15.34Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -714,15 +731,12 @@ const Home: NextPage = () => {
           className="p-0 w-100 h-auto desktop pixelated"
         />
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
-          <h2 className="mt-4">Stay informed</h2>
+          <h2 className="mt-4">Our Community</h2>
           <p className="my-3 text-m-center">
-            Join the community and keep up-to-date <br /> with our development
-            process.
+            Meet our community and stay up-to-date with our roadmap.
           </p>
           <button className="btn theme-btn-aqua w-auto bg-black my-3 discord-btn">
-            <span className="me-2">
-              join the nifty league community on discord
-            </span>
+            <span className="me-2">Join Our Discord Server</span>
 
             <svg
               width="33"
