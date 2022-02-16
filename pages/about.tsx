@@ -1,85 +1,73 @@
+declare var $: any;
+import { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Intro() {
-  return (
-    <div className="container about-intro min-vh-100 mt-5 py-5">
-      <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
-        <div className="about-intro-content">
-          <h4 className="mt-5 text-m-center">Welcome to</h4>
-          <h1 className="text-m-center">
-            The Nifty
-            <br /> League
-          </h1>
-          <p className="mt-sm-2 mt-5 text-m-center p1">
-            Our mission is to create a leading NFT gaming platform through
-            <br /> community governance and development. Nifty League prides
-            itself
-            <br /> on being one of the first GameFi platforms offering
-            interactive play
-            <br />
-            -to-earn games with customizable characters.
-          </p>
-          <p className="text-m-center">
-            Advance your gaming skills and join our community to earn daily
-            <br /> NFTL rewards from the Nifty DAO!
-          </p>
-
-          <div className="display-buttons my-3 d-flex desktop">
-            <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
-            <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
-              Download the whitepaper
-            </button>
-          </div>
-          <div className="display-buttons my-3 d-flex mobile">
-            <button className="btn theme-btn-aqua mx-sm-2">
-              Browse Collection
-            </button>
-          </div>
-        </div>
-
-        <div className="icons-placement">
-          <img
-            className="icon1 desktop pixelated"
-            src="/img/about/header-gif/icon1.png"
-          />
-          <img
-            className="icon2 desktop pixelated"
-            src="/img/about/header-gif/icon2.png"
-          />
-          <img
-            className="icon3 desktop pixelated"
-            src="/img/about/header-gif/icon3.png"
-          />
-          <img
-            className="icon4 desktop pixelated"
-            src="/img/about/header-gif/icon4.png"
-          />
-          <img
-            className="icon5 pixelated "
-            src="/img/about/header-gif/icon5.png"
-          />
-          <img
-            className="icon6 pixelated "
-            src="/img/about/header-gif/icon6.png"
-          />
-          <img
-            className="icon7 pixelated "
-            src="/img/about/header-gif/icon7.png"
-          />
-          <img
-            className="icon8 pixelated "
-            src="/img/about/header-gif/icon8.png"
-          />
-        </div>
-      </div>
-    </div>
-  );
-}
-
 const About: NextPage = () => {
+  const [isDegenSliderLoaded, setIsDegenSliderLoaded] = useState<boolean>(false);
+  const [isTeamSliderLoaded, setIsTeamSliderLoaded] = useState<boolean>(false);
+
+  useEffect(() => {
+    if ($('.degens-slider')) {
+      $('.degens-slider').on("init", () => {
+        setIsDegenSliderLoaded(true);
+      });
+
+      $('.degens-slider').slick({
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true,
+        autoplay: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+    if ($('.teams-slider')) {
+      $('.teams-slider').on("init", () => {
+        setIsTeamSliderLoaded(true);
+      });
+
+      $('.teams-slider')?.slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        centerMode: false,
+  
+        autoplay: false,
+        autoplaySpeed: 3500,
+        arrows: false,
+        dots: true,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 2,
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 1
+            }
+        }]
+      });
+    }
+  }, []);
+
   return (
     <Layout classes={{ root: 'about-pg' }}>
       <Head>
@@ -87,14 +75,132 @@ const About: NextPage = () => {
         <meta name="description" content="About Nifty League and our team" />
       </Head>
 
-      <Intro />
+      <div className="container about-intro min-vh-100 mt-5 py-5">
+        <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
+          <div className="about-intro-content">
+            <h4 className="mt-5 text-m-center">Welcome to</h4>
+            <h1 className="text-m-center">
+              The Nifty
+              <br /> League
+            </h1>
+            <p className="mt-sm-2 mt-5 text-m-center p1">
+              Our mission is to create a leading NFT gaming platform through
+              <br /> community governance and development. Nifty League prides
+              itself
+              <br /> on being one of the first GameFi platforms offering
+              interactive play
+              <br />
+              -to-earn games with customizable characters.
+            </p>
+            <p className="text-m-center">
+              Advance your gaming skills and join our community to earn daily
+              <br /> NFTL rewards from the Nifty DAO!
+            </p>
+
+            <div className="display-buttons my-3 d-flex desktop">
+              <button className="btn theme-btn-aqua mx-sm-2">Learn more</button>
+              <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
+                Download the whitepaper
+              </button>
+            </div>
+            <div className="display-buttons my-3 d-flex mobile">
+              <button className="btn theme-btn-aqua mx-sm-2">
+                Browse Collection
+              </button>
+            </div>
+          </div>
+
+          <div className="icons-placement">
+            <div
+              className="icon1 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon1.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon2 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon2.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon3 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon3.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon4 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon4.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon5 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon5.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon6 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon6.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon7 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon7.png"
+                layout="fixed"
+                height="300"
+                width="300"
+              />
+            </div>
+            <div
+              className="icon8 desktop pixelated"
+            >
+              <Image
+                src="/img/about/header/icon8.png"
+                layout="fixed"
+                height="320"
+                width="300"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div
         className="video-details row m-0 p-0 position-relative text-center"
         style={{ marginTop: -2 }}
       >
         <div className="container position-relative" style={{ zIndex: 1 }}>
-          <h2 className="mt-sm-5">Introducing Nifty Smashers</h2>
+          <h2 className="mt-sm-5">Nifty Smashers</h2>
           <h4 className="my-sm-2 my-4">The First NFT Brawler on Ethereum</h4>
         </div>
 
@@ -103,10 +209,14 @@ const About: NextPage = () => {
             <img className="pixelated" src="/img/about/youtube-video.png" />
           </a>
         </div>
-        <img
+        <div
           className="p-0 video-bg pixelated"
-          src="/img/about/youtube-bg.png"
-        />
+        >
+          <Image
+            src="/img/about/youtube-bg.png"
+            layout="fill"
+          />
+        </div>
       </div>
       <div
         className="container p-0 desktop-block"
@@ -120,7 +230,11 @@ const About: NextPage = () => {
           >
             <section
               className="degens-slider slider px-0 my-5"
-              style={{ alignItems: 'center', maxWidth: '100%' }}
+              style={{
+                alignItems: 'center',
+                maxWidth: '100%',
+                display: isDegenSliderLoaded ? "" : "none",
+              }}
             >
               <div className="slide">
                 <div className="slide-content">
@@ -412,48 +526,64 @@ const About: NextPage = () => {
       <div className="container">
         <div className="row m-0 position-relative section-margin nifty-degan">
           <div className="col-sm-6 position-relative">
-            <img src="/img/about/nifty-degans.svg" className="pixelated" />
+            <div
+              className="pixelated"
+            >
+              <Image
+                src="/img/about/nifty-degans.svg"
+                layout="fixed"
+                width="500px"
+                height="500px"
+              />
+            </div>
           </div>
           <div className="col-sm-6 mt-5 mt-sm-0">
             <h2 className="text-m-left">Nifty</h2>
-            <h4 className="font-32 color-purple">Degens</h4>
+            <h4 className="font-32 color-purple">DEGENs</h4>
             <p className="mt-2" />
             <p>
-              There is a max supply of 10,000 genesis DEGENS <br />
-              minted on Ethereum mainnet, 9,897 of which were <br />
-              hand-created by members of our community based on <br />
-              available traits and accessories. The initial 3 slots were <br />
-              reserved for our core team members to mint their <br />
-              personal DEGENS and be able to join in on our games. <br />
-              The final 100 spots are set aside to mint special DEGENS <br />
-              that will be given away for free as future community <br />
-              incentives from the Nifty DAO!
+              The max supply of genesis DEGENs is 10k, of which, 9.9k were
+              minted on Mainnet in Fall 2021. All of the DEGENs were
+              hand-created by members of our community who minted, based on
+              available traits and accessories. The final 100 DEGENs will be
+              given to elite players in the Nifty League community.
             </p>
-            <button className="btn theme-btn-aqua w-auto my-5">
-              learn more about nifty rentals
-            </button>
+            <a href="https://docs.niftyleague.com/overview/degens/about">
+              <button className="btn theme-btn-aqua w-auto my-5">
+                learn more about DEGEN NFTs
+              </button>
+            </a>
           </div>
         </div>
 
         <div className="row m-0 position-relative section-margin nifty-rental">
           <div className="col-sm-6 nr-content mt-5 mt-sm-0">
-            <h2 className="text-m-left">Nifty</h2>
+            <h2 className="text-m-left">DEGEN</h2>
             <h4 className="font-32 color-purple">Rentals</h4>
             <p className="mt-2">
-              Rather than inflating the character supply as some
-              <br /> projects may do, we are introducing a bespoke rental
-              <br /> system allowing DEGEN holders to earn NFTL daily
-              <br /> through fees. !
+              Players interested in DEGENs will be able to rent an NFT by paying
+              a low weekly fee to the owner. Active renters will be able to play
+              Nifty Smashers and earn NFTL, and explore the Niftyverse. As a
+              renter, you keep 70% of the in-game earnings, while 30% is
+              distributed to the owner via a smart contract.
             </p>
-            <button className="btn theme-btn-aqua w-auto my-5">
-              learn more about nifty rentals
-            </button>
+            <a href="https://docs.niftyleague.com/guides/rentals/rental-overview">
+              <button className="btn theme-btn-aqua w-auto my-5">
+                learn more about rentals
+              </button>
+            </a>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
-            <img
+            <div
               className="nifty-rental-banner pixelated"
-              src="/img/about/niftyRentals.png"
-            />
+            >
+              <Image
+                src="/img/about/niftyRentals.png"
+                layout="fixed"
+                width="450px"
+                height="450px"
+              />
+            </div>
             <img
               className="rental-grad"
               src="/img/about/niftyRentals-gradient.svg"
@@ -464,11 +594,11 @@ const About: NextPage = () => {
         <div className="d-flex section-margin">
           <div className="ms-auto nifty-rentals-img">
             <div className="icons-placement1" style={{ display: 'none' }}>
-              <img className="icon8" src="/img/about/header-gif/icon8.png" />
-              <img className="icon1" src="/img/about/header-gif/icon1.png" />
-              <img className="icon2" src="/img/about/header-gif/icon2.png" />
-              <img className="icon3" src="/img/about/header-gif/icon3.png" />
-              <img className="icon4" src="/img/about/header-gif/icon4.png" />
+              <img className="icon8" src="/img/about/header/icon8.png" />
+              <img className="icon1" src="/img/about/header/icon1.png" />
+              <img className="icon2" src="/img/about/header/icon2.png" />
+              <img className="icon3" src="/img/about/header/icon3.png" />
+              <img className="icon4" src="/img/about/header/icon4.png" />
             </div>
           </div>
         </div>
@@ -478,32 +608,36 @@ const About: NextPage = () => {
           <div className="col-sm-6">
             <h3>✨ NFTL Token</h3>
             <p className="font-16 mt-5">
-              There is a max supply of 10,000 genesis DEGENS minted on Ethereum
-              <br /> mainnet, 9,897 of which were hand-created by members of our
-              <br /> community based on available traits and accessories. The
-              initial 3 slots
-              <br /> were reserved for our core team members to mint their
-              personal
-              <br /> DEGENS and be able to join in on our games.{' '}
+              The sale of our characters kicked off the initial distribution of
+              our ecosystem&apos;s native utility and governance token, NFTL. In
+              the future, NFTL will serve to give users voting rights on
+              upcoming games and tournaments, and for platform-wide expenses.
+              For now, this only includes naming characters, but will soon be
+              expanded to be used for purchasing additional in-game items and
+              collectibles. NFTL is currently available to trade and stake on
+              SushiSwap.
             </p>
-            <button className="btn theme-btn-aqua w-auto mt-5">
-              learn more
-            </button>
+            <a href="https://docs.niftyleague.com/overview/nftl/overview">
+              <button className="btn theme-btn-aqua w-auto mt-5">
+                learn more
+              </button>
+            </a>
           </div>
           <div className="col-sm-6">
-            <h3 className="mt-5 mt-sm-0">🥊 Play-to-earn</h3>
+            <h3 className="mt-5 mt-sm-0">🥊 Play-and-earn</h3>
             <p className="font-16 mt-5">
-              There is a max supply of 10,000 genesis DEGENS minted on Ethereum
-              <br /> mainnet, 9,897 of which were hand-created by members of our
-              <br /> community based on available traits and accessories. The
-              initial 3 slots
-              <br /> were reserved for our core team members to mint their
-              personal
-              <br /> DEGENS and be able to join in on our games.{' '}
+              Players earn NFTL by winning matches or tournaments in our games
+              such as Nifty Smashers. The more you play and improve your skills
+              the better your chances of earning NFTL tokens through gameplay!
+              NFTL can be used to purchase in-game items and bonuses, trade with
+              other players, or &apos;cash out&apos; of the ecosystem for other
+              cryptocurrencies.
             </p>
-            <button className="btn theme-btn-aqua w-auto mt-5">
-              learn more
-            </button>
+            <a href="">
+              <button className="btn theme-btn-aqua w-auto mt-5">
+                learn more
+              </button>
+            </a>
           </div>
         </div>
       </div>
@@ -532,16 +666,6 @@ const About: NextPage = () => {
         />
         <div className="row m-0 p-0 position-relative text-center my-5 team-section">
           <h1 className="font-64 my-5">Meet the Nifty Team</h1>
-          <p>
-            We will gradually be transferring ownership of the Nifty League to
-            our DAO in order to decentralize the
-            <br /> platform and encourage devs to help us build! Our vision is
-            to power rapid growth and development through
-            <br /> community contributions enabling us to build a gaming
-            platform like no other. Simply put, DAOs are the future.
-            <br /> We see only one route to becoming the world&apos;s leading
-            GameFi platform and that&apos;s by building together. 💜
-          </p>
         </div>
         <div className="row m-0 p-0 position-relative text-center my-5 desktop">
           <div className="col-sm-4">
@@ -549,7 +673,7 @@ const About: NextPage = () => {
               <img src="/img/about/team1.png" className="w-100 pixelated" />
               <h3 className="mt-5">Nifty Andy</h3>
               <label className="font-20">Co-Founder, CEO</label>
-              <label className="uppercase mt-5 pt-3">fomerly</label>
+              <label className="uppercase mt-5 pt-3">formerly</label>
               <img src="/img/about/activision.svg" className="w-100 my-2" />
               <label className="uppercase">3 years</label>
             </div>
@@ -559,7 +683,7 @@ const About: NextPage = () => {
               <img src="/img/about/team2.png" className="w-100 pixelated" />
               <h3 className="mt-5">Snarfy</h3>
               <label className="font-20">Co-Founder, CTO</label>
-              <label className="uppercase mt-5 pt-3">fomerly</label>
+              <label className="uppercase mt-5 pt-3">formerly</label>
               <img src="/img/about/activision.svg" className="w-100 my-2" />
               <label className="uppercase">8 years</label>
             </div>
@@ -577,7 +701,11 @@ const About: NextPage = () => {
         </div>
         <section
           className="teams-slider slider px-0 mobile-block "
-          style={{ alignItems: 'center', maxWidth: '100%' }}
+          style={{
+            alignItems: 'center',
+            maxWidth: '100%',
+            display: isTeamSliderLoaded ? "" : "none",
+          }}
         >
           <div className="slide">
             <div className="slide-content">
@@ -585,7 +713,7 @@ const About: NextPage = () => {
                 <img src="/img/about/team1.png" className="w-100" />
                 <h3 className="mt-5">Nifty Andy</h3>
                 <label className="font-20">Co-Founder, CEO</label>
-                <label className="uppercase mt-5 pt-3">fomerly</label>
+                <label className="uppercase mt-5 pt-3">formerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">3 years</label>
               </div>
@@ -597,7 +725,7 @@ const About: NextPage = () => {
                 <img src="/img/about/team2.png" className="w-100" />
                 <h3 className="mt-5">Snarfy</h3>
                 <label className="font-20">Co-Founder, CTO</label>
-                <label className="uppercase mt-5 pt-3">fomerly</label>
+                <label className="uppercase mt-5 pt-3">formerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">8 years</label>
               </div>
