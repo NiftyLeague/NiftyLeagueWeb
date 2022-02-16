@@ -19,14 +19,16 @@ function Intro() {
                 src="/img/learn/getting-started.png"
               />
               <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
-                <h3 className="mt-sm-4 mt-2 text-m-center">Getting started</h3>
+                <h3 className="mt-sm-4 mt-2 text-m-center">Overview</h3>
                 <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
+                  Here, you&apos;ll find curated how-to guides and information
+                  to help get you started.
                 </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  Begin
-                </button>
+                <a href="https://docs.niftyleague.com/overview/intro">
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    Learn More
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -41,14 +43,16 @@ function Intro() {
                 src="/img/learn/gitbook.png"
               />
               <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
-                <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
+                <h3 className="mt-sm-4 mt-2 text-m-center">Getting Started</h3>
                 <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
+                  Setup your Ethereum wallet and buy or rent a DEGEN to play for
+                  NFTL
                 </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  visit gitbook
-                </button>
+                <a href="https://docs.niftyleague.com/guides/set-up">
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    Begin
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -63,14 +67,17 @@ function Intro() {
                 src="/img/learn/tutorials.png"
               />
               <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
+                <h3 className="mt-sm-4 mt-2 text-m-center">
+                  Nifty Smashers Guide
+                </h3>
                 <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
+                  Learn about Smashers gameplay and how points are counted
                 </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  see tutorials
-                </button>
+                <a href="https://docs.niftyleague.com/guides/nifty-smashers/general-info">
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    See tutorials
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -87,12 +94,18 @@ function Intro() {
               <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
                 <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
                 <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
+                  Join our Discord server to get your questions answered live by
+                  our community
                 </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  get involved
-                </button>
+                <a
+                  href="https://discord.gg/niftyleague"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    get involved
+                  </button>
+                </a>
               </div>
             </div>
           </div>
@@ -120,61 +133,93 @@ const Learn: NextPage = () => {
         <div className="container py-sm-5 py-0">
           <div className="text-center">
             <h2 className="my-3">Frequently Asked Questions</h2>
-            <p className="text-m-center">
-              The Nifty League&apos;s global and vibrant community drives the
-              success
-              <br /> of the system. Join the conversation on Discord and
-              Twitter; and find
-              <br /> the complete collection on OpenSea.
-            </p>
           </div>
           <div className="faq-content d-flex align-items-center flex-column py-5">
             <div className="w-100 panel py-4 my-2">
               <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-3">
-                  What&apos;s Nifty League degen
-                  <br /> minting all about?
-                </h4>
+                <h4 className="letter-0 mb-0 my-3">What is Nifty League?</h4>
               </button>
               <div className="content ">
                 <p className="color-white mt-4">
-                  Nifty League DEGEN NFTs were brought to life by our community
-                  at the end of Sept 2021. The minting process was a
-                  one-of-a-kind spectacle that allowed minters the ability to
-                  design their own DEGEN using Satoshi&apos;s Mint-O-Matic!{' '}
-                </p>
-              </div>
-            </div>
-            <div className="w-100 panel py-4 my-2">
-              <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-4">Nifty Smashers Alpha</h4>
-              </button>
-              <div className="content ">
-                <p className="color-white mt-4">
-                  Rather than inflating the character supply as some projects
-                  may do, we are introducing a bespoke rental system allowing
-                  DEGEN holders to earn NFTL daily through fees.{' '}
-                </p>
-              </div>
-            </div>
-            <div className="w-100 panel py-4 my-2">
-              <button className="collapsible">
-                <h4 className="letter-0 mb-0 my-4">
-                  What platforms do you support?
-                </h4>
-              </button>
-              <div className="content ">
-                <p className="color-white mt-4">
-                  Rather than inflating the character supply as some projects
-                  may do, we are introducing a bespoke rental system allowing
-                  DEGEN holders to earn NFTL daily through fees.{' '}
+                  Nifty League is leading competitive gaming in the metaverse -
+                  moving away from play-to-earn into a new era of play-and-earn
+                  by offering a fun and engaging gaming ecosystem. The
+                  Niftyverse is centered around nostalgia where builders,
+                  players, and owners spend time connecting, gaming, and earning
+                  in Web3. Learn more{' '}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/overview/intro"
+                  >
+                    here
+                  </a>
+                  .
                 </p>
               </div>
             </div>
             <div className="w-100 panel py-4 my-2">
               <button className="collapsible">
                 <h4 className="letter-0 mb-0 my-4">
-                  Do you have a leaderboard?
+                  What is NFTL and how do I earn it by playing Nifty League
+                  games?
+                </h4>
+              </button>
+              <div className="content ">
+                <p className="color-white mt-4">
+                  NFTL is our platform-wide governance token, which is currently
+                  available to trade and stake on SushiSwap.
+                  <br />
+                  <br />
+                  Players earn NFTL by landing hits and winning matches in our
+                  game Nifty Smashers. The more you play and improve your skills
+                  the better your chances of earning NFTL tokens through
+                  gameplay! NFTL can be used to purchase in-game items and
+                  bonuses, trade with other players, or &apos;cash out&apos; of
+                  the ecosystem for other cryptocurrencies.
+                  <br />
+                  <br />
+                  In the future, NFTL will serve to give users voting rights on
+                  upcoming games and tournaments, and for platform-wide
+                  expenses. For now, this only includes naming characters, but
+                  will soon be expanded to be used for purchasing additional
+                  in-game items and collectibles.
+                  <br />
+                  <br />
+                  NFTL Learn more{' '}
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/overview/nftl/overview"
+                  >
+                    here
+                  </a>
+                  .
+                </p>
+              </div>
+            </div>
+            <div className="w-100 panel py-4 my-2">
+              <button className="collapsible">
+                <h4 className="letter-0 mb-0 my-4">What is Nifty Smashers?</h4>
+              </button>
+              <div className="content ">
+                <p className="color-white mt-4">
+                  Nifty Smashers is the first title offered by Nifty League
+                  based off of the popular game Super Smash Bros.
+                  <br />
+                  <br />
+                  Battle it out amongst the community and get in as many bat
+                  bonks on your friends as you can! Nifty Smashers takes
+                  inspiration from the classic Super Smash Bros game where the
+                  objective is to knock your opponents off the map to score
+                  points.
+                </p>
+              </div>
+            </div>
+            <div className="w-100 panel py-4 my-2">
+              <button className="collapsible">
+                <h4 className="letter-0 mb-0 my-4">
+                  Does it cost money to play Nifty Smashers?
                 </h4>
               </button>
               <div className="content ">
@@ -195,15 +240,13 @@ const Learn: NextPage = () => {
           className="p-0 w-100 h-auto desktop pixelated"
         />
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
-          <h2 className="mt-4">Stay informed</h2>
+          <h2 className="mt-4">Stay in the loop</h2>
           <p className="my-3 text-m-center">
-            Join the community and keep up-to-date <br /> with our development
-            process.
+            Meet our community and stay up to date with our roadmap or team
+            updates
           </p>
           <button className="btn theme-btn-aqua w-auto bg-black my-3 discord-btn">
-            <span className="me-2">
-              join the nifty league community on discord
-            </span>
+            <span className="me-2">join our Discord server</span>
 
             <svg
               width="33"
