@@ -1,6 +1,7 @@
 .header .eclipse-location {
   left: 0;
   top: 185px;
+  max-width: 100vw;
 }
 .about-pg .header .eclipse-location {
   top: 30px;
@@ -14,8 +15,10 @@
 }
 @media (min-width: 768px) {
   .header .eclipse-location {
-    left: 300px;
     top: 102px;
+    right: 0;
+    left: 10%;
+    max-width: 89%;
   }
 }
 @media (min-width: 992px) {
