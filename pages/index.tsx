@@ -60,7 +60,7 @@ const Home: NextPage = () => {
         setIsSponsSliderLoaded(true);
       });
 
-      $('.spons-slider')?.slick({
+      $('.spons-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,

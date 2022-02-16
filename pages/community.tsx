@@ -15,7 +15,7 @@ const Community: NextPage = () => {
         setIsDegenSliderLoaded(true);
       });
 
-      $('.degens-slider')?.slick({
+      $('.degens-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,

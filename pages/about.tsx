@@ -15,7 +15,7 @@ const About: NextPage = () => {
         setIsDegenSliderLoaded(true);
       });
 
-      $('.degens-slider')?.slick({
+      $('.degens-slider').slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,
@@ -678,7 +678,7 @@ const About: NextPage = () => {
               <img src="/img/about/team1.png" className="w-100 pixelated" />
               <h3 className="mt-5">Nifty Andy</h3>
               <label className="font-20">Co-Founder, CEO</label>
-              <label className="uppercase mt-5 pt-3">fomerly</label>
+              <label className="uppercase mt-5 pt-3">formerly</label>
               <img src="/img/about/activision.svg" className="w-100 my-2" />
               <label className="uppercase">3 years</label>
             </div>
@@ -688,7 +688,7 @@ const About: NextPage = () => {
               <img src="/img/about/team2.png" className="w-100 pixelated" />
               <h3 className="mt-5">Snarfy</h3>
               <label className="font-20">Co-Founder, CTO</label>
-              <label className="uppercase mt-5 pt-3">fomerly</label>
+              <label className="uppercase mt-5 pt-3">formerly</label>
               <img src="/img/about/activision.svg" className="w-100 my-2" />
               <label className="uppercase">8 years</label>
             </div>
@@ -718,7 +718,7 @@ const About: NextPage = () => {
                 <img src="/img/about/team1.png" className="w-100" />
                 <h3 className="mt-5">Nifty Andy</h3>
                 <label className="font-20">Co-Founder, CEO</label>
-                <label className="uppercase mt-5 pt-3">fomerly</label>
+                <label className="uppercase mt-5 pt-3">formerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">3 years</label>
               </div>
@@ -730,7 +730,7 @@ const About: NextPage = () => {
                 <img src="/img/about/team2.png" className="w-100" />
                 <h3 className="mt-5">Snarfy</h3>
                 <label className="font-20">Co-Founder, CTO</label>
-                <label className="uppercase mt-5 pt-3">fomerly</label>
+                <label className="uppercase mt-5 pt-3">formerly</label>
                 <img src="/img/about/activision.svg" className="w-100 my-2" />
                 <label className="uppercase">8 years</label>
               </div>
