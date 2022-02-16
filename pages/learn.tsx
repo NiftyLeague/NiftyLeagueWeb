@@ -7,17 +7,17 @@ import Layout from '../components/layout';
 
 const Learn: NextPage = () => {
   useEffect(() => {
-    let coll = document.getElementsByClassName("collapsible");
+    let coll = document.getElementsByClassName('collapsible');
     for (let i = 0; i < coll.length; i++) {
       if (coll[i]) {
-        coll[i].addEventListener("click", function() {
-          coll[i].classList.toggle("active");
-          let content = (coll[i].nextElementSibling) as HTMLElement;
+        coll[i].addEventListener('click', function () {
+          coll[i].classList.toggle('active');
+          let content = coll[i].nextElementSibling as HTMLElement;
           if (content) {
             if (content.style.maxHeight) {
-              content.style.maxHeight = "";
+              content.style.maxHeight = '';
             } else {
-                content.style.maxHeight = content.scrollHeight + "px";
+              content.style.maxHeight = content.scrollHeight + 'px';
             }
           }
         });
@@ -49,14 +49,16 @@ const Learn: NextPage = () => {
                   src="/img/learn/getting-started.png"
                 />
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Getting started</h3>
+                  <h3 className="mt-sm-4 mt-2 text-m-center">Overview</h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Here, you&apos;ll find curated how-to guides and information
+                    to help get you started.
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    Begin
-                  </button>
+                  <a href="https://docs.niftyleague.com/overview/intro">
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      Learn More
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -71,14 +73,18 @@ const Learn: NextPage = () => {
                   src="/img/learn/gitbook.png"
                 />
                 <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
+                  <h3 className="mt-sm-4 mt-2 text-m-center">
+                    Getting Started
+                  </h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Setup your Ethereum wallet and buy or rent a DEGEN to play
+                    for NFTL
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    visit gitbook
-                  </button>
+                  <a href="https://docs.niftyleague.com/guides/set-up">
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      Begin
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -93,14 +99,17 @@ const Learn: NextPage = () => {
                   src="/img/learn/tutorials.png"
                 />
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
+                  <h3 className="mt-sm-4 mt-2 text-m-center">
+                    Nifty Smashers Guide
+                  </h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Learn about Smashers gameplay and how points are counted
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    see tutorials
-                  </button>
+                  <a href="https://docs.niftyleague.com/guides/nifty-smashers/general-info">
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      See tutorials
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -117,12 +126,18 @@ const Learn: NextPage = () => {
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
                   <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
                   <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and
-                    <br /> information to help get you started.
+                    Join our Discord server to get your questions answered live
+                    by our community
                   </p>
-                  <button className="btn theme-btn-aqua my-sm-2 my-0">
-                    get involved
-                  </button>
+                  <a
+                    href="https://discord.gg/niftyleague"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <button className="btn theme-btn-aqua my-sm-2 my-0">
+                      get involved
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
