@@ -650,27 +650,24 @@ a {
 
 .browse-andy {
   position: absolute;
-  top: 430px;
-  left: 12%;
-}
-.browse-andy img {
-  max-width: 350px;
+  top: 5%;
+  left: 8%;
+  width: 350px;
+  height: 100%;
 }
 .browse-snarfy {
-  top: 505px;
-  left: 40%;
   position: absolute;
-}
-.browse-snarfy img {
-  max-width: 275px;
+  top: 20%;
+  left: 40%;
+  width: 285px;
+  height: 100%;
 }
 .browse-spike {
-  top: 420px;
-  left: 55%;
   position: absolute;
-}
-.browse-spike img {
-  max-width: 200px;
+  top: 0;
+  left: 58%;
+  width: 220px;
+  height: 100%;
 }
 
 .league-floating-nfts {
@@ -680,55 +677,27 @@ a {
 
 @media (min-width: 992px) {
   .browse-andy {
-    position: absolute;
-    top: 350px;
-    left: 12%;
-  }
-  .browse-andy img {
-    max-width: 420px;
+    top: 0;
+    width: 420px;
   }
   .browse-snarfy {
-    top: 420px;
-    left: 40%;
-    position: absolute;
-  }
-  .browse-snarfy img {
-    max-width: 350px;
+    top: 18%;
+    width: 350px;
   }
   .browse-spike {
-    top: 400px;
-    left: 55%;
-    position: absolute;
-  }
-  .browse-spike img {
-    max-width: 275px;
+    width: 275px;
   }
 }
 
 @media (min-width: 1200px) {
   .browse-andy {
-    position: absolute;
-    top: 250px;
-    left: 12%;
-  }
-  .browse-andy img {
-    max-width: 500px;
+    width: 500px;
   }
   .browse-snarfy {
-    top: 380px;
-    left: 40%;
-    position: absolute;
-  }
-  .browse-snarfy img {
-    max-width: 400px;
+    width: 400px;
   }
   .browse-spike {
-    top: 320px;
-    left: 55%;
-    position: absolute;
-  }
-  .browse-spike img {
-    max-width: 320px;
+    width: 320px;
   }
 }
 
