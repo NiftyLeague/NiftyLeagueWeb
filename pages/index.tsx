@@ -173,31 +173,34 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row m-0 p-0 position-relative desktop sliding-nfts">
-        <div className="wrapper my-5">
-          <div className="sliding-background-desktop"></div>
+      <div className="row m-0 p-0 position-relative sliding-nfts">
+        <div
+          className={`sliding-background-wrapper-${
+            desktop ? 'desktop' : 'mobile'
+          }`}
+        >
+          <div className="sliding-background" />
         </div>
       </div>
 
-      <div className="row m-0 p-0 position-relative mobile sliding-nfts">
-        <div className="wrapper my-0">
-          <div className="sliding-background-mobile"></div>
+      <div className="row m-0 p-0 position-relative sushi-gif-section min-vh-100">
+        <div className="sushi-dark-shade-wrapper">
+          <Image
+            src="/img/dark-shade-1.svg"
+            alt="Sushi level shade"
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
-      </div>
-
-      <div className="row m-0 p-0 position-relative gif-section animation-element bounce-up">
-        <img
-          className="dark-shade-1"
-          style={{ zIndex: 1 }}
-          src="/img/dark-shade-1.svg"
-        />
-        <img
+        <Image
           className="sushi-gif"
-          src="gifs/sushi-level.gif"
-          style={{ opacity: 0.35 }}
+          src="/gifs/sushi-level.gif"
+          layout="fill"
+          objectFit="cover"
+          alt="Sushi level background"
         />
         <div
-          className="container text-center position-absolute my-5"
+          className="container d-flex flex-column text-center position-relative my-5"
           style={{ zIndex: 2 }}
         >
           <h2 className="font-48 my-5">
@@ -207,19 +210,24 @@ const Home: NextPage = () => {
             earning in Web3.
           </h2>
 
-          <div className="browse-single browse-single1 subject desktop-block">
+          <div className="browse-single browse-andy desktop">
             <img src="/img/browse-single-1-mob.svg" className="pixelated" />
           </div>
 
-          <div className="browse-single browse-single3 subject desktop-block">
-            <img src="/img/browse-single-3-mob.svg" />
+          <div className="browse-single browse-spike desktop">
+            <img src="/img/browse-single-3-mob.svg" className="pixelated" />
           </div>
-          <div className="browse-single browse-single2 subject desktop-block">
-            <img src="/img/browse-single-2-mob.svg" />
+          <div className="browse-single browse-snarfy desktop">
+            <img src="/img/browse-single-2-mob.svg" className="pixelated" />
           </div>
 
-          <div className="league-floating-nfts mobile">
-            <img src="/img/browse-single-mob.svg" />
+          <div className="position-relative flex-grow-1 league-floating-nfts mobile">
+            <Image
+              src="/img/browse-single-mob.svg"
+              layout="fill"
+              objectFit="cover"
+              alt="Mobile group floating degens"
+            />
           </div>
         </div>
       </div>

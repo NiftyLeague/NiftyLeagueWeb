@@ -188,10 +188,6 @@ a {
   fill: #620edf;
 }
 
-.gif-section {
-  background: linear-gradient(180deg, #191b1f 22.27%, rgba(25, 27, 31, 0) 100%);
-}
-
 .spons-single {
   padding: 25px 40px;
 }
@@ -216,15 +212,6 @@ a {
   border-radius: 8px;
 }
 
-.sliding-nfts {
-  background: #191b1f;
-}
-.dark-shade-1 {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
 .section-margin {
   margin-top: 150px !important;
   margin-bottom: 150px !important;
@@ -270,6 +257,15 @@ a {
   image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
   -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
   image-rendering: pixelated;
+}
+
+.sushi-shade-1 {
+  position: absolute;
+  top: auto;
+  bottom: 304px;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
 }
 
 /*************************************** Learn **********************************************/
@@ -330,6 +326,37 @@ a {
   min-height: 174px;
 }
 
+.com-grad-1 {
+  position: absolute;
+  top: 1500px;
+  left: 0;
+  max-width: 100%;
+  right: 0;
+  bottom: auto;
+}
+.moon-grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.com-content {
+  margin-top: -100px;
+}
+.earth-grad {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 500px;
+}
+.com-bg-main {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  min-height: 800px;
+}
+
 .community-footer {
   background: linear-gradient(
       26.04deg,
@@ -352,6 +379,7 @@ a {
 .about-intro-content {
   z-index: 2;
 }
+
 .icons-placement {
   z-index: 1;
 }
@@ -398,225 +426,7 @@ a {
   left: 550px;
   position: absolute;
 }
-.about-nifty-degens .browse-single1 {
-  top: 18px;
-  left: 100px;
-}
-.about-nifty-degens .browse-single3 {
-  top: 70px;
-  left: 35px;
-}
-.nifty-rentals-img .icons-placement1 img {
-  position: relative;
-}
-.nifty-rentals-img .icons-placement1 .icon8 {
-  top: 0px;
-  left: 200px;
-}
-.nifty-rentals-img .icons-placement1 .icon1 {
-  top: 0px;
-  left: 200px;
-}
-.nifty-rentals-img .icons-placement1 .icon2 {
-  top: 50px;
-  left: 100px;
-}
-.nifty-rentals-img .icons-placement1 .icon3 {
-  top: 50px;
-  left: 200px;
-}
-.nifty-rentals-img .icons-placement1 .icon4 {
-  top: 80px;
-  left: 200px;
-}
-.token-play {
-  background: linear-gradient(
-      26.04deg,
-      rgba(110, 51, 237, 0.05) -0.03%,
-      rgba(123, 97, 255, 0.025) 99.2%
-    ),
-    rgba(36, 37, 38, 0.6);
-  border-radius: 8px;
-  min-height: 386px;
-}
-.token-play p {
-  opacity: 0.9;
-}
 
-/*************************************** Home **********************************************/
-
-.home-intro {
-  background: #191b1f;
-  background-size: cover;
-  background-image: url(/img/home-banner-desktop.png);
-  min-height: 94vh;
-}
-.home-intro .overlay-dark {
-  width: 100%;
-  height: 100vh;
-  background: rgba(25, 27, 31, 1);
-  opacity: 0.8999999761581421;
-  position: absolute;
-  top: 0px;
-  overflow: hidden;
-}
-.home-intro .overlay-gradient-top {
-  width: 100%;
-  height: 280px;
-  background: linear-gradient(rgba(25, 27, 31, 1), rgba(25, 27, 31, 0));
-  opacity: 0.75;
-  position: absolute;
-  top: 0px;
-  overflow: hidden;
-}
-.home-intro .overlay-gradient-bottom {
-  width: 100%;
-  height: 562px;
-  background: linear-gradient(rgba(25, 27, 31, 0), rgba(25, 27, 31, 1));
-  opacity: 1;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
-}
-.home-content {
-  z-index: 3;
-}
-
-.browse-single1 {
-  top: 430px;
-  left: 60px;
-  position: absolute;
-}
-.browse-single2 {
-  top: 590px;
-  left: 1000px;
-  position: absolute;
-}
-.browse-single3 {
-  top: 400px;
-  left: 1230px;
-  position: absolute;
-}
-
-@media (min-width: 1280px) and (max-width: 1800px) {
-  .browse-single2 {
-    left: 800px;
-    position: absolute;
-  }
-  .browse-single3 {
-    left: 1030px;
-    position: absolute;
-  }
-  .about-pg .rental-grad {
-    position: absolute;
-    bottom: -380px;
-    right: 0px !important;
-  }
-}
-
-.league-special-row {
-  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 96.39%),
-    #000000;
-}
-.league-special-container {
-  max-width: 1280px;
-  width: 100%;
-}
-.league-special-container .eclipse-location {
-  margin-left: 70px;
-  margin-top: -30px;
-}
-.league-special-accordion .accordion-item {
-  border-bottom: 1px solid rgb(211 205 205 / 13%);
-  background-color: transparent;
-  margin-bottom: 20px;
-}
-.league-special-accordion .accordion-header button {
-  color: #620edf;
-  background-color: transparent;
-  font-size: 24px;
-  font-weight: 400;
-  font-family: 'Press Start 2P', cursive;
-  text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
-}
-.league-special-accordion .accordion-header button.collapsed {
-  color: white;
-}
-.league-special-accordion .accordion-body button {
-  margin-top: 8px;
-}
-
-.wrapper {
-  overflow: hidden;
-  min-height: 110vh;
-}
-
-.sliding-background-desktop {
-  background: url(/img/icons-set.png) repeat-x;
-  image-rendering: crisp-edges;
-  image-rendering: -moz-crisp-edges; /* Firefox */
-  image-rendering: -o-crisp-edges; /* Opera */
-  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
-  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-  image-rendering: pixelated;
-
-  height: 100%;
-  width: 5076px;
-  animation: slide 60s linear infinite;
-}
-.sliding-background-mobile {
-  background: url(/img/icons-set-mb.png) repeat-x;
-
-  height: 100%;
-  width: 5076px;
-  animation: slide 60s linear infinite;
-}
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1692px, 0, 0);
-  }
-}
-
-.baker-shade {
-  position: absolute;
-  bottom: auto;
-  width: 230px;
-  height: 390px;
-  z-index: 1;
-  padding: 0;
-}
-.baker-shade.left {
-  left: 0;
-}
-.baker-shade.right {
-  right: 0;
-}
-
-.sushi-shade-1 {
-  position: absolute;
-  top: auto;
-  bottom: 304px;
-  z-index: 1;
-  width: 100%;
-  padding: 0;
-}
-.video-bg {
-  position: absolute;
-  top: 0;
-  min-width: 100%;
-  padding: 0;
-  min-height: 50vh;
-  height: 100vh;
-  max-height: 1440px;
-}
-.video-detail-container {
-  max-width: 668px;
-  position: relative;
-  z-index: 1;
-}
 .about-pg .sushi-shade-1 {
   bottom: -5px;
 }
@@ -679,6 +489,13 @@ a {
   bottom: -380px;
   right: -220px;
 }
+@media (min-width: 1280px) and (max-width: 1800px) {
+  .about-pg .rental-grad {
+    position: absolute;
+    bottom: -380px;
+    right: 0px !important;
+  }
+}
 .abt-grad-2 {
   position: absolute;
   left: auto;
@@ -687,37 +504,127 @@ a {
   bottom: 0;
 }
 
-.com-grad-1 {
-  position: absolute;
-  top: 1500px;
-  left: 0;
-  max-width: 100%;
-  right: 0;
-  bottom: auto;
+.nifty-rentals-img .icons-placement1 img {
+  position: relative;
 }
-.moon-grad {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
+.nifty-rentals-img .icons-placement1 .icon8 {
+  top: 0px;
+  left: 200px;
 }
-.com-content {
-  margin-top: -100px;
+.nifty-rentals-img .icons-placement1 .icon1 {
+  top: 0px;
+  left: 200px;
 }
-.earth-grad {
-  position: absolute;
-  right: 0;
-  left: auto;
-  top: 500px;
+.nifty-rentals-img .icons-placement1 .icon2 {
+  top: 50px;
+  left: 100px;
 }
-.com-bg-main {
-  position: absolute;
-  width: 100%;
-  padding: 0;
-  top: 0;
-  min-height: 800px;
+.nifty-rentals-img .icons-placement1 .icon3 {
+  top: 50px;
+  left: 200px;
+}
+.nifty-rentals-img .icons-placement1 .icon4 {
+  top: 80px;
+  left: 200px;
 }
 
+.token-play {
+  background: linear-gradient(
+      26.04deg,
+      rgba(110, 51, 237, 0.05) -0.03%,
+      rgba(123, 97, 255, 0.025) 99.2%
+    ),
+    rgba(36, 37, 38, 0.6);
+  border-radius: 8px;
+  min-height: 386px;
+}
+.token-play p {
+  opacity: 0.9;
+}
+.video-bg {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  padding: 0;
+  min-height: 50vh;
+  height: 100vh;
+  max-height: 1440px;
+}
+.video-detail-container {
+  max-width: 668px;
+  position: relative;
+  z-index: 1;
+}
+
+/*************************************** Home **********************************************/
+
+.home-intro {
+  background: #191b1f;
+  background-size: cover;
+  background-image: url(/img/home-banner-desktop.png);
+  min-height: 94vh;
+}
+.home-intro .overlay-dark {
+  width: 100%;
+  height: 100vh;
+  background: rgba(25, 27, 31, 1);
+  opacity: 0.8999999761581421;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-intro .overlay-gradient-top {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(rgba(25, 27, 31, 1), rgba(25, 27, 31, 0));
+  opacity: 0.75;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-intro .overlay-gradient-bottom {
+  width: 100%;
+  height: 562px;
+  background: linear-gradient(rgba(25, 27, 31, 0), rgba(25, 27, 31, 1));
+  opacity: 1;
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+}
+.home-content {
+  z-index: 3;
+}
+
+.sliding-nfts {
+  background: #191b1f;
+}
+.sliding-nfts .sliding-background-wrapper-desktop {
+  overflow: hidden;
+  min-height: 94vh;
+}
+.sliding-nfts .sliding-background-wrapper-mobile {
+  overflow: hidden;
+  min-height: 520px;
+}
+.sliding-background-wrapper-desktop .sliding-background {
+  background: url(/img/icons-set.png) repeat-x;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+
+  height: 100%;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
+.sliding-background-wrapper-mobile .sliding-background {
+  background: url(/img/icons-set-mb.png) repeat-x;
+  height: 100%;
+  width: 5076px;
+  animation: slide 60s linear infinite;
+}
 @keyframes slide {
   0% {
     transform: translate3d(0, 0, 0);
@@ -727,36 +634,155 @@ a {
   }
 }
 
-@media (width: 1024px) {
-  .browse-single1 {
-    min-height: auto;
-    top: 320px;
-    left: 50px;
+.sushi-gif-section {
+  background: linear-gradient(180deg, #191b1f 22.27%, rgba(25, 27, 31, 0) 100%);
+}
+.sushi-gif {
+  opacity: 0.35;
+}
+.sushi-dark-shade-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  height: 65%;
+}
+
+.browse-andy {
+  position: absolute;
+  top: 430px;
+  left: 12%;
+}
+.browse-andy img {
+  max-width: 350px;
+}
+.browse-snarfy {
+  top: 505px;
+  left: 40%;
+  position: absolute;
+}
+.browse-snarfy img {
+  max-width: 275px;
+}
+.browse-spike {
+  top: 420px;
+  left: 55%;
+  position: absolute;
+}
+.browse-spike img {
+  max-width: 200px;
+}
+
+.league-floating-nfts {
+  display: flex;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  .browse-andy {
+    position: absolute;
+    top: 350px;
+    left: 12%;
   }
-  .browse-single2 {
-    min-height: auto;
+  .browse-andy img {
+    max-width: 420px;
+  }
+  .browse-snarfy {
+    top: 420px;
+    left: 40%;
+    position: absolute;
+  }
+  .browse-snarfy img {
+    max-width: 350px;
+  }
+  .browse-spike {
+    top: 400px;
+    left: 55%;
+    position: absolute;
+  }
+  .browse-spike img {
+    max-width: 275px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .browse-andy {
+    position: absolute;
+    top: 250px;
+    left: 12%;
+  }
+  .browse-andy img {
+    max-width: 500px;
+  }
+  .browse-snarfy {
     top: 380px;
-    left: auto;
-    right: 375px;
+    left: 40%;
+    position: absolute;
   }
-  .browse-single3 {
-    min-height: auto;
-    top: 280px;
-    left: auto;
-    right: 75px;
+  .browse-snarfy img {
+    max-width: 400px;
   }
-  .browse-single2 .p-5 {
-    padding: 15px !important;
+  .browse-spike {
+    top: 320px;
+    left: 55%;
+    position: absolute;
   }
-  .browse-single1 img {
-    max-width: 220px;
+  .browse-spike img {
+    max-width: 320px;
   }
-  .browse-single3 img {
-    max-width: 220px;
-  }
-  .browse-single2 img {
-    max-width: 220px;
-  }
+}
+
+.league-special-row {
+  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 96.39%),
+    #000000;
+}
+.league-special-container {
+  max-width: 1280px;
+  width: 100%;
+}
+.league-special-container .eclipse-location {
+  margin-left: 20%;
+  margin-top: -30px;
+  max-width: 79%;
+}
+.league-special-accordion .accordion-item {
+  border-bottom: 1px solid rgb(211 205 205 / 13%);
+  background-color: transparent;
+  margin-bottom: 20px;
+}
+.league-special-accordion .accordion-header button {
+  color: #620edf;
+  background-color: transparent;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
+}
+.league-special-accordion .accordion-header button.collapsed {
+  color: white;
+}
+.league-special-accordion .accordion-body button {
+  margin-top: 8px;
+}
+
+.baker-shade {
+  position: absolute;
+  bottom: auto;
+  width: 230px;
+  height: 390px;
+  z-index: 1;
+  padding: 0;
+}
+.baker-shade.left {
+  left: 0;
+}
+.baker-shade.right {
+  right: 0;
+}
+
+/*************************************** Media Queries **********************************************/
+
+@media (width: 1024px) {
   .icons-placement .icon1 {
     top: 60px;
     left: 666px;
@@ -882,25 +908,19 @@ a {
     margin-top: 110px;
     line-height: 1;
   }
-  /*    .mobile-view h1 br{display: none;}*/
-  .gif-section {
+  .sushi-gif-section {
     min-height: 679px;
   }
-  .gif-section h2 {
+  .sushi-gif-section h2 {
     font-size: 28px;
     padding: 7px;
   }
-  .gif-section h2 br {
+  .sushi-gif-section h2 br {
     display: none;
   }
   .browse-single h5 {
     font-size: 11px;
     margin-bottom: 0;
-  }
-  .browse-single1 {
-    min-height: 223px;
-    top: 100px;
-    left: 0px;
   }
   .community-data {
     min-width: auto;
@@ -923,14 +943,6 @@ a {
   .about-nifty-degens .browse-single {
     position: relative;
   }
-  .about-nifty-degens .browse-single1 {
-    left: 0px;
-    top: 0px;
-  }
-  .about-nifty-degens .browse-single3 {
-    left: 0px;
-    top: 0px;
-  }
   .about-nifty-degens h2,
   h4,
   p {
@@ -949,15 +961,6 @@ a {
   }
   .team-section p {
     text-align: center;
-  }
-  .browse-single1 {
-    min-height: 223px;
-  }
-  .browse-single2 {
-    min-height: 192px;
-  }
-  .browse-single3 {
-    min-height: 143px;
   }
   label {
     font-size: 13px;
@@ -1113,44 +1116,6 @@ a {
   .wrapper {
     min-height: 460px;
   }
-  .sushi-gif {
-    object-fit: cover;
-    opacity: 0.35;
-  }
-  .browse-single1 {
-    min-height: auto !important;
-    top: 320px !important;
-    left: 50px !important;
-  }
-  .browse-single2 {
-    display: none;
-    min-height: auto !important;
-    top: 380px !important;
-    left: auto !important;
-    right: 375px !important;
-  }
-  .browse-single3 {
-    display: none;
-    min-height: auto !important;
-    top: 280px !important;
-    left: auto !important;
-    right: 75px !important;
-  }
-  .browse-single2 .p-5 {
-    padding: 15px !important;
-  }
-  .browse-single1 img {
-    max-width: 125px !important;
-  }
-  .browse-single3 img {
-    max-width: 220px !important;
-  }
-  .browse-single2 img {
-    max-width: 220px !important;
-  }
-  .league-floating-nfts img {
-    margin-left: -30px;
-  }
   .section-margin {
     margin-top: 60px !important;
     margin-bottom: 60px !important;
@@ -1213,35 +1178,6 @@ a {
 }
 
 @media (width: 768px) {
-  .browse-single1 {
-    min-height: auto !important;
-    top: 320px !important;
-    left: 50px !important;
-  }
-  .browse-single2 {
-    min-height: auto !important;
-    top: 380px !important;
-    left: auto !important;
-    right: 375px !important;
-  }
-  .browse-single3 {
-    min-height: auto !important;
-    top: 280px !important;
-    left: auto !important;
-    right: 75px !important;
-  }
-  .browse-single2 .p-5 {
-    padding: 15px !important;
-  }
-  .browse-single1 img {
-    max-width: 220px !important;
-  }
-  .browse-single3 img {
-    max-width: 220px !important;
-  }
-  .browse-single2 img {
-    max-width: 220px !important;
-  }
   .league-special-container .eclipse-location {
     display: none;
   }
@@ -1296,21 +1232,21 @@ a {
     margin-top: 110px;
     line-height: 1;
   }
-  .gif-section {
+  .sushi-gif-section {
     min-height: 679px;
   }
-  .gif-section h2 {
+  .sushi-gif-section h2 {
     font-size: 28px;
     padding: 7px;
   }
-  .gif-section h2 br {
+  .sushi-gif-section h2 br {
     display: none;
   }
   .browse-single h5 {
     font-size: 11px;
     margin-bottom: 0;
   }
-  .browse-single1 {
+  .browse-andy {
     min-height: 223px;
     top: 100px;
     left: 0px;
@@ -1339,14 +1275,6 @@ a {
   .about-nifty-degens .browse-single {
     position: relative;
   }
-  .about-nifty-degens .browse-single1 {
-    left: 0px;
-    top: 0px;
-  }
-  .about-nifty-degens .browse-single3 {
-    left: 0px;
-    top: 0px;
-  }
   .about-nifty-degens h2,
   h4,
   p {
@@ -1366,15 +1294,6 @@ a {
   .team-section p {
     text-align: center;
   }
-  .browse-single1 {
-    min-height: 223px;
-  }
-  .browse-single2 {
-    min-height: 192px;
-  }
-  .browse-single3 {
-    min-height: 143px;
-  }
   label {
     font-size: 13px;
   }
@@ -1391,35 +1310,6 @@ a {
   .discord-btn {
     max-width: 250px;
     white-space: normal;
-  }
-  .browse-single1 {
-    min-height: auto !important;
-    top: 320px !important;
-    left: 50px !important;
-  }
-  .browse-single2 {
-    min-height: auto !important;
-    top: 380px !important;
-    left: auto !important;
-    right: 375px !important;
-  }
-  .browse-single3 {
-    min-height: auto !important;
-    top: 280px !important;
-    left: auto !important;
-    right: 75px !important;
-  }
-  .browse-single2 .p-5 {
-    padding: 15px !important;
-  }
-  .browse-single1 img {
-    max-width: 220px !important;
-  }
-  .browse-single3 img {
-    max-width: 220px !important;
-  }
-  .browse-single2 img {
-    max-width: 220px !important;
   }
   .league-special-container .eclipse-location {
     display: none;
