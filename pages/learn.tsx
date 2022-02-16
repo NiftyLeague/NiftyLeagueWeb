@@ -1,109 +1,30 @@
+import { useEffect } from 'react';
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
-function Intro() {
-  return (
-    <div className="learn-intro pt-md-5">
-      <div className="container py-3 py-sm-5 min-vh-100 d-flex align-items-center">
-        <div className="row m-0 p-0 position-relative">
-          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-            <div className="learn-content position-relative">
-              <img
-                className="position-absolute desktop w-100 h-100"
-                src="/img/learn/getting-started.png"
-              />
-              <img
-                className="position-absolute mobile w-100 h-100"
-                src="/img/learn/getting-started.png"
-              />
-              <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
-                <h3 className="mt-sm-4 mt-2 text-m-center">Getting started</h3>
-                <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
-                </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  Begin
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-            <div className="learn-content position-relative">
-              <img
-                className="position-absolute desktop w-100 h-100"
-                src="/img/learn/gitbook.png"
-              />
-              <img
-                className="position-absolute mobile w-100 h-100"
-                src="/img/learn/gitbook.png"
-              />
-              <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
-                <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
-                <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
-                </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  visit gitbook
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-            <div className="learn-content position-relative">
-              <img
-                className="position-absolute desktop w-100 h-100"
-                src="/img/learn/tutorials.png"
-              />
-              <img
-                className="position-absolute mobile w-100 h-100"
-                src="/img/learn/tutorials.png"
-              />
-              <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
-                <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
-                </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  see tutorials
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-            <div className="learn-content position-relative">
-              <img
-                className="position-absolute desktop w-100 h-100"
-                src="/img/learn/community.png"
-              />
-              <img
-                className="position-absolute mobile w-100 h-100"
-                src="/img/learn/community.png"
-              />
-              <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
-                <p className="font-16 text-m-center">
-                  Here, you&apos;ll find curated how-to guides and
-                  <br /> information to help get you started.
-                </p>
-                <button className="btn theme-btn-aqua my-sm-2 my-0">
-                  get involved
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <img className="earth-grad" src="/img/community/earth-grad.svg" />
-    </div>
-  );
-}
-
 const Learn: NextPage = () => {
+  useEffect(() => {
+    let coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      if (coll[i]) {
+        coll[i].addEventListener("click", function() {
+          coll[i].classList.toggle("active");
+          let content = (coll[i].nextElementSibling) as HTMLElement;
+          if (content) {
+            if (content.style.maxHeight) {
+              content.style.maxHeight = "";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+          }
+        });
+      }
+    }
+  }, []);
+
   return (
     <Layout classes={{ root: 'learn-pg' }}>
       <Head>
@@ -114,7 +35,101 @@ const Learn: NextPage = () => {
         />
       </Head>
 
-      <Intro />
+      <div className="learn-intro pt-md-5">
+        <div className="container py-3 py-sm-5 min-vh-100 d-flex align-items-center">
+          <div className="row m-0 p-0 position-relative">
+            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+              <div className="learn-content position-relative">
+                <img
+                  className="position-absolute desktop w-100 h-100"
+                  src="/img/learn/getting-started.png"
+                />
+                <img
+                  className="position-absolute mobile w-100 h-100"
+                  src="/img/learn/getting-started.png"
+                />
+                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
+                  <h3 className="mt-sm-4 mt-2 text-m-center">Getting started</h3>
+                  <p className="font-16 text-m-center">
+                    Here, you&apos;ll find curated how-to guides and
+                    <br /> information to help get you started.
+                  </p>
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    Begin
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+              <div className="learn-content position-relative">
+                <img
+                  className="position-absolute desktop w-100 h-100"
+                  src="/img/learn/gitbook.png"
+                />
+                <img
+                  className="position-absolute mobile w-100 h-100"
+                  src="/img/learn/gitbook.png"
+                />
+                <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
+                  <h3 className="mt-sm-4 mt-2 text-m-center">GitBook</h3>
+                  <p className="font-16 text-m-center">
+                    Here, you&apos;ll find curated how-to guides and
+                    <br /> information to help get you started.
+                  </p>
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    visit gitbook
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+              <div className="learn-content position-relative">
+                <img
+                  className="position-absolute desktop w-100 h-100"
+                  src="/img/learn/tutorials.png"
+                />
+                <img
+                  className="position-absolute mobile w-100 h-100"
+                  src="/img/learn/tutorials.png"
+                />
+                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
+                  <h3 className="mt-sm-4 mt-2 text-m-center">Tutorials</h3>
+                  <p className="font-16 text-m-center">
+                    Here, you&apos;ll find curated how-to guides and
+                    <br /> information to help get you started.
+                  </p>
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    see tutorials
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
+              <div className="learn-content position-relative">
+                <img
+                  className="position-absolute desktop w-100 h-100"
+                  src="/img/learn/community.png"
+                />
+                <img
+                  className="position-absolute mobile w-100 h-100"
+                  src="/img/learn/community.png"
+                />
+                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
+                  <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
+                  <p className="font-16 text-m-center">
+                    Here, you&apos;ll find curated how-to guides and
+                    <br /> information to help get you started.
+                  </p>
+                  <button className="btn theme-btn-aqua my-sm-2 my-0">
+                    get involved
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img className="earth-grad" src="/img/community/earth-grad.svg" />
+      </div>
 
       <div className="container learn-section">
         <div className="container py-sm-5 py-0">

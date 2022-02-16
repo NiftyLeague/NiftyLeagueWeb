@@ -11,6 +11,22 @@ const Home: NextPage = () => {
   const [isSponsSliderLoaded, setIsSponsSliderLoaded] = useState<boolean>(false);
 
   useEffect(() => {
+    let coll = document.getElementsByClassName("collapsible");
+    for (let i = 0; i < coll.length; i++) {
+      if (coll[i]) {
+        coll[i].addEventListener("click", function() {
+          coll[i].classList.toggle("active");
+          let content = (coll[i].nextElementSibling) as HTMLElement;
+          if (content) {
+            if (content.style.maxHeight) {
+              content.style.maxHeight = "";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+          }
+        });
+      }
+    }
     if ($('.degens-slider')) {
       $('.degens-slider').on("init", () => {
         setIsDegenSliderLoaded(true);
