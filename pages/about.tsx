@@ -16,7 +16,7 @@ const About: NextPage = () => {
         setIsDegenSliderLoaded(true);
       });
 
-      $('.degens-slider').slick({
+      $('.degens-slider')?.slick({
         slidesToShow: 4,
         slidesToScroll: 1,
         centerMode: true,
@@ -213,13 +213,19 @@ const About: NextPage = () => {
         </div>
 
         <div className="container video-detail-container section-margin">
-          <a href="">
-            <img
-              className="pixelated"
-              src="/img/about/youtube-video.png"
-              alt="Nifty Smashers Video Clip"
-            />
-          </a>
+          <iframe 
+            height="501px"
+            width="668px"
+            src="https://www.youtube.com/embed/WWLqE1tnf6U"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            title="Nifty Smashers Video Clip"
+            className="pixelated"
+            style={{
+              borderRadius: "25px"
+            }}
+          />
         </div>
         <div className="p-0 video-bg pixelated">
           <Image
