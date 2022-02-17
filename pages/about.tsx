@@ -102,12 +102,12 @@ const About: NextPage = () => {
             </p>
 
             <div className="display-buttons my-3 d-flex desktop">
-              <a href="https://docs.niftyleague.com/">
+              <a href="https://docs.niftyleague.com/" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-aqua mx-sm-2">
                   Check our docs
                 </button>
               </a>
-              <a href="/whitepaper.pdf">
+              <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
                   Download the whitepaper
                 </button>
@@ -557,7 +557,11 @@ const About: NextPage = () => {
               available traits and accessories. The final 100 DEGENs will be
               given to elite players in the Nifty League community.
             </p>
-            <a href="https://docs.niftyleague.com/overview/degens/about">
+            <a
+              href="https://docs.niftyleague.com/overview/degens/about"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="btn theme-btn-aqua w-auto my-5">
                 learn more about DEGEN NFTs
               </button>
@@ -576,7 +580,11 @@ const About: NextPage = () => {
               renter, you keep 70% of the in-game earnings, while 30% is
               distributed to the owner via a smart contract.
             </p>
-            <a href="https://docs.niftyleague.com/guides/rentals/rental-overview">
+            <a
+              href="https://docs.niftyleague.com/guides/rentals/rental-overview"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="btn theme-btn-aqua w-auto my-5">
                 learn more about rentals
               </button>
@@ -624,7 +632,11 @@ const About: NextPage = () => {
               collectibles. NFTL is currently available to trade and stake on
               SushiSwap.
             </p>
-            <a href="https://docs.niftyleague.com/overview/nftl/overview">
+            <a
+              href="https://docs.niftyleague.com/overview/nftl/overview"
+              target="_blank"
+              rel="noreferrer"
+            >
               <button className="btn theme-btn-aqua w-auto mt-5">
                 learn more
               </button>
