@@ -1041,6 +1041,9 @@ a {
   .slick-dots li.slick-active {
     background: #620edf !important;
   }
+  .nifty-teams .job-label {
+    background-color: yellow;
+  }
 
   .com-grad-1,
   .earth-grad {

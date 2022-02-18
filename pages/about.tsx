@@ -718,9 +718,53 @@ const About: NextPage = () => {
               <img src="/img/about/team3.png" className="w-100 pixelated" />
               <h3 className="mt-5">Nifty Spike</h3>
               <label className="font-20">Co-Founder, Creative Director</label>
-              <label className="uppercase mt-5 pt-3">Former clients</label>
+              <label className="uppercase mt-3 pt-3">Former clients</label>
               <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
               <img src="/img/about/disney.svg" className="w-100" />
+            </div>
+          </div>
+        </div>
+        <div className="row m-0 p-0 position-relative text-center my-3 desktop">
+          <div className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <img src="/img/about/NiftyMorgan.png" className="w-100 pixelated" style={{ borderRadius: "10px" }} />
+              <h5 className="mt-4">Nifty Morgan</h5>
+              <label className="font-15">VP of Ops</label>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <img src="/img/about/koa.png" className="w-100 pixelated" style={{ borderRadius: "10px" }} />
+              <h5 className="mt-4">Koa</h5>
+              <label className="font-15">DAO Director</label>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <img src="/img/about/bolo.png" className="w-100 pixelated" style={{ borderRadius: "10px" }} />
+              <h5 className="mt-4">Bolo Dave</h5>
+              <label className="font-15">Program &amp; Community Manager</label>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <img src="/img/about/zoiby.png" className="w-100 pixelated" style={{ borderRadius: "10px" }} />
+              <h5 className="mt-4">Zoiby</h5>
+              <label className="font-15">Senior Software Developer</label>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <img src="/img/about/NiftyMichael.png" className="w-100 pixelated" style={{ borderRadius: "10px" }} />
+              <h5 className="mt-4">Nifty Michael</h5>
+              <label className="font-15">Web3 Developer</label>
+            </div>
+          </div>
+          <div className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <img src="/img/about/jeppe.png" className="w-100 pixelated" style={{ borderRadius: "10px" }} />
+              <h5 className="mt-4">Jeppe</h5>
+              <label className="font-15">Marketing Manager</label>
             </div>
           </div>
         </div>
@@ -734,7 +778,7 @@ const About: NextPage = () => {
         >
           <div className="slide">
             <div className="slide-content">
-              <div className="nifty-teams d-flex flex-column p-sm-5 p-2">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
                 <img src="/img/about/team1.png" className="w-100" />
                 <h3 className="mt-5">Nifty Andy</h3>
                 <label className="font-20">Co-Founder, CEO</label>
@@ -746,7 +790,7 @@ const About: NextPage = () => {
           </div>
           <div className="slide">
             <div className="slide-content">
-              <div className="nifty-teams d-flex flex-column  p-sm-5 p-2">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
                 <img src="/img/about/team2.png" className="w-100" />
                 <h3 className="mt-5">Snarfy</h3>
                 <label className="font-20">Co-Founder, CTO</label>
@@ -758,13 +802,67 @@ const About: NextPage = () => {
           </div>
           <div className="slide">
             <div className="slide-content">
-              <div className="nifty-teams d-flex flex-column  p-sm-5 p-2">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
                 <img src="/img/about/team3.png" className="w-100" />
                 <h3 className="mt-5">Nifty Spike</h3>
                 <label className="font-20">Co-Founder, Creative Director</label>
                 <label className="uppercase mt-5 pt-3">Former clients</label>
                 <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
                 <img src="/img/about/disney.svg" className="w-100" />
+              </div>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="slide-content">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
+                <img src="/img/about/NiftyMorgan.png" className="w-100" style={{ borderRadius: "10px" }} />
+                <h3 className="mt-5">Nifty Morgan</h3>
+                <label className="font-20">VP of Ops</label>
+              </div>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="slide-content">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
+                <img src="/img/about/koa.png" className="w-100" style={{ borderRadius: "10px" }} />
+                <h3 className="mt-5">Koa</h3>
+                <label className="font-20">DAO Director</label>
+              </div>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="slide-content">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
+                <img src="/img/about/bolo.png" className="w-100" style={{ borderRadius: "10px" }} />
+                <h3 className="mt-5">Bolo Dave</h3>
+                <label className="font-20">Program &amp; Community Manager</label>
+              </div>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="slide-content">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
+                <img src="/img/about/zoiby.png" className="w-100" style={{ borderRadius: "10px" }} />
+                <h3 className="mt-5">Zoiby</h3>
+                <label className="font-20">Senior Software Developer</label>
+              </div>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="slide-content">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
+                <img src="/img/about/NiftyMichael.png" className="w-100" style={{ borderRadius: "10px" }} />
+                <h3 className="mt-5">Nifty Michael</h3>
+                <label className="font-20">Web3 Developer</label>
+              </div>
+            </div>
+          </div>
+          <div className="slide">
+            <div className="slide-content">
+              <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
+                <img src="/img/about/jeppe.png" className="w-100" style={{ borderRadius: "10px" }} />
+                <h3 className="mt-5">Jeppe</h3>
+                <label className="font-20">Marketing Manager</label>
               </div>
             </div>
           </div>
