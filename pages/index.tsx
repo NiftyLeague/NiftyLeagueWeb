@@ -402,7 +402,8 @@ const Home: NextPage = () => {
               className="degens-slider slider px-0 my-5"
               style={{
                 alignItems: 'center',
-                maxWidth: '100%',
+                maxWidth: '99%',
+                margin: 'auto',
                 display: isDegenSliderLoaded ? '' : 'none',
               }}
             >
@@ -692,7 +693,7 @@ const Home: NextPage = () => {
           </div>
           <div
             className="mobile-view text-center d-flex flex-column align-items-center position-absolute"
-            style={{ marginTop: -100, zIndex: 3 }}
+            style={{ marginTop: -100, zIndex: 3, padding: 0 }}
           >
             <img
               className="nifty-character pixelated"
