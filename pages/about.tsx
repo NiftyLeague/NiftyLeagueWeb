@@ -249,7 +249,8 @@ const About: NextPage = () => {
               className="degens-slider slider px-0 my-5"
               style={{
                 alignItems: 'center',
-                maxWidth: '100%',
+                maxWidth: '99%',
+                margin: 'auto',
                 display: isDegenSliderLoaded ? '' : 'none',
               }}
             >
