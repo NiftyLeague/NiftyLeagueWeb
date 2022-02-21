@@ -1287,3 +1287,17 @@ a {
     display: none;
   }
 }
+
+.legal-pg h2 {
+  padding: 30px 0 15px 0;
+}
+
+.legal-pg h4 {
+  font-size: 20px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 15px 0 5px 0;
+}
+
+.legal-pg p {
+  font-size: 18px;
+}
