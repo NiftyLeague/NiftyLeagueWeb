@@ -34,7 +34,11 @@ const Learn: NextPage = () => {
                     Here, you&apos;ll find curated how-to guides and information
                     to help get you started.
                   </p>
-                  <a href="https://docs.niftyleague.com/overview/intro">
+                  <a 
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/overview/intro"
+                  >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       Learn More
                     </button>
@@ -60,7 +64,11 @@ const Learn: NextPage = () => {
                     Setup your Ethereum wallet and buy or rent a DEGEN to play
                     for NFTL
                   </p>
-                  <a href="https://docs.niftyleague.com/guides/set-up">
+                  <a 
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/guides/set-up"
+                  >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       Begin
                     </button>
@@ -85,7 +93,11 @@ const Learn: NextPage = () => {
                   <p className="font-16 text-m-center">
                     Learn about Smashers gameplay and how points are counted
                   </p>
-                  <a href="https://docs.niftyleague.com/guides/nifty-smashers/general-info">
+                  <a 
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/guides/nifty-smashers/general-info"
+                  >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       See tutorials
                     </button>
@@ -110,9 +122,9 @@ const Learn: NextPage = () => {
                     by our community
                   </p>
                   <a
-                    href="https://discord.gg/niftyleague"
                     target="_blank"
                     rel="noreferrer"
+                    href="https://discord.gg/niftyleague"
                   >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       get involved
