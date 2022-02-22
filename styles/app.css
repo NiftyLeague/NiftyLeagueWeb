@@ -47,7 +47,7 @@ h3 {
 h4 {
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', sans-serif;
   text-shadow: 0px 4px 144px rgba(0, 0, 0, 0.5);
 }
 h5 {
@@ -299,7 +299,7 @@ a {
   background-color: transparent;
   font-size: 22px;
   font-weight: 400;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', sans-serif;
   text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
   padding: 2rem 1.5rem;
 }
@@ -542,7 +542,7 @@ a {
   top: 0;
   min-width: 100%;
   padding: 0;
-  min-height: 50vh;
+  min-height: 80vh;
   height: 100vh;
   max-height: 1440px;
 }
@@ -720,7 +720,7 @@ a {
   background-color: transparent;
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Press Start 2P', sans-serif;
   text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
 }
 .league-special-accordion .accordion-header button.collapsed {
@@ -779,7 +779,7 @@ a {
   .about-pg .rental-grad {
     right: 0;
   }
-  .nifty-degan p br {
+  .nifty-degen p br {
     display: none;
   }
   .nifty-rental p br {
@@ -954,7 +954,7 @@ a {
     width: 100%;
     height: auto;
   }
-  .nifty-degan img {
+  .nifty-degen img {
     width: 100%;
     height: auto;
   }

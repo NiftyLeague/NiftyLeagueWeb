@@ -2,6 +2,10 @@
   left: 0;
   top: 185px;
   max-width: 100vw;
+  z-index: 1;
+}
+.home-pg .header .eclipse-location {
+  display: none;
 }
 .about-pg .header .eclipse-location {
   top: 30px;
