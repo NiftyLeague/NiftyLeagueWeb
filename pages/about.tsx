@@ -1,17 +1,19 @@
 declare var $: any;
 import { useEffect, useState } from 'react';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
 const About: NextPage = () => {
+  const desktop = useMediaQuery('(min-width:769px)');
   const [isDegenSliderLoaded, setIsDegenSliderLoaded] =
     useState<boolean>(false);
   const [isTeamSliderLoaded, setIsTeamSliderLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    if ($('.degens-slider')) {
+    if ($('.degens-slider') && !isDegenSliderLoaded) {
       $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
@@ -42,7 +44,7 @@ const About: NextPage = () => {
         ],
       });
     }
-    if ($('.teams-slider')) {
+    if ($('.teams-slider') && !isTeamSliderLoaded) {
       $('.teams-slider').on('init', () => {
         setIsTeamSliderLoaded(true);
       });
@@ -73,7 +75,7 @@ const About: NextPage = () => {
         ],
       });
     }
-  }, []);
+  }, [isDegenSliderLoaded, isTeamSliderLoaded]);
 
   return (
     <Layout classes={{ root: 'about-pg' }}>
@@ -619,23 +621,22 @@ const About: NextPage = () => {
                 alt="Alien degen image"
               />
             </div>
-            <img
+            <Image
               className="rental-grad"
               src="/img/about/niftyRentals-gradient.svg"
+              layout="fill"
+              alt="Purple gradient"
             />
           </div>
-        </div>
-
-        <div className="d-flex section-margin">
-          <div className="ms-auto nifty-rentals-img">
-            <div className="icons-placement1" style={{ display: 'none' }}>
-              <img className="icon8" src="/img/about/header/icon8.png" />
-              <img className="icon1" src="/img/about/header/icon1.png" />
-              <img className="icon2" src="/img/about/header/icon2.png" />
-              <img className="icon3" src="/img/about/header/icon3.png" />
-              <img className="icon4" src="/img/about/header/icon4.png" />
-            </div>
-          </div>
+          <span className="position-absolute eclipse-location w-100">
+            <Image
+              src="/img/eclipses-header.svg"
+              alt="Eclipse background"
+              layout="responsive"
+              width={668}
+              height={666}
+            />
+          </span>
         </div>
       </div>
       <div className="container my-sm-5 py-sm-5">
@@ -681,8 +682,29 @@ const About: NextPage = () => {
         </div>
       </div>
       <div className="row m-0 p-0 position-relative text-center DAO-section">
-        <img src="/img/about/bg-DAO.png" className="p-0 desktop pixelated" />
-        <img src="/img/about/bg-DAO-mb.png" className="p-0 mobile pixelated" />
+        <div className="p-0 w-100">
+          {desktop ? (
+            <Image
+              alt="Mars level background desktop"
+              className="pixelated"
+              height={1003}
+              layout="responsive"
+              objectFit="cover"
+              src="/img/about/bg-DAO.png"
+              width={1440}
+            />
+          ) : (
+            <Image
+              alt="Mars level background mobile"
+              className="pixelated"
+              height={749}
+              layout="responsive"
+              objectFit="cover"
+              src="/img/about/bg-DAO-mb.png"
+              width={375}
+            />
+          )}
+        </div>
         <div className="position-absolute my-sm-5">
           <h1 className="font-64 my-5">Nifty DAO</h1>
           <p>
@@ -697,267 +719,473 @@ const About: NextPage = () => {
           </p>
         </div>
       </div>
-      <div className="container position-relative">
-        <img className="abt-grad-2 desktop" src="/img/about/about-grad-2.svg" />
-        <img
-          className="abt-grad-2 mobile"
-          src="/img/about/about-grad-2-mobile.svg"
-        />
-        <div className="row m-0 p-0 position-relative text-center my-5 team-section">
-          <h1 className="font-64 my-5">Meet the Nifty Team</h1>
+      <div className="position-relative pb-5">
+        <div className="about-team-grad">
+          {desktop ? (
+            <Image
+              alt="Team purple gradient desktop"
+              layout="fill"
+              objectFit="cover"
+              src="/img/about/about-grad-2.svg"
+            />
+          ) : (
+            <Image
+              alt="Team purple gradient mobile"
+              layout="fill"
+              objectFit="cover"
+              src="/img/about/about-grad-2-mobile.svg"
+            />
+          )}
         </div>
-        <div className="row m-0 p-0 position-relative text-center my-5 desktop">
-          <div className="col-sm-4">
-            <div className="nifty-teams d-flex flex-column p-5">
-              <img src="/img/about/team1.png" className="w-100 pixelated" />
-              <h3 className="mt-5">Nifty Andy</h3>
-              <label className="font-20">Co-Founder, CEO</label>
-              <label className="uppercase mt-5 pt-3">formerly</label>
-              <img src="/img/about/activision.svg" className="w-100 my-2" />
-              <label className="uppercase">3 years</label>
-            </div>
+        <div className="container py-5">
+          <div className="row m-0 p-0 position-relative text-center py-5 team-section">
+            <h1 className="font-64 pt-5">Meet the Nifty Team</h1>
           </div>
-          <div className="col-sm-4">
-            <div className="nifty-teams d-flex flex-column p-5">
-              <img src="/img/about/team2.png" className="w-100 pixelated" />
-              <h3 className="mt-5">Snarfy</h3>
-              <label className="font-20">Co-Founder, CTO</label>
-              <label className="uppercase mt-5 pt-3">formerly</label>
-              <img src="/img/about/activision.svg" className="w-100 my-2" />
-              <label className="uppercase">8 years</label>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="nifty-teams d-flex flex-column p-5">
-              <img src="/img/about/team3.png" className="w-100 pixelated" />
-              <h3 className="mt-5">Nifty Spike</h3>
-              <label className="font-20">Co-Founder, Creative Director</label>
-              <label className="uppercase mt-3 pt-3">Former clients</label>
-              <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
-              <img src="/img/about/disney.svg" className="w-100" />
-            </div>
-          </div>
+          {desktop ? (
+            <>
+              <div className="row m-0 p-0 position-relative text-center my-3 desktop">
+                <div className="col-sm-4">
+                  <div className="nifty-teams d-flex flex-column p-5">
+                    <Image
+                      alt="Andy DEGEN"
+                      className="pixelated"
+                      height={293}
+                      layout="responsive"
+                      src="/img/about/team1.png"
+                      width={268}
+                    />
+                    <h3 className="mt-5">Nifty Andy</h3>
+                    <label className="font-20">Co-Founder, CEO</label>
+                    <label className="uppercase mt-5 pt-3">formerly</label>
+                    <div className="my-2">
+                      <Image
+                        alt="Activision logo"
+                        height={60}
+                        layout="responsive"
+                        src="/img/about/activision.svg"
+                        width={252}
+                      />
+                    </div>
+                    <label className="uppercase">3 years</label>
+                  </div>
+                </div>
+                <div className="col-sm-4">
+                  <div className="nifty-teams d-flex flex-column p-5">
+                    <Image
+                      alt="Snarfy DEGEN"
+                      className="pixelated"
+                      height={293}
+                      layout="responsive"
+                      src="/img/about/team2.png"
+                      width={268}
+                    />
+                    <h3 className="mt-5">Snarfy</h3>
+                    <label className="font-20">Co-Founder, CTO</label>
+                    <label className="uppercase mt-5 pt-3">formerly</label>
+                    <div className="my-2">
+                      <Image
+                        alt="Activision logo"
+                        height={60}
+                        layout="responsive"
+                        src="/img/about/activision.svg"
+                        width={252}
+                      />
+                    </div>
+                    <label className="uppercase">8 years</label>
+                  </div>
+                </div>
+                <div className="col-sm-4">
+                  <div className="nifty-teams d-flex flex-column p-5">
+                    <Image
+                      alt="Spike DEGEN"
+                      className="pixelated"
+                      height={293}
+                      layout="responsive"
+                      src="/img/about/team3.png"
+                      width={268}
+                    />
+                    <h3 className="mt-5">Nifty Spike</h3>
+                    <label className="font-20">
+                      Co-Founder, Creative Director
+                    </label>
+                    <label className="uppercase mt-3 pt-3">
+                      Former clients
+                    </label>
+                    <div className="my-2">
+                      <Image
+                        alt="Nickelodeon logo"
+                        height={37}
+                        layout="responsive"
+                        src="/img/about/nickelodeon.svg"
+                        width={252}
+                      />
+                    </div>
+                    <Image
+                      alt="Disney logo"
+                      height={132}
+                      layout="responsive"
+                      src="/img/about/disney.svg"
+                      width={252}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="row m-0 p-0 position-relative text-center align-items-center my-3 desktop">
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Morgan DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/NiftyMorgan.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Nifty Morgan</h5>
+                    <label className="font-15">VP of Ops</label>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Koa DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/koa.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Koa</h5>
+                    <label className="font-15">DAO Director</label>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Bolo DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/bolo.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Bolo Dave</h5>
+                    <label className="font-15">
+                      Program &amp; Community Manager
+                    </label>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Zoiby DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/zoiby.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Zoiby</h5>
+                    <label className="font-15">Senior Software Developer</label>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Michael DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/NiftyMichael.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Nifty Michael</h5>
+                    <label className="font-15">Web3 Developer</label>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Jeppe DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/jeppe.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Jeppe</h5>
+                    <label className="font-15">Marketing Manager</label>
+                  </div>
+                </div>
+                <div className="col-sm-3">
+                  <div className="nifty-teams d-flex flex-column p-3">
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Ben DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/ben.png"
+                        width={268}
+                      />
+                    </div>
+                    <h5 className="mt-4">Ben Collie</h5>
+                    <label className="font-15">Pixel Artist</label>
+                  </div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <section
+              className="teams-slider slider px-0 mobile-block "
+              style={{
+                alignItems: 'center',
+                maxWidth: '100%',
+                display: isTeamSliderLoaded ? '' : 'none',
+              }}
+            >
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <Image
+                      alt="Activision logo"
+                      height={60}
+                      layout="responsive"
+                      src="/img/about/activision.svg"
+                      width={252}
+                    />
+                    <h3 className="mt-5">Nifty Andy</h3>
+                    <label className="font-20">Co-Founder, CEO</label>
+                    <label className="uppercase mt-5 pt-3">formerly</label>
+                    <div className="my-2">
+                      <Image
+                        alt="Activision logo"
+                        height={60}
+                        layout="responsive"
+                        src="/img/about/activision.svg"
+                        width={252}
+                      />
+                    </div>
+                    <label className="uppercase">3 years</label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <Image
+                      alt="Snarfy DEGEN"
+                      className="pixelated"
+                      height={293}
+                      layout="responsive"
+                      src="/img/about/team2.png"
+                      width={268}
+                    />
+                    <h3 className="mt-5">Snarfy</h3>
+                    <label className="font-20">Co-Founder, CTO</label>
+                    <label className="uppercase mt-5 pt-3">formerly</label>
+                    <div className="my-2">
+                      <Image
+                        alt="Activision logo"
+                        height={60}
+                        layout="responsive"
+                        src="/img/about/activision.svg"
+                        width={252}
+                      />
+                    </div>
+                    <label className="uppercase">8 years</label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <Image
+                      alt="Spike DEGEN"
+                      className="pixelated"
+                      height={293}
+                      layout="responsive"
+                      src="/img/about/team3.png"
+                      width={268}
+                    />
+                    <h3 className="mt-5">Nifty Spike</h3>
+                    <label className="font-20">
+                      Co-Founder, Creative Director
+                    </label>
+                    <label className="uppercase mt-5 pt-3">
+                      Former clients
+                    </label>
+                    <div className="my-2">
+                      <Image
+                        alt="Nickelodeon logo"
+                        height={37}
+                        layout="responsive"
+                        src="/img/about/nickelodeon.svg"
+                        width={252}
+                      />
+                    </div>
+                    <Image
+                      alt="Disney logo"
+                      height={132}
+                      layout="responsive"
+                      src="/img/about/disney.svg"
+                      width={252}
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Morgan DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/NiftyMorgan.png"
+                        width={268}
+                      />
+                    </div>
+                    <h3 className="mt-5">Nifty Morgan</h3>
+                    <label className="font-20">VP of Ops</label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Koa DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/bolo.png"
+                        width={268}
+                      />
+                    </div>
+                    <h3 className="mt-5">Koa</h3>
+                    <label className="font-20">DAO Director</label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Bolo DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/bolo.png"
+                        width={268}
+                      />
+                    </div>
+                    <h3 className="mt-5">Bolo Dave</h3>
+                    <label className="font-20">
+                      Program &amp; Community Manager
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Zoiby DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/zoiby.png"
+                        width={268}
+                      />
+                    </div>
+                    <h3 className="mt-5">Zoiby</h3>
+                    <label className="font-20">Senior Software Developer</label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Michael DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/NiftyMichael.png"
+                        width={268}
+                      />
+                    </div>
+                    <h3 className="mt-5">Nifty Michael</h3>
+                    <label className="font-20">Web3 Developer</label>
+                  </div>
+                </div>
+              </div>
+              <div className="slide">
+                <div className="slide-content">
+                  <div
+                    className="nifty-teams d-flex flex-column p-2"
+                    style={{ margin: 'auto' }}
+                  >
+                    <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                      <Image
+                        alt="Jeppe DEGEN"
+                        className="pixelated"
+                        height={293}
+                        layout="responsive"
+                        src="/img/about/jeppe.png"
+                        width={268}
+                      />
+                    </div>
+                    <h3 className="mt-5">Jeppe</h3>
+                    <label className="font-20">Marketing Manager</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
         </div>
-        <div className="row m-0 p-0 position-relative text-center my-3 desktop">
-          <div className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <img
-                src="/img/about/NiftyMorgan.png"
-                className="w-100 pixelated"
-                style={{ borderRadius: '10px' }}
-              />
-              <h5 className="mt-4">Nifty Morgan</h5>
-              <label className="font-15">VP of Ops</label>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <img
-                src="/img/about/koa.png"
-                className="w-100 pixelated"
-                style={{ borderRadius: '10px' }}
-              />
-              <h5 className="mt-4">Koa</h5>
-              <label className="font-15">DAO Director</label>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <img
-                src="/img/about/bolo.png"
-                className="w-100 pixelated"
-                style={{ borderRadius: '10px' }}
-              />
-              <h5 className="mt-4">Bolo Dave</h5>
-              <label className="font-15">Program &amp; Community Manager</label>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <img
-                src="/img/about/zoiby.png"
-                className="w-100 pixelated"
-                style={{ borderRadius: '10px' }}
-              />
-              <h5 className="mt-4">Zoiby</h5>
-              <label className="font-15">Senior Software Developer</label>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <img
-                src="/img/about/NiftyMichael.png"
-                className="w-100 pixelated"
-                style={{ borderRadius: '10px' }}
-              />
-              <h5 className="mt-4">Nifty Michael</h5>
-              <label className="font-15">Web3 Developer</label>
-            </div>
-          </div>
-          <div className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <img
-                src="/img/about/jeppe.png"
-                className="w-100 pixelated"
-                style={{ borderRadius: '10px' }}
-              />
-              <h5 className="mt-4">Jeppe</h5>
-              <label className="font-15">Marketing Manager</label>
-            </div>
-          </div>
-        </div>
-        <section
-          className="teams-slider slider px-0 mobile-block "
-          style={{
-            alignItems: 'center',
-            maxWidth: '100%',
-            display: isTeamSliderLoaded ? '' : 'none',
-          }}
-        >
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img src="/img/about/team1.png" className="w-100" />
-                <h3 className="mt-5">Nifty Andy</h3>
-                <label className="font-20">Co-Founder, CEO</label>
-                <label className="uppercase mt-5 pt-3">formerly</label>
-                <img src="/img/about/activision.svg" className="w-100 my-2" />
-                <label className="uppercase">3 years</label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img src="/img/about/team2.png" className="w-100" />
-                <h3 className="mt-5">Snarfy</h3>
-                <label className="font-20">Co-Founder, CTO</label>
-                <label className="uppercase mt-5 pt-3">formerly</label>
-                <img src="/img/about/activision.svg" className="w-100 my-2" />
-                <label className="uppercase">8 years</label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img src="/img/about/team3.png" className="w-100" />
-                <h3 className="mt-5">Nifty Spike</h3>
-                <label className="font-20">Co-Founder, Creative Director</label>
-                <label className="uppercase mt-5 pt-3">Former clients</label>
-                <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
-                <img src="/img/about/disney.svg" className="w-100" />
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img
-                  src="/img/about/NiftyMorgan.png"
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-                <h3 className="mt-5">Nifty Morgan</h3>
-                <label className="font-20">VP of Ops</label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img
-                  src="/img/about/koa.png"
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-                <h3 className="mt-5">Koa</h3>
-                <label className="font-20">DAO Director</label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img
-                  src="/img/about/bolo.png"
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-                <h3 className="mt-5">Bolo Dave</h3>
-                <label className="font-20">
-                  Program &amp; Community Manager
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img
-                  src="/img/about/zoiby.png"
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-                <h3 className="mt-5">Zoiby</h3>
-                <label className="font-20">Senior Software Developer</label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img
-                  src="/img/about/NiftyMichael.png"
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-                <h3 className="mt-5">Nifty Michael</h3>
-                <label className="font-20">Web3 Developer</label>
-              </div>
-            </div>
-          </div>
-          <div className="slide">
-            <div className="slide-content">
-              <div
-                className="nifty-teams d-flex flex-column p-2"
-                style={{ margin: 'auto' }}
-              >
-                <img
-                  src="/img/about/jeppe.png"
-                  className="w-100"
-                  style={{ borderRadius: '10px' }}
-                />
-                <h3 className="mt-5">Jeppe</h3>
-                <label className="font-20">Marketing Manager</label>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </Layout>
   );

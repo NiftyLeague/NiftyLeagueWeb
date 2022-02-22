@@ -495,12 +495,8 @@ a {
     right: 0px !important;
   }
 }
-.abt-grad-2 {
-  position: absolute;
-  left: auto;
-  right: auto;
-  top: 0;
-  bottom: 0;
+.about-team-grad {
+  margin-top: -50px;
 }
 
 .nifty-rentals-img .icons-placement1 img {
