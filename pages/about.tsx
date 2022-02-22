@@ -24,7 +24,7 @@ const About: NextPage = () => {
         centerMode: true,
         variableWidth: true,
         autoplay: true,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 2000,
         arrows: false,
         dots: false,
         pauseOnHover: false,
@@ -209,10 +209,7 @@ const About: NextPage = () => {
         </div>
       </div>
 
-      <div
-        className="video-details row m-0 p-0 position-relative text-center"
-        style={{ marginTop: -2 }}
-      >
+      <div className="video-details row mt-5 p-0 position-relative text-center">
         <div className="container position-relative" style={{ zIndex: 1 }}>
           <h2 className="mt-sm-5">Nifty Smashers</h2>
           <h4 className="my-sm-2 my-4">The First NFT Brawler on Ethereum</h4>
@@ -233,23 +230,22 @@ const About: NextPage = () => {
             }}
           />
         </div>
-        <div className="p-0 video-bg pixelated">
+        <div className="p-0 mt-4 video-bg pixelated">
           <Image
             src="/img/about/youtube-bg.png"
             layout="fill"
+            objectFit="cover"
             alt="Ape level background"
           />
         </div>
       </div>
+
       <div
-        className="container p-0 desktop-block"
-        style={{ maxWidth: '100%', background: '#191B1F' }}
+        className="container p-0 desktop-block mb-3"
+        style={{ maxWidth: '100%', background: '#191B1F', marginTop: -300 }}
       >
-        <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5">
-          <div
-            className="row m-0 p-0 position-relative py-5 py-sm-0"
-            style={{ marginBottom: 550 }}
-          >
+        <div className="row m-0 p-0 position-relative nifty-league-browse">
+          <div className="row m-0 p-0 position-relative py-5 py-sm-0">
             <span className="dark-gradient-shade">
               <Image
                 src="/img/dark-gradient-shade.svg"
@@ -259,7 +255,7 @@ const About: NextPage = () => {
               />
             </span>
             <section
-              className="degens-slider slider px-0 my-5"
+              className="degens-slider slider px-0"
               style={{
                 alignItems: 'center',
                 maxWidth: '99%',
@@ -555,7 +551,7 @@ const About: NextPage = () => {
       </div>
 
       <div className="container">
-        <div className="row m-0 position-relative section-margin nifty-degan">
+        <div className="row m-0 position-relative nifty-degen">
           <div className="col-sm-6 position-relative">
             <div className="pixelated">
               <Image
