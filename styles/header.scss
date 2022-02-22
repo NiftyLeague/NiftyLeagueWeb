@@ -8,7 +8,7 @@
 }
 
 @media (min-width: 576px) {
-  .eclipse-location {
+  .header .eclipse-location {
     top: 300px;
     width: 100%;
   }
@@ -30,7 +30,7 @@
   }
 }
 @media (orientation: landscape) and (max-height: 550px) {
-  .eclipse-location {
+  .header .eclipse-location {
     left: 0px;
     top: 300px;
     width: 100%;

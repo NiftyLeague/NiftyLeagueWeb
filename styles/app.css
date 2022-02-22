@@ -259,13 +259,15 @@ a {
   image-rendering: pixelated;
 }
 
-.sushi-shade-1 {
+.dark-gradient-shade {
   position: absolute;
-  top: auto;
-  bottom: 304px;
   z-index: 1;
-  width: 100%;
-  padding: 0;
+  left: 0;
+  width: 100vw;
+  height: 65%;
+}
+.about-pg .dark-gradient-shade {
+  height: 100%;
 }
 
 /*************************************** Learn **********************************************/
@@ -427,9 +429,6 @@ a {
   position: absolute;
 }
 
-.about-pg .sushi-shade-1 {
-  bottom: -5px;
-}
 .about-pg .degens-slider .slick-track .slide:nth-child(2) {
   margin-top: 100px !important;
 }
@@ -702,7 +701,7 @@ a {
 }
 
 .league-special-row {
-  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 96.39%),
+  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 102%),
     #000000;
 }
 .league-special-container {
@@ -711,7 +710,7 @@ a {
 }
 .league-special-container .eclipse-location {
   margin-left: 20%;
-  margin-top: -30px;
+  margin-top: -200px;
   max-width: 79%;
 }
 .league-special-accordion .accordion-item {
@@ -737,15 +736,18 @@ a {
 .baker-shade {
   position: absolute;
   bottom: auto;
-  width: 230px;
-  height: 390px;
   z-index: 1;
   padding: 0;
+  width: 100vw;
+  height: 390px;
 }
-.baker-shade.left {
+.baker-shade > span {
+  position: absolute !important;
+}
+.baker-shade > span:first-child {
   left: 0;
 }
-.baker-shade.right {
+.baker-shade > span:last-child {
   right: 0;
 }
 
@@ -1103,7 +1105,6 @@ a {
     height: auto;
   }
   .league-special-container .eclipse-location {
-    margin-top: -200px;
     display: none;
   }
   .nifty-character {
@@ -1140,18 +1141,8 @@ a {
     width: 16px;
     height: auto;
   }
-  .sushi-shade-1 {
-    top: 255px;
-    bottom: auto;
-  }
   .mobile-view {
     margin-top: 25px !important;
-  }
-}
-
-@media (width: 768px) {
-  .league-special-container .eclipse-location {
-    display: none;
   }
 }
 
