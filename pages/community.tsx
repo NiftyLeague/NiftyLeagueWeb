@@ -11,7 +11,7 @@ const Community: NextPage = () => {
     useState<boolean>(false);
 
   useEffect(() => {
-    if ($('.degens-slider')) {
+    if ($('.degens-slider') && !isDegenSliderLoaded) {
       $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
@@ -42,7 +42,7 @@ const Community: NextPage = () => {
         ],
       });
     }
-  }, []);
+  }, [isDegenSliderLoaded]);
 
   return (
     <Layout classes={{ root: 'com-pg' }}>
@@ -77,7 +77,15 @@ const Community: NextPage = () => {
           src="/img/community/community-bg-1.png"
           className="w-100 h-auto position-absolute bottom-0 earth-com"
         />
-        <img className="earth-grad" src="/img/community/earth-grad.svg" />
+        <span className="earth-grad">
+          <Image
+            src="/img/community/earth-grad.svg"
+            alt="Purple eclipse"
+            layout="responsive"
+            width={704}
+            height={704}
+          />
+        </span>
       </div>
 
       <div className="container com-content" style={{ maxWidth: '100%' }}>
