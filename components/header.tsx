@@ -202,13 +202,15 @@ export default function Header() {
 
   return (
     <header className="header">
-      <img
-        className="position-absolute eclipse-location"
-        src="/img/eclipses-header.svg"
-        alt="Eclipse background"
-        width={668}
-        height={666}
-      />
+      <span className="position-absolute eclipse-location">
+        <Image
+          src="/img/eclipses-header.svg"
+          alt="Eclipse background"
+          layout="responsive"
+          width={668}
+          height={666}
+        />
+      </span>
       <Notification />
       {expanded ? <Navbar /> : <MobileNav />}
     </header>
