@@ -349,7 +349,8 @@ a {
   position: absolute;
   right: 0;
   left: auto;
-  top: 500px;
+  top: 300px;
+  width: 80%;
 }
 .com-bg-main {
   position: absolute;

@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     useState<boolean>(false);
 
   useEffect(() => {
-    if ($('.degens-slider')) {
+    if ($('.degens-slider') && !isDegenSliderLoaded) {
       $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         ],
       });
     }
-    if ($('.spons-slider')) {
+    if ($('.spons-slider') && !isSponsSliderLoaded) {
       $('.spons-slider').on('init', () => {
         setIsSponsSliderLoaded(true);
       });
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
         ],
       });
     }
-  }, []);
+  }, [isDegenSliderLoaded, isSponsSliderLoaded]);
 
   return (
     <Layout classes={{ root: 'home-pg' }}>
