@@ -191,6 +191,7 @@ const About: NextPage = () => {
                 {
                   DegenData.map(degen => (
                     <DegenCardItem
+                      key={degen.name}
                       name={degen.name}
                       createdDate={degen.createdDate}
                       source={degen.source} 
