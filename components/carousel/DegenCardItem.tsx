@@ -43,13 +43,15 @@ const DegenCardItem = (
                         <label>{createdDate}</label>
                     </div>
 
-                    {
-                        mobile ? (
-                            <Image src={source} layout="fixed" width="100%" height="120%" /> 
-                        ) : (
-                            <Image src={source} layout="fixed" width="258" height="278" /> 
-                        )
-                    }
+                    <div style={{ borderRadius: "20px" }}>
+                        {
+                            mobile ? (
+                                <Image src={source} layout="fixed" width="100%" height="120%" /> 
+                            ) : (
+                                <Image src={source} layout="fixed" width="258" height="278" /> 
+                            )
+                        }
+                    </div>
                 </div>
             </div>
         </div>
