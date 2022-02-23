@@ -2,10 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
-import Carousel from "../components/carousel";
+import Carousel from '../components/carousel';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 
-import { DegenData } from "../components/carousel/constants";
+import { DegenData } from '../components/carousel/constants';
 
 const Community: NextPage = () => {
   return (
@@ -41,7 +41,15 @@ const Community: NextPage = () => {
           src="/img/community/community-bg-1.png"
           className="w-100 h-auto position-absolute bottom-0 earth-com"
         />
-        <img className="earth-grad" src="/img/community/earth-grad.svg" />
+        <span className="earth-grad">
+          <Image
+            src="/img/community/earth-grad.svg"
+            alt="Purple eclipse"
+            layout="responsive"
+            width={704}
+            height={704}
+          />
+        </span>
       </div>
 
       <div className="container com-content" style={{ maxWidth: '100%' }}>
@@ -235,36 +243,41 @@ const Community: NextPage = () => {
       </div>
 
       <div
-        className="container section-padding involved-section position-relative"
+        className="container section-padding"
         style={{ maxWidth: '100%', background: '#191b1f' }}
       >
         <div
           className="row m-0 p-0 position-relative nifty-league-browse py-sm-5"
           style={{ minHeight: 900 }}
         >
-          <img className="sushi-shade-1" src="/img/sushi-shade-1.svg" />
           <div
             className="row m-0 p-0 position-relative py-5"
             style={{ marginBottom: 550 }}
           >
+            <span className="dark-gradient-shade">
+              <Image
+                src="/img/dark-gradient-shade.svg"
+                alt="Dark gradient shade"
+                layout="fill"
+                objectFit="cover"
+              />
+            </span>
             <section
               style={{
                 alignItems: 'center',
                 maxWidth: '100%',
-                textAlign: "center",
+                textAlign: 'center',
               }}
             >
               <Carousel minItems={2}>
-                {
-                  DegenData.map(degen => (
-                    <DegenCardItem
-                      key={degen.name}
-                      name={degen.name}
-                      createdDate={degen.createdDate}
-                      source={degen.source} 
-                    />
-                  ))
-                }
+                {DegenData.map(degen => (
+                  <DegenCardItem
+                    key={degen.name}
+                    name={degen.name}
+                    createdDate={degen.createdDate}
+                    source={degen.source}
+                  />
+                ))}
               </Carousel>
             </section>
           </div>

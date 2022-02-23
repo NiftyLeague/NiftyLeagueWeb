@@ -2,13 +2,17 @@
   left: 0;
   top: 185px;
   max-width: 100vw;
+  z-index: 1;
+}
+.home-pg .header .eclipse-location {
+  display: none;
 }
 .about-pg .header .eclipse-location {
   top: 30px;
 }
 
 @media (min-width: 576px) {
-  .eclipse-location {
+  .header .eclipse-location {
     top: 300px;
     width: 100%;
   }
@@ -30,7 +34,7 @@
   }
 }
 @media (orientation: landscape) and (max-height: 550px) {
-  .eclipse-location {
+  .header .eclipse-location {
     left: 0px;
     top: 300px;
     width: 100%;
