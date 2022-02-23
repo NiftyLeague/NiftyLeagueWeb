@@ -16,7 +16,7 @@ const Home: NextPage = () => {
     useState<boolean>(false);
 
   useEffect(() => {
-    if ($('.degens-slider')) {
+    if ($('.degens-slider') && !isDegenSliderLoaded) {
       $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
@@ -47,7 +47,7 @@ const Home: NextPage = () => {
         ],
       });
     }
-    if ($('.spons-slider')) {
+    if ($('.spons-slider') && !isSponsSliderLoaded) {
       $('.spons-slider').on('init', () => {
         setIsSponsSliderLoaded(true);
       });
@@ -78,7 +78,7 @@ const Home: NextPage = () => {
         ],
       });
     }
-  }, []);
+  }, [isDegenSliderLoaded, isSponsSliderLoaded]);
 
   return (
     <Layout classes={{ root: 'home-pg' }}>
@@ -186,7 +186,7 @@ const Home: NextPage = () => {
       <div className="row m-0 p-0 position-relative sushi-gif-section min-vh-100">
         <div className="sushi-dark-shade-wrapper">
           <Image
-            src="/img/dark-shade-1.svg"
+            src="/img/sushi-dark-shade-top.svg"
             alt="Sushi level shade"
             layout="fill"
             objectFit="cover"
@@ -253,10 +253,15 @@ const Home: NextPage = () => {
 
       <div className="row m-0 position-relative league-special-row">
         <div className="container league-special-container my-5 section-margin">
-          <img
-            className="position-absolute eclipse-location"
-            src="/img/eclipses-header.svg"
-          />
+          <span className="position-absolute eclipse-location w-75">
+            <Image
+              src="/img/eclipses-header.svg"
+              alt="Eclipse background"
+              layout="responsive"
+              width={668}
+              height={666}
+            />
+          </span>
           <div className="row m-0 p-0 position-relative">
             {desktop && (
               <div className="col-sm-6 position-relative">
@@ -330,14 +335,20 @@ const Home: NextPage = () => {
           className="row m-0 p-0 position relative py-sm-5 d-flex align-items-center justify-content-center text-center"
           style={{ background: '#191B1F' }}
         >
-          <img
-            className="baker-shade left"
-            src="/img/bakers-arr-left-shade.svg"
-          />
-          <img
-            className="baker-shade right"
-            src="/img/bakers-arr-right-shade.svg"
-          />
+          <span className="baker-shade">
+            <Image
+              src="/img/bakers-arr-left-shade.svg"
+              alt="Sponsers shade left"
+              width={230}
+              height={390}
+            />
+            <Image
+              src="/img/bakers-arr-right-shade.svg"
+              alt="Sponsers shade right"
+              width={230}
+              height={390}
+            />
+          </span>
           <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
           <section
             className="spons-slider slider px-0 "
@@ -386,18 +397,25 @@ const Home: NextPage = () => {
       </div>
 
       <div
-        className="container section-padding"
+        className="container"
         style={{ maxWidth: '100%', background: '#191B1F' }}
       >
         <div
           className="row m-0 p-0 position-relative nifty-league-browse py-sm-5"
           style={{ minHeight: 900 }}
         >
-          <img className="sushi-shade-1" src="/img/sushi-shade-1.svg" />
           <div
             className="row m-0 p-0 position-relative py-5"
             style={{ marginBottom: 550 }}
           >
+            <span className="dark-gradient-shade">
+              <Image
+                src="/img/dark-gradient-shade.svg"
+                alt="Dark gradient shade"
+                layout="fill"
+                objectFit="cover"
+              />
+            </span>
             <section
               className="degens-slider slider px-0 my-5"
               style={{
@@ -739,14 +757,30 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row m-0 p-0 position-relative stay-informed-section">
-        <img
-          src="/img/footer-img1.png"
-          className="p-0 w-100 h-auto mobile pixelated"
-        />
-        <img
-          src="/img/footer-img.png"
-          className="p-0 w-100 h-auto desktop pixelated"
-        />
+        <div className="p-0 w-100">
+          {desktop ? (
+            <Image
+              alt="DGEN Network background desktop"
+              className="pixelated"
+              height={813}
+              layout="responsive"
+              objectFit="cover"
+              src="/img/footer-img.png"
+              width={1440}
+            />
+          ) : (
+            <Image
+              alt="DGEN Network background mobile"
+              className="pixelated"
+              height={541}
+              layout="responsive"
+              objectFit="cover"
+              src="/img/footer-img1.png"
+              width={375}
+            />
+          )}
+        </div>
+
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
           <h2 className="mt-4">Our Community</h2>
           <p className="my-3 text-m-center">
