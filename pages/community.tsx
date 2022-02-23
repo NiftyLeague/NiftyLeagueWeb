@@ -11,7 +11,7 @@ const Community: NextPage = () => {
     useState<boolean>(false);
 
   useEffect(() => {
-    if ($('.degens-slider')) {
+    if ($('.degens-slider') && !isDegenSliderLoaded) {
       $('.degens-slider').on('init', () => {
         setIsDegenSliderLoaded(true);
       });
@@ -42,7 +42,7 @@ const Community: NextPage = () => {
         ],
       });
     }
-  }, []);
+  }, [isDegenSliderLoaded]);
 
   return (
     <Layout classes={{ root: 'com-pg' }}>
@@ -77,7 +77,15 @@ const Community: NextPage = () => {
           src="/img/community/community-bg-1.png"
           className="w-100 h-auto position-absolute bottom-0 earth-com"
         />
-        <img className="earth-grad" src="/img/community/earth-grad.svg" />
+        <span className="earth-grad">
+          <Image
+            src="/img/community/earth-grad.svg"
+            alt="Purple eclipse"
+            layout="responsive"
+            width={704}
+            height={704}
+          />
+        </span>
       </div>
 
       <div className="container com-content" style={{ maxWidth: '100%' }}>
@@ -271,18 +279,25 @@ const Community: NextPage = () => {
       </div>
 
       <div
-        className="container section-padding involved-section position-relative"
+        className="container section-padding"
         style={{ maxWidth: '100%', background: '#191b1f' }}
       >
         <div
           className="row m-0 p-0 position-relative nifty-league-browse py-sm-5"
           style={{ minHeight: 900 }}
         >
-          <img className="sushi-shade-1" src="/img/sushi-shade-1.svg" />
           <div
             className="row m-0 p-0 position-relative py-5"
             style={{ marginBottom: 550 }}
           >
+            <span className="dark-gradient-shade">
+              <Image
+                src="/img/dark-gradient-shade.svg"
+                alt="Dark gradient shade"
+                layout="fill"
+                objectFit="cover"
+              />
+            </span>
             <section
               className="degens-slider slider px-0 my-5"
               style={{
