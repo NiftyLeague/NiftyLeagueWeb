@@ -1,25 +1,8 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 5
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+import Carousel from "../components/carousel";
 
 const About: NextPage = () => {
   return (
@@ -199,23 +182,7 @@ const About: NextPage = () => {
                 margin: 'auto',
               }}
             >
-              <Carousel
-                swipeable={false}
-                draggable={false}
-                showDots={false}
-                responsive={responsive}
-                ssr={true}
-                infinite={true}
-                partialVisbile={true}
-                autoPlay={true}
-                autoPlaySpeed={2000}
-                keyBoardControl={true}
-                transitionDuration={590}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-              >
+              <Carousel maxItems={6}>
                 <div className="slide">
                   <div className="slide-content">
                     <div className="browse-single">
@@ -739,22 +706,7 @@ const About: NextPage = () => {
             maxWidth: '100%',
           }}
         >
-          <Carousel
-            swipeable={true}
-            draggable={true}
-            showDots={true}
-            responsive={responsive}
-            ssr={true}
-            infinite={true}
-            autoPlay={true}
-            autoPlaySpeed={4000}
-            keyBoardControl={true}
-            transitionDuration={590}
-            containerClass="carousel-container"
-            removeArrowOnDeviceType={["desktop", "tablet"]}
-            dotListClass="custom-dot-list-style"
-            itemClass="carousel-item-padding-40-px"
-          >
+          <Carousel isMobileViewOnly>
             <div className="slide">
               <div className="slide-content">
                 <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
