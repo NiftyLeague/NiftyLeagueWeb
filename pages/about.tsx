@@ -447,8 +447,9 @@ const About: NextPage = () => {
                 name={team.name}
                 title={team.title}
                 source={team.source}
-                children={team.children ?? null}
-              />
+              >
+                {team.children ?? null}
+              </TeamCardItem>
             ))}
           </Carousel>
         </section>
