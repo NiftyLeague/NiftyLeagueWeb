@@ -6,10 +6,12 @@ const NiftyCarousel = (
     children,
     isMobileViewOnly = false,
     maxItems = 4,
+    minItems = 1,
   } : { 
     children: React.ReactNode; 
     isMobileViewOnly?: boolean;
     maxItems?: number;
+    minItems?: number;
   }
 ): JSX.Element => (
   <>
@@ -28,7 +30,7 @@ const NiftyCarousel = (
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: 1
+          items: minItems
         }
       }}
       ssr={true}

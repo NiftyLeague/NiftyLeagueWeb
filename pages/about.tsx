@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 import Carousel from "../components/carousel";
 import DegenCardItem from '../components/carousel/DegenCardItem';
+import TeamCardItem from '../components/carousel/TeamCardItem';
 
-import { DegenData } from "../components/carousel/constants";
+import { DegenData, TeamData } from "../components/carousel/constants";
 
 const About: NextPage = () => {
   return (
@@ -435,99 +436,19 @@ const About: NextPage = () => {
           style={{
             alignItems: 'center',
             maxWidth: '100%',
+            textAlign: "center"
           }}
         >
           <Carousel isMobileViewOnly>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/team1.png" className="w-100" />
-                  <h3 className="mt-5">Nifty Andy</h3>
-                  <label className="font-20">Co-Founder, CEO</label>
-                  <label className="uppercase mt-5 pt-3">formerly</label>
-                  <img src="/img/about/activision.svg" className="w-100 my-2" />
-                  <label className="uppercase">3 years</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/team2.png" className="w-100" />
-                  <h3 className="mt-5">Snarfy</h3>
-                  <label className="font-20">Co-Founder, CTO</label>
-                  <label className="uppercase mt-5 pt-3">formerly</label>
-                  <img src="/img/about/activision.svg" className="w-100 my-2" />
-                  <label className="uppercase">8 years</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/team3.png" className="w-100" />
-                  <h3 className="mt-5">Nifty Spike</h3>
-                  <label className="font-20">Co-Founder, Creative Director</label>
-                  <label className="uppercase mt-5 pt-3">Former clients</label>
-                  <img src="/img/about/nickelodeon.svg" className="w-100 my-2" />
-                  <img src="/img/about/disney.svg" className="w-100" />
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/NiftyMorgan.png" className="w-100" style={{ borderRadius: "10px" }} />
-                  <h3 className="mt-5">Nifty Morgan</h3>
-                  <label className="font-20">VP of Ops</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/koa.png" className="w-100" style={{ borderRadius: "10px" }} />
-                  <h3 className="mt-5">Koa</h3>
-                  <label className="font-20">DAO Director</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/bolo.png" className="w-100" style={{ borderRadius: "10px" }} />
-                  <h3 className="mt-5">Bolo Dave</h3>
-                  <label className="font-20">Program &amp; Community Manager</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/zoiby.png" className="w-100" style={{ borderRadius: "10px" }} />
-                  <h3 className="mt-5">Zoiby</h3>
-                  <label className="font-20">Senior Software Developer</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/NiftyMichael.png" className="w-100" style={{ borderRadius: "10px" }} />
-                  <h3 className="mt-5">Nifty Michael</h3>
-                  <label className="font-20">Web3 Developer</label>
-                </div>
-              </div>
-            </div>
-            <div className="slide">
-              <div className="slide-content">
-                <div className="nifty-teams d-flex flex-column p-2" style={{ margin: "auto" }}>
-                  <img src="/img/about/jeppe.png" className="w-100" style={{ borderRadius: "10px" }} />
-                  <h3 className="mt-5">Jeppe</h3>
-                  <label className="font-20">Marketing Manager</label>
-                </div>
-              </div>
-            </div>
+            {TeamData.map(team => (
+              <TeamCardItem 
+                key={team.name}
+                name={team.name}
+                title={team.title}
+                source={team.source}
+                children={team.children ?? null}
+              />
+            ))}
           </Carousel>
         </section>
       </div>

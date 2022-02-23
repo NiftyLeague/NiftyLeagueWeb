@@ -304,15 +304,16 @@ const Home: NextPage = () => {
               style={{
                 alignItems: 'center',
                 maxWidth: '99%',
-                margin: 'auto',
+                margin: '0 auto',
                 paddingBottom: '150px',
                 textAlign: "center"
               }}
             >
-              <Carousel>
+              <Carousel minItems={2}>
                 {
                   DegenData.map(degen => (
                     <DegenCardItem
+                      key={degen.name}
                       name={degen.name}
                       createdDate={degen.createdDate}
                       source={degen.source} 
