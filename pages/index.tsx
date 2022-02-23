@@ -1,29 +1,12 @@
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
-
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 import Layout from '../components/layout';
-
-const responsive = {
-  desktop: {
-    breakpoint: { max: 3000, min: 1024 },
-    items: 4
-  },
-  tablet: {
-    breakpoint: { max: 1024, min: 464 },
-    items: 2
-  },
-  mobile: {
-    breakpoint: { max: 464, min: 0 },
-    items: 1
-  }
-};
+import Carousel from "../components/carousel";
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -293,22 +276,7 @@ const Home: NextPage = () => {
               margin: "0 auto",
             }}
           >
-            <Carousel
-              swipeable={false}
-              draggable={false}
-              showDots={false}
-              responsive={responsive}
-              ssr={true}
-              infinite={true}
-              autoPlay={true}
-              autoPlaySpeed={2000}
-              keyBoardControl={true}
-              transitionDuration={590}
-              containerClass="carousel-container"
-              removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-              dotListClass="custom-dot-list-style"
-              itemClass="carousel-item-padding-40-px"
-            >
+            <Carousel maxItems={4}>
               <div className="slide">
                 <div className="slide-content">
                   <div className="spons-single">
@@ -370,23 +338,7 @@ const Home: NextPage = () => {
                 paddingBottom: '150px'
               }}
             >
-              <Carousel
-                swipeable={false}
-                draggable={false}
-                showDots={false}
-                responsive={responsive}
-                ssr={true}
-                infinite={true}
-                autoPlay={true}
-                partialVisbile={true}
-                autoPlaySpeed={2000}
-                keyBoardControl={true}
-                transitionDuration={590}
-                containerClass="carousel-container"
-                removeArrowOnDeviceType={["desktop", "tablet", "mobile"]}
-                dotListClass="custom-dot-list-style"
-                itemClass="carousel-item-padding-40-px"
-              >
+              <Carousel maxItems={6}>
                 <div className="slide">
                   <div className="slide-content">
                     <div className="browse-single">
