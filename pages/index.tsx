@@ -19,10 +19,7 @@ const Home: NextPage = () => {
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League | NFT Gaming</title>
-        <meta
-          name="description"
-          content="NFT gaming universe brought to you by the Nifty League"
-        />
+        <meta name="description" content="NFT gaming universe brought to you by the Nifty League" />
       </Head>
 
       <div className="row m-0 p-0 position-relative pt-5 home-intro">
@@ -36,24 +33,12 @@ const Home: NextPage = () => {
             Nifty League is bringing competitive gaming to Web3
             <br /> while offering fun and engaging games for all play styles.
           </p>
-          <a
-            href="https://opensea.io/collection/niftydegen"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="btn theme-btn-aqua my-3">
-              Browse collection
-            </button>
+          <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+            <button className="btn theme-btn-aqua my-3">Browse collection</button>
           </a>
           <div className="d-flex align-items-center mt-4 mb-5">
             <a className="pe-3" href="#">
-              <svg
-                width="28"
-                height="24"
-                viewBox="0 0 28 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="28" height="24" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M2.00985 13.7044L2.10316 13.5577L7.72983 4.75549C7.81207 4.62663 8.00539 4.63995 8.0676 4.77993C9.00761 6.8866 9.81872 9.59661 9.43873 11.1377C9.27651 11.8088 8.83207 12.7177 8.33204 13.5577C8.26763 13.68 8.19651 13.8 8.12094 13.9155C8.08538 13.9688 8.02538 13.9999 7.96092 13.9999H2.17428C2.01872 13.9999 1.92761 13.8311 2.00985 13.7044Z"
                   fill="white"
@@ -65,13 +50,7 @@ const Home: NextPage = () => {
               </svg>
             </a>
             <a className="pe-3" href="#">
-              <svg
-                width="25"
-                height="24"
-                viewBox="0 0 25 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clipPath="url(#clip0_604_62)">
                   <path
                     d="M7.63736 21.7597C16.694 21.7597 21.6476 14.2473 21.6476 7.74044C21.6476 7.52732 21.6476 7.31517 21.6332 7.10396C22.5969 6.40692 23.4287 5.54385 24.0898 4.55516C23.1912 4.95357 22.2379 5.21472 21.2617 5.32988C22.2896 4.71457 23.059 3.74667 23.4265 2.60636C22.4599 3.17997 21.4025 3.58419 20.2998 3.80156C19.5573 3.01214 18.5755 2.48941 17.596 2.31425C16.4366 2.13909 15.3393 2.32128 14.3838 2.83262C13.4284 3.34396 12.6681 4.15594 12.2206 5.14291C11.7731 6.12989 11.6634 7.23683 11.9084 8.29244C9.95973 8.19424 8.03559 7.68548 6.28729 6.79917C4.53899 5.91286 2.9966 4.66882 1.76024 3.1478C1.13056 4.2318 0.937708 5.51533 1.22094 6.73623C1.59416 7.95742 2.24218 9.02476 3.28472 9.72092C2.59107 9.69796 1.73448 9.48656 1.04984 9.1046V9.167C1.05915 10.3039 1.44369 11.4056 2.16371 12.2854C2.88373 13.1651 3.8859 13.7688 5.00024 13.9939C4.27532 14.1916 3.51471 14.2205 2.77688 14.0784C3.09165 15.0567 3.70426 15.9122 4.52908 16.5253C5.35389 17.1384 6.34966 17.4784 7.3772 17.4979C6.35627 18.3004 5.18715 18.8937 3.93671 19.2439C2.68627 19.5941 1.37905 19.6943 0.0898361 19.5388C2.34167 20.9839 4.96176 21.7594 7.63736 21.7468"
@@ -80,24 +59,13 @@ const Home: NextPage = () => {
                 </g>
                 <defs>
                   <clipPath id="clip0_604_62">
-                    <rect
-                      width="24"
-                      height="24"
-                      fill="white"
-                      transform="translate(0.0898361)"
-                    />
+                    <rect width="24" height="24" fill="white" transform="translate(0.0898361)" />
                   </clipPath>
                 </defs>
               </svg>
             </a>
             <a className="pe-3" href="#">
-              <svg
-                width="32"
-                height="24"
-                viewBox="0 0 32 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M26.7449 1.98947C24.738 1.06863 22.5859 0.390197 20.3358 0.00162999C20.2948 -0.00586923 20.2539 0.0128717 20.2328 0.0593545C19.956 0.54262 19.6495 1.18482 19.4348 1.68959C17.0146 1.32727 14.6069 1.32727 12.2364 1.68959C12.0216 1.1736 11.7039 0.54262 11.4259 0.0593545C11.4048 0.0141223 11.3639 -0.00461862 11.3229 0.00162999C9.074 0.388955 6.92193 1.06739 4.91382 1.98947C4.89643 1.99696 4.88153 2.00947 4.87164 2.0257C0.789623 8.12415 -0.328613 14.0727 0.219956 19.9475C0.222438 19.9762 0.238573 20.0037 0.260913 20.0212C2.95411 21.999 5.56294 23.1998 8.12332 23.9956C8.16429 24.0081 8.20771 23.9931 8.23379 23.9594C8.83944 23.1323 9.37934 22.2602 9.84224 21.3431C9.86956 21.2894 9.84348 21.2257 9.78765 21.2044C8.93129 20.8796 8.11587 20.4835 7.33148 20.0337C7.26944 19.9975 7.26448 19.9087 7.32155 19.8663C7.48661 19.7426 7.65172 19.6139 7.80933 19.4839C7.83785 19.4602 7.87758 19.4552 7.91111 19.4702C13.0642 21.8229 18.6429 21.8229 23.7352 19.4702C23.7687 19.454 23.8084 19.459 23.8382 19.4827C23.9959 19.6126 24.1609 19.7426 24.3272 19.8663C24.3843 19.9087 24.3806 19.9975 24.3185 20.0337C23.5341 20.4922 22.7187 20.8796 21.8611 21.2032C21.8053 21.2244 21.7805 21.2894 21.8078 21.3431C22.2806 22.2589 22.8205 23.131 23.415 23.9582C23.4398 23.9931 23.4845 24.0081 23.5255 23.9956C26.0983 23.1998 28.7071 21.999 31.4003 20.0212C31.4239 20.0037 31.4388 19.9775 31.4412 19.9488C32.0978 13.1568 30.3416 7.25706 26.7858 2.02694C26.7771 2.00947 26.7623 1.99696 26.7449 1.98947ZM10.6118 16.3704C9.06034 16.3704 7.78201 14.946 7.78201 13.1968C7.78201 11.4476 9.03555 10.0233 10.6118 10.0233C12.2003 10.0233 13.4663 11.4601 13.4415 13.1968C13.4415 14.946 12.1879 16.3704 10.6118 16.3704ZM21.0743 16.3704C19.5229 16.3704 18.2446 14.946 18.2446 13.1968C18.2446 11.4476 19.498 10.0233 21.0743 10.0233C22.6629 10.0233 23.9288 11.4601 23.904 13.1968C23.904 14.946 22.6629 16.3704 21.0743 16.3704Z"
                   fill="white"
@@ -109,23 +77,14 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row m-0 p-0 position-relative sliding-nfts">
-        <div
-          className={`sliding-background-wrapper-${
-            desktop ? 'desktop' : 'mobile'
-          }`}
-        >
+        <div className={`sliding-background-wrapper-${desktop ? 'desktop' : 'mobile'}`}>
           <div className="sliding-background" />
         </div>
       </div>
 
       <div className="row m-0 p-0 position-relative sushi-gif-section min-vh-100">
         <div className="sushi-dark-shade-wrapper">
-          <Image
-            src="/img/sushi-dark-shade-top.svg"
-            alt="Sushi level shade"
-            layout="fill"
-            objectFit="cover"
-          />
+          <Image src="/img/sushi-dark-shade-top.svg" alt="Sushi level shade" layout="fill" objectFit="cover" />
         </div>
         <Image
           className="sushi-gif"
@@ -134,15 +93,10 @@ const Home: NextPage = () => {
           objectFit="cover"
           alt="Sushi level background"
         />
-        <div
-          className="container d-flex flex-column text-center position-relative my-5"
-          style={{ zIndex: 2 }}
-        >
+        <div className="container d-flex flex-column text-center position-relative my-5" style={{ zIndex: 2 }}>
           <h2 className="font-48 my-5">
-            Our 9.9k DEGEN NFTs act as players in our games such as Nifty
-            Smashers. Our ecosystem is centered around nostalgia - where
-            builders, players, and owners spend time connecting, gaming, and
-            earning in Web3.
+            Our 9.9k DEGEN NFTs act as players in our games such as Nifty Smashers. Our ecosystem is centered around
+            nostalgia - where builders, players, and owners spend time connecting, gaming, and earning in Web3.
           </h2>
           <div className="position-relative flex-grow-1">
             <div className="browse-single browse-andy desktop">
@@ -211,15 +165,8 @@ const Home: NextPage = () => {
             )}
             <div className="col-sm-6">
               <h2 className="my-3 text-m-left">Nifty League Ecosystem</h2>
-              <MDBAccordion
-                flush
-                className="league-special-accordion"
-                initialActive="flush-collapse1"
-              >
-                <MDBAccordionItem
-                  collapseId="flush-collapse1"
-                  headerTitle="DEGEN Rentals"
-                >
+              <MDBAccordion flush className="league-special-accordion" initialActive="flush-collapse1">
+                <MDBAccordionItem collapseId="flush-collapse1" headerTitle="DEGEN Rentals">
                   {!desktop && (
                     <Image
                       className="py-2"
@@ -230,31 +177,22 @@ const Home: NextPage = () => {
                       height={467}
                     />
                   )}
-                  Players can rent a DEGEN from owners directly via smart
-                  contract technology, opening up game play at an attractive
-                  rate for players globally.{' '}
+                  Players can rent a DEGEN from owners directly via smart contract technology, opening up game play at
+                  an attractive rate for players globally.{' '}
                   <Link href="/about" passHref>
                     <button className="btn theme-btn-white">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
-                <MDBAccordionItem
-                  collapseId="flush-collapse2"
-                  headerTitle="Play-and-earn"
-                >
-                  Players earn NFTL by landing hits and winning matches in our
-                  game Nifty Smashers. Join in on weekly community tournaments
-                  sponsored by some amazing rewards!{' '}
+                <MDBAccordionItem collapseId="flush-collapse2" headerTitle="Play-and-earn">
+                  Players earn NFTL by landing hits and winning matches in our game Nifty Smashers. Join in on weekly
+                  community tournaments sponsored by some amazing rewards!{' '}
                   <Link href="/about" passHref>
                     <button className="btn theme-btn-white">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
-                <MDBAccordionItem
-                  collapseId="flush-collapse3"
-                  headerTitle="Games"
-                >
-                  Check our roadmap for some more exciting games coming in 2022!
-                  Get playing immediately with our first title, Nifty Smashers,
-                  based off of the popular game Super Smash Bros.
+                <MDBAccordionItem collapseId="flush-collapse3" headerTitle="Games">
+                  Check our roadmap for some more exciting games coming in 2022! Get playing immediately with our first
+                  title, Nifty Smashers, based off of the popular game Super Smash Bros.
                   <Link href="/about" passHref>
                     <button className="btn theme-btn-white">Learn More</button>
                   </Link>
@@ -271,18 +209,8 @@ const Home: NextPage = () => {
           style={{ background: '#191B1F' }}
         >
           <span className="baker-shade">
-            <Image
-              src="/img/bakers-arr-left-shade.svg"
-              alt="Sponsers shade left"
-              width={230}
-              height={390}
-            />
-            <Image
-              src="/img/bakers-arr-right-shade.svg"
-              alt="Sponsers shade right"
-              width={230}
-              height={390}
-            />
+            <Image src="/img/bakers-arr-left-shade.svg" alt="Sponsers shade left" width={230} height={390} />
+            <Image src="/img/bakers-arr-right-shade.svg" alt="Sponsers shade right" width={230} height={390} />
           </span>
           <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
           <section
@@ -300,25 +228,11 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div
-        className="container"
-        style={{ maxWidth: '100%', background: '#191B1F' }}
-      >
-        <div
-          className="row m-0 p-0 position-relative nifty-league-browse py-sm-5"
-          style={{ minHeight: 900 }}
-        >
-          <div
-            className="row m-0 p-0 position-relative py-5"
-            style={{ marginBottom: 559 }}
-          >
+      <div className="container" style={{ maxWidth: '100%', background: '#191B1F' }}>
+        <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
+          <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 559 }}>
             <span className="dark-gradient-shade">
-              <Image
-                src="/img/dark-gradient-shade.svg"
-                alt="Dark gradient shade"
-                layout="fill"
-                objectFit="cover"
-              />
+              <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
             </span>
             <section
               style={{
@@ -354,25 +268,13 @@ const Home: NextPage = () => {
 
             <h1>Join Nifty League</h1>
             <p className="my-sm-5 my-2 text-m-center">
-              The minting process for Nifty League allowed minters the ability
-              to design their own DEGEN using our Mint-O-Matic, which our
-              community absolutely loved! You can purchase a DEGEN NFT on
-              OpenSea.
+              The minting process for Nifty League allowed minters the ability to design their own DEGEN using our
+              Mint-O-Matic, which our community absolutely loved! You can purchase a DEGEN NFT on OpenSea.
             </p>
-            <a
-              href="https://opensea.io/collection/niftydegen"
-              target="_blank"
-              rel="noreferrer"
-            >
+            <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
               <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
                 <span className="me-2">Browse OpenSea collection</span>
-                <svg
-                  width="27"
-                  height="24"
-                  viewBox="0 0 27 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1.58666 13.7045L1.67997 13.5578L7.30665 4.7556C7.38888 4.62673 7.5822 4.64006 7.64441 4.78004C8.58442 6.8867 9.39553 9.59672 9.01554 11.1378C8.85332 11.809 8.40888 12.7178 7.90885 13.5578C7.84444 13.6801 7.77332 13.8001 7.69775 13.9156C7.66219 13.969 7.60219 14.0001 7.53774 14.0001H1.75109C1.59553 14.0001 1.59443 13.8312 1.58666 13.7045Z"
                     fill="white"
@@ -415,19 +317,11 @@ const Home: NextPage = () => {
 
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
           <h2 className="mt-4">Our Community</h2>
-          <p className="my-3 text-m-center">
-            Meet our community and stay up-to-date with our roadmap.
-          </p>
+          <p className="my-3 text-m-center">Meet our community and stay up-to-date with our roadmap.</p>
           <button className="btn theme-btn-aqua w-auto bg-black my-3 discord-btn">
             <span className="me-2">Join Our Discord Server</span>
 
-            <svg
-              width="33"
-              height="24"
-              viewBox="0 0 33 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+            <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M27.4116 1.98947C25.4047 1.06863 23.2526 0.390197 21.0025 0.00162999C20.9615 -0.00586923 20.9206 0.0128717 20.8995 0.0593545C20.6227 0.54262 20.3161 1.18482 20.1015 1.68959C17.6813 1.32727 15.2736 1.32727 12.9031 1.68959C12.6883 1.1736 12.3706 0.54262 12.0926 0.0593545C12.0715 0.0141223 12.0306 -0.00461862 11.9896 0.00162999C9.74069 0.388955 7.58863 1.06739 5.58051 1.98947C5.56313 1.99696 5.54823 2.00947 5.53834 2.0257C1.45632 8.12415 0.338082 14.0727 0.886651 19.9475C0.889133 19.9762 0.905267 20.0037 0.927607 20.0212C3.62081 21.999 6.22963 23.1998 8.79001 23.9956C8.83099 24.0081 8.8744 23.9931 8.90048 23.9594C9.59614 23.1323 10.046 22.2602 10.5989 21.3431C10.5363 21.2894 10.5102 21.2257 10.4543 21.2044C9.59798 20.8796 8.78256 20.4835 7.99818 20.0337C7.93614 19.9975 7.93117 19.9087 7.98825 19.8663C8.15331 19.7426 8.31842 19.6139 8.47603 19.4839C8.59454 19.4602 8.54428 19.4552 8.57781 19.4702C13.7308 21.8229 19.3096 21.8229 24.4019 19.4702C24.4354 19.454 24.4751 19.459 24.5949 19.4827C24.6625 19.6126 24.8276 19.7426 24.9939 19.8663C25.051 19.9087 25.0473 19.9975 24.9852 20.0337C24.2008 20.4922 23.3854 20.8796 22.5278 21.2032C22.472 21.2244 22.4472 21.2894 22.4745 21.3431C22.9473 22.2589 23.4872 23.131 24.0817 23.9582C24.1065 23.9931 24.1512 24.0081 24.1922 23.9956C26.7649 23.1998 29.3738 21.999 32.067 20.0212C32.0905 20.0037 32.1054 19.9775 32.1079 19.9488C32.7645 13.1568 31.0083 7.25706 27.4525 2.02694C27.4438 2.00947 27.429 1.99696 27.4116 1.98947ZM11.2785 16.3704C9.72704 16.3704 8.44871 14.946 8.44871 13.1968C8.44871 11.4476 9.70225 10.0233 11.2785 10.0233C12.867 10.0233 14.133 11.4601 14.1082 13.1968C14.1082 14.946 12.8546 16.3704 11.2785 16.3704ZM21.741 16.3704C20.1896 16.3704 18.9113 14.946 18.9113 13.1968C18.9113 11.4476 20.1647 10.0233 21.741 10.0233C23.3296 10.0233 24.5955 11.4601 24.5707 13.1968C24.5707 14.946 23.3296 16.3704 21.741 16.3704Z"
                 fill="white"

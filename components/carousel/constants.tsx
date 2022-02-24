@@ -105,13 +105,7 @@ export const TeamData = [
       <>
         <label className="uppercase mt-5 pt-3">formerly</label>
         <div className="my-2">
-          <Image
-            alt="Activision logo"
-            height={60}
-            layout="responsive"
-            src="/img/about/activision.svg"
-            width={252}
-          />
+          <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
         </div>
         <label className="uppercase">3 years</label>
       </>
@@ -125,13 +119,7 @@ export const TeamData = [
       <>
         <label className="uppercase mt-5 pt-3">formerly</label>
         <div className="my-2">
-          <Image
-            alt="Activision logo"
-            height={60}
-            layout="responsive"
-            src="/img/about/activision.svg"
-            width={252}
-          />
+          <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
         </div>
         <label className="uppercase">8 years</label>
       </>
@@ -145,21 +133,9 @@ export const TeamData = [
       <>
         <label className="uppercase mt-5 pt-3">Former clients</label>
         <div className="my-2">
-          <Image
-            alt="Nickelodeon logo"
-            height={37}
-            layout="responsive"
-            src="/img/about/nickelodeon.svg"
-            width={252}
-          />
+          <Image alt="Nickelodeon logo" height={37} layout="responsive" src="/img/about/nickelodeon.svg" width={252} />
         </div>
-        <Image
-          alt="Disney logo"
-          height={132}
-          layout="responsive"
-          src="/img/about/disney.svg"
-          width={252}
-        />
+        <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
       </>
     ),
   },

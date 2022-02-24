@@ -1,8 +1,4 @@
-import {
-  Post,
-  PostFormatToPostConnection,
-  PostFormatToPostConnectionEdge,
-} from '../types/generated/graphql';
+import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '../types/generated/graphql';
 
 const API_URL = process.env.WORDPRESS_API_URL as string;
 
@@ -31,10 +27,7 @@ async function fetchAPI(query: string, { variables } = { variables: {} }) {
   return json.data;
 }
 
-export async function getPreviewPost(
-  id: string | string[],
-  idType = 'DATABASE_ID'
-): Promise<Post> {
+export async function getPreviewPost(id: string | string[], idType = 'DATABASE_ID'): Promise<Post> {
   const data = await fetchAPI(
     `
     query PreviewPost($id: ID!, $idType: PostIdType!) {
@@ -46,7 +39,7 @@ export async function getPreviewPost(
     }`,
     {
       variables: { id, idType },
-    }
+    },
   );
   return data.post;
 }
@@ -66,9 +59,7 @@ export async function getAllPostsWithSlug(): Promise<PostFormatToPostConnection>
   return data?.posts;
 }
 
-export async function getAllPostsForHome(
-  preview: boolean
-): Promise<PostFormatToPostConnection> {
+export async function getAllPostsForHome(preview: boolean): Promise<PostFormatToPostConnection> {
   const data = await fetchAPI(
     `
     query AllPosts {
@@ -104,7 +95,7 @@ export async function getAllPostsForHome(
         onlyEnabled: !preview,
         preview,
       },
-    }
+    },
   );
 
   return data?.posts;
@@ -113,7 +104,7 @@ export async function getAllPostsForHome(
 export async function getPostAndMorePosts(
   slug: string | string[],
   preview: boolean,
-  previewData?: { post: Post }
+  previewData?: { post: Post },
 ): Promise<{ post: Post; posts: Post[] }> {
   const postPreview = preview && previewData?.post;
   // The slug may be the id of an unpublished post
@@ -121,9 +112,7 @@ export async function getPostAndMorePosts(
   let isDraft = false;
   let isRevision = false;
   if (postPreview) {
-    const isSamePost = isId
-      ? Number(slug) === Number(postPreview.id)
-      : slug === postPreview.slug;
+    const isSamePost = isId ? Number(slug) === Number(postPreview.id) : slug === postPreview.slug;
     isDraft = isSamePost && postPreview?.status === 'draft';
     isRevision = isSamePost && postPreview?.status === 'publish';
   }
@@ -207,7 +196,7 @@ export async function getPostAndMorePosts(
         id: isDraft && postPreview ? postPreview.id : slug,
         idType: isDraft ? 'DATABASE_ID' : 'SLUG',
       },
-    }
+    },
   );
 
   // Draft posts may not have an slug
@@ -221,9 +210,7 @@ export async function getPostAndMorePosts(
   }
 
   // Filter out the main post
-  data.posts.edges = data.posts.edges.filter(
-    ({ node }: PostFormatToPostConnectionEdge) => node?.slug !== slug
-  );
+  data.posts.edges = data.posts.edges.filter(({ node }: PostFormatToPostConnectionEdge) => node?.slug !== slug);
   // If there are still 3 posts, remove the last one
   if (data.posts.edges.length > 2) data.posts.edges.pop();
 
