@@ -20,7 +20,7 @@ const TeamDesktop = () => {
               className="pixelated"
               height={293}
               layout="responsive"
-              src="/img/about/team1.png"
+              src="/img/degens/team/NiftyAndy.png"
               width={268}
             />
             <h3 className="mt-5">Nifty Andy</h3>
@@ -45,7 +45,7 @@ const TeamDesktop = () => {
               className="pixelated"
               height={293}
               layout="responsive"
-              src="/img/about/team2.png"
+              src="/img/degens/team/Snarfy.png"
               width={268}
             />
             <h3 className="mt-5">Snarfy</h3>
@@ -70,7 +70,7 @@ const TeamDesktop = () => {
               className="pixelated"
               height={293}
               layout="responsive"
-              src="/img/about/team3.png"
+              src="/img/degens/team/NiftySpike.png"
               width={268}
             />
             <h3 className="mt-5">Nifty Spike</h3>
@@ -98,7 +98,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/NiftyMorgan.png"
+                src="/img/degens/team/NiftyMorgan.png"
                 width={268}
               />
             </div>
@@ -114,7 +114,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/koa.png"
+                src="/img/degens/team/koa.png"
                 width={268}
               />
             </div>
@@ -130,7 +130,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/bolo.png"
+                src="/img/degens/team/bolo.png"
                 width={268}
               />
             </div>
@@ -146,7 +146,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/zoiby.png"
+                src="/img/degens/team/zoiby.png"
                 width={268}
               />
             </div>
@@ -162,7 +162,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/NiftyMichael.png"
+                src="/img/degens/team/NiftyMichael.png"
                 width={268}
               />
             </div>
@@ -178,7 +178,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/jeppe.png"
+                src="/img/degens/team/jeppe.png"
                 width={268}
               />
             </div>
@@ -194,7 +194,7 @@ const TeamDesktop = () => {
                 className="pixelated"
                 height={293}
                 layout="responsive"
-                src="/img/about/ben.png"
+                src="/img/degens/team/ben.png"
                 width={268}
               />
             </div>
