@@ -313,8 +313,12 @@ a {
   border-radius: 8px;
   background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
-  min-width: 898px;
-  min-height: 174px;
+  width: 100%;
+  min-width: 100%;
+  min-height: 125px;
+}
+.community-data-text {
+  max-width: 80%;
 }
 
 .com-grad-1 {
