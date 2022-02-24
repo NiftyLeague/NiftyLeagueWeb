@@ -37,7 +37,6 @@ const NiftyCarousel = ({
       autoPlaySpeed={isMobileViewOnly ? 4000 : 2000}
       keyBoardControl={true}
       transitionDuration={590}
-      partialVisbile={true}
       containerClass="carousel-container"
       removeArrowOnDeviceType={isMobileViewOnly ? ['desktop', 'tablet'] : ['desktop', 'tablet', 'mobile']}
       dotListClass="custom-dot-list-style"
