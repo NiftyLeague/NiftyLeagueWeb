@@ -5,10 +5,7 @@ type Data = {
   name: string;
 };
 
-export default async function exit(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+export default async function exit(req: NextApiRequest, res: NextApiResponse<Data>) {
   // Exit the current user from "Preview Mode". This function accepts no args.
   res.clearPreviewData();
 
