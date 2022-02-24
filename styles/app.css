@@ -190,6 +190,7 @@ a {
 
 .spons-single {
   padding: 25px 40px;
+  text-align: center;
 }
 
 .degens-slider .slick-arrow.slick-next {
@@ -1096,6 +1097,7 @@ a {
   }
   .spons-single {
     padding: 0;
+    text-align: center;
   }
   .spons-single img {
     max-width: 85px;

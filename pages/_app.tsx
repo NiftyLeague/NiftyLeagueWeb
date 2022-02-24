@@ -8,7 +8,6 @@ import '../styles/header.scss';
 
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import Script from 'next/script';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -45,21 +44,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Component {...pageProps} />
-      <Script
-        type="text/javascript"
-        src="/js/mdb.min.js"
-        strategy="beforeInteractive"
-      />
-      <Script
-        type="text/javascript"
-        src="/js/jquery.min.js"
-        strategy="beforeInteractive"
-      />
-      <Script
-        type="text/javascript"
-        src="/js/slick.js"
-        strategy="beforeInteractive"
-      />
     </>
   );
 }
