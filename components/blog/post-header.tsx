@@ -3,12 +3,7 @@ import Date from './date';
 import CoverImage from './cover-image';
 import PostTitle from './post-title';
 import Categories from './categories';
-import {
-  Maybe,
-  User,
-  MediaItem,
-  PostToCategoryConnection,
-} from '../../types/generated/graphql';
+import { Maybe, User, MediaItem, PostToCategoryConnection } from '../../types/generated/graphql';
 
 export default function PostHeader({
   author,

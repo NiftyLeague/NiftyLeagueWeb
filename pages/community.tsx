@@ -5,31 +5,23 @@ import Layout from '../components/layout';
 import Carousel from '../components/carousel';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 
-import { DegenData } from '../components/carousel/constants';
+import { CommunityDegenData } from '../components/carousel/constants';
 
 const Community: NextPage = () => {
   return (
     <Layout classes={{ root: 'com-pg' }}>
       <Head>
         <title>Nifty League | Community</title>
-        <meta
-          name="description"
-          content="Community comes first at Nifty League"
-        />
+        <meta name="description" content="Community comes first at Nifty League" />
       </Head>
 
       <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
-        <div
-          className="container pt-5 mt-5 px-sm-5"
-          style={{ maxWidth: '90%' }}
-        >
+        <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
             <div className="col-sm-6 com-intro-text">
               <h4 className="mt-5 text-m-center">Nifty League</h4>
               <h1 className="text-m-center">Community</h1>
-              <p className="my-3 text-m-center">
-                Meet our global community of gamers
-              </p>
+              <p className="my-3 text-m-center">Meet our global community of gamers</p>
             </div>
             <div className="col-sm-6 position-relative text-center com-banner">
               <img src="/img/community/moon.png" />
@@ -37,10 +29,7 @@ const Community: NextPage = () => {
             </div>
           </div>
         </div>
-        <img
-          src="/img/community/community-bg-1.png"
-          className="w-100 h-auto position-absolute bottom-0 earth-com"
-        />
+        <img src="/img/community/community-bg-1.png" className="w-100 h-auto position-absolute bottom-0 earth-com" />
         <span className="earth-grad">
           <Image
             src="/img/community/earth-grad.svg"
@@ -57,8 +46,8 @@ const Community: NextPage = () => {
           <div className="">
             <h2 className="">Join the conversation</h2>
             <p className="text-m-center">
-              Nifty League&apos;s community is unlike any other. Get your
-              questions answers and connect with fellow DEGENs!
+              Nifty League&apos;s community is unlike any other. Get your questions answers and connect with fellow
+              DEGENs!
             </p>
           </div>
         </div>
@@ -66,175 +55,91 @@ const Community: NextPage = () => {
       <img className="com-grad-1" src="/img/community/com-grad-1.svg" />
       <div className="container my-5">
         <div className="container d-flex flex-column align-items-center my-sm-0 mt-sm-5">
-          <a
-            href="https://discord.gg/niftyleague"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Discord</h4>
-                  <p className="color-white">
-                    Ask questions, meet the community, and follow team updates
-                  </p>
+                  <p className="color-white">Ask questions, meet the community, and follow team updates</p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
-                  <img
-                    src="/img/game.svg"
-                    className="desktop"
-                    style={{ width: 63, height: 48 }}
-                  />
-                  <img
-                    src="/img/game.svg"
-                    className="mobile"
-                    style={{ width: 40, height: 40 }}
-                  />
+                  <img src="/img/game.svg" className="desktop" style={{ width: 63, height: 48 }} />
+                  <img src="/img/game.svg" className="mobile" style={{ width: 40, height: 40 }} />
                 </div>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://opensea.io/collection/niftydegen"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">OpenSea</h4>
-                  <p className="color-white">
-                    Browse our collection of DEGEN NFTs on OpenSea
-                  </p>
+                  <p className="color-white">Browse our collection of DEGEN NFTs on OpenSea</p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
-                  <img
-                    src="/img/boat.svg"
-                    className="desktop"
-                    style={{ width: 63, height: 48 }}
-                  />
-                  <img
-                    src="/img/boat.svg"
-                    className="mobile"
-                    style={{ width: 40, height: 40 }}
-                  />
+                  <img src="/img/boat.svg" className="desktop" style={{ width: 63, height: 48 }} />
+                  <img src="/img/boat.svg" className="mobile" style={{ width: 40, height: 40 }} />
                 </div>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://twitter.com/NiftyLeague"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Twitter</h4>
-                  <p className="color-white">
-                    Follow us for partnership and community updates on Twitter
-                  </p>
+                  <p className="color-white">Follow us for partnership and community updates on Twitter</p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
-                  <img
-                    src="/img/twitter.svg"
-                    className="desktop"
-                    style={{ width: 63, height: 48 }}
-                  />
-                  <img
-                    src="/img/twitter.svg"
-                    className="mobile"
-                    style={{ width: 40, height: 40 }}
-                  />
+                  <img src="/img/twitter.svg" className="desktop" style={{ width: 63, height: 48 }} />
+                  <img src="/img/twitter.svg" className="mobile" style={{ width: 40, height: 40 }} />
                 </div>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://www.twitch.tv/niftyleagueofficial"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Twitch</h4>
-                  <p className="color-white">
-                    Watch and engage with streamers playing Nifty Smashers
-                  </p>
+                  <p className="color-white">Watch and engage with streamers playing Nifty Smashers</p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
-                  <img
-                    src="/img/twitch.svg"
-                    className="desktop"
-                    style={{ width: 63, height: 48 }}
-                  />
-                  <img
-                    src="/img/twitch.svg"
-                    className="mobile"
-                    style={{ width: 40, height: 40 }}
-                  />
+                  <img src="/img/twitch.svg" className="desktop" style={{ width: 63, height: 48 }} />
+                  <img src="/img/twitch.svg" className="mobile" style={{ width: 40, height: 40 }} />
                 </div>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://www.youtube.com/c/NiftyLeague/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.youtube.com/c/NiftyLeague/" target="_blank" rel="noreferrer">
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Youtube</h4>
-                  <p className="color-white">
-                    Watch gameplay and catch up on past community events
-                  </p>
+                  <p className="color-white">Watch gameplay and catch up on past community events</p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
-                  <img
-                    src="/img/youtube.svg"
-                    className="desktop"
-                    style={{ width: 63, height: 48 }}
-                  />
-                  <img
-                    src="/img/youtube.svg"
-                    className="mobile"
-                    style={{ width: 40, height: 40 }}
-                  />
+                  <img src="/img/youtube.svg" className="desktop" style={{ width: 63, height: 48 }} />
+                  <img src="/img/youtube.svg" className="mobile" style={{ width: 40, height: 40 }} />
                 </div>
               </div>
             </div>
           </a>
 
-          <a
-            href="https://www.reddit.com/r/niftyleague/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://www.reddit.com/r/niftyleague/" target="_blank" rel="noreferrer">
             <div className="community-data p-sm-5 p-4 mb-2">
               <div className="d-flex">
                 <div className="me-auto">
                   <h4 className="color-purple">Reddit</h4>
-                  <p className="color-white">
-                    Hold discussions and ask questions on Reddit
-                  </p>
+                  <p className="color-white">Hold discussions and ask questions on Reddit</p>
                 </div>
                 <div className="ms-auto d-flex align-items-center">
-                  <img
-                    src="/img/reddit.svg"
-                    className="desktop"
-                    style={{ width: 63, height: 48 }}
-                  />
-                  <img
-                    src="/img/reddit.svg"
-                    className="mobile"
-                    style={{ width: 40, height: 40 }}
-                  />
+                  <img src="/img/reddit.svg" className="desktop" style={{ width: 63, height: 48 }} />
+                  <img src="/img/reddit.svg" className="mobile" style={{ width: 40, height: 40 }} />
                 </div>
               </div>
             </div>
@@ -242,25 +147,11 @@ const Community: NextPage = () => {
         </div>
       </div>
 
-      <div
-        className="container section-padding"
-        style={{ maxWidth: '100%', background: '#191b1f' }}
-      >
-        <div
-          className="row m-0 p-0 position-relative nifty-league-browse py-sm-5"
-          style={{ minHeight: 900 }}
-        >
-          <div
-            className="row m-0 p-0 position-relative py-5"
-            style={{ marginBottom: 550 }}
-          >
+      <div className="container section-padding" style={{ maxWidth: '100%', background: '#191b1f' }}>
+        <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
+          <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 550 }}>
             <span className="dark-gradient-shade">
-              <Image
-                src="/img/dark-gradient-shade.svg"
-                alt="Dark gradient shade"
-                layout="fill"
-                objectFit="cover"
-              />
+              <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
             </span>
             <section
               style={{
@@ -270,7 +161,7 @@ const Community: NextPage = () => {
               }}
             >
               <Carousel minItems={2}>
-                {DegenData.map(degen => (
+                {CommunityDegenData.map(degen => (
                   <DegenCardItem
                     key={degen.name}
                     name={degen.name}
@@ -296,18 +187,11 @@ const Community: NextPage = () => {
               the Community
             </h1>
             <p className="my-sm-5 my-2 text-m-center">
-              Grab your Nifty League DEGEN and join us in the Lair in Discord!
-              We&apos;re ready to meet you.
+              Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
             </p>
             <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
               <span className="me-2">View on OpenSea</span>
-              <svg
-                width="27"
-                height="24"
-                viewBox="0 0 27 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
+              <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M1.58666 13.7045L1.67997 13.5578L7.30665 4.7556C7.38888 4.62673 7.5822 4.64006 7.64441 4.78004C8.58442 6.8867 9.39553 9.50672 9.01554 11.1378C8.85332 11.809 8.40888 12.7178 7.90885 13.5578C7.84444 13.6801 7.77332 13.8001 7.69775 13.9156C7.66219 13.969 7.60219 14.0001 7.53774 14.0001H1.75109C1.59553 14.0001 1.50443 13.8312 1.58666 13.7045Z"
                   fill="white"
