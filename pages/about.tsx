@@ -7,7 +7,7 @@ import Carousel from '../components/carousel';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 import TeamCardItem from '../components/carousel/TeamCardItem';
 
-import { DegenData, TeamData } from '../components/carousel/constants';
+import { AboutDegenData, TeamData } from '../components/carousel/constants';
 
 const TeamDesktop = () => {
   return (
@@ -320,7 +320,7 @@ const About: NextPage = () => {
               }}
             >
               <Carousel>
-                {DegenData.map(degen => (
+                {AboutDegenData.map(degen => (
                   <DegenCardItem
                     key={degen.name}
                     name={degen.name}
