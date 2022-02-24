@@ -256,15 +256,19 @@ const Home: NextPage = () => {
             </section>
           </div>
           <div
-            className="mobile-view text-center d-flex flex-column align-items-center position-absolute"
+            className="degen-scroller-content text-center d-flex flex-column align-items-center position-absolute"
             style={{ marginTop: -100, zIndex: 3, padding: 0 }}
           >
-            <img
-              className="nifty-character pixelated"
-              src="/img/1004.png"
-              alt="Mario Degen"
-              style={{ marginBottom: -230 }}
-            />
+            <div className="nifty-character nifty-mario">
+              <Image
+                className="pixelated"
+                src="/img/1004.png"
+                width={540}
+                height={743}
+                layout="responsive"
+                alt="Mario degen"
+              />
+            </div>
 
             <h1>Join Nifty League</h1>
             <p className="my-sm-5 my-2 text-m-center">
