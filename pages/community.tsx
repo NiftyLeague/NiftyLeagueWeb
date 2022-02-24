@@ -18,18 +18,22 @@ const Community: NextPage = () => {
       <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
         <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
-            <div className="col-sm-6 com-intro-text">
-              <h4 className="mt-5 text-m-center">Nifty League</h4>
-              <h1 className="text-m-center">Community</h1>
-              <p className="my-3 text-m-center">Meet our global community of gamers</p>
+            <div className="col-md-6 com-intro-text">
+              <h4 className="mt-5 text-center">Nifty League</h4>
+              <h1 className="text-center">Community</h1>
+              <p className="my-3 text-center">Meet our global community of gamers</p>
             </div>
-            <div className="col-sm-6 position-relative text-center com-banner">
-              <img src="/img/community/moon.png" />
-              <img className="moon-grad" src="/img/community/moon-grad.svg" />
+            <div className="col-sm-8 col-md-6 position-relative text-center com-banner">
+              <Image src="/img/community/moon.png" alt="Satoshi moon" width={445} height={437} layout="responsive" />
+              <div className="moon-grad">
+                <Image src="/img/community/moon-grad.svg" alt="gradient background" width={685} height={685} />
+              </div>
             </div>
           </div>
         </div>
-        <img src="/img/community/community-bg-1.png" className="w-100 h-auto position-absolute bottom-0 earth-com" />
+        <div className="w-100 h-auto position-absolute bottom-0 earth-com">
+          <Image src="/img/community/community-bg-1.png" layout="responsive" width={1684} height={525} alt="Earth" />
+        </div>
         <span className="earth-grad">
           <Image
             src="/img/community/earth-grad.svg"
@@ -52,10 +56,12 @@ const Community: NextPage = () => {
           </div>
         </div>
       </div>
-      <img className="com-grad-1" src="/img/community/com-grad-1.svg" />
+      <div className="com-grad-1">
+        <Image src="/img/community/com-grad-1.svg" width={856} height={674} layout="responsive" alt="yellow gradient" />
+      </div>
       <SocialCards />
 
-      <div className="container section-padding" style={{ maxWidth: '100%', background: '#191b1f' }}>
+      <div className="container" style={{ maxWidth: '100%', background: '#191b1f' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
           <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 550 }}>
             <span className="dark-gradient-shade">
@@ -80,21 +86,23 @@ const Community: NextPage = () => {
               </Carousel>
             </section>
           </div>
-          <div
-            className="mobile-view text-center d-flex flex-column align-items-center position-absolute"
-            style={{ marginTop: -100, zIndex: 3 }}
-          >
-            <img
-              className="nifty-character pixelated"
-              src="/img/community/character.png"
-              style={{ marginBottom: -250 }}
-            />
-            <h1 className="">
+          <div className="degen-scroller-content text-center d-flex flex-column align-items-center position-absolute">
+            <div className="nifty-character nifty-ape">
+              <Image
+                className="pixelated"
+                src="/img/community/character.png"
+                width={856}
+                height={842}
+                layout="responsive"
+                alt="ape degen header"
+              />
+            </div>
+            <h1 className="nifty-character-title">
               Get Involved with
               <br />
               the Community
             </h1>
-            <p className="my-sm-5 my-2 text-m-center">
+            <p className="my-sm-4 my-2 text-center">
               Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
             </p>
             <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
