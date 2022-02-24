@@ -10,7 +10,7 @@ import Carousel from '../components/carousel';
 import SponsorCarouselItem from '../components/carousel/SponsorItem';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 
-import { SponsorImageURLs, DegenData } from '../components/carousel/constants';
+import { SponsorImageURLs, HomeDegenData } from '../components/carousel/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -244,7 +244,7 @@ const Home: NextPage = () => {
               }}
             >
               <Carousel minItems={2}>
-                {DegenData.map(degen => (
+                {HomeDegenData.map(degen => (
                   <DegenCardItem
                     key={degen.name}
                     name={degen.name}

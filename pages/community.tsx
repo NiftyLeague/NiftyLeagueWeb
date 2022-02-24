@@ -5,7 +5,7 @@ import Layout from '../components/layout';
 import Carousel from '../components/carousel';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 
-import { DegenData } from '../components/carousel/constants';
+import { CommunityDegenData } from '../components/carousel/constants';
 
 const Community: NextPage = () => {
   return (
@@ -161,7 +161,7 @@ const Community: NextPage = () => {
               }}
             >
               <Carousel minItems={2}>
-                {DegenData.map(degen => (
+                {CommunityDegenData.map(degen => (
                   <DegenCardItem
                     key={degen.name}
                     name={degen.name}
