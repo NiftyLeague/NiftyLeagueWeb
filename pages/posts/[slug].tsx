@@ -15,11 +15,7 @@ import PostHeader from '../../components/blog/post-header';
 import PostTitle from '../../components/blog/post-title';
 import SectionSeparator from '../../components/blog/section-separator';
 import Tags from '../../components/blog/tags';
-import {
-  Post,
-  PostFormatToPostConnection,
-  PostFormatToPostConnectionEdge,
-} from '../../types/generated/graphql';
+import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '../../types/generated/graphql';
 
 export default function PostView({
   post,
@@ -50,10 +46,7 @@ export default function PostView({
                 <title>
                   {post.title} | Next.js Blog Example with {CMS_NAME}
                 </title>
-                <meta
-                  property="og:image"
-                  content={post.featuredImage?.node?.sourceUrl as string}
-                />
+                <meta property="og:image" content={post.featuredImage?.node?.sourceUrl as string} />
               </Head>
               <PostHeader
                 title={post.title}
@@ -63,19 +56,11 @@ export default function PostView({
                 categories={post.categories}
               />
               <PostBody content={post.content} />
-              <footer>
-                {post?.tags?.edges && post.tags.edges.length > 0 && (
-                  <Tags tags={post.tags} />
-                )}
-              </footer>
+              <footer>{post?.tags?.edges && post.tags.edges.length > 0 && <Tags tags={post.tags} />}</footer>
             </article>
 
             <SectionSeparator />
-            {morePosts && morePosts.length > 0 && (
-              <MoreStories
-                posts={morePosts as PostFormatToPostConnectionEdge[]}
-              />
-            )}
+            {morePosts && morePosts.length > 0 && <MoreStories posts={morePosts as PostFormatToPostConnectionEdge[]} />}
           </>
         )}
       </Container>
@@ -87,17 +72,9 @@ interface IParams extends ParsedUrlQuery {
   slug: string;
 }
 
-export const getStaticProps: GetStaticProps = async ({
-  params,
-  preview = false,
-  previewData,
-}) => {
+export const getStaticProps: GetStaticProps = async ({ params, preview = false, previewData }) => {
   const { slug } = params as IParams;
-  const data = await getPostAndMorePosts(
-    slug,
-    preview,
-    previewData as { post: Post }
-  );
+  const data = await getPostAndMorePosts(slug, preview, previewData as { post: Post });
 
   return {
     props: {
@@ -110,10 +87,7 @@ export const getStaticProps: GetStaticProps = async ({
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const allPosts = await getAllPostsWithSlug();
-  const paths =
-    allPosts.edges?.map(value =>
-      value?.node ? `/posts/${value.node.slug}` : ''
-    ) || [];
+  const paths = allPosts.edges?.map(value => (value?.node ? `/posts/${value.node.slug}` : '')) || [];
 
   return {
     paths,

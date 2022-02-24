@@ -6,19 +6,12 @@ type Data = {
   message: string;
 };
 
-export default async function preview(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
+export default async function preview(req: NextApiRequest, res: NextApiResponse<Data>) {
   const { secret, id, slug } = req.query;
 
   // Check the secret and next parameters
   // This secret should only be known by this API route
-  if (
-    !process.env.WORDPRESS_PREVIEW_SECRET ||
-    secret !== process.env.WORDPRESS_PREVIEW_SECRET ||
-    (!id && !slug)
-  ) {
+  if (!process.env.WORDPRESS_PREVIEW_SECRET || secret !== process.env.WORDPRESS_PREVIEW_SECRET || (!id && !slug)) {
     return res.status(401).json({ message: 'Invalid token' });
   }
 
