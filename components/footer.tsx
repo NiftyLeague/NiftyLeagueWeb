@@ -75,7 +75,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           </div>
           <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/tos">
+              <Link href="/terms-of-service">
                 <a className="mt-2">Terms&nbsp;of Service</a>
               </Link>
               <Link href="/disclaimer">
