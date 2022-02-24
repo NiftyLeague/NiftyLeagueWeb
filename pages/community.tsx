@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
 import DegenCardItem from '../components/carousel/DegenCardItem';
-
+import SocialCards from '../components/SocialCards';
 import { CommunityDegenData } from '../components/carousel/constants';
 
 const Community: NextPage = () => {
@@ -18,18 +18,22 @@ const Community: NextPage = () => {
       <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
         <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
-            <div className="col-sm-6 com-intro-text">
-              <h4 className="mt-5 text-m-center">Nifty League</h4>
-              <h1 className="text-m-center">Community</h1>
-              <p className="my-3 text-m-center">Meet our global community of gamers</p>
+            <div className="col-md-6 com-intro-text">
+              <h4 className="mt-5 text-center">Nifty League</h4>
+              <h1 className="text-center">Community</h1>
+              <p className="my-3 text-center">Meet our global community of gamers</p>
             </div>
-            <div className="col-sm-6 position-relative text-center com-banner">
-              <img src="/img/community/moon.png" />
-              <img className="moon-grad" src="/img/community/moon-grad.svg" />
+            <div className="col-sm-8 col-md-6 position-relative text-center com-banner">
+              <Image src="/img/community/moon.png" alt="Satoshi moon" width={445} height={437} layout="responsive" />
+              <div className="moon-grad">
+                <Image src="/img/community/moon-grad.svg" alt="gradient background" width={685} height={685} />
+              </div>
             </div>
           </div>
         </div>
-        <img src="/img/community/community-bg-1.png" className="w-100 h-auto position-absolute bottom-0 earth-com" />
+        <div className="w-100 h-auto position-absolute bottom-0 earth-com">
+          <Image src="/img/community/community-bg-1.png" layout="responsive" width={1684} height={525} alt="Earth" />
+        </div>
         <span className="earth-grad">
           <Image
             src="/img/community/earth-grad.svg"
@@ -52,102 +56,12 @@ const Community: NextPage = () => {
           </div>
         </div>
       </div>
-      <img className="com-grad-1" src="/img/community/com-grad-1.svg" />
-      <div className="container my-5">
-        <div className="container d-flex flex-column align-items-center my-sm-0 mt-sm-5">
-          <a href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-            <div className="community-data p-sm-5 p-4 mb-2">
-              <div className="d-flex">
-                <div className="me-auto">
-                  <h4 className="color-purple">Discord</h4>
-                  <p className="color-white">Ask questions, meet the community, and follow team updates</p>
-                </div>
-                <div className="ms-auto d-flex align-items-center">
-                  <img src="/img/game.svg" className="desktop" style={{ width: 63, height: 48 }} />
-                  <img src="/img/game.svg" className="mobile" style={{ width: 40, height: 40 }} />
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-            <div className="community-data p-sm-5 p-4 mb-2">
-              <div className="d-flex">
-                <div className="me-auto">
-                  <h4 className="color-purple">OpenSea</h4>
-                  <p className="color-white">Browse our collection of DEGEN NFTs on OpenSea</p>
-                </div>
-                <div className="ms-auto d-flex align-items-center">
-                  <img src="/img/boat.svg" className="desktop" style={{ width: 63, height: 48 }} />
-                  <img src="/img/boat.svg" className="mobile" style={{ width: 40, height: 40 }} />
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
-            <div className="community-data p-sm-5 p-4 mb-2">
-              <div className="d-flex">
-                <div className="me-auto">
-                  <h4 className="color-purple">Twitter</h4>
-                  <p className="color-white">Follow us for partnership and community updates on Twitter</p>
-                </div>
-                <div className="ms-auto d-flex align-items-center">
-                  <img src="/img/twitter.svg" className="desktop" style={{ width: 63, height: 48 }} />
-                  <img src="/img/twitter.svg" className="mobile" style={{ width: 40, height: 40 }} />
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
-            <div className="community-data p-sm-5 p-4 mb-2">
-              <div className="d-flex">
-                <div className="me-auto">
-                  <h4 className="color-purple">Twitch</h4>
-                  <p className="color-white">Watch and engage with streamers playing Nifty Smashers</p>
-                </div>
-                <div className="ms-auto d-flex align-items-center">
-                  <img src="/img/twitch.svg" className="desktop" style={{ width: 63, height: 48 }} />
-                  <img src="/img/twitch.svg" className="mobile" style={{ width: 40, height: 40 }} />
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://www.youtube.com/c/NiftyLeague/" target="_blank" rel="noreferrer">
-            <div className="community-data p-sm-5 p-4 mb-2">
-              <div className="d-flex">
-                <div className="me-auto">
-                  <h4 className="color-purple">Youtube</h4>
-                  <p className="color-white">Watch gameplay and catch up on past community events</p>
-                </div>
-                <div className="ms-auto d-flex align-items-center">
-                  <img src="/img/youtube.svg" className="desktop" style={{ width: 63, height: 48 }} />
-                  <img src="/img/youtube.svg" className="mobile" style={{ width: 40, height: 40 }} />
-                </div>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://www.reddit.com/r/niftyleague/" target="_blank" rel="noreferrer">
-            <div className="community-data p-sm-5 p-4 mb-2">
-              <div className="d-flex">
-                <div className="me-auto">
-                  <h4 className="color-purple">Reddit</h4>
-                  <p className="color-white">Hold discussions and ask questions on Reddit</p>
-                </div>
-                <div className="ms-auto d-flex align-items-center">
-                  <img src="/img/reddit.svg" className="desktop" style={{ width: 63, height: 48 }} />
-                  <img src="/img/reddit.svg" className="mobile" style={{ width: 40, height: 40 }} />
-                </div>
-              </div>
-            </div>
-          </a>
-        </div>
+      <div className="com-grad-1">
+        <Image src="/img/community/com-grad-1.svg" width={856} height={674} layout="responsive" alt="yellow gradient" />
       </div>
+      <SocialCards />
 
-      <div className="container section-padding" style={{ maxWidth: '100%', background: '#191b1f' }}>
+      <div className="container" style={{ maxWidth: '100%', background: '#191b1f' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
           <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 550 }}>
             <span className="dark-gradient-shade">
@@ -172,21 +86,23 @@ const Community: NextPage = () => {
               </Carousel>
             </section>
           </div>
-          <div
-            className="mobile-view text-center d-flex flex-column align-items-center position-absolute"
-            style={{ marginTop: -100, zIndex: 3 }}
-          >
-            <img
-              className="nifty-character pixelated"
-              src="/img/community/character.png"
-              style={{ marginBottom: -250 }}
-            />
-            <h1 className="">
+          <div className="degen-scroller-content text-center d-flex flex-column align-items-center position-absolute">
+            <div className="nifty-character nifty-ape">
+              <Image
+                className="pixelated"
+                src="/img/community/character.png"
+                width={856}
+                height={842}
+                layout="responsive"
+                alt="ape degen header"
+              />
+            </div>
+            <h1 className="nifty-character-title">
               Get Involved with
               <br />
               the Community
             </h1>
-            <p className="my-sm-5 my-2 text-m-center">
+            <p className="my-sm-4 my-2 text-center">
               Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
             </p>
             <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
