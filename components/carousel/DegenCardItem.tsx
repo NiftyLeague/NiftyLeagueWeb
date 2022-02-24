@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import useMediaQuery from '@mui/material/useMediaQuery';
 
 const DegenCardItem = ({
   name,
@@ -10,8 +9,6 @@ const DegenCardItem = ({
   source: string;
   createdDate: string;
 }): JSX.Element => {
-  const mobile = useMediaQuery('(max-width:500px)');
-
   return (
     <div className="slide">
       <div className="slide-content">
@@ -38,11 +35,7 @@ const DegenCardItem = ({
           </div>
 
           <div style={{ borderRadius: '20px' }}>
-            {mobile ? (
-              <Image src={source} layout="fixed" width="100%" height="120%" />
-            ) : (
-              <Image src={source} layout="fixed" width="258" height="278" />
-            )}
+            <Image src={source} layout="responsive" width="258" height="278" alt="degen image" />
           </div>
         </div>
       </div>

@@ -261,10 +261,85 @@ a {
   z-index: 1;
   left: 0;
   width: 100vw;
-  height: 65%;
+  height: 85%;
 }
 .about-pg .dark-gradient-shade {
   height: 100%;
+}
+
+.degen-scroller-content {
+  margin-top: -80px;
+  z-index: 3;
+}
+.nifty-character {
+  min-height: 250px;
+  height: auto;
+  margin-bottom: -250px;
+  z-index: -1;
+}
+.nifty-mario {
+  width: 90%;
+}
+.nifty-ape {
+  width: 100%;
+}
+.nifty-character-title {
+  font-size: 78px;
+}
+@media (min-width: 576px) {
+  .nifty-mario {
+    width: 80%;
+  }
+  .nifty-ape {
+    width: 95%;
+  }
+}
+@media (max-width: 768px) {
+  .degen-scroller-content h1 {
+    font-size: 55px;
+    margin-top: 100px;
+    line-height: 1;
+  }
+  .com-pg .degen-scroller-content h1 br {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-height: 550px) {
+  .degen-scroller-content h1 {
+    font-size: 55px;
+    margin-top: 110px;
+    line-height: 1;
+  }
+}
+@media (min-width: 768px) {
+  .degen-scroller-content {
+    margin-top: -100px;
+  }
+  .nifty-mario {
+    width: 550px;
+  }
+  .nifty-ape {
+    width: 85%;
+  }
+  .dark-gradient-shade {
+    height: 65%;
+  }
+}
+@media (min-width: 992px) {
+  .nifty-ape {
+    width: 700px;
+  }
+  .nifty-character-title {
+    font-size: 96px;
+  }
+}
+@media (min-width: 1200px) {
+  .nifty-mario {
+    width: 600px;
+  }
+  .nifty-ape {
+    width: 800px;
+  }
 }
 
 /*************************************** Learn **********************************************/
@@ -313,8 +388,12 @@ a {
   border-radius: 8px;
   background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
-  min-width: 898px;
-  min-height: 174px;
+  width: 100%;
+  min-width: 100%;
+  min-height: 125px;
+}
+.community-data-text {
+  max-width: 80%;
 }
 
 .com-grad-1 {
@@ -851,11 +930,6 @@ a {
     align-items: center;
     justify-content: center;
   }
-  .mobile-view h1 {
-    font-size: 55px;
-    margin-top: 110px;
-    line-height: 1;
-  }
   .sushi-gif-section {
     min-height: 679px;
   }
@@ -914,7 +988,7 @@ a {
     font-size: 13px;
   }
   .nifty-league-browse {
-    min-height: inherit !important;
+    min-height: 825px !important;
   }
   .section-padding {
     padding-top: 0px !important;
@@ -1049,12 +1123,12 @@ a {
   .com-content {
     margin-top: 0;
   }
-  .com-pg .mobile-view h1 br {
-    display: none;
-  }
 }
 
 @media (max-width: 615px) {
+  .nifty-league-browse {
+    min-height: 660px !important;
+  }
   .text-m-center {
     text-align: center;
   }
@@ -1085,13 +1159,6 @@ a {
   .league-special-container .eclipse-location {
     display: none;
   }
-  .nifty-character {
-    /* max-width: 260px; */
-    max-width: 95%;
-    min-height: 250px;
-    height: auto;
-    margin-bottom: -250px;
-  }
   .theme-btn-aqua {
     height: 52px;
   }
@@ -1118,9 +1185,6 @@ a {
   .browse-single svg {
     width: 16px;
     height: auto;
-  }
-  .mobile-view {
-    margin-top: 25px !important;
   }
 }
 
@@ -1167,11 +1231,6 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-  .mobile-view h1 {
-    font-size: 55px;
-    margin-top: 110px;
-    line-height: 1;
   }
   .sushi-gif-section {
     min-height: 679px;
