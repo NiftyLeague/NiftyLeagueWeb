@@ -1,19 +1,17 @@
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
-const NiftyCarousel = (
-  {
-    children,
-    isMobileViewOnly = false,
-    maxItems = 4,
-    minItems = 1,
-  } : { 
-    children: React.ReactNode; 
-    isMobileViewOnly?: boolean;
-    maxItems?: number;
-    minItems?: number;
-  }
-): JSX.Element => (
+const NiftyCarousel = ({
+  children,
+  isMobileViewOnly = false,
+  maxItems = 4,
+  minItems = 1,
+}: {
+  children: React.ReactNode;
+  isMobileViewOnly?: boolean;
+  maxItems?: number;
+  minItems?: number;
+}): JSX.Element => (
   <>
     <Carousel
       swipeable={isMobileViewOnly}
@@ -22,16 +20,16 @@ const NiftyCarousel = (
       responsive={{
         desktop: {
           breakpoint: { max: 3000, min: 1024 },
-          items: maxItems
+          items: maxItems,
         },
         tablet: {
           breakpoint: { max: 1024, min: 464 },
-          items: 2
+          items: 2,
         },
         mobile: {
           breakpoint: { max: 464, min: 0 },
-          items: minItems
-        }
+          items: minItems,
+        },
       }}
       ssr={true}
       infinite={true}
@@ -41,7 +39,7 @@ const NiftyCarousel = (
       transitionDuration={590}
       partialVisbile={true}
       containerClass="carousel-container"
-      removeArrowOnDeviceType={isMobileViewOnly ? ["desktop", "tablet"] :  ["desktop", "tablet", "mobile"]}
+      removeArrowOnDeviceType={isMobileViewOnly ? ['desktop', 'tablet'] : ['desktop', 'tablet', 'mobile']}
       dotListClass="custom-dot-list-style"
       itemClass="carousel-item-padding-40-px"
     >

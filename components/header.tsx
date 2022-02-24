@@ -14,12 +14,8 @@ function Notification() {
           {' '}
           The Desktop App{' '}
         </a>
-        <label className="color-light-grey">
-          is now live for Windows users!{' '}
-        </label>{' '}
-        <label className="color-silver">
-          (MacOS is right around the corner - stay tuned)
-        </label>
+        <label className="color-light-grey">is now live for Windows users! </label>{' '}
+        <label className="color-silver">(MacOS is right around the corner - stay tuned)</label>
       </p>
     </div>
   );
@@ -29,24 +25,12 @@ function Navbar() {
   const { pathname } = useRouter();
 
   return (
-    <nav
-      id="nav"
-      className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop"
-    >
+    <nav id="nav" className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop">
       <div className="container-fluid" style={{ borderStyle: 'none' }}>
-        <div
-          className="navbar-nav collapse navbar-collapse px-4 mt-4"
-          id="navbarSupportedContent"
-        >
+        <div className="navbar-nav collapse navbar-collapse px-4 mt-4" id="navbarSupportedContent">
           <Link href="/">
             <a className="navbar-brand mt-5 mt-lg-0">
-              <Image
-                src="/img/logo.svg"
-                height={48}
-                width={48}
-                alt="MDB Logo"
-                loading="lazy"
-              />
+              <Image src="/img/logo.svg" height={48} width={48} alt="MDB Logo" loading="lazy" />
             </a>
           </Link>
           <ul className="navbar-nav m-auto">
@@ -88,8 +72,7 @@ function Navbar() {
             </li>
             <li
               className={cn('nav-item', {
-                ['active']:
-                  pathname.includes('blog') || pathname.includes('posts'),
+                ['active']: pathname.includes('blog') || pathname.includes('posts'),
               })}
             >
               <Link href="/blog">
@@ -99,9 +82,7 @@ function Navbar() {
           </ul>
           <Link href="/app">
             <a>
-              <button className="btn theme-btn-white my-3 mr-auto">
-                Launch App
-              </button>
+              <button className="btn theme-btn-white my-3 mr-auto">Launch App</button>
             </a>
           </Link>
         </div>
@@ -115,14 +96,7 @@ function MobileNav() {
     <div id="nav" className="mobile-nav align-items-center d-flex">
       <input type="checkbox" id="toggle" style={{ display: 'none' }} />
       <label className="toggle-btn toggle-btn__cross font-18" htmlFor="toggle">
-        <svg
-          className="mx-2"
-          width="22"
-          height="10"
-          viewBox="0 0 22 10"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
+        <svg className="mx-2" width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="0.5" width="22" height="2" rx="1" fill="white" />
           <rect y="7.5" width="22" height="2" rx="1" fill="white" />
         </svg>
@@ -203,13 +177,7 @@ export default function Header() {
   return (
     <header className="header">
       <span className="position-absolute eclipse-location">
-        <Image
-          src="/img/eclipses-header.svg"
-          alt="Eclipse background"
-          layout="responsive"
-          width={668}
-          height={666}
-        />
+        <Image src="/img/eclipses-header.svg" alt="Eclipse background" layout="responsive" width={668} height={666} />
       </span>
       <Notification />
       {expanded ? <Navbar /> : <MobileNav />}

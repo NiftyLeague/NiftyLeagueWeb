@@ -250,8 +250,7 @@ Timeline
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #5e72eb, inset 0 2px 0 rgba(0, 0, 0, 0.08),
-    0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px #5e72eb, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 .cd-timeline-checkpoint {
   background: linear-gradient(to left, #5e72eb, #620edf);
@@ -413,9 +412,7 @@ Timeline
   .cd-timeline-block:nth-child(odd) .cd-timeline-content .timeline-content-img {
     left: -60px;
   }
-  .cd-timeline-block:nth-child(even)
-    .cd-timeline-content
-    .timeline-content-img {
+  .cd-timeline-block:nth-child(even) .cd-timeline-content .timeline-content-img {
     right: -60px;
   }
   .cd-timeline-content .about-video .play-video img {

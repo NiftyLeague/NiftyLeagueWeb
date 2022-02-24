@@ -85,13 +85,7 @@ const TeamDesktop = () => {
                 width={252}
               />
             </div>
-            <Image
-              alt="Disney logo"
-              height={132}
-              layout="responsive"
-              src="/img/about/disney.svg"
-              width={252}
-            />
+            <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
           </div>
         </div>
       </div>
@@ -229,119 +223,54 @@ const About: NextPage = () => {
             <h1 className="text-m-center">Nifty League</h1>
             <p className="mt-sm-2 mt-5 text-m-center p1">
               Our mission is to create a leading NFT gaming platform through
-              <br /> community governance and development. Nifty League prides
-              itself
-              <br /> on being one of the first GameFi platforms offering
-              interactive
+              <br /> community governance and development. Nifty League prides itself
+              <br /> on being one of the first GameFi platforms offering interactive
               <br />
               play-and-earn games with customizable characters.
             </p>
             <p className="text-m-center">
-              Advance your gaming skills and join our community to earn daily
-              NFTL rewards!
+              Advance your gaming skills and join our community to earn daily NFTL rewards!
             </p>
 
             <div className="display-buttons my-3 d-flex desktop">
-              <a
-                href="https://docs.niftyleague.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="btn theme-btn-aqua mx-sm-2">
-                  Check our docs
-                </button>
+              <a href="https://docs.niftyleague.com/" target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-aqua mx-sm-2">Check our docs</button>
               </a>
               <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">
-                  Download the whitepaper
-                </button>
+                <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Download the whitepaper</button>
               </a>
             </div>
             <div className="display-buttons my-3 d-flex mobile">
-              <a
-                href="https://opensea.io/collection/niftydegen"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="btn theme-btn-aqua mx-sm-2">
-                  Browse Collection
-                </button>
+              <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-aqua mx-sm-2">Browse Collection</button>
               </a>
             </div>
           </div>
 
           <div className="icons-placement">
             <div className="icon1 desktop pixelated">
-              <Image
-                src="/img/about/header/icon1.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon1.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon2 desktop pixelated">
-              <Image
-                src="/img/about/header/icon2.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon2.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon3 desktop pixelated">
-              <Image
-                src="/img/about/header/icon3.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon3.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon4 desktop pixelated">
-              <Image
-                src="/img/about/header/icon4.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon4.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon5 desktop pixelated">
-              <Image
-                src="/img/about/header/icon5.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon5.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon6 desktop pixelated">
-              <Image
-                src="/img/about/header/icon6.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon6.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon7 desktop pixelated">
-              <Image
-                src="/img/about/header/icon7.png"
-                layout="fixed"
-                height="300"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon7.png" layout="fixed" height="300" width="300" alt="degen image" />
             </div>
             <div className="icon8 desktop pixelated">
-              <Image
-                src="/img/about/header/icon8.png"
-                layout="fixed"
-                height="320"
-                width="300"
-                alt="degen image"
-              />
+              <Image src="/img/about/header/icon8.png" layout="fixed" height="320" width="300" alt="degen image" />
             </div>
           </div>
         </div>
@@ -369,12 +298,7 @@ const About: NextPage = () => {
           />
         </div>
         <div className="p-0 mt-4 video-bg pixelated">
-          <Image
-            src="/img/about/youtube-bg.png"
-            layout="fill"
-            objectFit="cover"
-            alt="Ape level background"
-          />
+          <Image src="/img/about/youtube-bg.png" layout="fill" objectFit="cover" alt="Ape level background" />
         </div>
       </div>
 
@@ -385,12 +309,7 @@ const About: NextPage = () => {
         <div className="row m-0 p-0 position-relative nifty-league-browse">
           <div className="row m-0 p-0 position-relative py-5 py-sm-0">
             <span className="dark-gradient-shade">
-              <Image
-                src="/img/dark-gradient-shade.svg"
-                alt="Dark gradient shade"
-                layout="fill"
-                objectFit="cover"
-              />
+              <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
             </span>
             <section
               style={{
@@ -433,20 +352,12 @@ const About: NextPage = () => {
             <h4 className="font-32 color-purple">DEGENs</h4>
             <p className="mt-2" />
             <p>
-              The max supply of genesis DEGENs is 10k, of which, 9.9k were
-              minted on Mainnet in Fall 2021. All of the DEGENs were
-              hand-created by members of our community who minted, based on
-              available traits and accessories. The final 100 DEGENs will be
-              given to elite players in the Nifty League community.
+              The max supply of genesis DEGENs is 10k, of which, 9.9k were minted on Mainnet in Fall 2021. All of the
+              DEGENs were hand-created by members of our community who minted, based on available traits and
+              accessories. The final 100 DEGENs will be given to elite players in the Nifty League community.
             </p>
-            <a
-              href="https://docs.niftyleague.com/overview/degens/about"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="btn theme-btn-aqua w-auto my-5">
-                learn more about DEGEN NFTs
-              </button>
+            <a href="https://docs.niftyleague.com/overview/degens/about" target="_blank" rel="noreferrer">
+              <button className="btn theme-btn-aqua w-auto my-5">learn more about DEGEN NFTs</button>
             </a>
           </div>
         </div>
@@ -456,20 +367,12 @@ const About: NextPage = () => {
             <h2 className="text-m-left">DEGEN</h2>
             <h4 className="font-32 color-purple">Rentals</h4>
             <p className="mt-2">
-              Players interested in DEGENs will be able to rent an NFT by paying
-              a low weekly fee to the owner. Active renters will be able to play
-              Nifty Smashers and earn NFTL, and explore the Niftyverse. As a
-              renter, you keep 70% of the in-game earnings, while 30% is
-              distributed to the owner via a smart contract.
+              Players interested in DEGENs will be able to rent an NFT by paying a low weekly fee to the owner. Active
+              renters will be able to play Nifty Smashers and earn NFTL, and explore the Niftyverse. As a renter, you
+              keep 70% of the in-game earnings, while 30% is distributed to the owner via a smart contract.
             </p>
-            <a
-              href="https://docs.niftyleague.com/guides/rentals/rental-overview"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="btn theme-btn-aqua w-auto my-5">
-                learn more about rentals
-              </button>
+            <a href="https://docs.niftyleague.com/guides/rentals/rental-overview" target="_blank" rel="noreferrer">
+              <button className="btn theme-btn-aqua w-auto my-5">learn more about rentals</button>
             </a>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
@@ -505,39 +408,26 @@ const About: NextPage = () => {
           <div className="col-sm-6">
             <h3>✨ NFTL Token</h3>
             <p className="font-16 mt-5">
-              The sale of our characters kicked off the initial distribution of
-              our ecosystem&apos;s native utility and governance token, NFTL. In
-              the future, NFTL will serve to give users voting rights on
-              upcoming games and tournaments, and for platform-wide expenses.
-              For now, this only includes naming characters, but will soon be
-              expanded to be used for purchasing additional in-game items and
-              collectibles. NFTL is currently available to trade and stake on
-              SushiSwap.
+              The sale of our characters kicked off the initial distribution of our ecosystem&apos;s native utility and
+              governance token, NFTL. In the future, NFTL will serve to give users voting rights on upcoming games and
+              tournaments, and for platform-wide expenses. For now, this only includes naming characters, but will soon
+              be expanded to be used for purchasing additional in-game items and collectibles. NFTL is currently
+              available to trade and stake on SushiSwap.
             </p>
-            <a
-              href="https://docs.niftyleague.com/overview/nftl/overview"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <button className="btn theme-btn-aqua w-auto mt-5">
-                learn more
-              </button>
+            <a href="https://docs.niftyleague.com/overview/nftl/overview" target="_blank" rel="noreferrer">
+              <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
             </a>
           </div>
           <div className="col-sm-6">
             <h3 className="mt-5 mt-sm-0">🥊 Play-and-earn</h3>
             <p className="font-16 mt-5">
-              Players earn NFTL by winning matches or tournaments in our games
-              such as Nifty Smashers. The more you play and improve your skills
-              the better your chances of earning NFTL tokens through gameplay!
-              NFTL can be used to purchase in-game items and bonuses, trade with
-              other players, or &apos;cash out&apos; of the ecosystem for other
-              cryptocurrencies.
+              Players earn NFTL by winning matches or tournaments in our games such as Nifty Smashers. The more you play
+              and improve your skills the better your chances of earning NFTL tokens through gameplay! NFTL can be used
+              to purchase in-game items and bonuses, trade with other players, or &apos;cash out&apos; of the ecosystem
+              for other cryptocurrencies.
             </p>
             <a href="">
-              <button className="btn theme-btn-aqua w-auto mt-5">
-                learn more
-              </button>
+              <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
             </a>
           </div>
         </div>
@@ -569,14 +459,13 @@ const About: NextPage = () => {
         <div className="position-absolute my-sm-5">
           <h1 className="font-64 my-5">Nifty DAO</h1>
           <p>
-            We will gradually be transferring ownership of the Nifty League to
-            our DAO in order to decentralize the
-            <br /> platform and encourage devs to help us build! Our vision is
-            to power rapid growth and development through
-            <br /> community contributions enabling us to build a gaming
-            platform like no other. Simply put, DAOs are the future.
-            <br /> We see only one route to becoming the world&apos;s leading
-            GameFi platform and that&apos;s by building together. 💜
+            We will gradually be transferring ownership of the Nifty League to our DAO in order to decentralize the
+            <br /> platform and encourage devs to help us build! Our vision is to power rapid growth and development
+            through
+            <br /> community contributions enabling us to build a gaming platform like no other. Simply put, DAOs are
+            the future.
+            <br /> We see only one route to becoming the world&apos;s leading GameFi platform and that&apos;s by
+            building together. 💜
           </p>
         </div>
       </div>
@@ -614,12 +503,7 @@ const About: NextPage = () => {
         >
           <Carousel isMobileViewOnly>
             {TeamData.map(team => (
-              <TeamCardItem
-                key={team.name}
-                name={team.name}
-                title={team.title}
-                source={team.source}
-              >
+              <TeamCardItem key={team.name} name={team.name} title={team.title} source={team.source}>
                 {team.children ?? null}
               </TeamCardItem>
             ))}

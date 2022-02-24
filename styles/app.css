@@ -204,11 +204,7 @@ a {
 
 .slide-content .browse-single {
   min-height: 400px;
-  background: linear-gradient(
-      26.04deg,
-      rgba(123, 97, 255, 0.1) -0.03%,
-      rgba(109, 50, 237, 0) 99.2%
-    ),
+  background: linear-gradient(26.04deg, rgba(123, 97, 255, 0.1) -0.03%, rgba(109, 50, 237, 0) 99.2%),
     rgba(36, 37, 38, 0.7);
   border-radius: 8px;
 }
@@ -286,11 +282,7 @@ a {
 .faq-accordion .accordion-item {
   border: none;
   margin-bottom: 12px;
-  background: linear-gradient(
-      26.04deg,
-      rgba(110, 51, 237, 0.05) -0.03%,
-      rgba(123, 97, 255, 0.025) 99.2%
-    ),
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
   backdrop-filter: blur(65.0688px);
   border-radius: 8px;
@@ -319,11 +311,7 @@ a {
 }
 .community-data {
   border-radius: 8px;
-  background: linear-gradient(
-      26.04deg,
-      rgba(110, 51, 237, 0.05) -0.03%,
-      rgba(123, 97, 255, 0.025) 99.2%
-    ),
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
   min-width: 898px;
   min-height: 174px;
@@ -362,11 +350,7 @@ a {
 }
 
 .community-footer {
-  background: linear-gradient(
-      26.04deg,
-      rgba(110, 51, 237, 0.05) -0.03%,
-      rgba(123, 97, 255, 0.025) 99.2%
-    ),
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
   backdrop-filter: blur(65.0688px);
   border-radius: 8px;
@@ -526,11 +510,7 @@ a {
 }
 
 .token-play {
-  background: linear-gradient(
-      26.04deg,
-      rgba(110, 51, 237, 0.05) -0.03%,
-      rgba(123, 97, 255, 0.025) 99.2%
-    ),
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
   border-radius: 8px;
   min-height: 386px;
@@ -699,8 +679,7 @@ a {
 }
 
 .league-special-row {
-  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 102%),
-    #000000;
+  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 102%), #000000;
 }
 .league-special-container {
   max-width: 1280px;
