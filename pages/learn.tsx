@@ -1,10 +1,12 @@
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 
 const Learn: NextPage = () => {
+  const desktop = useMediaQuery('(min-width:769px)');
   return (
     <Layout classes={{ root: 'learn-pg' }}>
       <Head>
@@ -20,21 +22,26 @@ const Learn: NextPage = () => {
           <div className="row m-0 p-0 position-relative">
             <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
               <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/learn/getting-started.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/learn/getting-started.png"
-                />
+                <div className="position-absolute w-100 h-100">
+                  <Image
+                    alt="Satoshi level background"
+                    height={310}
+                    layout="responsive"
+                    src="/img/learn/getting-started.png"
+                    width={552}
+                  />
+                </div>
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
                   <h3 className="mt-sm-4 mt-2 text-m-center">Overview</h3>
                   <p className="font-16 text-m-center">
                     Here, you&apos;ll find curated how-to guides and information
                     to help get you started.
                   </p>
-                  <a href="https://docs.niftyleague.com/overview/intro">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/overview/intro"
+                  >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       Learn More
                     </button>
@@ -44,14 +51,15 @@ const Learn: NextPage = () => {
             </div>
             <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
               <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/learn/gitbook.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/learn/gitbook.png"
-                />
+                <div className="position-absolute w-100 h-100">
+                  <Image
+                    alt="Sushi level background"
+                    height={310}
+                    layout="responsive"
+                    src="/img/learn/gitbook.png"
+                    width={552}
+                  />
+                </div>
                 <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
                   <h3 className="mt-sm-4 mt-2 text-m-center">
                     Getting Started
@@ -60,7 +68,11 @@ const Learn: NextPage = () => {
                     Setup your Ethereum wallet and buy or rent a DEGEN to play
                     for NFTL
                   </p>
-                  <a href="https://docs.niftyleague.com/guides/set-up">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/guides/set-up"
+                  >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       Begin
                     </button>
@@ -70,14 +82,15 @@ const Learn: NextPage = () => {
             </div>
             <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
               <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/learn/tutorials.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/learn/tutorials.png"
-                />
+                <div className="position-absolute w-100 h-100">
+                  <Image
+                    alt="Mars level background"
+                    height={310}
+                    layout="responsive"
+                    src="/img/learn/tutorials.png"
+                    width={552}
+                  />
+                </div>
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
                   <h3 className="mt-sm-4 mt-2 text-m-center">
                     Nifty Smashers Guide
@@ -85,7 +98,11 @@ const Learn: NextPage = () => {
                   <p className="font-16 text-m-center">
                     Learn about Smashers gameplay and how points are counted
                   </p>
-                  <a href="https://docs.niftyleague.com/guides/nifty-smashers/general-info">
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://docs.niftyleague.com/guides/nifty-smashers/general-info"
+                  >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       See tutorials
                     </button>
@@ -95,14 +112,15 @@ const Learn: NextPage = () => {
             </div>
             <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
               <div className="learn-content position-relative">
-                <img
-                  className="position-absolute desktop w-100 h-100"
-                  src="/img/learn/community.png"
-                />
-                <img
-                  className="position-absolute mobile w-100 h-100"
-                  src="/img/learn/community.png"
-                />
+                <div className="position-absolute w-100 h-100">
+                  <Image
+                    alt="Ape level background"
+                    height={310}
+                    layout="responsive"
+                    src="/img/learn/community.png"
+                    width={552}
+                  />
+                </div>
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
                   <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
                   <p className="font-16 text-m-center">
@@ -110,9 +128,9 @@ const Learn: NextPage = () => {
                     by our community
                   </p>
                   <a
-                    href="https://discord.gg/niftyleague"
                     target="_blank"
                     rel="noreferrer"
+                    href="https://discord.gg/niftyleague"
                   >
                     <button className="btn theme-btn-aqua my-sm-2 my-0">
                       get involved
@@ -123,7 +141,15 @@ const Learn: NextPage = () => {
             </div>
           </div>
         </div>
-        <img className="earth-grad" src="/img/community/earth-grad.svg" />
+        <span className="earth-grad">
+          <Image
+            src="/img/community/earth-grad.svg"
+            alt="Purple eclipse"
+            layout="responsive"
+            width={704}
+            height={704}
+          />
+        </span>
       </div>
 
       <div className="container pb-3 pb-sm-5">
@@ -208,11 +234,29 @@ const Learn: NextPage = () => {
       </div>
 
       <div className="row m-0 p-0 position-relative stay-informed-section">
-        <img src="/img/footer-img1.png" className="p-0 w-100 h-auto mobile" />
-        <img
-          src="/img/footer-img.png"
-          className="p-0 w-100 h-auto desktop pixelated"
-        />
+        <div className="p-0 w-100">
+          {desktop ? (
+            <Image
+              alt="DGEN Network background desktop"
+              className="pixelated"
+              height={813}
+              layout="responsive"
+              objectFit="cover"
+              src="/img/footer-img.png"
+              width={1440}
+            />
+          ) : (
+            <Image
+              alt="DGEN Network background mobile"
+              className="pixelated"
+              height={541}
+              layout="responsive"
+              objectFit="cover"
+              src="/img/footer-img1.png"
+              width={375}
+            />
+          )}
+        </div>
         <div className="position-absolute text-center  d-flex align-items-center flex-column mt-5 pt-sm-5">
           <h2 className="mt-4">Stay in the loop</h2>
           <p className="my-3 text-m-center">
