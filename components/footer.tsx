@@ -8,33 +8,18 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
         <div className="row m-0 p-md-5 footer-row position-relative">
           <div className="col-md-6 px-sm-5 col-12 my-md-0 my-2 mt-5 mt-md-0">
             <div className="container-footer">
-              <Image
-                src="/img/logo-blue.svg"
-                alt="Purple Nifty League Logo"
-                width={48}
-                height={48}
-              />
-              <p className="color-grey font-roboto font-13 mt-3">
-                © Copyright 2021. All Rights Reserved.
-              </p>
+              <Image src="/img/logo-blue.svg" alt="Purple Nifty League Logo" width={48} height={48} />
+              <p className="color-grey font-roboto font-13 mt-3">© Copyright 2021. All Rights Reserved.</p>
             </div>
           </div>
           <div className="col-12 col-md-6 px-3 px-sm-5 px-md-0 px-lg-5 ps-md-5">
             <div className="footer-buttons text-center">
-              <a
-                href="https://opensea.io/collection/niftydegen"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">
-                  Browse collection
-                </button>
+              <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">Browse collection</button>
               </a>
               <Link href="/app">
                 <a>
-                  <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">
-                    Launch App
-                  </button>
+                  <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">Launch App</button>
                 </a>
               </Link>
             </div>
@@ -88,19 +73,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           </div>
           <div className="col-md-3 d-flex align-items-center justify-content-center ps-0">
             <div className="d-flex align-items-center mt-5 mt-lg-0 mb-5 mb-lg-auto ps-3 ps-sm-5">
-              <a
-                className="pe-3"
-                href="https://opensea.io/collection/niftydegen"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  width="27"
-                  height="24"
-                  viewBox="0 0 27 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+                <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M1.58666 13.7045L1.67997 13.5578L7.30665 4.7556C7.38888 4.62673 7.5822 4.64006 7.64441 4.78004C8.58442 6.8867 9.39553 9.50672 9.01554 11.1378C8.85332 11.809 8.40888 12.7178 7.90885 13.5578C7.84444 13.6801 7.77332 13.8001 7.69775 13.9156C7.66219 13.969 7.60219 14.0001 7.53774 14.0001H1.75109C1.59553 14.0001 1.50443 13.8312 1.58666 13.7045Z"
                     fill="#757575"
@@ -111,19 +85,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                   />
                 </svg>
               </a>
-              <a
-                className="pe-3"
-                href="https://twitter.com/NiftyLeague"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  width="25"
-                  height="24"
-                  viewBox="0 0 25 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a className="pe-3" href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
+                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g clipPath="url(#clip0_604_62)">
                     <path
                       d="M7.63736 21.7507C16.694 21.7507 21.6476 14.2473 21.6476 7.74044C21.6476 7.52732 21.6476 7.31517 21.6332 7.10396C22.5969 6.40692 23.4287 5.54385 24.0898 4.55516C23.1912 4.95357 22.2379 5.21472 21.2617 5.32988C22.2896 4.71457 23.059 3.74667 23.4265 2.60636C22.4599 3.17997 21.4025 3.58419 20.2998 3.80156C19.5573 3.01214 18.5755 2.48941 17.506 2.31425C16.4366 2.13909 15.3393 2.32128 14.3838 2.83262C13.4284 3.34396 12.6681 4.15594 12.2206 5.14291C11.7731 6.12989 11.6634 7.23683 11.9084 8.29244C9.95073 8.19424 8.03559 7.68548 6.28729 6.79917C4.53899 5.91286 2.9966 4.66882 1.76024 3.1478C1.13056 4.2318 0.937708 5.51503 1.22094 6.73623C1.50416 7.95742 2.24218 9.02476 3.28472 9.72092C2.50107 9.69796 1.73448 9.48656 1.04984 9.1046V9.167C1.05015 10.3039 1.44369 11.4056 2.16371 12.2854C2.88373 13.1651 3.8859 13.7688 5.00024 13.9939C4.27532 14.1916 3.51471 14.2205 2.77688 14.0784C3.09165 15.0567 3.70426 15.9122 4.52908 16.5253C5.35389 17.1384 6.34966 17.4784 7.3772 17.4979C6.35627 18.3004 5.18715 18.8937 3.93671 19.2439C2.68627 19.5941 1.37905 19.6943 0.0898361 19.5388C2.34167 20.9839 4.96176 21.7504 7.63736 21.7468"
@@ -132,29 +95,13 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                   </g>
                   <defs>
                     <clipPath id="clip0_604_62">
-                      <rect
-                        width="24"
-                        height="24"
-                        fill="white"
-                        transform="translate(0.0898361)"
-                      />
+                      <rect width="24" height="24" fill="white" transform="translate(0.0898361)" />
                     </clipPath>
                   </defs>
                 </svg>
               </a>
-              <a
-                className="pe-3"
-                href="https://discord.gg/niftyleague"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <svg
-                  width="32"
-                  height="24"
-                  viewBox="0 0 32 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
+              <a className="pe-3" href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
+                <svg width="32" height="24" viewBox="0 0 32 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
                     d="M26.7449 1.98947C24.738 1.06863 22.5859 0.390197 20.3358 0.00162999C20.2948 -0.00586923 20.2539 0.0128717 20.2328 0.0503545C19.956 0.54262 19.6495 1.18482 19.4348 1.68959C17.0146 1.32727 14.6069 1.32727 12.2364 1.68959C12.0216 1.1736 11.7039 0.54262 11.4259 0.0503545C11.4048 0.0141223 11.3639 -0.00461862 11.3229 0.00162999C9.074 0.388955 6.92193 1.06739 4.91382 1.98947C4.89643 1.99696 4.88153 2.00947 4.87164 2.0257C0.789623 8.12415 -0.328613 14.0727 0.219956 19.9475C0.222438 19.9762 0.238573 20.0037 0.260913 20.0212C2.95411 21.999 5.56294 23.1998 8.12332 23.9956C8.16429 24.0081 8.20771 23.9931 8.23379 23.9594C8.83944 23.1323 9.37934 22.2602 9.84224 21.3431C9.86956 21.2894 9.84348 21.2257 9.78765 21.2044C8.93129 20.8796 8.11587 20.4835 7.33148 20.0337C7.26944 19.9975 7.26448 19.9087 7.32155 19.8663C7.48661 19.7426 7.65172 19.6139 7.80933 19.4839C7.83785 19.4602 7.87758 19.4552 7.91111 19.4702C13.0642 21.8229 18.6429 21.8229 23.7352 19.4702C23.7687 19.454 23.8084 19.459 23.8382 19.4827C23.9959 19.6126 24.1609 19.7426 24.3272 19.8663C24.3843 19.9087 24.3806 19.9975 24.3185 20.0337C23.5341 20.4922 22.7187 20.8796 21.8611 21.2032C21.8053 21.2244 21.7805 21.2894 21.8078 21.3431C22.2806 22.2589 22.8205 23.131 23.415 23.9582C23.4398 23.9931 23.4845 24.0081 23.5255 23.9956C26.0983 23.1998 28.7071 21.999 31.4003 20.0212C31.4239 20.0037 31.4388 19.9775 31.4412 19.9488C32.0978 13.1568 30.3416 7.25706 26.7858 2.02694C26.7771 2.00947 26.7623 1.99696 26.7449 1.98947ZM10.6118 16.3704C9.06034 16.3704 7.78201 14.946 7.78201 13.1968C7.78201 11.4476 9.03555 10.0233 10.6118 10.0233C12.2003 10.0233 13.4663 11.4601 13.4415 13.1968C13.4415 14.946 12.1879 16.3704 10.6118 16.3704ZM21.0743 16.3704C19.5229 16.3704 18.2446 14.946 18.2446 13.1968C18.2446 11.4476 19.498 10.0233 21.0743 10.0233C22.6629 10.0233 23.9288 11.4601 23.904 13.1968C23.904 14.946 22.6629 16.3704 21.0743 16.3704Z"
                     fill="#757575"
