@@ -21,23 +21,20 @@ export default function PostHeader({
   return (
     <>
       {title && <PostTitle>{title}</PostTitle>}
-      <div className="hidden md:block mb-md-12">
-        <Avatar author={author} />
-      </div>
       {coverImage && (
-        <div className="mb-8 mb-md-16 mx-sm-0">
+        <div className="mb-4 mx-sm-0">
           <CoverImage title={title} coverImage={coverImage} />
         </div>
       )}
-      <div className="max-w-2xl mx-auto">
-        <div className="block md:hidden mb-6">
+      <div className="d-flex align-items-center justify-content-between">
+        <div className="mb-2">
           <Avatar author={author} />
         </div>
-        <div className="mb-6 text-lg">
+        <div className="mb-4 mt-1">
           Posted <Date dateString={date} />
-          {categories && <Categories categories={categories} />}
         </div>
       </div>
+      {/* {categories && <Categories categories={categories} />} */}
     </>
   );
 }
