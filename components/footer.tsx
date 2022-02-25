@@ -72,7 +72,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
             </div>
           </div>
           <div className="col-md-3 d-flex align-items-center justify-content-center ps-0">
-            <div className="d-flex align-items-center mt-5 mt-lg-0 mb-5 mb-lg-auto ps-3 ps-sm-5">
+            <div className="d-flex align-items-center mt-5 mt-lg-0 mb-5 mb-lg-auto ps-3 ps-sm-5 socials">
               <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
                 <svg width="27" height="24" viewBox="0 0 27 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path

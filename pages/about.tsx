@@ -8,6 +8,7 @@ import DegenCardItem from '../components/carousel/DegenCardItem';
 import TeamCardItem from '../components/carousel/TeamCardItem';
 
 import { AboutDegenData, TeamData } from '../components/carousel/constants';
+import Link from 'next/link';
 
 const TeamDesktop = () => {
   return (
@@ -234,11 +235,14 @@ const About: NextPage = () => {
 
             <div className="display-buttons my-3 d-flex desktop">
               <a href="https://docs.niftyleague.com/" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-aqua mx-sm-2">Check our docs</button>
+                <button className="btn theme-btn-aqua mx-sm-2">Read our docs</button>
               </a>
-              <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
+              <Link href="/roadmap" passHref>
+                <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
+              </Link>
+              {/* <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Download the whitepaper</button>
-              </a>
+              </a> */}
             </div>
             <div className="display-buttons my-3 d-flex mobile">
               <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
@@ -447,7 +451,7 @@ const About: NextPage = () => {
               alt="Purple gradient"
             />
           </div>
-          <span className="position-absolute eclipse-location w-100">
+          <span className="position-absolute eclipse-location rental-eclipse w-100">
             <Image
               src="/img/eclipses-header.svg"
               alt="Eclipse background"
@@ -481,7 +485,7 @@ const About: NextPage = () => {
               to purchase in-game items and bonuses, trade with other players, or &apos;cash out&apos; of the ecosystem
               for other cryptocurrencies.
             </p>
-            <a href="">
+            <a href="https://docs.niftyleague.com/overview/p2e/daily-rewards" target="_blank" rel="noreferrer">
               <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
             </a>
           </div>
