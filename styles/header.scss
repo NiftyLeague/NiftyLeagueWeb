@@ -2,13 +2,17 @@
   left: 0;
   top: 185px;
   max-width: 100vw;
-  z-index: 1;
+  z-index: 0;
 }
 .home-pg .header .eclipse-location {
   display: none;
 }
 .about-pg .header .eclipse-location {
   top: 30px;
+  max-width: 900px;
+}
+.com-pg .header .eclipse-location {
+  max-width: 950px;
 }
 
 @media (min-width: 576px) {
@@ -46,6 +50,20 @@
   background: #232529;
   height: 48px;
   z-index: 99;
+
+  .socials {
+    justify-content: right;
+    top: 11px;
+    right: 0;
+    width: 300px;
+
+    a:hover {
+      color: #620edf;
+    }
+    a:hover path {
+      fill: #620edf;
+    }
+  }
 }
 
 @media (max-width: 768px) {

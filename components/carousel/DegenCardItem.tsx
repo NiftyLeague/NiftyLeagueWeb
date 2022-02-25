@@ -13,7 +13,7 @@ const DegenCardItem = ({
     <div className="slide">
       <div className="slide-content">
         <div className="browse-single">
-          <div className="d-flex p-sm-4 p-2 pb-0 align-items-center">
+          <div className="d-flex p-2 p-sm-3 p-md-4 pb-0 align-items-center">
             <h5 className="me-auto">{name}</h5>
             <a className="ms-auto" href="#">
               <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +35,7 @@ const DegenCardItem = ({
           </div>
 
           <div style={{ borderRadius: '20px' }}>
-            <Image src={source} layout="responsive" width="258" height="278" alt="degen image" />
+            <Image src={source} layout="responsive" width="258" height="278" alt="degen image" priority />
           </div>
         </div>
       </div>
