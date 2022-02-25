@@ -8,6 +8,7 @@ import DegenCardItem from '../components/carousel/DegenCardItem';
 import TeamCardItem from '../components/carousel/TeamCardItem';
 
 import { AboutDegenData, TeamData } from '../components/carousel/constants';
+import Link from 'next/link';
 
 const TeamDesktop = () => {
   return (
@@ -234,11 +235,14 @@ const About: NextPage = () => {
 
             <div className="display-buttons my-3 d-flex desktop">
               <a href="https://docs.niftyleague.com/" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-aqua mx-sm-2">Check our docs</button>
+                <button className="btn theme-btn-aqua mx-sm-2">Read our docs</button>
               </a>
-              <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
+              <Link href="/roadmap" passHref>
+                <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
+              </Link>
+              {/* <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Download the whitepaper</button>
-              </a>
+              </a> */}
             </div>
             <div className="display-buttons my-3 d-flex mobile">
               <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
@@ -249,28 +253,84 @@ const About: NextPage = () => {
 
           <div className="icons-placement">
             <div className="icon1 desktop pixelated">
-              <Image src="/img/about/header/icon1.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon1.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon2 desktop pixelated">
-              <Image src="/img/about/header/icon2.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon2.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon3 desktop pixelated">
-              <Image src="/img/about/header/icon3.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon3.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon4 desktop pixelated">
-              <Image src="/img/about/header/icon4.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon4.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon5 desktop pixelated">
-              <Image src="/img/about/header/icon5.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon5.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon6 desktop pixelated">
-              <Image src="/img/about/header/icon6.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon6.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon7 desktop pixelated">
-              <Image src="/img/about/header/icon7.png" layout="fixed" height="300" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon7.png"
+                layout="fixed"
+                height="300"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
             <div className="icon8 desktop pixelated">
-              <Image src="/img/about/header/icon8.png" layout="fixed" height="320" width="300" alt="degen image" />
+              <Image
+                src="/img/about/header/icon8.png"
+                layout="fixed"
+                height="320"
+                width="300"
+                alt="degen image"
+                priority
+              />
             </div>
           </div>
         </div>
@@ -298,19 +358,16 @@ const About: NextPage = () => {
           />
         </div>
         <div className="p-0 mt-4 video-bg pixelated">
-          <Image src="/img/about/youtube-bg.png" layout="fill" objectFit="cover" alt="Ape level background" />
+          <Image src="/img/about/youtube-bg.png" layout="fill" objectFit="cover" alt="Ape level background" priority />
         </div>
       </div>
 
       <div
         className="container p-0 desktop-block mb-3"
-        style={{ maxWidth: '100%', background: '#191B1F', marginTop: -300 }}
+        style={{ maxWidth: '100%', background: '#191B1F', marginTop: -225 }}
       >
         <div className="row m-0 p-0 position-relative nifty-league-browse">
           <div className="row m-0 p-0 position-relative py-5 py-sm-0">
-            <span className="dark-gradient-shade">
-              <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
-            </span>
             <section
               style={{
                 alignItems: 'center',
@@ -334,16 +391,17 @@ const About: NextPage = () => {
         </div>
       </div>
 
-      <div className="container">
-        <div className="row m-0 position-relative nifty-degen">
+      <div className="container pt-5 pt-md-3 pt-xl-5">
+        <div className="row m-0 pt-5 pt-md-3 pt-xl-5 position-relative nifty-degen">
           <div className="col-sm-6 position-relative">
             <div className="pixelated">
               <Image
                 src="/img/about/nifty-degans.svg"
-                layout="fixed"
-                width="500px"
-                height="500px"
+                layout="responsive"
+                width="800px"
+                height="800px"
                 alt="Andy and Spike"
+                priority
               />
             </div>
           </div>
@@ -379,10 +437,11 @@ const About: NextPage = () => {
             <div className="nifty-rental-banner pixelated">
               <Image
                 src="/img/about/niftyRentals.png"
-                layout="fixed"
+                layout="responsive"
                 width="450px"
                 height="450px"
                 alt="Alien degen image"
+                priority
               />
             </div>
             <Image
@@ -392,7 +451,7 @@ const About: NextPage = () => {
               alt="Purple gradient"
             />
           </div>
-          <span className="position-absolute eclipse-location w-100">
+          <span className="position-absolute eclipse-location rental-eclipse w-100">
             <Image
               src="/img/eclipses-header.svg"
               alt="Eclipse background"
@@ -405,7 +464,7 @@ const About: NextPage = () => {
       </div>
       <div className="container my-sm-5 py-sm-5">
         <div className="row m-0 p-0 position-relative token-play p-sm-5 p-3">
-          <div className="col-sm-6">
+          <div className="col-md-6">
             <h3>✨ NFTL Token</h3>
             <p className="font-16 mt-5">
               The sale of our characters kicked off the initial distribution of our ecosystem&apos;s native utility and
@@ -418,15 +477,15 @@ const About: NextPage = () => {
               <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
             </a>
           </div>
-          <div className="col-sm-6">
-            <h3 className="mt-5 mt-sm-0">🥊 Play-and-earn</h3>
+          <div className="col-md-6">
+            <h3 className="mt-5 mt-md-0">🥊 Play-and-earn</h3>
             <p className="font-16 mt-5">
               Players earn NFTL by winning matches or tournaments in our games such as Nifty Smashers. The more you play
               and improve your skills the better your chances of earning NFTL tokens through gameplay! NFTL can be used
               to purchase in-game items and bonuses, trade with other players, or &apos;cash out&apos; of the ecosystem
               for other cryptocurrencies.
             </p>
-            <a href="">
+            <a href="https://docs.niftyleague.com/overview/p2e/daily-rewards" target="_blank" rel="noreferrer">
               <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
             </a>
           </div>
@@ -437,34 +496,33 @@ const About: NextPage = () => {
           {desktop ? (
             <Image
               alt="Mars level background desktop"
-              className="pixelated"
               height={1003}
               layout="responsive"
               objectFit="cover"
               src="/img/about/bg-DAO.png"
               width={1440}
+              priority
             />
           ) : (
             <Image
               alt="Mars level background mobile"
               className="pixelated"
-              height={749}
+              height={500}
               layout="responsive"
               objectFit="cover"
               src="/img/about/bg-DAO-mb.png"
               width={375}
+              priority
             />
           )}
         </div>
         <div className="position-absolute my-sm-5">
           <h1 className="font-64 my-5">Nifty DAO</h1>
-          <p>
+          <p className="px-5">
             We will gradually be transferring ownership of the Nifty League to our DAO in order to decentralize the
-            <br /> platform and encourage devs to help us build! Our vision is to power rapid growth and development
-            through
-            <br /> community contributions enabling us to build a gaming platform like no other. Simply put, DAOs are
-            the future.
-            <br /> We see only one route to becoming the world&apos;s leading GameFi platform and that&apos;s by
+            platform and encourage devs to help us build! Our vision is to power rapid growth and development through
+            community contributions enabling us to build a gaming platform like no other. Simply put, DAOs are the
+            future. We see only one route to becoming the world&apos;s leading GameFi platform and that&apos;s by
             building together. 💜
           </p>
         </div>
@@ -501,7 +559,7 @@ const About: NextPage = () => {
             textAlign: 'center',
           }}
         >
-          <Carousel isMobileViewOnly>
+          <Carousel isMobileViewOnly hideGradient tabletItems={2}>
             {TeamData.map(team => (
               <TeamCardItem key={team.name} name={team.name} title={team.title} source={team.source}>
                 {team.children ?? null}
