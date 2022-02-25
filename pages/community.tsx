@@ -97,6 +97,7 @@ const Community: NextPage = () => {
               </Carousel>
             </section>
           </div>
+          <div className="com-scroller-dark-background" />
           <div className="degen-scroller-content text-center d-flex flex-column align-items-center position-absolute">
             <div className="nifty-character nifty-ape">
               <Image
