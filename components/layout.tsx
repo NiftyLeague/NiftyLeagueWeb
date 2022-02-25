@@ -9,7 +9,7 @@ export default function Layout({
   classes?: { root?: string; footer?: string };
 }) {
   return (
-    <div className={`p-0 black-bg1 ${classes?.root || ''}`}>
+    <div className={`p-0 ${classes?.root || ''}`}>
       <Header />
       <main>{children}</main>
       <Footer classes={classes} />

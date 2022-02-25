@@ -92,6 +92,7 @@ const Home: NextPage = () => {
           layout="fill"
           objectFit="cover"
           alt="Sushi level background"
+          priority
         />
         <div className="container d-flex flex-column text-center position-relative my-5" style={{ zIndex: 2 }}>
           <h2 className="font-48 my-5">
@@ -160,6 +161,7 @@ const Home: NextPage = () => {
                   layout="responsive"
                   width={474}
                   height={467}
+                  priority
                 />
               </div>
             )}
@@ -175,6 +177,7 @@ const Home: NextPage = () => {
                       layout="responsive"
                       width={474}
                       height={467}
+                      priority
                     />
                   )}
                   Players can rent a DEGEN from owners directly via smart contract technology, opening up game play at
@@ -219,7 +222,7 @@ const Home: NextPage = () => {
               margin: '0 auto',
             }}
           >
-            <Carousel maxItems={5}>
+            <Carousel desktopItems={5} hideGradient>
               {SponsorImageURLs.map(url => (
                 <SponsorCarouselItem key={url} source={url} />
               ))}
@@ -231,9 +234,6 @@ const Home: NextPage = () => {
       <div className="container" style={{ maxWidth: '100%', background: '#191B1F' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
           <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 559 }}>
-            <span className="dark-gradient-shade">
-              <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
-            </span>
             <section
               style={{
                 alignItems: 'center',
@@ -243,7 +243,7 @@ const Home: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel minItems={2}>
+              <Carousel mobileItems={2}>
                 {HomeDegenData.map(degen => (
                   <DegenCardItem
                     key={degen.name}
@@ -267,6 +267,7 @@ const Home: NextPage = () => {
                 height={743}
                 layout="responsive"
                 alt="Mario degen"
+                priority
               />
             </div>
 
@@ -305,6 +306,7 @@ const Home: NextPage = () => {
               objectFit="cover"
               src="/img/footer-img.png"
               width={1440}
+              priority
             />
           ) : (
             <Image
@@ -315,6 +317,7 @@ const Home: NextPage = () => {
               objectFit="cover"
               src="/img/footer-img1.png"
               width={375}
+              priority
             />
           )}
         </div>
