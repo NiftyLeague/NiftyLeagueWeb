@@ -95,7 +95,7 @@ const Home: NextPage = () => {
           priority
         />
         <div className="container d-flex flex-column text-center position-relative my-5" style={{ zIndex: 2 }}>
-          <h2 className="font-48 my-5">
+          <h2 className="font-48 my-5 px-5">
             Our 9.9k DEGEN NFTs act as players in our games such as Nifty Smashers. Our ecosystem is centered around
             nostalgia - where builders, players, and owners spend time connecting, gaming, and earning in Web3.
           </h2>
@@ -272,7 +272,7 @@ const Home: NextPage = () => {
             </div>
 
             <h1>Join Nifty League</h1>
-            <p className="my-sm-5 my-2 text-m-center">
+            <p className="my-sm-5 my-2 text-m-center px-5">
               The minting process for Nifty League allowed minters the ability to design their own DEGEN using our
               Mint-O-Matic, which our community absolutely loved! You can purchase a DEGEN NFT on OpenSea.
             </p>

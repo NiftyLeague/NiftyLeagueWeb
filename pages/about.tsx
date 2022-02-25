@@ -492,7 +492,6 @@ const About: NextPage = () => {
           {desktop ? (
             <Image
               alt="Mars level background desktop"
-              className="pixelated"
               height={1003}
               layout="responsive"
               objectFit="cover"
@@ -515,7 +514,7 @@ const About: NextPage = () => {
         </div>
         <div className="position-absolute my-sm-5">
           <h1 className="font-64 my-5">Nifty DAO</h1>
-          <p>
+          <p className="px-5">
             We will gradually be transferring ownership of the Nifty League to our DAO in order to decentralize the
             platform and encourage devs to help us build! Our vision is to power rapid growth and development through
             community contributions enabling us to build a gaming platform like no other. Simply put, DAOs are the
