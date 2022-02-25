@@ -21,18 +21,16 @@ export default function PostPreview({
 }) {
   return (
     <div>
-      <div className="mb-5">{coverImage && <CoverImage title={title} coverImage={coverImage} slug={slug} />}</div>
-      <h3 className="text-3xl mb-3 leading-snug">
-        {title && (
-          <Link href={`/posts/${slug}`}>
-            <a className="hover:underline" dangerouslySetInnerHTML={{ __html: title }}></a>
-          </Link>
-        )}
-      </h3>
-      <div className="text-lg mb-4">
+      <div className="mb-3">{coverImage && <CoverImage title={title} coverImage={coverImage} slug={slug} />}</div>
+      {title && (
+        <Link href={`/posts/${slug}`} passHref>
+          <h3 className="mb-3 post-preview-title">{title}</h3>
+        </Link>
+      )}
+      <div className="mb-3">
         <Date dateString={date} />
       </div>
-      {excerpt && <div className="text-lg leading-relaxed mb-4" dangerouslySetInnerHTML={{ __html: excerpt }} />}
+      {excerpt && <div className="mb-4" dangerouslySetInnerHTML={{ __html: excerpt }} />}
       <Avatar author={author} />
     </div>
   );
