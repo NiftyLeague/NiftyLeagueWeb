@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
+import LearnCards from '../components/LearnCards';
 
 const Learn: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -14,105 +15,8 @@ const Learn: NextPage = () => {
         <meta name="description" content="Learn how to join and play games at Nifty League" />
       </Head>
 
-      <div className="container pt-md-5 d-flex learn-intro">
-        <div className="d-flex align-items-center">
-          <div className="row m-0 p-0 position-relative">
-            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-              <div className="learn-content position-relative">
-                <div className="position-absolute w-100 h-100">
-                  <Image
-                    alt="Satoshi level background"
-                    height={310}
-                    layout="responsive"
-                    src="/img/learn/getting-started.png"
-                    width={552}
-                    priority
-                  />
-                </div>
-                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Overview</h3>
-                  <p className="font-16 text-m-center">
-                    Here, you&apos;ll find curated how-to guides and information to help get you started.
-                  </p>
-                  <a target="_blank" rel="noreferrer" href="https://docs.niftyleague.com/overview/intro">
-                    <button className="btn theme-btn-aqua my-sm-2 my-0">Learn More</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-              <div className="learn-content position-relative">
-                <div className="position-absolute w-100 h-100">
-                  <Image
-                    alt="Sushi level background"
-                    height={310}
-                    layout="responsive"
-                    src="/img/learn/gitbook.png"
-                    width={552}
-                    priority
-                  />
-                </div>
-                <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Getting Started</h3>
-                  <p className="font-16 text-m-center">
-                    Setup your Ethereum wallet and buy or rent a DEGEN to play for NFTL
-                  </p>
-                  <a target="_blank" rel="noreferrer" href="https://docs.niftyleague.com/guides/set-up">
-                    <button className="btn theme-btn-aqua my-sm-2 my-0">Begin</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-              <div className="learn-content position-relative">
-                <div className="position-absolute w-100 h-100">
-                  <Image
-                    alt="Mars level background"
-                    height={310}
-                    layout="responsive"
-                    src="/img/learn/tutorials.png"
-                    width={552}
-                    priority
-                  />
-                </div>
-                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Nifty Smashers Guide</h3>
-                  <p className="font-16 text-m-center">Learn about Smashers gameplay and how points are counted</p>
-                  <a
-                    target="_blank"
-                    rel="noreferrer"
-                    href="https://docs.niftyleague.com/guides/nifty-smashers/general-info"
-                  >
-                    <button className="btn theme-btn-aqua my-sm-2 my-0">See tutorials</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-6 p-md-3 py-4 py-sm-0 mb-sm-4">
-              <div className="learn-content position-relative">
-                <div className="position-absolute w-100 h-100">
-                  <Image
-                    alt="Ape level background"
-                    height={310}
-                    layout="responsive"
-                    src="/img/learn/community.png"
-                    width={552}
-                    priority
-                  />
-                </div>
-                <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
-                  <h3 className="mt-sm-4 mt-2 text-m-center">Community</h3>
-                  <p className="font-16 text-m-center">
-                    Join our Discord server to get your questions answered live by our community
-                  </p>
-                  <a target="_blank" rel="noreferrer" href="https://discord.gg/niftyleague">
-                    <button className="btn theme-btn-aqua my-sm-2 my-0">get involved</button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div className="container pt-5 pt-md-5 d-flex learn-intro align-items-center">
+        <LearnCards />
         <span className="earth-grad">
           <Image
             src="/img/community/earth-grad.svg"
