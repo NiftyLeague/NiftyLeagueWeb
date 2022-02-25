@@ -267,6 +267,14 @@ a {
   margin-top: -80px;
   z-index: 3;
 }
+.com-scroller-dark-background {
+  height: 350px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background: #191b1f;
+  z-index: -1;
+}
 .nifty-character {
   min-height: 250px;
   height: auto;
