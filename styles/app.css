@@ -349,10 +349,15 @@ a {
 /*************************************** Learn **********************************************/
 
 .learn-pg .learn-intro {
-  min-height: 94vh;
+  min-height: 75vh;
+}
+.learn-content-wrapper {
+  max-height: 310px;
 }
 .learn-content {
-  max-height: 310px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .learn-content button {
   width: auto;
