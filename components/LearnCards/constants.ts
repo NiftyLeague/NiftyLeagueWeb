@@ -21,9 +21,9 @@ export const LEARN_CARDS = [
     title: 'Nifty Smashers Guide',
   },
   {
-    btnText: 'Learn More',
+    btnText: 'Get Involved',
     image: '/img/learn/community.png',
-    link: 'get involved',
+    link: 'https://discord.gg/niftyleague',
     subtitle: 'Join our Discord server to get your questions answered live by our community',
     title: 'Community',
   },

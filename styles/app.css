@@ -596,6 +596,10 @@ a {
   margin-top: -50px;
 }
 
+.rental-eclipse {
+  z-index: -1;
+}
+
 .nifty-rentals-img .icons-placement1 img {
   position: relative;
 }
@@ -684,6 +688,13 @@ a {
 }
 .home-content {
   z-index: 3;
+}
+
+.social-icons a:hover {
+  color: #620edf;
+}
+.social-icons a:hover path {
+  fill: #620edf;
 }
 
 .sliding-nfts {
