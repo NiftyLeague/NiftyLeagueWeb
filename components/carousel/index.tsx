@@ -1,34 +1,51 @@
+import Image from 'next/image';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 const NiftyCarousel = ({
   children,
   isMobileViewOnly = false,
-  maxItems = 4,
-  minItems = 1,
+  mobileItems = 1,
+  tabletItems = 3,
+  desktopItems = 4,
+  superLargeDesktopItems = 5,
+  hideGradient = false,
 }: {
   children: React.ReactNode;
   isMobileViewOnly?: boolean;
-  maxItems?: number;
-  minItems?: number;
+  mobileItems?: number;
+  tabletItems?: number;
+  desktopItems?: number;
+  superLargeDesktopItems?: number;
+  hideGradient?: boolean;
 }): JSX.Element => (
   <>
+    {!hideGradient && (
+      <span className="dark-gradient-shade">
+        <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
+      </span>
+    )}
     <Carousel
+      arrows={isMobileViewOnly}
       swipeable={isMobileViewOnly}
       draggable={isMobileViewOnly}
       showDots={isMobileViewOnly}
       responsive={{
+        superLargeDesktop: {
+          breakpoint: { max: 4000, min: 1500 },
+          items: superLargeDesktopItems,
+        },
         desktop: {
-          breakpoint: { max: 3000, min: 1024 },
-          items: maxItems,
+          breakpoint: { max: 1500, min: 1024 },
+          items: desktopItems,
         },
         tablet: {
-          breakpoint: { max: 1024, min: 464 },
-          items: 3,
+          breakpoint: { max: 1024, min: 615 },
+          items: tabletItems,
         },
         mobile: {
-          breakpoint: { max: 464, min: 0 },
-          items: minItems,
+          breakpoint: { max: 615, min: 0 },
+          items: mobileItems,
         },
       }}
       ssr={true}

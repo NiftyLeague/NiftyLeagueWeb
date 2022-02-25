@@ -203,7 +203,6 @@ a {
 }
 
 .slide-content .browse-single {
-  min-height: 400px;
   background: linear-gradient(26.04deg, rgba(123, 97, 255, 0.1) -0.03%, rgba(109, 50, 237, 0) 99.2%),
     rgba(36, 37, 38, 0.7);
   border-radius: 8px;
@@ -261,15 +260,20 @@ a {
   z-index: 1;
   left: 0;
   width: 100vw;
-  height: 85%;
-}
-.about-pg .dark-gradient-shade {
-  height: 100%;
+  height: 320px;
 }
 
 .degen-scroller-content {
   margin-top: -80px;
   z-index: 3;
+}
+.com-scroller-dark-background {
+  height: 350px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background: #191b1f;
+  z-index: -1;
 }
 .nifty-character {
   min-height: 250px;
@@ -322,7 +326,7 @@ a {
     width: 85%;
   }
   .dark-gradient-shade {
-    height: 65%;
+    height: 450px;
   }
 }
 @media (min-width: 992px) {
@@ -331,6 +335,9 @@ a {
   }
   .nifty-character-title {
     font-size: 96px;
+  }
+  .dark-gradient-shade {
+    height: 500px;
   }
 }
 @media (min-width: 1200px) {
@@ -341,14 +348,24 @@ a {
     width: 800px;
   }
 }
+@media (min-width: 1500px) {
+  .dark-gradient-shade {
+    height: 600px;
+  }
+}
 
 /*************************************** Learn **********************************************/
 
 .learn-pg .learn-intro {
-  min-height: 94vh;
+  min-height: 75vh;
+}
+.learn-content-wrapper {
+  max-height: 310px;
 }
 .learn-content {
-  max-height: 310px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
 }
 .learn-content button {
   width: auto;
@@ -384,6 +401,9 @@ a {
 .com-intro-text {
   z-index: 2;
 }
+.com-intro-text h4 {
+  white-space: nowrap;
+}
 .community-data {
   border-radius: 8px;
   background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
@@ -391,6 +411,7 @@ a {
   width: 100%;
   min-width: 100%;
   min-height: 125px;
+  cursor: pointer;
 }
 .community-data-text {
   max-width: 80%;
@@ -403,6 +424,7 @@ a {
   max-width: 100%;
   right: 0;
   bottom: auto;
+  z-index: -1;
 }
 .moon-grad {
   position: absolute;
@@ -413,12 +435,22 @@ a {
 .com-content {
   margin-top: -100px;
 }
+.earth-com {
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  .earth-com {
+    margin-bottom: -100px;
+  }
+}
+
 .earth-grad {
   position: absolute;
   right: 0;
   left: auto;
   top: 300px;
   width: 80%;
+  z-index: -1;
 }
 .com-bg-main {
   position: absolute;
@@ -564,6 +596,10 @@ a {
   margin-top: -50px;
 }
 
+.rental-eclipse {
+  z-index: -1;
+}
+
 .nifty-rentals-img .icons-placement1 img {
   position: relative;
 }
@@ -611,6 +647,9 @@ a {
   position: relative;
   z-index: 1;
 }
+.video-detail-container iframe {
+  max-width: 95%;
+}
 
 /*************************************** Home **********************************************/
 
@@ -649,6 +688,13 @@ a {
 }
 .home-content {
   z-index: 3;
+}
+
+.social-icons a:hover {
+  color: #620edf;
+}
+.social-icons a:hover path {
+  fill: #620edf;
 }
 
 .sliding-nfts {
@@ -918,6 +964,9 @@ a {
   p br {
     display: none;
   }
+  .text-m-left {
+    text-align: left;
+  }
   .theme-btn-aqua {
     width: 325px;
     display: flex;
@@ -1132,9 +1181,6 @@ a {
   .text-m-center {
     text-align: center;
   }
-  .text-m-left {
-    text-align: left;
-  }
   .home-pg .home-intro .theme-btn-aqua {
     width: 195px;
   }
@@ -1166,7 +1212,7 @@ a {
   .slide-content .browse-single {
     height: 185px;
     min-height: auto;
-    width: 128px;
+    width: 100%;
   }
   .slide-content .browse-single img {
     width: 100%;
