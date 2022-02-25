@@ -15,7 +15,7 @@ const Community: NextPage = () => {
         <meta name="description" content="Community comes first at Nifty League" />
       </Head>
 
-      <div className="position-relative min-vh-100 pt-5 mt-5 com-intro">
+      <div className="position-relative min-vh-100 pt-md-5 mt-md-5 com-intro">
         <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
             <div className="col-md-6 com-intro-text">
@@ -23,8 +23,15 @@ const Community: NextPage = () => {
               <h1 className="text-center">Community</h1>
               <p className="my-3 text-center">Meet our global community of gamers</p>
             </div>
-            <div className="col-sm-8 col-md-6 position-relative text-center com-banner">
-              <Image src="/img/community/moon.png" alt="Satoshi moon" width={445} height={437} layout="responsive" />
+            <div className="col-sm-8 col-md-6 col-xl-4 position-relative text-center com-banner">
+              <Image
+                src="/img/community/moon.png"
+                alt="Satoshi moon"
+                width={445}
+                height={437}
+                layout="responsive"
+                priority
+              />
               <div className="moon-grad">
                 <Image src="/img/community/moon-grad.svg" alt="gradient background" width={685} height={685} />
               </div>
@@ -32,7 +39,14 @@ const Community: NextPage = () => {
           </div>
         </div>
         <div className="w-100 h-auto position-absolute bottom-0 earth-com">
-          <Image src="/img/community/community-bg-1.png" layout="responsive" width={1684} height={525} alt="Earth" />
+          <Image
+            src="/img/community/community-bg-1.png"
+            layout="responsive"
+            width={1684}
+            height={525}
+            alt="Earth"
+            priority
+          />
         </div>
         <span className="earth-grad">
           <Image
@@ -61,12 +75,9 @@ const Community: NextPage = () => {
       </div>
       <SocialCards />
 
-      <div className="container" style={{ maxWidth: '100%', background: '#191b1f' }}>
+      <div className="container" style={{ maxWidth: '100%' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
           <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 550 }}>
-            <span className="dark-gradient-shade">
-              <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
-            </span>
             <section
               style={{
                 alignItems: 'center',
@@ -74,7 +85,7 @@ const Community: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel minItems={2}>
+              <Carousel mobileItems={2}>
                 {CommunityDegenData.map(degen => (
                   <DegenCardItem
                     key={degen.name}
@@ -95,6 +106,7 @@ const Community: NextPage = () => {
                 height={842}
                 layout="responsive"
                 alt="ape degen header"
+                priority
               />
             </div>
             <h1 className="nifty-character-title">

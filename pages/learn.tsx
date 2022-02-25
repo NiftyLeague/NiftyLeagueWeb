@@ -26,6 +26,7 @@ const Learn: NextPage = () => {
                     layout="responsive"
                     src="/img/learn/getting-started.png"
                     width={552}
+                    priority
                   />
                 </div>
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center">
@@ -48,6 +49,7 @@ const Learn: NextPage = () => {
                     layout="responsive"
                     src="/img/learn/gitbook.png"
                     width={552}
+                    priority
                   />
                 </div>
                 <div className="text-center py-sm-5 p-4  px-sm-0 position-relative d-flex flex-column align-items-center ">
@@ -70,6 +72,7 @@ const Learn: NextPage = () => {
                     layout="responsive"
                     src="/img/learn/tutorials.png"
                     width={552}
+                    priority
                   />
                 </div>
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
@@ -94,6 +97,7 @@ const Learn: NextPage = () => {
                     layout="responsive"
                     src="/img/learn/community.png"
                     width={552}
+                    priority
                   />
                 </div>
                 <div className="text-center py-sm-5 p-4 px-sm-0 position-relative d-flex flex-column align-items-center justify-content-center">
@@ -125,7 +129,7 @@ const Learn: NextPage = () => {
           <h2 className="my-3">Frequently Asked Questions</h2>
         </div>
         <MDBAccordion flush className="faq-accordion">
-          <MDBAccordionItem collapseId="flush-collapse1" headerTitle="What is Nifty League?">
+          <MDBAccordionItem collapseId="faq-collapse1" headerTitle="What is Nifty League?">
             Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era
             of play-and-earn by offering a fun and engaging gaming ecosystem. The Niftyverse is centered around
             nostalgia where builders, players, and owners spend time connecting, gaming, and earning in Web3. Learn more{' '}
@@ -135,7 +139,7 @@ const Learn: NextPage = () => {
             .
           </MDBAccordionItem>
           <MDBAccordionItem
-            collapseId="flush-collapse2"
+            collapseId="faq-collapse2"
             headerTitle="What is NFTL and how do I earn it by playing Nifty League
                   games?"
           >
@@ -159,7 +163,7 @@ const Learn: NextPage = () => {
             </a>
             .
           </MDBAccordionItem>
-          <MDBAccordionItem collapseId="flush-collapse3" headerTitle="What is Nifty Smashers?">
+          <MDBAccordionItem collapseId="faq-collapse3" headerTitle="What is Nifty Smashers?">
             Nifty Smashers is the first title offered by Nifty League based off of the popular game Super Smash Bros.
             <br />
             <br />
@@ -167,7 +171,7 @@ const Learn: NextPage = () => {
             takes inspiration from the classic Super Smash Bros game where the objective is to knock your opponents off
             the map to score points.
           </MDBAccordionItem>
-          <MDBAccordionItem collapseId="flush-collapse4" headerTitle="Does it cost money to play your games?">
+          <MDBAccordionItem collapseId="faq-collapse4" headerTitle="Does it cost money to play your games?">
             At the moment you will either need to own or rent a DEGEN to play any games on our platform. A free-2-play
             version will be coming soon enabling players around the world to hop in our game servers and earn a small
             amount of NFTL for playing.
@@ -186,6 +190,7 @@ const Learn: NextPage = () => {
               objectFit="cover"
               src="/img/footer-img.png"
               width={1440}
+              priority
             />
           ) : (
             <Image
@@ -196,6 +201,7 @@ const Learn: NextPage = () => {
               objectFit="cover"
               src="/img/footer-img1.png"
               width={375}
+              priority
             />
           )}
         </div>
