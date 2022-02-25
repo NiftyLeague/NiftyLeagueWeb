@@ -5,7 +5,6 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api';
-import { CMS_NAME } from '../../lib/constants';
 import Container from '../../components/blog/container';
 import Header from '../../components/blog/header';
 import Layout from '../../components/layout';
@@ -34,7 +33,7 @@ export default function PostView({
   }
 
   return (
-    <Layout>
+    <Layout classes={{ root: 'post-pg' }}>
       <Container>
         <Header />
         {router.isFallback ? (
@@ -43,9 +42,7 @@ export default function PostView({
           <>
             <article>
               <Head>
-                <title>
-                  {post.title} | Next.js Blog Example with {CMS_NAME}
-                </title>
+                <title>Nifty League | {post.title}</title>
                 <meta property="og:image" content={post.featuredImage?.node?.sourceUrl as string} />
               </Head>
               <PostHeader

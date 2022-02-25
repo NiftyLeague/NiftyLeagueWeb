@@ -4,8 +4,8 @@ import { Maybe, PostFormatToPostConnectionEdge } from '../../types/generated/gra
 export default function MoreStories({ posts }: { posts?: Maybe<PostFormatToPostConnectionEdge[]> }) {
   return (
     <section>
-      <h2 className="mb-8 text-6xl md:text-7xl fw-bold tracking-tighter leading-tight">More Stories</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 md:col-gap-16 lg:col-gap-32 row-gap-20 md:row-gap-32 mb-32">
+      <h1 className="mb-4 fw-bold more-stories-title">More Stories</h1>
+      <div className="grid mb-5">
         {posts?.map(value => {
           const { node } = value;
           return (
