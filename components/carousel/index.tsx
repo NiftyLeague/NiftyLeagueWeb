@@ -48,7 +48,6 @@ const NiftyCarousel = ({
           items: mobileItems,
         },
       }}
-      ssr={true}
       infinite={true}
       autoPlay={true}
       autoPlaySpeed={isMobileViewOnly ? 4000 : 2000}
