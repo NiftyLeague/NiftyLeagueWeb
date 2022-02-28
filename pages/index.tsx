@@ -10,7 +10,7 @@ import Carousel from '../components/carousel';
 import SponsorCarouselItem from '../components/carousel/SponsorItem';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 
-import { SponsorImageURLs, HomeDegenData } from '../components/carousel/constants';
+import { SPONSORS, HomeDegenData } from '../components/carousel/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -215,8 +215,8 @@ const Home: NextPage = () => {
             }}
           >
             <Carousel mobileItems={2} desktopItems={5} hideGradient>
-              {SponsorImageURLs.map(url => (
-                <SponsorCarouselItem key={url} source={url} />
+              {SPONSORS.map(({ image, url, width, height }) => (
+                <SponsorCarouselItem key={image} source={image} url={url} width={width} height={height} />
               ))}
             </Carousel>
           </section>
