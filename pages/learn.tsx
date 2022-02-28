@@ -15,7 +15,7 @@ const Learn: NextPage = () => {
         <meta name="description" content="Learn how to join and play games at Nifty League" />
       </Head>
 
-      <div className="container pt-5 pt-md-5 d-flex learn-intro align-items-center">
+      <div className="container pt-md-5 pt-md-5">
         <LearnCards />
         <span className="earth-grad">
           <Image
@@ -28,7 +28,7 @@ const Learn: NextPage = () => {
         </span>
       </div>
 
-      <div className="container pb-3 pb-sm-5">
+      <div className="container pb-0 pb-md-5 pt-5">
         <div className="text-center">
           <h2 className="my-3">Frequently Asked Questions</h2>
         </div>
@@ -100,7 +100,7 @@ const Learn: NextPage = () => {
             <Image
               alt="DGEN Network background mobile"
               className="pixelated"
-              height={541}
+              height={500}
               layout="responsive"
               objectFit="cover"
               src="/img/footer-img1.png"

@@ -6,17 +6,19 @@ import cn from 'classnames';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Notification() {
+  const desktop = useMediaQuery('(min-width:768px)');
   return (
     <div className="row d-flex align-items-center m-0 p-0 position-relative notification-frame text-center">
-      <p className="font-14 mb-0 desktop">
-        🚀{' '}
-        <a className="color-blue" href="https://app.niftyleague.com/games/">
-          {' '}
-          The Desktop App{' '}
-        </a>
-        <label className="color-light-grey">is now live for Windows users! </label>{' '}
-        <label className="color-silver">(MacOS is right around the corner - stay tuned)</label>
-      </p>
+      {desktop && (
+        <p className="font-14 mb-0">
+          🚀{'  '}
+          <Link href="/posts/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
+            <a className="color-blue"> Our funding round </a>
+          </Link>
+          <label className="color-light-grey">is now closed! </label>{' '}
+          <label className="color-silver">(We appreciate our DEGENs for the patience - wagmi)</label>
+        </p>
+      )}
       <div className="d-flex position-absolute socials">
         <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
           <svg width="20" height="16" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">

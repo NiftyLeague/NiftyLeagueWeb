@@ -218,16 +218,14 @@ const About: NextPage = () => {
       </Head>
 
       <div className="container about-intro min-vh-100 mt-5 py-5">
-        <div className="row m-0 p-0 pt-5 position-relative d-flex flex-column">
+        <div className="row m-0 p-0 pt-sm-5 position-relative d-flex flex-column">
           <div className="about-intro-content">
-            <h4 className="mt-5 text-m-center">Welcome to</h4>
+            <h4 className="mt-sm-5 text-m-center">Welcome to</h4>
             <h1 className="text-m-center">Nifty League</h1>
-            <p className="mt-sm-2 mt-5 text-m-center p1">
-              Our mission is to create a leading NFT gaming platform through
-              <br /> community governance and development. Nifty League prides itself
-              <br /> on being one of the first GameFi platforms offering interactive
-              <br />
-              play-and-earn games with customizable characters.
+            <p className="mt-5 mt-sm-2 text-m-center p1">
+              Our mission is to create a leading NFT gaming platform through community governance and development. Nifty
+              League prides itself on being one of the first GameFi platforms offering interactive play-and-earn games
+              with customizable characters.
             </p>
             <p className="text-m-center">
               Advance your gaming skills and join our community to earn daily NFTL rewards!
@@ -463,7 +461,7 @@ const About: NextPage = () => {
         </div>
       </div>
       <div className="container my-sm-5 py-sm-5">
-        <div className="row m-0 p-0 position-relative token-play p-sm-5 p-3">
+        <div className="row m-0 p-0 position-relative token-play py-5 p-sm-5 p-3 ">
           <div className="col-md-6">
             <h3>✨ NFTL Token</h3>
             <p className="font-16 mt-5">
@@ -507,7 +505,7 @@ const About: NextPage = () => {
             <Image
               alt="Mars level background mobile"
               className="pixelated"
-              height={500}
+              height={749}
               layout="responsive"
               objectFit="cover"
               src="/img/about/bg-DAO-mb.png"
@@ -521,9 +519,13 @@ const About: NextPage = () => {
           <p className="px-5">
             We will gradually be transferring ownership of the Nifty League to our DAO in order to decentralize the
             platform and encourage devs to help us build! Our vision is to power rapid growth and development through
-            community contributions enabling us to build a gaming platform like no other. Simply put, DAOs are the
-            future. We see only one route to becoming the world&apos;s leading GameFi platform and that&apos;s by
-            building together. 💜
+            community contributions enabling us to build a gaming platform like no other.{' '}
+            {desktop && (
+              <span>
+                Simply put, DAOs are the future. We see only one route to becoming the world&apos;s leading GameFi
+                platform and that&apos;s by building together. 💜
+              </span>
+            )}
           </p>
         </div>
       </div>
