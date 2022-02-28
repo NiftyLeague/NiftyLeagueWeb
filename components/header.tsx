@@ -100,23 +100,51 @@ function Navbar() {
                 <a className="nav-link mx-4">Community</a>
               </Link>
             </li>
-            <li
-              className={cn('nav-item', {
-                ['active']: pathname.includes('learn'),
-              })}
-            >
-              <Link href="/learn">
-                <a className="nav-link mx-4">Learn</a>
+            <li className="nav-item">
+              <Link href="/shop">
+                <a className="nav-link mx-4">Merch</a>
               </Link>
             </li>
             <li
-              className={cn('nav-item', {
-                ['active']: pathname.includes('blog') || pathname.includes('posts'),
+              className={cn('nav-item dropdown', {
+                ['active']: pathname.includes('learn') || pathname.includes('blog') || pathname.includes('posts'),
               })}
             >
-              <Link href="/blog">
-                <a className="nav-link mx-4">Blog</a>
+              <Link href="/learn">
+                <a
+                  className="nav-link dropdown-toggle true mx-4"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Learn
+                </a>
               </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li className={cn('nav-item', { ['inactive']: !pathname.includes('learn') })}>
+                  <Link href="/learn">
+                    <a className="dropdown-item">Overview / FAQ</a>
+                  </Link>
+                </li>
+                <li
+                  className={cn('nav-item', {
+                    ['inactive']: !pathname.includes('blog') && !pathname.includes('posts'),
+                  })}
+                >
+                  <Link href="/blog">
+                    <a className="dropdown-item">Blog</a>
+                  </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li className="nav-item inactive">
+                  <Link href="/docs">
+                    <a className="dropdown-item">Docs</a>
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
           <Link href="/app">
@@ -179,6 +207,11 @@ function MobileNav() {
           <li>
             <Link href="/blog">
               <a>Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/docs">
+              <a>Docs</a>
             </Link>
           </li>
           <li>

@@ -1,6 +1,7 @@
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
@@ -37,9 +38,9 @@ const Learn: NextPage = () => {
             Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era
             of play-and-earn by offering a fun and engaging gaming ecosystem. The Niftyverse is centered around
             nostalgia where builders, players, and owners spend time connecting, gaming, and earning in Web3. Learn more{' '}
-            <a target="_blank" rel="noreferrer" href="https://docs.niftyleague.com/overview/intro">
-              here
-            </a>
+            <Link href="/docs/overview/intro" passHref>
+              <a>here</a>
+            </Link>
             .
           </MDBAccordionItem>
           <MDBAccordionItem
@@ -61,10 +62,10 @@ const Learn: NextPage = () => {
             for purchasing additional in-game items and collectibles.
             <br />
             <br />
-            NFTL Learn more{' '}
-            <a target="_blank" rel="noreferrer" href="https://docs.niftyleague.com/overview/nftl/overview">
-              here
-            </a>
+            Learn more{' '}
+            <Link href="/docs/overview/nftl/overview" passHref>
+              <a>here</a>
+            </Link>
             .
           </MDBAccordionItem>
           <MDBAccordionItem collapseId="faq-collapse3" headerTitle="What is Nifty Smashers?">
@@ -81,6 +82,9 @@ const Learn: NextPage = () => {
             amount of NFTL for playing.
           </MDBAccordionItem>
         </MDBAccordion>
+        <Link href="/docs/faq/general" passHref>
+          <button className="btn theme-btn-aqua mt-md-2 w-100"> More FAQ</button>
+        </Link>
       </div>
 
       <div className="row m-0 p-0 position-relative stay-informed-section">
