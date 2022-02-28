@@ -51,6 +51,10 @@
   height: 48px;
   z-index: 99;
 
+  p {
+    text-align: center;
+  }
+
   .socials {
     justify-content: right;
     top: 11px;
@@ -63,24 +67,6 @@
     a:hover path {
       fill: #620edf;
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .notification-frame {
-    height: 64px;
-  }
-  .notification-frame p {
-    text-align: center;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 550px) {
-  .notification-frame {
-    height: 64px;
-  }
-  .notification-frame p {
-    text-align: center;
   }
 }
 
