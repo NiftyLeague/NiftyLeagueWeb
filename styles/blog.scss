@@ -4,6 +4,10 @@
   line-height: 1.2;
   text-align: left;
 }
+.hero-title,
+.post-preview-title {
+  font-size: 22px;
+}
 .hero-title:hover,
 .post-preview-title:hover {
   text-decoration: underline;
@@ -16,6 +20,10 @@
   row-gap: 5rem;
 }
 @media (min-width: 768px) {
+  .hero-title,
+  .post-preview-title {
+    font-size: 36px;
+  }
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-row-gap: 8rem;
@@ -26,6 +34,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .hero-title,
+  .post-preview-title {
+    font-size: 48px;
+  }
   .grid {
     grid-column-gap: 8rem;
     -moz-column-gap: 8rem;
@@ -73,15 +85,32 @@
 }
 
 .post-pg {
+  header .eclipse-location {
+    display: none;
+  }
   main {
     padding-top: 150px;
   }
+  a {
+    color: #5e72eb;
+  }
   .blog-header {
-    top: 160px;
+    top: 140px;
     position: absolute;
     h3:hover {
       text-decoration: underline;
       cursor: pointer;
+    }
+  }
+  .post-title {
+    font-size: 22px;
+  }
+  @media (min-width: 768px) {
+    .blog-header {
+      top: 160px;
+    }
+    .post-title {
+      font-size: 48px;
     }
   }
   .has-text-align-left {
@@ -184,7 +213,7 @@
 
   .wp-block-button a,
   .wp-block-file a.wp-block-file__button {
-    background-color: rgb(59 130 246);
+    background-color: #5e72eb;
     padding: 0.5rem 1rem;
     text-decoration: none;
     color: white;
@@ -192,7 +221,7 @@
 
   .wp-block-button a:hover,
   .wp-block-file a.wp-block-file__button:hover {
-    background-color: rgb(96 165 250);
+    background-color: #5e72eb;
     cursor: pointer;
   }
 
