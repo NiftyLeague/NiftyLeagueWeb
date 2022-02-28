@@ -8,7 +8,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 function Notification() {
   return (
     <div className="row d-flex align-items-center m-0 p-0 position-relative notification-frame text-center">
-      <p className="font-14 mb-0">
+      <p className="font-14 mb-0 desktop">
         🚀{' '}
         <a className="color-blue" href="https://app.niftyleague.com/games/">
           {' '}
