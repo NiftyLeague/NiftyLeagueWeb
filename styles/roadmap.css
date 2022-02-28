@@ -168,6 +168,10 @@ Timeline
 
 -------------------------------- */
 
+a {
+  color: #5e72eb;
+}
+
 .roadmap-title {
   z-index: 2;
   position: absolute;

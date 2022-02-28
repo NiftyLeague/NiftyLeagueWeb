@@ -30,7 +30,7 @@ const LearnCard = ({ btnText, image, link, subtitle, title }: LearnCardProps) =>
 
 const LearnCards = () => {
   return (
-    <div className="row pt-3">
+    <div className="row pt-3 pt-lg-5 mt-lg-3">
       {LEARN_CARDS.map(({ btnText, image, link, subtitle, title }) => (
         <LearnCard key={title} btnText={btnText} image={image} link={link} subtitle={subtitle} title={title} />
       ))}
