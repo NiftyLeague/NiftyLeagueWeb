@@ -66,7 +66,8 @@ label {
   font-weight: 400;
 }
 a {
-  font-size: 16px;
+  color: #5e72eb;
+  font-size: 20px;
 }
 
 /************************************* Font Sizes, Colors, Backgrounds *************************************/
@@ -135,6 +136,10 @@ a {
 }
 .uppercase {
   text-transform: uppercase;
+}
+
+.accordion-body {
+  font-size: 20px;
 }
 
 /************************************* Themes Items *************************************/
@@ -1001,6 +1006,9 @@ a {
   }
   p br {
     display: none;
+  }
+  .accordion-body {
+    font-size: 18px;
   }
   .text-m-left {
     text-align: left;

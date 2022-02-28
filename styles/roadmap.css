@@ -3,11 +3,11 @@
 Background
 
 -------------------------------- */
-.space {
+/* .space {
   background-image: url('/img/roadmap/space.png');
   display: flex;
   flex-direction: column;
-}
+} */
 .stars {
   background-image: url('/img/roadmap/stars_01.png');
   display: flex;
@@ -168,10 +168,6 @@ Timeline
 
 -------------------------------- */
 
-a {
-  color: #5e72eb;
-}
-
 .roadmap-title {
   z-index: 2;
   position: absolute;
@@ -229,7 +225,7 @@ a {
 .cd-timeline-checkpoint {
   position: absolute;
   top: 8px;
-  left: 12px;
+  left: 14px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -243,11 +239,6 @@ a {
 }
 .done-icon {
   font-size: 20px;
-}
-
-.cd-timeline-content h2 {
-  font-size: 20px;
-  font-size: 1.25rem;
 }
 
 .cd-timeline-content {
@@ -325,7 +316,7 @@ a {
 .cd-timeline-content::before {
   content: '';
   position: absolute;
-  top: 16px;
+  top: 20px;
   right: 100%;
   height: 0;
   width: 0;
@@ -341,14 +332,6 @@ a {
 }
 
 @media only screen and (min-width: 768px) {
-  .cd-timeline-content p {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-content .cd-read-more {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
   .cd-timeline-content .about-video .play-video img {
     width: 125px;
   }
@@ -406,9 +389,6 @@ a {
     right: 100%;
     border-color: transparent;
     border-right-color: #333c42;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
   }
   .cd-timeline-block .cd-timeline-content .timeline-content-img {
     display: block;
