@@ -101,11 +101,9 @@ const Home: NextPage = () => {
               <Image
                 alt="Andy DEGEN"
                 className="pixelated"
-                height={740}
                 layout="fill"
                 objectFit="cover"
                 src="/img/browse-single-1-mob.svg"
-                width={586}
               />
             </div>
 
@@ -113,22 +111,18 @@ const Home: NextPage = () => {
               <Image
                 alt="Spike DEGEN"
                 className="pixelated"
-                height={476}
                 layout="fill"
                 objectFit="cover"
                 src="/img/browse-single-3-mob.svg"
-                width={378}
               />
             </div>
             <div className="browse-single browse-snarfy desktop">
               <Image
                 alt="Snarfy DEGEN"
                 className="pixelated"
-                height={637}
                 layout="fill"
                 objectFit="cover"
                 src="/img/browse-single-2-mob.svg"
-                width={506}
               />
             </div>
           </div>
