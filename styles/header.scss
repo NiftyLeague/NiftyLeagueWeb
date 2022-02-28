@@ -11,6 +11,9 @@
   top: 30px;
   max-width: 900px;
 }
+.learn-pg .header .eclipse-location {
+  z-index: -1;
+}
 .com-pg .header .eclipse-location {
   max-width: 950px;
 }
@@ -87,6 +90,24 @@
 }
 .nav-item.active a {
   color: #620edf;
+}
+
+.dropdown-menu {
+  background-color: #191b1f !important;
+  color: white;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #232529 !important;
+  color: white;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown .dropdown-menu {
+  margin-top: 0;
+}
+.nav-item.inactive a {
+  color: white !important;
 }
 
 /************************************* Mobile Nav *************************************/

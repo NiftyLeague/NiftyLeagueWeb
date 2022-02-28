@@ -1,5 +1,6 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
@@ -8,7 +9,6 @@ import DegenCardItem from '../components/carousel/DegenCardItem';
 import TeamCardItem from '../components/carousel/TeamCardItem';
 
 import { AboutDegenData, TeamData } from '../components/carousel/constants';
-import Link from 'next/link';
 
 const TeamDesktop = () => {
   return (
@@ -222,19 +222,18 @@ const About: NextPage = () => {
           <div className="about-intro-content">
             <h4 className="mt-sm-5 text-m-center">Welcome to</h4>
             <h1 className="text-m-center">Nifty League</h1>
-            <p className="mt-5 mt-sm-2 text-m-center p1">
-              Our mission is to create a leading NFT gaming platform through community governance and development. Nifty
-              League prides itself on being one of the first GameFi platforms offering interactive play-and-earn games
-              with customizable characters.
+            <p className="mt-5 mt-sm-3 text-m-center p1">
+              Nifty League is a game studio at the cutting edge of Web3. Our mission is to create a leading NFT gaming
+              platform through community governance and development while always putting quality before hype.
             </p>
             <p className="text-m-center">
               Advance your gaming skills and join our community to earn daily NFTL rewards!
             </p>
 
             <div className="display-buttons my-3 d-flex desktop">
-              <a href="https://docs.niftyleague.com/" target="_blank" rel="noreferrer">
+              <Link href="/docs" passHref>
                 <button className="btn theme-btn-aqua mx-sm-2">Read our docs</button>
-              </a>
+              </Link>
               <Link href="/roadmap" passHref>
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
               </Link>
@@ -243,9 +242,9 @@ const About: NextPage = () => {
               </a> */}
             </div>
             <div className="display-buttons my-3 d-flex mobile">
-              <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-aqua mx-sm-2">Browse Collection</button>
-              </a>
+              <Link href="/docs" passHref>
+                <button className="btn theme-btn-aqua mx-sm-2">Read our docs</button>
+              </Link>
             </div>
           </div>
 
@@ -334,7 +333,7 @@ const About: NextPage = () => {
         </div>
       </div>
 
-      <div className="video-details row mt-5 p-0 position-relative text-center">
+      <div id="smashers" className="video-details row mt-5 p-0 position-relative text-center">
         <div className="container position-relative" style={{ zIndex: 1 }}>
           <h2 className="mt-sm-5">Nifty Smashers</h2>
           <h4 className="my-sm-2 my-4">The First NFT Brawler on Ethereum</h4>
@@ -412,9 +411,11 @@ const About: NextPage = () => {
               DEGENs were hand-created by members of our community who minted, based on available traits and
               accessories. The final 100 DEGENs will be given to elite players in the Nifty League community.
             </p>
-            <a href="https://docs.niftyleague.com/overview/degens/about" target="_blank" rel="noreferrer">
-              <button className="btn theme-btn-aqua w-auto my-5">learn more about DEGEN NFTs</button>
-            </a>
+            <Link href="/docs/overview/degens/about" passHref>
+              <button id="rentals" className="btn theme-btn-aqua w-auto my-5">
+                learn more about DEGEN NFTs
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -427,9 +428,9 @@ const About: NextPage = () => {
               renters will be able to play Nifty Smashers and earn NFTL, and explore the Niftyverse. As a renter, you
               keep 70% of the in-game earnings, while 30% is distributed to the owner via a smart contract.
             </p>
-            <a href="https://docs.niftyleague.com/guides/rentals/rental-overview" target="_blank" rel="noreferrer">
+            <Link href="/docs/guides/rentals/rental-overview" passHref>
               <button className="btn theme-btn-aqua w-auto my-5">learn more about rentals</button>
-            </a>
+            </Link>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
             <div className="nifty-rental-banner pixelated">
@@ -460,7 +461,7 @@ const About: NextPage = () => {
           </span>
         </div>
       </div>
-      <div className="container my-sm-5 py-sm-5">
+      <div id="play-and-earn" className="container my-sm-5 py-sm-5">
         <div className="row m-0 p-0 position-relative token-play py-5 p-sm-5 p-3 ">
           <div className="col-md-6">
             <h3>✨ NFTL Token</h3>
@@ -471,9 +472,9 @@ const About: NextPage = () => {
               be expanded to be used for purchasing additional in-game items and collectibles. NFTL is currently
               available to trade and stake on SushiSwap.
             </p>
-            <a href="https://docs.niftyleague.com/overview/nftl/overview" target="_blank" rel="noreferrer">
+            <Link href="/docs/overview/nftl/overview" passHref>
               <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
-            </a>
+            </Link>
           </div>
           <div className="col-md-6">
             <h3 className="mt-5 mt-md-0">🥊 Play-and-earn</h3>
@@ -483,9 +484,9 @@ const About: NextPage = () => {
               to purchase in-game items and bonuses, trade with other players, or &apos;cash out&apos; of the ecosystem
               for other cryptocurrencies.
             </p>
-            <a href="https://docs.niftyleague.com/overview/p2e/daily-rewards" target="_blank" rel="noreferrer">
+            <Link href="/docs/overview/p2e/daily-rewards" passHref>
               <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
