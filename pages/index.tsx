@@ -198,7 +198,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="container p-0 py-5 py-md-2 my-5 my-sm-0" style={{ maxWidth: '100%' }}>
+      {/* <div className="container p-0 py-5 py-md-2 my-5 my-sm-0" style={{ maxWidth: '100%' }}>
         <div
           className="row m-0 p-0 position relative py-sm-5 d-flex align-items-center justify-content-center text-center"
           style={{ background: '#191B1F' }}
@@ -221,7 +221,7 @@ const Home: NextPage = () => {
             </Carousel>
           </section>
         </div>
-      </div>
+      </div> */}
 
       <div className="container" style={{ maxWidth: '100%', background: '#191B1F' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
