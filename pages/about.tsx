@@ -482,7 +482,8 @@ const About: NextPage = () => {
               Players earn NFTL by winning matches or tournaments in our games such as Nifty Smashers. The more you play
               and improve your skills the better your chances of earning NFTL tokens through gameplay! NFTL can be used
               to purchase in-game items and bonuses, trade with other players, or &apos;cash out&apos; of the ecosystem
-              for other cryptocurrencies.
+              for other cryptocurrencies. Your earnings are determined by a number of multipliers such as those from
+              special backgrounds or items.
             </p>
             <Link href="/docs/overview/p2e/daily-rewards" passHref>
               <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
