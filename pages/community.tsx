@@ -16,12 +16,12 @@ const Community: NextPage = () => {
       </Head>
 
       <div className="position-relative min-vh-100 pt-md-5 mt-md-5 com-intro">
-        <div className="container pt-5 mt-5 px-sm-5" style={{ maxWidth: '90%' }}>
+        <div className="container pt-5 mt-sm-5 px-0 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
-            <div className="col-md-6 com-intro-text">
-              <h4 className="mt-5 text-center">Nifty League</h4>
-              <h1 className="text-center">Community</h1>
-              <p className="my-3 text-center">Meet our global community of gamers</p>
+            <div className="col-md-6 px-0 com-intro-text">
+              <h4 className="mt-5">Nifty League</h4>
+              <h1>Community</h1>
+              <p className="my-3">Meet our global community of gamers</p>
             </div>
             <div className="col-sm-8 col-md-6 col-xl-4 position-relative text-center com-banner">
               <Image

@@ -1,15 +1,17 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { LEARN_CARDS } from './constants';
 
 interface LearnCardProps {
   btnText: string;
+  external?: boolean;
   image: string;
   link: string;
   subtitle: string;
   title: string;
 }
 
-const LearnCard = ({ btnText, image, link, subtitle, title }: LearnCardProps) => {
+const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCardProps) => {
   return (
     <div className="learn-content-wrapper col-12 col-md-6 py-2">
       <div className="learn-content position-relative d-flex align-items-center">
@@ -19,9 +21,15 @@ const LearnCard = ({ btnText, image, link, subtitle, title }: LearnCardProps) =>
         <div className="text-center position-relative w-100 d-flex flex-column align-items-center p-4 p-lg-5">
           <h3 className="text-m-center">{title}</h3>
           <p className="px-4 font-16 text-center">{subtitle}</p>
-          <a target="_blank" rel="noreferrer" href={link}>
-            <button className="btn theme-btn-aqua mt-md-2">{btnText}</button>
-          </a>
+          {external ? (
+            <a target="_blank" rel="noreferrer" href={link}>
+              <button className="btn theme-btn-aqua mt-md-2">{btnText}</button>
+            </a>
+          ) : (
+            <Link href={link} passHref>
+              <button className="btn theme-btn-aqua mt-md-2">{btnText}</button>
+            </Link>
+          )}
         </div>
       </div>
     </div>
@@ -30,9 +38,17 @@ const LearnCard = ({ btnText, image, link, subtitle, title }: LearnCardProps) =>
 
 const LearnCards = () => {
   return (
-    <div className="row pt-3">
-      {LEARN_CARDS.map(({ btnText, image, link, subtitle, title }) => (
-        <LearnCard key={title} btnText={btnText} image={image} link={link} subtitle={subtitle} title={title} />
+    <div className="row pt-3 pt-lg-5 mt-lg-3">
+      {LEARN_CARDS.map(({ btnText, external, image, link, subtitle, title }) => (
+        <LearnCard
+          key={title}
+          btnText={btnText}
+          external={external}
+          image={image}
+          link={link}
+          subtitle={subtitle}
+          title={title}
+        />
       ))}
     </div>
   );

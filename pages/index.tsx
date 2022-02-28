@@ -10,7 +10,7 @@ import Carousel from '../components/carousel';
 import SponsorCarouselItem from '../components/carousel/SponsorItem';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 
-import { SponsorImageURLs, HomeDegenData } from '../components/carousel/constants';
+import { SPONSORS, HomeDegenData } from '../components/carousel/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -91,9 +91,10 @@ const Home: NextPage = () => {
           priority
         />
         <div className="container d-flex flex-column text-center position-relative my-5" style={{ zIndex: 2 }}>
-          <h2 className="font-48 my-5 px-5">
-            Our 9.9k DEGEN NFTs act as players in our games such as Nifty Smashers. Our ecosystem is centered around
-            nostalgia - where builders, players, and owners spend time connecting, gaming, and earning in Web3.
+          <h2 className="font-48 mt-5 mb-2 mb-sm-5 px-sm-5">
+            Our 9.9k DEGEN NFTs are more than just avatars. Each DEGEN unlocks exclusive access to our ecosystem
+            centered around nostalgia - where builders, players, and owners spend time connecting, gaming, and earning
+            in Web3.
           </h2>
           <div className="position-relative flex-grow-1">
             <div className="browse-single browse-andy desktop">
@@ -126,13 +127,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="position-relative flex-grow-1 league-floating-nfts mobile">
-            <Image
-              alt="Mobile group floating degens"
-              layout="fill"
-              objectFit="cover"
-              src="/img/browse-single-mob.svg"
-            />
+          <div className="position-relative flex-grow-1 justify-content-center league-floating-nfts mobile">
+            <Image alt="Mobile group floating degens" width={541} height={488} src="/img/browse-single-mob.png" />
           </div>
         </div>
       </div>
@@ -161,7 +157,7 @@ const Home: NextPage = () => {
                 />
               </div>
             )}
-            <div className="col-sm-6">
+            <div className="col-md-6">
               <h2 className="my-3 text-m-left">Nifty League Ecosystem</h2>
               <MDBAccordion flush className="league-special-accordion" initialActive="flush-collapse1">
                 <MDBAccordionItem collapseId="flush-collapse1" headerTitle="DEGEN Rentals">
@@ -178,22 +174,22 @@ const Home: NextPage = () => {
                   )}
                   Players can rent a DEGEN from owners directly via smart contract technology, opening up game play at
                   an attractive rate for players globally.{' '}
-                  <Link href="/about" passHref>
-                    <button className="btn theme-btn-white">Learn More</button>
+                  <Link href="/about#rentals" passHref>
+                    <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
                 <MDBAccordionItem collapseId="flush-collapse2" headerTitle="Play-and-earn">
                   Players earn NFTL by landing hits and winning matches in our game Nifty Smashers. Join in on weekly
                   community tournaments sponsored by some amazing rewards!{' '}
-                  <Link href="/about" passHref>
-                    <button className="btn theme-btn-white">Learn More</button>
+                  <Link href="/about#play-and-earn" passHref>
+                    <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
                 <MDBAccordionItem collapseId="flush-collapse3" headerTitle="Games">
                   Check our roadmap for some more exciting games coming in 2022! Get playing immediately with our first
                   title, Nifty Smashers, based off of the popular game Super Smash Bros.
-                  <Link href="/about" passHref>
-                    <button className="btn theme-btn-white">Learn More</button>
+                  <Link href="/about#smashers" passHref>
+                    <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
               </MDBAccordion>
@@ -202,7 +198,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="container p-0" style={{ maxWidth: '100%' }}>
+      {/* <div className="container p-0 py-5 py-md-2 my-5 my-sm-0" style={{ maxWidth: '100%' }}>
         <div
           className="row m-0 p-0 position relative py-sm-5 d-flex align-items-center justify-content-center text-center"
           style={{ background: '#191B1F' }}
@@ -218,14 +214,14 @@ const Home: NextPage = () => {
               margin: '0 auto',
             }}
           >
-            <Carousel desktopItems={5} hideGradient>
-              {SponsorImageURLs.map(url => (
-                <SponsorCarouselItem key={url} source={url} />
+            <Carousel mobileItems={2} desktopItems={5} hideGradient>
+              {SPONSORS.map(({ image, url, width, height }) => (
+                <SponsorCarouselItem key={image} source={image} url={url} width={width} height={height} />
               ))}
             </Carousel>
           </section>
         </div>
-      </div>
+      </div> */}
 
       <div className="container" style={{ maxWidth: '100%', background: '#191B1F' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
@@ -308,7 +304,7 @@ const Home: NextPage = () => {
             <Image
               alt="DGEN Network background mobile"
               className="pixelated"
-              height={541}
+              height={500}
               layout="responsive"
               objectFit="cover"
               src="/img/footer-img1.png"

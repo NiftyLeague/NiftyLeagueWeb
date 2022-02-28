@@ -1,3 +1,7 @@
+.header a {
+  font-size: 16px;
+}
+
 .header .eclipse-location {
   left: 0;
   top: 185px;
@@ -10,6 +14,10 @@
 .about-pg .header .eclipse-location {
   top: 30px;
   max-width: 900px;
+}
+.learn-pg .header .eclipse-location,
+.roadmap-pg .header .eclipse-location {
+  z-index: -1;
 }
 .com-pg .header .eclipse-location {
   max-width: 950px;
@@ -51,6 +59,10 @@
   height: 48px;
   z-index: 99;
 
+  p {
+    text-align: center;
+  }
+
   .socials {
     justify-content: right;
     top: 11px;
@@ -63,24 +75,6 @@
     a:hover path {
       fill: #620edf;
     }
-  }
-}
-
-@media (max-width: 768px) {
-  .notification-frame {
-    height: 64px;
-  }
-  .notification-frame p {
-    text-align: center;
-  }
-}
-
-@media (orientation: landscape) and (max-height: 550px) {
-  .notification-frame {
-    height: 64px;
-  }
-  .notification-frame p {
-    text-align: center;
   }
 }
 
@@ -101,6 +95,24 @@
 }
 .nav-item.active a {
   color: #620edf;
+}
+
+.dropdown-menu {
+  background-color: #191b1f !important;
+  color: white;
+}
+.dropdown-menu > li > a:hover {
+  background-color: #232529 !important;
+  color: white;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+.dropdown .dropdown-menu {
+  margin-top: 0;
+}
+.nav-item.inactive a {
+  color: white !important;
 }
 
 /************************************* Mobile Nav *************************************/
