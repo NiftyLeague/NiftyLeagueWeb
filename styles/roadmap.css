@@ -3,11 +3,11 @@
 Background
 
 -------------------------------- */
-.space {
+/* .space {
   background-image: url('/img/roadmap/space.png');
   display: flex;
   flex-direction: column;
-}
+} */
 .stars {
   background-image: url('/img/roadmap/stars_01.png');
   display: flex;
@@ -172,7 +172,7 @@ Timeline
   z-index: 2;
   position: absolute;
   width: 100%;
-  margin-top: 140px;
+  margin-top: 100px;
   color: white;
 }
 
@@ -205,16 +205,6 @@ Timeline
   width: 4px;
   background: #620edf;
 }
-@media only screen and (min-width: 1170px) {
-  #cd-timeline {
-    margin-top: 16em;
-    margin-bottom: 3em;
-  }
-  #cd-timeline::before {
-    left: 50%;
-    margin-left: -2px;
-  }
-}
 
 .cd-timeline-block {
   position: relative;
@@ -231,22 +221,11 @@ Timeline
 .cd-timeline-block:last-child {
   margin-bottom: 0;
 }
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-block {
-    margin: 4em 0;
-  }
-  .cd-timeline-block:first-child {
-    margin-top: 0;
-  }
-  .cd-timeline-block:last-child {
-    margin-bottom: 0;
-  }
-}
 
 .cd-timeline-checkpoint {
   position: absolute;
   top: 8px;
-  left: 12px;
+  left: 14px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -258,19 +237,6 @@ Timeline
 .cd-timeline-checkpoint.completed {
   background: linear-gradient(to left, #4faa5c, #225953);
 }
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-checkpoint {
-    width: 30px;
-    height: 30px;
-    left: 50%;
-    margin-left: -15px;
-    margin-top: 15px;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-  }
-}
-
 .done-icon {
   font-size: 20px;
 }
@@ -310,6 +276,9 @@ Timeline
     display: block;
     width: 100%;
   }
+  .roadmap-title {
+    font-size: 24px;
+  }
 }
 .cd-timeline-content .content-skills {
   font-size: 12px;
@@ -347,7 +316,7 @@ Timeline
 .cd-timeline-content::before {
   content: '';
   position: absolute;
-  top: 16px;
+  top: 20px;
   right: 100%;
   height: 0;
   width: 0;
@@ -363,23 +332,32 @@ Timeline
 }
 
 @media only screen and (min-width: 768px) {
-  .cd-timeline-content h2 {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-  .cd-timeline-content p {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-  .cd-timeline-content .cd-read-more {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
   .cd-timeline-content .about-video .play-video img {
     width: 125px;
   }
 }
 @media only screen and (min-width: 1170px) {
+  .roadmap-title {
+    margin-top: 140px;
+  }
+  #cd-timeline {
+    margin-top: 16em;
+    margin-bottom: 3em;
+  }
+  #cd-timeline::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+  .cd-timeline-checkpoint {
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: 15px;
+    /* Force Hardware Acceleration in WebKit */
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+  }
   .cd-timeline-content {
     color: white;
     margin-left: 0;
@@ -393,6 +371,15 @@ Timeline
     border-color: transparent;
     border-left-color: #333c42;
   }
+  .cd-timeline-block {
+    margin: 4em 0;
+  }
+  .cd-timeline-block:first-child {
+    margin-top: 0;
+  }
+  .cd-timeline-block:last-child {
+    margin-bottom: 0;
+  }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
   }
@@ -402,9 +389,6 @@ Timeline
     right: 100%;
     border-color: transparent;
     border-right-color: #333c42;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
   }
   .cd-timeline-block .cd-timeline-content .timeline-content-img {
     display: block;
