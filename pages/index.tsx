@@ -174,21 +174,21 @@ const Home: NextPage = () => {
                   )}
                   Players can rent a DEGEN from owners directly via smart contract technology, opening up game play at
                   an attractive rate for players globally.{' '}
-                  <Link href="/about" passHref>
+                  <Link href="/about#rentals" passHref>
                     <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
                 <MDBAccordionItem collapseId="flush-collapse2" headerTitle="Play-and-earn">
                   Players earn NFTL by landing hits and winning matches in our game Nifty Smashers. Join in on weekly
                   community tournaments sponsored by some amazing rewards!{' '}
-                  <Link href="/about" passHref>
+                  <Link href="/about#play-and-earn" passHref>
                     <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
                 <MDBAccordionItem collapseId="flush-collapse3" headerTitle="Games">
                   Check our roadmap for some more exciting games coming in 2022! Get playing immediately with our first
                   title, Nifty Smashers, based off of the popular game Super Smash Bros.
-                  <Link href="/about" passHref>
+                  <Link href="/about#smashers" passHref>
                     <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
