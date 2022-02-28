@@ -191,6 +191,7 @@ a {
 .spons-single {
   padding: 25px 40px;
   text-align: center;
+  /* max-height: 100px; */
 }
 
 .degens-slider .slick-arrow.slick-next {
@@ -878,7 +879,7 @@ a {
   z-index: 1;
   padding: 0;
   width: 100vw;
-  height: 390px;
+  height: 350px;
 }
 .baker-shade > span {
   position: absolute !important;
