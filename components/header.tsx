@@ -6,17 +6,19 @@ import cn from 'classnames';
 import useMediaQuery from '@mui/material/useMediaQuery';
 
 function Notification() {
+  const desktop = useMediaQuery('(min-width:768px)');
   return (
     <div className="row d-flex align-items-center m-0 p-0 position-relative notification-frame text-center">
-      <p className="font-14 mb-0">
-        🚀{' '}
-        <a className="color-blue" href="https://app.niftyleague.com/games/">
-          {' '}
-          The Desktop App{' '}
-        </a>
-        <label className="color-light-grey">is now live for Windows users! </label>{' '}
-        <label className="color-silver">(MacOS is right around the corner - stay tuned)</label>
-      </p>
+      {desktop && (
+        <p className="font-14 mb-0">
+          🚀{'  '}
+          <Link href="/posts/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
+            <a className="color-blue"> Our funding round </a>
+          </Link>
+          <label className="color-light-grey">is now closed! </label>{' '}
+          <label className="color-silver">(We appreciate our DEGENs for the patience - wagmi)</label>
+        </p>
+      )}
       <div className="d-flex position-absolute socials">
         <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
           <svg width="20" height="16" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -98,23 +100,51 @@ function Navbar() {
                 <a className="nav-link mx-4">Community</a>
               </Link>
             </li>
-            <li
-              className={cn('nav-item', {
-                ['active']: pathname.includes('learn'),
-              })}
-            >
-              <Link href="/learn">
-                <a className="nav-link mx-4">Learn</a>
+            <li className="nav-item">
+              <Link href="/shop">
+                <a className="nav-link mx-4">Merch</a>
               </Link>
             </li>
             <li
-              className={cn('nav-item', {
-                ['active']: pathname.includes('blog') || pathname.includes('posts'),
+              className={cn('nav-item dropdown', {
+                ['active']: pathname.includes('learn') || pathname.includes('blog') || pathname.includes('posts'),
               })}
             >
-              <Link href="/blog">
-                <a className="nav-link mx-4">Blog</a>
+              <Link href="/learn">
+                <a
+                  className="nav-link dropdown-toggle true mx-4"
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Learn
+                </a>
               </Link>
+              <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li className={cn('nav-item', { ['inactive']: !pathname.includes('learn') })}>
+                  <Link href="/learn">
+                    <a className="dropdown-item">Overview / FAQ</a>
+                  </Link>
+                </li>
+                <li
+                  className={cn('nav-item', {
+                    ['inactive']: !pathname.includes('blog') && !pathname.includes('posts'),
+                  })}
+                >
+                  <Link href="/blog">
+                    <a className="dropdown-item">Blog</a>
+                  </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li className="nav-item inactive">
+                  <Link href="/docs">
+                    <a className="dropdown-item">Docs</a>
+                  </Link>
+                </li>
+              </ul>
             </li>
           </ul>
           <Link href="/app">
@@ -177,6 +207,11 @@ function MobileNav() {
           <li>
             <Link href="/blog">
               <a>Blog</a>
+            </Link>
+          </li>
+          <li>
+            <Link href="/docs">
+              <a>Docs</a>
             </Link>
           </li>
           <li>

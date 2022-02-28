@@ -1,11 +1,23 @@
 import Image from 'next/image';
 
-export const SponsorImageURLs = [
-  '/img/spons2.png',
-  '/img/spons3.png',
-  '/img/spons4.png',
-  '/img/spons5.png',
-  '/img/spons6.png',
+export const SPONSORS = [
+  { image: '/img/sponsors/rse.png', url: 'https://rseventures.com/', width: 300, height: 98 },
+  { image: '/img/sponsors/lerer.png', url: 'https://www.lererhippeau.com/', width: 2000, height: 153 },
+  { image: '/img/sponsors/spartan.png', url: 'https://www.spartangroup.io/index.html', width: 473, height: 157 },
+  { image: '/img/sponsors/vayner2.png', url: 'https://vaynerfund.com/', width: 684, height: 684 },
+  { image: '/img/sponsors/PVG.png', url: 'https://www.privateventuresgroup.com/', width: 496, height: 308 },
+  { image: '/img/sponsors/avocado.png', url: 'https://avocadoguild.com/', width: 578, height: 194 },
+  { image: '/img/sponsors/attn-evos.png', url: 'https://careers.attn.sg/', width: 800, height: 232 },
+  { image: '/img/sponsors/advancit.png', url: 'https://www.advancitcapital.com/', width: 330, height: 71 },
+  {
+    image: '/img/sponsors/matt-kalish.png',
+    url: 'https://www.linkedin.com/in/matt-kalish-529ab33/',
+    width: 299,
+    height: 54,
+  },
+  { image: '/img/sponsors/y2z.png', url: 'https://y2z.io/', width: 289, height: 147 },
+  { image: '/img/sponsors/teoh.png', url: 'https://teohcapital.com/', width: 749, height: 339 },
+  { image: '/img/sponsors/3SE.png', url: 'https://www.laconiacapitalgroup.com/', width: 135, height: 65 },
 ];
 
 export const HomeDegenData = [

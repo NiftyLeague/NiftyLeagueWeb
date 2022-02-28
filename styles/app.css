@@ -66,7 +66,8 @@ label {
   font-weight: 400;
 }
 a {
-  font-size: 16px;
+  color: #5e72eb;
+  font-size: 20px;
 }
 
 /************************************* Font Sizes, Colors, Backgrounds *************************************/
@@ -137,6 +138,10 @@ a {
   text-transform: uppercase;
 }
 
+.accordion-body {
+  font-size: 20px;
+}
+
 /************************************* Themes Items *************************************/
 .theme-btn-white {
   color: #620edf;
@@ -191,6 +196,7 @@ a {
 .spons-single {
   padding: 25px 40px;
   text-align: center;
+  /* max-height: 100px; */
 }
 
 .degens-slider .slick-arrow.slick-next {
@@ -356,9 +362,6 @@ a {
 
 /*************************************** Learn **********************************************/
 
-.learn-pg .learn-intro {
-  min-height: 75vh;
-}
 .learn-content-wrapper {
   max-height: 310px;
 }
@@ -382,11 +385,17 @@ a {
 .faq-accordion .accordion-header button {
   color: #620edf;
   background-color: transparent;
-  font-size: 22px;
+  font-size: 16px;
+  line-height: 1.75rem;
   font-weight: 400;
   font-family: 'Press Start 2P', sans-serif;
   text-shadow: 0px 4px 144px rgb(0 0 0 / 50%);
   padding: 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .faq-accordion .accordion-header button {
+    font-size: 22px;
+  }
 }
 
 /*************************************** Community **********************************************/
@@ -404,6 +413,15 @@ a {
 .com-intro-text h4 {
   white-space: nowrap;
 }
+.com-intro-text {
+  text-align: center !important;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .com-intro-text {
+    text-align: left !important;
+  }
+}
+
 .community-data {
   border-radius: 8px;
   background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
@@ -651,6 +669,22 @@ a {
   max-width: 95%;
 }
 
+@media (max-width: 786px) {
+  .video-detail-container iframe {
+    max-height: 600px;
+  }
+}
+@media (max-width: 615px) {
+  .video-detail-container iframe {
+    max-height: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .video-detail-container iframe {
+    max-height: 350px;
+  }
+}
+
 /*************************************** Home **********************************************/
 
 .home-intro {
@@ -754,8 +788,9 @@ a {
   position: absolute;
   top: 5%;
   left: 8%;
-  width: 350px;
+  width: 330px;
   height: 100%;
+  min-height: 245px;
 }
 .browse-snarfy {
   position: absolute;
@@ -763,6 +798,7 @@ a {
   left: 40%;
   width: 285px;
   height: 100%;
+  min-height: 215px;
 }
 .browse-spike {
   position: absolute;
@@ -770,6 +806,7 @@ a {
   left: 58%;
   width: 220px;
   height: 100%;
+  min-height: 165px;
 }
 
 .league-floating-nfts {
@@ -781,25 +818,31 @@ a {
   .browse-andy {
     top: 0;
     width: 420px;
+    min-height: 312px;
   }
   .browse-snarfy {
     top: 18%;
     width: 350px;
+    min-height: 260px;
   }
   .browse-spike {
     width: 275px;
+    min-height: 205px;
   }
 }
 
 @media (min-width: 1200px) {
   .browse-andy {
     width: 500px;
+    min-height: 375px;
   }
   .browse-snarfy {
     width: 400px;
+    min-height: 300px;
   }
   .browse-spike {
     width: 320px;
+    min-height: 240px;
   }
 }
 
@@ -841,7 +884,7 @@ a {
   z-index: 1;
   padding: 0;
   width: 100vw;
-  height: 390px;
+  height: 350px;
 }
 .baker-shade > span {
   position: absolute !important;
@@ -964,6 +1007,9 @@ a {
   p br {
     display: none;
   }
+  .accordion-body {
+    font-size: 18px;
+  }
   .text-m-left {
     text-align: left;
   }
@@ -1015,8 +1061,8 @@ a {
     position: relative;
   }
   .about-nifty-degens h2,
-  h4,
-  p {
+  .about-nifty-degens h4,
+  .about-nifty-degens p {
     text-align: left;
   }
   .DAO-section h1 {
@@ -1044,7 +1090,7 @@ a {
     padding-bottom: 60px !important;
   }
   .stay-informed-section {
-    margin-top: 160px !important;
+    margin-top: 100px !important;
   }
   .discord-btn {
     max-width: 250px;
@@ -1097,9 +1143,6 @@ a {
   .icons-placement img {
     max-width: 145px;
     height: auto;
-  }
-  .about-pg .about-intro p.p1 {
-    margin-top: 100px !important;
   }
   .about-pg .about-intro .theme-btn-aqua {
     width: auto;
@@ -1351,7 +1394,7 @@ a {
     padding-bottom: 60px !important;
   }
   .stay-informed-section {
-    margin-top: 160px !important;
+    margin-top: 100px !important;
   }
   .discord-btn {
     max-width: 250px;
