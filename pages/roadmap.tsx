@@ -15,8 +15,25 @@ const Roadmap: NextPage = () => {
       <div className="space">
         <div className="stars">
           <div className="stars2">
-            <img src="/img/roadmap/satoshi_move.gif" alt="satoshi moving" className="satoshiMove" />
-            <img src="/img/roadmap/satoshi_stationary.gif" alt="satoshi stationary" className="satoshiStationary" />
+            <div className="satoshiMove">
+              <Image
+                src="/img/roadmap/satoshi_move.gif"
+                alt="satoshi moving"
+                width={200}
+                height={200}
+                layout="responsive"
+                priority
+              />
+            </div>
+            <div className="satoshiStationary">
+              <Image
+                src="/img/roadmap/satoshi_stationary.gif"
+                alt="satoshi stationary"
+                width={200}
+                height={200}
+                layout="responsive"
+              />
+            </div>
             <div className="earth" />
             <h2 className="roadmap-title">Nifty League Moonmap</h2>
             <div className="cat-planet" />
@@ -32,12 +49,9 @@ const Roadmap: NextPage = () => {
                   <DoneIcon className="done-icon" />
                 </div>
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/creation.png"
-                    alt="minting"
-                    className="timeline-content-img"
-                    style={{ top: '-77px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-85px' }}>
+                    <Image src="/img/roadmap/creation.png" alt="minting" layout="responsive" width={661} height={350} />
+                  </div>
                   <h2>Degen Minting</h2>
                   <div className="timeline-content-info">
                     <span className="timeline-content-info-title">Mission Accomplished</span>
@@ -60,12 +74,15 @@ const Roadmap: NextPage = () => {
                   <DoneIcon className="done-icon" />
                 </div>
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/smash_200.png"
-                    alt="smashers alpha"
-                    className="timeline-content-img"
-                    style={{ top: '-70px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-80px' }}>
+                    <Image
+                      src="/img/roadmap/smash_200.png"
+                      alt="smashers alpha"
+                      width={518}
+                      height={272}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Nifty Smashers Alpha</h2>
                   <div className="timeline-content-info">
                     <span className="timeline-content-info-title">Mission Accomplished</span>
@@ -87,12 +104,15 @@ const Roadmap: NextPage = () => {
                   <DoneIcon className="done-icon" />
                 </div>
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/desktop-app_v02.png"
-                    alt="desktop app"
-                    className="timeline-content-img"
-                    style={{ top: '-100px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-100px' }}>
+                    <Image
+                      src="/img/roadmap/desktop-app_v02.png"
+                      alt="desktop app"
+                      width={514}
+                      height={382}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Desktop App</h2>
                   <div className="timeline-content-info">
                     <span className="timeline-content-info-title">Mission Accomplished</span>
@@ -119,12 +139,15 @@ const Roadmap: NextPage = () => {
                   <DoneIcon className="done-icon" />
                 </div>
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/p2e_v02.png"
-                    alt="play-2-earn"
-                    className="timeline-content-img"
-                    style={{ top: '-80px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-80px' }}>
+                    <Image
+                      src="/img/roadmap/p2e_v02.png"
+                      alt="play-2-earn"
+                      width={586}
+                      height={364}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Play-2-Earn</h2>
                   <div className="timeline-content-info">
                     <span className="timeline-content-info-title">Mission Accomplished</span>
@@ -146,12 +169,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/leaderboards_v02.png"
-                    alt="leaderboards"
-                    className="timeline-content-img"
-                    style={{ top: '-110px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-120px' }}>
+                    <Image
+                      src="/img/roadmap/leaderboards_v02.png"
+                      alt="leaderboards"
+                      width={649}
+                      height={480}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Leaderboards</h2>
                   <p>
                     Our games are meant to be competitive; what better way to showcase this than a leaderboard with star
@@ -159,7 +185,7 @@ const Roadmap: NextPage = () => {
                   </p>
                   <p>
                     We&apos;ll include game stats for daily, weekly, monthly, and of course all-time leaders for all of
-                    our games in the NiftyVerse. Some early honorary DEGENS:
+                    our games in the Niftyverse. Some early honorary DEGENS:
                   </p>
                   <ul className="content-skills">
                     <li>fvsvy 🌊</li>
@@ -176,12 +202,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/beta_v02.png"
-                    alt="smasher beta"
-                    className="timeline-content-img"
-                    style={{ top: '-120px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-120px' }}>
+                    <Image
+                      src="/img/roadmap/beta_v02.png"
+                      alt="smasher beta"
+                      width={544}
+                      height={418}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Nifty Smashers Beta</h2>
                   <p className="mb-0">
                     We are implementing a new netcode solution which looks very promising even from an early development
@@ -194,12 +223,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/rentals_v02.png"
-                    alt="rentals"
-                    className="timeline-content-img"
-                    style={{ top: '-90px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-90px' }}>
+                    <Image
+                      src="/img/roadmap/rentals_v02.png"
+                      alt="rentals"
+                      width={609}
+                      height={375}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Degen Rentals</h2>
                   <p>
                     Our player-base is currently limited to the number of unique <strong>DEGEN NFT</strong> holders. We
@@ -220,12 +252,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/free2play_v02.png"
-                    alt="free-2-play"
-                    className="timeline-content-img"
-                    style={{ top: '-135px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-135px' }}>
+                    <Image
+                      src="/img/roadmap/free2play_v02.png"
+                      alt="free-2-play"
+                      width={507}
+                      height={450}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Free-2-Play</h2>
                   <p>
                     If you read the last point you&apos;ll know that scaling our platform is a high priority. Part of
@@ -242,12 +277,9 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/merch_02.png"
-                    alt="merch"
-                    className="timeline-content-img"
-                    style={{ top: '-80px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-80px' }}>
+                    <Image src="/img/roadmap/merch_02.png" alt="merch" width={634} height={412} layout="responsive" />
+                  </div>
                   <h2>Merch</h2>
                   <p className="mb-0">
                     We know our community can&apos;t wait to showcase their cool DEGENS on the streets! We are excited
@@ -260,12 +292,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/comics_v01.png"
-                    alt="comics"
-                    className="timeline-content-img"
-                    style={{ top: '-170px', right: '-80px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-190px', right: '-80px' }}>
+                    <Image
+                      src="/img/roadmap/comics_v01.png"
+                      alt="comics"
+                      width={323}
+                      height={400}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Comics</h2>
                   <p>
                     Our team has been slowly hinting at the upcoming utilities for comics - as you may already be aware
@@ -277,11 +312,19 @@ const Roadmap: NextPage = () => {
                     DEGEN holders in early 2022. Word from Satoshi - securing a full collection or 2 is <em>highly</em>{' '}
                     recommended.
                   </p>
-                  <div>
-                    <img className="p-2" width="50%" src="/img/roadmap/page1.png" />
-                    <img className="p-2" width="50%" src="/img/roadmap/page2.png" />
-                    <img className="p-2" width="50%" src="/img/roadmap/page3.png" />
-                    <img className="p-2" width="50%" src="/img/roadmap/page4.png" />
+                  <div className="row">
+                    <div className="col-6 p-2">
+                      <Image alt="comic 1" height={500} layout="responsive" src="/img/roadmap/page1.png" width={500} />
+                    </div>
+                    <div className="col-6 p-2">
+                      <Image alt="comic 2" height={500} layout="responsive" src="/img/roadmap/page2.png" width={500} />
+                    </div>
+                    <div className="col-6 p-2">
+                      <Image alt="comic 3" height={500} layout="responsive" src="/img/roadmap/page3.png" width={500} />
+                    </div>
+                    <div className="col-6 p-2">
+                      <Image alt="comic 4" height={500} layout="responsive" src="/img/roadmap/page4.png" width={500} />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -289,12 +332,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/marketplace_v02.png"
-                    alt="marketplace"
-                    className="timeline-content-img"
-                    style={{ top: '-80px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-90px' }}>
+                    <Image
+                      src="/img/roadmap/marketplace_v02.png"
+                      alt="marketplace"
+                      width={609}
+                      height={375}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Items Marketplace</h2>
                   <p>
                     We are working with the Immutable X team to launch our items marketplace. Offerings will include
@@ -311,19 +357,16 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/dao_v02.png"
-                    alt="DAO"
-                    className="timeline-content-img"
-                    style={{ top: '-80px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-80px' }}>
+                    <Image src="/img/roadmap/dao_v02.png" alt="DAO" width={532} height={302} layout="responsive" />
+                  </div>
                   <h2>DAO</h2>
                   <p className="mb-0">
                     We will gradually be transferring ownership of the Nifty League to our DAO in order to decentralize
                     the platform and encourage devs to help us build! Our vision is to power rapid growth and
                     development through community contributions, enabling us to build a gaming platform like no other.
                     Simply put, DAOs are the future. We see only one route to becoming the world&apos;s leading GameFi
-                    platform and that’s by building together. 💜
+                    platform and that&apos;s by building together. 💜
                   </p>
                 </div>
               </div>
@@ -331,12 +374,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/mobile_v02.png"
-                    alt="mobile"
-                    className="timeline-content-img"
-                    style={{ top: '-140px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-140px' }}>
+                    <Image
+                      src="/img/roadmap/mobile_v02.png"
+                      alt="mobile"
+                      width={387}
+                      height={352}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Nifty League Mobile</h2>
                   <p className="mb-0">
                     Going forward all of our games will be mobile compatible. With a high concentration of gamers using
@@ -348,15 +394,12 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/chat_v02.png"
-                    alt="chat"
-                    className="timeline-content-img"
-                    style={{ top: '-110px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-110px' }}>
+                    <Image src="/img/roadmap/chat_v02.png" alt="chat" width={416} height={302} layout="responsive" />
+                  </div>
                   <h2>In-Game Chat</h2>
                   <p className="mb-0">
-                    In preparation for the NiftyVerse we will start by releasing an in-game chat for you to talk or text
+                    In preparation for the Niftyverse we will start by releasing an in-game chat for you to talk or text
                     with DEGEN frens. Being a popular request - there is a chance this may even be introduced earlier in
                     our timeline, so stay tuned!
                   </p>
@@ -366,16 +409,19 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/niftyverse_v02.png"
-                    alt="NiftyVerse"
-                    className="timeline-content-img"
-                    style={{ top: '-130px' }}
-                  />
-                  <h2>NiftyVerse</h2>
+                  <div className="timeline-content-img" style={{ top: '-130px' }}>
+                    <Image
+                      src="/img/roadmap/niftyverse_v02.png"
+                      alt="Niftyverse"
+                      width={757}
+                      height={683}
+                      layout="responsive"
+                    />
+                  </div>
+                  <h2>Niftyverse</h2>
                   <p>
-                    Welcome to the NiftyVerse; a world filled with DEGENS and NFT communities alike with a shared vision
-                    to have fun and build a thriving gaming community. What makes the NiftyVerse stand apart from other
+                    Welcome to the Niftyverse; a world filled with DEGENS and NFT communities alike with a shared vision
+                    to have fun and build a thriving gaming community. What makes the Niftyverse stand apart from other
                     metaverses is our p2e games being the centerpiece. Walk into our arcade room filled with fun
                     mini-games or venture to destinations on the map to jump into our classic titles like Nifty Smashers
                     and Nifty Kart.
@@ -390,7 +436,7 @@ const Roadmap: NextPage = () => {
                   <p>
                     If you&apos;re a creative type, don&apos;t miss this opportunity - we will have an asset store for
                     you to design assets such as buildings or trees and list them for sale based on your defined limits
-                    and pricing. Do you want a cool DEGEN theme park or Cyber Kongz meetup? Build out the NiftyVerse to
+                    and pricing. Do you want a cool DEGEN theme park or Cyber Kongz meetup? Build out the Niftyverse to
                     whatever your heart desires!
                   </p>
                   <p className="mb-0">
@@ -404,15 +450,12 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/pets_v02.png"
-                    alt="pets"
-                    className="timeline-content-img"
-                    style={{ top: '-125px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-125px' }}>
+                    <Image src="/img/roadmap/pets_v02.png" alt="pets" width={379} height={334} layout="responsive" />
+                  </div>
                   <h2>Degen Pets</h2>
                   <p>
-                    Following our NiftyVerse launch we will introduce cool pets for your DEGENS! A lot of community
+                    Following our Niftyverse launch we will introduce cool pets for your DEGENS! A lot of community
                     members have asked us to dust off and bring back Satoshi&apos;s{' '}
                     <strong>
                       <a href="https://app.niftyleague.com/mint-o-matic">Mint-O-Matic</a>
@@ -430,16 +473,19 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/niftyroyale_v01.png"
-                    alt="Nifty Royale"
-                    className="timeline-content-img"
-                    style={{ top: '-88px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-88px' }}>
+                    <Image
+                      src="/img/roadmap/niftyroyale_v01.png"
+                      alt="Nifty Royale"
+                      width={541}
+                      height={381}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Nifty Royale</h2>
                   <p className="mb-0">
                     It&apos;s important to note that any subsequent games will be voted upon by the DAO. One of the
-                    first games we&apos;d like to introduce is a fun battle royale based in the NiftyVerse.
+                    first games we&apos;d like to introduce is a fun battle royale based in the Niftyverse.
                   </p>
                 </div>
               </div>
@@ -447,12 +493,15 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/niftykart_v01.png"
-                    alt="Nifty Kart"
-                    className="timeline-content-img"
-                    style={{ top: '-140px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-140px' }}>
+                    <Image
+                      src="/img/roadmap/niftykart_v01.png"
+                      alt="Nifty Kart"
+                      width={494}
+                      height={462}
+                      layout="responsive"
+                    />
+                  </div>
                   <h2>Nifty Kart</h2>
                   <p className="mb-0">
                     Old school classics are core to our game offerings as we recognize the power of reliving childhood
@@ -465,12 +514,9 @@ const Roadmap: NextPage = () => {
               <div className="cd-timeline-block fade-in">
                 <div className="cd-timeline-checkpoint" />
                 <div className="cd-timeline-content">
-                  <img
-                    src="/img/roadmap/gen2_v01.png"
-                    alt="gen 2"
-                    className="timeline-content-img"
-                    style={{ top: '-105px' }}
-                  />
+                  <div className="timeline-content-img" style={{ top: '-105px' }}>
+                    <Image src="/img/roadmap/gen2_v01.png" alt="gen 2" width={550} height={451} layout="responsive" />
+                  </div>
                   <h2>Gen2 Degens</h2>
                   <p className="mb-0">
                     As our platform grows and demand increases DEGEN rental costs - we may consider a future NFT sale
@@ -483,7 +529,11 @@ const Roadmap: NextPage = () => {
             <div className="animated-star7" />
             <div className="animated-star8" />
             <div className="animated-star9" />
-            <img src="/img/roadmap/moon.png" alt="moon" className="moon" />
+            <div className="w-100 d-flex justify-content-center">
+              <div className="moon">
+                <Image src="/img/roadmap/moon.png" alt="moon" width={800} height={800} layout="responsive" priority />
+              </div>
+            </div>
           </div>
         </div>
       </div>
