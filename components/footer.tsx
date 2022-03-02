@@ -17,35 +17,36 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">Browse collection</button>
               </a>
-              <Link href="/app">
-                <a>
-                  <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">Launch App</button>
-                </a>
-              </Link>
+              <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">Launch App</button>
+              </a>
             </div>
           </div>
         </div>
         <div className="row m-0 p-md-5 pt-0 position-relative">
           <div className="col-6 col-sm-4 col-md-2 px-md-5  px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/roadmap">
-                <a>Roadmap</a>
+              <Link href="/">
+                <a>Home</a>
               </Link>
               <Link href="/about">
                 <a className="mt-2">About</a>
               </Link>
+              <Link href="/roadmap">
+                <a className="mt-2">Roadmap</a>
+              </Link>
               <Link href="/community">
                 <a className="mt-2">Community</a>
-              </Link>
-              <Link href="/learn">
-                <a className="mt-2">Learn</a>
               </Link>
             </div>
           </div>
           <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/blog">
+              {/* <Link href="/blog">
                 <a>Blog</a>
+              </Link> */}
+              <Link href="/learn">
+                <a>Learn</a>
               </Link>
               <Link href="/shop">
                 <a className="mt-2">Merch</a>

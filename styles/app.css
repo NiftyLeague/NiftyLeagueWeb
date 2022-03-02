@@ -736,7 +736,7 @@ a {
 }
 .sliding-nfts .sliding-background-wrapper-desktop {
   overflow: hidden;
-  min-height: 94vh;
+  min-height: 102vh;
 }
 .sliding-nfts .sliding-background-wrapper-mobile {
   overflow: hidden;
@@ -834,7 +834,7 @@ a {
 @media (min-width: 1200px) {
   .browse-andy {
     width: 500px;
-    min-height: 375px;
+    min-height: 380px;
   }
   .browse-snarfy {
     width: 400px;
