@@ -203,6 +203,22 @@ const TeamDesktop = () => {
             <label className="font-15">Pixel Artist</label>
           </div>
         </div>
+        <div className="col-sm-3">
+          <div className="nifty-teams d-flex flex-column p-3">
+            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+              <Image
+                alt="Brian DEGEN"
+                className="pixelated"
+                height={293}
+                layout="responsive"
+                src="/img/degens/team/brian.png"
+                width={268}
+              />
+            </div>
+            <h5 className="mt-4">Brian Wang</h5>
+            <label className="font-15">Sr. Web3 Developer</label>
+          </div>
+        </div>
       </div>
     </>
   );
