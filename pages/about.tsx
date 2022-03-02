@@ -8,217 +8,50 @@ import Carousel from '../components/carousel';
 import DegenCardItem from '../components/carousel/DegenCardItem';
 import TeamCardItem from '../components/carousel/TeamCardItem';
 
-import { AboutDegenData, TeamData } from '../components/carousel/constants';
+import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '../components/carousel/constants';
 
 const TeamDesktop = () => {
+
   return (
     <>
       <div className="row m-0 p-0 position-relative text-center my-3 desktop">
-        <div className="col-sm-4">
-          <div className="nifty-teams d-flex flex-column p-5">
-            <Image
-              alt="Andy DEGEN"
-              className="pixelated"
-              height={293}
-              layout="responsive"
-              src="/img/degens/team/NiftyAndy.png"
-              width={268}
-            />
-            <h3 className="mt-5">Nifty Andy</h3>
-            <label className="font-20">Co-Founder, CEO</label>
-            <label className="uppercase mt-5 pt-3">formerly</label>
-            <div className="my-2">
+        {TEAM_OFFICERS.map((officer, index) => (
+          <div key={`officer-${index}`} className="col-sm-4">
+            <div className="nifty-teams d-flex flex-column p-5">
               <Image
-                alt="Activision logo"
-                height={60}
+                alt={`${officer.name} DEGEN`}
+                className="pixelated"
+                height={293}
                 layout="responsive"
-                src="/img/about/activision.svg"
-                width={252}
+                src={officer.source}
+                width={268}
               />
+              <h3 className="mt-5">{officer.name}</h3>
+              <label className="font-20">{officer.title}</label>
+              {officer.children?.desktop}
             </div>
-            <label className="uppercase">3 years</label>
           </div>
-        </div>
-        <div className="col-sm-4">
-          <div className="nifty-teams d-flex flex-column p-5">
-            <Image
-              alt="Snarfy DEGEN"
-              className="pixelated"
-              height={293}
-              layout="responsive"
-              src="/img/degens/team/Snarfy.png"
-              width={268}
-            />
-            <h3 className="mt-5">Snarfy</h3>
-            <label className="font-20">Co-Founder, CTO</label>
-            <label className="uppercase mt-5 pt-3">formerly</label>
-            <div className="my-2">
-              <Image
-                alt="Activision logo"
-                height={60}
-                layout="responsive"
-                src="/img/about/activision.svg"
-                width={252}
-              />
-            </div>
-            <label className="uppercase">8 years</label>
-          </div>
-        </div>
-        <div className="col-sm-4">
-          <div className="nifty-teams d-flex flex-column p-5">
-            <Image
-              alt="Spike DEGEN"
-              className="pixelated"
-              height={293}
-              layout="responsive"
-              src="/img/degens/team/NiftySpike.png"
-              width={268}
-            />
-            <h3 className="mt-5">Nifty Spike</h3>
-            <label className="font-20">Co-Founder, Creative Director</label>
-            <label className="uppercase mt-3 pt-3">Former clients</label>
-            <div className="my-2">
-              <Image
-                alt="Nickelodeon logo"
-                height={37}
-                layout="responsive"
-                src="/img/about/nickelodeon.svg"
-                width={252}
-              />
-            </div>
-            <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
-          </div>
-        </div>
+        ))}
       </div>
       <div className="row m-0 p-0 position-relative text-center align-items-center my-3 desktop">
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Morgan DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/NiftyMorgan.png"
-                width={268}
-              />
+        {TEAM_MEMBERS.map((member, index) => (
+          <div key={`member-${index}`} className="col-sm-3">
+            <div className="nifty-teams d-flex flex-column p-3">
+              <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
+                <Image
+                  alt={`${member.name} DEGEN`}
+                  className="pixelated"
+                  height={293}
+                  layout="responsive"
+                  src={member.source}
+                  width={268}
+                />
+              </div>
+              <h5 className="mt-4">{member.name}</h5>
+              <label className="font-15">{member.title}</label>
             </div>
-            <h5 className="mt-4">Nifty Morgan</h5>
-            <label className="font-15">VP of Ops</label>
           </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Koa DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/koa.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Koa</h5>
-            <label className="font-15">DAO Director</label>
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Bolo DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/bolo.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Bolo Dave</h5>
-            <label className="font-15">Program &amp; Community Manager</label>
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Zoiby DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/zoiby.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Zoiby</h5>
-            <label className="font-15">Senior Software Developer</label>
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Michael DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/NiftyMichael.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Nifty Michael</h5>
-            <label className="font-15">Web3 Developer</label>
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Jeppe DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/jeppe.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Jeppe</h5>
-            <label className="font-15">Marketing Manager</label>
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Ben DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/ben.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Ben Collie</h5>
-            <label className="font-15">Pixel Artist</label>
-          </div>
-        </div>
-        <div className="col-sm-3">
-          <div className="nifty-teams d-flex flex-column p-3">
-            <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-              <Image
-                alt="Brian DEGEN"
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src="/img/degens/team/brian.png"
-                width={268}
-              />
-            </div>
-            <h5 className="mt-4">Brian Wang</h5>
-            <label className="font-15">Sr. Web3 Developer</label>
-          </div>
-        </div>
+        ))}
       </div>
     </>
   );
@@ -580,9 +413,9 @@ const About: NextPage = () => {
           }}
         >
           <Carousel isMobileViewOnly hideGradient tabletItems={2}>
-            {TeamData.map(team => (
-              <TeamCardItem key={team.name} name={team.name} title={team.title} source={team.source}>
-                {team.children ?? null}
+            {[...TEAM_OFFICERS, ...TEAM_MEMBERS].map((item: any) => (
+              <TeamCardItem key={item.name} name={item.name} title={item.title} source={item.source}>
+                {item?.children}
               </TeamCardItem>
             ))}
           </Carousel>
