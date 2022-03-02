@@ -12,7 +12,7 @@ function Notification() {
       {desktop && (
         <p className="font-14 mb-0">
           🚀{'  '}
-          <Link href="/blog/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
+          <Link href="/blog/seed-investment-round">
             <a className="color-blue"> Our funding round </a>
           </Link>
           <label className="color-light-grey">is now closed! </label>{' '}
