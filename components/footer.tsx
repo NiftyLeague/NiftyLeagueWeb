@@ -17,11 +17,9 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">Browse collection</button>
               </a>
-              <Link href="/app">
-                <a>
-                  <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">Launch App</button>
-                </a>
-              </Link>
+              <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">Launch App</button>
+              </a>
             </div>
           </div>
         </div>

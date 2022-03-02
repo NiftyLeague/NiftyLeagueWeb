@@ -15,7 +15,7 @@ const DegenCardItem = ({
         <div className="browse-single">
           <div className="d-flex p-2 p-sm-3 p-md-4 pb-0 align-items-center">
             <h5 className="me-auto">{name}</h5>
-            <a className="ms-auto" href="#">
+            <div className="ms-auto">
               <svg width="34" height="32" viewBox="0 0 34 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="33.7778" height="32" rx="16" fill="#757575" fillOpacity="0.5" />
                 <path
@@ -27,7 +27,7 @@ const DegenCardItem = ({
                   fill="white"
                 />
               </svg>
-            </a>
+            </div>
           </div>
           <div className="d-flex px-2 px-sm-4 pb-3 align-items-center">
             <button className="me-1">Created</button>
