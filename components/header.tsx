@@ -12,10 +12,11 @@ function Notification() {
       {desktop && (
         <p className="font-14 mb-0">
           🚀{'  '}
-          <Link href="/posts/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
+          {/* <Link href="/posts/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
             <a className="color-blue"> Our funding round </a>
           </Link>
-          <label className="color-light-grey">is now closed! </label>{' '}
+          <label className="color-light-grey">is now closed! </label>{' '} */}
+          <label className="color-light-grey">Funding annoucement coming soon! </label>{' '}
           <label className="color-silver">(We appreciate our DEGENs for the patience - wagmi)</label>
         </p>
       )}
@@ -106,6 +107,15 @@ function Navbar() {
               </Link>
             </li>
             <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('learn'),
+              })}
+            >
+              <Link href="/learn">
+                <a className="nav-link mx-4">Learn</a>
+              </Link>
+            </li>
+            {/* <li
               className={cn('nav-item dropdown', {
                 ['active']: pathname.includes('learn') || pathname.includes('blog') || pathname.includes('posts'),
               })}
@@ -145,7 +155,7 @@ function Navbar() {
                   </Link>
                 </li>
               </ul>
-            </li>
+            </li> */}
           </ul>
           <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
             <button className="btn theme-btn-white my-3 mr-auto">Launch App</button>
