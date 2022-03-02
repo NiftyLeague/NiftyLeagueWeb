@@ -9,7 +9,10 @@ const TeamCardItem = ({
   name: string;
   source: string;
   title: string;
-  children?: React.ReactNode;
+  children?: {
+    mobile?: JSX.Element;
+    desktop?: JSX.Element;
+  }
 }): JSX.Element => (
   <div className="slide">
     <div className="slide-content">
@@ -19,7 +22,7 @@ const TeamCardItem = ({
         </div>
         <h3 className="mt-5">{name}</h3>
         <label className="font-20">{title}</label>
-        <>{children}</>
+        <>{children?.mobile}</>
       </div>
     </div>
   </div>
