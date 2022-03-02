@@ -273,6 +273,9 @@ a {
   margin-top: -80px;
   z-index: 3;
 }
+.degen-scroller-content h1 {
+  text-shadow: #070706 4px 0 5px;
+}
 .com-scroller-dark-background {
   height: 350px;
   width: 100vw;

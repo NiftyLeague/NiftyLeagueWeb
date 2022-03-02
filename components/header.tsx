@@ -177,7 +177,7 @@ function MobileNav() {
         </svg>
         MENU
       </label>
-      <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+      <a className="ms-auto" href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
         <button
           className="btn theme-btn-white my-3 ms-auto"
           style={{ marginRight: 10, width: 127, height: 32, fontSize: 11 }}
