@@ -147,11 +147,9 @@ function Navbar() {
               </ul>
             </li>
           </ul>
-          <Link href="/app">
-            <a>
-              <button className="btn theme-btn-white my-3 mr-auto">Launch App</button>
-            </a>
-          </Link>
+          <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+            <button className="btn theme-btn-white my-3 mr-auto">Launch App</button>
+          </a>
         </div>
       </div>
     </nav>
