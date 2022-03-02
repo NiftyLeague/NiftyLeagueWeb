@@ -11,7 +11,7 @@ const Community: NextPage = () => {
   return (
     <Layout classes={{ root: 'com-pg' }}>
       <Head>
-        <title>Nifty League | Community</title>
+        <title>Meet Our Degen Community | Nifty League</title>
         <meta name="description" content="Community comes first at Nifty League" />
       </Head>
 
