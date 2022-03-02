@@ -12,7 +12,7 @@ function Notification() {
       {desktop && (
         <p className="font-14 mb-0">
           🚀{'  '}
-          <Link href="/posts/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
+          <Link href="/blog/nifty-league-raises-5-million-seed-investment-round-to-expand-its-nft-gaming-metaverse">
             <a className="color-blue"> Our funding round </a>
           </Link>
           <label className="color-light-grey">is now closed! </label>{' '}
@@ -107,7 +107,7 @@ function Navbar() {
             </li>
             <li
               className={cn('nav-item dropdown', {
-                ['active']: pathname.includes('learn') || pathname.includes('blog') || pathname.includes('posts'),
+                ['active']: pathname.includes('learn') || pathname.includes('blog'),
               })}
             >
               <Link href="/learn">
@@ -129,7 +129,7 @@ function Navbar() {
                 </li>
                 <li
                   className={cn('nav-item', {
-                    ['inactive']: !pathname.includes('blog') && !pathname.includes('posts'),
+                    ['inactive']: !pathname.includes('blog'),
                   })}
                 >
                   <Link href="/blog">

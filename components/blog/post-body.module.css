@@ -14,11 +14,11 @@
   text-decoration: none;
   font-size: 1.125rem;
   line-height: 1.625;
-  color: #5E72EB;
+  color: #5e72eb;
 }
 .content a:hover {
   text-decoration: underline;
-  color: #FD8EC4;
+  color: #fd8ec4;
 }
 
 .content ul,
@@ -42,6 +42,13 @@
 
 .content ul > li > ul {
   list-style: circle;
+}
+
+.content h1 {
+  font-size: 2.25rem;
+  line-height: 1.375;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
 }
 
 .content h2 {

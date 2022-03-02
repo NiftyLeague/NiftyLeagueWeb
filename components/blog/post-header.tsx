@@ -25,7 +25,7 @@ export default function PostHeader({
       {title && <PostTitle>{title}</PostTitle>}
       {coverImage && (
         <div className="mb-4 mx-sm-0">
-          <CoverImage title={title} coverImage={coverImage} />
+          <CoverImage alignfull title={title} coverImage={coverImage} />
         </div>
       )}
       <div className="d-flex align-items-center justify-content-between">
@@ -35,8 +35,17 @@ export default function PostHeader({
         <div className="mb-4 mt-1">
           Posted <Date dateString={date} />
         </div>
+        {categories && (
+          <div className="mb-4 mt-1 desktop">
+            <Categories categories={categories} />
+          </div>
+        )}
       </div>
-      {categories && <Categories categories={categories} />}
+      {categories && (
+        <div className="mobile">
+          <Categories categories={categories} />
+        </div>
+      )}
     </>
   );
 }

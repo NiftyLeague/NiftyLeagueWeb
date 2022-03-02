@@ -1,17 +1,21 @@
 .more-stories-title {
-  font-size: 4.5rem !important;
+  font-size: 2.5rem !important;
   letter-spacing: -0.04em;
   line-height: 1.2;
   text-align: left;
 }
 .hero-title,
 .post-preview-title {
-  font-size: 22px;
+  font-size: 24px;
+  cursor: pointer;
 }
 .hero-title:hover,
 .post-preview-title:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+.excerpt p {
+  text-align: left;
 }
 .grid {
   display: grid;
@@ -20,9 +24,12 @@
   row-gap: 5rem;
 }
 @media (min-width: 768px) {
+  .more-stories-title {
+    font-size: 3rem !important;
+  }
   .hero-title,
   .post-preview-title {
-    font-size: 36px;
+    font-size: 28px;
   }
   .grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -34,9 +41,12 @@
   }
 }
 @media (min-width: 1024px) {
+  .more-stories-title {
+    font-size: 4.5rem !important;
+  }
   .hero-title,
   .post-preview-title {
-    font-size: 48px;
+    font-size: 36px;
   }
   .grid {
     grid-column-gap: 8rem;
@@ -98,6 +108,7 @@
     top: 140px;
     position: absolute;
     font-size: 1.2rem;
+    cursor: pointer;
     h5:hover {
       text-decoration: underline;
       cursor: pointer;
@@ -196,7 +207,6 @@
   .wp-block-image .alignright > figcaption,
   .wp-block-image .aligncenter > figcaption,
   .wp-block-image.is-resized > figcaption {
-    // @apply table-caption;
     caption-side: bottom;
   }
 
@@ -240,10 +250,6 @@
     overflow: hidden;
     min-height: 430px;
   }
-
-  // .wp-block-verse {
-  //   @apply font-sans;
-  // }
 
   .wp-block-media-text {
     display: grid;
