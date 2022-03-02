@@ -21,7 +21,7 @@ export default function Index({
     <>
       <Layout classes={{ root: 'blog-pg' }}>
         <Head>
-          <title>Nifty League | Blog</title>
+          <title>Guides, Tutorials, Announcements &amp; More | Nifty League</title>
           <meta name="description" content="Nifty League Blog" />
         </Head>
 

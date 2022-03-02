@@ -12,7 +12,7 @@ const Learn: NextPage = () => {
   return (
     <Layout classes={{ root: 'learn-pg' }}>
       <Head>
-        <title>Nifty League | Learn</title>
+        <title>Learn About Our Compete &amp; Earn Ecosystem | Nifty League</title>
         <meta name="description" content="Learn how to join and play games at Nifty League" />
       </Head>
 
