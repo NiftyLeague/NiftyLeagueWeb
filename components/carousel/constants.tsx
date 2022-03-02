@@ -210,69 +210,134 @@ export const CommunityDegenData = [
   },
 ];
 
-export const TeamData = [
+export const TEAM_OFFICERS = [
   {
-    name: 'Nifty Andy',
+    name: 'Andrew Mahoney-Fernandes',
     title: 'Co-Founder, CEO',
     source: '/img/degens/team/NiftyAndy.png',
-    children: (
-      <>
-        <label className="uppercase mt-3 pt-3">formerly</label>
-        <div className="my-2">
-          <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
-        </div>
-      </>
-    ),
+    children: {
+      mobile: (
+        <>
+          <label className="uppercase mt-3 pt-3">formerly</label>
+          <div className="my-2">
+            <Image
+              alt="Activision logo"
+              height={60}
+              layout="fixed"
+              src="/img/about/activision.svg"
+              width={252}
+            />
+          </div>
+        </>
+      ),
+      desktop: (
+        <>
+          <label className="uppercase mt-5 pt-3">formerly</label>
+          <div className="my-2">
+            <Image
+              alt="Activision logo"
+              height={60}
+              layout="responsive"
+              src="/img/about/activision.svg"
+              width={252}
+            />
+          </div>
+          <label className="uppercase">3 years</label>
+        </>
+      ),
+    }
   },
   {
-    name: 'Snarfy',
+    name: 'Ali Timnak',
     title: 'Co-Founder, CTO',
     source: '/img/degens/team/Snarfy.png',
-    children: (
-      <>
-        <label className="uppercase mt-3 pt-3">formerly</label>
-        <div className="my-2">
-          <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
-        </div>
-      </>
-    ),
+    children: {
+      mobile: (
+        <>
+          <label className="uppercase mt-3 pt-3">formerly</label>
+          <div className="my-2">
+            <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
+          </div>
+        </>
+      ),
+      desktop: (
+        <>
+          <label className="uppercase mt-5 pt-3">formerly</label>
+          <div className="my-2">
+            <Image
+              alt="Activision logo"
+              height={60}
+              layout="responsive"
+              src="/img/about/activision.svg"
+              width={252}
+            />
+          </div>
+          <label className="uppercase">8 years</label>
+        </>
+      ),
+    },
   },
   {
-    name: 'Nifty Spike',
+    name: 'Mike Scott',
     title: 'Co-Founder, Creative Director',
     source: '/img/degens/team/NiftySpike.png',
-    children: (
-      <>
-        <label className="uppercase mt-3 pt-3">Former clients</label>
-        <div className="my-2 row align-items-center">
-          <Image alt="Nickelodeon logo" height={37} layout="fixed" src="/img/about/nickelodeon.svg" width={150} />
-          <Image alt="Disney logo" height={50} layout="fixed" src="/img/about/disney.svg" width={150} />
-        </div>
-      </>
-    ),
+    children: {
+      mobile: (
+        <>
+          <label className="uppercase mt-3 pt-3">Former clients</label>
+          <div className="my-2 row align-items-center">
+            <Image alt="Nickelodeon logo" height={37} layout="fixed" src="/img/about/nickelodeon.svg" width={150} />
+            <Image alt="Disney logo" height={50} layout="fixed" src="/img/about/disney.svg" width={150} />
+          </div>
+        </>
+      ),
+      desktop: (
+        <>
+          <label className="uppercase mt-3 pt-3">Former clients</label>
+          <div className="my-2">
+            <Image
+              alt="Nickelodeon logo"
+              height={37}
+              layout="responsive"
+              src="/img/about/nickelodeon.svg"
+              width={252}
+            />
+          </div>
+          <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
+        </>
+      )
+    }
   },
+]
+
+export const TEAM_MEMBERS = [
   {
-    name: 'Nifty Morgan',
+    name: 'Meghan Vita',
     title: 'VP of Ops',
     source: '/img/degens/team/NiftyMorgan.png',
   },
   {
-    name: 'Koa',
+    name: 'Ali Zandi',
     title: 'DAO Director',
     source: '/img/degens/team/koa.png',
   },
   {
-    name: 'Bolo Dave',
+    name: 'Dave Rosser',
     title: 'Program & Community Manager',
     source: '/img/degens/team/bolo.png',
   },
   {
-    name: 'Zoiby',
+    name: 'Jeff Elkind',
     title: 'Sr. Software Developer',
     source: '/img/degens/team/zoiby.png',
   },
   {
-    name: 'Nifty Michael',
+    name: 'Brian Wang',
+    title: 'Sr. Web3 Developer',
+    source: '/img/degens/team/brian.png',
+  },
+  {
+    name: 'Brandon',
     title: 'Web3 Developer',
     source: '/img/degens/team/NiftyMichael.png',
   },
@@ -282,8 +347,8 @@ export const TeamData = [
     source: '/img/degens/team/jeppe.png',
   },
   {
-    name: 'Nifty Brian',
-    title: 'Sr. Web3 Developer',
-    source: '/img/degens/team/brian.png',
+    name: 'Ben Collie',
+    title: 'Pixel Artist',
+    source: '/img/degens/team/ben.png',
   },
 ];
