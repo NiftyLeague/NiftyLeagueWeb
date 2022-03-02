@@ -441,8 +441,8 @@ const About: NextPage = () => {
             <h4 className="font-32 color-purple">Rentals</h4>
             <p className="mt-2">
               Players interested in DEGENs will be able to rent an NFT by paying a low weekly fee to the owner. Active
-              renters will be able to play Nifty Smashers and earn NFTL, and explore the Niftyverse. As a renter, you
-              keep 70% of the in-game earnings, while 30% is distributed to the owner via a smart contract.
+              renters will be able to play games such as Nifty Smashers and earn NFTL, and explore the Niftyverse. As a
+              renter, you keep 70% of the in-game earnings, while 30% is distributed to the owner via a smart contract.
             </p>
             <Link href="/docs/guides/rentals/rental-overview" passHref>
               <button className="btn theme-btn-aqua w-auto my-5">learn more about rentals</button>
