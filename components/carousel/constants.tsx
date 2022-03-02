@@ -216,17 +216,10 @@ export const TeamData = [
     source: '/img/degens/team/NiftyAndy.png',
     children: (
       <>
-        <label className="uppercase mt-5 pt-3">formerly</label>
+        <label className="uppercase mt-3 pt-3">formerly</label>
         <div className="my-2">
-          <Image
-            alt="Activision logo"
-            height={60}
-            layout="responsive"
-            src="/img/degens/about/activision.svg"
-            width={252}
-          />
+          <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
         </div>
-        <label className="uppercase">3 years</label>
       </>
     ),
   },
@@ -236,11 +229,10 @@ export const TeamData = [
     source: '/img/degens/team/Snarfy.png',
     children: (
       <>
-        <label className="uppercase mt-5 pt-3">formerly</label>
+        <label className="uppercase mt-3 pt-3">formerly</label>
         <div className="my-2">
-          <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
+          <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
         </div>
-        <label className="uppercase">8 years</label>
       </>
     ),
   },
@@ -250,11 +242,11 @@ export const TeamData = [
     source: '/img/degens/team/NiftySpike.png',
     children: (
       <>
-        <label className="uppercase mt-5 pt-3">Former clients</label>
-        <div className="my-2">
-          <Image alt="Nickelodeon logo" height={37} layout="responsive" src="/img/about/nickelodeon.svg" width={252} />
+        <label className="uppercase mt-3 pt-3">Former clients</label>
+        <div className="my-2 row align-items-center">
+          <Image alt="Nickelodeon logo" height={37} layout="fixed" src="/img/about/nickelodeon.svg" width={150} />
+          <Image alt="Disney logo" height={50} layout="fixed" src="/img/about/disney.svg" width={150} />
         </div>
-        <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
       </>
     ),
   },
@@ -275,7 +267,7 @@ export const TeamData = [
   },
   {
     name: 'Zoiby',
-    title: 'Senior Software Developer',
+    title: 'Sr. Software Developer',
     source: '/img/degens/team/zoiby.png',
   },
   {
@@ -287,5 +279,10 @@ export const TeamData = [
     name: 'Jeppe',
     title: 'Marketing Manager',
     source: '/img/degens/team/jeppe.png',
+  },
+  {
+    name: 'Nifty Brian',
+    title: 'Sr. Web3 Developer',
+    source: '/img/degens/team/brian.png',
   },
 ];
