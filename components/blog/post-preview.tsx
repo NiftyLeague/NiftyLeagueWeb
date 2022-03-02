@@ -23,14 +23,14 @@ export default function PostPreview({
     <div>
       <div className="mb-3">{coverImage && <CoverImage title={title} coverImage={coverImage} slug={slug} />}</div>
       {title && (
-        <Link href={`/posts/${slug}`} passHref>
+        <Link href={`/blog/${slug}`} passHref>
           <h3 className="mb-3 post-preview-title">{title}</h3>
         </Link>
       )}
       <div className="mb-3">
         <Date dateString={date} />
       </div>
-      {excerpt && <div className="mb-4" dangerouslySetInnerHTML={{ __html: excerpt }} />}
+      {excerpt && <div className="mb-4 excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />}
       <Avatar author={author} />
     </div>
   );

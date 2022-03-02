@@ -23,16 +23,16 @@ export default function HeroPost({
     <section>
       <div className="mb-5">{coverImage && <CoverImage title={title} coverImage={coverImage} slug={slug} />}</div>
       <div className="row mb-3 mb-md-5">
-        <div className="col-6">
-          <Link href={`/posts/${slug}`} passHref>
+        <div className="col-md-6">
+          <Link href={`/blog/${slug}`} passHref>
             <h3 className="mb-4 hero-title">{title}</h3>
           </Link>
           <div className="mb-4 mb-md-0">
             <Date dateString={date} />
           </div>
         </div>
-        <div className="col-6">
-          {excerpt && <div className="mb-4" dangerouslySetInnerHTML={{ __html: excerpt }} />}
+        <div className="col-md-6">
+          {excerpt && <div className="mb-4 excerpt" dangerouslySetInnerHTML={{ __html: excerpt }} />}
           <Avatar author={author} />
         </div>
       </div>
