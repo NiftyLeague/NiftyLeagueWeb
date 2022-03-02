@@ -225,6 +225,7 @@ function MobileNav() {
 }
 
 export default function Header() {
+  const desktop = useMediaQuery('(min-width:768px)');
   const expanded = useMediaQuery('(min-width:992px)');
 
   useEffect(() => {
@@ -250,7 +251,7 @@ export default function Header() {
       <span className="position-absolute eclipse-location">
         <Image src="/img/eclipses-header.svg" alt="Eclipse background" layout="responsive" width={668} height={666} />
       </span>
-      <Notification />
+      {desktop && <Notification />}
       {expanded ? <Navbar /> : <MobileNav />}
     </header>
   );
