@@ -18,7 +18,7 @@ const Home: NextPage = () => {
   return (
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
-        <title>Nifty League | NFT Gaming</title>
+        <title>Nifty League: Compete &amp; Earn NFT Gaming Metaverse</title>
         <meta name="description" content="NFT gaming universe brought to you by the Nifty League" />
       </Head>
 

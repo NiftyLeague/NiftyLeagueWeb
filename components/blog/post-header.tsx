@@ -10,12 +10,14 @@ export default function PostHeader({
   categories,
   coverImage,
   date,
+  tags,
   title,
 }: {
   author?: Maybe<User>;
   categories?: Maybe<PostToCategoryConnection>;
   coverImage?: Maybe<MediaItem>;
   date?: Maybe<string>;
+  tags?: Maybe<string>;
   title?: Maybe<string>;
 }) {
   return (
@@ -34,7 +36,7 @@ export default function PostHeader({
           Posted <Date dateString={date} />
         </div>
       </div>
-      {/* {categories && <Categories categories={categories} />} */}
+      {categories && <Categories categories={categories} />}
     </>
   );
 }
