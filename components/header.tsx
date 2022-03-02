@@ -213,11 +213,11 @@ function MobileNav() {
               <a>Learn</a>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/blog">
               <a>Blog</a>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/docs">
               <a>Docs</a>
