@@ -61,7 +61,9 @@ const Roadmap: NextPage = () => {
                   process was a one-of-a-kind spectacle that allowed minters the ability to design their own DEGEN using
                   Satoshi&apos;s{' '}
                   <strong>
-                    <a href="https://app.niftyleague.com/mint-o-matic">Mint-O-Matic</a>
+                    <a href="https://app.niftyleague.com/mint-o-matic" target="_blank" rel="noreferrer">
+                      Mint-O-Matic
+                    </a>
                   </strong>
                   !
                 </p>
@@ -90,7 +92,9 @@ const Roadmap: NextPage = () => {
                 <p>
                   Our NFT launch coincided with the immediate availability of our first of many games,{' '}
                   <strong>
-                    <a href="https://app.niftyleague.com/games">Nifty Smashers</a>
+                    <a href="https://app.niftyleague.com/games" target="_blank" rel="noreferrer">
+                      Nifty Smashers
+                    </a>
                   </strong>
                   .
                 </p>
@@ -120,7 +124,9 @@ const Roadmap: NextPage = () => {
                 <p>
                   The{' '}
                   <strong>
-                    <a href="https://app.niftyleague.com/games">Desktop App</a>
+                    <a href="https://app.niftyleague.com/games" target="_blank" rel="noreferrer">
+                      Desktop App
+                    </a>
                   </strong>{' '}
                   is now live for Windows users! <em>(MacOS is right around the corner)</em>
                 </p>
@@ -444,7 +450,9 @@ const Roadmap: NextPage = () => {
                   Following our Niftyverse launch we will introduce cool pets for your DEGENS! A lot of community
                   members have asked us to dust off and bring back Satoshi&apos;s{' '}
                   <strong>
-                    <a href="https://app.niftyleague.com/mint-o-matic">Mint-O-Matic</a>
+                    <a href="https://app.niftyleague.com/mint-o-matic" target="_blank" rel="noreferrer">
+                      Mint-O-Matic
+                    </a>
                   </strong>
                   , and we couldn&apos;t agree more!
                 </p>
