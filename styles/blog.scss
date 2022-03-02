@@ -97,7 +97,8 @@
   .blog-header {
     top: 140px;
     position: absolute;
-    h3:hover {
+    font-size: 1.2rem;
+    h5:hover {
       text-decoration: underline;
       cursor: pointer;
     }
@@ -173,7 +174,7 @@
 
   .wp-block-image img {
     width: 100%;
-    margin-top: 0.5rem;
+    margin: 1rem;
     height: auto;
   }
   .wp-block-image.aligncenter {

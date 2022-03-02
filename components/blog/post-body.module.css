@@ -7,11 +7,18 @@
 .content ul,
 .content ol,
 .content blockquote {
-  margin: 1.5rem 0;
+  margin: 1.25rem 0;
 }
 
 .content a {
+  text-decoration: none;
+  font-size: 1.125rem;
+  line-height: 1.625;
+  color: #5E72EB;
+}
+.content a:hover {
   text-decoration: underline;
+  color: #FD8EC4;
 }
 
 .content ul,
