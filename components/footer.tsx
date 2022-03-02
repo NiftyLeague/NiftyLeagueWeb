@@ -42,27 +42,27 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           </div>
           <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              {/* <Link href="/blog">
-                <a>Blog</a>
-              </Link> */}
               <Link href="/learn">
                 <a>Learn</a>
               </Link>
-              <Link href="/shop">
-                <a className="mt-2">Merch</a>
+              <Link href="/blog">
+                <a className="mt-2">Blog</a>
               </Link>
               <Link href="/docs">
                 <a className="mt-2">Docs</a>
               </Link>
-              <Link href="/feedback">
-                <a className="mt-2">Feedback</a>
+              <Link href="/shop">
+                <a className="mt-2">Merch</a>
               </Link>
             </div>
           </div>
           <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
+              <Link href="/feedback">
+                <a>Feedback</a>
+              </Link>
               <Link href="/terms-of-service">
-                <a className="mt-2">Terms&nbsp;of Service</a>
+                <a className="mt-2">Terms of Service</a>
               </Link>
               <Link href="/disclaimer">
                 <a className="mt-2">Disclaimer</a>
