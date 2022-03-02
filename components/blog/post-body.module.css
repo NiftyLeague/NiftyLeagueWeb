@@ -8,6 +8,7 @@
 .content ol,
 .content blockquote {
   margin: 1.25rem 0;
+  text-align: left;
 }
 
 .content a {
@@ -15,6 +16,7 @@
   font-size: 1.125rem;
   line-height: 1.625;
   color: #5e72eb;
+  overflow-wrap: break-word;
 }
 .content a:hover {
   text-decoration: underline;
@@ -34,13 +36,14 @@
   list-style-type: decimal;
 }
 
-.content ul > li > ul,
-.content ol > li > ol {
+.content ul > li,
+.content ol > li {
   margin: 0;
   margin-left: 1rem;
+  margin-top: 1rem;
 }
 
-.content ul > li > ul {
+.content ul > li {
   list-style: circle;
 }
 
@@ -49,6 +52,7 @@
   line-height: 1.375;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .content h2 {
@@ -56,6 +60,7 @@
   line-height: 1.375;
   margin-top: 3rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .content h3 {
@@ -63,6 +68,7 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
   line-height: 1.375;
+  text-align: left;
 }
 
 .content h4 {
@@ -70,6 +76,7 @@
   margin-top: 1.5rem;
   margin-bottom: 1rem;
   line-height: 1.375;
+  text-align: left;
 }
 
 .content pre {
@@ -113,4 +120,8 @@
 
 .content audio {
   width: 100%;
+}
+
+.content iframe {
+  max-width: 75vw;
 }
