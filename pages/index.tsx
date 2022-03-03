@@ -1,6 +1,6 @@
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import React from 'react';
+import { memo } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -325,4 +325,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default React.memo(Home);
+export default memo(Home);
