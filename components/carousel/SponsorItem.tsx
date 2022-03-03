@@ -1,5 +1,9 @@
 import Image from 'next/image';
 
+export const renderSponsor = ({ image, url, width, height }: any) => (
+  <SponsorCarouselItem key={image} source={image} url={url} width={width} height={height} />
+);
+
 const SponsorCarouselItem = ({
   source,
   url,
