@@ -1,16 +1,16 @@
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import { memo } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
-import SponsorCarouselItem from '../components/carousel/SponsorItem';
-import DegenCardItem from '../components/carousel/DegenCardItem';
-
-import { SPONSORS, HomeDegenData } from '../components/carousel/constants';
+import { renderSponsor } from '../components/carousel/SponsorItem';
+import { renderDegen } from '../components/carousel/DegenCardItem';
+import { SPONSORS, HomeDegenData } from '../data/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -19,7 +19,8 @@ const Home: NextPage = () => {
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League: Compete &amp; Earn NFT Gaming Metaverse</title>
-        <meta name="description" content="NFT gaming universe brought to you by the Nifty League" />
+        <meta name="description" content="Compete &amp; earn NFT gaming metaverse brought to you by the Nifty League" />
+        <meta property="og:image" content="https://niftyleague.com/img/home-banner-desktop.png" />
       </Head>
 
       <div className="row m-0 p-0 position-relative pt-5 home-intro">
@@ -215,9 +216,7 @@ const Home: NextPage = () => {
             }}
           >
             <Carousel mobileItems={2} desktopItems={5} hideGradient>
-              {SPONSORS.map(({ image, url, width, height }) => (
-                <SponsorCarouselItem key={image} source={image} url={url} width={width} height={height} />
-              ))}
+              {SPONSORS.map(renderSponsor)}
             </Carousel>
           </section>
         </div>
@@ -235,16 +234,7 @@ const Home: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel mobileItems={2}>
-                {HomeDegenData.map(degen => (
-                  <DegenCardItem
-                    key={degen.name}
-                    name={degen.name}
-                    createdDate={degen.createdDate}
-                    source={degen.source}
-                  />
-                ))}
-              </Carousel>
+              <Carousel mobileItems={2}>{HomeDegenData.map(renderDegen)}</Carousel>
             </section>
           </div>
           <div
@@ -335,4 +325,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default memo(Home);
