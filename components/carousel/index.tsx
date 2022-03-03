@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React from 'react';
+import { memo } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
@@ -65,4 +65,4 @@ const NiftyCarousel = ({
   </>
 );
 
-export default React.memo(NiftyCarousel);
+export default memo(NiftyCarousel);

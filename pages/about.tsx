@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Link from 'next/link';
@@ -179,9 +179,7 @@ const About: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel>
-                {AboutDegenData.map(renderDegen)}
-              </Carousel>
+              <Carousel>{AboutDegenData.map(renderDegen)}</Carousel>
             </section>
           </div>
         </div>
@@ -371,4 +369,4 @@ const About: NextPage = () => {
   );
 };
 
-export default React.memo(About);
+export default memo(About);
