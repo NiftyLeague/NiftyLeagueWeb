@@ -19,7 +19,8 @@ const Home: NextPage = () => {
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League: Compete &amp; Earn NFT Gaming Metaverse</title>
-        <meta name="description" content="NFT gaming universe brought to you by the Nifty League" />
+        <meta name="description" content="Compete &amp; earn NFT gaming metaverse brought to you by the Nifty League" />
+        <meta property="og:image" content="https://niftyleague.com/img/home-banner-desktop.png" />
       </Head>
 
       <div className="row m-0 p-0 position-relative pt-5 home-intro">
@@ -233,9 +234,7 @@ const Home: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel mobileItems={2}>
-                {HomeDegenData.map(renderDegen)}
-              </Carousel>
+              <Carousel mobileItems={2}>{HomeDegenData.map(renderDegen)}</Carousel>
             </section>
           </div>
           <div
