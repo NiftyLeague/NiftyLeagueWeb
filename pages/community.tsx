@@ -3,9 +3,9 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
-import DegenCardItem from '../components/carousel/DegenCardItem';
+import { renderDegen } from '../components/carousel/DegenCardItem';
 import SocialCards from '../components/SocialCards';
-import { CommunityDegenData } from '../components/carousel/constants';
+import { CommunityDegenData } from '../data/constants';
 
 const Community: NextPage = () => {
   return (
@@ -86,14 +86,7 @@ const Community: NextPage = () => {
               }}
             >
               <Carousel mobileItems={2}>
-                {CommunityDegenData.map(degen => (
-                  <DegenCardItem
-                    key={degen.name}
-                    name={degen.name}
-                    createdDate={degen.createdDate}
-                    source={degen.source}
-                  />
-                ))}
+                {CommunityDegenData.map(renderDegen)}
               </Carousel>
             </section>
           </div>
