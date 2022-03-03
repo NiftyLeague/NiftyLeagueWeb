@@ -1,61 +1,16 @@
+import { memo } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
+
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
-import DegenCardItem from '../components/carousel/DegenCardItem';
-import TeamCardItem from '../components/carousel/TeamCardItem';
-
-import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '../components/carousel/constants';
-
-const TeamDesktop = () => {
-
-  return (
-    <>
-      <div className="row m-0 p-0 position-relative text-center my-3 desktop">
-        {TEAM_OFFICERS.map((officer, index) => (
-          <div key={`officer-${index}`} className="col-sm-4">
-            <div className="nifty-teams d-flex flex-column p-5">
-              <Image
-                alt={`${officer.name} DEGEN`}
-                className="pixelated"
-                height={293}
-                layout="responsive"
-                src={officer.source}
-                width={268}
-              />
-              <h3 className="mt-5">{officer.name}</h3>
-              <label className="font-20">{officer.title}</label>
-              {officer.children?.desktop}
-            </div>
-          </div>
-        ))}
-      </div>
-      <div className="row m-0 p-0 position-relative text-center align-items-center my-3 desktop">
-        {TEAM_MEMBERS.map((member, index) => (
-          <div key={`member-${index}`} className="col-sm-3">
-            <div className="nifty-teams d-flex flex-column p-3">
-              <div style={{ borderRadius: '8px', overflow: 'hidden' }}>
-                <Image
-                  alt={`${member.name} DEGEN`}
-                  className="pixelated"
-                  height={293}
-                  layout="responsive"
-                  src={member.source}
-                  width={268}
-                />
-              </div>
-              <h5 className="mt-4">{member.name}</h5>
-              <label className="font-15">{member.title}</label>
-            </div>
-          </div>
-        ))}
-      </div>
-    </>
-  );
-};
+import { renderDegen } from '../components/carousel/DegenCardItem';
+import { renderTeamCardItem } from '../components/carousel/TeamCardItem';
+import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '../data/constants';
+import TeamDesktop from '../components/TeamDesktop';
 
 const About: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -86,9 +41,11 @@ const About: NextPage = () => {
               <Link href="/roadmap" passHref>
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
               </Link>
-              {/* <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Download the whitepaper</button>
-              </a> */}
+              {false && (
+                <a href="/whitepaper.pdf" target="_blank" rel="noreferrer">
+                  <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Download the whitepaper</button>
+                </a>
+              )}
             </div>
             <div className="display-buttons my-3 d-flex mobile">
               <Link href="/docs" passHref>
@@ -222,16 +179,7 @@ const About: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel>
-                {AboutDegenData.map(degen => (
-                  <DegenCardItem
-                    key={degen.name}
-                    name={degen.name}
-                    createdDate={degen.createdDate}
-                    source={degen.source}
-                  />
-                ))}
-              </Carousel>
+              <Carousel>{AboutDegenData.map(renderDegen)}</Carousel>
             </section>
           </div>
         </div>
@@ -413,11 +361,7 @@ const About: NextPage = () => {
           }}
         >
           <Carousel isMobileViewOnly hideGradient tabletItems={2}>
-            {[...TEAM_OFFICERS, ...TEAM_MEMBERS].map((item: any) => (
-              <TeamCardItem key={item.name} name={item.name} title={item.title} source={item.source}>
-                {item?.children}
-              </TeamCardItem>
-            ))}
+            {[...TEAM_OFFICERS, ...TEAM_MEMBERS].map(renderTeamCardItem)}
           </Carousel>
         </section>
       </div>
@@ -425,4 +369,4 @@ const About: NextPage = () => {
   );
 };
 
-export default About;
+export default memo(About);

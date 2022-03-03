@@ -23,6 +23,7 @@ export default function Index({
         <Head>
           <title>Guides, Tutorials, Announcements &amp; More | Nifty League</title>
           <meta name="description" content="Nifty League Blog" />
+          <meta property="og:image" content="https://niftyleague.com/img/blog/blog-banner.png" />
         </Head>
 
         <Intro />
