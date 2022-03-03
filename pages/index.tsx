@@ -1,16 +1,16 @@
 import { MDBAccordion, MDBAccordionItem } from 'mdb-react-ui-kit';
 import useMediaQuery from '@mui/material/useMediaQuery';
-
+import React from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
+
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
-import SponsorCarouselItem from '../components/carousel/SponsorItem';
-import DegenCardItem from '../components/carousel/DegenCardItem';
-
-import { SPONSORS, HomeDegenData } from '../components/carousel/constants';
+import { renderSponsor } from '../components/carousel/SponsorItem';
+import { renderDegen } from '../components/carousel/DegenCardItem';
+import { SPONSORS, HomeDegenData } from '../data/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -215,9 +215,7 @@ const Home: NextPage = () => {
             }}
           >
             <Carousel mobileItems={2} desktopItems={5} hideGradient>
-              {SPONSORS.map(({ image, url, width, height }) => (
-                <SponsorCarouselItem key={image} source={image} url={url} width={width} height={height} />
-              ))}
+              {SPONSORS.map(renderSponsor)}
             </Carousel>
           </section>
         </div>
@@ -236,14 +234,7 @@ const Home: NextPage = () => {
               }}
             >
               <Carousel mobileItems={2}>
-                {HomeDegenData.map(degen => (
-                  <DegenCardItem
-                    key={degen.name}
-                    name={degen.name}
-                    createdDate={degen.createdDate}
-                    source={degen.source}
-                  />
-                ))}
+                {HomeDegenData.map(renderDegen)}
               </Carousel>
             </section>
           </div>
@@ -335,4 +326,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default React.memo(Home);

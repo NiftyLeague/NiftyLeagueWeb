@@ -1,4 +1,14 @@
 import Image from 'next/image';
+import React from 'react';
+
+export const renderDegen = (degen: any) => (
+  <DegenCardItem
+    key={degen.name}
+    name={degen.name}
+    createdDate={degen.createdDate}
+    source={degen.source}
+  />
+)
 
 const DegenCardItem = ({
   name,
@@ -43,4 +53,4 @@ const DegenCardItem = ({
   );
 };
 
-export default DegenCardItem;
+export default React.memo(DegenCardItem);

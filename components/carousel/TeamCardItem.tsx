@@ -1,5 +1,11 @@
 import Image from 'next/image';
 
+export const renderTeamCardItem = (item: any) => (
+  <TeamCardItem key={item.name} name={item.name} title={item.title} source={item.source}>
+    {item?.children}
+  </TeamCardItem>
+);
+
 const TeamCardItem = ({
   name,
   source,
