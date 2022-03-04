@@ -20,6 +20,7 @@ const Home: NextPage = () => {
       <Head>
         <title>Nifty League: Compete &amp; Earn NFT Gaming Metaverse</title>
         <meta name="description" content="Compete &amp; earn NFT gaming metaverse brought to you by the Nifty League" />
+        <meta property="og:title" content="Nifty League: Compete &amp; Earn NFT Gaming Metaverse" />
         <meta property="og:image" content="https://niftyleague.com/img/home-banner-desktop.png" />
       </Head>
 
