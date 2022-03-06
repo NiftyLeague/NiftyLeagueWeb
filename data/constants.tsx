@@ -220,13 +220,7 @@ export const TEAM_OFFICERS = [
         <>
           <label className="uppercase mt-3 pt-3">formerly</label>
           <div className="my-2">
-            <Image
-              alt="Activision logo"
-              height={60}
-              layout="fixed"
-              src="/img/about/activision.svg"
-              width={252}
-            />
+            <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
           </div>
         </>
       ),
@@ -234,18 +228,12 @@ export const TEAM_OFFICERS = [
         <>
           <label className="uppercase mt-5 pt-3">formerly</label>
           <div className="my-2">
-            <Image
-              alt="Activision logo"
-              height={60}
-              layout="responsive"
-              src="/img/about/activision.svg"
-              width={252}
-            />
+            <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
           </div>
           <label className="uppercase">3 years</label>
         </>
       ),
-    }
+    },
   },
   {
     name: 'Ali Timnak',
@@ -264,13 +252,7 @@ export const TEAM_OFFICERS = [
         <>
           <label className="uppercase mt-5 pt-3">formerly</label>
           <div className="my-2">
-            <Image
-              alt="Activision logo"
-              height={60}
-              layout="responsive"
-              src="/img/about/activision.svg"
-              width={252}
-            />
+            <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
           </div>
           <label className="uppercase">8 years</label>
         </>
@@ -303,12 +285,12 @@ export const TEAM_OFFICERS = [
               width={252}
             />
           </div>
-          <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
+          <Image alt="Disney logo" height={125} layout="responsive" src="/img/about/disney.svg" width={252} />
         </>
-      )
-    }
+      ),
+    },
   },
-]
+];
 
 export const TEAM_MEMBERS = [
   {

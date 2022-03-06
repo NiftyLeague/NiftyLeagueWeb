@@ -1,25 +1,22 @@
 import Image from 'next/image';
 
-export const renderTeamCardItem = (item: any) => (
-  <TeamCardItem key={item.name} name={item.name} title={item.title} source={item.source}>
-    {item?.children}
-  </TeamCardItem>
-);
-
-const TeamCardItem = ({
-  name,
-  source,
-  title,
-  children,
-}: {
+interface TeamCardProps {
   name: string;
   source: string;
   title: string;
   children?: {
     mobile?: JSX.Element;
     desktop?: JSX.Element;
-  }
-}): JSX.Element => (
+  };
+}
+
+export const renderTeamCardItem = (item: TeamCardProps) => (
+  <TeamCardItem key={item.name} name={item.name} title={item.title} source={item.source}>
+    {item?.children}
+  </TeamCardItem>
+);
+
+const TeamCardItem = ({ name, source, title, children }: TeamCardProps): JSX.Element => (
   <div className="slide">
     <div className="slide-content">
       <div className="nifty-teams d-flex flex-column p-2" style={{ margin: 'auto' }}>

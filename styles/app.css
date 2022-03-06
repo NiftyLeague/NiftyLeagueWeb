@@ -167,7 +167,7 @@ a {
   color: #ffffff;
   background: #620edf;
   border-radius: 64px;
-  width: 195px;
+  width: 210px;
   height: 44px;
   display: flex;
   align-items: center;
@@ -189,6 +189,12 @@ a {
 }
 .theme-btn-aqua:hover path {
   fill: #620edf;
+}
+
+.iconExternalLink {
+  margin-left: 0.3rem;
+  position: relative;
+  top: -2px;
 }
 
 .degens-slider .slick-arrow.slick-next {

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import cn from 'classnames';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import ExternalIcon from './externalIcon';
 
 function Notification() {
   const desktop = useMediaQuery('(min-width:768px)');
@@ -102,7 +103,10 @@ function Navbar() {
             </li>
             <li className="nav-item">
               <Link href="/shop">
-                <a className="nav-link mx-4">Merch</a>
+                <a className="nav-link mx-4">
+                  Merch
+                  <ExternalIcon />
+                </a>
               </Link>
             </li>
             <li
@@ -141,14 +145,19 @@ function Navbar() {
                 </li>
                 <li className="nav-item inactive">
                   <Link href="/docs">
-                    <a className="dropdown-item">Docs</a>
+                    <a className="dropdown-item">
+                      Docs
+                      <ExternalIcon />
+                    </a>
                   </Link>
                 </li>
               </ul>
             </li>
           </ul>
           <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
-            <button className="btn theme-btn-white my-3 mr-auto">Launch App</button>
+            <button className="btn theme-btn-white my-3 mr-auto">
+              Launch App <ExternalIcon />
+            </button>
           </a>
         </div>
       </div>
