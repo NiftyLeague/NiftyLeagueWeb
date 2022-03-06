@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import ExternalIcon from '../externalIcon';
 import { LEARN_CARDS } from './constants';
 
 interface LearnCardProps {
@@ -23,11 +24,16 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
           <p className="px-4 font-16 text-center">{subtitle}</p>
           {external ? (
             <a target="_blank" rel="noreferrer" href={link}>
-              <button className="btn theme-btn-aqua mt-md-2">{btnText}</button>
+              <button className="btn theme-btn-aqua mt-md-2">
+                {btnText}
+                <ExternalIcon />
+              </button>
             </a>
           ) : (
             <Link href={link} passHref>
-              <button className="btn theme-btn-aqua mt-md-2">{btnText}</button>
+              <button className="btn theme-btn-aqua mt-md-2">
+                {btnText} <ExternalIcon />
+              </button>
             </Link>
           )}
         </div>

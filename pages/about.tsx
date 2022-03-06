@@ -11,6 +11,7 @@ import { renderDegen } from '../components/carousel/DegenCardItem';
 import { renderTeamCardItem } from '../components/carousel/TeamCardItem';
 import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '../data/constants';
 import TeamDesktop from '../components/TeamDesktop';
+import ExternalIcon from '../components/externalIcon';
 
 const About: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -36,7 +37,10 @@ const About: NextPage = () => {
 
             <div className="display-buttons my-3 d-flex desktop">
               <Link href="/docs" passHref>
-                <button className="btn theme-btn-aqua mx-sm-2">Read our docs</button>
+                <button className="btn theme-btn-aqua mx-sm-2">
+                  Read our docs
+                  <ExternalIcon />
+                </button>
               </Link>
               <Link href="/roadmap" passHref>
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
@@ -211,6 +215,7 @@ const About: NextPage = () => {
             <Link href="/docs/overview/degens/about" passHref>
               <button id="rentals" className="btn theme-btn-aqua w-auto my-5">
                 learn more about DEGEN NFTs
+                <ExternalIcon />
               </button>
             </Link>
           </div>
@@ -226,7 +231,9 @@ const About: NextPage = () => {
               renter, you keep 70% of the in-game earnings, while 30% is distributed to the owner via a smart contract.
             </p>
             <Link href="/docs/guides/rentals/rental-overview" passHref>
-              <button className="btn theme-btn-aqua w-auto my-5">learn more about rentals</button>
+              <button className="btn theme-btn-aqua w-auto my-5">
+                learn more about rentals <ExternalIcon />
+              </button>
             </Link>
           </div>
           <div className="col-sm-6 position-relative nr-banner">
@@ -270,7 +277,9 @@ const About: NextPage = () => {
               available to trade and stake on SushiSwap.
             </p>
             <Link href="/docs/overview/nftl/overview" passHref>
-              <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
+              <button className="btn theme-btn-aqua w-auto mt-5">
+                learn more <ExternalIcon />
+              </button>
             </Link>
           </div>
           <div className="col-md-6">
@@ -283,7 +292,9 @@ const About: NextPage = () => {
               special backgrounds or items.
             </p>
             <Link href="/docs/overview/p2e/daily-rewards" passHref>
-              <button className="btn theme-btn-aqua w-auto mt-5">learn more</button>
+              <button className="btn theme-btn-aqua w-auto mt-5">
+                learn more <ExternalIcon />
+              </button>
             </Link>
           </div>
         </div>

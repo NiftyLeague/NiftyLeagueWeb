@@ -285,7 +285,7 @@ export const TEAM_OFFICERS = [
               width={252}
             />
           </div>
-          <Image alt="Disney logo" height={132} layout="responsive" src="/img/about/disney.svg" width={252} />
+          <Image alt="Disney logo" height={125} layout="responsive" src="/img/about/disney.svg" width={252} />
         </>
       ),
     },

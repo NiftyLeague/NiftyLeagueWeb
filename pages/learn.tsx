@@ -6,6 +6,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Layout from '../components/layout';
 import LearnCards from '../components/LearnCards';
+import ExternalIcon from '../components/externalIcon';
 
 const Learn: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -83,7 +84,9 @@ const Learn: NextPage = () => {
           </MDBAccordionItem>
         </MDBAccordion>
         <Link href="/docs/faq/general" passHref>
-          <button className="btn theme-btn-aqua mt-md-2 w-100"> More FAQ</button>
+          <button className="btn theme-btn-aqua mt-md-2 w-100">
+            More FAQ <ExternalIcon />
+          </button>
         </Link>
       </div>
 

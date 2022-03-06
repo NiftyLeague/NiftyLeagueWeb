@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ExternalIcon from './externalIcon';
 
 export default function Footer({ classes }: { classes?: { footer?: string } }) {
   return (
@@ -15,10 +16,16 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           <div className="col-12 col-md-6 px-3 px-sm-5 px-md-0 px-lg-5 ps-md-5">
             <div className="footer-buttons text-center">
               <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">Browse collection</button>
+                <button className="btn theme-btn-aqua ms-lg-5 mx-lg-4 ms-0 mx-0">
+                  Browse collection
+                  <ExternalIcon />
+                </button>
               </a>
               <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">Launch App</button>
+                <button className="btn theme-btn-white mt-sm-0 mt-3 border-purple">
+                  Launch App
+                  <ExternalIcon />
+                </button>
               </a>
             </div>
           </div>
@@ -49,17 +56,23 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 <a className="mt-2">Blog</a>
               </Link>
               <Link href="/docs">
-                <a className="mt-2">Docs</a>
+                <a className="mt-2">
+                  Docs <ExternalIcon />
+                </a>
               </Link>
               <Link href="/shop">
-                <a className="mt-2">Merch</a>
+                <a className="mt-2">
+                  Merch <ExternalIcon />
+                </a>
               </Link>
             </div>
           </div>
           <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
               <Link href="/feedback">
-                <a>Feedback</a>
+                <a>
+                  Feedback <ExternalIcon />
+                </a>
               </Link>
               <Link href="/terms-of-service">
                 <a className="mt-2">Terms of Service</a>
