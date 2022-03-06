@@ -11,7 +11,6 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
             <div className="container-footer">
               <Image src="/img/logo-blue.svg" alt="Purple Nifty League Logo" width={48} height={48} />
               <p className="color-grey font-roboto font-13 mt-3">© Copyright 2021. All Rights Reserved.</p>
-              <p className="color-grey font-roboto font-13">326 Panoramic Hwy Unit A, Mill Valley CA US, 94941</p>
             </div>
           </div>
           <div className="col-12 col-md-6 px-3 px-sm-5 px-md-0 px-lg-5 ps-md-5">
