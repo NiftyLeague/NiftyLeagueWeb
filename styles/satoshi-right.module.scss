@@ -190,7 +190,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1950px;
+    top: 2800px;
   }
 }
 @-moz-keyframes moveDownSm {
@@ -198,7 +198,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1950px;
+    top: 2800px;
   }
 }
 @-webkit-keyframes moveDownSm {
@@ -206,7 +206,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1950px;
+    top: 2800px;
   }
 }
 @keyframes moveDownSm {
@@ -214,7 +214,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1950px;
+    top: 2800px;
   }
 }
 
@@ -223,7 +223,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1200px;
+    top: 1700px;
   }
 }
 @-moz-keyframes moveDownMd {
@@ -231,7 +231,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1200px;
+    top: 1700px;
   }
 }
 @-webkit-keyframes moveDownMd {
@@ -239,7 +239,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1200px;
+    top: 1700px;
   }
 }
 @keyframes moveDownMd {
@@ -247,7 +247,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 1200px;
+    top: 1700px;
   }
 }
 
@@ -256,7 +256,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 2000px;
+    top: 2500px;
   }
 }
 @-moz-keyframes moveDownLg {
@@ -264,7 +264,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 2000px;
+    top: 2500px;
   }
 }
 @-webkit-keyframes moveDownLg {
@@ -272,7 +272,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 2000px;
+    top: 2500px;
   }
 }
 @keyframes moveDownLg {
@@ -280,7 +280,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 2000px;
+    top: 2500px;
   }
 }
 
@@ -341,7 +341,7 @@ Stationary
 .satoshiStationary {
   position: absolute;
   z-index: 3;
-  top: 1950px;
+  top: 2800px;
   left: calc(100% - 115px);
   transform: scaleX(-1);
   width: 150px;
@@ -359,12 +359,12 @@ Stationary
 
 @media only screen and (min-width: 615px) {
   .satoshiStationary {
-    top: 1200px;
+    top: 1700px;
   }
 }
 @media only screen and (min-width: 850px) {
   .satoshiStationary {
-    top: 1200px;
+    top: 1700px;
     left: calc(100% - 135px);
     width: 175px;
   }
@@ -377,7 +377,7 @@ Stationary
 }
 @media only screen and (min-width: 1170px) {
   .satoshiStationary {
-    top: 2000px;
+    top: 2500px;
     left: 50%;
     width: 250px;
   }
