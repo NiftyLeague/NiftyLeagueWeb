@@ -23,7 +23,7 @@ const About: NextPage = () => {
 
       <div className="container about-intro min-vh-100 mt-5 py-5">
         <div className="row m-0 p-0 pt-sm-5 position-relative d-flex flex-column">
-          <div className="about-intro-content">
+          <div className="about-intro-content col-lg-8">
             <h4 className="mt-sm-5 text-m-center">Welcome to</h4>
             <h1 className="text-m-center">Nifty League</h1>
             <p className="mt-5 mt-sm-3 text-m-center p1">
