@@ -8,7 +8,7 @@ import Image from 'next/image';
 
 import Layout from '../components/layout';
 import Carousel from '../components/carousel';
-import { renderSponsor } from '../components/carousel/SponsorItem';
+import Sponsors from '../components/Sponsors';
 import { renderDegen } from '../components/carousel/DegenCardItem';
 import { SPONSORS, HomeDegenData } from '../data/constants';
 import ExternalIcon from '../components/externalIcon';
@@ -204,28 +204,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="container p-0 py-5 py-md-2 my-5 my-sm-0" style={{ maxWidth: '100%' }}>
-        <div
-          className="row m-0 p-0 position relative py-sm-5 d-flex align-items-center justify-content-center text-center"
-          style={{ background: '#191B1F' }}
-        >
-          <span className="baker-shade">
-            <Image src="/img/bakers-arr-left-shade.svg" alt="Sponsers shade left" width={230} height={390} />
-            <Image src="/img/bakers-arr-right-shade.svg" alt="Sponsers shade right" width={230} height={390} />
-          </span>
-          <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
-          <section
-            style={{
-              alignItems: 'center',
-              margin: '0 auto',
-            }}
-          >
-            <Carousel mobileItems={2} desktopItems={5} hideGradient>
-              {SPONSORS.map(renderSponsor)}
-            </Carousel>
-          </section>
-        </div>
-      </div>
+      <Sponsors sponsors={SPONSORS} />
 
       <div className="container" style={{ maxWidth: '100%', background: '#191B1F' }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>

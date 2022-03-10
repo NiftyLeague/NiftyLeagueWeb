@@ -210,12 +210,6 @@ a {
   height: 100%;
   display: grid;
 }
-.slide-content .spons-single {
-  margin: auto;
-  padding: 25px 40px;
-  text-align: center;
-  width: 100%;
-}
 .slide-content .browse-single {
   background: linear-gradient(26.04deg, rgba(123, 97, 255, 0.1) -0.03%, rgba(109, 50, 237, 0) 99.2%),
     rgba(36, 37, 38, 0.7);
@@ -1245,14 +1239,6 @@ a {
   }
   .baker-shade {
     display: none;
-  }
-  .spons-single {
-    padding: 0;
-    text-align: center;
-  }
-  .spons-single img {
-    max-width: 85px;
-    height: auto;
   }
   .league-special-container .eclipse-location {
     display: none;
