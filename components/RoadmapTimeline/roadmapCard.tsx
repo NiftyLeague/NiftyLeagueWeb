@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import DoneIcon from '@mui/icons-material/Done';
-import styles from '../../styles/roadmap.module.scss';
+import styles from './index.module.scss';
 
 interface RoadmapCardProps {
   body: JSX.Element;

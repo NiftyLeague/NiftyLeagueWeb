@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '../components/layout';
-import RoadmapTimeline from '../components/RoadmapTimeline';
-import roadmapStyles from '../styles/roadmap.module.scss';
-import satoshiStyles from '../styles/satoshi-right.module.scss';
+
+import Layout from '../../components/layout';
+import RoadmapTimeline, { styles as roadmapStyles } from '../../components/RoadmapTimeline';
+import satoshiStyles from './satoshi-right.module.scss';
 
 const Roadmap: NextPage = () => {
   return (
