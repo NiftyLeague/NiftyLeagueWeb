@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import { memo } from 'react';
 
+import styles from './index.module.scss';
+
 export const renderDegen = (degen: any) => (
   <DegenCardItem key={degen.name} name={degen.name} createdDate={degen.createdDate} source={degen.source} />
 );
@@ -16,7 +18,7 @@ const DegenCardItem = ({
 }): JSX.Element => {
   return (
     <div className="slide">
-      <div className="slide-content">
+      <div className={styles.slide_content}>
         <div className="browse-single">
           <div className="d-flex p-2 p-sm-3 p-md-4 pb-0 align-items-center">
             <h5 className="me-auto">{name}</h5>
