@@ -1,6 +1,6 @@
 import { renderRoadmapCard } from './roadmapCard';
 import { ROADMAP_CARDS } from './constants';
-import styles from '../../styles/roadmap.module.scss';
+import styles from './index.module.scss';
 
 const RoadmapTimeline = () => {
   return (
@@ -9,5 +9,7 @@ const RoadmapTimeline = () => {
     </section>
   );
 };
+
+export { styles };
 
 export default RoadmapTimeline;

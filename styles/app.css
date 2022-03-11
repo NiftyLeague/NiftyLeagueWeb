@@ -206,16 +206,6 @@ a {
   right: -30px;
 }
 
-.slide-content {
-  height: 100%;
-  display: grid;
-}
-.slide-content .browse-single {
-  background: linear-gradient(26.04deg, rgba(123, 97, 255, 0.1) -0.03%, rgba(109, 50, 237, 0) 99.2%),
-    rgba(36, 37, 38, 0.7);
-  border-radius: 8px;
-}
-
 .section-margin {
   margin-top: 150px !important;
   margin-bottom: 150px !important;
@@ -1247,18 +1237,6 @@ a {
     height: 52px;
   }
 
-  .slide-content .browse-single {
-    height: 185px;
-    min-height: auto;
-    width: 100%;
-  }
-  .slide-content .browse-single img {
-    width: 100%;
-    height: auto;
-  }
-  .slide-content .browse-single label {
-    font-size: 4.6px;
-  }
   .browse-single button {
     width: 18px;
     font-size: 4px;

@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import styles from './index.module.scss';
+
 interface TeamCardProps {
   name: string;
   source: string;
@@ -18,7 +20,7 @@ export const renderTeamCardItem = (item: TeamCardProps) => (
 
 const TeamCardItem = ({ name, source, title, children }: TeamCardProps): JSX.Element => (
   <div className="slide">
-    <div className="slide-content">
+    <div className={styles.slide_content}>
       <div className="nifty-teams d-flex flex-column p-2" style={{ margin: 'auto' }}>
         <div className="w-100" style={{ borderRadius: '10px', overflow: 'hidden' }}>
           <Image src={source} layout="responsive" width="258" height="278" alt="Team Degen image" />
