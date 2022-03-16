@@ -9,7 +9,7 @@ const ToS = (): JSX.Element => (
     <Container style={{ textAlign: 'left', padding: '40px', marginTop: '5%' }}>
       <h2>Terms and Conditions</h2>
       <p>
-        Last updated: <strong>January 19th, 2022</strong>
+        Last updated: <strong>March 15th, 2022</strong>
       </p>
       <p>Please read these terms and conditions carefully before using Our Service.</p>
       <Definitions />
@@ -90,6 +90,15 @@ const ToS = (): JSX.Element => (
         permits the inclusion, involvement, or participation of Your NFT-Token, provided that the website/application
         cryptographically verifies each NFT-Token owner&apos;s rights to display the Art for their NFT-Token to ensure
         that only the actual owner can display the Art.
+      </p>
+      <p>
+        By using the Site and in conjunction with creating, submitting, posting, promoting, or displaying content, You
+        grant us a worldwide, non-exclusive, sublicensable, royalty-free license to use, copy, modify, and display any
+        content, including but not limited to text, materials, images, files, communications, comments, feedback,
+        suggestions, ideas, concepts, questions, data, or otherwise, that you submit or post on or through the Site or
+        the App (collectively, “User Contributions”) for our current and future business purposes, including to provide,
+        promote, and improve the Site and the App. This includes any digital file, art, or other material linked to or
+        associated with any NFTs or other crypto assets that are displayed on the Site or the App.
       </p>
       <p>
         Provided that You own an ERC721 NFT-Token asset, You are granted a limited license to create fan-art and
