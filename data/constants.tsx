@@ -319,6 +319,16 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/brian.png',
   },
   {
+    name: 'David',
+    title: 'Sr. Solidity Dev',
+    source: '/img/degens/team/davidLee.png',
+  },
+  {
+    name: 'Matt',
+    title: 'FE Dev',
+    source: '/img/degens/team/matt.png',
+  },
+  {
     name: 'Brandon',
     title: 'Web3 Developer',
     source: '/img/degens/team/NiftyMichael.png',
@@ -332,5 +342,10 @@ export const TEAM_MEMBERS = [
     name: 'Ben Collie',
     title: 'Pixel Artist',
     source: '/img/degens/team/ben.png',
+  },
+  {
+    name: 'Caleb',
+    title: 'Game Economy Designer',
+    source: '/img/degens/team/caleb.png',
   },
 ];
