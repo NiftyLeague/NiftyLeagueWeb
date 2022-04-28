@@ -14,7 +14,7 @@ const Careers: NextPage = () => {
       </Head>
 
       <div className="position-relative pt-md-5 mt-md-5 career-intro">
-        <div className="container pt-5 mt-sm-5 px-0 px-sm-5" style={{ maxWidth: '90%' }}>
+        <div className="container pt-5 mt-sm-5 px-0 px-sm-5 mw-9-10">
           <div className="row m-0 position-relative com-intro-content">
             <div className="col-md-6 px-0 com-intro-text">
               <h4 className="mt-5">Nifty League</h4>
@@ -34,18 +34,18 @@ const Careers: NextPage = () => {
         </div>
       </div>
 
-      <div className="container com-content" style={{ maxWidth: '100%' }}>
+      <div className="container com-content mw-100">
         <div className="row m-0 p-0 position-relative text-center coversation-container">
           <div className="">
             <h2 className="">Join US</h2>
-            <p className="text-m-center m-auto" style={{ maxWidth: 600 }}>
+            <p className="text-m-center m-auto max-w-600">
               Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era of play-and-earn by offering a fun and engaging gaming ecosystem
             </p>
           </div>
         </div>
       </div>
 
-      <div className="container" style={{ maxWidth: '100%', minHeight: 900 }}>
+      <div className="container mw-100 min-h-900">
         {
           JOBS.map(details =>
             <JobCard key={details.id} details={details} />
