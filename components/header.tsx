@@ -101,6 +101,15 @@ function Navbar() {
                 <a className="nav-link mx-4">Community</a>
               </Link>
             </li>
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('careers'),
+              })}
+            >
+              <Link href="/careers">
+                <a className="nav-link mx-4">Careers</a>
+              </Link>
+            </li>
             <li className="nav-item">
               <Link href="/shop">
                 <a className="nav-link mx-4">

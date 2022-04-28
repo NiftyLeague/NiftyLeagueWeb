@@ -399,6 +399,9 @@ a {
 .com-intro {
   min-height: 95vh;
 }
+.career-intro {
+  min-height: 80vh;
+}
 .com-intro-content,
 .com-intro-text {
   z-index: 2;
@@ -1390,4 +1393,13 @@ a {
 
 .legal-pg p {
   font-size: 18px;
+}
+.collapse-icon {
+  position: absolute;
+  top: 56px;
+  right: 30px;
+}
+
+.job-card {
+  box-shadow: 0 10px 15px -3px rgb(191 191 191 / 50%), 0 4px 6px -2px rgb(149 149 149 / 50%) !important;
 }
