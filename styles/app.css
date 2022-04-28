@@ -1403,3 +1403,18 @@ a {
 .job-card {
   box-shadow: 0 10px 15px -3px rgb(191 191 191 / 50%), 0 4px 6px -2px rgb(149 149 149 / 50%) !important;
 }
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.max-w-600 {
+  max-width: 600px;
+}
+.min-h-900 {
+  min-height: 900px;
+}
+
+.mw-9-10 {
+  max-width: 90%;
+}
