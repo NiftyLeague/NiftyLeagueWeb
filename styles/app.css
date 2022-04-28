@@ -400,7 +400,7 @@ a {
   min-height: 95vh;
 }
 .career-intro {
-  min-height: 80vh;
+  min-height: 60vh;
 }
 .com-intro-content,
 .com-intro-text {
@@ -1408,8 +1408,8 @@ a {
   cursor: pointer;
 }
 
-.max-w-600 {
-  max-width: 600px;
+.max-w-900 {
+  max-width: 900px;
 }
 .min-h-900 {
   min-height: 900px;
@@ -1417,4 +1417,9 @@ a {
 
 .mw-9-10 {
   max-width: 90%;
+}
+
+.collapse-icon {
+  width: 50px;
+  height: 50px;
 }
