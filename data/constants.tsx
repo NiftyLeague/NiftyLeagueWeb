@@ -385,11 +385,6 @@ export const JOBS = [
       'Company health plan including dental',
       '401k',
     ],
-    pay: undefined,
-    contact: {
-      name: 'Meghan Vita',
-      title: 'VP of Ops at Nifty League',
-    }
   },
   {
     id: '2913802061',
@@ -419,10 +414,5 @@ export const JOBS = [
       'Company health plan including dental',
       '401k',
     ],
-    pay: undefined,
-    contact: {
-      name: 'Meghan Vita',
-      title: 'VP of Ops at Nifty League',
-    }
   }
 ]

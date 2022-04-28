@@ -1394,10 +1394,10 @@ a {
 .legal-pg p {
   font-size: 18px;
 }
-.collapse-icon {
-  position: absolute;
-  top: 56px;
-  right: 30px;
+.jobs-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .job-card {
