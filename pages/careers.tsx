@@ -16,36 +16,36 @@ const Careers: NextPage = () => {
       <div className="position-relative pt-md-5 mt-md-5 career-intro">
         <div className="container pt-5 mt-sm-5 px-0 px-sm-5 mw-9-10">
           <div className="row m-0 position-relative com-intro-content">
-            <div className="col-md-6 px-0 com-intro-text">
-              <h4 className="mt-5">Nifty League</h4>
-              <h1>Career</h1>
-              <p className="my-3">Join us and bring competitive gaming to Web3</p>
-            </div>
-            <div className="col-sm-8 col-md-6 col-xl-4 position-relative text-center com-banner">
-              <Image
-                src="/img/careers/careers_v02_1x.png"
-                alt="careers"
-                layout='fill'
-                objectFit='contain'
-                priority
-              />
-            </div>
+            <h2 className="mt-5">Work with</h2>
+            <h1>Nifty League</h1>
           </div>
+          <div className='position-relative my-5 max-w-900 mx-auto'>
+            <Image
+              src="/img/careers/careers_v02_4x.png"
+              alt="careers"
+              width="100%"
+              height="50%"
+              layout="responsive"
+              objectFit="contain"
+            />
+          </div>
+
+
         </div>
       </div>
 
-      <div className="container com-content mw-100">
+      <div className="container mw-100 mb-5">
         <div className="row m-0 p-0 position-relative text-center coversation-container">
           <div className="">
-            <h2 className="">Join US</h2>
-            <p className="text-m-center m-auto max-w-600">
-              Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era of play-and-earn by offering a fun and engaging gaming ecosystem
+            <h2 className="">Join Us</h2>
+            <p className="text-m-center m-auto max-w-900">
+              Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era of play-and-earn by offering a fun and engaging gaming ecosystem. We are backed by top VCs including RSE Ventures, Lerer Hippeau, Spartan Group, and Gary Vaynerchuk, and are looking to bulk out our engineering team with world-class Unity game developers. As a startup, we are lean, have low egos, work hard and love what we do. You will have a large amount of ownership and work directly with the co-founders and community. If this sounds exciting to you, keep reading!
             </p>
           </div>
         </div>
       </div>
 
-      <div className="container mw-100 min-h-900">
+      <div className="container mw-100 mt-5">
         {
           JOBS.map(details =>
             <JobCard key={details.id} details={details} />
