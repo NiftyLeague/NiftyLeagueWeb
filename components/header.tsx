@@ -270,7 +270,7 @@ export default function Header() {
   }, [expanded]);
 
   return (
-    <header className="header">
+    <header className="header fixed-top-header">
       <span className="position-absolute eclipse-location">
         <Image src="/img/eclipses-header.svg" alt="Eclipse background" layout="responsive" width={668} height={666} />
       </span>
