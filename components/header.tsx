@@ -217,6 +217,11 @@ function MobileNav() {
             </Link>
           </li>
           <li>
+            <Link href="/careers">
+              <a>Careers</a>
+            </Link>
+          </li>
+          <li>
             <Link href="/learn">
               <a>Learn</a>
             </Link>
