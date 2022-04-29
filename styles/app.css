@@ -1430,3 +1430,10 @@ a {
 .md-text-left {
   text-align: left !important;
 }
+
+.fixed-top-header {
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  width: 100%;
+}
