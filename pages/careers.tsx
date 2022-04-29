@@ -13,24 +13,24 @@ const Careers: NextPage = () => {
         <meta name="description" content="Join us and bring competitive gaming to Web3." />
       </Head>
 
-      <div className="position-relative pt-md-5 mt-md-5 career-intro">
-        <div className="container pt-5 mt-sm-5 px-0 px-sm-5 mw-9-10">
+      <div className="position-relative min-vh-100 pt-md-5 mt-md-5 com-intro">
+        <div className="container pt-5 mt-sm-5 px-0 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
-            <h2 className="mt-5">Work with</h2>
-            <h1>Nifty League</h1>
+            <div className="col-md-6 px-0 com-intro-text">
+              <h2 className="mt-5">Work with</h2>
+              <h1>Nifty League</h1>
+            </div>
+            <div className="col-sm-8 col-md-6 col-xl-4 position-relative text-center com-banner">
+              <Image
+                src="/img/careers/careers_v02_2x.png"
+                alt="Satoshi moon"
+                width={648}
+                height={406}
+                layout="responsive"
+                priority
+              />
+            </div>
           </div>
-          <div className='position-relative my-5 max-w-900 mx-auto'>
-            <Image
-              src="/img/careers/careers_v02_4x.png"
-              alt="careers"
-              width="100%"
-              height="50%"
-              layout="responsive"
-              objectFit="contain"
-            />
-          </div>
-
-
         </div>
       </div>
 
