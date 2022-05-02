@@ -1015,6 +1015,9 @@ a {
     align-items: center;
     justify-content: center;
   }
+  .theme-btn-aqua.mw-fix {
+    width: 195px;
+  }
   .theme-btn-white {
     width: 325px;
     display: flex;
@@ -1432,8 +1435,12 @@ a {
 }
 
 .fixed-top-header {
-  position: fixed;
-  top: 0;
-  z-index: 10000;
   width: 100%;
+}
+
+.div-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'IBM Plex Sans', sans-serif;
+  opacity: 0.9;
 }
