@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 import { Container } from '@mui/material';
-import Definitions from '@/components/definitions';
-import Layout from '@/components/layout';
+import Definitions from '@components/definitions';
+import Layout from '@components/layout';
 
 const ToS = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>

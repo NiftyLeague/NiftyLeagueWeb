@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import Image from 'next/image';
 
-import { TEAM_MEMBERS, TEAM_OFFICERS } from '@/data/constants';
+import { TEAM_MEMBERS, TEAM_OFFICERS } from '@data/constants';
 
 const TeamDesktop = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container } from '@mui/material';
-import Definitions from '@/components/definitions';
-import Layout from '@/components/layout';
+import Definitions from '@components/definitions';
+import Layout from '@components/layout';
 
 const Disclaimer = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>

@@ -4,17 +4,17 @@ import ErrorPage from 'next/error';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { ParsedUrlQuery } from 'querystring';
 
-import { getAllPostsWithSlug, getPostAndMorePosts } from '@/lib/api';
-import Container from '@/components/blog/container';
-import Header from '@/components/blog/header';
-import Layout from '@/components/layout';
-import MoreStories from '@/components/blog/more-stories';
-import PostBody from '@/components/blog/post-body';
-import PostHeader from '@/components/blog/post-header';
-import PostTitle from '@/components/blog/post-title';
-import SectionSeparator from '@/components/blog/section-separator';
-import Tags from '@/components/blog/tags';
-import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '@/types/generated/graphql';
+import { getAllPostsWithSlug, getPostAndMorePosts } from '@lib/api';
+import Container from '@components/blog/container';
+import Header from '@components/blog/header';
+import Layout from '@components/layout';
+import MoreStories from '@components/blog/more-stories';
+import PostBody from '@components/blog/post-body';
+import PostHeader from '@components/blog/post-header';
+import PostTitle from '@components/blog/post-title';
+import SectionSeparator from '@components/blog/section-separator';
+import Tags from '@components/blog/tags';
+import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '@types/generated/graphql';
 
 export default function PostView({
   post,
