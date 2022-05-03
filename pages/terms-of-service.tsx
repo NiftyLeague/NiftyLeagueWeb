@@ -306,7 +306,39 @@ const ToS = (): JSX.Element => (
           Upgrades to our platform or the Ethereum Network may have unintended, adverse effects on all Nifty League
           assets.
         </li>
+        <li>
+          Bad actors may hack or exploit systems and steal NFTs.
+        </li>
+        <li>
+          Legislation or regulation could be adopted that negatively impact the use, transfer, exchange or price of NFTs.
+        </li>
+        <li>
+          NFTs compete with other digital assets, and this competition may negatively impact the price of an NFT.
+        </li>
+        <li>
+          The market for NFTs is new and volatile, 
+          and the price of an NFT relative to fiat currencies may greatly decrease over a short period of time, 
+          impacting the liquidity and the price of the NFT.
+        </li>
+        <li>
+          Bad actors may attempt to impersonate owners of NFTs, 
+          counterfeit NFTs, sell replicas of original NFTs or misuse art tied to NFTs.
+        </li>
+        <li>
+          Businesses or organizations that issue NFTs may go out of business, 
+          declare bankruptcy or cease operations, 
+          thereby decreasing the use or value of its NFTs.
+        </li>
       </ol>
+      <h3>Abuse</h3>
+      <p>
+        Nifty League reserves the right to prevent the withdrawal of NFTL if abuse is detected. 
+        Cheating and ‘boosting' are strictly prohibited. 
+        Agreeing with other players to rank experience and earn NFTL faster than can be done through normal gameplay, 
+        often referred to as ‘boosting’, is strictly prohibited. 
+        Use of third-party programs, for example, cheat or bot engines, 
+        and applications in conjunction with our app is strictly prohibited.
+      </p>
       <h3>Disclaimer</h3>
       <p>
         Our Disclaimer includes important statements intended to specify or delimit the scope of rights and obligations
