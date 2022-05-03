@@ -3,13 +3,13 @@ import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import * as ga from '@/lib/ga';
+import * as ga from '@lib/ga';
 
-import '@/styles/app.css';
-import '@/styles/slick.css';
-import '@/styles/blog.scss';
-import '@/styles/footer.scss';
-import '@/styles/header.scss';
+import '@styles/app.css';
+import '@styles/slick.css';
+import '@styles/blog.scss';
+import '@styles/footer.scss';
+import '@styles/header.scss';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();

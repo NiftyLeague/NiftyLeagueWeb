@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getPreviewPost } from '@/lib/api';
+import { getPreviewPost } from '@lib/api';
 
 type Data = {
   message: string;
