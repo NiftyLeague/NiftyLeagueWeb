@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '@/components/layout';
-import Carousel from '@/components/carousel';
-import { renderDegen } from '@/components/carousel/DegenCardItem';
-import SocialCards from '@/components/SocialCards';
-import { CommunityDegenData } from '@/data/constants';
+import Layout from '../components/layout';
+import Carousel from '../components/carousel';
+import { renderDegen } from '../components/carousel/DegenCardItem';
+import SocialCards from '../components/SocialCards';
+import { CommunityDegenData } from '../data/constants';
 
 const Community: NextPage = () => {
   return (
