@@ -1,4 +1,4 @@
-import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '../types/generated/graphql';
+import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '@/types/generated/graphql';
 
 const API_URL = process.env.WORDPRESS_API_URL as string;
 

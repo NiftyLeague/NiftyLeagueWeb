@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Maybe, User } from '../../types/generated/graphql';
+import { Maybe, User } from 'types/generated/graphql';
 
 export default function Avatar({ author }: { author?: Maybe<User> }) {
   const name = author
