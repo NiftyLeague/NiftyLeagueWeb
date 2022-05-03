@@ -333,9 +333,9 @@ const ToS = (): JSX.Element => (
       <h3>Abuse</h3>
       <p>
         Nifty League reserves the right to prevent the withdrawal of NFTL if abuse is detected. 
-        Cheating and ‘boosting' are strictly prohibited. 
+        Cheating and &apos;boosting&apos; are strictly prohibited. 
         Agreeing with other players to rank experience and earn NFTL faster than can be done through normal gameplay, 
-        often referred to as ‘boosting’, is strictly prohibited. 
+        often referred to as &apos;boosting&apos;, is strictly prohibited. 
         Use of third-party programs, for example, cheat or bot engines, 
         and applications in conjunction with our app is strictly prohibited.
       </p>
