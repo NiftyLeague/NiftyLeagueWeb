@@ -2,7 +2,7 @@ import Avatar from './avatar';
 import Date from './date';
 import CoverImage from './cover-image';
 import Link from 'next/link';
-import { Maybe, User, MediaItem } from '../../types/generated/graphql';
+import { Maybe, User, MediaItem } from '@/types/generated/graphql';
 
 export default function PostPreview({
   title,

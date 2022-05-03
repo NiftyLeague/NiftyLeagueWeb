@@ -1,4 +1,4 @@
-import { PostToTagConnection } from '../../types/generated/graphql';
+import { PostToTagConnection } from '@/types/generated/graphql';
 
 export default function Tags({ tags }: { tags: PostToTagConnection }) {
   return (
