@@ -1,4 +1,4 @@
-import { PostToCategoryConnection, PostToCategoryConnectionEdge } from '@/types/generated/graphql';
+import { PostToCategoryConnection, PostToCategoryConnectionEdge } from '@types/generated/graphql';
 
 export default function Categories({ categories }: { categories: PostToCategoryConnection }) {
   return (
