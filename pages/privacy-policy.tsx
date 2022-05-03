@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Container } from '@mui/material';
-import Layout from '../components/layout';
+import Layout from '@components/layout';
 
 const PrivacyPolicy = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>

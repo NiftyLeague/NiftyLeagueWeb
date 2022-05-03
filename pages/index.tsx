@@ -6,12 +6,12 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
-import Layout from '../components/layout';
-import Carousel from '../components/carousel';
-import Sponsors from '../components/Sponsors';
-import { renderDegen } from '../components/carousel/DegenCardItem';
-import { SPONSORS, HomeDegenData } from '../data/constants';
-import ExternalIcon from '../components/externalIcon';
+import Layout from '@components/layout';
+import Carousel from '@components/carousel';
+import Sponsors from '@components/Sponsors';
+import { renderDegen } from '@components/carousel/DegenCardItem';
+import { SPONSORS, HomeDegenData } from '@data/constants';
+import ExternalIcon from '@components/externalIcon';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
