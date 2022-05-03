@@ -4,9 +4,9 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
-import Layout from '@/components/layout';
-import LearnCards from '@/components/LearnCards';
-import ExternalIcon from '@/components/externalIcon';
+import Layout from '../components/layout';
+import LearnCards from '../components/LearnCards';
+import ExternalIcon from '../components/externalIcon';
 
 const Learn: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
