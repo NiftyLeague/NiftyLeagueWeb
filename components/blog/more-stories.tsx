@@ -1,5 +1,5 @@
 import PostPreview from './post-preview';
-import { Maybe, PostFormatToPostConnectionEdge } from '../../types/generated/graphql';
+import { Maybe, PostFormatToPostConnectionEdge } from '@/types/generated/graphql';
 
 export default function MoreStories({ posts }: { posts?: Maybe<PostFormatToPostConnectionEdge[]> }) {
   return (
