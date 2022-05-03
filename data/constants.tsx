@@ -314,6 +314,11 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/zoiby.png',
   },
   {
+    name: 'Will Patrick',
+    title: 'Sr. Programmer',
+    source: '/img/degens/team/will.png',
+  },
+  {
     name: 'Brian Wang',
     title: 'Sr. Web3 Developer',
     source: '/img/degens/team/brian.png',
