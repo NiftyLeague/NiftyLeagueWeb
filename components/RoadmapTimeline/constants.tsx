@@ -146,6 +146,31 @@ export const ROADMAP_CARDS = [
   },
   {
     image: {
+      height: 375,
+      src: '/img/roadmap/rentals_v02.png',
+      style: { top: '-100px' },
+      width: 609,
+    },
+    title: 'Degen Rentals',
+    body: (
+      <>
+        <p>
+          Our player-base is currently limited to the number of unique <strong>DEGEN NFT</strong> holders. We want to
+          scale our platform as much as possible without devaluing our genesis DEGEN tribes who stand at the heart of
+          our ecosystem.
+        </p>
+        <p className="mb-0">
+          Rather than inflating the character supply as some projects may do, we are introducing a bespoke rental system
+          allowing DEGEN holders to earn <strong>NFTL</strong> daily through fees. Each DEGEN can be rented indefinitely
+          but the cost for doing so will increase exponentially with each additional rental. This allows the market to
+          decide the price for each DEGEN individually while spreading out the rentals across the board as some equipped
+          with precious items, wearables, or backgrounds will have a higher earn rate through NFTL multipliers.
+        </p>
+      </>
+    ),
+  },
+  {
+    image: {
       height: 450,
       src: '/img/roadmap/leaderboards_v02.png',
       style: { top: '-120px' },
