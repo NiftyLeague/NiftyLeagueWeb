@@ -14,7 +14,7 @@ import PostHeader from '@components/blog/post-header';
 import PostTitle from '@components/blog/post-title';
 import SectionSeparator from '@components/blog/section-separator';
 import Tags from '@components/blog/tags';
-import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '@types/generated/graphql';
+import { Post, PostFormatToPostConnection, PostFormatToPostConnectionEdge } from '../../types/generated/graphql';
 
 export default function PostView({
   post,

@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Maybe, MediaItem } from '@types/generated/graphql';
+import { Maybe, MediaItem } from '../../types/generated/graphql';
 
 export default function CoverImage({
   alignfull,
