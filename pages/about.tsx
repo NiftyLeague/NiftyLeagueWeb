@@ -5,13 +5,13 @@ import Link from 'next/link';
 import Head from 'next/head';
 import Image from 'next/image';
 
-import Layout from '../components/layout';
-import Carousel from '../components/carousel';
-import { renderDegen } from '../components/carousel/DegenCardItem';
-import { renderTeamCardItem } from '../components/carousel/TeamCardItem';
-import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '../data/constants';
-import TeamDesktop from '../components/TeamDesktop';
-import ExternalIcon from '../components/externalIcon';
+import Layout from '@components/layout';
+import Carousel from '@components/carousel';
+import { renderDegen } from '@components/carousel/DegenCardItem';
+import { renderTeamCardItem } from '@components/carousel/TeamCardItem';
+import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '@data/constants';
+import TeamDesktop from '@components/TeamDesktop';
+import ExternalIcon from '@components/externalIcon';
 
 const About: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
