@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { LegacyRef, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -215,14 +215,13 @@ function MobileNav() {
     },
   ]
   const handleUncheck = () => {
-    if (checkboxRef.current && checkboxRef.current.checked) {
+    if (checkboxRef.current?.checked) {
       checkboxRef.current.checked = false;
     }
-    // console.log(checkboxRef)
   }
   return (
     <div id="nav" className="mobile-nav align-items-center d-flex">
-      <input type="checkbox" id="toggle" style={{ display: 'none' }} ref={checkboxRef} />
+      <input type="checkbox" id="toggle" style={{ display: 'none' }} ref={checkboxRef as LegacyRef<HTMLInputElement> | undefined} />
       <label className="toggle-btn toggle-btn__cross font-18" htmlFor="toggle">
         <svg className="mx-2" width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="0.5" width="22" height="2" rx="1" fill="white" />
