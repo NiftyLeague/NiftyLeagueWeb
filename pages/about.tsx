@@ -170,7 +170,7 @@ const About: NextPage = () => {
       </div>
 
       <div
-        className="container p-0 desktop-block mb-3"
+        className="container p-0 mb-3"
         style={{ maxWidth: '100%', background: '#191B1F', marginTop: -225 }}
       >
         <div className="row m-0 p-0 position-relative nifty-league-browse">
@@ -183,7 +183,7 @@ const About: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel>{AboutDegenData.map(renderDegen)}</Carousel>
+              <Carousel mobileItems={2}>{AboutDegenData.map(renderDegen)}</Carousel>
             </section>
           </div>
         </div>

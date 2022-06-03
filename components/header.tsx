@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { LegacyRef, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -66,7 +66,7 @@ function Navbar() {
 
   return (
     <nav id="nav" className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop">
-      <div className="container-fluid" style={{ borderStyle: 'none' }}>
+      <div className="container-fluid z-100" style={{ borderStyle: 'none' }}>
         <div className="navbar-nav collapse navbar-collapse px-4 mt-4" id="navbarSupportedContent">
           <Link href="/">
             <a className="navbar-brand mt-5 mt-lg-0">
@@ -99,6 +99,15 @@ function Navbar() {
             >
               <Link href="/community">
                 <a className="nav-link mx-4">Community</a>
+              </Link>
+            </li>
+            <li
+              className={cn('nav-item', {
+                ['active']: pathname.includes('careers'),
+              })}
+            >
+              <Link href="/careers">
+                <a className="nav-link mx-4">Careers</a>
               </Link>
             </li>
             <li className="nav-item">
@@ -166,9 +175,53 @@ function Navbar() {
 }
 
 function MobileNav() {
+  const checkboxRef = useRef({ checked: false });
+  const linkList = [
+    {
+      href: '/',
+      name: 'Home',
+    },
+    {
+      href: '/about',
+      name: 'About',
+    },
+    {
+      href: '/roadmap',
+      name: 'Roadmap',
+    },
+    {
+      href: '/community',
+      name: 'Community',
+    },
+    {
+      href: '/careers',
+      name: 'Careers',
+    },
+    {
+      href: '/learn',
+      name: 'Learn',
+    },
+    {
+      href: '/blog',
+      name: 'Blog',
+    },
+    {
+      href: '/docs',
+      name: 'Docs',
+    },
+    {
+      href: '/shop',
+      name: 'Shop',
+    },
+  ]
+  const handleUncheck = () => {
+    if (checkboxRef.current?.checked) {
+      checkboxRef.current.checked = false;
+    }
+  }
   return (
     <div id="nav" className="mobile-nav align-items-center d-flex">
-      <input type="checkbox" id="toggle" style={{ display: 'none' }} />
+      <input type="checkbox" id="toggle" style={{ display: 'none' }} ref={checkboxRef as LegacyRef<HTMLInputElement> | undefined} />
       <label className="toggle-btn toggle-btn__cross font-18" htmlFor="toggle">
         <svg className="mx-2" width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="0.5" width="22" height="2" rx="1" fill="white" />
@@ -187,46 +240,15 @@ function MobileNav() {
 
       <nav>
         <ul>
-          <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/about">
-              <a>About</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/roadmap">
-              <a>Roadmap</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/community">
-              <a>Community</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/learn">
-              <a>Learn</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/blog">
-              <a>Blog</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/docs">
-              <a>Docs</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/shop">
-              <a>Merch</a>
-            </Link>
-          </li>
+          {linkList.map(item => {
+            return (
+              <li key={item.href} onClick={handleUncheck}>
+                <Link href={item.href}>
+                  <a>{item.name}</a>
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </nav>
     </div>
@@ -256,8 +278,8 @@ export default function Header() {
   }, [expanded]);
 
   return (
-    <header className="header">
-      <span className="position-absolute eclipse-location">
+    <header className="header fixed-top-header">
+      <span className="position-absolute eclipse-location z-back">
         <Image src="/img/eclipses-header.svg" alt="Eclipse background" layout="responsive" width={668} height={666} />
       </span>
       {desktop && <Notification />}
