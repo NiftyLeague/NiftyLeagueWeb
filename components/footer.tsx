@@ -45,6 +45,9 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               <Link href="/community">
                 <a className="mt-2">Community</a>
               </Link>
+              <Link href="/careers">
+                <a className="mt-2">Careers</a>
+              </Link>
             </div>
           </div>
           <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">

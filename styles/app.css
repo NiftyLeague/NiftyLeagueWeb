@@ -399,6 +399,9 @@ a {
 .com-intro {
   min-height: 95vh;
 }
+.career-intro {
+  min-height: 60vh;
+}
 .com-intro-content,
 .com-intro-text {
   z-index: 2;
@@ -1012,6 +1015,9 @@ a {
     align-items: center;
     justify-content: center;
   }
+  .theme-btn-aqua.mw-fix {
+    width: 195px;
+  }
   .theme-btn-white {
     width: 325px;
     display: flex;
@@ -1390,4 +1396,51 @@ a {
 
 .legal-pg p {
   font-size: 18px;
+}
+.jobs-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-card {
+  box-shadow: 0 10px 15px -3px rgb(191 191 191 / 50%), 0 4px 6px -2px rgb(149 149 149 / 50%) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.max-w-900 {
+  max-width: 900px;
+}
+.min-h-900 {
+  min-height: 900px;
+}
+
+.mw-9-10 {
+  max-width: 90%;
+}
+
+.collapse-icon {
+  width: 50px;
+  height: 50px;
+}
+.collapse-icon > .fas {
+  float: right;
+}
+
+.md-text-left {
+  text-align: left !important;
+}
+
+.fixed-top-header {
+  width: 100%;
+}
+
+.div-paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'IBM Plex Sans', sans-serif;
+  opacity: 0.9;
 }
