@@ -21,7 +21,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
   const [open, setOpen] = useState(false);
   return (
     <MDBCard background='dark' className="m-3 job-card my-5">
-      <div className="card-header position-relative p-5 cursor-pointer jobs-card-header border-bottom-0" onClick={() => setOpen(!open)}>
+      <div className="card-header position-relative p-md-5 p-3 cursor-pointer jobs-card-header border-bottom-0" onClick={() => setOpen(!open)}>
         <div>
           <h3>{title}</h3>
           <span>{location}</span>
@@ -34,7 +34,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
         </div>
       </div>
 
-      <MDBCollapse show={open} className='p-5 pt-2 h-auto'>
+      <MDBCollapse show={open} className='p-md-5 p-3 pt-md-1 pt-2 h-auto'>
         <h4 className="color-purple md-text-left">About the Role</h4>
         <div className="md-text-left div-paragraph">{aboutTheRole}</div>
         {
