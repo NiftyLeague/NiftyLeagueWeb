@@ -7,13 +7,11 @@ interface JobCardProps {
     link: string;
     title: string;
     location: string;
-    aboutTheJob: string;
     aboutTheRole: string;
     responsibilities?: string[];
     requirements: string[];
     benefits: string[];
   }
-
 }
 
 const JobCard = ({ details }: JobCardProps): JSX.Element => {
