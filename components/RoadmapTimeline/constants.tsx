@@ -66,7 +66,7 @@ export const ROADMAP_CARDS = [
               Desktop App
             </a>
           </strong>{' '}
-          is now live for Windows users! <em>(MacOS is right around the corner)</em>
+          is now live for Windows users!
         </p>
         <p className="mb-0">
           Considering browser limitations with our previous WebGL build, we made a point to focus our immediate efforts
