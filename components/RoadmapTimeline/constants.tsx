@@ -3,31 +3,6 @@ import styles from './index.module.scss';
 
 export const ROADMAP_CARDS = [
   {
-    image: {
-      height: 375,
-      src: '/img/roadmap/rentals_v02.png',
-      style: { top: '-100px' },
-      width: 609,
-    },
-    title: 'Degen Rentals',
-    body: (
-      <>
-        <p>
-          Our player-base is currently limited to the number of unique <strong>DEGEN NFT</strong> holders. We want to
-          scale our platform as much as possible without devaluing our genesis DEGEN tribes who stand at the heart of
-          our ecosystem.
-        </p>
-        <p className="mb-0">
-          Rather than inflating the character supply as some projects may do, we are introducing a bespoke rental system
-          allowing DEGEN holders to earn <strong>NFTL</strong> daily through fees. Each DEGEN can be rented indefinitely
-          but the cost for doing so will increase exponentially with each additional rental. This allows the market to
-          decide the price for each DEGEN individually while spreading out the rentals across the board as some equipped
-          with precious items, wearables, or backgrounds will have a higher earn rate through NFTL multipliers.
-        </p>
-      </>
-    ),
-  },
-  {
     completed: true,
     completionDate: 'Sept 24th - 30th, 2021',
     image: {
@@ -36,7 +11,7 @@ export const ROADMAP_CARDS = [
       style: { top: '-90px' },
       width: 661,
     },
-    title: 'Degen Minting',
+    title: 'DEGEN Minting',
     body: (
       <p className="mb-0">
         Nifty League DEGEN NFTs were brought to life by our community at the end of Sept 2021. The minting process was a
@@ -91,7 +66,7 @@ export const ROADMAP_CARDS = [
               Desktop App
             </a>
           </strong>{' '}
-          is now live for Windows users! <em>(MacOS is right around the corner)</em>
+          is now live for Windows users!
         </p>
         <p className="mb-0">
           Considering browser limitations with our previous WebGL build, we made a point to focus our immediate efforts
@@ -145,13 +120,15 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
+    completed: true,
+    completionDate: 'May 3rd, 2022',
     image: {
       height: 375,
       src: '/img/roadmap/rentals_v02.png',
       style: { top: '-100px' },
       width: 609,
     },
-    title: 'Degen Rentals',
+    title: 'DEGEN Rentals',
     body: (
       <>
         <p>
@@ -170,6 +147,8 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
+    completed: true,
+    completionDate: 'Jun 8th, 2022',
     image: {
       height: 450,
       src: '/img/roadmap/leaderboards_v02.png',
@@ -196,6 +175,42 @@ export const ROADMAP_CARDS = [
           <li>I_M_I</li>
           <li>koa.eth</li>
         </ul>
+      </>
+    ),
+  },
+  {
+    image: {
+      height: 325,
+      src: '/img/roadmap/comics_v01.png',
+      style: { top: '-170px', right: '-80px' },
+      width: 323,
+    },
+    title: 'Comics',
+    body: (
+      <>
+        <p>
+          Our team has been slowly hinting at the upcoming utilities for comics - as you may already be aware you will
+          be able to burn each page for special in-game items that increase your DEGEN&apos;S multiplier... but the fun
+          doesn&apos;t stop there!
+        </p>
+        <p>
+          We previously airdropped our initial 4 comic pages to minters and still have 2 pages remaining for DEGEN
+          holders in early 2022. Word from Satoshi - securing a full collection or 2 is <em>highly</em> recommended.
+        </p>
+        <div className="row">
+          <div className="col-6 p-2">
+            <Image alt="comic 1" height={500} layout="responsive" src="/img/roadmap/page1.png" width={500} />
+          </div>
+          <div className="col-6 p-2">
+            <Image alt="comic 2" height={500} layout="responsive" src="/img/roadmap/page2.png" width={500} />
+          </div>
+          <div className="col-6 p-2">
+            <Image alt="comic 3" height={500} layout="responsive" src="/img/roadmap/page3.png" width={500} />
+          </div>
+          <div className="col-6 p-2">
+            <Image alt="comic 4" height={500} layout="responsive" src="/img/roadmap/page4.png" width={500} />
+          </div>
+        </div>
       </>
     ),
   },
@@ -234,42 +249,6 @@ export const ROADMAP_CARDS = [
           test out each tribe&apos;s special move, but more importantly - grind it out until they have enough{' '}
           <strong>NFTL</strong> to pay for a rental.
         </p>
-      </>
-    ),
-  },
-  {
-    image: {
-      height: 325,
-      src: '/img/roadmap/comics_v01.png',
-      style: { top: '-170px', right: '-80px' },
-      width: 323,
-    },
-    title: 'Comics',
-    body: (
-      <>
-        <p>
-          Our team has been slowly hinting at the upcoming utilities for comics - as you may already be aware you will
-          be able to burn each page for special in-game items that increase your DEGEN&apos;S multiplier... but the fun
-          doesn&apos;t stop there!
-        </p>
-        <p>
-          We previously airdropped our initial 4 comic pages to minters and still have 2 pages remaining for DEGEN
-          holders in early 2022. Word from Satoshi - securing a full collection or 2 is <em>highly</em> recommended.
-        </p>
-        <div className="row">
-          <div className="col-6 p-2">
-            <Image alt="comic 1" height={500} layout="responsive" src="/img/roadmap/page1.png" width={500} />
-          </div>
-          <div className="col-6 p-2">
-            <Image alt="comic 2" height={500} layout="responsive" src="/img/roadmap/page2.png" width={500} />
-          </div>
-          <div className="col-6 p-2">
-            <Image alt="comic 3" height={500} layout="responsive" src="/img/roadmap/page3.png" width={500} />
-          </div>
-          <div className="col-6 p-2">
-            <Image alt="comic 4" height={500} layout="responsive" src="/img/roadmap/page4.png" width={500} />
-          </div>
-        </div>
       </>
     ),
   },
@@ -385,7 +364,7 @@ export const ROADMAP_CARDS = [
       width: 379,
       height: 325,
     },
-    title: 'Degen Pets',
+    title: 'DEGEN Pets',
     body: (
       <>
         <p>
@@ -458,7 +437,7 @@ export const ROADMAP_CARDS = [
       width: 550,
       height: 451,
     },
-    title: 'Gen2 Degens',
+    title: 'Gen2 DEGENs',
     body: (
       <p className="mb-0">
         As our platform grows and demand increases DEGEN rental costs - we may consider a future NFT sale introducing
