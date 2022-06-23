@@ -179,6 +179,32 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
+    completed: true,
+    completionDate: 'Jun 15th, 2022',
+    image: {
+      height: 1080,
+      src: '/img/roadmap/wen.gif',
+      style: { top: '-130px' },
+      width: 1440,
+    },
+    title: 'WEN Game',
+    body: (
+      <>
+        <p>
+          <strong>
+            <a href="https://app.niftyleague.com/games/wen-game" target="_blank" rel="noreferrer">
+              WEN
+            </a>
+          </strong>{' '}
+          is a game of timing and reflex. The purpose of the game is to try and hit as many baseballs (launched from a
+          baseball machine) as possible in a row to get a high score. Arcade Tokens are used to play WEN Game. Players
+          earn Arcade Tokens every day they complete a Nifty Smashers match! This game marks our first Arcade Game
+          launched and can be played without owning or renting a DEGEN.
+        </p>
+      </>
+    ),
+  },
+  {
     image: {
       height: 325,
       src: '/img/roadmap/comics_v01.png',
