@@ -13,7 +13,7 @@ function Notification() {
       {desktop && (
         <p className="font-14 mb-0">
           🚀{'  '}
-          <Link href="/blog/seed-investment-round">
+          <Link href="https://niftyleague.medium.com/nifty-league-raises-5-million-seed-investment-round-led-by-rse-ventures-to-expand-its-nft-gaming-2e28a9972c5e">
             <a className="color-blue"> Our funding round </a>
           </Link>
           <label className="color-light-grey">is now closed! </label>{' '}
@@ -145,7 +145,7 @@ function Navbar() {
                     ['inactive']: !pathname.includes('blog'),
                   })}
                 >
-                  <Link href="/blog">
+                  <Link href="https://niftyleague.medium.com/">
                     <a className="dropdown-item">Blog</a>
                   </Link>
                 </li>
@@ -202,7 +202,7 @@ function MobileNav() {
       name: 'Learn',
     },
     {
-      href: '/blog',
+      href: 'https://niftyleague.medium.com/',
       name: 'Blog',
     },
     {
@@ -213,15 +213,20 @@ function MobileNav() {
       href: '/shop',
       name: 'Shop',
     },
-  ]
+  ];
   const handleUncheck = () => {
     if (checkboxRef.current?.checked) {
       checkboxRef.current.checked = false;
     }
-  }
+  };
   return (
     <div id="nav" className="mobile-nav align-items-center d-flex">
-      <input type="checkbox" id="toggle" style={{ display: 'none' }} ref={checkboxRef as LegacyRef<HTMLInputElement> | undefined} />
+      <input
+        type="checkbox"
+        id="toggle"
+        style={{ display: 'none' }}
+        ref={checkboxRef as LegacyRef<HTMLInputElement> | undefined}
+      />
       <label className="toggle-btn toggle-btn__cross font-18" htmlFor="toggle">
         <svg className="mx-2" width="22" height="10" viewBox="0 0 22 10" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="0.5" width="22" height="2" rx="1" fill="white" />
@@ -247,7 +252,7 @@ function MobileNav() {
                   <a>{item.name}</a>
                 </Link>
               </li>
-            )
+            );
           })}
         </ul>
       </nav>
