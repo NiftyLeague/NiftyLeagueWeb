@@ -55,9 +55,9 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               <Link href="/learn">
                 <a>Learn</a>
               </Link>
-              <Link href="/blog">
-                <a className="mt-2">Blog</a>
-              </Link>
+              <a className="mt-2" href="https://niftyleague.medium.com/">
+                Blog
+              </a>
               <Link href="/docs">
                 <a className="mt-2">
                   Docs <ExternalIcon />
