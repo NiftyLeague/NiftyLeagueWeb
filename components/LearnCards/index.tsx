@@ -44,7 +44,7 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
 
 const LearnCards = () => {
   return (
-    <div className="row pt-3 pt-lg-5 mt-lg-3">
+    <div className="row pt-5 pt-lg-5 mt-lg-3">
       {LEARN_CARDS.map(({ btnText, external, image, link, subtitle, title }) => (
         <LearnCard
           key={title}
