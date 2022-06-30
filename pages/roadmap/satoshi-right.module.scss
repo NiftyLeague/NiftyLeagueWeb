@@ -1,7 +1,7 @@
 .satoshiMove {
   position: absolute;
   z-index: 3;
-  width: 150px;
+  width: 120px;
   top: 15%;
   -webkit-animation-name: moveRightXs, moveDownSm, spin, hide;
   -webkit-animation-duration: 4000ms, 8000ms, 300ms, 1ms;
@@ -36,8 +36,8 @@
 @media only screen and (min-width: 1170px) {
   .satoshiMove {
     width: 250px;
-    -webkit-animation-name: moveRightLg, moveDownLg, display, hide;
-    animation-name: moveRightLg, moveDownLg, display, hide;
+    -webkit-animation-name: moveRightLg, moveDownLg, spin, hide;
+    animation-name: moveRightLg, moveDownLg, spin, hide;
   }
 }
 
@@ -52,7 +52,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(100% - 115px);
+    left: calc(100% - 120px);
   }
 }
 @-moz-keyframes moveRightXs {
@@ -60,7 +60,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(100% - 115px);
+    left: calc(100% - 120px);
   }
 }
 @-webkit-keyframes moveRightXs {
@@ -68,7 +68,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(100% - 115px);
+    left: calc(100% - 120px);
   }
 }
 @keyframes moveRightXs {
@@ -76,7 +76,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(100% - 115px);
+    left: calc(100% - 120px);
   }
 }
 
@@ -151,7 +151,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(50% - 250px);
+    left: 50%;
   }
 }
 @-moz-keyframes moveRightLg {
@@ -159,7 +159,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(50% - 250px);
+    left: 50%;
   }
 }
 @-webkit-keyframes moveRightLg {
@@ -167,7 +167,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(50% - 250px);
+    left: 50%;
   }
 }
 @keyframes moveRightLg {
@@ -175,7 +175,7 @@ Move Right
     left: 0;
   }
   to {
-    left: calc(50% - 250px);
+    left: 50%;
   }
 }
 
@@ -190,7 +190,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 @-moz-keyframes moveDownSm {
@@ -198,7 +198,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 @-webkit-keyframes moveDownSm {
@@ -206,7 +206,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 @keyframes moveDownSm {
@@ -214,7 +214,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 
@@ -223,7 +223,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 3000px;
+    top: 3300px;
   }
 }
 @-moz-keyframes moveDownMd {
@@ -231,7 +231,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 3000px;
+    top: 3300px;
   }
 }
 @-webkit-keyframes moveDownMd {
@@ -239,7 +239,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 3000px;
+    top: 3300px;
   }
 }
 @keyframes moveDownMd {
@@ -247,7 +247,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 3000px;
+    top: 3300px;
   }
 }
 
@@ -256,7 +256,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 @-moz-keyframes moveDownLg {
@@ -264,7 +264,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 @-webkit-keyframes moveDownLg {
@@ -272,7 +272,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 @keyframes moveDownLg {
@@ -280,7 +280,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 4600px;
+    top: 5200px;
   }
 }
 
@@ -341,10 +341,10 @@ Stationary
 .satoshiStationary {
   position: absolute;
   z-index: 3;
-  top: 4600px;
-  left: calc(100% - 115px);
+  top: 5200px;
+  left: calc(100% - 120px);
   transform: scaleX(-1);
-  width: 150px;
+  width: 120px;
   opacity: 0;
   -webkit-animation-name: display, float-inverse;
   -webkit-animation-duration: 1ms, infinite;
@@ -359,13 +359,12 @@ Stationary
 
 @media only screen and (min-width: 615px) {
   .satoshiStationary {
-    top: 3000px;
+    top: 3300px;
   }
 }
 
 @media only screen and (min-width: 850px) {
   .satoshiStationary {
-    top: 3000px;
     left: calc(100% - 135px);
     width: 175px;
   }
@@ -378,11 +377,9 @@ Stationary
 }
 @media only screen and (min-width: 1170px) {
   .satoshiStationary {
-    top: 4600px;
-    left: calc(50% - 250px);
+    top: 5200px;
+    left: 50%;
     width: 250px;
-    -webkit-animation-name: display, float;
-    animation-name: display, float;
   }
 }
 
