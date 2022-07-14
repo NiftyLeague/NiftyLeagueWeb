@@ -355,10 +355,12 @@ export const TEAM_MEMBERS = [
   },
 ];
 
+export const GOOGLE_FORM_APPLY_LINK = 'https://forms.gle/PMPbLPy3doWVhSC8A';
+
 export const JOBS = [
   {
     id: '3109165690',
-    link: 'https://www.linkedin.com/jobs/view/3109165690/',
+    link: GOOGLE_FORM_APPLY_LINK,
     title: 'Sr. Unity Developer',
     location: 'United States (Remote)',
     aboutTheRole: `We are seeking a developer responsible for building games within the Unity game engine. Your primary responsibilities will be to implement game functionality translating design ideas, concepts, and requirements into a functional and engaging game. You will be building out play-and-earn games that target a global audience of players. Our team has a strong track record building games at the world's largest traditional gaming companies and is passionate about Web3 and GameFi.`,
@@ -392,7 +394,7 @@ export const JOBS = [
   },
   {
     id: '3109168449',
-    link: 'https://www.linkedin.com/jobs/view/3109168449/',
+    link: GOOGLE_FORM_APPLY_LINK,
     title: 'Sr. Backend Developer',
     location: 'United States (Remote)',
     aboutTheRole: `We are seeking a senior developer with full-stack skills and a strong passion for working on blockchain products built with Solidity. You will be expected to take full ownership of the full tech stack and be comfortable working independently and remotely. Your primary responsibilities will be to implement Web3 functionality translating design ideas, concepts, and requirements into a functional and engaging website and product experience. Our team has a strong track record building games at the world's largest traditional gaming companies and is passionate about Web3 and GameFi.`,
@@ -416,7 +418,7 @@ export const JOBS = [
   },
   {
     id: '3109562681',
-    link: 'https://www.linkedin.com/jobs/view/3109562681/',
+    link: GOOGLE_FORM_APPLY_LINK,
     title: 'Head Of Marketing',
     location: 'United States (Remote)',
     aboutTheRole: `As the Head of Marketing for Nifty League, you will be responsible for shaping and implementing a crypto-native growth marketing strategy to grow our player community (both crypto and non-crypto) and deepen their engagement in the Nifty League ecosystem. While running traditional paid acquisition and PR campaigns is fine, you should thrive when developing and implementing growth experiments that capitalize on the natural growth strategies that web3 gives us. You will collaborate highly with other teams regularly including Product, Community, and Art.`,
@@ -446,5 +448,5 @@ export const JOBS = [
       'Company health plan including dental',
       '401k',
     ],
-  }
-]
+  },
+];
