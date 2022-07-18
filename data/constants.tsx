@@ -299,11 +299,6 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/NiftyMorgan.png',
   },
   {
-    name: 'Ali Zandi',
-    title: 'DAO Director',
-    source: '/img/degens/team/koa.png',
-  },
-  {
     name: 'Dave Rosser',
     title: 'Program & Community Manager',
     source: '/img/degens/team/bolo.png',
@@ -314,34 +309,44 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/zoiby.png',
   },
   {
-    name: 'Will Patrick',
-    title: 'Sr. Programmer',
-    source: '/img/degens/team/will.png',
-  },
-  {
     name: 'Brian Wang',
     title: 'Sr. Web3 Developer',
     source: '/img/degens/team/brian.png',
   },
   {
+    name: 'Nicolas Morga',
+    title: 'Sr. Frontend Developer',
+    source: '/img/degens/team/nicolas.png',
+  },
+  {
+    name: 'Dr. Ashley Godbold',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/ashley.png',
+  },
+  {
     name: 'David',
-    title: 'Sr. Solidity Dev',
-    source: '/img/degens/team/davidLee.png',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/david.png',
   },
   {
-    name: 'Matt',
-    title: 'FE Dev',
-    source: '/img/degens/team/matt.png',
+    name: 'Sahin',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/sahin.png',
   },
   {
-    name: 'Brandon',
-    title: 'Web3 Developer',
-    source: '/img/degens/team/NiftyMichael.png',
+    name: 'Will Patrick',
+    title: 'Sr. Programmer',
+    source: '/img/degens/team/will.png',
   },
   {
-    name: 'Jeppe',
-    title: 'Marketing Manager',
-    source: '/img/degens/team/jeppe.png',
+    name: 'Caleb',
+    title: 'Game Economy Designer',
+    source: '/img/degens/team/caleb.png',
+  },
+  {
+    name: 'Gideon Awolesi',
+    title: 'Product Designer',
+    source: '/img/degens/team/gideon.png',
   },
   {
     name: 'Ben Collie',
@@ -349,9 +354,9 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/ben.png',
   },
   {
-    name: 'Caleb',
-    title: 'Game Economy Designer',
-    source: '/img/degens/team/caleb.png',
+    name: 'David Lee',
+    title: 'Sr. Solidity Dev',
+    source: '/img/degens/team/davidLee.png',
   },
 ];
 
