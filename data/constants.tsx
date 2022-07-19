@@ -299,11 +299,6 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/NiftyMorgan.png',
   },
   {
-    name: 'Ali Zandi',
-    title: 'DAO Director',
-    source: '/img/degens/team/koa.png',
-  },
-  {
     name: 'Dave Rosser',
     title: 'Program & Community Manager',
     source: '/img/degens/team/bolo.png',
@@ -314,34 +309,44 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/zoiby.png',
   },
   {
-    name: 'Will Patrick',
-    title: 'Sr. Programmer',
-    source: '/img/degens/team/will.png',
-  },
-  {
     name: 'Brian Wang',
     title: 'Sr. Web3 Developer',
     source: '/img/degens/team/brian.png',
   },
   {
+    name: 'Nicolas Morga',
+    title: 'Sr. Frontend Developer',
+    source: '/img/degens/team/nicolas.png',
+  },
+  {
+    name: 'Dr. Ashley Godbold',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/ashley.png',
+  },
+  {
     name: 'David',
-    title: 'Sr. Solidity Dev',
-    source: '/img/degens/team/davidLee.png',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/david.png',
   },
   {
-    name: 'Matt',
-    title: 'FE Dev',
-    source: '/img/degens/team/matt.png',
+    name: 'Sahin',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/sahin.png',
   },
   {
-    name: 'Brandon',
-    title: 'Web3 Developer',
-    source: '/img/degens/team/NiftyMichael.png',
+    name: 'Will Patrick',
+    title: 'Sr. Programmer',
+    source: '/img/degens/team/will.png',
   },
   {
-    name: 'Jeppe',
-    title: 'Marketing Manager',
-    source: '/img/degens/team/jeppe.png',
+    name: 'Caleb',
+    title: 'Game Economy Designer',
+    source: '/img/degens/team/caleb.png',
+  },
+  {
+    name: 'Gideon Awolesi',
+    title: 'Product Designer',
+    source: '/img/degens/team/gideon.png',
   },
   {
     name: 'Ben Collie',
@@ -349,16 +354,18 @@ export const TEAM_MEMBERS = [
     source: '/img/degens/team/ben.png',
   },
   {
-    name: 'Caleb',
-    title: 'Game Economy Designer',
-    source: '/img/degens/team/caleb.png',
+    name: 'David Lee',
+    title: 'Sr. Solidity Dev',
+    source: '/img/degens/team/davidLee.png',
   },
 ];
+
+export const GOOGLE_FORM_APPLY_LINK = 'https://forms.gle/PMPbLPy3doWVhSC8A';
 
 export const JOBS = [
   {
     id: '3109165690',
-    link: 'https://www.linkedin.com/jobs/view/3109165690/',
+    link: GOOGLE_FORM_APPLY_LINK,
     title: 'Sr. Unity Developer',
     location: 'United States (Remote)',
     aboutTheRole: `We are seeking a developer responsible for building games within the Unity game engine. Your primary responsibilities will be to implement game functionality translating design ideas, concepts, and requirements into a functional and engaging game. You will be building out play-and-earn games that target a global audience of players. Our team has a strong track record building games at the world's largest traditional gaming companies and is passionate about Web3 and GameFi.`,
@@ -392,7 +399,7 @@ export const JOBS = [
   },
   {
     id: '3109168449',
-    link: 'https://www.linkedin.com/jobs/view/3109168449/',
+    link: GOOGLE_FORM_APPLY_LINK,
     title: 'Sr. Backend Developer',
     location: 'United States (Remote)',
     aboutTheRole: `We are seeking a senior developer with full-stack skills and a strong passion for working on blockchain products built with Solidity. You will be expected to take full ownership of the full tech stack and be comfortable working independently and remotely. Your primary responsibilities will be to implement Web3 functionality translating design ideas, concepts, and requirements into a functional and engaging website and product experience. Our team has a strong track record building games at the world's largest traditional gaming companies and is passionate about Web3 and GameFi.`,
@@ -416,7 +423,7 @@ export const JOBS = [
   },
   {
     id: '3109562681',
-    link: 'https://www.linkedin.com/jobs/view/3109562681/',
+    link: GOOGLE_FORM_APPLY_LINK,
     title: 'Head Of Marketing',
     location: 'United States (Remote)',
     aboutTheRole: `As the Head of Marketing for Nifty League, you will be responsible for shaping and implementing a crypto-native growth marketing strategy to grow our player community (both crypto and non-crypto) and deepen their engagement in the Nifty League ecosystem. While running traditional paid acquisition and PR campaigns is fine, you should thrive when developing and implementing growth experiments that capitalize on the natural growth strategies that web3 gives us. You will collaborate highly with other teams regularly including Product, Community, and Art.`,
@@ -446,5 +453,5 @@ export const JOBS = [
       'Company health plan including dental',
       '401k',
     ],
-  }
-]
+  },
+];
