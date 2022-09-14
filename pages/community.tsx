@@ -110,7 +110,7 @@ const Community: NextPage = () => {
               Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
             </p>
             <a href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-              <button className="btn theme-btn-aqua w-auto mt-3 mt-sm-0">
+              <button className="btn theme-btn-primary w-auto mt-3 mt-sm-0">
                 <span className="me-2">Join our server</span>
                 <svg width="30" height="22" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -131,7 +131,7 @@ const Community: NextPage = () => {
           <p className="font-16 mt-1">
             Commonly used where the Nifty League Branding needs to be displayed
           </p>
-          <button className="btn theme-btn-aqua w-auto mt-2">
+          <button className="btn theme-btn-primary w-auto mt-2">
             download brand assets
           </button>
         </div>

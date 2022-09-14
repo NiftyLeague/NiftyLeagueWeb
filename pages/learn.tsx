@@ -83,8 +83,8 @@ const Learn: NextPage = () => {
             amount of NFTL for playing.
           </MDBAccordionItem>
         </MDBAccordion>
-        <Link href="/docs/faq/general" passHref legacyBehavior>
-          <button className="btn theme-btn-aqua mt-md-2 w-100">
+        <Link href="/docs/faq/general" passHref>
+          <button className="btn theme-btn-transparent mt-md-2 w-100">
             More FAQ <ExternalIcon />
           </button>
         </Link>
@@ -120,7 +120,7 @@ const Learn: NextPage = () => {
           <h2 className="mt-4">Stay in the loop</h2>
           <p className="my-3 text-m-center">Meet our community and stay up to date with our roadmap or team updates</p>
           <a href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-            <button className="btn theme-btn-aqua w-auto bg-black my-3 discord-btn">
+            <button className="btn theme-btn-transparent w-auto my-3 discord-btn">
               <span className="me-2">join our Discord server</span>
 
               <svg width="33" height="24" viewBox="0 0 33 24" fill="none" xmlns="http://www.w3.org/2000/svg">
