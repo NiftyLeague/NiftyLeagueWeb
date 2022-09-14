@@ -193,7 +193,7 @@ const Rentals: NextPage = () => {
                     'position-relative d-flex flex-column px-3 py-3 py-md-5 animated-fade-slow animated-fade-start transition-delay-small',
                   )}
                 >
-                  <h5 className="text-align-center mb-3">BOLO'S HUNT</h5>
+                  <h5 className="text-align-center mb-3">BOLO&apos;S HUNT</h5>
                   <h3 className="text-align-center my-0 mt-auto">300</h3>
                   <h5 className="text-align-center my-0 mb-auto">PLAYERS</h5>
                   <h5 className="text-align-center mt-3">50,000 NFTL POOL</h5>
@@ -211,7 +211,7 @@ const Rentals: NextPage = () => {
                     'position-relative d-flex flex-column px-3 py-3 py-md-5 animated-fade-slow animated-fade-start transition-delay-small',
                   )}
                 >
-                  <h5 className="text-align-center mb-3">BOLO'S HUNT</h5>
+                  <h5 className="text-align-center mb-3">BOLO&apos;S HUNT</h5>
                   <h3 className="text-align-center my-0 mt-auto">300</h3>
                   <h5 className="text-align-center my-0 mb-auto">PLAYERS</h5>
                   <h5 className="text-align-center mt-3">50,000 NFTL POOL</h5>
@@ -229,7 +229,7 @@ const Rentals: NextPage = () => {
                     'position-relative d-flex flex-column px-3 py-3 py-md-5 animated-fade-slow animated-fade-start transition-delay-small',
                   )}
                 >
-                  <h5 className="text-align-center mb-3">MORGAN'S RODEO</h5>
+                  <h5 className="text-align-center mb-3">MORGAN&apos;S RODEO</h5>
                   <h3 className="text-align-center my-0 mt-auto">XXX</h3>
                   <h5 className="text-align-center my-0 mb-auto">PLAYERS</h5>
                   <h5 className="text-align-center mt-3">50,000 NFTL POOL</h5>
