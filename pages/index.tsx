@@ -597,11 +597,13 @@ const Home: NextPage = () => {
             className="section-actions"
           >
             <AnimatedWrapper>
-              <a href="/careers" rel="noreferrer">
-                <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-large">
-                  JOIN THE TEAM
-                </button>
-              </a>
+              <Link href="/careers">
+                <a>
+                  <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-large">
+                    JOIN THE TEAM
+                  </button>
+                </a>
+              </Link>
             </AnimatedWrapper>
             <AnimatedWrapper>
               <a href="https://niftyleague.medium.com/" target="_blank" rel="noreferrer">
