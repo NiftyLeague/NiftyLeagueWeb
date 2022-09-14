@@ -47,15 +47,12 @@ const SponsorItem = ({ image, url, width, height }: Sponsor): JSX.Element => {
 
 const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => (
   <div className="container p-0 py-5 py-md-2 my-5 my-sm-0" style={{ maxWidth: '100%' }}>
-    <div
-      className="row m-0 p-0 position relative py-sm-5 d-flex align-items-center justify-content-center text-center"
-      style={{ background: '#191B1F' }}
-    >
+    <div className="row m-0 p-0 position relative py-sm-5 d-flex align-items-center justify-content-center text-center">
       <span className="baker-shade">
         <Image src="/img/bakers-arr-left-shade.svg" alt="Sponsers shade left" width={230} height={390} />
         <Image src="/img/bakers-arr-right-shade.svg" alt="Sponsers shade right" width={230} height={390} />
       </span>
-      <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
+      <h2 className="my-sm-5 mb-5">PROUDLY BACKED BY</h2>
       <section style={styles.container as CSSProperties}>{sponsors.map(renderSponsor)}</section>
     </div>
   </div>

@@ -24,14 +24,14 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
           <p className="px-4 font-16 text-center">{subtitle}</p>
           {external ? (
             <a target="_blank" rel="noreferrer" href={link}>
-              <button className="btn theme-btn-aqua mt-md-2">
+              <button className="btn theme-btn-primary mt-md-2">
                 {btnText}
                 <ExternalIcon />
               </button>
             </a>
           ) : (
-            <Link href={link} passHref legacyBehavior>
-              <button className="btn theme-btn-aqua mt-md-2">
+            <Link href={link} passHref>
+              <button className="btn theme-btn-primary mt-md-2">
                 {btnText} <ExternalIcon />
               </button>
             </Link>

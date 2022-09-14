@@ -412,3 +412,24 @@ export const JOBS = [
     ],
   },
 ];
+
+export const SOCIAL_LINKS = [
+  {
+    name: 'Twitter',
+    description: 'Nifty League Twitter',
+    link: 'https://twitter.com/NiftyLeague',
+    image: '/img/twitter.svg',
+  },
+  {
+    name: 'Discord',
+    description: 'Nifty League Discord',
+    link: 'https://discord.gg/niftyleague',
+    image: '/img/discord.svg',
+  },
+  {
+    name: 'Tiktok',
+    description: 'Nifty League Tiktok',
+    link: 'https://www.tiktok.com/@niftyleague',
+    image: '/img/tiktok.svg',
+  },
+];

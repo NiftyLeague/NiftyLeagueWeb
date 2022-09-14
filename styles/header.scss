@@ -1,5 +1,14 @@
 .header a {
-  font-size: 16px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.launch-app-btn {
+  font-size: 32px;
+  border-radius: 40px !important;
+  text-transform: none;
+  height: 58px !important;
 }
 
 .header .eclipse-location {
@@ -20,6 +29,46 @@
 }
 .com-pg .header .eclipse-location {
   max-width: 950px;
+}
+
+.social-icons {
+  margin-right: 200px;
+}
+
+@media (max-width: 1600px) {
+  .social-icons {
+    margin-right: 48px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .header a {
+    font-size: 20px;
+  }
+  .launch-app-btn {
+    font-size: 20px;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .social-icons {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 992px) {
+  .launch-app-btn {
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .launch-app-btn {
+    font-size: 11px;
+    height: 24px !important;
+  }
 }
 
 @media (min-width: 576px) {
@@ -83,7 +132,11 @@
   z-index: 99 !important;
 }
 .navbar a {
-  color: #ffffff;
+  color: #d2d3db;
+  letter-spacing: -0.02em;
+}
+.home-pg .navbar a {
+  color: #282932;
 }
 .navbar a:hover {
   color: #620edf;
@@ -91,17 +144,28 @@
 .dark-nav {
   background-color: #191b1f;
 }
+
+.home-pg .dark-nav {
+  background-color: #ffffff;
+  box-shadow: 1px 2px 6px rgb(0 0 0 / 80%);
+}
 .nav-item.active a {
   color: #620edf;
 }
 
 .dropdown-menu {
   background-color: #191b1f !important;
-  color: white;
+}
+
+.home-pg .dropdown-menu {
+  background-color: #ffffff !important;
 }
 .dropdown-menu > li > a:hover {
-  background-color: #232529 !important;
-  color: white;
+  background-color: #262930 !important;
+  color: #620edf;
+}
+.home-pg .dropdown-menu > li > a:hover {
+  background-color: #ffffff !important;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -109,14 +173,19 @@
 .dropdown .dropdown-menu {
   margin-top: 0;
 }
+.dropdown-toggle::after {
+  vertical-align: 0.14em;
+}
 .nav-item.inactive a {
-  color: white !important;
+  color: #000000 !important;
 }
 
 /************************************* Mobile Nav *************************************/
 
 .mobile-nav {
   width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 .mobile-nav nav {
   background: #191b1f;
@@ -165,14 +234,16 @@
   width: 32px;
   height: 32px;
 }
-.mobile-nav .theme-btn-white {
+.mobile-nav .theme-btn-transparent {
   z-index: 5;
 }
 .toggle-btn {
   display: block;
   z-index: 10;
-  margin-left: 25px;
   cursor: pointer;
+}
+.toggle-btn p {
+  margin: 0;
 }
 .toggle-btn .bar {
   width: 30px;

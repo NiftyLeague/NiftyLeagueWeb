@@ -3,8 +3,6 @@
 * {
   box-sizing: border-box;
 }
-/************************************* Font Style *************************************/
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 /************************************* Scroll Style *************************************/
 
@@ -24,41 +22,59 @@
 
 /************************************* Body, Heading, Fonts *************************************/
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
-  color: white;
-  background: #191b1f;
+  color: #B4B5C3;
+  background: #262930;
   overflow-x: hidden;
 }
+.home-pg {
+  color: #282932;
+  background: #FFFFFF;
+}
 h1 {
-  font-size: 96px;
+  font-size: 80px;
+  line-height: 93px;
   font-weight: 700;
-  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 3px;
 }
 h2 {
-  font-size: 48px;
+  font-size: 80px;
+  line-height: 93px;
   font-weight: 700;
-  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 3px;
 }
 h3 {
-  font-size: 36px;
+  font-size: 64px;
+  line-height: 75px;  
   font-weight: 700;
-  font-family: 'IBM Plex Sans', sans-serif;
+  letter-spacing: 3px;
 }
 h4 {
   font-size: 24px;
   font-weight: 400;
-  font-family: 'Press Start 2P', sans-serif;
 }
 h5 {
-  font-size: 22px;
-  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 p {
+  color: #B4B5C3;
   font-size: 20px;
-  font-weight: 400;
-  font-family: 'IBM Plex Sans', sans-serif;
-  opacity: 0.9;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
+
+.home-pg p {
+  color: #343434;  
+  letter-spacing: 2px;
+}
+
+.home-pg footer a {
+  color: #282932;
+}
+
 label {
   font-size: 15px;
   font-weight: 400;
@@ -141,54 +157,68 @@ a {
 }
 
 /************************************* Themes Items *************************************/
-.theme-btn-white {
-  color: #620edf;
-  background: #ffffff;
-  border-radius: 64px;
-  width: 147px;
+.theme-btn-transparent { 
+  border-radius: 5px; 
+  border: 1px solid #D2D3DB;
+  color: #FAFAFA;
+  background: transparent;
   height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 24px;
   font-weight: 700;
-  font-weight: bold;
-  letter-spacing: 0.1em;
+  letter-spacing: -0.02em;  
   box-shadow: none;
   white-space: nowrap;
 }
-.theme-btn-white:hover {
-  background: #620edf;
-  color: white;
+.home-pg .theme-btn-transparent {
+  border-radius: 0px;
+  border: 1px solid #000000;
+  color: #343434;
+  background: #FFFFFF;
+  height: 80px;
+  letter-spacing: 2px;
+}
+.theme-btn-transparent:hover {
+  border: 1px solid;
+  border-image-slice: 1;
+  border-width: 1px;
+  border-image-source: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  color: #FFFFFF;
+  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   box-shadow: none;
 }
-.theme-btn-aqua {
-  color: #ffffff;
-  background: #620edf;
-  border-radius: 64px;
-  width: 210px;
-  height: 44px;
+.theme-btn-primary {
+  height: 42px;
+  border-radius: 5px;
+  color: #282932;
+  background: #B4B5C3;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 0.1em;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   box-shadow: none;
   white-space: nowrap;
 }
-.theme-btn-aqua:hover {
-  background: white;
-  color: #620edf;
+.home-pg .theme-btn-primary {
+  color: #F0F0F3;
+  background: #282932;
+  height: 80px;
+  border-radius: 0px;
+  letter-spacing: 2px;
+}
+.theme-btn-primary:hover {
+  color: #FFFFFF;
   box-shadow: none;
-}
-.theme-btn-aqua:hover path {
-  fill: #620edf;
-}
-.theme-btn-aqua:hover path {
-  fill: #620edf;
+  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
 }
 
 .iconExternalLink {
@@ -329,7 +359,7 @@ a {
     height: 450px;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) {  
   .nifty-ape {
     width: 700px;
   }
@@ -382,7 +412,6 @@ a {
   font-size: 16px;
   line-height: 1.75rem;
   font-weight: 400;
-  font-family: 'Press Start 2P', sans-serif;
   padding: 2rem 1.5rem;
 }
 @media (min-width: 768px) {
@@ -692,41 +721,153 @@ a {
 
 /*************************************** Home **********************************************/
 
-.home-intro {
-  background: #191b1f;
-  background-size: cover;
-  background-image: url(/img/home-banner-desktop.png);
-  min-height: 94vh;
-}
-.home-intro .overlay-dark {
+.row {
   width: 100%;
-  height: 100vh;
-  background: rgba(25, 27, 31, 1);
-  opacity: 0.8999999761581421;
-  position: absolute;
-  top: 0px;
-  overflow: hidden;
 }
-.home-intro .overlay-gradient-top {
+
+.full-width {
   width: 100%;
-  height: 280px;
-  background: linear-gradient(rgba(25, 27, 31, 1), rgba(25, 27, 31, 0));
-  opacity: 0.75;
-  position: absolute;
-  top: 0px;
-  overflow: hidden;
 }
-.home-intro .overlay-gradient-bottom {
+
+.fit-width {
+  width: fit-content;
+}
+
+.heading-thin {
+  font-weight: 500;
+}
+
+.home-pg .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.home-satoshi-container {
+  position: absolute;
+  bottom: -20px;
+  left: 0px;  
+}
+
+.home-satoshi {
+  width: 226px;
+  height: 375px;
+}
+
+.home-intro {  
   width: 100%;
-  height: 562px;
-  background: linear-gradient(rgba(25, 27, 31, 0), rgba(25, 27, 31, 1));
-  opacity: 1;
-  position: absolute;
-  bottom: 0;
-  overflow: hidden;
+  max-height: 100vh;
+  margin-bottom: 128px;
 }
+
 .home-content {
+  position: absolute;
   z-index: 3;
+  left: 232px;
+  bottom: 4rem;  
+}
+
+.home-content-title {
+  max-width: 515px;
+}
+
+.home-content-description {
+  max-width: 440px;
+}
+
+.home-content-button {
+  display: none;
+  width: 450px;
+}
+
+.speech-bubble-text {
+  color: #FFFFFF !important;
+  text-transform: uppercase;
+  font-size: 24px;
+  position: absolute;
+  top: 56px;
+  left: 133px;
+}
+
+.satoshi-learn-more {
+  width: 407px;
+  height: 125px;
+  margin-left: -32px;
+  cursor: pointer;
+}
+
+.compete-to-earn-section-title {
+  max-width: 391px;
+}
+
+.section-title {
+  max-width: 510px;
+}
+
+.section-description {
+  max-width: 410px;
+}
+
+.compete-to-earn-section {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.home-rental-section {
+  position: absolute;
+  top: 150px;
+}
+
+.home-community-degens {
+  margin-left: -32px;
+}
+
+.home-community-image {
+  margin-bottom: 96px;
+}
+
+.home-community-section-description {
+  max-width: 550px;
+}
+
+.section-black-button {
+  width: 272px;
+}
+
+.section-white-button {
+  width: 254px;
+}
+
+.inner-container {
+  max-width: 1400px;
+}
+
+.home-nftl-token-section-description {
+  max-width: 560px;
+}
+
+.compete-to-earn-section-token-1 {
+  position: absolute;
+  left: -226px;
+  top: calc(50% - 130px);
+  width: 246px;
+  height: 261px;  
+}
+
+.compete-to-earn-section-token-2 {
+  position: absolute;
+  right: -32px;
+  top: -32px;
+  width: 245px;
+  height: 253px;  
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
 }
 
 .social-icons a:hover {
@@ -736,16 +877,24 @@ a {
   fill: #620edf;
 }
 
-.sliding-nfts {
-  background: #191b1f;
+.social-icon-link {
+  height: 40px;
 }
+
+.sliding-nfts {
+  background: #FFFFFF;
+}
+
 .sliding-nfts .sliding-background-wrapper-desktop {
   overflow: hidden;
-  min-height: 102vh;
+  min-height: 520px;
+  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
 }
 .sliding-nfts .sliding-background-wrapper-mobile {
   overflow: hidden;
-  min-height: 520px;
+  min-height: 106px;
+  margin: 16px 0px;
+  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
 }
 .sliding-background-wrapper-desktop .sliding-background {
   background: url(/img/icons-set.png) repeat-x;
@@ -757,129 +906,41 @@ a {
   image-rendering: pixelated;
 
   height: 100%;
-  width: 5076px;
-  animation: slide 60s linear infinite;
+  width: 5000px;
+  animation: slide 20s linear infinite;
 }
 .sliding-background-wrapper-mobile .sliding-background {
-  background: url(/img/icons-set-mb.png) repeat-x;
-  height: 100%;
-  width: 5076px;
-  animation: slide 60s linear infinite;
+  background: url(/img/icons-set.png) repeat-x;
+  height: 106px;
+  width: 5000px;
+  animation: slide 30s linear infinite;
+  background-size: contain;
 }
-@keyframes slide {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-1692px, 0, 0);
+@media (min-width: 769px) {
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-3010px, 0, 0);
+    }
   }
 }
 
-.sushi-gif-section {
-  background: linear-gradient(180deg, #191b1f 22.27%, rgba(25, 27, 31, 0) 100%);
-}
-.sushi-gif {
-  opacity: 0.35;
-}
-.sushi-dark-shade-wrapper {
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  height: 65%;
-}
-
-.browse-andy {
-  position: absolute;
-  top: 5%;
-  left: 8%;
-  width: 330px;
-  height: 100%;
-  min-height: 245px;
-}
-.browse-snarfy {
-  position: absolute;
-  top: 20%;
-  left: 40%;
-  width: 285px;
-  height: 100%;
-  min-height: 215px;
-}
-.browse-spike {
-  position: absolute;
-  top: 0;
-  left: 58%;
-  width: 220px;
-  height: 100%;
-  min-height: 165px;
+@media (max-width: 768px) {
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-3750px, 0, 0);
+    }
+  }
 }
 
 .league-floating-nfts {
   display: flex;
   height: 100%;
-}
-
-@media (min-width: 992px) {
-  .browse-andy {
-    top: 0;
-    width: 420px;
-    min-height: 312px;
-  }
-  .browse-snarfy {
-    top: 18%;
-    width: 350px;
-    min-height: 260px;
-  }
-  .browse-spike {
-    width: 275px;
-    min-height: 205px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .browse-andy {
-    width: 500px;
-    min-height: 380px;
-  }
-  .browse-snarfy {
-    width: 400px;
-    min-height: 300px;
-  }
-  .browse-spike {
-    width: 320px;
-    min-height: 240px;
-  }
-}
-
-.league-special-row {
-  background: linear-gradient(180deg, rgba(26, 28, 32, 0) 0%, #1a1c20 102%), #000000;
-}
-.league-special-container {
-  max-width: 1280px;
-  width: 100%;
-}
-.league-special-container .eclipse-location {
-  margin-left: 20%;
-  margin-top: -200px;
-  max-width: 79%;
-}
-.league-special-accordion .accordion-item {
-  border-bottom: 1px solid rgb(211 205 205 / 13%);
-  background-color: transparent;
-  margin-bottom: 20px;
-}
-.league-special-accordion .accordion-header button {
-  color: #620edf;
-  background-color: transparent;
-  font-size: 24px;
-  font-weight: 400;
-  font-family: 'Press Start 2P', sans-serif;
-}
-.league-special-accordion .accordion-header button.collapsed {
-  color: white;
-}
-.league-special-accordion .accordion-body button {
-  margin-top: 8px;
 }
 
 .baker-shade {
@@ -980,6 +1041,455 @@ a {
   }
 }
 
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 72px;
+    line-height: 80px;
+  }
+  h2 {
+    font-size: 72px;    
+    line-height: 80px;
+  }
+  h3 {
+    font-size: 56px;
+    line-height: 65px;
+  }
+  h5 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 20px;
+  }
+  .home-content {
+    left: 188px;
+    bottom: 1.5rem;
+  }
+  .home-content-title {
+    max-width: 454px;    
+  }
+  .home-content-button {
+    width: 400px;
+  }
+  .home-satoshi {
+    width: 180px;
+    height: 298px;
+  }
+  .compete-to-earn-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .compete-to-earn-section-token-1 {
+    display: none;
+  }
+  .compete-to-earn-section-token-2 {
+    width: 180px;
+    height: 185px;
+  }
+  .home-community-image {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 1400px) {
+  h1 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  h3 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  h5 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .home-content {
+    left: 152px;
+    bottom: 0px;
+  }
+  .home-content-title {
+    max-width: 400px;    
+  }
+  .home-content-description {
+    max-width: 350px;
+  }
+  .home-content-button {
+    width: 350px;
+  }
+  .satoshi-learn-more {
+    width: 348px;
+    height: 107px;
+    margin-left: -28px;
+  }
+  .speech-bubble-text {
+    font-size: 20px;
+    top: 50px;
+    left: 123px;
+  }
+  .home-satoshi {
+    width: 140px;
+    height: 232px;
+  }
+  .home-pg .btn {
+    height: 54px;
+  }
+  .section-black-button {
+    width: 240px;
+  }  
+  .section-white-button {
+    width: 240px;
+  }
+  .home-rental-section {
+    top: 100px;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  h2 {
+    font-size: 48px;  
+    line-height: 54px;  
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  h5 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  .home-content {
+    bottom: 0;
+  }
+  .home-content-title {
+    max-width: 325px;
+  }
+  .home-content-description {
+    max-width: 300px;
+  }
+  .home-content-button {
+    width: 280px;
+  }
+  .section-description {
+    max-width: 340px;
+  }
+  .section-black-button {
+    width: 200px;
+  }  
+  .section-white-button {
+    width: 200px;
+  }
+  .home-rental-section {
+    top: 80px;
+  }
+}
+
+@media (max-width: 1052px) {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  h2 {
+    font-size: 40px;    
+    line-height: 48px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  p {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+  .home-content {
+    left: 126px;
+  }
+  .home-content-title {
+    max-width: 278px;
+  }
+  .home-content-description {
+    max-width: 252px;
+  }
+  .home-content-button {
+    width: 240px;
+  }
+  .satoshi-learn-more {
+    width: 260px;
+    height: 80px;
+    margin-left: -20px;
+  }
+  .speech-bubble-text {
+    font-size: 16px;
+    top: 36px;
+    left: 86px;
+  }  
+  .home-satoshi {
+    width: 120px;
+    height: 198px;
+  }  
+  .section-black-button {
+    width: 180px;
+  }  
+  .section-white-button {
+    width: 180px;
+  }
+  .section-title {
+    max-width: 460px;
+  }
+  .home-community-section-description {
+    max-width: 450px;
+  }
+  .compete-to-earn-section-token-2 {
+    display: none;
+  }
+  .home-rental-section {
+    top: 50px;
+  }
+}
+
+@media (max-width: 920px) {  
+  .home-intro {
+    margin-bottom: 224px;
+  }
+  .home-content {
+    left: 0px;
+    top: calc(100% + 32px);
+    width: 100%;
+  }
+  .home-content-title {    
+    max-width: inherit;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-content-description {
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .home-content-button-bubble {
+    display: none;
+  }
+  .home-content-button {
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    display: block;
+  }
+  .home-satoshi {
+    width: 100px;
+    height: 165px;
+  }
+  .section-title {
+    max-width: 400px;
+  }
+  .section-description {
+    max-width: 280px;
+  }
+  .home-community-section-description {
+    max-width: 400px;
+  }
+  .home-community-section .section-actions {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 21px;
+  }
+  .btn {
+    font-size: 16px;
+    padding: 4px 8px;
+  }
+  .home-pg .btn {    
+    height: 40px;    
+  }
+  .home-intro {
+    padding-top: 40px !important;
+  }
+  .home-satoshi {
+    width: 80px;
+    height: 132px;
+  }  
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .row > * {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .compete-to-earn-section {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .compete-to-earn-section-title {
+    max-width: 249px;
+  }
+
+  .section-description {
+    max-width: 600px;
+    text-align: center;    
+  }
+
+  .compete-to-earn-section-body .section-actions {
+    justify-content: center;
+  }  
+  .home-rental-section {
+    position: relative;
+    top: 0px;
+  }
+  .home-rental-section-body {
+    align-items: center;
+  }  
+  .home-nftl-token-section {
+    width: 100%;
+  }
+  .home-community-section-container {
+    width: 100%;
+  }
+  .home-community-section .section-actions {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .section-heading {
+    max-width: inherit;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+  .home-nftl-token-section-body {
+    width: 100%;
+    align-items: center;
+  }
+  .home-nftl-token-section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+  .home-community-section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+  .home-community-section-body {
+    align-items: center;
+  }
+  .home-community-characters {
+    width: 60%;
+    margin-left: auto;
+    margin-top: -32px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  h5 {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  p {
+    font-size: 12px;
+  }
+  .btn {
+    font-size: 14px;    
+  }
+  .home-pg .btn {
+    height: 36px;
+  }
+  .home-content-button {
+    width: 172px;
+  }
+  .home-satoshi {
+    width: 60px;
+    height: 99px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  h2 {
+    font-size: 20px;
+    line-height: 23px;
+  }
+  .home-satoshi {
+    width: 33px;
+    height: 55px;
+    bottom: 32px;
+  }
+  .section-black-button {
+    width: 135px;
+  }  
+  .section-white-button {
+    width: 135px;
+  }
+  .game-playing-actions > div {
+    flex: 1;
+  }
+  .game-playing-actions button {
+    width: 100% !important;
+  }
+  .section-actions {
+    width: 100%;
+  }
+  .section-actions > div {
+    flex: 1;
+  }
+  .section-actions button {
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
   .desktop {
     display: none !important;
@@ -992,56 +1502,12 @@ a {
   }
   .mobile-block {
     display: block !important;
-  }
-  h1 {
-    font-size: 80px;
-    text-align: center;
-  }
-  h2 {
-    font-size: 36px;
-    text-align: center;
-  }
-  h4 {
-    font-size: 15px;
-    text-align: center;
-  }
-  p {
-    font-size: 18px;
-    text-align: center;
-  }
-  p br {
-    display: none;
-  }
+  }  
   .accordion-body {
     font-size: 18px;
   }
   .text-m-left {
     text-align: left;
-  }
-  .theme-btn-aqua {
-    width: 325px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .theme-btn-aqua.mw-fix {
-    width: 195px;
-  }
-  .theme-btn-white {
-    width: 325px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .sushi-gif-section {
-    min-height: 679px;
-  }
-  .sushi-gif-section h2 {
-    font-size: 28px;
-    padding: 7px;
-  }
-  .sushi-gif-section h2 br {
-    display: none;
   }
   .browse-single h5 {
     font-size: 11px;
@@ -1152,9 +1618,6 @@ a {
     max-width: 145px;
     height: auto;
   }
-  .about-pg .about-intro .theme-btn-aqua {
-    width: auto;
-  }
   .about-pg .about-intro .display-buttons {
     justify-content: center;
   }
@@ -1232,9 +1695,6 @@ a {
   .text-m-center {
     text-align: center;
   }
-  .home-pg .home-intro .theme-btn-aqua {
-    width: 195px;
-  }
   .wrapper {
     min-height: 460px;
   }
@@ -1247,9 +1707,6 @@ a {
   }
   .league-special-container .eclipse-location {
     display: none;
-  }
-  .theme-btn-aqua {
-    height: 52px;
   }
 
   .browse-single button {
@@ -1277,38 +1734,7 @@ a {
   }
   .mobile-block {
     display: block !important;
-  }
-  h1 {
-    font-size: 80px;
-    text-align: center;
-  }
-  h2 {
-    font-size: 36px;
-    text-align: center;
-  }
-  h4 {
-    font-size: 15px;
-    text-align: center;
-  }
-  p {
-    font-size: 18px;
-    text-align: center;
-  }
-  p br {
-    display: none;
-  }
-  .theme-btn-aqua {
-    width: 325px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .theme-btn-white {
-    width: 325px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  }  
   .sushi-gif-section {
     min-height: 679px;
   }
@@ -1399,7 +1825,6 @@ a {
 
 .legal-pg h4 {
   font-size: 20px;
-  font-family: 'IBM Plex Sans', sans-serif;
   padding: 15px 0 5px 0;
 }
 
@@ -1450,6 +1875,104 @@ a {
 .div-paragraph {
   font-size: 20px;
   font-weight: 400;
-  font-family: 'IBM Plex Sans', sans-serif;
   opacity: 0.9;
+}
+
+@media (min-width: 769px) {
+  /* animation classes */
+  .animated-header-text {
+    margin-bottom: 0px;
+    transition: opacity 1s, margin-bottom 1s;
+  }
+
+  .animated-header-text-start {
+    margin-bottom: -24px;
+    opacity: 0;
+  }
+
+  .animated-fade {
+    transition: opacity 1s;
+  }
+
+  .animated-fade-quick {
+    transition: opacity 0.75s;
+  }
+
+  .animated-fade-slow {
+    transition: opacity 2s;
+  }
+
+  .animated-fade-start {
+    opacity: 0;
+  }
+
+  .animated-vertical-fade {
+    top: 0px;
+    transition: opacity 2s, top 1s;
+  }
+  .animated-vertical-fade-start {
+    top: -100px;
+    opacity: 0;
+  }
+
+  .quick-pop-anim {
+    transition: opacity 0.5s, transform 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .quick-pop-anim-start {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+
+  .satoshi-quick-pop-anim {
+    transition: opacity 0.2s, transform 0.4s, left 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    left: 0px;
+  }
+
+  .satoshi-quick-pop-anim-start {
+    opacity: 0;
+    transform: scale(0, 0);
+    left: -100px;
+  }
+
+  .transition-delay-small {
+    transition-delay: 0.5s;
+  }
+
+  .transition-delay-medium {
+    transition-delay: 0.7s;
+  }
+
+  .transition-delay-large {
+    transition-delay: 1s;
+  }
+
+  .animation-bounce {
+    animation: bounce 2s ease infinite;
+  }
+
+  .animation-bounce2 {
+    animation: bounce 2s ease infinite;
+    animation-delay: .5s;
+  }
+
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-120px);}
+    60% {transform: translateY(-60px);}
+  }  
+
+  .row-top-spacing {
+    padding-top: 100px !important;
+  }
+}
+
+@media (min-width: 1600px) {
+  .game-playing-actions {
+    position: absolute;
+    bottom: 85px;
+    width: 100%;
+  }
 }

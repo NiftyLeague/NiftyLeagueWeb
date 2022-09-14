@@ -1,0 +1,64 @@
+.container {
+  padding-top: 200px;
+  max-width: 1147px;
+  box-sizing: content-box;
+}
+
+.section {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 164px;
+}
+
+.button {
+  width: 226px;
+}
+
+.list {
+  max-width: 615px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.sameAsAbove {
+  height: 40px;
+}
+
+.table {
+  border: 1px solid #b4b5c3;
+}
+
+.divider {
+  width: 1px;
+  height: 100% !important;
+  top: 0px;
+  left: 41.7%;
+  position: absolute;
+  margin: 0;
+  color: #b4b5c3;
+  opacity: 1;
+}
+
+@media (max-width: 767px) {
+  .container {
+    padding-top: 80px;
+  }
+  .section {
+    padding-top: 64px;
+  }
+  .sameAsAbove {
+    height: 18px;
+  }
+  .divider {
+    left: 25%;
+  }
+  .list {
+    max-width: 426px;
+  }
+}
+
+@media (max-width: 400px) {
+  .button {
+    width: 100%;
+  }
+}
