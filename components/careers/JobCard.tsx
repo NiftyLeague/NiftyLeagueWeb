@@ -29,7 +29,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
         </div>
         <div className="jobs-card-header">
           <a
-            className="btn theme-btn-aqua m-3 btn-lg d-md-block d-none mw-fix"
+            className="btn theme-btn-primary m-3 btn-lg d-md-block d-none mw-fix"
             href={link}
             role="button"
             target="_blank"
@@ -73,7 +73,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
             ))}
           </ul>
         </div>
-        <a className="btn theme-btn-aqua m-3 btn-lg" href={link} role="button" target="_blank" rel="noreferrer">
+        <a className="btn theme-btn-primary m-3 btn-lg" href={link} role="button" target="_blank" rel="noreferrer">
           Apply
         </a>
       </MDBCollapse>

@@ -2,11 +2,17 @@
 
 footer {
   a {
-    font-family: 'Roboto', sans-serif;
-    color: #707070;
+    color: #d2d3db;
     text-align: center;
-    font-size: 16px;
-    white-space: nowrap;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .home-pg a {
+    color: #282932;
+  }
+  a:hover {
+    color: #620edf;
   }
   .container-footer {
     display: flex;
@@ -16,16 +22,29 @@ footer {
   .footer-buttons button {
     width: 100%;
   }
-  .socials {
-    a:hover {
-      color: #620edf;
-    }
-    a:hover path {
-      fill: #620edf;
-    }
-  }
 }
 
+.footer-container {
+  padding: 160px 20px;
+  max-width: 815px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+  footer a {
+    font-size: 12px;
+    text-align: left;
+  }
+  .last-column a {
+    text-align: right;
+  }
+  .footer-container .row {
+    justify-content: center;
+  }
+}
 @media (min-width: 576px) {
   footer {
     .footer-buttons {
