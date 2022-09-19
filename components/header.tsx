@@ -50,7 +50,7 @@ function Navbar() {
                   >
                     Overview
                   </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarOverviewDropdown">
+                  <ul className="dropdown-menu py-2" aria-labelledby="navbarOverviewDropdown">
                     <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('land'),
@@ -126,7 +126,7 @@ function Navbar() {
                   >
                     Learn
                   </a>
-                  <ul className="dropdown-menu" aria-labelledby="navbarLearnDropdown">
+                  <ul className="dropdown-menu py-2" aria-labelledby="navbarLearnDropdown">
                     <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('learn'),

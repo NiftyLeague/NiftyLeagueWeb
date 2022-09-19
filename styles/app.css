@@ -182,8 +182,7 @@ a {
   letter-spacing: 2px;
 }
 .theme-btn-transparent:hover {
-  border: 1px solid;
-  border-image-slice: 1;
+  border-image-slice: 1 !important;
   border-width: 1px;
   border-image-source: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
   color: #FFFFFF;
@@ -1966,13 +1965,5 @@ a {
 
   .row-top-spacing {
     padding-top: 100px !important;
-  }
-}
-
-@media (min-width: 1600px) {
-  .game-playing-actions {
-    position: absolute;
-    bottom: 85px;
-    width: 100%;
   }
 }
