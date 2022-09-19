@@ -142,7 +142,8 @@
   color: #620edf;
 }
 .dark-nav {
-  background-color: #191b1f;
+  background: #262930;
+  box-shadow: 1px 2px 6px rgb(0 0 0 / 80%);
 }
 
 .home-pg .dark-nav {
@@ -178,6 +179,13 @@
 }
 .nav-item.inactive a {
   color: #000000 !important;
+}
+
+.dropdown-menu > li:first-child .dropdown-item {
+  border-radius: 0 !important;
+}
+.dropdown-menu > li:last-child .dropdown-item {
+  border-radius: 0 !important;
 }
 
 /************************************* Mobile Nav *************************************/
