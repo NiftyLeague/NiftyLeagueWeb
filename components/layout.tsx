@@ -1,5 +1,6 @@
 import Header from './header';
 import Footer from './footer';
+import AnimatedWrapper from './AnimatedWrapper';
 
 export default function Layout({
   children,

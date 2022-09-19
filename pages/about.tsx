@@ -359,7 +359,7 @@ const About: NextPage = () => {
         </div>
         <div className="container py-5">
           <div className="row m-0 p-0 position-relative text-center py-5 team-section">
-            <h3 className="font-64 pt-5">Meet the Nifty Team</h3>
+            <h3 className="pt-5">Meet the Nifty Team</h3>
           </div>
         </div>
         <TeamDesktop />

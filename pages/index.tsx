@@ -105,14 +105,14 @@ const Home: NextPage = () => {
           >
             <AnimatedWrapper>
               <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start">
+                <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-medium">
                   START PLAYING
                 </button>
               </a>
             </AnimatedWrapper>
             <AnimatedWrapper>
               <a href="/learn" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start">
+                <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-medium">
                   LEARN MORE
                 </button>
               </a>
