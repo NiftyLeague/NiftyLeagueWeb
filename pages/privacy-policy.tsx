@@ -5,7 +5,7 @@ import Layout from '@components/layout';
 
 const PrivacyPolicy = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>
-    <Container style={{ textAlign: 'left', padding: '40px', marginTop: '5%' }}>
+    <Container style={{ textAlign: 'left', padding: '120px 40px 40px 40px' }}>
       <h2>Privacy Policy</h2>
       <p>
         Effective date: <strong>September 6th, 2021</strong>

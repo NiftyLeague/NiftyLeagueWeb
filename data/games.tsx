@@ -3,7 +3,7 @@ export const NIFTY_GAMES = [
     name: 'NIFTY SMASHERS',
     description:
       'This fortnite style action game will leave you on the edge of your seat with your fingers cramping as you try to out-click and out-smash your opponent in a free for all DEGEN battle. Just in case you’re wondering, the winner does take all. But if you’re lucky to get some hits in before you’re vanquished you might get some mercy rewards. If you’ve got the balls, you should check it out.',
-    video: 'https://www.youtube.com/embed/wv_fI1PPBi0',
+    video: 'https://www.youtube.com/embed/ylJzfLcWChc',
     tag: 'GAME',
     action: {
       title: 'PLAY IF YOU DARE',
@@ -27,7 +27,7 @@ export const NIFTY_GAMES = [
     name: 'WEN GAME',
     description:
       'Never thought you’d see a batting cage on the blockchain huh? Well think again. Put your baseball team cap on and get ready to hit the balls in the WEN game for your first blockchain homerun. Wen lambo!',
-    video: 'https://www.youtube.com/embed/wv_fI1PPBi0',
+    video: 'https://www.youtube.com/embed/OF_JrECYpvM',
     tag: 'MINI-GAME',
     action: {
       title: 'START PLAYING',
