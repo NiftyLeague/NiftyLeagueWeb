@@ -49,8 +49,10 @@ h3 {
   letter-spacing: 3px;
 }
 h4 {
-  font-size: 24px;
-  font-weight: 400;
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 700;
+  letter-spacing: 3px;
 }
 h5 {
   font-size: 32px;
@@ -162,7 +164,6 @@ a {
   border: 1px solid #D2D3DB;
   color: #FAFAFA;
   background: transparent;
-  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -193,7 +194,6 @@ a {
   box-shadow: none;
 }
 .theme-btn-primary {
-  height: 42px;
   border-radius: 5px;
   color: #282932;
   background: #B4B5C3;
@@ -821,10 +821,6 @@ a {
   margin-left: -32px;
 }
 
-.home-community-image {
-  margin-bottom: 96px;
-}
-
 .home-community-section-description {
   max-width: 550px;
 }
@@ -1053,6 +1049,10 @@ a {
     font-size: 56px;
     line-height: 65px;
   }
+  h4 {
+    font-size: 34px;
+    line-height: 40px;
+  }
   h5 {
     font-size: 28px;
     line-height: 33px;
@@ -1088,9 +1088,6 @@ a {
     width: 180px;
     height: 185px;
   }
-  .home-community-image {
-    margin-bottom: 24px;
-  }
 }
 
 @media (max-width: 1400px) {
@@ -1105,6 +1102,10 @@ a {
   h3 {
     font-size: 48px;
     line-height: 56px;
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 36px;
   }
   h5 {
     font-size: 24px;
@@ -1164,9 +1165,19 @@ a {
     font-size: 40px;
     line-height: 46px;
   }
+  h4 {
+    font-size: 26px;
+    line-height: 30px;
+  }
   h5 {
     font-size: 22px;
     line-height: 25px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+  .home-pg .btn {    
+    height: 40px;    
   }
   .home-content {
     bottom: 0;
@@ -1207,16 +1218,17 @@ a {
     font-size: 32px;
     line-height: 37px;
   }
+  h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
   h5 {
     font-size: 20px;
     line-height: 24px;
   }
   p {
     font-size: 14px;
-  }
-  .btn {
-    font-size: 16px;
-  }
+  }  
   .home-content {
     left: 126px;
   }
@@ -1328,17 +1340,17 @@ a {
     font-size: 24px;
     line-height: 28px;
   }
+  h4 {
+    font-size: 22px;
+    line-height: 26px;
+  }
   h5 {
     font-size: 18px;
     line-height: 21px;
   }
   .btn {
-    font-size: 16px;
     padding: 4px 8px;
-  }
-  .home-pg .btn {    
-    height: 40px;    
-  }
+  }  
   .home-intro {
     padding-top: 40px !important;
   }
@@ -1427,6 +1439,10 @@ a {
     line-height: 26px;
   }
   h3 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  h4 {
     font-size: 16px;
     line-height: 18px;
   }

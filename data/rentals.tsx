@@ -38,10 +38,10 @@ export const RENTAL_TUTORIALS = [
   },
   {
     name: 'How to rent a DEGEN',
-    video: 'https://www.youtube.com/embed/wv_fI1PPBi0',
+    video: 'https://www.youtube.com/embed/ZMaK-tBXTMw',
   },
   {
     name: 'How to check your rental earnings and DEGEN stats',
-    video: 'https://www.youtube.com/embed/wv_fI1PPBi0',
+    video: 'https://www.youtube.com/embed/Pj4qt6cva6s',
   },
 ];

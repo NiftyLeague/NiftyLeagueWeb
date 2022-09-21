@@ -5,7 +5,7 @@ import Layout from '@components/layout';
 
 const Disclaimer = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>
-    <Container style={{ textAlign: 'left', padding: '40px', marginTop: '5%' }}>
+    <Container style={{ textAlign: 'left', padding: '120px 40px 40px 40px' }}>
       <h2>Disclaimer</h2>
       <p>
         Effective date: <strong>January 19th, 2022</strong>

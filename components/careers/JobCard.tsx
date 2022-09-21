@@ -29,7 +29,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
         </div>
         <div className="jobs-card-header">
           <a
-            className="btn theme-btn-primary m-3 btn-lg d-md-block d-none mw-fix"
+            className="btn theme-btn-primary m-3 d-md-block d-none mw-fix"
             href={link}
             role="button"
             target="_blank"
