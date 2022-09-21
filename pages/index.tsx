@@ -57,7 +57,7 @@ const Home: NextPage = () => {
           </div>
           <div className="home-content-button-bubble">
             <AnimatedWrapper>
-              <Link href="/learn">
+              <Link href="/land">
                 <a>
                   <div className="position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large">
                     <Image src="/img/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
@@ -67,7 +67,7 @@ const Home: NextPage = () => {
               </Link>
             </AnimatedWrapper>
           </div>
-          <Link href="/learn">
+          <Link href="/land">
             <a>
               <button className="btn theme-btn-primary mt-2 mt-md-4 home-content-button">LEARN MORE</button>
             </a>
@@ -111,11 +111,13 @@ const Home: NextPage = () => {
               </a>
             </AnimatedWrapper>
             <AnimatedWrapper>
-              <a href="/learn" target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-medium">
-                  LEARN MORE
-                </button>
-              </a>
+              <Link href="/games">
+                <a>
+                  <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-medium">
+                    LEARN MORE
+                  </button>
+                </a>
+              </Link>
             </AnimatedWrapper>
           </Stack>
         </div>
@@ -134,191 +136,199 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing px-0 py-3 py-md-5 px-3 mx-0 position-relative align-items-center">
-        <div className={`${desktop ? 'col-6' : ''}`}>
-          <div className="d-flex flex-column compete-to-earn-section position-relative">
-            {desktop && (
-              <div className="compete-to-earn-section-token-1">
-                <div className="position-relative flex-grow-1">
-                  <AnimatedWrapper>
-                    <div className="animation-bounce animated-fade animated-fade-start transition-delay-large">
-                      <Image
-                        src="/img/home-compete-and-earn-token-1.png"
-                        alt="Compete and Earn NFTL 1"
-                        layout="responsive"
-                        width={246}
-                        height={261}
-                        className="pixelated"
-                      />
-                    </div>
-                  </AnimatedWrapper>
-                </div>
-              </div>
-            )}
-            {desktop && (
-              <div className="compete-to-earn-section-token-2">
-                <div className="position-relative flex-grow-1">
-                  <AnimatedWrapper>
-                    <div className="animation-bounce2 animated-fade animated-fade-start transition-delay-large">
-                      <Image
-                        src="/img/home-compete-and-earn-token-2.png"
-                        alt="Compete and Earn NFTL 2"
-                        layout="responsive"
-                        width={245}
-                        height={253}
-                        className="pixelated"
-                      />
-                    </div>
-                  </AnimatedWrapper>
-                </div>
-              </div>
-            )}
-            <div className="mb-3">
-              <AnimatedWrapper>
-                <h2 className="compete-to-earn-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
-                  COMPETE & EARN
-                </h2>
-              </AnimatedWrapper>
-            </div>
-            <Stack gap={2} alignItems="center">
-              {!desktop && (
-                <div className="position-relative flex-grow-1 full-width">
-                  <AnimatedWrapper>
-                    <div className="animated-fade animated-fade-start">
-                      <Image
-                        src="/img/home-compete-and-earn-mobile.png"
-                        alt="Compete and Earn"
-                        layout="responsive"
-                        width={320}
-                        height={124}
-                      />
-                    </div>
-                  </AnimatedWrapper>
+      <div className="row row-top-spacing px-0 py-3 py-md-5 mx-auto inner-container">
+        <div className="d-flex px-3 px-md-4 position-relative align-items-center">
+          <div className={`${desktop ? 'col-6' : 'full-width'}`}>
+            <div className="d-flex flex-column compete-to-earn-section position-relative">
+              {desktop && (
+                <div className="compete-to-earn-section-token-1">
+                  <div className="position-relative flex-grow-1">
+                    <AnimatedWrapper>
+                      <div className="animation-bounce animated-fade animated-fade-start transition-delay-large">
+                        <Image
+                          src="/img/home-compete-and-earn-token-1.png"
+                          alt="Compete and Earn NFTL 1"
+                          layout="responsive"
+                          width={246}
+                          height={261}
+                          className="pixelated"
+                        />
+                      </div>
+                    </AnimatedWrapper>
+                  </div>
                 </div>
               )}
-              <div className={`d-flex flex-column compete-to-earn-section-body`}>
+              {desktop && (
+                <div className="compete-to-earn-section-token-2">
+                  <div className="position-relative flex-grow-1">
+                    <AnimatedWrapper>
+                      <div className="animation-bounce2 animated-fade animated-fade-start transition-delay-large">
+                        <Image
+                          src="/img/home-compete-and-earn-token-2.png"
+                          alt="Compete and Earn NFTL 2"
+                          layout="responsive"
+                          width={245}
+                          height={253}
+                          className="pixelated"
+                        />
+                      </div>
+                    </AnimatedWrapper>
+                  </div>
+                </div>
+              )}
+              <Stack gap={2} alignItems="center">
+                {!desktop && (
+                  <div className="position-relative flex-grow-1 full-width">
+                    <AnimatedWrapper>
+                      <div className="animated-fade animated-fade-start">
+                        <Image
+                          src="/img/home-compete-and-earn-mobile.png"
+                          alt="Compete and Earn"
+                          layout="responsive"
+                          width={320}
+                          height={124}
+                        />
+                      </div>
+                    </AnimatedWrapper>
+                  </div>
+                )}
+                <div className={`d-flex flex-column compete-to-earn-section-body`}>
+                  <div className="mb-3">
+                    <AnimatedWrapper>
+                      <h2 className="compete-to-earn-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
+                        COMPETE & EARN
+                      </h2>
+                    </AnimatedWrapper>
+                  </div>
+                  <div className="my-0">
+                    <AnimatedWrapper>
+                      <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
+                        4 - 16 PLAYERS POOL NFTL TOGETHER IN A CUTTHROAT BATTLE FOR THE SURVIVAL OF THE FITTEST.
+                      </p>
+                    </AnimatedWrapper>
+                  </div>
+                  <Stack
+                    direction="row"
+                    alignItems="center"
+                    flexWrap="wrap"
+                    gap={{ xs: 1.25, xl: 4 }}
+                    mt={{ xs: 1.25, xl: 4 }}
+                    className="section-actions"
+                  >
+                    <AnimatedWrapper>
+                      <a href="https://app.niftyleague.com/degen-rentals" target="_blank" rel="noreferrer">
+                        <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
+                          RENT A DEGEN
+                        </button>
+                      </a>
+                    </AnimatedWrapper>
+                    <AnimatedWrapper>
+                      <Link href="/compete-and-earn">
+                        <a>
+                          <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
+                            LEARN MORE
+                          </button>
+                        </a>
+                      </Link>
+                    </AnimatedWrapper>
+                  </Stack>
+                </div>
+              </Stack>
+            </div>
+          </div>
+          {desktop && (
+            <div className="col-6 position-relative">
+              <AnimatedWrapper>
+                <div className="quick-pop-anim quick-pop-anim-start transition-delay-medium">
+                  <Image
+                    src="/img/home-compete-and-earn.png"
+                    alt="Compete and Earn"
+                    layout="responsive"
+                    width={916}
+                    height={680}
+                  />
+                </div>
+              </AnimatedWrapper>
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div className="row row-top-spacing py-3 py-md-5 mx-auto inner-container">
+        <div className="d-flex px-3 px-md-4 position-relative align-items-center">
+          {desktop && (
+            <div className="col-6 position-relative">
+              <AnimatedWrapper>
+                <div className="animated-fade animated-fade-start transition-delay-medium">
+                  <Image
+                    src="/img/home-land-in-the-niftyverse.png"
+                    alt="Land in the Niftyverse"
+                    layout="responsive"
+                    width={974}
+                    height={710}
+                  />
+                </div>
+              </AnimatedWrapper>
+            </div>
+          )}
+          <div className={`${desktop ? 'col-6' : 'full-width'} d-flex flex-column land-in-the-niftyverse-section`}>
+            <Stack pl={{ xs: 2, xl: 6 }} gap={2} className="land-in-the-niftyverse-section-body">
+              {!desktop && (
+                <div className="position-relative full-width text-align-center">
+                  <Image
+                    src="/img/home-land-in-the-niftyverse.png"
+                    alt="Land in the Niftyverse"
+                    layout="fixed"
+                    width={317}
+                    height={229}
+                  />
+                </div>
+              )}
+              <div className={`d-flex flex-column align-items-${desktop ? 'start' : 'center'}`}>
+                <div className="mb-3">
+                  <AnimatedWrapper>
+                    <h2
+                      className={`section-title section-heading animated-header-text animated-header-text-start transition-delay-small`}
+                    >
+                      LAND IN THE NIFTYVERSE
+                    </h2>
+                  </AnimatedWrapper>
+                </div>
                 <div className="my-0">
                   <AnimatedWrapper>
                     <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      4 - 16 PLAYERS POOL NFTL TOGETHER IN A CUTTHROAT BATTLE FOR THE SURVIVAL OF THE FITTEST.
+                      SOON WE WILL MINT LAND IN OUR METAVERSE, TO DEGEN OWNERS AND THE PUBLIC.
                     </p>
                   </AnimatedWrapper>
                 </div>
                 <Stack
                   direction="row"
-                  alignItems="center"
                   flexWrap="wrap"
+                  alignItems="center"
                   gap={{ xs: 1.25, xl: 4 }}
                   mt={{ xs: 1.25, xl: 4 }}
                   className="section-actions"
                 >
                   <AnimatedWrapper>
-                    <a href="https://app.niftyleague.com/degen-rentals" target="_blank" rel="noreferrer">
+                    <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
                       <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                        RENT A DEGEN
+                        MINT LAND
                       </button>
                     </a>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
-                    <a href="/compete-and-earn" target="_blank" rel="noreferrer">
-                      <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                        LEARN MORE
-                      </button>
-                    </a>
+                    <Link href="/land">
+                      <a>
+                        <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
+                          LEARN MORE
+                        </button>
+                      </a>
+                    </Link>
                   </AnimatedWrapper>
                 </Stack>
               </div>
             </Stack>
           </div>
-        </div>
-        {desktop && (
-          <div className="col-6 position-relative">
-            <AnimatedWrapper>
-              <div className="quick-pop-anim quick-pop-anim-start transition-delay-medium">
-                <Image
-                  src="/img/home-compete-and-earn.png"
-                  alt="Compete and Earn"
-                  layout="responsive"
-                  width={916}
-                  height={680}
-                />
-              </div>
-            </AnimatedWrapper>
-          </div>
-        )}
-      </div>
-
-      <div className="row row-top-spacing mx-0 py-3 py-md-5 px-3 position-relative align-items-center">
-        {desktop && (
-          <div className="col-7 position-relative">
-            <AnimatedWrapper>
-              <div className="animated-fade animated-fade-start transition-delay-medium">
-                <Image
-                  src="/img/home-land-in-the-niftyverse.png"
-                  alt="Land in the Niftyverse"
-                  layout="responsive"
-                  width={974}
-                  height={710}
-                />
-              </div>
-            </AnimatedWrapper>
-          </div>
-        )}
-        <div className={`${desktop ? 'col-5' : ''} d-flex flex-column land-in-the-niftyverse-section`}>
-          <div className="mb-3">
-            <AnimatedWrapper>
-              <h2
-                className={`section-title section-heading animated-header-text animated-header-text-start transition-delay-small`}
-              >
-                LAND IN THE NIFTYVERSE
-              </h2>
-            </AnimatedWrapper>
-          </div>
-          <Stack gap={2} className="land-in-the-niftyverse-section-body">
-            {!desktop && (
-              <div className="position-relative full-width text-align-center">
-                <Image
-                  src="/img/home-land-in-the-niftyverse.png"
-                  alt="Land in the Niftyverse"
-                  layout="fixed"
-                  width={317}
-                  height={229}
-                />
-              </div>
-            )}
-            <div className={`d-flex flex-column align-items-${desktop ? 'start' : 'center'}`}>
-              <div className="my-0">
-                <AnimatedWrapper>
-                  <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                    SOON WE WILL MINT LAND IN OUR METAVERSE, TO DEGEN OWNERS AND THE PUBLIC.
-                  </p>
-                </AnimatedWrapper>
-              </div>
-              <Stack
-                direction="row"
-                flexWrap="wrap"
-                alignItems="center"
-                gap={{ xs: 1.25, xl: 4 }}
-                mt={{ xs: 1.25, xl: 4 }}
-                className="section-actions"
-              >
-                <AnimatedWrapper>
-                  <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
-                    <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                      MINT LAND
-                    </button>
-                  </a>
-                </AnimatedWrapper>
-                <AnimatedWrapper>
-                  <a href="/learn" target="_blank" rel="noreferrer">
-                    <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                      LEARN MORE
-                    </button>
-                  </a>
-                </AnimatedWrapper>
-              </Stack>
-            </div>
-          </Stack>
         </div>
       </div>
 
@@ -339,13 +349,6 @@ const Home: NextPage = () => {
             </AnimatedWrapper>
           )}
           <div className="d-flex flex-column home-rental-section">
-            <div className="mb-3">
-              <AnimatedWrapper>
-                <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
-                  RENT A DEGEN
-                </h2>
-              </AnimatedWrapper>
-            </div>
             <Stack gap={2}>
               {!desktop && (
                 <div className="position-relative flex-grow-1 full-width">
@@ -353,6 +356,13 @@ const Home: NextPage = () => {
                 </div>
               )}
               <div className={`d-flex flex-column home-rental-section-body`}>
+                <div className="mb-3">
+                  <AnimatedWrapper>
+                    <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
+                      RENT A DEGEN
+                    </h2>
+                  </AnimatedWrapper>
+                </div>
                 <div className="my-0">
                   <AnimatedWrapper>
                     <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
@@ -376,11 +386,13 @@ const Home: NextPage = () => {
                     </a>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
-                    <a href="/rentals" target="_blank" rel="noreferrer">
-                      <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                        LEARN MORE
-                      </button>
-                    </a>
+                    <Link href="/rentals">
+                      <a>
+                        <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
+                          LEARN MORE
+                        </button>
+                      </a>
+                    </Link>
                   </AnimatedWrapper>
                 </Stack>
               </div>
@@ -393,13 +405,6 @@ const Home: NextPage = () => {
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           <div className={`${desktop ? 'col-6' : 'full-width'}`}>
             <div className="d-flex flex-column home-nftl-token-section">
-              <div className="mb-3">
-                <AnimatedWrapper>
-                  <h2 className="home-nftl-token-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
-                    NFTL TOKEN
-                  </h2>
-                </AnimatedWrapper>
-              </div>
               <Stack gap={2}>
                 {!desktop && (
                   <div className="position-relative full-width text-align-center">
@@ -407,6 +412,13 @@ const Home: NextPage = () => {
                   </div>
                 )}
                 <div className={`d-flex flex-column home-nftl-token-section-body`}>
+                  <div className="mb-3">
+                    <AnimatedWrapper>
+                      <h2 className="home-nftl-token-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
+                        NFTL TOKEN
+                      </h2>
+                    </AnimatedWrapper>
+                  </div>
                   <AnimatedWrapper>
                     <p className="py-1 py-md-3 home-nftl-token-section-description animated-header-text animated-header-text-start transition-delay-medium">
                       NFTL IS OUR UTILITY AND GOVERNANCE TOKEN. DEGENs EARN NFTY DAILY FOR THE FIRST 3 YEARS POST-MINT.
@@ -481,15 +493,8 @@ const Home: NextPage = () => {
             <div
               className={`d-flex flex-column home-community-section align-items-${
                 desktop ? 'start' : 'center'
-              } px-md-3`}
+              } ps-3 ps-xl-5 pe-md-3`}
             >
-              <div className="mb-3">
-                <AnimatedWrapper>
-                  <h2 className="section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
-                    THE BEST COMMUNITY ON EARTH
-                  </h2>
-                </AnimatedWrapper>
-              </div>
               <Stack gap={2} className="home-community-section-container">
                 {!desktop && (
                   <div className="position-relative flex-grow-1 full-width">
@@ -514,6 +519,13 @@ const Home: NextPage = () => {
                   </div>
                 )}
                 <div className={`d-flex flex-column home-community-section-body`}>
+                  <div className="mb-3">
+                    <AnimatedWrapper>
+                      <h2 className="section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
+                        THE BEST COMMUNITY ON EARTH
+                      </h2>
+                    </AnimatedWrapper>
+                  </div>
                   <AnimatedWrapper>
                     <p
                       className={`py-1 home-community-section-description animated-header-text animated-header-text-start transition-delay-medium`}
@@ -527,7 +539,7 @@ const Home: NextPage = () => {
                     alignItems="center"
                     flexWrap="wrap"
                     gap={{ xs: 1.25, xl: 4 }}
-                    mt={{ xs: 1.25, xl: 4 }}
+                    mt={{ xs: 1.25, xl: 2 }}
                     className="section-actions"
                   >
                     <AnimatedWrapper>
@@ -565,7 +577,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing mx-0 position-relative">
+      <div className="row row-top-spacing mx-0 py-3 py-md-5 position-relative">
         <div className="d-flex flex-column text-center position-relative">
           <div className="my-3 my-md-5">
             <AnimatedWrapper>

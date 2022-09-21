@@ -58,22 +58,13 @@ const Games: NextPage = () => {
               {action.isComingSoon ? (
                 <AnimatedWrapper>
                   <div className="mt-5 animated-fade-slow animated-fade-start transition-delay-medium">
-                    <button
-                      className={cn(styles.gamePlayButton, 'btn theme-btn-primary disabled mx-auto mx-md-0 px-3')}
-                    >
-                      COMING SOON
-                    </button>
+                    <button className="btn theme-btn-primary disabled mx-auto mx-md-0 px-3">COMING SOON</button>
                   </div>
                 </AnimatedWrapper>
               ) : (
                 <AnimatedWrapper>
                   <a href={action.link} target="_blank" rel="noreferrer">
-                    <button
-                      className={cn(
-                        styles.gamePlayButton,
-                        'btn theme-btn-primary mx-auto mx-md-0 mt-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
-                      )}
-                    >
+                    <button className="btn theme-btn-primary mx-auto mx-md-0 mt-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium">
                       {action.title}
                     </button>
                   </a>

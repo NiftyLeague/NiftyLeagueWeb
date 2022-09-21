@@ -54,7 +54,7 @@ const Rentals: NextPage = () => {
             <AnimatedWrapper>
               <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-large ps-0 ps-lg-5 mb-3">
                 <iframe
-                  src="https://www.youtube.com/embed/wv_fI1PPBi0"
+                  src="https://www.youtube.com/embed/ZMaK-tBXTMw"
                   frameBorder="0"
                   allow="autoplay; encrypted-media"
                   allowFullScreen

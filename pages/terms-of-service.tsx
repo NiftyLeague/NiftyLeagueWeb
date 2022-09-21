@@ -6,7 +6,7 @@ import Layout from '@components/layout';
 
 const ToS = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>
-    <Container style={{ textAlign: 'left', padding: '40px', marginTop: '5%' }}>
+    <Container style={{ textAlign: 'left', padding: '120px 40px 40px 40px' }}>
       <h2>Terms and Conditions</h2>
       <p>
         Last updated: <strong>March 15th, 2022</strong>
