@@ -28,7 +28,7 @@ const About: NextPage = () => {
             <h4 className="mt-sm-5 text-m-center">Welcome to</h4>
             <h1 className="text-m-center">Nifty League</h1>
             <p className="mt-5 mt-sm-3 text-m-center p1">
-              Nifty League is a game studio at the cutting edge of Web3. Our mission is to create a leading NFT gaming
+              Nifty League is a game studio at the cutting edge of Web3. Our mission is to create a leading Web3 gaming
               platform through community governance and development while always putting quality before hype.
             </p>
             <p className="text-m-center">
@@ -169,10 +169,7 @@ const About: NextPage = () => {
         </div>
       </div>
 
-      <div
-        className="container p-0 mb-3"
-        style={{ maxWidth: '100%', background: '#191B1F', marginTop: -225 }}
-      >
+      <div className="container p-0 mb-3" style={{ maxWidth: '100%', background: '#191B1F', marginTop: -225 }}>
         <div className="row m-0 p-0 position-relative nifty-league-browse">
           <div className="row m-0 p-0 position-relative py-5 py-sm-0">
             <section
