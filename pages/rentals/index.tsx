@@ -109,23 +109,29 @@ const Rentals: NextPage = () => {
           <div className="d-flex flex-column flex-md-row full-width">
             <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-7 pe-0 pe-md-5 mb-4')}>
               <AnimatedWrapper>
-                <h5 className="mb-4 animated-fade-slow animated-fade-start transition-delay-medium">OWNERS</h5>
-                <p className="mb-2 animated-fade-slow animated-fade-start transition-delay-medium">
+                <h5 className="mb-4 text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
+                  OWNERS
+                </h5>
+                <p className="mb-2 text-align-center  animated-fade-slow animated-fade-start transition-delay-medium">
                   Passive NFTL income from holding a DEGEN
                 </p>
-                <p className="mb-2 animated-fade-slow animated-fade-start transition-delay-medium">
+                <p className="mb-2 text-align-center  animated-fade-slow animated-fade-start transition-delay-medium">
                   Passive income from renting out to scholars and having them play for you
                 </p>
-                <p className="animated-fade-slow animated-fade-start transition-delay-medium">Rewards for gameplay</p>
+                <p className=" text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
+                  Rewards for gameplay
+                </p>
               </AnimatedWrapper>
             </div>
             <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-5 ps-0 ps-md-5 mb-4')}>
               <AnimatedWrapper>
-                <h5 className="mb-4 animated-fade-slow animated-fade-start transition-delay-medium">SCHOLARS</h5>
-                <p className="mb-2 animated-fade-slow animated-fade-start transition-delay-medium">
+                <h5 className="mb-4 text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
+                  SCHOLARS
+                </h5>
+                <p className="mb-2 text-align-center  animated-fade-slow animated-fade-start transition-delay-medium">
                   Low entry barrier into the nifty league
                 </p>
-                <p className="animated-fade-slow animated-fade-start transition-delay-medium">
+                <p className="text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
                   Almost zero risk involved
                 </p>
               </AnimatedWrapper>
