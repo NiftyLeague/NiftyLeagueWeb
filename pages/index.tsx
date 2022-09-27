@@ -29,10 +29,11 @@ const Home: NextPage = () => {
               src="/img/home-banner-desktop.png"
               alt="Nifty Home Banner"
               layout="responsive"
-              width={1698}
-              height={932}
+              width={3408}
+              height={1849}
               priority
             />
+            <div className="radial-gradient-background" />
           </div>
         </AnimatedWrapper>
         <div className="home-satoshi-container">
@@ -45,10 +46,10 @@ const Home: NextPage = () => {
         <div className="d-flex flex-column mt-auto home-content">
           <AnimatedWrapper>
             <h1 className="home-content-title animated-header-text animated-header-text-start">
-              WELCOME TO THE NIFTYVERSE
+              WELCOME TO NIFTYVERSE
             </h1>
           </AnimatedWrapper>
-          <div className="mt-2 mt-md-4">
+          <div className="my-2 my-md-4">
             <AnimatedWrapper>
               <p className="home-content-description animated-header-text animated-header-text-start transition-delay-small">
                 JOIN THE SEVEN TRIBES OF SATOSHI AND COMPETE TO UNLOCK THE NIFTYVERSE
@@ -87,11 +88,12 @@ const Home: NextPage = () => {
               <Image
                 alt="Classic Gaming Reinvented"
                 className="pixelated"
-                width={2500}
-                height={1366}
+                width={4842}
+                height={3371}
                 layout="responsive"
                 src="/img/home-classic-gaming-reinvented.png"
               />
+              <div className="radial-gradient-background" />
             </div>
           </AnimatedWrapper>
           <Stack
@@ -100,7 +102,6 @@ const Home: NextPage = () => {
             alignItems="center"
             gap={{ xs: 1.25, xl: 4 }}
             px={{ xs: 2, md: 0 }}
-            mt={4}
             className="game-playing-actions"
           >
             <AnimatedWrapper>
@@ -130,8 +131,9 @@ const Home: NextPage = () => {
               <h2 className="px-5 animated-header-text animated-header-text-start">COMMUNITY-GENERATED ART</h2>
             </AnimatedWrapper>
           </div>
-          <div className={`sliding-background-wrapper-${desktop ? 'desktop' : 'mobile'}`}>
+          <div className={`position-relative sliding-background-wrapper-${desktop ? 'desktop' : 'mobile'}`}>
             <div className="sliding-background" />
+            <div className="radial-gradient-background" />
           </div>
         </div>
       </div>
@@ -149,8 +151,8 @@ const Home: NextPage = () => {
                           src="/img/home-compete-and-earn-token-1.png"
                           alt="Compete and Earn NFTL 1"
                           layout="responsive"
-                          width={246}
-                          height={261}
+                          width={413}
+                          height={408}
                           className="pixelated"
                         />
                       </div>
@@ -167,8 +169,8 @@ const Home: NextPage = () => {
                           src="/img/home-compete-and-earn-token-2.png"
                           alt="Compete and Earn NFTL 2"
                           layout="responsive"
-                          width={245}
-                          height={253}
+                          width={398}
+                          height={390}
                           className="pixelated"
                         />
                       </div>
@@ -185,8 +187,8 @@ const Home: NextPage = () => {
                           src="/img/home-compete-and-earn-mobile.png"
                           alt="Compete and Earn"
                           layout="responsive"
-                          width={320}
-                          height={124}
+                          width={3208}
+                          height={1342}
                         />
                       </div>
                     </AnimatedWrapper>
@@ -244,8 +246,8 @@ const Home: NextPage = () => {
                     src="/img/home-compete-and-earn.png"
                     alt="Compete and Earn"
                     layout="responsive"
-                    width={916}
-                    height={680}
+                    width={1561}
+                    height={1227}
                   />
                 </div>
               </AnimatedWrapper>
@@ -264,23 +266,23 @@ const Home: NextPage = () => {
                     src="/img/home-land-in-the-niftyverse.png"
                     alt="Land in the Niftyverse"
                     layout="responsive"
-                    width={974}
-                    height={710}
+                    width={3055}
+                    height={2406}
                   />
                 </div>
               </AnimatedWrapper>
             </div>
           )}
           <div className={`${desktop ? 'col-6' : 'full-width'} d-flex flex-column land-in-the-niftyverse-section`}>
-            <Stack pl={{ xs: 2, xl: 6 }} gap={2} className="land-in-the-niftyverse-section-body">
+            <Stack pl={{ xs: 0, xl: 6 }} gap={2} className="land-in-the-niftyverse-section-body">
               {!desktop && (
                 <div className="position-relative full-width text-align-center">
                   <Image
                     src="/img/home-land-in-the-niftyverse.png"
                     alt="Land in the Niftyverse"
-                    layout="fixed"
-                    width={317}
-                    height={229}
+                    layout="responsive"
+                    width={1920}
+                    height={1512}
                   />
                 </div>
               )}
@@ -333,7 +335,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row row-top-spacing mx-0 py-3 py-md-5">
-        <div className="px-3 px-md-4 position-relative">
+        <div className="px-0 position-relative">
           {desktop && (
             <AnimatedWrapper>
               <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-small">
@@ -341,21 +343,21 @@ const Home: NextPage = () => {
                   src="/img/home-rental.png"
                   alt="Rent a Degen"
                   layout="responsive"
-                  width={1664}
-                  height={870}
+                  width={3590}
+                  height={2192}
                   className="pixelated"
                 />
               </div>
             </AnimatedWrapper>
           )}
-          <div className="d-flex flex-column home-rental-section">
+          <div className="d-flex flex-column px-3 home-rental-section">
             <Stack gap={2}>
               {!desktop && (
                 <div className="position-relative flex-grow-1 full-width">
-                  <Image src="/img/home-rental.png" alt="Rent a Degen" layout="responsive" width={170} height={89} />
+                  <Image src="/img/home-rental.png" alt="Rent a Degen" layout="responsive" width={3590} height={2192} />
                 </div>
               )}
-              <div className={`d-flex flex-column home-rental-section-body`}>
+              <div className="d-flex flex-column home-rental-section-body">
                 <div className="mb-3">
                   <AnimatedWrapper>
                     <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
@@ -408,7 +410,13 @@ const Home: NextPage = () => {
               <Stack gap={2}>
                 {!desktop && (
                   <div className="position-relative full-width text-align-center">
-                    <Image src="/img/home-nftl-token.png" alt="NFTL Token" width={288} height={376} layout="fixed" />
+                    <Image
+                      src="/img/home-nftl-token.png"
+                      alt="NFTL Token"
+                      width={1470}
+                      height={1778}
+                      layout="responsive"
+                    />
                   </div>
                 )}
                 <div className={`d-flex flex-column home-nftl-token-section-body`}>
@@ -459,8 +467,8 @@ const Home: NextPage = () => {
                   <Image
                     src="/img/home-nftl-token.png"
                     alt="NFTL Token"
-                    width={520}
-                    height={680}
+                    width={1470}
+                    height={1778}
                     layout="responsive"
                     className="pixelated"
                   />
@@ -481,8 +489,8 @@ const Home: NextPage = () => {
                     src="/img/home-community.png"
                     alt="The Best Community on Earth"
                     layout="responsive"
-                    width={774}
-                    height={874}
+                    width={1417}
+                    height={1525}
                     className="pixelated"
                   />
                 </div>
@@ -493,7 +501,7 @@ const Home: NextPage = () => {
             <div
               className={`d-flex flex-column home-community-section align-items-${
                 desktop ? 'start' : 'center'
-              } ps-3 ps-xl-5 pe-md-3`}
+              } ps-0 ps-md-3 ps-xl-5 pe-md-3`}
             >
               <Stack gap={2} className="home-community-section-container">
                 {!desktop && (
@@ -502,8 +510,8 @@ const Home: NextPage = () => {
                       src="/img/home-community.png"
                       alt="The Best Community on Earth"
                       layout="responsive"
-                      width={774}
-                      height={874}
+                      width={1417}
+                      height={1525}
                     />
                   </div>
                 )}
@@ -512,8 +520,8 @@ const Home: NextPage = () => {
                     <Image
                       src="/img/home-community-characters.png"
                       alt="Community DEGENs"
-                      width={790}
-                      height={260}
+                      width={1910}
+                      height={620}
                       layout="responsive"
                     />
                   </div>
@@ -562,8 +570,8 @@ const Home: NextPage = () => {
                       <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-large home-community-degens">
                         <Image
                           alt="Community DEGENs"
-                          width={790}
-                          height={260}
+                          width={1910}
+                          height={620}
                           layout="responsive"
                           src="/img/home-community-characters.png"
                         />
@@ -591,8 +599,8 @@ const Home: NextPage = () => {
               <Image
                 alt="Proudly Backed By"
                 className="pixelated"
-                width={1652}
-                height={787}
+                width={3600}
+                height={1735}
                 layout="responsive"
                 src="/img/home-sponsors.png"
               />

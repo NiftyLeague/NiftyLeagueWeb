@@ -42,7 +42,7 @@ function Navbar() {
               <ul className="navbar-nav">
                 <li className="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle true mx-3 mx-xl-4"
+                    className="nav-link dropdown-toggle true mx-3"
                     id="navbarOverviewDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -113,12 +113,12 @@ function Navbar() {
                   })}
                 >
                   <Link href="/roadmap">
-                    <a className="nav-link mx-3 mx-xl-4">Roadmap</a>
+                    <a className="nav-link mx-3">Roadmap</a>
                   </Link>
                 </li>
                 <li className="nav-item dropdown">
                   <a
-                    className="nav-link dropdown-toggle true mx-3 mx-xl-4"
+                    className="nav-link dropdown-toggle true mx-3"
                     id="navbarLearnDropdown"
                     role="button"
                     data-bs-toggle="dropdown"
@@ -149,7 +149,7 @@ function Navbar() {
                   </ul>
                 </li>
               </ul>
-              <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+              <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer" className="launch-app-link">
                 <button className="btn theme-btn-primary launch-app-btn">Launch App</button>
               </a>
             </div>
@@ -229,7 +229,7 @@ function MobileNav() {
           <CloseIcon sx={{ color: 'white' }} />
         )}
       </label>
-      <a className="ms-auto" href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+      <a className="ms-auto launch-app-link" href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
         <button className="btn theme-btn-primary launch-app-btn my-2 ms-auto">Launch App</button>
       </a>
 

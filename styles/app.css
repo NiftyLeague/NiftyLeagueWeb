@@ -22,14 +22,11 @@
 
 /************************************* Body, Heading, Fonts *************************************/
 body {
-  color: #B4B5C3;
+  color: #FFFFFF;
   background: #262930;
   overflow-x: hidden;
 }
-.home-pg {
-  color: #282932;
-  background: #FFFFFF;
-}
+
 h1 {
   font-size: 80px;
   line-height: 93px;
@@ -61,20 +58,18 @@ h5 {
   letter-spacing: 3px;
 }
 p {
-  color: #B4B5C3;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 700;
 }
 
-.home-pg p {
-  color: #343434;  
-  letter-spacing: 2px;
+.home-pg {
+  background: #090A0B;
 }
 
-.home-pg footer a {
-  color: #282932;
+.home-pg p {
+  letter-spacing: 2px;
 }
 
 label {
@@ -176,9 +171,6 @@ a {
 }
 .home-pg .theme-btn-transparent {
   border-radius: 0px;
-  border: 1px solid #000000;
-  color: #343434;
-  background: #FFFFFF;
   height: 80px;
   letter-spacing: 2px;
 }
@@ -196,7 +188,7 @@ a {
 .theme-btn-primary {
   border-radius: 5px;
   color: #282932;
-  background: #B4B5C3;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -208,8 +200,6 @@ a {
   white-space: nowrap;
 }
 .home-pg .theme-btn-primary {
-  color: #F0F0F3;
-  background: #282932;
   height: 80px;
   border-radius: 0px;
   letter-spacing: 2px;
@@ -743,13 +733,13 @@ a {
 
 .home-satoshi-container {
   position: absolute;
-  bottom: -20px;
-  left: 0px;  
+  bottom: 66px;
+  left: -14px;  
 }
 
 .home-satoshi {
   width: 226px;
-  height: 375px;
+  height: 240px;
 }
 
 .home-intro {  
@@ -766,7 +756,7 @@ a {
 }
 
 .home-content-title {
-  max-width: 515px;
+  max-width: 535px;
 }
 
 .home-content-description {
@@ -779,7 +769,7 @@ a {
 }
 
 .speech-bubble-text {
-  color: #FFFFFF !important;
+  color: #282932 !important;
   text-transform: uppercase;
   font-size: 24px;
   position: absolute;
@@ -790,7 +780,7 @@ a {
 .satoshi-learn-more {
   width: 407px;
   height: 125px;
-  margin-left: -32px;
+  margin-left: -40px;
   cursor: pointer;
 }
 
@@ -814,7 +804,8 @@ a {
 
 .home-rental-section {
   position: absolute;
-  top: 150px;
+  top: 200px;
+  left: 52px;
 }
 
 .home-community-degens {
@@ -841,20 +832,35 @@ a {
   max-width: 560px;
 }
 
+.game-playing-actions {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.radial-gradient-background {
+  position: absolute;
+  background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(95, 190, 74, 0) 0%, rgba(21, 18, 27, 0) 19.27%, #08090A 99.74%);
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
 .compete-to-earn-section-token-1 {
   position: absolute;
   left: -226px;
-  top: calc(50% - 130px);
-  width: 246px;
-  height: 261px;  
+  top: calc(50% - 110px);
+  width: 226px;
+  height: 223px;  
 }
 
 .compete-to-earn-section-token-2 {
   position: absolute;
   right: -32px;
-  top: -32px;
-  width: 245px;
-  height: 253px;  
+  top: 0px;
+  width: 226px;
+  height: 221px;  
 }
 
 .text-align-center {
@@ -874,10 +880,6 @@ a {
 
 .social-icon-link {
   height: 40px;
-}
-
-.sliding-nfts {
-  background: #FFFFFF;
 }
 
 .sliding-nfts .sliding-background-wrapper-desktop {
@@ -1063,19 +1065,28 @@ a {
   .btn {
     font-size: 20px;
   }
+  .speech-bubble-text {
+    font-size: 20px;
+    top: 50px;
+    left: 123px;
+  }
   .home-content {
     left: 188px;
     bottom: 1.5rem;
   }
-  .home-content-title {
-    max-width: 454px;    
-  }
   .home-content-button {
     width: 400px;
   }
+  .home-satoshi-container {
+    bottom: 35px;
+  }
   .home-satoshi {
     width: 180px;
-    height: 298px;
+    height: 190px;
+  }
+  .satoshi-learn-more {
+    width: 348px;
+    height: 107px;
   }
   .compete-to-earn-section {
     margin-left: auto;
@@ -1113,10 +1124,7 @@ a {
   }
   .home-content {
     left: 152px;
-    bottom: 0px;
-  }
-  .home-content-title {
-    max-width: 400px;    
+    bottom: 8px;
   }
   .home-content-description {
     max-width: 350px;
@@ -1124,19 +1132,12 @@ a {
   .home-content-button {
     width: 350px;
   }
-  .satoshi-learn-more {
-    width: 348px;
-    height: 107px;
-    margin-left: -28px;
-  }
-  .speech-bubble-text {
-    font-size: 20px;
-    top: 50px;
-    left: 123px;
+  .home-satoshi-container {
+    bottom: 36px;
   }
   .home-satoshi {
     width: 140px;
-    height: 232px;
+    height: 148px;
   }
   .home-pg .btn {
     height: 54px;
@@ -1149,6 +1150,7 @@ a {
   }
   .home-rental-section {
     top: 100px;
+    left: 8px;
   }
 }
 
@@ -1179,12 +1181,6 @@ a {
   .home-pg .btn {    
     height: 40px;    
   }
-  .home-content {
-    bottom: 0;
-  }
-  .home-content-title {
-    max-width: 325px;
-  }
   .home-content-description {
     max-width: 300px;
   }
@@ -1201,7 +1197,7 @@ a {
     width: 200px;
   }
   .home-rental-section {
-    top: 80px;
+    top: 100px;
   }
 }
 
@@ -1233,7 +1229,7 @@ a {
     left: 126px;
   }
   .home-content-title {
-    max-width: 278px;
+    max-width: 350px;
   }
   .home-content-description {
     max-width: 252px;
@@ -1244,16 +1240,19 @@ a {
   .satoshi-learn-more {
     width: 260px;
     height: 80px;
-    margin-left: -20px;
+    margin-left: -28px;
   }
   .speech-bubble-text {
     font-size: 16px;
     top: 36px;
     left: 86px;
   }  
+  .home-satoshi-container {
+    bottom: 24px;
+  }
   .home-satoshi {
     width: 120px;
-    height: 198px;
+    height: 127px;
   }  
   .section-black-button {
     width: 180px;
@@ -1271,7 +1270,7 @@ a {
     display: none;
   }
   .home-rental-section {
-    top: 50px;
+    top: 100px;
   }
 }
 
@@ -1309,9 +1308,12 @@ a {
     width: 240px;
     display: block;
   }
+  .home-satoshi-container {
+    bottom: 0px;
+  }
   .home-satoshi {
     width: 100px;
-    height: 165px;
+    height: 105px;
   }
   .section-title {
     max-width: 400px;
@@ -1351,12 +1353,12 @@ a {
   .btn {
     padding: 4px 8px;
   }  
-  .home-intro {
+  /* .home-intro {
     padding-top: 40px !important;
-  }
+  } */
   .home-satoshi {
     width: 80px;
-    height: 132px;
+    height: 84px;
   }  
   .row {
     margin-left: 0px;
@@ -1386,6 +1388,7 @@ a {
   .home-rental-section {
     position: relative;
     top: 0px;
+    left: 0px;
   }
   .home-rental-section-body {
     align-items: center;
@@ -1423,9 +1426,13 @@ a {
     align-items: center;
   }
   .home-community-characters {
-    width: 60%;
+    width: 100%;
     margin-left: auto;
+    margin-right: auto;
     margin-top: -32px;
+  }
+  .game-playing-actions {
+    position: relative;
   }
 }
 
@@ -1464,7 +1471,7 @@ a {
   }
   .home-satoshi {
     width: 60px;
-    height: 99px;
+    height: 63px;
   }
 }
 
@@ -1476,11 +1483,6 @@ a {
   h2 {
     font-size: 20px;
     line-height: 23px;
-  }
-  .home-satoshi {
-    width: 33px;
-    height: 55px;
-    bottom: 32px;
   }
   .section-black-button {
     width: 135px;
