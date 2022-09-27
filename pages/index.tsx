@@ -190,6 +190,7 @@ const Home: NextPage = () => {
                           width={3208}
                           height={1342}
                         />
+                        <div className="radial-gradient-background" />
                       </div>
                     </AnimatedWrapper>
                   </div>
@@ -249,6 +250,7 @@ const Home: NextPage = () => {
                     width={1561}
                     height={1227}
                   />
+                  <div className="radial-gradient-background" />
                 </div>
               </AnimatedWrapper>
             </div>
@@ -269,6 +271,7 @@ const Home: NextPage = () => {
                     width={3055}
                     height={2406}
                   />
+                  <div className="radial-gradient-background" />
                 </div>
               </AnimatedWrapper>
             </div>
@@ -284,6 +287,7 @@ const Home: NextPage = () => {
                     width={1920}
                     height={1512}
                   />
+                  <div className="radial-gradient-background" />
                 </div>
               )}
               <div className={`d-flex flex-column align-items-${desktop ? 'start' : 'center'}`}>
@@ -347,6 +351,7 @@ const Home: NextPage = () => {
                   height={2192}
                   className="pixelated"
                 />
+                <div className="radial-gradient-background" />
               </div>
             </AnimatedWrapper>
           )}
@@ -355,6 +360,7 @@ const Home: NextPage = () => {
               {!desktop && (
                 <div className="position-relative flex-grow-1 full-width">
                   <Image src="/img/home-rental.png" alt="Rent a Degen" layout="responsive" width={3590} height={2192} />
+                  <div className="radial-gradient-background" />
                 </div>
               )}
               <div className="d-flex flex-column home-rental-section-body">
@@ -417,6 +423,7 @@ const Home: NextPage = () => {
                       height={1778}
                       layout="responsive"
                     />
+                    <div className="radial-gradient-background" />
                   </div>
                 )}
                 <div className={`d-flex flex-column home-nftl-token-section-body`}>
@@ -472,6 +479,7 @@ const Home: NextPage = () => {
                     layout="responsive"
                     className="pixelated"
                   />
+                  <div className="radial-gradient-background" />
                 </div>
               </AnimatedWrapper>
             </div>
@@ -493,6 +501,7 @@ const Home: NextPage = () => {
                     height={1525}
                     className="pixelated"
                   />
+                  <div className="radial-gradient-background" />
                 </div>
               </AnimatedWrapper>
             </div>
@@ -513,6 +522,7 @@ const Home: NextPage = () => {
                       width={1417}
                       height={1525}
                     />
+                    <div className="radial-gradient-background" />
                   </div>
                 )}
                 {!desktop && (
@@ -524,6 +534,7 @@ const Home: NextPage = () => {
                       height={620}
                       layout="responsive"
                     />
+                    <div className="radial-gradient-background" />
                   </div>
                 )}
                 <div className={`d-flex flex-column home-community-section-body`}>
@@ -575,6 +586,7 @@ const Home: NextPage = () => {
                           layout="responsive"
                           src="/img/home-community-characters.png"
                         />
+                        <div className="radial-gradient-background" />
                       </div>
                     </AnimatedWrapper>
                   )}
@@ -604,6 +616,7 @@ const Home: NextPage = () => {
                 layout="responsive"
                 src="/img/home-sponsors.png"
               />
+              <div className="radial-gradient-background" />
             </div>
           </AnimatedWrapper>
           <Stack
