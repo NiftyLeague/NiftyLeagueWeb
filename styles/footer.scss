@@ -25,8 +25,7 @@ footer {
 }
 
 .footer-container {
-  padding: 160px 20px;
-  max-width: 815px;
+  padding: 80px 20px;
 }
 
 @media (max-width: 768px) {
@@ -35,8 +34,8 @@ footer {
     padding-bottom: 36px;
   }
   footer a {
-    font-size: 12px;
-    text-align: left;
+    font-size: 14px;
+    text-align: center;
   }
   .last-column a {
     text-align: right;

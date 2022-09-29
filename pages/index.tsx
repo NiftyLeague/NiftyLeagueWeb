@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
+import Sponsors from '@components/Sponsors';
+import { SPONSORS } from '@data/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
@@ -338,7 +340,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing mx-0 py-3 py-md-5">
+      {/* <div className="row row-top-spacing mx-0 py-3 py-md-5">
         <div className="px-0 position-relative">
           {desktop && (
             <AnimatedWrapper>
@@ -407,7 +409,7 @@ const Home: NextPage = () => {
             </Stack>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="row row-top-spacing mx-auto inner-container py-3 py-md-5">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
@@ -606,19 +608,23 @@ const Home: NextPage = () => {
               </h2>
             </AnimatedWrapper>
           </div>
-          <AnimatedWrapper>
-            <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-medium">
-              <Image
-                alt="Proudly Backed By"
-                className="pixelated"
-                width={3600}
-                height={1735}
-                layout="responsive"
-                src="/img/home-sponsors.png"
-              />
-              <div className="radial-gradient-background" />
-            </div>
-          </AnimatedWrapper>
+          {desktop ? (
+            <AnimatedWrapper>
+              <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-medium">
+                <Image
+                  alt="Proudly Backed By"
+                  className="pixelated"
+                  width={3600}
+                  height={1735}
+                  layout="responsive"
+                  src="/img/home-sponsors.png"
+                />
+                <div className="radial-gradient-background" />
+              </div>
+            </AnimatedWrapper>
+          ) : (
+            <Sponsors sponsors={SPONSORS} />
+          )}
           <Stack
             direction="row"
             flexWrap="wrap"
