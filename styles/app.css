@@ -23,7 +23,7 @@
 /************************************* Body, Heading, Fonts *************************************/
 body {
   color: #FFFFFF;
-  background: #262930;
+  background: #090A0B;
   overflow-x: hidden;
 }
 
@@ -62,10 +62,6 @@ p {
   line-height: 1.2;
   letter-spacing: -0.02em;
   font-weight: 700;
-}
-
-.home-pg {
-  background: #090A0B;
 }
 
 .home-pg p {
@@ -879,7 +875,7 @@ a {
 }
 
 .social-icon-link {
-  height: 40px;
+  height: 24px;
 }
 
 .sliding-nfts .sliding-background-wrapper-desktop {
@@ -1277,6 +1273,7 @@ a {
 @media (max-width: 920px) {  
   .home-intro {
     margin-bottom: 224px;
+    padding-top: 72px !important;
   }
   .home-content {
     left: 0px;
@@ -1353,9 +1350,6 @@ a {
   .btn {
     padding: 4px 8px;
   }  
-  /* .home-intro {
-    padding-top: 40px !important;
-  } */
   .home-satoshi {
     width: 80px;
     height: 84px;
@@ -1434,16 +1428,19 @@ a {
   .game-playing-actions {
     position: relative;
   }
+  .radial-gradient-background {
+    display: none;
+  }
 }
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 30px;
   }
   h2 {
-    font-size: 20px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 28px;
   }
   h3 {
     font-size: 16px;
@@ -1456,9 +1453,6 @@ a {
   h5 {
     font-size: 14px;
     line-height: 16px;
-  }
-  p {
-    font-size: 12px;
   }
   .btn {
     font-size: 14px;    
@@ -1476,13 +1470,8 @@ a {
 }
 
 @media (max-width: 400px) {
-  h1 {
-    font-size: 20px;
-    line-height: 23px;
-  }
-  h2 {
-    font-size: 20px;
-    line-height: 23px;
+  .home-intro {
+    padding-top: 56px !important;
   }
   .section-black-button {
     width: 135px;
