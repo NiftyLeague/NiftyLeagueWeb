@@ -1,5 +1,5 @@
 .header a {
-  font-size: 32px;
+  font-size: 24px;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -9,10 +9,9 @@
 }
 
 .launch-app-btn {
-  font-size: 32px;
   border-radius: 40px !important;
   text-transform: none;
-  height: 58px !important;
+  height: 44px !important;
   letter-spacing: -0.02em !important;
 }
 
@@ -36,16 +35,6 @@
   max-width: 950px;
 }
 
-.social-icons {
-  margin-right: 100px;
-}
-
-@media (max-width: 1600px) {
-  .social-icons {
-    margin-right: 48px;
-  }
-}
-
 @media (max-width: 1400px) {
   .header a {
     font-size: 20px;
@@ -53,12 +42,6 @@
   .launch-app-btn {
     font-size: 20px;
     height: 40px !important;
-  }
-}
-
-@media (max-width: 1200px) {
-  .social-icons {
-    margin-right: 0px;
   }
 }
 
@@ -71,7 +54,7 @@
 
 @media (max-width: 400px) {
   .launch-app-btn {
-    font-size: 11px;
+    font-size: 14px;
     height: 24px !important;
   }
 }
@@ -141,15 +124,16 @@
   letter-spacing: -0.02em;
 }
 .navbar a:hover {
-  color: #620edf;
+  color: #ffffff;
+  text-shadow: 0px 0px 5px #191b1f, 0px 0px 10px #f5f5f5, 0px 0px 15px #f5f5f5, 0px 0px 25px #191b1f,
+    0px 0px 40px #191b1f;
 }
 .dark-nav {
-  background: #262930;
-  box-shadow: 1px 2px 6px rgb(0 0 0 / 80%);
+  background: #090a0b;
 }
 
 .nav-item.active a {
-  color: #620edf;
+  color: #ffffff;
 }
 
 .dropdown-menu {
@@ -157,8 +141,15 @@
 }
 
 .dropdown-menu > li > a:hover {
-  background-color: #262930 !important;
-  color: #620edf;
+  background-color: #191b1f !important;
+  color: #ffffff;
+  text-shadow: 0px 0px 5px #191b1f, 0px 0px 10px #f5f5f5, 0px 0px 15px #f5f5f5, 0px 0px 25px #191b1f,
+    0px 0px 40px #191b1f;
+}
+
+.dropdown-menu > li > a:active {
+  background-color: #191b1f !important;
+  color: #ffffff;
 }
 .dropdown:hover .dropdown-menu {
   display: block;
@@ -226,6 +217,7 @@
   font-weight: bold;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
+  white-space: nowrap;
 }
 .mobile-nav nav ul li a:hover {
   color: #e84a5f;
@@ -270,7 +262,7 @@
   visibility: visible;
 }
 #toggle:checked ~ nav ul {
-  top: 150px;
+  top: 100px;
 }
 #toggle:checked ~ nav ul li {
   transform: translateY(0px);

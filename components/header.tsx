@@ -16,28 +16,15 @@ function Navbar() {
     <nav id="nav" className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop">
       <div className="container-fluid z-100" style={{ borderStyle: 'none' }}>
         <div
-          className="navbar-nav collapse navbar-collapse px-4 my-4 justify-content-between"
+          className="navbar-nav collapse navbar-collapse px-4 my-3 justify-content-between"
           id="navbarSupportedContent"
         >
           <Link href="/">
             <a className="navbar-brand">
-              <Image src="/img/logo-blue.svg" height={64} width={64} alt="Nifty League Logo" loading="lazy" />
+              <Image src="/img/logo-blue.svg" height={48} width={48} alt="Nifty League Logo" loading="lazy" />
             </a>
           </Link>
           <div className="d-flex align-items-center">
-            <div className="d-flex align-items-center social-icons">
-              {SOCIAL_LINKS.map(social => (
-                <a
-                  className="pe-4 social-icon-link"
-                  href={social.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={social.name}
-                >
-                  <Image src={social.image} width={40} height={40} alt={social.description} />
-                </a>
-              ))}
-            </div>
             <div className="d-flex align-items-center">
               <ul className="navbar-nav">
                 <li className="nav-item dropdown">
@@ -60,7 +47,7 @@ function Navbar() {
                         <a className="dropdown-item">Land</a>
                       </Link>
                     </li>
-                    <li
+                    {/* <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('rentals'),
                       })}
@@ -68,7 +55,7 @@ function Navbar() {
                       <Link href="/rentals">
                         <a className="dropdown-item">Rentals</a>
                       </Link>
-                    </li>
+                    </li> */}
                     <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('games'),
@@ -153,6 +140,19 @@ function Navbar() {
                 <button className="btn theme-btn-primary launch-app-btn">Launch App</button>
               </a>
             </div>
+            <div className="d-flex align-items-center social-icons">
+              {SOCIAL_LINKS.map(social => (
+                <a
+                  className="ps-4 social-icon-link"
+                  href={social.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  key={social.name}
+                >
+                  <Image src={social.image} width={24} height={24} alt={social.description} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -169,20 +169,32 @@ function MobileNav() {
       name: 'Home',
     },
     {
-      href: '/about',
-      name: 'About',
+      href: '/land',
+      name: 'Land',
+    },
+    // {
+    //   href: '/rentals',
+    //   name: 'Rentals',
+    // },
+    {
+      href: '/games',
+      name: 'Games',
+    },
+    {
+      href: '/degens',
+      name: 'Degens',
+    },
+    {
+      href: '/compete-and-earn',
+      name: 'Compete & Earn',
+    },
+    {
+      href: '/lore',
+      name: 'Lore',
     },
     {
       href: '/roadmap',
       name: 'Roadmap',
-    },
-    {
-      href: '/community',
-      name: 'Community',
-    },
-    {
-      href: '/careers',
-      name: 'Careers',
     },
     {
       href: '/learn',
@@ -212,7 +224,7 @@ function MobileNav() {
   };
 
   return (
-    <div id="nav" className="mobile-nav align-items-center d-flex position-absolute">
+    <div id="nav" className="py-2 mobile-nav align-items-center d-flex position-absolute">
       <input
         type="checkbox"
         id="toggle"
