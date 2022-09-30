@@ -9,7 +9,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
       <AnimatedWrapper>
         <div className="footer-container mx-auto animated-fade animated-fade-start transition-delay-small">
           <div className="row m-0 p-md-5 pt-0 position-relative">
-            <div className="col-6 col-sm-4 col-md-2 px-md-5  px-0 pt-md-0 pt-4">
+            <div className="col-4 col-sm-4 col-md-2 px-md-5  px-0 pt-md-0 pt-4">
               <div className="row m-0 p-0 position-relative">
                 <Link href="/">
                   <a>Home</a>
@@ -25,7 +25,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 </Link>
               </div>
             </div>
-            <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
+            <div className="col-4 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
               <div className="row m-0 p-0 position-relative">
                 <Link href="/learn">
                   <a>Learn</a>
@@ -41,7 +41,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 </Link>
               </div>
             </div>
-            <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
+            <div className="col-4 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
               <div className="row m-0 p-0 position-relative">
                 <Link href="/feedback">
                   <a>Feedback</a>

@@ -55,7 +55,7 @@
 @media (max-width: 400px) {
   .launch-app-btn {
     font-size: 14px;
-    height: 24px !important;
+    height: 30px !important;
   }
 }
 
@@ -96,20 +96,6 @@
 
   p {
     text-align: center;
-  }
-
-  .socials {
-    justify-content: right;
-    top: 11px;
-    right: 0;
-    width: 300px;
-
-    a:hover {
-      color: #620edf;
-    }
-    a:hover path {
-      fill: #620edf;
-    }
   }
 }
 
