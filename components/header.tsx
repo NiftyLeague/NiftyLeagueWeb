@@ -7,7 +7,6 @@ import { Stack } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
-import { SOCIAL_LINKS } from '@data/constants';
 
 function Navbar() {
   const { pathname } = useRouter();
@@ -139,19 +138,6 @@ function Navbar() {
               <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer" className="launch-app-link">
                 <button className="btn theme-btn-primary launch-app-btn">Launch App</button>
               </a>
-            </div>
-            <div className="d-flex align-items-center social-icons">
-              {SOCIAL_LINKS.map(social => (
-                <a
-                  className="ps-4 social-icon-link"
-                  href={social.link}
-                  target="_blank"
-                  rel="noreferrer"
-                  key={social.name}
-                >
-                  <Image src={social.image} width={24} height={24} alt={social.description} />
-                </a>
-              ))}
             </div>
           </div>
         </div>

@@ -51,7 +51,7 @@ const Home: NextPage = () => {
               WELCOME TO NIFTYVERSE
             </h1>
           </AnimatedWrapper>
-          <div className="my-2 my-md-4">
+          <div className="my-2 my-lg-4">
             <AnimatedWrapper>
               <p className="home-content-description animated-header-text animated-header-text-start transition-delay-small">
                 JOIN THE SEVEN TRIBES OF SATOSHI AND COMPETE TO UNLOCK THE NIFTYVERSE
@@ -79,8 +79,8 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row row-top-spacing m-0 p-0 position-relative">
-        <div className="d-flex flex-column text-center position-relative my-3 my-md-5 p-0">
-          <div className="my-3 my-md-5">
+        <div className="d-flex flex-column text-center position-relative p-0">
+          <div className="my-3 my-lg-5">
             <AnimatedWrapper>
               <h2 className="px-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
             </AnimatedWrapper>
@@ -127,8 +127,8 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row row-top-spacing m-0 p-0 position-relative sliding-nfts">
-        <div className="d-flex flex-column text-center position-relative my-3 my-md-5 p-0">
-          <div className="my-3 my-md-5">
+        <div className="d-flex flex-column text-center position-relative p-0">
+          <div className="my-3 my-lg-5">
             <AnimatedWrapper>
               <h2 className="px-5 animated-header-text animated-header-text-start">COMMUNITY-GENERATED ART</h2>
             </AnimatedWrapper>
@@ -140,7 +140,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing px-0 py-3 py-md-5 mx-auto inner-container">
+      <div className="row row-top-spacing px-0 mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           <div className={`${desktop ? 'col-6' : 'full-width'}`}>
             <div className="d-flex flex-column compete-to-earn-section position-relative">
@@ -207,7 +207,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className="my-0">
                     <AnimatedWrapper>
-                      <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
+                      <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
                         4 - 16 PLAYERS POOL NFTL TOGETHER IN A CUTTHROAT BATTLE FOR THE SURVIVAL OF THE FITTEST.
                       </p>
                     </AnimatedWrapper>
@@ -221,9 +221,9 @@ const Home: NextPage = () => {
                     className="section-actions"
                   >
                     <AnimatedWrapper>
-                      <a href="https://app.niftyleague.com/degen-rentals" target="_blank" rel="noreferrer">
+                      <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                          RENT A DEGEN
+                          TRY BRAWL MODE
                         </button>
                       </a>
                     </AnimatedWrapper>
@@ -260,7 +260,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing py-3 py-md-5 mx-auto inner-container">
+      <div className="row row-top-spacing mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           {desktop && (
             <div className="col-6 position-relative">
@@ -304,7 +304,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="my-0">
                   <AnimatedWrapper>
-                    <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
+                    <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
                       SOON WE WILL MINT LAND IN OUR METAVERSE, TO DEGEN OWNERS AND THE PUBLIC.
                     </p>
                   </AnimatedWrapper>
@@ -320,7 +320,7 @@ const Home: NextPage = () => {
                   <AnimatedWrapper>
                     <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
                       <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                        MINT LAND
+                        GET NOTIFIED
                       </button>
                     </a>
                   </AnimatedWrapper>
@@ -375,7 +375,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="my-0">
                   <AnimatedWrapper>
-                    <p className="py-1 py-md-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
+                    <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
                       READY TO PLAY? WANT TO TEST OUT ALL THE DEGEN TRIBES BEFORE YOU BUY? REMT A DEGEN FOR A WEEK.
                     </p>
                   </AnimatedWrapper>
@@ -411,7 +411,7 @@ const Home: NextPage = () => {
         </div>
       </div> */}
 
-      <div className="row row-top-spacing mx-auto inner-container py-3 py-md-5">
+      <div className="row row-top-spacing mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           <div className={`${desktop ? 'col-6' : 'full-width'}`}>
             <div className="d-flex flex-column home-nftl-token-section">
@@ -437,7 +437,7 @@ const Home: NextPage = () => {
                     </AnimatedWrapper>
                   </div>
                   <AnimatedWrapper>
-                    <p className="py-1 py-md-3 home-nftl-token-section-description animated-header-text animated-header-text-start transition-delay-medium">
+                    <p className="py-1 py-lg-3 home-nftl-token-section-description animated-header-text animated-header-text-start transition-delay-medium">
                       NFTL IS OUR UTILITY AND GOVERNANCE TOKEN. DEGENs EARN NFTY DAILY FOR THE FIRST 3 YEARS POST-MINT.
                       WAGER AND WIN NFTL BY COMPETING VIA COMPETE-AND-EARN.
                     </p>
@@ -451,7 +451,11 @@ const Home: NextPage = () => {
                     className="section-actions"
                   >
                     <AnimatedWrapper>
-                      <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+                      <a
+                        href="https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0x3c8D2FCE49906e11e71cB16Fa0fFeB2B16C29638&chainId=1"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
                           BUY TOKEN
                         </button>
@@ -489,7 +493,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row inner-container row-top-spacing mx-auto py-3 py-md-5">
+      <div className="row inner-container row-top-spacing mx-auto">
         <div className="d-flex px-3 px-md-4 position-relative align-items-end">
           {desktop && (
             <div className="col-6">
@@ -601,7 +605,7 @@ const Home: NextPage = () => {
 
       <div className="row row-top-spacing mx-0 py-3 py-md-5 position-relative">
         <div className="d-flex flex-column text-center position-relative">
-          <div className="my-3 my-md-5">
+          <div className="my-3 my-lg-5">
             <AnimatedWrapper>
               <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
                 PROUDLY BACKED BY
