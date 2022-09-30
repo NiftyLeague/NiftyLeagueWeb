@@ -38,8 +38,8 @@ const CompeteAndEarn: NextPage = () => {
                     src="/img/compete-and-earn/splash.png"
                     alt="Nifty League Compete & Earn"
                     layout="responsive"
-                    width={1214}
-                    height={623}
+                    width={3343}
+                    height={2615}
                     priority
                   />
                 </div>
@@ -48,7 +48,7 @@ const CompeteAndEarn: NextPage = () => {
           </div>
         </div>
         <div className={cn(styles.content, 'mx-auto')}>
-          <div className="d-flex flex-column-reverse flex-md-row mt-3 mt-md-5 py-3 py-md-5 align-items-center">
+          <div className="d-flex flex-column-reverse flex-md-row mt-3 mt-md-5 py-5 align-items-center">
             <div className={cn(styles.block, 'col-12 col-md-6 pe-md-5')}>
               <div className="mb-3">
                 <AnimatedWrapper>

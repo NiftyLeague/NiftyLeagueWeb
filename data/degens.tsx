@@ -5,8 +5,8 @@ export const NIFTY_DEGENS = [
     extra: 'gif of human degen dropping bomb and exploding',
     image: {
       link: '/img/degens/human.png',
-      width: 146,
-      height: 103,
+      width: 120,
+      height: 100,
     },
   },
   {
@@ -15,8 +15,8 @@ export const NIFTY_DEGENS = [
     extra: '',
     image: {
       link: '/img/degens/doge.png',
-      width: 107,
-      height: 103,
+      width: 115,
+      height: 100,
     },
   },
   {
@@ -25,8 +25,8 @@ export const NIFTY_DEGENS = [
     extra: '',
     image: {
       link: '/img/degens/frog.png',
-      width: 167,
-      height: 103,
+      width: 140,
+      height: 100,
     },
   },
   {
@@ -35,8 +35,8 @@ export const NIFTY_DEGENS = [
     extra: '',
     image: {
       link: '/img/degens/cat.png',
-      width: 146,
-      height: 103,
+      width: 120,
+      height: 100,
     },
   },
   {
@@ -45,8 +45,8 @@ export const NIFTY_DEGENS = [
     extra: '',
     image: {
       link: '/img/degens/ape.png',
-      width: 119,
-      height: 103,
+      width: 91,
+      height: 100,
     },
   },
   {
@@ -55,8 +55,8 @@ export const NIFTY_DEGENS = [
     extra: '',
     image: {
       link: '/img/degens/alien.png',
-      width: 133,
-      height: 103,
+      width: 100,
+      height: 100,
     },
   },
 ];

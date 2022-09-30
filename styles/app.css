@@ -164,6 +164,7 @@ a {
   letter-spacing: -0.02em;  
   box-shadow: none;
   white-space: nowrap;
+  padding: 4px 16px;
 }
 .home-pg .theme-btn-transparent {
   border-radius: 0px;
@@ -194,6 +195,7 @@ a {
   letter-spacing: -0.02em;
   box-shadow: none;
   white-space: nowrap;
+  padding: 4px 16px;
 }
 .home-pg .theme-btn-primary {
   height: 80px;
@@ -207,7 +209,7 @@ a {
 }
 
 .iconExternalLink {
-  margin-left: 0.3rem;
+  margin-left: 0.5rem;
   position: relative;
   top: -2px;
 }
@@ -361,6 +363,9 @@ a {
   }
   .nifty-ape {
     width: 800px;
+  }
+  .row-top-spacing {
+    padding-top: 100px !important;
   }
 }
 @media (min-width: 1500px) {
@@ -741,7 +746,7 @@ a {
 .home-intro {  
   width: 100%;
   max-height: 100vh;
-  margin-bottom: 128px;
+  overflow: hidden;
 }
 
 .home-content {
@@ -900,13 +905,13 @@ a {
 
   height: 100%;
   width: 5000px;
-  animation: slide 20s linear infinite;
+  animation: slide 60s linear infinite;
 }
 .sliding-background-wrapper-mobile .sliding-background {
   background: url(/img/icons-set.png) repeat-x;
   height: 106px;
   width: 5000px;
-  animation: slide 30s linear infinite;
+  animation: slide 240s linear infinite;
   background-size: contain;
 }
 @media (min-width: 769px) {
@@ -1195,6 +1200,9 @@ a {
   .home-rental-section {
     top: 100px;
   }
+  .row-top-spacing {
+    padding-top: 64px !important;
+  }
 }
 
 @media (max-width: 1052px) {
@@ -1274,6 +1282,7 @@ a {
   .home-intro {
     margin-bottom: 224px;
     padding-top: 72px !important;
+    overflow: inherit;
   }
   .home-content {
     left: 0px;
@@ -1348,7 +1357,7 @@ a {
     line-height: 21px;
   }
   .btn {
-    padding: 4px 8px;
+    padding: 6px 8px;
   }  
   .home-satoshi {
     width: 80px;
@@ -1443,8 +1452,8 @@ a {
     line-height: 28px;
   }
   h3 {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 20px;
+    line-height: 24px;
   }
   h4 {
     font-size: 16px;
@@ -1471,7 +1480,7 @@ a {
 
 @media (max-width: 400px) {
   .home-intro {
-    padding-top: 56px !important;
+    padding-top: 62px !important;
   }
   .section-black-button {
     width: 135px;
@@ -1968,9 +1977,5 @@ a {
     0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
     40% {transform: translateY(-120px);}
     60% {transform: translateY(-60px);}
-  }  
-
-  .row-top-spacing {
-    padding-top: 100px !important;
   }
 }
