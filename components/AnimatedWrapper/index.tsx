@@ -9,7 +9,17 @@ const animatedClassNames = [
   '.satoshi-quick-pop-anim-start',
 ];
 
-const AnimatedWrapper = ({ children, immediate = false }: { children: React.ReactNode; immediate?: boolean }) => {
+const AnimatedWrapper = ({
+  children,
+  immediate = false,
+  parallax = false,
+  parallaxDirection = 'left',
+}: {
+  children: React.ReactNode;
+  immediate?: boolean;
+  parallax?: boolean;
+  parallaxDirection?: string;
+}) => {
   const ref: any = useRef<HTMLDivElement>();
   const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, immediate ? '0px' : '-100px');
 
@@ -23,7 +33,31 @@ const AnimatedWrapper = ({ children, immediate = false }: { children: React.Reac
         });
       }
     }
-  }, [onScreen]);
+
+    const handleScroll = () => {
+      if (onScreen) {
+        const sectionElement: HTMLDivElement = ref.current;
+        if (sectionElement) {
+          if (parallax) {
+            const rect = sectionElement.getBoundingClientRect();
+            if (parallaxDirection === 'top') {
+              const translationY = (rect.top * 100) / window.innerHeight;
+              sectionElement.style.transform = `translateY(${translationY * -1}px)`;
+            } else {
+              const translationX = (rect.top * 100) / window.innerHeight;
+              const direction = parallaxDirection === 'left' ? -1 : 1;
+              sectionElement.style.transform = `translateX(${translationX * direction}px)`;
+            }
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [onScreen, parallax, parallaxDirection]);
   return <div ref={ref}>{children}</div>;
 };
 
