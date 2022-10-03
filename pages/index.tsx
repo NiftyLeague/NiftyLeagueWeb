@@ -104,6 +104,7 @@ const Home: NextPage = () => {
             alignItems="center"
             gap={{ xs: 1.25, xl: 4 }}
             px={{ xs: 2, md: 0 }}
+            mt={{ xs: 2, sm: 0 }}
             className="game-playing-actions"
           >
             <AnimatedWrapper>
@@ -147,8 +148,8 @@ const Home: NextPage = () => {
               {desktop && (
                 <div className="compete-to-earn-section-token-1">
                   <div className="position-relative flex-grow-1">
-                    <AnimatedWrapper>
-                      <div className="animation-bounce animated-fade animated-fade-start transition-delay-large">
+                    <AnimatedWrapper parallax parallaxDirection="left">
+                      <div className="animated-fade animated-fade-start transition-delay-large">
                         <Image
                           src="/img/home-compete-and-earn-token-1.png"
                           alt="Compete and Earn NFTL 1"
@@ -165,8 +166,8 @@ const Home: NextPage = () => {
               {desktop && (
                 <div className="compete-to-earn-section-token-2">
                   <div className="position-relative flex-grow-1">
-                    <AnimatedWrapper>
-                      <div className="animation-bounce2 animated-fade animated-fade-start transition-delay-large">
+                    <AnimatedWrapper parallax parallaxDirection="right">
+                      <div className="animated-fade animated-fade-start transition-delay-large">
                         <Image
                           src="/img/home-compete-and-earn-token-2.png"
                           alt="Compete and Earn NFTL 2"
@@ -243,7 +244,7 @@ const Home: NextPage = () => {
           </div>
           {desktop && (
             <div className="col-6 position-relative">
-              <AnimatedWrapper>
+              <AnimatedWrapper parallax parallaxDirection="top">
                 <div className="quick-pop-anim quick-pop-anim-start transition-delay-medium">
                   <Image
                     src="/img/home-compete-and-earn.png"
@@ -252,7 +253,6 @@ const Home: NextPage = () => {
                     width={1561}
                     height={1227}
                   />
-                  <div className="radial-gradient-background" />
                 </div>
               </AnimatedWrapper>
             </div>
@@ -264,7 +264,7 @@ const Home: NextPage = () => {
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           {desktop && (
             <div className="col-6 position-relative">
-              <AnimatedWrapper>
+              <AnimatedWrapper parallax parallaxDirection="top">
                 <div className="animated-fade animated-fade-start transition-delay-medium">
                   <Image
                     src="/img/home-land-in-the-niftyverse.png"
@@ -475,7 +475,7 @@ const Home: NextPage = () => {
           </div>
           {desktop && (
             <div className="col-6 text-align-right">
-              <AnimatedWrapper>
+              <AnimatedWrapper parallax parallaxDirection="top">
                 <div className="position-relative quick-pop-anim quick-pop-anim-start transition-delay-medium">
                   <Image
                     src="/img/home-nftl-token.png"
@@ -497,7 +497,7 @@ const Home: NextPage = () => {
         <div className="d-flex px-3 px-md-4 position-relative align-items-end">
           {desktop && (
             <div className="col-6">
-              <AnimatedWrapper>
+              <AnimatedWrapper parallax parallaxDirection="top">
                 <div className="position-relative flex-grow-1 quick-pop-anim quick-pop-anim-start transition-delay-medium home-community-image">
                   <Image
                     src="/img/home-community.png"
@@ -604,7 +604,7 @@ const Home: NextPage = () => {
       </div>
 
       <div className="row row-top-spacing mx-0 py-3 py-md-5 position-relative">
-        <div className="d-flex flex-column text-center position-relative">
+        <div className="d-flex flex-column text-center position-relative p-0">
           <div className="my-3 my-lg-5">
             <AnimatedWrapper>
               <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
