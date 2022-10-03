@@ -1962,20 +1962,5 @@ a {
 
   .transition-delay-large {
     transition-delay: 1s;
-  }
-
-  .animation-bounce {
-    animation: bounce 2s ease infinite;
-  }
-
-  .animation-bounce2 {
-    animation: bounce 2s ease infinite;
-    animation-delay: .5s;
-  }
-
-  @keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-120px);}
-    60% {transform: translateY(-60px);}
-  }
+  }  
 }
