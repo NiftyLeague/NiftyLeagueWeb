@@ -19,7 +19,7 @@ const Land: NextPage = () => {
         <div
           className={cn(
             styles.intro,
-            'd-flex flex-column-reverse flex-md-row align-items-center justify-content-center',
+            'd-flex flex-column-reverse flex-md-row align-items-center justify-content-center position-relative',
           )}
         >
           <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-6 pe-0 pe-md-5')}>
@@ -52,8 +52,10 @@ const Land: NextPage = () => {
               </div>
             </AnimatedWrapper>
           </div>
+          <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
         </div>
-        <div className={styles.section}>
+        <div className={cn(styles.section, 'position-relative')}>
+          <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
           <div className="mb-3 mb-md-5">
             <AnimatedWrapper>
               <h3 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">

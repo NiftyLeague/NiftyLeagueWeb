@@ -37,9 +37,25 @@
   height: 400px;
 }
 
+.gradient1 {
+  right: -200px;
+  top: 0px;
+}
+
+.gradient2 {
+  left: -200px;
+  top: -200px;
+}
+
 @media (max-width: 1200px) {
   .property {
     width: 230px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    overflow: hidden;
   }
 }
 

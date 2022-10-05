@@ -793,6 +793,27 @@ a {
   left: 133px;
 }
 
+.home-hero-characters-image {
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.home-hero-companion {
+  position: absolute;
+  right: 14%;
+  top: 20%;
+  width: 6%;
+}
+
+.home-hero-halo {
+  position: absolute;
+  right: 26.5%;
+  top: 21.5%;
+  width: 9%;
+}
+
 .satoshi-learn-more {
   width: 407px;
   height: 125px;
@@ -1364,6 +1385,17 @@ a {
   .home-community-section .section-actions {
     max-width: 400px;
   }
+  .home-hero-characters-image {
+    height: calc(100% - 72px);
+  }  
+  .home-hero-companion {
+    top: calc(20% + 50px);
+  }
+  
+  .home-hero-halo {
+    right: 27.5%;
+    top: calc(22.5% + 50px);    
+  }
 }
 
 @media (max-width: 768px) {
@@ -1533,6 +1565,17 @@ a {
   }
   .section-actions button {
     width: 100%;
+  }
+  .home-hero-characters-image {
+    height: calc(100% - 62px);
+  }  
+  .home-hero-companion {
+    top: calc(20% + 45px);
+  }
+  
+  .home-hero-halo {
+    right: 28%;
+    top: calc(22.5% + 45px);    
   }
 }
 
