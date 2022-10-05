@@ -15,20 +15,21 @@ const CompeteAndEarn: NextPage = () => {
         <meta name="description" content="Adrenaline fueled, fast-paced brawl mode where the winner takes ALL" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
-        <div className="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center">
-          <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-6 pe-0 pe-md-5')}>
+        <div className="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center position-relative">
+          <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-6 pe-0 pe-md-5 position-relative')}>
             <div className="mb-2 mb-md-4">
               <AnimatedWrapper>
-                <h1 className="animated-header-text animated-header-text-start">COMPETE AND EARN</h1>
+                <h1 className="animated-fade-slow animated-fade-start">COMPETE AND EARN</h1>
               </AnimatedWrapper>
             </div>
             <div className="mb-0">
               <AnimatedWrapper>
-                <p className="animated-header-text animated-header-text-start transition-delay-small">
+                <p className={cn(styles.heroDesc, 'animated-fade-slow animated-fade-start transition-delay-small')}>
                   Adrenaline fueled, fast-paced brawl mode where the winner takes ALL
                 </p>
               </AnimatedWrapper>
             </div>
+            <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
           </div>
           <div className="col-12 col-md-6">
             <div className="mb-3">
@@ -48,7 +49,7 @@ const CompeteAndEarn: NextPage = () => {
           </div>
         </div>
         <div className={cn(styles.content, 'mx-auto')}>
-          <div className="d-flex flex-column-reverse flex-md-row mt-3 mt-md-5 py-5 align-items-center">
+          <div className="d-flex flex-column-reverse flex-md-row mt-3 mt-md-5 py-5 align-items-center position-relative">
             <div className={cn(styles.block, 'col-12 col-md-6 pe-md-5')}>
               <div className="mb-3">
                 <AnimatedWrapper>
@@ -66,7 +67,7 @@ const CompeteAndEarn: NextPage = () => {
             </div>
             <div className="col-12 col-md-6">
               <AnimatedWrapper>
-                <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-medium mb-4 ps-0 ps-lg-5">
+                <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-medium mb-4 mb-md-0 ps-0 ps-lg-5">
                   <iframe
                     src="https://www.youtube.com/embed/wv_fI1PPBi0"
                     frameBorder="0"
@@ -78,6 +79,7 @@ const CompeteAndEarn: NextPage = () => {
                 </div>
               </AnimatedWrapper>
             </div>
+            <div className={cn(styles.gradient3, 'radial-gradient-piece')} />
           </div>
           <AnimatedWrapper>
             <h3 className="mt-3 mt-md-5 heading-thin text-align-center animated-fade animated-fade-start transition-delay-medium">
@@ -88,7 +90,7 @@ const CompeteAndEarn: NextPage = () => {
             <div
               className={cn(
                 styles.features,
-                'd-flex pt-3 pt-md-5 mx-auto animated-fade animated-fade-start transition-delay-medium',
+                'd-flex pt-3 pt-md-5 mx-auto animated-fade animated-fade-start transition-delay-medium position-relative',
               )}
             >
               <div className="col-4 d-flex flex-column">
@@ -106,24 +108,23 @@ const CompeteAndEarn: NextPage = () => {
                 <p className={styles.cell}>Decided by the Host</p>
               </div>
               <div className="col-4 d-flex flex-column">
-                <div className="d-flex flex-column fit-width">
-                  <h5 className={styles.cell}>PRIVATE BRAWL</h5>
-                  <p className={styles.cell}>Yes</p>
-                  <p className={styles.cell}>Decided by the Host</p>
-                  <p className={styles.cell}>Decided by the Host</p>
-                  <p className={styles.cell}>Decided by the Host</p>
-                </div>
+                <h5 className={styles.cell}>PRIVATE BRAWL</h5>
+                <p className={styles.cell}>Yes</p>
+                <p className={styles.cell}>Decided by the Host</p>
+                <p className={styles.cell}>Decided by the Host</p>
+                <p className={styles.cell}>Decided by the Host</p>
               </div>
+              <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
             </div>
           </AnimatedWrapper>
 
-          <div className="d-flex justify-content-center pb-3 pb-md-5">
+          <div className="d-flex justify-content-center mb-5">
             <AnimatedWrapper>
               <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
                 <button
                   className={cn(
                     styles.button,
-                    'btn theme-btn-transparent animated-fade animated-fade-start transition-delay-small',
+                    'btn theme-btn-primary animated-fade animated-fade-start transition-delay-small',
                   )}
                 >
                   START PLAYING NOW

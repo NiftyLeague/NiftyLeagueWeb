@@ -68,8 +68,8 @@ const Land: NextPage = () => {
             )}
           >
             {NIFTYVERSE_PROPERTIES.map(({ name, description, image }) => (
-              <div className="mb-5" key={name}>
-                <div className={cn(styles.property, 'd-flex flex-column')}>
+              <div className="mb-3 mb-md-5" key={name}>
+                <div className={cn(styles.property, 'd-flex flex-column position-relative py-3')}>
                   <AnimatedWrapper>
                     <div className="position-relative animated-fade-slow animated-fade-start transition-delay-small">
                       <Image
@@ -82,15 +82,14 @@ const Land: NextPage = () => {
                     </div>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
-                    <p className="text-align-center px-3 my-0 mt-4 animated-fade-slow animated-fade-start transition-delay-small">
-                      {name}
-                    </p>
+                    <h5 className="my-0 mt-4 animated-fade-slow animated-fade-start transition-delay-small">{name}</h5>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
-                    <p className="text-align-center px-3 my-0 mt-2 mt-md-4 animated-fade-slow animated-fade-start transition-delay-medium">
+                    <p className="my-0 mt-2 mt-md-4 animated-fade-slow animated-fade-start transition-delay-medium">
                       {description}
                     </p>
                   </AnimatedWrapper>
+                  <div className="radial-gradient-background" />
                 </div>
               </div>
             ))}
@@ -100,7 +99,7 @@ const Land: NextPage = () => {
               <button
                 className={cn(
                   styles.button,
-                  'btn theme-btn-transparent mx-auto mt-5 px-3 animated-fade-slow animated-fade-start transition-delay-small',
+                  'btn theme-btn-primary mx-auto mt-5 px-3 animated-fade-slow animated-fade-start transition-delay-small',
                 )}
               >
                 View Docs
