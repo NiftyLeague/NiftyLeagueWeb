@@ -34,15 +34,16 @@ const AnimatedWrapper = ({
       }
     }
 
-    const handleScroll = () => {
+    const animated3D = () => {
       if (onScreen) {
         const sectionElement: HTMLDivElement = ref.current;
         if (sectionElement) {
           if (parallax) {
             const rect = sectionElement.getBoundingClientRect();
-            if (parallaxDirection === 'top') {
+            if (parallaxDirection === 'top' || parallaxDirection === 'bottom') {
               const translationY = (rect.top * 100) / window.innerHeight;
-              sectionElement.style.transform = `translateY(${translationY * -1}px)`;
+              const direction = parallaxDirection === 'top' ? -1 : 1;
+              sectionElement.style.transform = `translateY(${translationY * direction}px)`;
             } else {
               const translationX = (rect.top * 100) / window.innerHeight;
               const direction = parallaxDirection === 'left' ? -1 : 1;
@@ -53,9 +54,11 @@ const AnimatedWrapper = ({
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    animated3D();
+
+    window.addEventListener('scroll', animated3D);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', animated3D);
     };
   }, [onScreen, parallax, parallaxDirection]);
   return <div ref={ref}>{children}</div>;

@@ -23,7 +23,7 @@ const Lore: NextPage = () => {
         <div className={styles.content}>
           <div className={styles.background}>
             <AnimatedWrapper>
-              <div className="position-relative animated-fade-slow animated-fade-start transition-delay-small">
+              <div className="position-relative animated-fade-slow animated-fade-start">
                 <Image src="/img/lore/background.png" alt="Lore" layout="responsive" width={1328} height={2655} />
               </div>
             </AnimatedWrapper>
@@ -101,7 +101,7 @@ const Lore: NextPage = () => {
               <div
                 className={cn(
                   styles.satoshi,
-                  'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-medium',
+                  'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-large',
                 )}
               >
                 <Image alt="Satoshi" layout="fill" objectFit="cover" src="/img/satoshi.png" />
@@ -113,7 +113,7 @@ const Lore: NextPage = () => {
               <div
                 className={cn(
                   styles.degens,
-                  'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-medium',
+                  'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-large',
                 )}
               >
                 <Image alt="Degens" layout="fill" objectFit="cover" src="/img/home-community-characters.png" />
