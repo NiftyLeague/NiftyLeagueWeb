@@ -27,13 +27,14 @@ footer {
 }
 
 .footer-container {
-  padding: 80px 20px;
+  padding: 40px 20px;
+  max-width: 976px;
 }
 
 @media (max-width: 768px) {
   .footer-container {
-    padding-top: 36px;
-    padding-bottom: 36px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
   footer a {
     font-size: 14px;

@@ -1,5 +1,5 @@
 .container {
-  padding-top: 200px;
+  padding-top: 173px;
   max-width: 1536px;
   box-sizing: content-box;
 }
@@ -12,45 +12,121 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  padding: 202px 160px 82px 170px;
+  padding: 400px 280px 0px 280px;
   & p {
-    font-size: 26px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 60px;
     color: #262930;
   }
-}
-
-.title {
-  margin-bottom: 88px;
 }
 
 .button {
   width: 226px;
 }
 
+.satoshiContainer {
+  position: absolute;
+  top: 175px;
+  left: calc(50% - 50px);
+}
+
+.degensContainer {
+  position: absolute;
+  bottom: 215px;
+  left: calc(50% - 150px);
+}
+
+.satoshi {
+  width: 100px;
+  height: 100px;
+}
+
+.degens {
+  width: 300px;
+  height: 97px;
+}
+
+.gradient1 {
+  top: 0px;
+  right: -200px;
+}
+
+.gradient2 {
+  bottom: 0px;
+  left: -200px;
+}
+
+.gradient3 {
+  bottom: -200px;
+  right: -200px;
+}
+
 @media (max-width: 1540px) {
   .inner {
     & p {
-      font-size: 22px;
+      font-size: 24px;
+      line-height: 48px;
     }
+  }
+  .satoshiContainer {
+    top: 160px;
+    left: calc(50% - 45px);
+  }
+  .satoshi {
+    width: 90px;
+    height: 90px;
+  }
+
+  .degensContainer {
+    left: calc(50% - 125px);
+  }
+
+  .degens {
+    width: 250px;
+    height: 81px;
   }
 }
 
 @media (max-width: 1340px) {
   .inner {
-    padding: 158px 120px 82px 150px;
+    padding: 330px 220px 0px 220px;
     & p {
-      font-size: 18px;
+      font-size: 20px;
+      line-height: 44px;
     }
+  }
+  .satoshiContainer {
+    top: 130px;
+    left: calc(50% - 40px);
+  }
+  .satoshi {
+    width: 80px;
+    height: 80px;
+  }
+  .degensContainer {
+    bottom: 165px;
   }
 }
 
-@media (max-width: 1160px) {
+@media (max-width: 1100px) {
   .inner {
-    padding: 138px 120px 82px 150px;
-    line-height: 14px;
+    padding: 300px 200px 0px 200px;
     & p {
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 36px;
     }
+  }
+  .satoshiContainer {
+    top: 110px;
+    left: calc(50% - 35px);
+  }
+  .satoshi {
+    width: 70px;
+    height: 70px;
+  }
+  .degensContainer {
+    bottom: 145px;
   }
 }
 
@@ -62,13 +138,15 @@
     margin-left: auto;
     margin-right: auto;
     & p {
-      font-size: 14px;
+      font-size: 16px;
+      line-height: 28px;
       text-align: center;
       color: #b4b5c3;
     }
   }
   .container {
     padding-top: 120px;
+    overflow: hidden;
   }
   .title {
     margin-bottom: 40px;
@@ -76,10 +154,13 @@
   .background {
     display: none;
   }
-}
-
-@media (max-width: 400px) {
-  .button {
-    width: 100%;
+  .satoshiContainer {
+    display: none;
+  }
+  .degensContainer {
+    display: none;
+  }
+  .gradient3 {
+    display: none;
   }
 }

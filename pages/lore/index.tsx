@@ -15,7 +15,7 @@ const Lore: NextPage = () => {
         <meta name="description" content="" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
-        <div className={styles.title}>
+        <div>
           <AnimatedWrapper>
             <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small">LORE</h1>
           </AnimatedWrapper>
@@ -24,7 +24,7 @@ const Lore: NextPage = () => {
           <div className={styles.background}>
             <AnimatedWrapper>
               <div className="position-relative animated-fade-slow animated-fade-start transition-delay-small">
-                <Image src="/img/lore/background.png" alt="Lore" layout="responsive" width={662} height={638} />
+                <Image src="/img/lore/background.png" alt="Lore" layout="responsive" width={1328} height={2655} />
               </div>
             </AnimatedWrapper>
           </div>
@@ -96,13 +96,40 @@ const Lore: NextPage = () => {
               </p>
             </AnimatedWrapper>
           </div>
+          <div className={styles.satoshiContainer}>
+            <AnimatedWrapper>
+              <div
+                className={cn(
+                  styles.satoshi,
+                  'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-medium',
+                )}
+              >
+                <Image alt="Satoshi" layout="fill" objectFit="cover" src="/img/satoshi.png" />
+              </div>
+            </AnimatedWrapper>
+          </div>
+          <div className={styles.degensContainer}>
+            <AnimatedWrapper>
+              <div
+                className={cn(
+                  styles.degens,
+                  'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-medium',
+                )}
+              >
+                <Image alt="Degens" layout="fill" objectFit="cover" src="/img/home-community-characters.png" />
+              </div>
+            </AnimatedWrapper>
+          </div>
+          <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
+          <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
+          <div className={cn(styles.gradient3, 'radial-gradient-piece')} />
         </div>
         <AnimatedWrapper>
           <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
             <button
               className={cn(
                 styles.button,
-                'btn theme-btn-transparent mx-auto my-5 px-3 animated-fade-slow animated-fade-start transition-delay-small',
+                'btn theme-btn-primary mx-auto mb-5 px-3 animated-fade-slow animated-fade-start transition-delay-small',
               )}
             >
               View Docs

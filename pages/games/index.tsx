@@ -17,7 +17,8 @@ const Games: NextPage = () => {
           content="JOIN THOUSANDS OF PLAYERS OVER THE WORLD COMPETING FOR THE TOP SPOT IN THE NIFTY LEAGUE"
         />
       </Head>
-      <div className={cn(styles.container, 'overview mx-auto px-3')}>
+      <div className={cn(styles.container, 'overview mx-auto px-3 position-relative')}>
+        <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
         <div className="mb-4">
           <AnimatedWrapper>
             <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small">
@@ -32,8 +33,8 @@ const Games: NextPage = () => {
             </p>
           </AnimatedWrapper>
         </div>
-        {NIFTY_GAMES.map(({ name, description, video, tag, action }) => (
-          <div className={cn(styles.section, 'd-flex flex-column-reverse flex-md-row')} key={name}>
+        {NIFTY_GAMES.map(({ name, description, video, tag, action }, index) => (
+          <div className={cn(styles.section, 'd-flex flex-column-reverse flex-md-row position-relative')} key={name}>
             <div className={cn(styles.block, 'col-12 col-md-7 pe-md-5')}>
               <div className="d-flex flex-row align-items-center justify-content-between mb-3">
                 <AnimatedWrapper>
@@ -58,7 +59,7 @@ const Games: NextPage = () => {
               {action.isComingSoon ? (
                 <AnimatedWrapper>
                   <div className="mt-5 animated-fade-slow animated-fade-start transition-delay-medium">
-                    <button className="btn theme-btn-primary disabled mx-auto mx-md-0 px-3">COMING SOON</button>
+                    <button className="btn theme-btn-transparent disabled mx-auto mx-md-0 px-3">COMING SOON</button>
                   </div>
                 </AnimatedWrapper>
               ) : (
@@ -85,6 +86,18 @@ const Games: NextPage = () => {
                 </div>
               </AnimatedWrapper>
             </div>
+            <div
+              className={cn(
+                index === 0
+                  ? styles.gradient2
+                  : index === 1
+                  ? styles.gradient1
+                  : index === 2
+                  ? styles.gradient3
+                  : styles.gradient4,
+                'radial-gradient-piece',
+              )}
+            />
           </div>
         ))}
         <AnimatedWrapper>
@@ -92,7 +105,7 @@ const Games: NextPage = () => {
             <button
               className={cn(
                 styles.button,
-                'btn theme-btn-transparent mx-auto my-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
+                'btn theme-btn-primary mx-auto mt-5 mt-md-3 mb-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
               )}
             >
               View Docs
