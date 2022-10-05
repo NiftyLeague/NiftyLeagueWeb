@@ -1,16 +1,16 @@
-import { SOCIAL_LINKS } from '@data/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedWrapper from './AnimatedWrapper';
+import { SOCIAL_LINKS } from '@data/constants';
 
 export default function Footer({ classes }: { classes?: { footer?: string } }) {
   return (
     <footer className={`${classes?.footer || ''}`}>
       <AnimatedWrapper>
         <div className="footer-container mx-auto animated-fade animated-fade-start transition-delay-small">
-          <div className="row m-0 p-md-5 pt-0 position-relative">
-            <div className="col-4 col-sm-4 col-md-2 px-md-5  px-0 pt-md-0 pt-4">
-              <div className="row m-0 p-0 position-relative">
+          <div className="d-flex m-0 py-md-5 pt-0 position-relative justify-content-between">
+            <div className="px-0 pt-md-0 pt-4">
+              <div className="d-flex flex-column m-0 p-0 position-relative">
                 <Link href="/">
                   <a>Home</a>
                 </Link>
@@ -25,8 +25,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 </Link>
               </div>
             </div>
-            <div className="col-4 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
-              <div className="row m-0 p-0 position-relative">
+            <div className="px-0 pt-md-0 pt-4">
+              <div className="d-flex flex-column m-0 p-0 position-relative">
                 <Link href="/learn">
                   <a>Learn</a>
                 </Link>
@@ -41,8 +41,8 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 </Link>
               </div>
             </div>
-            <div className="col-4 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
-              <div className="row m-0 p-0 position-relative">
+            <div className="px-0 pt-md-0 pt-4">
+              <div className="d-flex flex-column m-0 p-0 position-relative">
                 <Link href="/feedback">
                   <a>Feedback</a>
                 </Link>
@@ -57,20 +57,14 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 </Link>
               </div>
             </div>
-            <div className="col-md-3 d-flex justify-content-center ps-0 mt-4">
-              <div className="d-flex align-items-center social-icons">
-                {SOCIAL_LINKS.map(social => (
-                  <a
-                    className="px-3 social-icon-link"
-                    href={social.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    key={social.name}
-                  >
-                    <Image src={social.image} width={24} height={24} alt={social.description} />
-                  </a>
-                ))}
-              </div>
+          </div>
+          <div className="row d-flex justify-content-center ps-0 mt-4">
+            <div className="d-flex flex-wrap align-items-center justify-content-center social-icons">
+              {SOCIAL_LINKS.map(social => (
+                <a className="px-2 px-md-3 py-2" href={social.link} target="_blank" rel="noreferrer" key={social.name}>
+                  <Image src={social.image} width={20} height={20} alt={social.description} />
+                </a>
+              ))}
             </div>
           </div>
         </div>

@@ -1,11 +1,11 @@
 .container {
   padding-top: 200px;
-  max-width: 1436px;
+  max-width: 1280px;
   box-sizing: content-box;
 }
 
 .content {
-  max-width: 1200px;
+  max-width: 1080px;
 }
 
 .cell {
@@ -29,6 +29,37 @@
   max-width: 840px;
 }
 
+.heroDesc {
+  max-width: 460px;
+}
+
+.gradient1 {
+  left: -300px;
+  top: -100px;
+}
+
+.gradient2 {
+  left: 0px;
+  bottom: -300px;
+}
+
+.gradient3 {
+  right: -300px;
+  bottom: -300px;
+}
+
+@media (max-width: 992px) {
+  .container {
+    overflow: hidden;
+  }
+  .cell {
+    text-align: center;
+  }
+  .gradient2 {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .container {
     padding-top: 120px;
@@ -39,11 +70,5 @@
   .video {
     width: 100%;
     height: 300px;
-  }
-}
-
-@media (max-width: 400px) {
-  .button {
-    width: 100%;
   }
 }

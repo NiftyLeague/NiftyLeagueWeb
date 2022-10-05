@@ -32,7 +32,7 @@ const Games: NextPage = () => {
             </p>
           </AnimatedWrapper>
         </div>
-        <div className="mb-5">
+        <div className="mb-5 position-relative">
           <AnimatedWrapper>
             <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
               The Niftyleague DEGENs were specially created by the community with members pitching in and deciding hoow
@@ -41,13 +41,17 @@ const Games: NextPage = () => {
               league NFTs on the blockchain.
             </p>
           </AnimatedWrapper>
+          <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
         </div>
         <AnimatedWrapper>
-          <button className="btn theme-btn-primary mx-auto px-4 animated-fade-slow animated-fade-start transition-delay-large">
-            SEE ALL DEGENS
-          </button>
+          <a href="https://app.niftyleague.com/all-degens" target="_blank" rel="noreferrer">
+            <button className="btn theme-btn-primary mx-auto px-4 animated-fade-slow animated-fade-start transition-delay-large">
+              SEE ALL DEGENS
+            </button>
+          </a>
         </AnimatedWrapper>
-        <div className={styles.section}>
+        <div className={cn(styles.section, 'position-relative')}>
+          <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
           <div
             className={cn(
               styles.list,
@@ -84,13 +88,14 @@ const Games: NextPage = () => {
               </h3>
             </AnimatedWrapper>
           </div>
-          <div className="mb-4">
+          <div className="mb-4 position-relative">
             <AnimatedWrapper>
               <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
                 There are 6 warring DEGEN tribes with a 7th that has been left undiscovered. These tribes are digital
                 representatives of the NFT inside the Niftyleague ecosystem.
               </p>
             </AnimatedWrapper>
+            <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
           </div>
         </div>
         <div className={styles.section}>
@@ -111,7 +116,7 @@ const Games: NextPage = () => {
               <hr className={styles.divider} />
               {NIFTY_DEGENS.map(({ name, description, extra, image }) => (
                 <div className="d-flex align-items-center" key={name}>
-                  <div className="col-3 col-md-5 p-2 p-md-3">
+                  <div className="col-3 col-md-5 p-3 p-md-4">
                     <div className="d-flex flex-column">
                       <AnimatedWrapper>
                         <div className="position-relative text-align-center animated-fade-slow animated-fade-start transition-delay-small">
@@ -131,14 +136,14 @@ const Games: NextPage = () => {
                       </AnimatedWrapper>
                     </div>
                   </div>
-                  <div className="col-6 col-md-4 p-2 p-md-3">
+                  <div className="col-5 col-md-4 p-3 p-md-4">
                     <AnimatedWrapper>
                       <p className="animated-header-text animated-header-text-start transition-delay-medium">
                         {description}
                       </p>
                     </AnimatedWrapper>
                   </div>
-                  <div className="col-3 col-md-3 p-2 p-md-3">
+                  <div className="col-4 col-md-3 p-3 p-md-4">
                     <AnimatedWrapper>
                       {extra ? (
                         <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
@@ -158,6 +163,9 @@ const Games: NextPage = () => {
                   </div>
                 </div>
               ))}
+              <div className={cn(styles.gradient3, 'radial-gradient-piece')} />
+              <div className={cn(styles.gradient4, 'radial-gradient-piece')} />
+              <div className={cn(styles.gradient5, 'radial-gradient-piece')} />
             </div>
           </AnimatedWrapper>
         </div>
@@ -166,7 +174,7 @@ const Games: NextPage = () => {
             <button
               className={cn(
                 styles.button,
-                'btn theme-btn-transparent mx-auto my-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
+                'btn theme-btn-primary mx-auto my-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
               )}
             >
               View Docs

@@ -64,6 +64,9 @@ p {
   font-weight: 700;
 }
 
+.overview h5 {
+  letter-spacing: -0.02em;
+}
 .home-pg p {
   letter-spacing: 2px;
 }
@@ -182,10 +185,13 @@ a {
   background-clip: text;
   box-shadow: none;
 }
+.theme-btn-transparent.disabled {
+  border: 1px solid #D2D3DB;
+}
 .theme-btn-primary {
   border-radius: 5px;
-  color: #282932;
-  background: #FFFFFF;
+  background: #620EDF;
+  color: #FFFFFF;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -198,9 +204,18 @@ a {
   padding: 4px 16px;
 }
 .home-pg .theme-btn-primary {
+  color: #282932;
+  background: #FFFFFF;
   height: 80px;
   border-radius: 0px;
   letter-spacing: 2px;
+}
+.overview .theme-btn-primary {
+  font-size: 20px;
+}
+.learn-pg .theme-btn-primary {
+  font-size: 20px;
+  padding: 4px 24px;
 }
 .theme-btn-primary:hover {
   color: #FFFFFF;
@@ -848,6 +863,26 @@ a {
   height: 100%;
 }
 
+.overview .radial-gradient-background {
+  background: radial-gradient(
+    189.96% 61.18% at 50% 38.82%,
+    rgba(24, 20, 37, 0) 0%,
+    rgba(21, 18, 27, 0) 73.22%,
+    #08090a 99.74%
+  );
+}
+
+.radial-gradient-piece {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  opacity: 0.2;
+  filter: blur(50px);
+  border-radius: 398px;
+  z-index: -1;
+}
+
 .compete-to-earn-section-token-1 {
   position: absolute;
   left: -226px;
@@ -877,10 +912,6 @@ a {
 }
 .social-icons a:hover path {
   fill: #620edf;
-}
-
-.social-icon-link {
-  height: 24px;
 }
 
 .sliding-nfts .sliding-background-wrapper-desktop {
@@ -1064,7 +1095,7 @@ a {
     font-size: 16px;
   }
   .btn {
-    font-size: 20px;
+    font-size: 20px !important;
   }
   .speech-bubble-text {
     font-size: 20px;
@@ -1177,7 +1208,7 @@ a {
     line-height: 25px;
   }
   .btn {
-    font-size: 16px;
+    font-size: 16px !important;
   }
   .home-pg .btn {    
     height: 40px;    
@@ -1353,8 +1384,8 @@ a {
     line-height: 26px;
   }
   h5 {
-    font-size: 18px;
-    line-height: 21px;
+    font-size: 20px;
+    line-height: 24px;
   }
   .btn {
     padding: 6px 8px;
@@ -1444,8 +1475,8 @@ a {
 
 @media (max-width: 600px) {
   h1 {
-    font-size: 26px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 36px;
   }
   h2 {
     font-size: 24px;
@@ -1456,15 +1487,15 @@ a {
     line-height: 24px;
   }
   h4 {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 22px;
   }
   h5 {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 20px;
   }
   .btn {
-    font-size: 14px;    
+    font-size: 14px !important;    
   }
   .home-pg .btn {
     height: 36px;
