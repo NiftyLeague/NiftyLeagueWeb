@@ -38,10 +38,12 @@ const About: NextPage = () => {
 
             <div className="display-buttons my-3 d-flex desktop">
               <Link href="/docs" passHref>
-                <button className="btn theme-btn-primary mx-sm-2">
-                  Read our docs
-                  <ExternalIcon />
-                </button>
+                <a target="_blank" rel="noreferrer">
+                  <button className="btn theme-btn-primary mx-sm-2">
+                    Read our docs
+                    <ExternalIcon />
+                  </button>
+                </a>
               </Link>
               <Link href="/roadmap" passHref>
                 <button className="btn theme-btn-transparent mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
@@ -56,7 +58,9 @@ const About: NextPage = () => {
             </div>
             <div className="display-buttons my-3 d-flex mobile">
               <Link href="/docs" passHref>
-                <button className="btn theme-btn-primary mx-sm-2">Read our docs</button>
+                <a target="_blank" rel="noreferrer">
+                  <button className="btn theme-btn-primary mx-sm-2">Read our docs</button>
+                </a>
               </Link>
             </div>
           </div>
@@ -213,15 +217,17 @@ const About: NextPage = () => {
               accessories. The final 100 DEGENs will be given to elite players in the Nifty League community.
             </p>
             <Link href="/docs/overview/degens/about" passHref>
-              <button id="rentals" className="btn theme-btn-primary w-auto my-5">
-                learn more about DEGEN NFTs
-                <ExternalIcon />
-              </button>
+              <a target="_blank" rel="noreferrer">
+                <button id="rentals" className="btn theme-btn-primary w-auto my-5">
+                  learn more about DEGEN NFTs
+                  <ExternalIcon />
+                </button>
+              </a>
             </Link>
           </div>
         </div>
 
-        <div className="row m-0 position-relative section-margin nifty-rental">
+        {/* <div className="row m-0 position-relative section-margin nifty-rental">
           <div className="col-sm-6 nr-content mt-5 mt-sm-0">
             <h2 className="text-m-left">DEGEN</h2>
             <h4 className="font-32 color-purple">Rentals</h4>
@@ -263,7 +269,7 @@ const About: NextPage = () => {
               height={666}
             />
           </span>
-        </div>
+        </div> */}
       </div>
       <div id="play-and-earn" className="container my-sm-5 py-sm-5">
         <div className="row m-0 p-0 position-relative token-play py-5 p-sm-5 p-3 ">
@@ -277,9 +283,11 @@ const About: NextPage = () => {
               available to trade and stake on SushiSwap.
             </p>
             <Link href="/docs/overview/nftl/overview" passHref>
-              <button className="btn theme-btn-primary w-auto mt-5">
-                learn more <ExternalIcon />
-              </button>
+              <a target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-primary w-auto mt-5">
+                  learn more <ExternalIcon />
+                </button>
+              </a>
             </Link>
           </div>
           <div className="col-md-6">
@@ -292,9 +300,11 @@ const About: NextPage = () => {
               special backgrounds or items.
             </p>
             <Link href="/docs/overview/p2e/daily-rewards" passHref>
-              <button className="btn theme-btn-primary w-auto mt-5">
-                learn more <ExternalIcon />
-              </button>
+              <a target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-primary w-auto mt-5">
+                  learn more <ExternalIcon />
+                </button>
+              </a>
             </Link>
           </div>
         </div>

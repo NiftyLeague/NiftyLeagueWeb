@@ -83,10 +83,12 @@ const Learn: NextPage = () => {
             amount of NFTL for playing.
           </MDBAccordionItem>
         </MDBAccordion>
-        <Link href="/docs/faq/general" passHref>
-          <button className="btn theme-btn-transparent mt-md-2 w-100">
-            More FAQ <ExternalIcon />
-          </button>
+        <Link href="/docs/faq/general">
+          <a target="_blank" rel="noreferrer">
+            <button className="btn theme-btn-transparent mt-md-2 w-100">
+              More FAQ <ExternalIcon />
+            </button>
+          </a>
         </Link>
       </div>
 

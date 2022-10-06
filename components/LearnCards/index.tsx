@@ -31,9 +31,11 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
             </a>
           ) : (
             <Link href={link} passHref>
-              <button className="btn theme-btn-primary mt-md-2">
-                {btnText} <ExternalIcon />
-              </button>
+              <a target="_blank" rel="noreferrer">
+                <button className="btn theme-btn-primary mt-md-2">
+                  {btnText} <ExternalIcon />
+                </button>
+              </a>
             </Link>
           )}
         </div>
