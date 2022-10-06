@@ -25,11 +25,71 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="p-0 position-relative home-intro">
-        <div>
+        {desktop ? (
+          <div>
+            <AnimatedWrapper>
+              <div className="position-relative flex-grow-1 animated-fade animated-fade-start">
+                <Image
+                  src="/img/home-hero-bg.png"
+                  alt="Nifty Home Banner"
+                  layout="responsive"
+                  width={3408}
+                  height={1849}
+                  priority
+                />
+              </div>
+            </AnimatedWrapper>
+            <AnimatedWrapper>
+              <div className="position-absolute home-hero-characters-image flex-grow-1">
+                <Image
+                  src="/img/home-hero-characters.png"
+                  alt="Nifty Hero Characters"
+                  layout="responsive"
+                  width={3408}
+                  height={1849}
+                  priority
+                />
+              </div>
+            </AnimatedWrapper>
+            <div className="home-hero-companion">
+              <div className="position-relative flex-grow-1">
+                <AnimatedWrapper parallax parallaxDirection="left">
+                  <div className="quick-pop-anim quick-pop-anim-start transition-delay-small">
+                    <Image
+                      src="/img/home-hero-companion.png"
+                      alt="Home Hero Companion"
+                      layout="responsive"
+                      width={216}
+                      height={210}
+                      className="pixelated"
+                    />
+                  </div>
+                </AnimatedWrapper>
+              </div>
+            </div>
+            <div className="home-hero-halo">
+              <div className="position-relative flex-grow-1">
+                <AnimatedWrapper parallax parallaxDirection="right">
+                  <div className="satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-small">
+                    <Image
+                      src="/img/home-hero-halo.png"
+                      alt="Home Hero Halo"
+                      layout="responsive"
+                      width={325}
+                      height={117}
+                      className="pixelated"
+                    />
+                  </div>
+                </AnimatedWrapper>
+              </div>
+            </div>
+            <div className="radial-gradient-background" />
+          </div>
+        ) : (
           <AnimatedWrapper>
             <div className="position-relative flex-grow-1 animated-fade animated-fade-start">
               <Image
-                src="/img/home-hero-bg.png"
+                src="/img/home-banner-desktop.png"
                 alt="Nifty Home Banner"
                 layout="responsive"
                 width={3408}
@@ -38,52 +98,7 @@ const Home: NextPage = () => {
               />
             </div>
           </AnimatedWrapper>
-          <AnimatedWrapper>
-            <div className="position-absolute home-hero-characters-image flex-grow-1">
-              <Image
-                src="/img/home-hero-characters.png"
-                alt="Nifty Hero Characters"
-                layout="responsive"
-                width={3408}
-                height={1849}
-                priority
-              />
-            </div>
-          </AnimatedWrapper>
-          <div className="home-hero-companion">
-            <div className="position-relative flex-grow-1">
-              <AnimatedWrapper parallax parallaxDirection="left">
-                <div className="quick-pop-anim quick-pop-anim-start transition-delay-small">
-                  <Image
-                    src="/img/home-hero-companion.png"
-                    alt="Home Hero Companion"
-                    layout="responsive"
-                    width={216}
-                    height={210}
-                    className="pixelated"
-                  />
-                </div>
-              </AnimatedWrapper>
-            </div>
-          </div>
-          <div className="home-hero-halo">
-            <div className="position-relative flex-grow-1">
-              <AnimatedWrapper parallax parallaxDirection="right">
-                <div className="satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-medium">
-                  <Image
-                    src="/img/home-hero-halo.png"
-                    alt="Home Hero Halo"
-                    layout="responsive"
-                    width={325}
-                    height={117}
-                    className="pixelated"
-                  />
-                </div>
-              </AnimatedWrapper>
-            </div>
-          </div>
-          <div className="radial-gradient-background" />
-        </div>
+        )}
         <div className="home-satoshi-container">
           <AnimatedWrapper>
             <div className="position-relative flex-grow-1 home-satoshi satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-medium">
