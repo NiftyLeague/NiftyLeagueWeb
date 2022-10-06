@@ -1531,6 +1531,7 @@ a {
   }
   .home-pg .btn {
     height: 36px;
+    border-radius: 20px;
   }
   .home-content-button {
     width: 172px;
@@ -1570,12 +1571,11 @@ a {
     height: calc(100% - 62px);
   }  
   .home-hero-companion {
-    top: calc(20% + 45px);
+    display: none;
   }
   
   .home-hero-halo {
-    right: 28%;
-    top: calc(22.5% + 45px);    
+    display: none;
   }
 }
 
