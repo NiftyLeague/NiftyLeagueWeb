@@ -27,34 +27,30 @@ const Home: NextPage = () => {
       <div className="p-0 position-relative home-intro">
         {desktop ? (
           <div>
-            <AnimatedWrapper>
-              <div className="position-relative flex-grow-1 animated-fade animated-fade-start">
-                <Image
-                  src="/img/home-hero-bg.png"
-                  alt="Nifty Home Banner"
-                  layout="responsive"
-                  width={3408}
-                  height={1849}
-                  priority
-                />
-              </div>
-            </AnimatedWrapper>
-            <AnimatedWrapper>
-              <div className="position-absolute home-hero-characters-image flex-grow-1">
-                <Image
-                  src="/img/home-hero-characters.png"
-                  alt="Nifty Hero Characters"
-                  layout="responsive"
-                  width={3408}
-                  height={1849}
-                  priority
-                />
-              </div>
-            </AnimatedWrapper>
+            <div className="position-relative flex-grow-1 animation-zoomin">
+              <Image
+                src="/img/home-hero-bg.png"
+                alt="Nifty Home Banner"
+                layout="responsive"
+                width={3408}
+                height={1849}
+                priority
+              />
+            </div>
+            <div className="position-absolute home-hero-characters-image flex-grow-1 animation-zoomin-large">
+              <Image
+                src="/img/home-hero-characters.png"
+                alt="Nifty Hero Characters"
+                layout="responsive"
+                width={3408}
+                height={1849}
+                priority
+              />
+            </div>
             <div className="home-hero-companion">
               <div className="position-relative flex-grow-1">
-                <AnimatedWrapper parallax parallaxDirection="left">
-                  <div className="quick-pop-anim quick-pop-anim-start transition-delay-small">
+                <AnimatedWrapper>
+                  <div className="animation-bounce animated-fade-start animated-fade transition-delay-extreme">
                     <Image
                       src="/img/home-hero-companion.png"
                       alt="Home Hero Companion"
@@ -69,8 +65,8 @@ const Home: NextPage = () => {
             </div>
             <div className="home-hero-halo">
               <div className="position-relative flex-grow-1">
-                <AnimatedWrapper parallax parallaxDirection="right">
-                  <div className="satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-small">
+                <AnimatedWrapper>
+                  <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-extreme">
                     <Image
                       src="/img/home-hero-halo.png"
                       alt="Home Hero Halo"
