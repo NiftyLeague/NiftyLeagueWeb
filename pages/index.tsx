@@ -301,7 +301,7 @@ const Home: NextPage = () => {
           </div>
           {desktop && (
             <div className="col-6 position-relative">
-              <AnimatedWrapper parallax parallaxDirection="top">
+              <AnimatedWrapper>
                 <div className="quick-pop-anim quick-pop-anim-start transition-delay-medium">
                   <Image
                     src="/img/home-compete-and-earn.png"
@@ -321,7 +321,7 @@ const Home: NextPage = () => {
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           {desktop && (
             <div className="col-6 position-relative">
-              <AnimatedWrapper parallax parallaxDirection="top">
+              <AnimatedWrapper>
                 <div className="animated-fade animated-fade-start transition-delay-medium">
                   <Image
                     src="/img/home-land-in-the-niftyverse.png"
@@ -532,7 +532,7 @@ const Home: NextPage = () => {
           </div>
           {desktop && (
             <div className="col-6 text-align-right">
-              <AnimatedWrapper parallax parallaxDirection="top">
+              <AnimatedWrapper>
                 <div className="position-relative quick-pop-anim quick-pop-anim-start transition-delay-medium">
                   <Image
                     src="/img/home-nftl-token.png"
@@ -554,7 +554,7 @@ const Home: NextPage = () => {
         <div className="d-flex px-3 px-md-4 position-relative align-items-end">
           {desktop && (
             <div className="col-6">
-              <AnimatedWrapper parallax parallaxDirection="top">
+              <AnimatedWrapper>
                 <div className="position-relative flex-grow-1 quick-pop-anim quick-pop-anim-start transition-delay-medium home-community-image">
                   <Image
                     src="/img/home-community.png"
