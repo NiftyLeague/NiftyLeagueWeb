@@ -809,7 +809,7 @@ a {
 
 .home-hero-halo {
   position: absolute;
-  right: 26.5%;
+  right: 25.5%;
   top: 21.5%;
   width: 9%;
 }
@@ -1393,7 +1393,7 @@ a {
   }
   
   .home-hero-halo {
-    right: 27.5%;
+    right: 25%;
     top: calc(22.5% + 50px);    
   }
 }
@@ -2026,6 +2026,50 @@ a {
     left: -100px;
   }
 
+  .animation-bounce {
+    animation: bounce 4s ease infinite;
+  }
+
+  .animation-bounce2 {
+    animation: bounce 4s ease infinite;
+    animation-delay: .5s;
+  }
+
+  @keyframes bounce {
+    0%, 50%, 100% {transform: translateY(0);}
+    25%, 75% {transform: translateY(-20px);}
+  }
+
+  .animation-zoomin {
+    animation: zoomin 3s;
+  }
+
+  @keyframes zoomin {
+    0% {
+      -webkit-transform: scale(1.2);
+		  transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+		  transform: scale(1);
+    }
+  }
+
+  .animation-zoomin-large {
+    animation: zoomin-large 3s;
+  }
+
+  @keyframes zoomin-large {
+    0% {
+      -webkit-transform: scale(2);
+		  transform: scale(2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+		  transform: scale(1);
+    }
+  }
+
   .transition-delay-small {
     transition-delay: 0.5s;
   }
@@ -2036,5 +2080,8 @@ a {
 
   .transition-delay-large {
     transition-delay: 1s;
-  }  
+  }
+  .transition-delay-extreme {
+    transition-delay: 3s;
+  }   
 }
