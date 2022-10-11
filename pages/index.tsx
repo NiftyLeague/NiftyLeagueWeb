@@ -11,6 +11,7 @@ import { SPONSORS } from '@data/constants';
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
+  const md = useMediaQuery('(min-width:921px)');
 
   return (
     <Layout classes={{ root: 'home-pg' }}>
@@ -25,38 +26,42 @@ const Home: NextPage = () => {
       </Head>
 
       <div className="p-0 position-relative home-intro">
-        {desktop ? (
+        {md ? (
           <div>
-            <div className="position-relative flex-grow-1 animation-zoomin">
-              <Image
-                src="/img/home-hero-bg.png"
-                alt="Nifty Home Banner"
-                layout="responsive"
-                width={3408}
-                height={1849}
-                priority
-              />
-            </div>
-            <div className="position-absolute home-hero-characters-image flex-grow-1 animation-zoomin-large">
-              <Image
-                src="/img/home-hero-characters.png"
-                alt="Nifty Hero Characters"
-                layout="responsive"
-                width={3408}
-                height={1849}
-                priority
-              />
-            </div>
+            <AnimatedWrapper parallax parallaxDirection="verticalScale">
+              <div className="parallax-child position-relative flex-grow-1 animation-zoomin">
+                <Image
+                  src="/img/home-hero-bg.png"
+                  alt="Nifty Home Banner"
+                  layout="responsive"
+                  width={3408}
+                  height={1849}
+                  priority
+                />
+              </div>
+            </AnimatedWrapper>
+            <AnimatedWrapper parallax parallaxDirection="verticalScale">
+              <div className="position-absolute parallax-child home-hero-characters-image flex-grow-1 animation-zoomin-large">
+                <Image
+                  src="/img/home-hero-characters.png"
+                  alt="Nifty Hero Characters"
+                  layout="responsive"
+                  width={3408}
+                  height={1849}
+                  priority
+                />
+              </div>
+            </AnimatedWrapper>
             <div className="home-hero-companion">
               <div className="position-relative flex-grow-1">
                 <AnimatedWrapper>
                   <div className="animation-bounce animated-fade-start animated-fade transition-delay-extreme">
                     <Image
-                      src="/img/home-hero-companion.png"
+                      src="/img/home-hero-companion.gif"
                       alt="Home Hero Companion"
                       layout="responsive"
-                      width={216}
-                      height={210}
+                      width={436}
+                      height={436}
                       className="pixelated"
                     />
                   </div>
@@ -82,18 +87,16 @@ const Home: NextPage = () => {
             <div className="radial-gradient-background" />
           </div>
         ) : (
-          <AnimatedWrapper>
-            <div className="position-relative flex-grow-1 animated-fade animated-fade-start">
-              <Image
-                src="/img/home-banner-desktop.png"
-                alt="Nifty Home Banner"
-                layout="responsive"
-                width={3408}
-                height={1849}
-                priority
-              />
-            </div>
-          </AnimatedWrapper>
+          <div className="position-relative flex-grow-1">
+            <Image
+              src="/img/home-banner-desktop.png"
+              alt="Nifty Home Banner"
+              layout="responsive"
+              width={3408}
+              height={1849}
+              priority
+            />
+          </div>
         )}
         <div className="home-satoshi-container">
           <AnimatedWrapper>
@@ -142,8 +145,52 @@ const Home: NextPage = () => {
               <h2 className="px-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
             </AnimatedWrapper>
           </div>
-          <AnimatedWrapper>
-            <div className="position-relative flex-grow-1 animated-fade-slow animated-fade-start">
+          {desktop ? (
+            <div className="position-relative">
+              <AnimatedWrapper>
+                <div className="position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-small">
+                  <Image
+                    alt="Classic Gaming Reinvented"
+                    className="pixelated"
+                    width={4842}
+                    height={3371}
+                    layout="responsive"
+                    src="/img/home-classic-gaming-reinvented-tvbase.png"
+                  />
+                </div>
+              </AnimatedWrapper>
+              <div className="gaming-controller">
+                <AnimatedWrapper parallax parallaxDirection="bottom">
+                  <div className="animation-bounce animated-fade-start animated-fade transition-delay-extreme">
+                    <Image
+                      alt="Classic Gaming Reinvented Controller Left"
+                      className="pixelated"
+                      width={4842}
+                      height={3371}
+                      layout="responsive"
+                      src="/img/gaming_controller_left.png"
+                    />
+                  </div>
+                </AnimatedWrapper>
+              </div>
+              <div className="gaming-controller">
+                <AnimatedWrapper parallax parallaxDirection="bottom">
+                  <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-extreme">
+                    <Image
+                      alt="Classic Gaming Reinvented Controller Right"
+                      className="pixelated"
+                      width={4842}
+                      height={3371}
+                      layout="responsive"
+                      src="/img/gaming_controller_right.png"
+                    />
+                  </div>
+                </AnimatedWrapper>
+              </div>
+              <div className="radial-gradient-background" />
+            </div>
+          ) : (
+            <div className="position-relative flex-grow-1">
               <Image
                 alt="Classic Gaming Reinvented"
                 className="pixelated"
@@ -152,9 +199,8 @@ const Home: NextPage = () => {
                 layout="responsive"
                 src="/img/home-classic-gaming-reinvented.png"
               />
-              <div className="radial-gradient-background" />
             </div>
-          </AnimatedWrapper>
+          )}
           <Stack
             direction="row"
             justifyContent="center"
