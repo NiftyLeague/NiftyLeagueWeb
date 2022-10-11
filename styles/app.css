@@ -802,9 +802,9 @@ a {
 
 .home-hero-companion {
   position: absolute;
-  right: 14%;
-  top: 20%;
-  width: 6%;
+  right: 12%;
+  top: 12%;
+  width: 12%;
 }
 
 .home-hero-halo {
@@ -819,6 +819,14 @@ a {
   height: 125px;
   margin-left: -40px;
   cursor: pointer;
+}
+
+.gaming-controller {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .compete-to-earn-section-title {
@@ -1389,7 +1397,7 @@ a {
     height: calc(100% - 72px);
   }  
   .home-hero-companion {
-    top: calc(20% + 50px);
+    top: calc(14% + 50px);
   }
   
   .home-hero-halo {
