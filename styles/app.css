@@ -793,11 +793,19 @@ a {
   left: 133px;
 }
 
-.home-hero-characters-image {
+.home-hero-characters-image, .home-nftl-token-image {
   width: 100%;
   height: 100%;
   bottom: 0px;
   right: 0px;
+}
+
+.home-hero-companion-swing {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
 }
 
 .home-hero-companion {
@@ -926,6 +934,20 @@ a {
   top: 0px;
   width: 226px;
   height: 221px;  
+}
+
+.compete-to-earn-section-token-3 {
+  position: absolute;
+  bottom: -126px;
+  width: 246px;
+  z-index: -1;
+  left: calc(50% - 123px);
+}
+
+.compete-to-earn-section-token-4 {
+  width: 246px;
+  left: calc(50% - 123px);
+  top: calc(50% - 123px);
 }
 
 .text-align-center {
@@ -1154,11 +1176,23 @@ a {
     margin-right: auto;
   }
   .compete-to-earn-section-token-1 {
-    display: none;
+    width: 180px;
+    height: 185px;
+    left: -180px;
+    top: calc(50% - 90px)
   }
   .compete-to-earn-section-token-2 {
     width: 180px;
     height: 185px;
+  }
+  .compete-to-earn-section-token-3 {
+    width: 200px;
+    left: calc(50% - 100px);
+  }
+  .compete-to-earn-section-token-4 {
+    width: 200px;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
   }
 }
 
@@ -1329,6 +1363,9 @@ a {
   }
   .home-community-section-description {
     max-width: 450px;
+  }
+  .compete-to-earn-section-token-1 {
+    display: none;
   }
   .compete-to-earn-section-token-2 {
     display: none;
@@ -2043,9 +2080,66 @@ a {
     animation-delay: .5s;
   }
 
+  .animation-bounce-coin1 {
+    animation: coin-bounce2 3s ease infinite;
+  }
+
+  .animation-bounce-coin2 {
+    animation: coin-bounce2 3s ease infinite;
+    animation-delay: .5s;
+  }
+
+  .animation-bounce-coin3 {
+    animation: coin-bounce2 3s ease infinite;
+    animation-delay: 1s;
+  }
+
+  .animation-propeller {
+    animation: propeller .5s ease infinite;
+  }
+
+  .animation-visible {
+    animation: visibility 2s ease infinite;
+  }
+
   @keyframes bounce {
     0%, 50%, 100% {transform: translateY(0);}
     25%, 75% {transform: translateY(-20px);}
+  }
+
+  @keyframes coin-bounce {
+    0%, 50%, 100% {transform: translateY(0);}
+    25%, 75% {transform: translateY(-60px);}
+  }
+
+  @keyframes coin-bounce2 {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-60px);}
+    60% {transform: translateY(-30px);}
+  }
+
+  @keyframes visibility {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes propeller {
+    0%, 100% {
+      background-image: url('/img/home-hero-companion-anim1.png');
+    }
+    25% {
+      background-image: url('/img/home-hero-companion-anim2.png');
+    }
+    50% {
+      background-image: url('/img/home-hero-companion-anim3.png');
+    }
+    75% {
+      background-image: url('/img/home-hero-companion-anim4.png');
+    }
   }
 
   .animation-zoomin {
