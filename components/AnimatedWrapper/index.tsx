@@ -21,8 +21,6 @@ const AnimatedWrapper = ({
   parallaxDirection?: string;
 }) => {
   const ref: any = useRef<HTMLDivElement>();
-  const parallaxRef = useRef<boolean>();
-  const parallaxDirectionRef = useRef<string>();
   const onScreen: boolean = useOnScreen<HTMLDivElement>(ref, immediate ? '0px' : '-100px');
 
   useEffect(() => {
@@ -48,9 +46,15 @@ const AnimatedWrapper = ({
               parallaxChild.style.transform = `scale(${1 + scale})`;
             }
           } else if (parallaxDirection === 'top' || parallaxDirection === 'bottom') {
-            const translationY = (rect.top * 100) / window.innerHeight;
-            const direction = parallaxDirection === 'top' ? -2 : 2;
-            sectionElement.style.transform = `translateY(${translationY * direction}px)`;
+            const direction = parallaxDirection === 'top' ? -1 : 1;
+            const parallaxHeroChild = sectionElement.getElementsByClassName('parallax-hero-child')[0] as HTMLDivElement;
+            if (parallaxHeroChild) {
+              const translationY = window.scrollY / 3;
+              parallaxHeroChild.style.transform = `translateY(${translationY * direction}px)`;
+            } else {
+              const translationY = (rect.top * 100) / window.innerHeight;
+              sectionElement.style.transform = `translateY(${translationY * direction}px)`;
+            }
           } else {
             const translationX = (rect.top * 100) / window.innerHeight;
             const direction = parallaxDirection === 'left' ? -1 : 1;
