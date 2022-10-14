@@ -239,7 +239,41 @@ export const CORE_TEAM = [
   {
     name: 'Jeff Elkind',
     source: '/img/degens/team/zoiby.png',
-    link: 'https://twitter.com/_Zoiby',
+  },
+  {
+    name: 'Brian Wang',
+    title: 'Sr. Web3 Developer',
+    source: '/img/degens/team/brian.png',
+  },
+  {
+    name: 'Nicolas Morga',
+    title: 'Sr. Frontend Developer',
+    source: '/img/degens/team/nicolas.png',
+  },
+  {
+    name: 'Dr. Ashley Godbold',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/ashley.png',
+  },
+  {
+    name: 'David',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/david.png',
+  },
+  {
+    name: 'Sahin',
+    title: 'Sr. Unity Engineer',
+    source: '/img/degens/team/sahin.png',
+  },
+  {
+    name: 'Caleb',
+    title: 'Game Economy Designer',
+    source: '/img/degens/team/caleb.png',
+  },
+  {
+    name: 'Gideon Awolesi',
+    title: 'Product Designer',
+    source: '/img/degens/team/gideon.png',
   },
   {
     name: 'Ben Collie',

@@ -38,7 +38,7 @@ const Home: NextPage = () => {
                 priority
               />
             </div>
-            <AnimatedWrapper parallax parallaxDirection="top">
+            <AnimatedWrapper parallax parallaxDirection="top" transitionAmount="medium">
               <div className="parallax-hero-child position-absolute home-hero-characters-image flex-grow-1 animation-zoomin-large">
                 <Image
                   src="/img/home-hero-characters.png"
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
             <AnimatedWrapper>
               <Link href="/land">
                 <a>
-                  <div className="position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large">
+                  <div className="d-inline-block position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large">
                     <Image src="/img/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
                     <p className="my-0 py-0 speech-bubble-text">Learn More</p>
                   </div>
@@ -159,7 +159,7 @@ const Home: NextPage = () => {
                 </div>
               </AnimatedWrapper>
               <div className="gaming-controller">
-                <AnimatedWrapper parallax parallaxDirection="bottom">
+                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="large">
                   <div className="animation-bounce animated-fade-start animated-fade transition-delay-large">
                     <Image
                       alt="Classic Gaming Reinvented Controller Left"
@@ -173,7 +173,7 @@ const Home: NextPage = () => {
                 </AnimatedWrapper>
               </div>
               <div className="gaming-controller">
-                <AnimatedWrapper parallax parallaxDirection="bottom">
+                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="large">
                   <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-large">
                     <Image
                       alt="Classic Gaming Reinvented Controller Right"
@@ -376,7 +376,7 @@ const Home: NextPage = () => {
                 </div>
               </AnimatedWrapper>
               <div className="position-absolute compete-to-earn-section-token-4">
-                <AnimatedWrapper parallax parallaxDirection="top">
+                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="large">
                   <div className="animated-fade-start animated-fade transition-delay-large">
                     <Image
                       alt="Compete and Earn NFTL Token"
@@ -474,76 +474,84 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* <div className="row row-top-spacing mx-0 py-3 py-md-5">
-        <div className="px-0 position-relative">
-          {desktop && (
-            <AnimatedWrapper>
-              <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-small">
-                <Image
-                  src="/img/home-rental.png"
-                  alt="Rent a Degen"
-                  layout="responsive"
-                  width={3590}
-                  height={2192}
-                  className="pixelated"
-                />
-                <div className="radial-gradient-background" />
-              </div>
-            </AnimatedWrapper>
-          )}
-          <div className="d-flex flex-column px-3 home-rental-section">
-            <Stack gap={2}>
-              {!desktop && (
-                <div className="position-relative flex-grow-1 full-width">
-                  <Image src="/img/home-rental.png" alt="Rent a Degen" layout="responsive" width={3590} height={2192} />
+      {false && (
+        <div className="row row-top-spacing mx-0 py-3 py-md-5">
+          <div className="px-0 position-relative">
+            {desktop && (
+              <AnimatedWrapper>
+                <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-small">
+                  <Image
+                    src="/img/home-rental.png"
+                    alt="Rent a Degen"
+                    layout="responsive"
+                    width={3590}
+                    height={2192}
+                    className="pixelated"
+                  />
                   <div className="radial-gradient-background" />
                 </div>
-              )}
-              <div className="d-flex flex-column home-rental-section-body">
-                <div className="mb-3">
-                  <AnimatedWrapper>
-                    <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
-                      RENT A DEGEN
-                    </h2>
-                  </AnimatedWrapper>
-                </div>
-                <div className="my-0">
-                  <AnimatedWrapper>
-                    <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      READY TO PLAY? WANT TO TEST OUT ALL THE DEGEN TRIBES BEFORE YOU BUY? REMT A DEGEN FOR A WEEK.
-                    </p>
-                  </AnimatedWrapper>
-                </div>
-                <Stack
-                  direction="row"
-                  alignItems={{ xs: 'flex-end', sm: 'center' }}
-                  flexWrap="wrap"
-                  gap={{ xs: 1.25, xl: 4 }}
-                  mt={{ xs: 1.25, xl: 4 }}
-                  className="section-actions"
-                >
-                  <AnimatedWrapper>
-                    <a href="https://app.niftyleague.com/degen-rentals" target="_blank" rel="noreferrer">
-                      <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
+              </AnimatedWrapper>
+            )}
+            <div className="d-flex flex-column px-3 home-rental-section">
+              <Stack gap={2}>
+                {!desktop && (
+                  <div className="position-relative flex-grow-1 full-width">
+                    <Image
+                      src="/img/home-rental.png"
+                      alt="Rent a Degen"
+                      layout="responsive"
+                      width={3590}
+                      height={2192}
+                    />
+                    <div className="radial-gradient-background" />
+                  </div>
+                )}
+                <div className="d-flex flex-column home-rental-section-body">
+                  <div className="mb-3">
+                    <AnimatedWrapper>
+                      <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
                         RENT A DEGEN
-                      </button>
-                    </a>
-                  </AnimatedWrapper>
-                  <AnimatedWrapper>
-                    <Link href="/rentals">
-                      <a>
-                        <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                          LEARN MORE
+                      </h2>
+                    </AnimatedWrapper>
+                  </div>
+                  <div className="my-0">
+                    <AnimatedWrapper>
+                      <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
+                        READY TO PLAY? WANT TO TEST OUT ALL THE DEGEN TRIBES BEFORE YOU BUY? REMT A DEGEN FOR A WEEK.
+                      </p>
+                    </AnimatedWrapper>
+                  </div>
+                  <Stack
+                    direction="row"
+                    alignItems={{ xs: 'flex-end', sm: 'center' }}
+                    flexWrap="wrap"
+                    gap={{ xs: 1.25, xl: 4 }}
+                    mt={{ xs: 1.25, xl: 4 }}
+                    className="section-actions"
+                  >
+                    <AnimatedWrapper>
+                      <a href="https://app.niftyleague.com/degen-rentals" target="_blank" rel="noreferrer">
+                        <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
+                          RENT A DEGEN
                         </button>
                       </a>
-                    </Link>
-                  </AnimatedWrapper>
-                </Stack>
-              </div>
-            </Stack>
+                    </AnimatedWrapper>
+                    <AnimatedWrapper>
+                      <Link href="/rentals">
+                        <a>
+                          <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
+                            LEARN MORE
+                          </button>
+                        </a>
+                      </Link>
+                    </AnimatedWrapper>
+                  </Stack>
+                </div>
+              </Stack>
+            </div>
           </div>
         </div>
-      </div> */}
+      )}
 
       <div className="row row-top-spacing mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
@@ -609,8 +617,8 @@ const Home: NextPage = () => {
           </div>
           {desktop && (
             <div className="col-6 text-align-right position-relative">
-              <AnimatedWrapper parallax parallaxDirection="top">
-                <div className="position-relative quick-pop-anim quick-pop-anim-start transition-delay-medium">
+              <AnimatedWrapper parallax parallaxDirection="top" transitionAmount="medium">
+                <div className="position-relative">
                   <Image
                     src="/img/home-nftl-token-top.png"
                     alt="NFTL Token Top"
@@ -619,37 +627,42 @@ const Home: NextPage = () => {
                     layout="responsive"
                     className="pixelated"
                   />
-                  <div className="position-absolute home-nftl-token-image flex-grow-1 quick-pop-anim quick-pop-anim-start transition-delay-large">
-                    <Image
-                      src="/img/home-nftl-token-coin.png"
-                      alt="NFTL Token Coin"
-                      width={1470}
-                      height={1778}
-                      layout="responsive"
-                      className="pixelated"
-                    />
-                  </div>
-                  <div className="position-absolute animation-visible home-nftl-token-image flex-grow-1 transition-delay-large">
-                    <Image
-                      src="/img/home-nftl-token-tears.png"
-                      alt="NFTL Token Tears"
-                      width={1470}
-                      height={1778}
-                      layout="responsive"
-                      className="pixelated"
-                    />
-                  </div>
-                  <div className="position-absolute home-nftl-token-image flex-grow-1 quick-pop-anim quick-pop-anim-start transition-delay-large">
-                    <Image
-                      src="/img/home-nftl-token-bottom.png"
-                      alt="NFTL Token Bottom"
-                      width={1470}
-                      height={1778}
-                      layout="responsive"
-                      className="pixelated"
-                    />
-                  </div>
-                  <div className="radial-gradient-background" />
+                </div>
+              </AnimatedWrapper>
+              <AnimatedWrapper>
+                <div className="position-absolute home-nftl-token-image flex-grow-1">
+                  <Image
+                    src="/img/home-nftl-token-coin.png"
+                    alt="NFTL Token Coin"
+                    width={1470}
+                    height={1778}
+                    layout="responsive"
+                    className="pixelated"
+                  />
+                </div>
+              </AnimatedWrapper>
+              <AnimatedWrapper>
+                <div className="position-absolute animation-visible home-nftl-token-image flex-grow-1">
+                  <Image
+                    src="/img/home-nftl-token-tears.png"
+                    alt="NFTL Token Tears"
+                    width={1470}
+                    height={1778}
+                    layout="responsive"
+                    className="pixelated"
+                  />
+                </div>
+              </AnimatedWrapper>
+              <AnimatedWrapper parallax parallaxDirection="right" transitionAmount="medium">
+                <div className="parallax-child position-absolute home-nftl-token-image home-nftl-token-bottom-image flex-grow-1">
+                  <Image
+                    src="/img/home-nftl-token-bottom.png"
+                    alt="NFTL Token Bottom"
+                    width={1470}
+                    height={1778}
+                    layout="responsive"
+                    className="pixelated"
+                  />
                 </div>
               </AnimatedWrapper>
             </div>

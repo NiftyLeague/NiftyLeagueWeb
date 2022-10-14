@@ -43,13 +43,16 @@ const Games: NextPage = () => {
           </AnimatedWrapper>
           <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
         </div>
-        <AnimatedWrapper>
-          <a href="https://app.niftyleague.com/all-degens" target="_blank" rel="noreferrer">
-            <button className="btn theme-btn-primary mx-auto px-4 animated-fade-slow animated-fade-start transition-delay-large">
-              SEE ALL DEGENS
-            </button>
-          </a>
-        </AnimatedWrapper>
+
+        <div className="d-flex justify-content-center">
+          <AnimatedWrapper>
+            <a href="https://app.niftyleague.com/all-degens" target="_blank" rel="noreferrer">
+              <button className="btn theme-btn-primary px-4 animated-fade-slow animated-fade-start transition-delay-large">
+                SEE ALL DEGENS
+              </button>
+            </a>
+          </AnimatedWrapper>
+        </div>
         <div className={cn(styles.section, 'position-relative')}>
           <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
           <div
@@ -114,7 +117,7 @@ const Games: NextPage = () => {
             </div>
             <div className={cn(styles.table, 'position-relative')}>
               <hr className={styles.divider} />
-              {NIFTY_DEGENS.map(({ name, description, extra, image }) => (
+              {NIFTY_DEGENS.map(({ name, description, gif, image }) => (
                 <div className="d-flex align-items-center" key={name}>
                   <div className="col-3 col-md-5 p-3 p-md-4">
                     <div className="d-flex flex-column">
@@ -136,30 +139,27 @@ const Games: NextPage = () => {
                       </AnimatedWrapper>
                     </div>
                   </div>
-                  <div className="col-5 col-md-4 p-3 p-md-4">
+                  <div className="col-6 col-md-4 p-3 p-md-4">
                     <AnimatedWrapper>
                       <p className="animated-header-text animated-header-text-start transition-delay-medium">
                         {description}
                       </p>
                     </AnimatedWrapper>
                   </div>
-                  <div className="col-4 col-md-3 p-3 p-md-4">
-                    <AnimatedWrapper>
-                      {extra ? (
-                        <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
-                          {extra}
-                        </p>
-                      ) : (
-                        <h2
-                          className={cn(
-                            styles.sameAsAbove,
-                            'text-align-center animated-header-text animated-header-text-start transition-delay-medium',
-                          )}
-                        >
-                          ‘’
-                        </h2>
-                      )}
-                    </AnimatedWrapper>
+                  <div className="col-3 col-md-3 p-md-3">
+                    {gif && (
+                      <AnimatedWrapper>
+                        <div className="position-relative text-align-center animated-fade-slow animated-fade-start transition-delay-small">
+                          <Image
+                            src={gif.link}
+                            alt={name}
+                            layout="responsive"
+                            width={desktop ? gif.width : gif.width * 0.7}
+                            height={desktop ? gif.height : gif.height * 0.7}
+                          />
+                        </div>
+                      </AnimatedWrapper>
+                    )}
                   </div>
                 </div>
               ))}
@@ -169,18 +169,20 @@ const Games: NextPage = () => {
             </div>
           </AnimatedWrapper>
         </div>
-        <AnimatedWrapper>
-          <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
-            <button
-              className={cn(
-                styles.button,
-                'btn theme-btn-primary mx-auto my-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
-              )}
-            >
-              View Docs
-            </button>
-          </a>
-        </AnimatedWrapper>
+        <div className="d-flex justify-content-center my-5">
+          <AnimatedWrapper>
+            <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
+              <button
+                className={cn(
+                  styles.button,
+                  'btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-medium',
+                )}
+              >
+                View Docs
+              </button>
+            </a>
+          </AnimatedWrapper>
+        </div>
       </div>
     </Layout>
   );

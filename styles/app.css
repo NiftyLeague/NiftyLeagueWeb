@@ -57,6 +57,14 @@ h5 {
   font-weight: 700;
   letter-spacing: 3px;
 }
+
+h6 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
 p {
   font-size: 20px;
   line-height: 1.2;
@@ -154,7 +162,7 @@ a {
 
 /************************************* Themes Items *************************************/
 .theme-btn-transparent { 
-  border-radius: 5px; 
+  border-radius: 20px; 
   border: 1px solid #D2D3DB;
   color: #FAFAFA;
   background: transparent;
@@ -189,9 +197,9 @@ a {
   border: 1px solid #D2D3DB;
 }
 .theme-btn-primary {
-  border-radius: 5px;
-  background: #620EDF;
-  color: #FFFFFF;  
+  border-radius: 20px;
+  color: #282932;
+  background: #FFFFFF;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -204,19 +212,17 @@ a {
   padding: 4px 16px;
 }
 .home-pg .theme-btn-primary {
-  color: #282932;
-  background: #FFFFFF;
   height: 80px;
   border-radius: 0px;
   letter-spacing: 2px;
 }
-.overview .theme-btn-primary {
+
+.overview .btn,
+.learn-pg .btn,
+.about-pg .btn {
   font-size: 20px;
 }
-.learn-pg .theme-btn-primary {
-  font-size: 20px;
-  padding: 4px 24px;
-}
+
 .theme-btn-primary:hover {
   color: #FFFFFF;
   box-shadow: none;
@@ -523,9 +529,6 @@ a {
 .about-pg {
   overflow-x: hidden;
 }
-.about-intro-content {
-  z-index: 2;
-}
 
 .icons-placement {
   z-index: 1;
@@ -574,72 +577,6 @@ a {
   position: absolute;
 }
 
-.about-pg .degens-slider .slick-track .slide:nth-child(2) {
-  margin-top: 100px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(3) {
-  margin-top: 0px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(4) {
-  margin-top: 20px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(5) {
-  margin-top: 50px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(6) {
-  margin-top: 150px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(5) {
-  margin-top: 120px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(7) {
-  margin-top: 100px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(8) {
-  margin-top: 50px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(9) {
-  margin-top: 150px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(10) {
-  margin-top: 100px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(11) {
-  margin-top: 0px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(12) {
-  margin-top: 20px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(13) {
-  margin-top: 50px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(14) {
-  margin-top: 150px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(15) {
-  margin-top: 120px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(16) {
-  margin-top: 100px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(17) {
-  margin-top: 50px !important;
-}
-.about-pg .degens-slider .slick-track .slide:nth-child(18) {
-  margin-top: 150px !important;
-}
-.about-pg .rental-grad {
-  position: absolute;
-  bottom: -380px;
-  right: -220px;
-}
-@media (min-width: 1280px) and (max-width: 1800px) {
-  .about-pg .rental-grad {
-    position: absolute;
-    bottom: -380px;
-    right: 0px !important;
-  }
-}
 .about-team-grad {
   margin-top: -50px;
 }
@@ -651,10 +588,6 @@ a {
   -webkit-line-clamp: 1; /* number of lines to show */
   line-clamp: 1;
   -webkit-box-orient: vertical;
-}
-
-.rental-eclipse {
-  z-index: -1;
 }
 
 .nifty-rentals-img .icons-placement1 img {
@@ -681,15 +614,6 @@ a {
   left: 200px;
 }
 
-.token-play {
-  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
-    rgba(36, 37, 38, 0.6);
-  border-radius: 8px;
-  min-height: 386px;
-}
-.token-play p {
-  opacity: 0.9;
-}
 .video-bg {
   position: absolute;
   top: 0;
@@ -749,7 +673,7 @@ a {
 
 .home-satoshi-container {
   position: absolute;
-  bottom: 66px;
+  bottom: 74px;
   left: -14px;  
 }
 
@@ -798,6 +722,10 @@ a {
   height: 100%;
   bottom: 0px;
   right: 0px;
+}
+
+.home-nftl-token-bottom-image {
+  right: 50px;
 }
 
 .home-hero-companion-swing {
@@ -1142,6 +1070,10 @@ a {
     font-size: 28px;
     line-height: 33px;
   }
+  h6 {
+    font-size: 22px;
+    line-height: 28px;
+  }
   p {
     font-size: 16px;
   }
@@ -1161,7 +1093,7 @@ a {
     width: 400px;
   }
   .home-satoshi-container {
-    bottom: 35px;
+    bottom: 43px;
   }
   .home-satoshi {
     width: 180px;
@@ -1217,6 +1149,10 @@ a {
     font-size: 24px;
     line-height: 28px;
   }
+  h6 {
+    font-size: 20px;
+    line-height: 26px;
+  }
   .home-content {
     left: 152px;
     bottom: 8px;
@@ -1228,7 +1164,7 @@ a {
     width: 350px;
   }
   .home-satoshi-container {
-    bottom: 36px;
+    bottom: 44px;
   }
   .home-satoshi {
     width: 140px;
@@ -1269,6 +1205,10 @@ a {
   h5 {
     font-size: 22px;
     line-height: 25px;
+  }
+  h5 {
+    font-size: 18px;
+    line-height: 24px;
   }
   .btn {
     font-size: 16px !important;
@@ -1320,6 +1260,10 @@ a {
     font-size: 20px;
     line-height: 24px;
   }
+  h5 {
+    font-size: 18px;
+    line-height: 24px;
+  }
   p {
     font-size: 14px;
   }  
@@ -1346,7 +1290,7 @@ a {
     left: 86px;
   }  
   .home-satoshi-container {
-    bottom: 24px;
+    bottom: 32px;
   }
   .home-satoshi {
     width: 120px;
@@ -1460,13 +1404,6 @@ a {
     font-size: 22px;
     line-height: 26px;
   }
-  h5 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  .btn {
-    padding: 6px 8px;
-  }  
   .home-satoshi {
     width: 80px;
     height: 84px;
@@ -1673,20 +1610,6 @@ a {
   .about-nifty-degens p {
     text-align: left;
   }
-  .DAO-section h1 {
-    font-size: 48px;
-    text-align: center;
-  }
-  .DAO-section p {
-    text-align: center;
-  }
-  .team-section h1 {
-    font-size: 48px;
-    text-align: center;
-  }
-  .team-section p {
-    text-align: center;
-  }
   label {
     font-size: 13px;
   }
@@ -1773,7 +1696,7 @@ a {
     margin-top: 60px !important;
   }
   .teams-slider .nifty-teams {
-    width: 305px;
+    width: 100%;
     text-align: center;
     justify-content: center;
     align-items: center;

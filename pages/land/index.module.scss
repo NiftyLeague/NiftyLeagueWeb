@@ -3,25 +3,26 @@
   padding-bottom: 48px;
 }
 
-.title {
-  max-width: 540px;
-}
-
 .intro {
   padding-top: 200px;
-  padding-bottom: 200px;
+  padding-bottom: 140px;
 }
 
 .section {
-  max-width: 1160px;
+  max-width: 1085px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .properties {
-  max-width: 1055px;
   margin-left: auto;
   margin-right: auto;
+  & > div {
+    flex-basis: 50%;
+  }
+  & > div:nth-child(2n) .property {
+    margin-left: auto;
+  }
 }
 
 .property {
@@ -29,7 +30,7 @@
 }
 
 .button {
-  width: 226px;
+  width: 172px;
 }
 
 .video {
@@ -57,15 +58,19 @@
   .container {
     overflow: hidden;
   }
+  .intro {
+    padding-top: 120px;
+    padding-bottom: 32px;
+  }
+  .section {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
 }
 
 @media (max-width: 767px) {
   .container {
     padding-bottom: 48px;
-  }
-  .intro {
-    padding-top: 120px;
-    padding-bottom: 32px;
   }
   .block {
     text-align: center;

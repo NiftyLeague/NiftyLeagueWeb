@@ -124,18 +124,20 @@ const Lore: NextPage = () => {
           <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
           <div className={cn(styles.gradient3, 'radial-gradient-piece')} />
         </div>
-        <AnimatedWrapper>
-          <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
-            <button
-              className={cn(
-                styles.button,
-                'btn theme-btn-primary mx-auto mb-5 px-3 animated-fade-slow animated-fade-start transition-delay-small',
-              )}
-            >
-              View Docs
-            </button>
-          </a>
-        </AnimatedWrapper>
+        <div className="d-flex justify-content-center mb-5">
+          <AnimatedWrapper>
+            <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
+              <button
+                className={cn(
+                  styles.button,
+                  'btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-small',
+                )}
+              >
+                View Docs
+              </button>
+            </a>
+          </AnimatedWrapper>
+        </div>
       </div>
     </Layout>
   );

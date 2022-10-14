@@ -56,21 +56,23 @@ const Games: NextPage = () => {
               <AnimatedWrapper>
                 <p className="animated-header-text animated-header-text-start transition-delay-medium">{description}</p>
               </AnimatedWrapper>
-              {action.isComingSoon ? (
-                <AnimatedWrapper>
-                  <div className="mt-5 animated-fade-slow animated-fade-start transition-delay-medium">
-                    <button className="btn theme-btn-transparent disabled mx-auto mx-md-0 px-3">COMING SOON</button>
-                  </div>
-                </AnimatedWrapper>
-              ) : (
-                <AnimatedWrapper>
-                  <a href={action.link} target="_blank" rel="noreferrer">
-                    <button className="btn theme-btn-primary mx-auto mx-md-0 mt-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium">
-                      {action.title}
-                    </button>
-                  </a>
-                </AnimatedWrapper>
-              )}
+              <div className="d-flex justify-content-center justify-content-md-start mt-5">
+                {action.isComingSoon ? (
+                  <AnimatedWrapper>
+                    <div className="animated-fade-slow animated-fade-start transition-delay-medium">
+                      <button className="btn theme-btn-transparent disabled px-3">COMING SOON</button>
+                    </div>
+                  </AnimatedWrapper>
+                ) : (
+                  <AnimatedWrapper>
+                    <a href={action.link} target="_blank" rel="noreferrer">
+                      <button className="btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-medium">
+                        {action.title}
+                      </button>
+                    </a>
+                  </AnimatedWrapper>
+                )}
+              </div>
             </div>
             <div className="col-12 col-md-5">
               <AnimatedWrapper>
@@ -88,30 +90,26 @@ const Games: NextPage = () => {
             </div>
             <div
               className={cn(
-                index === 0
-                  ? styles.gradient2
-                  : index === 1
-                  ? styles.gradient1
-                  : index === 2
-                  ? styles.gradient3
-                  : styles.gradient4,
+                index === 0 ? styles.gradient2 : index === 1 ? styles.gradient1 : styles.gradient3,
                 'radial-gradient-piece',
               )}
             />
           </div>
         ))}
-        <AnimatedWrapper>
-          <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
-            <button
-              className={cn(
-                styles.button,
-                'btn theme-btn-primary mx-auto mt-5 mt-md-3 mb-5 px-3 animated-fade-slow animated-fade-start transition-delay-medium',
-              )}
-            >
-              View Docs
-            </button>
-          </a>
-        </AnimatedWrapper>
+        <div className="d-flex justify-content-center mt-5 mt-md-3 mb-5">
+          <AnimatedWrapper>
+            <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
+              <button
+                className={cn(
+                  styles.button,
+                  'btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-medium',
+                )}
+              >
+                View Docs
+              </button>
+            </a>
+          </AnimatedWrapper>
+        </div>
       </div>
     </Layout>
   );

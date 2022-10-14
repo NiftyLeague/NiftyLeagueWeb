@@ -2,7 +2,11 @@ export const NIFTY_DEGENS = [
   {
     name: 'HUMAN',
     description: 'The primitive humans special powers is bomb dropping. Typical',
-    extra: 'gif of human degen dropping bomb and exploding',
+    gif: {
+      link: '/img/degens/human.gif',
+      width: 512,
+      height: 512,
+    },
     image: {
       link: '/img/degens/human.png',
       width: 120,
@@ -12,7 +16,11 @@ export const NIFTY_DEGENS = [
   {
     name: 'DOGE',
     description: `Doge's power is eponymous. The DEGEN perforrms an acrobatic roll like a coin`,
-    extra: '',
+    gif: {
+      link: '/img/degens/doge.gif',
+      width: 512,
+      height: 512,
+    },
     image: {
       link: '/img/degens/doge.png',
       width: 115,
@@ -22,7 +30,11 @@ export const NIFTY_DEGENS = [
   {
     name: 'FROG',
     description: `Watch out for the frog’s sticky tongue. If you dont see it, you’re probably trapped already`,
-    extra: '',
+    gif: {
+      link: '/img/degens/frog.gif',
+      width: 512,
+      height: 512,
+    },
     image: {
       link: '/img/degens/frog.png',
       width: 140,
@@ -32,7 +44,11 @@ export const NIFTY_DEGENS = [
   {
     name: 'CAT',
     description: `This cat may not have nine lives but it’s faster than the average cat and, hits harder with a bat and pounces with a vengeance`,
-    extra: '',
+    gif: {
+      link: '/img/degens/cat.gif',
+      width: 512,
+      height: 512,
+    },
     image: {
       link: '/img/degens/cat.png',
       width: 120,
@@ -42,7 +58,11 @@ export const NIFTY_DEGENS = [
   {
     name: 'APE',
     description: `If this ape is not eating bananas, he’s throwing them. And those bananas hurt.`,
-    extra: '',
+    gif: {
+      link: '/img/degens/ape.gif',
+      width: 512,
+      height: 512,
+    },
     image: {
       link: '/img/degens/ape.png',
       width: 91,
@@ -52,7 +72,11 @@ export const NIFTY_DEGENS = [
   {
     name: 'ALIEN',
     description: `Keep your eyes peeled because these apes can teleport across the game screen to your location anytime.`,
-    extra: '',
+    gif: {
+      link: '/img/degens/alien.gif',
+      width: 512,
+      height: 512,
+    },
     image: {
       link: '/img/degens/alien.png',
       width: 100,
