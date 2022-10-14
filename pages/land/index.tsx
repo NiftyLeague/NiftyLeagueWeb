@@ -2,7 +2,6 @@ import { memo } from 'react';
 import cn from 'classnames';
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
 import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
@@ -22,12 +21,10 @@ const Land: NextPage = () => {
             'd-flex flex-column-reverse flex-md-row align-items-center justify-content-center position-relative',
           )}
         >
-          <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-6 pe-0 pe-md-5')}>
+          <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-6 col-lg-7 pe-0 pe-md-3')}>
             <div className="mb-2 mb-md-3">
               <AnimatedWrapper>
-                <h1 className={cn(styles.title, 'animated-header-text animated-header-text-start')}>
-                  REAL ESTATE IN THE NIFTYVERSE
-                </h1>
+                <h1 className="animated-header-text animated-header-text-start">REAL ESTATE IN THE NIFTYVERSE</h1>
               </AnimatedWrapper>
             </div>
             <div className="mb-3 mb-md-0">
@@ -38,7 +35,7 @@ const Land: NextPage = () => {
               </AnimatedWrapper>
             </div>
           </div>
-          <div className="col-12 col-md-6">
+          <div className="col-12 col-md-6 col-lg-5">
             <AnimatedWrapper>
               <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-medium ps-0 ps-lg-5 mb-3">
                 <iframe
@@ -69,20 +66,9 @@ const Land: NextPage = () => {
               'd-flex flex-column align-items-center align-items-md-start flex-md-row full-width justify-content-md-between flex-wrap',
             )}
           >
-            {NIFTYVERSE_PROPERTIES.map(({ name, description, image }) => (
+            {NIFTYVERSE_PROPERTIES.map(({ name, description }) => (
               <div className="mb-3 mb-md-5" key={name}>
                 <div className={cn(styles.property, 'd-flex flex-column position-relative py-3')}>
-                  <AnimatedWrapper>
-                    <div className="position-relative animated-fade-slow animated-fade-start transition-delay-small">
-                      <Image
-                        src={image.link}
-                        alt={name}
-                        layout="responsive"
-                        width={image.width}
-                        height={image.height}
-                      />
-                    </div>
-                  </AnimatedWrapper>
                   <AnimatedWrapper>
                     <h5 className="my-0 mt-4 animated-fade-slow animated-fade-start transition-delay-small">{name}</h5>
                   </AnimatedWrapper>
@@ -96,18 +82,20 @@ const Land: NextPage = () => {
               </div>
             ))}
           </div>
-          <AnimatedWrapper>
-            <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
-              <button
-                className={cn(
-                  styles.button,
-                  'btn theme-btn-primary mx-auto mt-5 px-3 animated-fade-slow animated-fade-start transition-delay-small',
-                )}
-              >
-                View Docs
-              </button>
-            </a>
-          </AnimatedWrapper>
+          <div className="d-flex justify-content-center mt-5">
+            <AnimatedWrapper>
+              <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
+                <button
+                  className={cn(
+                    styles.button,
+                    'btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-small',
+                  )}
+                >
+                  View Docs
+                </button>
+              </a>
+            </AnimatedWrapper>
+          </div>
         </div>
       </div>
     </Layout>

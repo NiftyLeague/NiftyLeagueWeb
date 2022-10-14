@@ -15,7 +15,7 @@ export const NIFTY_GAMES = [
     name: 'NIFTY TENNIS',
     description:
       'This is quite literarily the first NFT tennis game on the ethereum blockchain. If you’re a fan of the fantasy tennis league, Nifty tennis is something you’d definitely want to check out. Get in on the action and let’s see what you’re made of!',
-    video: 'https://www.youtube.com/embed/wv_fI1PPBi0',
+    video: 'https://www.youtube.com/embed/ylJzfLcWChc',
     tag: 'GAME',
     action: {
       title: '',
@@ -35,16 +35,16 @@ export const NIFTY_GAMES = [
       isComingSoon: false,
     },
   },
-  {
-    name: 'MT. GAWX',
-    description:
-      'No DEGEN story is ever complete without a kickass lore behind it. DEGENS come here to sink NFTL and watch the volcano roar, belching molten lava in response. It would be cute if it wasn’t so scary.',
-    video: 'https://www.youtube.com/embed/wv_fI1PPBi0',
-    tag: 'MINI-GAME',
-    action: {
-      title: 'ENTER THE MOUNTAIN',
-      link: 'https://app.niftyleague.com/games/mt-gawx',
-      isComingSoon: false,
-    },
-  },
+  // {
+  //   name: 'MT. GAWX',
+  //   description:
+  //     'No DEGEN story is ever complete without a kickass lore behind it. DEGENS come here to sink NFTL and watch the volcano roar, belching molten lava in response. It would be cute if it wasn’t so scary.',
+  //   video: 'https://www.youtube.com/embed/OF_JrECYpvM',
+  //   tag: 'MINI-GAME',
+  //   action: {
+  //     title: 'ENTER THE MOUNTAIN',
+  //     link: 'https://app.niftyleague.com/games/mt-gawx',
+  //     isComingSoon: false,
+  //   },
+  // },
 ];

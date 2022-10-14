@@ -94,21 +94,21 @@ const CompeteAndEarn: NextPage = () => {
               )}
             >
               <div className="col-4 d-flex flex-column">
-                <h5 className={styles.cell}>FEATURES</h5>
+                <h5 className={styles.headerCell}>FEATURES</h5>
                 <p className={styles.cell}>Requires an invite</p>
                 <p className={styles.cell}>Buy-in</p>
                 <p className={styles.cell}>Region</p>
                 <p className={styles.cell}>Player Number</p>
               </div>
               <div className="col-4 d-flex flex-column">
-                <h5 className={styles.cell}>PUBLIC BRAWL</h5>
+                <h5 className={styles.headerCell}>PUBLIC BRAWL</h5>
                 <p className={styles.cell}>No</p>
                 <p className={styles.cell}>1000 NFTL</p>
                 <p className={styles.cell}>Decided by the Host</p>
                 <p className={styles.cell}>Decided by the Host</p>
               </div>
               <div className="col-4 d-flex flex-column">
-                <h5 className={styles.cell}>PRIVATE BRAWL</h5>
+                <h5 className={styles.headerCell}>PRIVATE BRAWL</h5>
                 <p className={styles.cell}>Yes</p>
                 <p className={styles.cell}>Decided by the Host</p>
                 <p className={styles.cell}>Decided by the Host</p>
@@ -118,15 +118,10 @@ const CompeteAndEarn: NextPage = () => {
             </div>
           </AnimatedWrapper>
 
-          <div className="d-flex justify-content-center mb-5">
+          <div className="d-flex justify-content-center mt-5">
             <AnimatedWrapper>
               <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
-                <button
-                  className={cn(
-                    styles.button,
-                    'btn theme-btn-primary animated-fade animated-fade-start transition-delay-small',
-                  )}
-                >
+                <button className="btn theme-btn-primary animated-fade animated-fade-start transition-delay-small">
                   START PLAYING NOW
                 </button>
               </a>
