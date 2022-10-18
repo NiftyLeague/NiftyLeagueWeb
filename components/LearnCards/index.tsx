@@ -1,6 +1,6 @@
-import Image from 'next/legacy/image';
+import AnimatedWrapper from '@components/AnimatedWrapper';
+import Image from 'next/image';
 import Link from 'next/link';
-import ExternalIcon from '../externalIcon';
 import { LEARN_CARDS } from './constants';
 
 interface LearnCardProps {
@@ -14,30 +14,48 @@ interface LearnCardProps {
 
 const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCardProps) => {
   return (
-    <div className="learn-content-wrapper col-12 col-md-6 py-2">
+    <div className="learn-content-wrapper col-12 col-md-6 py-2 px-2">
       <div className="learn-content position-relative d-flex align-items-center">
         <div className="position-absolute w-100 h-100">
-          <Image alt={`${title} card background`} layout="fill" objectFit="cover" priority src={image} />
+          <AnimatedWrapper>
+            <div className="animated-fade-quick animated-fade-start transition-delay-small">
+              <Image alt={`${title} card background`} layout="fill" objectFit="cover" priority src={image} />
+            </div>
+          </AnimatedWrapper>
         </div>
-        <div className="text-center position-relative w-100 d-flex flex-column align-items-center p-4 p-lg-5">
-          <h3 className="text-m-center">{title}</h3>
-          <p className="px-4 font-16 text-center">{subtitle}</p>
-          {external ? (
-            <a target="_blank" rel="noreferrer" href={link}>
-              <button className="btn theme-btn-primary mt-md-2">
-                {btnText}
-                <ExternalIcon />
-              </button>
-            </a>
-          ) : (
-            <Link href={link} passHref>
-              <a target="_blank" rel="noreferrer">
-                <button className="btn theme-btn-primary mt-md-2">
-                  {btnText} <ExternalIcon />
+
+        <div className="text-center position-relative w-100 d-flex flex-column align-items-center p-3 p-md-4 p-lg-5">
+          <div className="mb-md-3">
+            <AnimatedWrapper>
+              <h5 className="text-m-center uppercase animated-header-text animated-header-text-start transition-delay-small">
+                {title}
+              </h5>
+            </AnimatedWrapper>
+          </div>
+          <div className="mb-md-3">
+            <AnimatedWrapper>
+              <p className="text-center animated-header-text animated-header-text-start transition-delay-medium">
+                {subtitle}
+              </p>
+            </AnimatedWrapper>
+          </div>
+          <AnimatedWrapper>
+            {external ? (
+              <a target="_blank" rel="noreferrer" href={link}>
+                <button className="btn theme-btn-primary theme-learn-btn mt-md-2 animated-fade-slow animated-fade-start transition-delay-large">
+                  {btnText}
                 </button>
               </a>
-            </Link>
-          )}
+            ) : (
+              <Link href={link} passHref>
+                <a target="_blank" rel="noreferrer">
+                  <button className="btn theme-btn-primary theme-learn-btn mt-md-2 animated-fade-slow animated-fade-start transition-delay-large">
+                    {btnText}
+                  </button>
+                </a>
+              </Link>
+            )}
+          </AnimatedWrapper>
         </div>
       </div>
     </div>
@@ -46,7 +64,7 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
 
 const LearnCards = () => {
   return (
-    <div className="row pt-5 pt-lg-5 mt-lg-3">
+    <div className="row pt-3 pt-lg-5 mt-lg-3">
       {LEARN_CARDS.map(({ btnText, external, image, link, subtitle, title }) => (
         <LearnCard
           key={title}

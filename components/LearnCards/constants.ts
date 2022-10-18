@@ -18,7 +18,7 @@ export const LEARN_CARDS = [
     image: '/img/learn/tutorials.png',
     link: '/docs/guides/nifty-smashers/general-info',
     subtitle: 'Learn about Smashers gameplay and how points are counted',
-    title: 'Nifty Smashers Guide',
+    title: 'Nifty Smashers',
   },
   {
     btnText: 'Get Involved',
