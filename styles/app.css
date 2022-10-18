@@ -223,6 +223,11 @@ a {
   font-size: 20px;
 }
 
+.theme-learn-btn {
+  color: #FFFFFF;
+  background: #620EDF;
+}
+
 .theme-btn-primary:hover {
   color: #FFFFFF;
   box-shadow: none;
@@ -402,7 +407,7 @@ a {
 }
 .learn-content {
   height: 100%;
-  border-radius: 10px;
+  border-radius: 20px;
   overflow: hidden;
 }
 .learn-content button {
@@ -412,23 +417,16 @@ a {
 .faq-accordion .accordion-item {
   border: none;
   margin-bottom: 12px;
-  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
-    rgba(36, 37, 38, 0.6);
+  background: #1E242B;
   backdrop-filter: blur(65.0688px);
-  border-radius: 8px;
+  border-radius: 10px;
 }
 .faq-accordion .accordion-header button {
-  color: #620edf;
+  color: #5820D6;
   background-color: transparent;
-  font-size: 16px;
-  line-height: 1.75rem;
-  font-weight: 400;
+  font-size: 32px;
+  line-height: 1.2;
   padding: 2rem 1.5rem;
-}
-@media (min-width: 768px) {
-  .faq-accordion .accordion-header button {
-    font-size: 22px;
-  }
 }
 
 /*************************************** Community **********************************************/
@@ -848,6 +846,21 @@ a {
   z-index: -1;
 }
 
+.gradient-top-left {
+  top: -100px;
+  left: -100px;
+}
+
+.gradient-top-right {
+  top: -100px;
+  right: 0px;
+}
+
+.gradient-bottom-right {
+  bottom: -100px;
+  right: 0px;
+}
+
 .compete-to-earn-section-token-1 {
   position: absolute;
   left: -226px;
@@ -1074,6 +1087,9 @@ a {
     font-size: 22px;
     line-height: 28px;
   }
+  .faq-accordion .accordion-header button {
+    font-size: 28px;
+  }
   p {
     font-size: 16px;
   }
@@ -1153,6 +1169,9 @@ a {
     font-size: 20px;
     line-height: 26px;
   }
+  .faq-accordion .accordion-header button {
+    font-size: 24px;
+  }
   .home-content {
     left: 152px;
     bottom: 8px;
@@ -1206,9 +1225,12 @@ a {
     font-size: 22px;
     line-height: 25px;
   }
-  h5 {
+  h6 {
     font-size: 18px;
     line-height: 24px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 22px;
   }
   .btn {
     font-size: 16px !important;
@@ -1260,13 +1282,23 @@ a {
     font-size: 20px;
     line-height: 24px;
   }
-  h5 {
+  h6 {
     font-size: 18px;
     line-height: 24px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 20px;
+    padding: 1rem;
   }
   p {
     font-size: 14px;
   }  
+  .accordion-body {
+    font-size: 14px;
+  }
+  .accordion-body a {
+    font-size: 14px;
+  }
   .home-content {
     left: 126px;
   }
@@ -1404,6 +1436,9 @@ a {
     font-size: 22px;
     line-height: 26px;
   }
+  .faq-accordion .accordion-header button {
+    font-size: 18px;
+  }
   .home-satoshi {
     width: 80px;
     height: 84px;
@@ -1497,17 +1532,9 @@ a {
     line-height: 28px;
   }
   h3 {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  h4 {
-    font-size: 18px;
-    line-height: 22px;
-  }
-  h5 {
-    font-size: 16px;
-    line-height: 20px;
-  }
+    font-size: 22px;
+    line-height: 26px;
+  }  
   .btn {
     font-size: 14px !important;    
   }
@@ -1573,10 +1600,7 @@ a {
   }
   .mobile-block {
     display: block !important;
-  }  
-  .accordion-body {
-    font-size: 18px;
-  }
+  }    
   .text-m-left {
     text-align: left;
   }

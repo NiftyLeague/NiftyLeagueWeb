@@ -318,7 +318,8 @@ const Home: NextPage = () => {
                     </AnimatedWrapper>
                   </div>
                 )}
-                <div className={`d-flex flex-column compete-to-earn-section-body`}>
+                <div className={`d-flex flex-column position-relative compete-to-earn-section-body`}>
+                  <div className="gradient-top-left radial-gradient-piece" />
                   <div className="mb-3">
                     <AnimatedWrapper>
                       <h2 className="compete-to-earn-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
@@ -426,7 +427,8 @@ const Home: NextPage = () => {
                   <div className="radial-gradient-background" />
                 </div>
               )}
-              <div className={`d-flex flex-column align-items-${desktop ? 'start' : 'center'}`}>
+              <div className={`d-flex flex-column position-relative align-items-${desktop ? 'start' : 'center'}`}>
+                <div className="gradient-bottom-right radial-gradient-piece" />
                 <div className="mb-3">
                   <AnimatedWrapper>
                     <h2
@@ -570,7 +572,8 @@ const Home: NextPage = () => {
                     <div className="radial-gradient-background" />
                   </div>
                 )}
-                <div className={`d-flex flex-column home-nftl-token-section-body`}>
+                <div className={`d-flex flex-column position-relative home-nftl-token-section-body`}>
+                  <div className="gradient-top-left radial-gradient-piece" />
                   <div className="mb-3">
                     <AnimatedWrapper>
                       <h2 className="home-nftl-token-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
@@ -720,7 +723,8 @@ const Home: NextPage = () => {
                     <div className="radial-gradient-background" />
                   </div>
                 )}
-                <div className={`d-flex flex-column home-community-section-body`}>
+                <div className={`d-flex flex-column position-relative home-community-section-body`}>
+                  <div className="gradient-top-right radial-gradient-piece" />
                   <div className="mb-3">
                     <AnimatedWrapper>
                       <h2 className="section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
