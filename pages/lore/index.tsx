@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import cn from 'classnames';
+import { useMediaQuery } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -8,6 +9,7 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
 
 const Lore: NextPage = () => {
+  const mobile = useMediaQuery('(max-width:600px)');
   return (
     <Layout>
       <Head>
@@ -17,14 +19,22 @@ const Lore: NextPage = () => {
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <div>
           <AnimatedWrapper>
-            <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small">LORE</h1>
+            <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small mb-3">
+              LORE
+            </h1>
           </AnimatedWrapper>
         </div>
         <div className={styles.content}>
           <div className={styles.background}>
             <AnimatedWrapper>
               <div className="position-relative animated-fade-slow animated-fade-start">
-                <Image src="/img/lore/background.png" alt="Lore" layout="responsive" width={1328} height={2655} />
+                <Image
+                  src={`/img/lore/background${!mobile ? '' : '-mobile'}.png`}
+                  alt="Lore"
+                  layout="responsive"
+                  width={!mobile ? 1328 : 396}
+                  height={!mobile ? 2655 : 1415}
+                />
               </div>
             </AnimatedWrapper>
           </div>
@@ -124,7 +134,7 @@ const Lore: NextPage = () => {
           <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
           <div className={cn(styles.gradient3, 'radial-gradient-piece')} />
         </div>
-        <div className="d-flex justify-content-center mb-5">
+        <div className="d-flex justify-content-center my-5">
           <AnimatedWrapper>
             <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
               <button

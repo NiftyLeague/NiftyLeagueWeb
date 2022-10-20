@@ -12,12 +12,12 @@
   position: absolute;
   top: 0px;
   left: 0px;
-  padding: 400px 280px 0px 280px;
+  padding: 500px 280px 0px 280px;
   & p {
     font-size: 32px;
-    font-weight: 400;
-    line-height: 60px;
+    line-height: 66px;
     color: #262930;
+    margin-bottom: 0px !important;
   }
 }
 
@@ -62,11 +62,18 @@
   right: -200px;
 }
 
+@media (max-width: 1600px) {
+  .inner {
+    & p {
+      line-height: 58px;
+    }
+  }
+}
+
 @media (max-width: 1540px) {
   .inner {
     & p {
-      font-size: 24px;
-      line-height: 48px;
+      line-height: 52px;
     }
   }
   .satoshiContainer {
@@ -88,12 +95,30 @@
   }
 }
 
+@media (max-width: 1464px) {
+  .inner {
+    padding: 400px 280px 0px 280px;
+    & p {
+      line-height: 48px;
+    }
+  }
+}
+
+@media (max-width: 1394px) {
+  .inner {
+    padding: 360px 280px 0px 280px;
+    & p {
+      font-size: 28px;
+      line-height: 48px;
+    }
+  }
+}
+
 @media (max-width: 1340px) {
   .inner {
-    padding: 330px 220px 0px 220px;
     & p {
-      font-size: 20px;
-      line-height: 44px;
+      font-size: 24px;
+      line-height: 48px;
     }
   }
   .satoshiContainer {
@@ -106,6 +131,16 @@
   }
   .degensContainer {
     bottom: 165px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .inner {
+    padding: 340px 240px 0px 240px;
+    & p {
+      font-size: 20px;
+      line-height: 40px;
+    }
   }
 }
 
@@ -132,16 +167,10 @@
 
 @media (max-width: 992px) {
   .inner {
-    position: relative;
-    padding: 24px 16px;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 300px 200px 0px 200px;
     & p {
       font-size: 16px;
-      line-height: 28px;
-      text-align: center;
-      color: #b4b5c3;
+      line-height: 24px;
     }
   }
   .container {
@@ -151,16 +180,143 @@
   .title {
     margin-bottom: 40px;
   }
-  .background {
+  .gradient3 {
     display: none;
   }
   .satoshiContainer {
-    display: none;
+    top: 90px;
   }
   .degensContainer {
-    display: none;
+    bottom: 120px;
   }
-  .gradient3 {
-    display: none;
+}
+
+@media (max-width: 896px) {
+  .inner {
+    padding: 220px 140px 0px 140px;
+    & p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  .satoshiContainer {
+    top: 75px;
+  }
+  .degensContainer {
+    bottom: 95px;
+  }
+}
+
+@media (max-width: 768px) {
+  .inner {
+    padding: 220px 120px 0px 120px;
+    & p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+  .satoshiContainer {
+    top: 70px;
+  }
+  .degensContainer {
+    bottom: 85px;
+  }
+}
+
+@media (max-width: 720px) {
+  .inner {
+    padding: 180px 80px 0px 80px;
+    & p {
+      line-height: 18px;
+    }
+  }
+  .satoshiContainer {
+    top: 60px;
+  }
+  .degensContainer {
+    bottom: 65px;
+  }
+}
+
+@media (max-width: 600px) {
+  .inner {
+    padding: 180px 80px 0px 80px;
+    & p {
+      line-height: 22px;
+    }
+  }
+  .satoshiContainer {
+    top: 40px;
+  }
+  .degensContainer {
+    bottom: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .inner {
+    padding: 150px 40px 0px 40px;
+    & p {
+      line-height: 20px;
+    }
+  }
+  .satoshiContainer {
+    top: 20px;
+  }
+  .degensContainer {
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 440px) {
+  .inner {
+    padding: 140px 40px 0px 40px;
+    & p {
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .inner {
+    padding: 110px 16px 0px 16px;
+    & p {
+      line-height: 20px;
+    }
+  }
+  .satoshiContainer {
+    top: 15px;
+  }
+  .degensContainer {
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 380px) {
+  .inner {
+    padding: 110px 15px 0px 15px;
+    & p {
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 368px) {
+  .inner {
+    padding: 110px 15px 0px 15px;
+    & p {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .inner {
+    padding: 85px 10px 0px 10px;
+    & p {
+      font-size: 12px;
+      line-height: 14px;
+    }
   }
 }
