@@ -37,24 +37,28 @@ function Navbar() {
                     Overview
                   </a>
                   <ul className="dropdown-menu py-2" aria-labelledby="navbarOverviewDropdown">
-                    <li
-                      className={cn('nav-item', {
-                        ['active']: pathname.includes('land'),
-                      })}
-                    >
-                      <Link href="/land">
-                        <a className="dropdown-item">Land</a>
-                      </Link>
-                    </li>
-                    {/* <li
-                      className={cn('nav-item', {
-                        ['active']: pathname.includes('rentals'),
-                      })}
-                    >
-                      <Link href="/rentals">
-                        <a className="dropdown-item">Rentals</a>
-                      </Link>
-                    </li> */}
+                    {false && (
+                      <li
+                        className={cn('nav-item', {
+                          ['active']: pathname.includes('land'),
+                        })}
+                      >
+                        <Link href="/land">
+                          <a className="dropdown-item">Land</a>
+                        </Link>
+                      </li>
+                    )}
+                    {false && (
+                      <li
+                        className={cn('nav-item', {
+                          ['active']: pathname.includes('rentals'),
+                        })}
+                      >
+                        <Link href="/rentals">
+                          <a className="dropdown-item">Rentals</a>
+                        </Link>
+                      </li>
+                    )}
                     <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('games'),
@@ -154,10 +158,10 @@ function MobileNav() {
       href: '/',
       name: 'Home',
     },
-    {
-      href: '/land',
-      name: 'Land',
-    },
+    // {
+    //   href: '/land',
+    //   name: 'Land',
+    // },
     // {
     //   href: '/rentals',
     //   name: 'Rentals',
@@ -235,8 +239,10 @@ function MobileNav() {
         <ul>
           {linkList.map(item => {
             return (
-              <li key={item.href} onClick={handleUncheck}>
-                <Link href={item.href}>{item.name}</Link>
+              <li key={item.href} onClick={handleUncheck} className="mb-3">
+                <Link href={item.href}>
+                  <a>{item.name}</a>
+                </Link>
               </li>
             );
           })}

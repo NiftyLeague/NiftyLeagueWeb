@@ -69,7 +69,7 @@ p {
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .overview h5 {
@@ -108,10 +108,10 @@ a {
   color: #757575;
 }
 .bg-black {
-  background: #191b1f;
+  background: #090A0B;
 }
 .black-bg1 {
-  background: #191b1f;
+  background: #090A0B;
 }
 .bg-purple {
   background: #620edf;
@@ -315,7 +315,7 @@ a {
   width: 100vw;
   position: absolute;
   bottom: 0;
-  background: #191b1f;
+  background: #090A0B;
   z-index: -1;
 }
 .nifty-character {
@@ -330,9 +330,7 @@ a {
 .nifty-ape {
   width: 100%;
 }
-.nifty-character-title {
-  font-size: 78px;
-}
+
 @media (min-width: 576px) {
   .nifty-mario {
     width: 80%;
@@ -375,9 +373,6 @@ a {
 @media (min-width: 992px) {  
   .nifty-ape {
     width: 700px;
-  }
-  .nifty-character-title {
-    font-size: 96px;
   }
   .dark-gradient-shade {
     height: 500px;
@@ -431,7 +426,7 @@ a {
 
 /*************************************** Community **********************************************/
 
-.com-pg {
+.com-pg {  
   overflow-x: hidden;
 }
 .com-intro {
@@ -713,6 +708,7 @@ a {
   position: absolute;
   top: 56px;
   left: 133px;
+  font-weight: 700;
 }
 
 .home-hero-characters-image, .home-nftl-token-image {
@@ -904,6 +900,15 @@ a {
 }
 .social-icons a:hover path {
   fill: #620edf;
+}
+
+.sushi-video {
+  left: 32.1%;
+  width: 36.2%;
+  height: 39.1%;
+  bottom: 32%;
+  object-fit: cover;
+  border-radius: 8%;
 }
 
 .sliding-nfts .sliding-background-wrapper-desktop {
@@ -1099,7 +1104,7 @@ a {
   .speech-bubble-text {
     font-size: 20px;
     top: 50px;
-    left: 123px;
+    left: 123px;    
   }
   .home-content {
     left: 188px;
@@ -1943,8 +1948,6 @@ a {
 }
 
 .div-paragraph {
-  font-size: 20px;
-  font-weight: 400;
   opacity: 0.9;
 }
 

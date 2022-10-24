@@ -11,6 +11,7 @@ import styles from './index.module.scss';
 
 const Rentals: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
+
   return (
     <Layout>
       <Head>
