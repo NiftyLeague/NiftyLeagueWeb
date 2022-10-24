@@ -1,5 +1,5 @@
 import { Stack, useMediaQuery } from '@mui/material';
-import { memo } from 'react';
+import { memo, useRef } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -12,6 +12,13 @@ import { SPONSORS } from '@data/constants';
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
   const md = useMediaQuery('(min-width:921px)');
+
+  const gamingSectionRef = useRef(null);
+
+  const scrollToGamingSection = () => {
+    if (!gamingSectionRef.current) return;
+    (gamingSectionRef.current as HTMLDivElement).scrollIntoView();
+  };
 
   return (
     <Layout classes={{ root: 'home-pg' }}>
@@ -119,14 +126,13 @@ const Home: NextPage = () => {
           </div>
           <div className="home-content-button-bubble">
             <AnimatedWrapper>
-              <Link href="/land">
-                <a>
-                  <div className="d-inline-block position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large">
-                    <Image src="/img/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
-                    <p className="my-0 py-0 speech-bubble-text">Learn More</p>
-                  </div>
-                </a>
-              </Link>
+              <div
+                className="d-inline-block position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large"
+                onClick={scrollToGamingSection}
+              >
+                <Image src="/img/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
+                <p className="my-0 py-0 speech-bubble-text">Learn More</p>
+              </div>
             </AnimatedWrapper>
           </div>
           <Link href="/land">
@@ -137,7 +143,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing m-0 p-0 position-relative">
+      <div className="row row-top-spacing m-0 p-0 position-relative" ref={gamingSectionRef}>
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="my-3 my-lg-5">
             <AnimatedWrapper>
@@ -156,6 +162,18 @@ const Home: NextPage = () => {
                     layout="responsive"
                     src="/img/home-classic-gaming-reinvented-tvbase.png"
                   />
+                  <video
+                    width="100%"
+                    height="100%"
+                    muted
+                    autoPlay
+                    loop
+                    playsInline
+                    data-keepplaying
+                    className="position-absolute sushi-video"
+                  >
+                    <source src="/video/sushi.mp4" type="video/mp4" />
+                  </video>
                 </div>
               </AnimatedWrapper>
               <div className="gaming-controller">

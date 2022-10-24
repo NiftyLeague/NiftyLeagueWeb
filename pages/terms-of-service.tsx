@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { memo } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { Container } from '@mui/material';
 import Definitions from '@components/definitions';
@@ -7,6 +8,9 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 
 const ToS = (): JSX.Element => (
   <Layout classes={{ root: 'legal-pg' }}>
+    <Head>
+      <title>Nifty League | Terms of Service</title>
+    </Head>
     <Container sx={{ p: { xs: 2, md: 4 }, pt: { xs: 15, md: 20 } }}>
       <div className="mb-3 mb-md-5">
         <AnimatedWrapper>
@@ -737,4 +741,4 @@ const ToS = (): JSX.Element => (
   </Layout>
 );
 
-export default React.memo(ToS);
+export default memo(ToS);

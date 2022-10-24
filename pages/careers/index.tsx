@@ -28,7 +28,7 @@ const Careers: NextPage = () => {
           />
         </div>
         <div className={styles.description}>
-          <h2>Work with Nifty League</h2>
+          <h1>Work with Nifty League</h1>
           <p>
             Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era
             of play-and-earn by offering a fun and engaging gaming ecosystem. We are backed by top VCs including RSE

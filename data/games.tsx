@@ -11,18 +11,18 @@ export const NIFTY_GAMES = [
       isComingSoon: false,
     },
   },
-  {
-    name: 'NIFTY TENNIS',
-    description:
-      'This is quite literarily the first NFT tennis game on the ethereum blockchain. If you’re a fan of the fantasy tennis league, Nifty tennis is something you’d definitely want to check out. Get in on the action and let’s see what you’re made of!',
-    video: 'https://www.youtube.com/embed/ylJzfLcWChc',
-    tag: 'GAME',
-    action: {
-      title: '',
-      link: '',
-      isComingSoon: true,
-    },
-  },
+  // {
+  //   name: 'NIFTY TENNIS',
+  //   description:
+  //     'This is quite literarily the first NFT tennis game on the ethereum blockchain. If you’re a fan of the fantasy tennis league, Nifty tennis is something you’d definitely want to check out. Get in on the action and let’s see what you’re made of!',
+  //   video: 'https://www.youtube.com/embed/ylJzfLcWChc',
+  //   tag: 'GAME',
+  //   action: {
+  //     title: '',
+  //     link: '',
+  //     isComingSoon: true,
+  //   },
+  // },
   {
     name: 'WEN GAME',
     description:
@@ -32,6 +32,18 @@ export const NIFTY_GAMES = [
     action: {
       title: 'START PLAYING',
       link: 'https://app.niftyleague.com/games/wen-game',
+      isComingSoon: false,
+    },
+  },
+  {
+    name: 'CRYPTO WINTER',
+    description:
+      'The Crypto Market is currently going through a winter season. Only few will make it to the next cycle. You’ll have to dodge different snowballs, rugs and icicles to get a seat at the ranking table. Weak hands need not apply. Diamond hands only!',
+    video: 'https://www.youtube.com/embed/ZiY-TwtzYVk',
+    tag: 'MINI-GAME',
+    action: {
+      title: 'START PLAYING',
+      link: 'https://app.niftyleague.com/games/crypto-winter',
       isComingSoon: false,
     },
   },

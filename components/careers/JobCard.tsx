@@ -24,8 +24,8 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
         onClick={() => setOpen(!open)}
       >
         <div>
-          <h3>{title}</h3>
-          <span>{location}</span>
+          <h5>{title}</h5>
+          <p>{location}</p>
         </div>
         <div className="jobs-card-header">
           <a
@@ -45,11 +45,13 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
       </div>
 
       <MDBCollapse show={open} className="p-md-5 p-3 pt-md-1 pt-2 h-auto">
-        <h4 className="color-purple md-text-left">About the Role</h4>
-        <div className="md-text-left div-paragraph">{aboutTheRole}</div>
+        <h6 className="color-purple md-text-left">About the Role</h6>
+        <div className="md-text-left div-paragraph">
+          <p>{aboutTheRole}</p>
+        </div>
         {responsibilities && (
           <div className="div-paragraph">
-            <h4 className="color-purple pt-5 md-text-left">Responsibilities:</h4>
+            <h6 className="color-purple pt-5 md-text-left">Responsibilities:</h6>
             <ul className="md-text-left">
               {responsibilities.map((resp, index) => (
                 <li key={index}>{resp}</li>
@@ -58,7 +60,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
           </div>
         )}
         <div className="div-paragraph">
-          <h4 className="color-purple pt-5 md-text-left">Requirements:</h4>
+          <h6 className="color-purple pt-5 md-text-left">Requirements:</h6>
           <ul className="md-text-left">
             {requirements.map((req, index) => (
               <li key={index}>{req}</li>
@@ -66,16 +68,18 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
           </ul>
         </div>
         <div className="div-paragraph">
-          <h4 className="color-purple pt-5 md-text-left">What we offer:</h4>
+          <h6 className="color-purple pt-5 md-text-left">What we offer:</h6>
           <ul className="md-text-left">
             {benefits.map((ben, index) => (
               <li key={index}>{ben}</li>
             ))}
           </ul>
         </div>
-        <a className="btn theme-btn-primary m-3 btn-lg" href={link} role="button" target="_blank" rel="noreferrer">
-          Apply
-        </a>
+        <div className="d-flex justify-content-center m-3">
+          <a className="btn theme-btn-primary btn-lg" href={link} role="button" target="_blank" rel="noreferrer">
+            Apply
+          </a>
+        </div>
       </MDBCollapse>
     </MDBCard>
   );
