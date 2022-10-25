@@ -160,7 +160,7 @@ const Home: NextPage = () => {
                     width={4842}
                     height={3371}
                     layout="responsive"
-                    src="/img/home-classic-gaming-reinvented-tvbase.png"
+                    src="/img/home-classic-gaming-reinvented-notv.png"
                   />
                   <video
                     width="100%"
@@ -174,6 +174,16 @@ const Home: NextPage = () => {
                   >
                     <source src="/video/sushi.mp4" type="video/mp4" />
                   </video>
+                  <div className="position-absolute gaming-bonk animated-fade-start animated-fade transition-delay-medium">
+                    <Image
+                      alt="Classic Gaming Reinvented Bonk"
+                      className="pixelated"
+                      width={4842}
+                      height={3371}
+                      layout="responsive"
+                      src="/img/bonk.png"
+                    />
+                  </div>
                 </div>
               </AnimatedWrapper>
               <div className="gaming-controller">
