@@ -1039,7 +1039,7 @@ a {
     display: none;
   }
   .com-intro {
-    max-width: 100% !important;
+    max-width: 100% !important;    
   }
   .com-intro p br {
     display: none;
@@ -1362,6 +1362,12 @@ a {
   .home-rental-section {
     top: 100px;
   }
+  .com-intro {
+    min-height: 800px;
+  }
+  .nifty-character {
+    margin-bottom: 0px;
+  }
 }
 
 @media (max-width: 920px) {  
@@ -1623,15 +1629,7 @@ a {
   }
   .community-data {
     min-width: auto;
-  }
-  .com-pg .com-intro h1 {
-    font-size: 64px;
-    text-align: center;
-  }
-  .com-pg .com-intro h4 {
-    font-size: 15px;
-    text-align: center;
-  }
+  }  
   .video-details h4 {
     font-size: 15px;
     text-align: center;
@@ -1766,6 +1764,8 @@ a {
   }
   .com-intro {
     max-width: 100% !important;
+    padding-top: 48px;
+
   }
   .com-intro p br {
     display: none;
@@ -1778,8 +1778,8 @@ a {
     margin-top: 100px;
   }
   .com-content {
-    margin-top: 0;
-  }
+    margin-top: 48px;
+  }  
 }
 
 @media (max-width: 615px) {

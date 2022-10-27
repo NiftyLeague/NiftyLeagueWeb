@@ -482,11 +482,9 @@ const Home: NextPage = () => {
                   className="section-actions"
                 >
                   <AnimatedWrapper>
-                    <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
-                      <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                        GET NOTIFIED
-                      </button>
-                    </a>
+                    <button className="btn disabled theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
+                      GET NOTIFIED
+                    </button>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
                     <Link href="/land">

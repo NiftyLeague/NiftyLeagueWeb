@@ -1,3 +1,4 @@
+import AnimatedWrapper from '@components/AnimatedWrapper';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Image from 'next/legacy/image';
 import { SOCIALS } from './constants';
@@ -14,17 +15,19 @@ const SocialCard = ({ link, title, subtitle, image }: SocialProps) => {
   return (
     <div className="col-12 col-lg-6">
       <a href={link} target="_blank" rel="noreferrer">
-        <div className="community-data p-3 p-sm-4 mb-2">
-          <div className="d-flex">
-            <div className="me-auto community-data-text">
-              <h4 className="color-purple">{title}</h4>
-              <p className="color-white">{subtitle}</p>
-            </div>
-            <div className="ms-auto d-flex align-items-center">
-              <Image alt={`${title} icon`} height={40} src={image} width={desktop ? 63 : 40} />
+        <AnimatedWrapper>
+          <div className="community-data p-3 p-sm-4 mb-2 animated-fade-start animated-fade transition-delay-medium">
+            <div className="d-flex">
+              <div className="me-auto community-data-text">
+                <h4 className="color-purple">{title}</h4>
+                <p className="color-white">{subtitle}</p>
+              </div>
+              <div className="ms-auto d-flex align-items-center">
+                <Image alt={`${title} icon`} height={40} src={image} width={desktop ? 63 : 40} />
+              </div>
             </div>
           </div>
-        </div>
+        </AnimatedWrapper>
       </a>
     </div>
   );

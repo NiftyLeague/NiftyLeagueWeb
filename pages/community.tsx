@@ -6,6 +6,7 @@ import Carousel from '@components/carousel';
 import { renderDegen } from '@components/carousel/DegenCardItem';
 import SocialCards from '@components/SocialCards';
 import { CommunityDegenData } from '@data/constants';
+import AnimatedWrapper from '@components/AnimatedWrapper';
 
 const Community: NextPage = () => {
   return (
@@ -15,23 +16,39 @@ const Community: NextPage = () => {
         <meta name="description" content="Community comes first at Nifty League" />
       </Head>
 
-      <div className="position-relative min-vh-100 pt-md-5 mt-md-5 com-intro">
+      <div className="position-relative pt-md-5 mt-md-5 com-intro">
         <div className="container pt-5 mt-sm-5 px-0 px-sm-5" style={{ maxWidth: '90%' }}>
           <div className="row m-0 position-relative com-intro-content">
             <div className="col-md-6 px-0 com-intro-text">
-              <h4 className="mt-5">Nifty League</h4>
-              <h1>Community</h1>
-              <p className="my-3">Meet our global community of gamers</p>
+              <div className="mt-5">
+                <AnimatedWrapper>
+                  <h4 className="animated-header-text animated-header-text-start">Nifty League</h4>
+                </AnimatedWrapper>
+              </div>
+              <AnimatedWrapper>
+                <h1 className="animated-header-text animated-header-text-start">Community</h1>
+              </AnimatedWrapper>
+              <div className="my-3">
+                <AnimatedWrapper>
+                  <p className="animated-header-text animated-header-text-start transition-delay-small">
+                    Meet our global community of gamers
+                  </p>
+                </AnimatedWrapper>
+              </div>
             </div>
             <div className="col-sm-8 col-md-6 col-xl-4 position-relative text-center com-banner">
-              <Image
-                src="/img/community/moon.png"
-                alt="Satoshi moon"
-                width={445}
-                height={437}
-                layout="responsive"
-                priority
-              />
+              <AnimatedWrapper>
+                <div className="position-relative animated-fade-start animated-fade transition-delay-medium">
+                  <Image
+                    src="/img/community/moon.png"
+                    alt="Satoshi moon"
+                    width={445}
+                    height={437}
+                    layout="responsive"
+                    priority
+                  />
+                </div>
+              </AnimatedWrapper>
               <div className="moon-grad">
                 <Image src="/img/community/moon-grad.svg" alt="gradient background" width={685} height={685} />
               </div>
@@ -39,14 +56,18 @@ const Community: NextPage = () => {
           </div>
         </div>
         <div className="w-100 h-auto position-absolute bottom-0 earth-com">
-          <Image
-            src="/img/community/community-bg-1.png"
-            layout="responsive"
-            width={1684}
-            height={525}
-            alt="Earth"
-            priority
-          />
+          <AnimatedWrapper>
+            <div className="position-relative animated-fade-start animated-fade transition-delay-medium">
+              <Image
+                src="/img/community/community-bg-1.png"
+                layout="responsive"
+                width={1684}
+                height={525}
+                alt="Earth"
+                priority
+              />
+            </div>
+          </AnimatedWrapper>
         </div>
         <span className="earth-grad">
           <Image
@@ -62,11 +83,17 @@ const Community: NextPage = () => {
       <div className="container com-content pb-5" style={{ maxWidth: '100%' }}>
         <div className="row m-0 p-0 position-relative text-center coversation-container">
           <div className="">
-            <h2 className="">Join the conversation</h2>
-            <p className="text-m-center">
-              Nifty League&apos;s community is unlike any other. Get your questions answers and connect with fellow
-              DEGENs!
-            </p>
+            <AnimatedWrapper>
+              <h3 className="animated-header-text animated-header-text-start transition-delay-small">
+                Join the conversation
+              </h3>
+            </AnimatedWrapper>
+            <AnimatedWrapper>
+              <p className="text-m-center animated-header-text animated-header-text-start transition-delay-medium">
+                Nifty League&apos;s community is unlike any other. Get your questions answers and connect with fellow
+                DEGENs!
+              </p>
+            </AnimatedWrapper>
           </div>
         </div>
       </div>
@@ -109,16 +136,26 @@ const Community: NextPage = () => {
                 priority
               />
             </div>
-            <h2 className="nifty-character-title">
-              Get Involved with
-              <br />
-              the Community
-            </h2>
-            <p className="my-sm-4 my-2 text-center">
-              Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
-            </p>
+            <AnimatedWrapper>
+              <h3 className="nifty-character-title animated-header-text animated-header-text-start transition-delay-small">
+                Get Involved with
+                <br />
+                the Community
+              </h3>
+            </AnimatedWrapper>
+            <div className="my-sm-4 my-2">
+              <AnimatedWrapper>
+                <p className="text-center animated-header-text animated-header-text-start transition-delay-medium">
+                  Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
+                </p>
+              </AnimatedWrapper>
+            </div>
             <a href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-              <button className="btn theme-btn-primary w-auto mt-3 mt-sm-0">Join our server</button>
+              <AnimatedWrapper>
+                <button className="btn theme-btn-primary w-auto mt-3 mt-sm-0 animated-fade-start animated-fade transition-delay-medium">
+                  Join our server
+                </button>
+              </AnimatedWrapper>
             </a>
           </div>
         </div>
