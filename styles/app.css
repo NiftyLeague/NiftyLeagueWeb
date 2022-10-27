@@ -75,6 +75,9 @@ p {
 .overview h5 {
   letter-spacing: -0.02em;
 }
+.home-pg {
+  overflow-x: hidden;
+}
 .home-pg p {
   letter-spacing: 2px;
 }
@@ -1270,6 +1273,11 @@ a {
   }
   .row-top-spacing {
     padding-top: 64px !important;
+  }
+  .compete-to-earn-section-token-4 {
+    width: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
   }
 }
 
