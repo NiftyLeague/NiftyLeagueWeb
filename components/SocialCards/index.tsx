@@ -1,5 +1,5 @@
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { SOCIALS } from './constants';
 
 interface SocialProps {
