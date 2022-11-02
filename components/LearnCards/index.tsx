@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import ExternalIcon from '../externalIcon';
 import { LEARN_CARDS } from './constants';
@@ -30,7 +30,7 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
               </button>
             </a>
           ) : (
-            <Link href={link} passHref>
+            <Link href={link} passHref legacyBehavior>
               <button className="btn theme-btn-aqua mt-md-2">
                 {btnText} <ExternalIcon />
               </button>

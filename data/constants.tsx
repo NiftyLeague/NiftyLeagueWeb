@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 export const SPONSORS = [
   { image: '/img/sponsors/rse.png', url: 'https://rseventures.com/', width: 300, height: 98 },

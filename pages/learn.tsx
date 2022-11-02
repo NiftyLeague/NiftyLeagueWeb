@@ -3,7 +3,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Layout from '@components/layout';
 import LearnCards from '@components/LearnCards';
 import ExternalIcon from '@components/externalIcon';
@@ -35,17 +35,17 @@ const Learn: NextPage = () => {
           <h2 className="my-3">Frequently Asked Questions</h2>
         </div>
         <MDBAccordion flush className="faq-accordion">
-          <MDBAccordionItem collapseId="faq-collapse1" headerTitle="What is Nifty League?">
+          <MDBAccordionItem collapseId={1} headerTitle="What is Nifty League?">
             Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new era
             of play-and-earn by offering a fun and engaging gaming ecosystem. The Niftyverse is centered around
             nostalgia where builders, players, and owners spend time connecting, gaming, and earning in Web3. Learn more{' '}
             <Link href="/docs/overview/intro" passHref>
-              <a>here</a>
+              here
             </Link>
             .
           </MDBAccordionItem>
           <MDBAccordionItem
-            collapseId="faq-collapse2"
+            collapseId={2}
             headerTitle="What is NFTL and how do I earn it by playing Nifty League
                   games?"
           >
@@ -65,11 +65,11 @@ const Learn: NextPage = () => {
             <br />
             Learn more{' '}
             <Link href="/docs/overview/nftl/overview" passHref>
-              <a>here</a>
+              here
             </Link>
             .
           </MDBAccordionItem>
-          <MDBAccordionItem collapseId="faq-collapse3" headerTitle="What is Nifty Smashers?">
+          <MDBAccordionItem collapseId={3} headerTitle="What is Nifty Smashers?">
             Nifty Smashers is the first title offered by Nifty League based off of the popular game Super Smash Bros.
             <br />
             <br />
@@ -77,13 +77,13 @@ const Learn: NextPage = () => {
             takes inspiration from the classic Super Smash Bros game where the objective is to knock your opponents off
             the map to score points.
           </MDBAccordionItem>
-          <MDBAccordionItem collapseId="faq-collapse4" headerTitle="Does it cost money to play your games?">
+          <MDBAccordionItem collapseId={4} headerTitle="Does it cost money to play your games?">
             At the moment you will either need to own or rent a DEGEN to play any games on our platform. A free-2-play
             version will be coming soon enabling players around the world to hop in our game servers and earn a small
             amount of NFTL for playing.
           </MDBAccordionItem>
         </MDBAccordion>
-        <Link href="/docs/faq/general" passHref>
+        <Link href="/docs/faq/general" passHref legacyBehavior>
           <button className="btn theme-btn-aqua mt-md-2 w-100">
             More FAQ <ExternalIcon />
           </button>
