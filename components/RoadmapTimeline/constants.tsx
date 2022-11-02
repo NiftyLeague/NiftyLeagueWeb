@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import styles from './index.module.scss';
 
 export const ROADMAP_CARDS = [

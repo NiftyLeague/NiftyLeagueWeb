@@ -1,5 +1,5 @@
 import { useMediaQuery } from '@mui/material';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import React, { CSSProperties } from 'react';
 
 type Sponsor = {
@@ -7,7 +7,7 @@ type Sponsor = {
   url: string;
   width: number;
   height: number;
-}
+};
 
 const styles = {
   container: {
@@ -28,18 +28,13 @@ const styles = {
       width: 160,
     },
   },
-}
+};
 
 const renderSponsor = ({ image, url, width, height }: Sponsor) => (
   <SponsorItem key={image} image={image} url={url} width={width} height={height} />
 );
 
-const SponsorItem = ({
-  image,
-  url,
-  width,
-  height,
-}: Sponsor): JSX.Element => {
+const SponsorItem = ({ image, url, width, height }: Sponsor): JSX.Element => {
   const desktop = useMediaQuery('(min-width:768px)');
   return (
     <a href={url} target="_blank" rel="noreferrer">
@@ -48,7 +43,7 @@ const SponsorItem = ({
       </div>
     </a>
   );
-}
+};
 
 const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => (
   <div className="container p-0 py-5 py-md-2 my-5 my-sm-0" style={{ maxWidth: '100%' }}>
@@ -61,11 +56,9 @@ const Sponsors = ({ sponsors }: { sponsors: Sponsor[] }) => (
         <Image src="/img/bakers-arr-right-shade.svg" alt="Sponsers shade right" width={230} height={390} />
       </span>
       <h3 className="my-sm-5 mb-5">We are proudly backed by</h3>
-      <section style={styles.container as CSSProperties}>
-        {sponsors.map(renderSponsor)}
-      </section>
+      <section style={styles.container as CSSProperties}>{sponsors.map(renderSponsor)}</section>
     </div>
   </div>
-)
+);
 
 export default React.memo(Sponsors);

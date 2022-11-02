@@ -4,7 +4,7 @@ import { memo } from 'react';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import Layout from '@components/layout';
 import Carousel from '@components/carousel';
@@ -168,8 +168,8 @@ const Home: NextPage = () => {
             )}
             <div className="col-md-6">
               <h2 className="my-3 text-m-left">Nifty League Ecosystem</h2>
-              <MDBAccordion flush className="league-special-accordion" initialActive="flush-collapse1">
-                <MDBAccordionItem collapseId="flush-collapse1" headerTitle="DEGEN Rentals">
+              <MDBAccordion flush className="league-special-accordion" initialActive={1}>
+                <MDBAccordionItem collapseId={1} headerTitle="DEGEN Rentals">
                   {!desktop && (
                     <Image
                       className="py-2"
@@ -183,21 +183,21 @@ const Home: NextPage = () => {
                   )}
                   Players can rent a DEGEN from owners directly via smart contract technology, opening up game play at
                   an attractive rate for players globally.{' '}
-                  <Link href="/about#rentals" passHref>
+                  <Link href="/about#rentals" passHref legacyBehavior>
                     <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
-                <MDBAccordionItem collapseId="flush-collapse2" headerTitle="Play-and-earn">
+                <MDBAccordionItem collapseId={2} headerTitle="Play-and-earn">
                   Players earn NFTL by landing hits and winning matches in our game Nifty Smashers. Join in on weekly
                   community tournaments sponsored by some amazing rewards!{' '}
-                  <Link href="/about#play-and-earn" passHref>
+                  <Link href="/about#play-and-earn" passHref legacyBehavior>
                     <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
-                <MDBAccordionItem collapseId="flush-collapse3" headerTitle="Games">
+                <MDBAccordionItem collapseId={3} headerTitle="Games">
                   Check our roadmap for some more exciting games coming in 2022! Get playing immediately with our first
                   title, Nifty Smashers, based off of the popular game Super Smash Bros.
-                  <Link href="/about#smashers" passHref>
+                  <Link href="/about#smashers" passHref legacyBehavior>
                     <button className="btn theme-btn-white mw-100">Learn More</button>
                   </Link>
                 </MDBAccordionItem>
