@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import DoneIcon from '@mui/icons-material/Done';
 import styles from './index.module.scss';
 
