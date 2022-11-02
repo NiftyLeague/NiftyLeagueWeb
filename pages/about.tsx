@@ -3,7 +3,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import Layout from '@components/layout';
 import Carousel from '@components/carousel';
@@ -36,13 +36,13 @@ const About: NextPage = () => {
             </p>
 
             <div className="display-buttons my-3 d-flex desktop">
-              <Link href="/docs" passHref>
+              <Link href="/docs" passHref legacyBehavior>
                 <button className="btn theme-btn-aqua mx-sm-2">
                   Read our docs
                   <ExternalIcon />
                 </button>
               </Link>
-              <Link href="/roadmap" passHref>
+              <Link href="/roadmap" passHref legacyBehavior>
                 <button className="btn theme-btn-white mx-sm-2 mx-0 my-sm-0 my-2 ">Check our roadmap</button>
               </Link>
               {false && (
@@ -52,7 +52,7 @@ const About: NextPage = () => {
               )}
             </div>
             <div className="display-buttons my-3 d-flex mobile">
-              <Link href="/docs" passHref>
+              <Link href="/docs" passHref legacyBehavior>
                 <button className="btn theme-btn-aqua mx-sm-2">Read our docs</button>
               </Link>
             </div>
@@ -193,8 +193,8 @@ const About: NextPage = () => {
               <Image
                 src="/img/about/nifty-degans.svg"
                 layout="responsive"
-                width="800px"
-                height="800px"
+                width={800}
+                height={800}
                 alt="Andy and Spike"
                 priority
               />
@@ -209,7 +209,7 @@ const About: NextPage = () => {
               DEGENs were hand-created by members of our community who minted, based on available traits and
               accessories. The final 100 DEGENs will be given to elite players in the Nifty League community.
             </p>
-            <Link href="/docs/overview/degens/about" passHref>
+            <Link href="/docs/overview/degens/about" passHref legacyBehavior>
               <button id="rentals" className="btn theme-btn-aqua w-auto my-5">
                 learn more about DEGEN NFTs
                 <ExternalIcon />
@@ -227,7 +227,7 @@ const About: NextPage = () => {
               renters will be able to play games such as Nifty Smashers and earn NFTL, and explore the Niftyverse. As a
               renter, you keep 70% of the in-game earnings, while 30% is distributed to the owner via a smart contract.
             </p>
-            <Link href="/docs/guides/rentals/rental-overview" passHref>
+            <Link href="/docs/guides/rentals/rental-overview" passHref legacyBehavior>
               <button className="btn theme-btn-aqua w-auto my-5">
                 learn more about rentals <ExternalIcon />
               </button>
@@ -238,8 +238,8 @@ const About: NextPage = () => {
               <Image
                 src="/img/about/niftyRentals.png"
                 layout="responsive"
-                width="450px"
-                height="450px"
+                width={450}
+                height={450}
                 alt="Alien degen image"
                 priority
               />
@@ -273,7 +273,7 @@ const About: NextPage = () => {
               be expanded to be used for purchasing additional in-game items and collectibles. NFTL is currently
               available to trade and stake on SushiSwap.
             </p>
-            <Link href="/docs/overview/nftl/overview" passHref>
+            <Link href="/docs/overview/nftl/overview" passHref legacyBehavior>
               <button className="btn theme-btn-aqua w-auto mt-5">
                 learn more <ExternalIcon />
               </button>
@@ -288,7 +288,7 @@ const About: NextPage = () => {
               for other cryptocurrencies. Your earnings are determined by a number of multipliers such as those from
               special backgrounds or items.
             </p>
-            <Link href="/docs/overview/p2e/daily-rewards" passHref>
+            <Link href="/docs/overview/p2e/daily-rewards" passHref legacyBehavior>
               <button className="btn theme-btn-aqua w-auto mt-5">
                 learn more <ExternalIcon />
               </button>
