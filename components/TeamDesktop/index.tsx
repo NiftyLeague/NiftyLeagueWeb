@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 
 import { TEAM_MEMBERS, TEAM_OFFICERS } from '@data/constants';
 

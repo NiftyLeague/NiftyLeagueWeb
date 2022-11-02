@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Layout from '@components/layout';
 import Carousel from '@components/carousel';
 import { renderDegen } from '@components/carousel/DegenCardItem';
@@ -85,9 +85,7 @@ const Community: NextPage = () => {
                 textAlign: 'center',
               }}
             >
-              <Carousel mobileItems={2}>
-                {CommunityDegenData.map(renderDegen)}
-              </Carousel>
+              <Carousel mobileItems={2}>{CommunityDegenData.map(renderDegen)}</Carousel>
             </section>
           </div>
           <div className="com-scroller-dark-background" />

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import ExternalIcon from './externalIcon';
 
 export default function Footer({ classes }: { classes?: { footer?: string } }) {
@@ -33,58 +33,51 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
         <div className="row m-0 p-md-5 pt-0 position-relative">
           <div className="col-6 col-sm-4 col-md-2 px-md-5  px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/">
-                <a>Home</a>
+              <Link href="/">Home</Link>
+              <Link href="/about" className="mt-2">
+                About
               </Link>
-              <Link href="/about">
-                <a className="mt-2">About</a>
+              <Link href="/roadmap" className="mt-2">
+                Roadmap
               </Link>
-              <Link href="/roadmap">
-                <a className="mt-2">Roadmap</a>
+              <Link href="/community" className="mt-2">
+                Community
               </Link>
-              <Link href="/community">
-                <a className="mt-2">Community</a>
-              </Link>
-              <Link href="/careers">
-                <a className="mt-2">Careers</a>
+              <Link href="/careers" className="mt-2">
+                Careers
               </Link>
             </div>
           </div>
           <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/learn">
-                <a>Learn</a>
-              </Link>
+              <Link href="/learn">Learn</Link>
               <a className="mt-2" href="https://niftyleague.medium.com/">
                 Blog
               </a>
-              <Link href="/docs">
-                <a className="mt-2">
-                  Docs <ExternalIcon />
-                </a>
+              <Link href="/docs" passHref className="mt-2">
+                Docs
+                <ExternalIcon />
               </Link>
-              <Link href="/shop">
-                <a className="mt-2">
-                  Merch <ExternalIcon />
-                </a>
+              <Link href="/shop" passHref className="mt-2">
+                Merch
+                <ExternalIcon />
               </Link>
             </div>
           </div>
           <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/feedback">
-                <a>
-                  Feedback <ExternalIcon />
-                </a>
+              <Link href="/feedback" passHref>
+                Feedback
+                <ExternalIcon />
               </Link>
-              <Link href="/terms-of-service">
-                <a className="mt-2">Terms of Service</a>
+              <Link href="/terms-of-service" className="mt-2">
+                Terms of Service
               </Link>
-              <Link href="/disclaimer">
-                <a className="mt-2">Disclaimer</a>
+              <Link href="/disclaimer" className="mt-2">
+                Disclaimer
               </Link>
-              <Link href="/privacy-policy">
-                <a className="mt-2">Privacy Policy</a>
+              <Link href="/privacy-policy" className="mt-2">
+                Privacy Policy
               </Link>
             </div>
           </div>

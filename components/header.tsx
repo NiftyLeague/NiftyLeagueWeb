@@ -1,7 +1,7 @@
 import { LegacyRef, useEffect, useRef } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import cn from 'classnames';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import ExternalIcon from './externalIcon';
@@ -13,10 +13,8 @@ function Navbar() {
     <nav id="nav" className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop">
       <div className="container-fluid z-100" style={{ borderStyle: 'none' }}>
         <div className="navbar-nav collapse navbar-collapse px-4 mt-4" id="navbarSupportedContent">
-          <Link href="/">
-            <a className="navbar-brand mt-5 mt-lg-0">
-              <Image src="/img/logo.svg" height={48} width={48} alt="MDB Logo" loading="lazy" />
-            </a>
+          <Link href="/" passHref className="navbar-brand mt-5 mt-lg-0">
+            <Image src="/img/logo.svg" height={48} width={48} alt="MDB Logo" loading="lazy" />
           </Link>
           <ul className="navbar-nav m-auto">
             <li
@@ -24,8 +22,8 @@ function Navbar() {
                 ['active']: pathname.includes('about'),
               })}
             >
-              <Link href="/about">
-                <a className="nav-link mx-4">About</a>
+              <Link href="/about" className="nav-link mx-4">
+                About
               </Link>
             </li>
             <li
@@ -33,8 +31,8 @@ function Navbar() {
                 ['active']: pathname.includes('roadmap'),
               })}
             >
-              <Link href="/roadmap">
-                <a className="nav-link mx-4">Roadmap</a>
+              <Link href="/roadmap" className="nav-link mx-4">
+                Roadmap
               </Link>
             </li>
             <li
@@ -42,8 +40,8 @@ function Navbar() {
                 ['active']: pathname.includes('community'),
               })}
             >
-              <Link href="/community">
-                <a className="nav-link mx-4">Community</a>
+              <Link href="/community" className="nav-link mx-4">
+                Community
               </Link>
             </li>
             <li
@@ -51,16 +49,14 @@ function Navbar() {
                 ['active']: pathname.includes('careers'),
               })}
             >
-              <Link href="/careers">
-                <a className="nav-link mx-4">Careers</a>
+              <Link href="/careers" className="nav-link mx-4">
+                Careers
               </Link>
             </li>
             <li className="nav-item">
-              <Link href="/shop">
-                <a className="nav-link mx-4">
-                  Merch
-                  <ExternalIcon />
-                </a>
+              <Link href="/shop" passHref className="nav-link mx-4">
+                Merch
+                <ExternalIcon />
               </Link>
             </li>
             <li
@@ -68,21 +64,20 @@ function Navbar() {
                 ['active']: pathname.includes('learn') || pathname.includes('blog'),
               })}
             >
-              <Link href="/learn">
-                <a
-                  className="nav-link dropdown-toggle true mx-4"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Learn
-                </a>
+              <Link
+                href="/learn"
+                className="nav-link dropdown-toggle true mx-4"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Learn
               </Link>
               <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li className={cn('nav-item', { ['inactive']: !pathname.includes('learn') })}>
-                  <Link href="/learn">
-                    <a className="dropdown-item">Overview / FAQ</a>
+                  <Link href="/learn" className="dropdown-item">
+                    Overview / FAQ
                   </Link>
                 </li>
                 <li
@@ -90,19 +85,17 @@ function Navbar() {
                     ['inactive']: !pathname.includes('blog'),
                   })}
                 >
-                  <Link href="https://niftyleague.medium.com/">
-                    <a className="dropdown-item">Blog</a>
+                  <Link href="https://niftyleague.medium.com/" className="dropdown-item">
+                    Blog
                   </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li className="nav-item inactive">
-                  <Link href="/docs">
-                    <a className="dropdown-item">
-                      Docs
-                      <ExternalIcon />
-                    </a>
+                  <Link href="/docs" passHref className="dropdown-item">
+                    Docs
+                    <ExternalIcon />
                   </Link>
                 </li>
               </ul>
@@ -193,9 +186,7 @@ function MobileNav() {
           {linkList.map(item => {
             return (
               <li key={item.href} onClick={handleUncheck}>
-                <Link href={item.href}>
-                  <a>{item.name}</a>
-                </Link>
+                <Link href={item.href}>{item.name}</Link>
               </li>
             );
           })}
