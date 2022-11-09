@@ -9,7 +9,7 @@ import Layout from '@components/layout';
 import Carousel from '@components/carousel';
 import { renderDegen } from '@components/carousel/DegenCardItem';
 import { renderTeamCardItem } from '@components/carousel/TeamCardItem';
-import { AboutDegenData, TEAM_MEMBERS, TEAM_OFFICERS } from '@data/constants';
+import { AboutDegenData, CORE_TEAM, DEGEN_DELEGATES } from '@data/constants';
 import TeamDesktop from '@components/TeamDesktop';
 import ExternalIcon from '@components/externalIcon';
 
@@ -28,8 +28,9 @@ const About: NextPage = () => {
             <h4 className="mt-sm-5 text-m-center">Welcome to</h4>
             <h1 className="text-m-center">Nifty League</h1>
             <p className="mt-5 mt-sm-3 text-m-center p1">
-              Nifty League is a game studio at the cutting edge of Web3. Our mission is to create a leading Web3 gaming
-              platform through community governance and development while always putting quality before hype.
+              Nifty League is a game studio at the cutting edge of Web3 and pioneers in decentralized game development.
+              Our mission is to create a studio of unparalleled quality and player experience to inspire other indie
+              developers to build a decentralized future with us.
             </p>
             <p className="text-m-center">
               Advance your gaming skills and join our community to earn daily NFTL rewards!
@@ -355,8 +356,9 @@ const About: NextPage = () => {
           )}
         </div>
         <div className="container py-5">
-          <div className="row m-0 p-0 position-relative text-center py-5 team-section">
-            <h1 className="font-64 pt-5">Meet the Nifty Team</h1>
+          <div className="row m-0 p-0 position-relative text-center pt-5 team-section">
+            <h1 className="font-64 pt-5">Degen Delegates</h1>
+            <h4 className="mt-4 text-center">Meet the degens who make Nifty League possible</h4>
           </div>
         </div>
         <TeamDesktop />
@@ -369,7 +371,7 @@ const About: NextPage = () => {
           }}
         >
           <Carousel isMobileViewOnly hideGradient tabletItems={2}>
-            {[...TEAM_OFFICERS, ...TEAM_MEMBERS].map(renderTeamCardItem)}
+            {[...CORE_TEAM, ...DEGEN_DELEGATES].map(renderTeamCardItem)}
           </Carousel>
         </section>
       </div>
