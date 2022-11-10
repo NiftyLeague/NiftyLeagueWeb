@@ -240,6 +240,12 @@ Timeline
   font-size: 20px;
 }
 
+.cd_timeline_divider {
+  border-bottom: white dotted 2px;
+  margin: 100px -500px 25px -500px;
+  padding-bottom: 20px;
+}
+
 .cd_timeline_content {
   position: relative;
   margin-left: 60px;
@@ -400,6 +406,9 @@ Timeline
   }
   .cd_timeline_content .about-video .play-video img {
     width: 100px;
+  }
+  .cd_timeline_divider {
+    margin: 100px -500px 125px -500px;
   }
 }
 
