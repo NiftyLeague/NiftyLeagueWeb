@@ -51,28 +51,27 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           <div className="col-6 col-sm-4 col-md-2 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
               <Link href="/learn">Learn</Link>
-              <a className="mt-2" href="https://niftyleague.medium.com/">
-                Blog
-              </a>
               <Link href="/docs" passHref className="mt-2">
                 Docs
                 <ExternalIcon />
               </Link>
+              <a className="mt-2" href="https://niftyleague.medium.com/">
+                Blog
+                <ExternalIcon />
+              </a>
               <Link href="/shop" passHref className="mt-2">
                 Merch
+                <ExternalIcon />
+              </Link>
+              <Link href="/feedback" passHref className="mt-2">
+                Feedback
                 <ExternalIcon />
               </Link>
             </div>
           </div>
           <div className="col-12 col-sm-4 col-md-5 px-md-5 px-0 pt-md-0 pt-4">
             <div className="row m-0 p-0 position-relative">
-              <Link href="/feedback" passHref>
-                Feedback
-                <ExternalIcon />
-              </Link>
-              <Link href="/terms-of-service" className="mt-2">
-                Terms of Service
-              </Link>
+              <Link href="/terms-of-service">Terms of Service</Link>
               <Link href="/disclaimer" className="mt-2">
                 Disclaimer
               </Link>

@@ -43,7 +43,7 @@
     left: 300px;
   }
 }
-@media (orientation: landscape) and (max-height: 550px) {
+@media (orientation: landscape) and (max-width: 550px) {
   .header .eclipse-location {
     left: 0px;
     top: 300px;
@@ -226,7 +226,7 @@
   background-color: white;
 }
 
-@media (orientation: landscape) and (max-height: 550px) {
+@media (orientation: landscape) and (max-width: 550px) {
   .mobile-nav {
     display: flex !important;
   }
