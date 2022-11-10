@@ -53,12 +53,12 @@ function Navbar() {
                 Careers
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link href="/shop" passHref className="nav-link mx-4">
                 Merch
                 <ExternalIcon />
               </Link>
-            </li>
+            </li> */}
             <li
               className={cn('nav-item dropdown', {
                 ['active']: pathname.includes('learn') || pathname.includes('blog'),
@@ -80,21 +80,18 @@ function Navbar() {
                     Overview / FAQ
                   </Link>
                 </li>
-                <li
-                  className={cn('nav-item', {
-                    ['inactive']: !pathname.includes('blog'),
-                  })}
-                >
-                  <Link href="https://niftyleague.medium.com/" className="dropdown-item">
-                    Blog
-                  </Link>
-                </li>
                 <li>
                   <hr className="dropdown-divider" />
                 </li>
                 <li className="nav-item inactive">
                   <Link href="/docs" passHref className="dropdown-item">
                     Docs
+                    <ExternalIcon />
+                  </Link>
+                </li>
+                <li className="nav-item inactive">
+                  <Link href="https://niftyleague.medium.com/" className="dropdown-item">
+                    Blog
                     <ExternalIcon />
                   </Link>
                 </li>

@@ -6,6 +6,7 @@ footer {
     color: #707070;
     text-align: center;
     font-size: 16px;
+    white-space: nowrap;
   }
   .container-footer {
     display: flex;
@@ -74,7 +75,7 @@ footer {
   }
 }
 
-@media (orientation: landscape) and (max-height: 550px) {
+@media (orientation: landscape) and (max-width: 550px) {
   footer {
     a {
       text-align: center;
