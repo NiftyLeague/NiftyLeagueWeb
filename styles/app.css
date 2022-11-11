@@ -308,7 +308,7 @@ a {
     display: none;
   }
 }
-@media (orientation: landscape) and (max-height: 550px) {
+@media (orientation: landscape) and (max-width: 550px) {
   .degen-scroller-content h1 {
     font-size: 55px;
     margin-top: 110px;
@@ -608,6 +608,15 @@ a {
 }
 .about-team-grad {
   margin-top: -50px;
+}
+.about-team-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-break: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .rental-eclipse {
@@ -1256,7 +1265,7 @@ a {
   }
 }
 
-@media (orientation: landscape) and (max-height: 550px) {
+@media (orientation: landscape) and (max-width: 550px) {
   .desktop {
     display: none !important;
   }
