@@ -210,148 +210,110 @@ export const CommunityDegenData = [
   },
 ];
 
-export const TEAM_OFFICERS = [
+export const CORE_TEAM = [
   {
     name: 'Andrew Mahoney-Fernandes',
-    title: 'Co-Founder, CEO',
     source: '/img/degens/team/NiftyAndy.png',
-    children: {
-      mobile: (
-        <>
-          <label className="uppercase mt-3 pt-3">formerly</label>
-          <div className="my-2">
-            <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
-          </div>
-        </>
-      ),
-      desktop: (
-        <>
-          <label className="uppercase mt-5 pt-3">formerly</label>
-          <div className="my-2">
-            <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
-          </div>
-          <label className="uppercase">3 years</label>
-        </>
-      ),
-    },
+    link: 'https://twitter.com/0xPlayerOne',
   },
   {
     name: 'Ali Timnak',
-    title: 'Co-Founder, CTO',
     source: '/img/degens/team/Snarfy.png',
-    children: {
-      mobile: (
-        <>
-          <label className="uppercase mt-3 pt-3">formerly</label>
-          <div className="my-2">
-            <Image alt="Activision logo" height={60} layout="fixed" src="/img/about/activision.svg" width={252} />
-          </div>
-        </>
-      ),
-      desktop: (
-        <>
-          <label className="uppercase mt-5 pt-3">formerly</label>
-          <div className="my-2">
-            <Image alt="Activision logo" height={60} layout="responsive" src="/img/about/activision.svg" width={252} />
-          </div>
-          <label className="uppercase">8 years</label>
-        </>
-      ),
-    },
+    link: 'https://twitter.com/SnarfyMcSlappy',
   },
   {
     name: 'Mike Scott',
-    title: 'Co-Founder, Creative Director',
     source: '/img/degens/team/NiftySpike.png',
-    children: {
-      mobile: (
-        <>
-          <label className="uppercase mt-3 pt-3">Former clients</label>
-          <div className="my-2 row align-items-center">
-            <Image alt="Nickelodeon logo" height={37} layout="fixed" src="/img/about/nickelodeon.svg" width={150} />
-            <Image alt="Disney logo" height={50} layout="fixed" src="/img/about/disney.svg" width={150} />
-          </div>
-        </>
-      ),
-      desktop: (
-        <>
-          <label className="uppercase mt-3 pt-3">Former clients</label>
-          <div className="my-2">
-            <Image
-              alt="Nickelodeon logo"
-              height={37}
-              layout="responsive"
-              src="/img/about/nickelodeon.svg"
-              width={252}
-            />
-          </div>
-          <Image alt="Disney logo" height={125} layout="responsive" src="/img/about/disney.svg" width={252} />
-        </>
-      ),
-    },
+    link: 'https://twitter.com/mikescottiskiff',
   },
-];
-
-export const TEAM_MEMBERS = [
   {
     name: 'Meghan Vita',
-    title: 'VP of Ops',
     source: '/img/degens/team/NiftyMorgan.png',
+    link: 'https://twitter.com/meghanvita',
   },
   {
     name: 'Dave Rosser',
-    title: 'Program & Community Manager',
     source: '/img/degens/team/bolo.png',
+    link: 'https://twitter.com/iambolodave',
   },
   {
     name: 'Jeff Elkind',
-    title: 'Sr. Software Developer',
     source: '/img/degens/team/zoiby.png',
-  },
-  {
-    name: 'Brian Wang',
-    title: 'Sr. Web3 Developer',
-    source: '/img/degens/team/brian.png',
-  },
-  {
-    name: 'Nicolas Morga',
-    title: 'Sr. Frontend Developer',
-    source: '/img/degens/team/nicolas.png',
-  },
-  {
-    name: 'Dr. Ashley Godbold',
-    title: 'Sr. Unity Engineer',
-    source: '/img/degens/team/ashley.png',
-  },
-  {
-    name: 'David',
-    title: 'Sr. Unity Engineer',
-    source: '/img/degens/team/david.png',
-  },
-  {
-    name: 'Sahin',
-    title: 'Sr. Unity Engineer',
-    source: '/img/degens/team/sahin.png',
-  },
-  {
-    name: 'Caleb',
-    title: 'Game Economy Designer',
-    source: '/img/degens/team/caleb.png',
-  },
-  {
-    name: 'Gideon Awolesi',
-    title: 'Product Designer',
-    source: '/img/degens/team/gideon.png',
+    link: 'https://twitter.com/_Zoiby',
   },
   {
     name: 'Ben Collie',
-    title: 'Pixel Artist',
     source: '/img/degens/team/ben.png',
+    link: 'https://twitter.com/bencollie_dev',
+  },
+  {
+    name: 'Sahin',
+    source: '/img/degens/team/sahin.png',
+  },
+  {
+    name: 'David H.',
+    source: '/img/degens/team/david.png',
+  },
+  {
+    name: 'Renoki',
+    source: '/img/degens/team/renoki.png',
+  },
+];
+
+export const DEGEN_DELEGATES = [
+  {
+    name: 'Real Deal McKeel',
+    source: '/img/degens/team/realdeal.png',
+    link: 'https://twitter.com/RealDealMcKeel',
+  },
+  {
+    name: 'Nard',
+    source: '/img/degens/team/nard.png',
+    link: 'https://twitter.com/_NARDLEON',
+  },
+  {
+    name: 'Sacx',
+    source: '/img/degens/team/sacx.png',
+    link: 'https://twitter.com/StefanP1987',
+  },
+  {
+    name: 'Parabolic',
+    source: '/img/degens/team/Parabolic.png',
+    link: 'https://twitter.com/PaRa80L1C',
+  },
+  {
+    name: 'Citra',
+    source: '/img/degens/team/citra.png',
+    link: 'https://twitter.com/fcitra',
+  },
+  {
+    name: 'Consty',
+    source: '/img/degens/team/consty.png',
+    link: 'https://twitter.com/ConstyNFT',
+  },
+  {
+    name: 'Big Meech',
+    source: '/img/degens/team/BigMeech.png',
   },
   {
     name: 'David Lee',
-    title: 'Sr. Solidity Dev',
     source: '/img/degens/team/davidLee.png',
+  },
+  {
+    name: 'Gideon Awolesi',
+    source: '/img/degens/team/gideon.png',
+  },
+  {
+    name: 'Dr. Ashley Godbold',
+    source: '/img/degens/team/ashley.png',
+  },
+  {
+    name: 'Caleb C.',
+    source: '/img/degens/team/caleb.png',
+  },
+  {
+    name: 'Will P.',
+    source: '/img/degens/team/will.png',
   },
 ];
 
