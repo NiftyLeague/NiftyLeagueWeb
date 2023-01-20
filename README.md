@@ -60,8 +60,8 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Support
 
-Email [andy@niftyleague.com](mailto:andy@niftyleague.com)  
+Email [andy@niftyleague.com](mailto:andy@niftyleague.com)
 
-or  
+or
 
 Join the [Nifty League Discord Server](https://discord.gg/niftyleague) and message a admin
