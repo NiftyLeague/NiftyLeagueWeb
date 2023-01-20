@@ -24,7 +24,7 @@
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.0",
     "sass": "^1.49.7",
-    "sharp": "^0.31.1"
+    "sharp": "^0.31.3"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
