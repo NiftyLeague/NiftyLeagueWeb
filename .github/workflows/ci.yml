@@ -1,9 +1,9 @@
-name: Validate, build, and test on every push
+name: Validate, lint, and test on every push
 
 on: [push]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repo
@@ -25,7 +25,3 @@ jobs:
         uses: borales/actions-yarn@v3.0.0
         with:
           cmd: lint
-      - name: Build the project
-        uses: borales/actions-yarn@v3.0.0
-        with:
-          cmd: build
