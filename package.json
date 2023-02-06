@@ -32,7 +32,7 @@
   "devDependencies": {
     "@babel/core": "^7.19.6",
     "@graphql-codegen/cli": "2.16.4",
-    "@graphql-codegen/typescript": "2.8.7",
+    "@graphql-codegen/typescript": "3.0.0",
     "@graphql-codegen/typescript-react-apollo": "3.3.7",
     "@types/gtag.js": "^0.0.12",
     "@types/jquery": "^3.5.16",
