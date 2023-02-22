@@ -24,17 +24,42 @@ declare global {
 
 type SelectGroup = '2D' | '3D' | 'Box' | 'Sprite';
 
+type Color =
+  | 'salmon'
+  | 'purple'
+  | 'blue'
+  | 'bluegrey'
+  | 'bluepurple'
+  | 'green'
+  | 'bluegreen'
+  | 'brown'
+  | 'ochre'
+  | 'palepink'
+  | 'yellow'
+  | 'greenish'
+  | 'lightblue'
+  | 'ochretwo';
+
 export default function PostView({ preview }: { preview: boolean }) {
   const router = useRouter();
   const { tokenId } = router.query;
   const [selected, setSelected] = useState<SelectGroup>('2D');
+  const [color, setColor] = useState<Color>('blue');
   const [src, setSrc] = useState(`/degens/3D/${tokenId}.glb`);
 
   if (!router.isFallback && !tokenId) return <ErrorPage statusCode={404} />;
 
   const switchSrc = (group: SelectGroup, path: string) => {
-    if (group !== '2D' && group !== 'Sprite') setSrc(path);
+    if (['3D', 'Box'].includes(group)) {
+      setSrc(path);
+      if (group === '3D') setColor('salmon');
+      else if (group === 'Box') setColor('bluepurple');
+    }
     setSelected(group);
+  };
+
+  const handleSelectColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    setColor(e.target.value as Color);
   };
 
   return (
@@ -76,8 +101,20 @@ export default function PostView({ preview }: { preview: boolean }) {
         )}
         <div
           className={cn(styles.wrapper, {
-            [styles.gradient_salmon]: selected === '3D',
-            [styles.gradient_blue]: selected === 'Box',
+            [styles.gradient_salmon]: color === 'salmon',
+            [styles.gradient_purple]: color === 'purple',
+            [styles.gradient_blue]: color === 'blue',
+            [styles.gradient_bluegrey]: color === 'bluegrey',
+            [styles.gradient_bluepurple]: color === 'bluepurple',
+            [styles.gradient_green]: color === 'green',
+            [styles.gradient_bluegreen]: color === 'bluegreen',
+            [styles.gradient_brown]: color === 'brown',
+            [styles.gradient_ochre]: color === 'ochre',
+            [styles.gradient_palepink]: color === 'palepink',
+            [styles.gradient_yellow]: color === 'yellow',
+            [styles.gradient_greenish]: color === 'greenish',
+            [styles.gradient_lightblue]: color === 'lightblue',
+            [styles.gradient_ochretwo]: color === 'ochretwo',
           })}
         >
           <main className={styles.main__wrapper}>
@@ -137,6 +174,32 @@ export default function PostView({ preview }: { preview: boolean }) {
                   </button>
                 </div>
               </div>
+              {['3D', 'Box'].includes(selected) && (
+                <div className={styles.menu__overlay__colorpicker}>
+                  <select
+                    name="background"
+                    className={styles.background__picker}
+                    title="Background"
+                    onChange={e => handleSelectColor(e)}
+                    value={color}
+                  >
+                    <option value="blue">Blue</option>
+                    <option value="bluegreen">Blue Green</option>
+                    <option value="bluepurple">Blue Purple</option>
+                    <option value="bluegrey">Blue Grey</option>
+                    <option value="brown">Brown</option>
+                    <option value="green">Green</option>
+                    <option value="greenish">Greenish</option>
+                    <option value="lightblue">Light Blue</option>
+                    <option value="ochre">Ochre</option>
+                    <option value="ochretwo">Ochre Two</option>
+                    <option value="palepink">Pale Pink</option>
+                    <option value="purple">Purple</option>
+                    <option value="salmon">Salmon</option>
+                    <option value="yellow">Yellow</option>
+                  </select>
+                </div>
+              )}
             </div>
           </main>
         </div>
