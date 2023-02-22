@@ -1,15 +1,11 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
 import cn from 'classnames';
-
-import ErrorPage from 'next/error';
-import { GetStaticProps, GetStaticPaths } from 'next';
-import { ParsedUrlQuery } from 'querystring';
 import styles from './gltf.module.scss';
-import * as React from 'react';
 
 export const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
 export const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images/`;
@@ -73,6 +69,7 @@ export default function PostView({ preview }: { preview: boolean }) {
         {selected === '2D' && (
           <Image
             alt="NiftyDegen 2D NFT"
+            priority
             className={styles.image}
             fill
             objectFit="cover"
@@ -84,6 +81,7 @@ export default function PostView({ preview }: { preview: boolean }) {
           <div className={styles.sprite}>
             <Image
               alt="Degen Sprite Background"
+              priority
               className={styles.image}
               fill
               objectFit="cover"
@@ -91,6 +89,7 @@ export default function PostView({ preview }: { preview: boolean }) {
             />
             <Image
               alt="Degen Sprite"
+              priority
               className={styles.image}
               fill
               objectFit="cover"
