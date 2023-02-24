@@ -1,19 +1,4 @@
-@import 'https://fonts.googleapis.com/css2?family=Nokora:wght@400;700&display=swap';
-
 .root {
-  body,
-  html {
-    margin: 0;
-    height: 100%;
-    overflow: hidden;
-  }
-
-  body {
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-
   select {
     cursor: pointer;
     background-color: #fff;
@@ -78,7 +63,7 @@
 
   .image {
     width: 100vw;
-    height: auto;
+    height: auto !important;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges; /* Firefox */
     image-rendering: -o-crisp-edges; /* Opera */
