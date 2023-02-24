@@ -6,10 +6,12 @@ import Script from 'next/script';
 import cn from 'classnames';
 import styles from './gltf.module.scss';
 
-export const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
-export const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images/`;
+const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
+const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images/`;
+const PIXEL_SPRITE_TEST = 'https://pixls.blob.core.windows.net/images/animated-sprite/3058.gif';
+const SPRITE_BGS = ['bg2.png', 'bg3.png'];
 
-export const LEGGIES = [
+const LEGGIES = [
   150, 225, 293, 456, 831, 863, 868, 872, 948, 974, 998, 1008, 1041, 1124, 1218, 1362, 1402, 1439, 1453, 1485, 1486,
   1509, 1524, 1640, 1676, 2065, 2069, 2170, 2199, 2399, 2500, 2754, 2886, 3070, 3213, 3313, 3390, 3392, 3403, 3454,
   3568, 3667, 3722, 3767, 3776, 3803, 3925, 3963, 3980, 4078, 4193, 4300, 4311, 4342, 4491, 4498, 4576, 4588, 4627,
@@ -96,13 +98,19 @@ export default function DegenViews() {
         )}
         {selected === 'Sprite' && (
           <div className={styles.sprite}>
-            <Image alt="Degen Sprite Background" className={styles.image} fill priority src="/degens/sprites/bg.png" />
+            <Image
+              alt="Degen Sprite Background"
+              className={styles.image}
+              fill
+              priority
+              src={`/degens/sprites/${SPRITE_BGS[Math.floor(Math.random() * SPRITE_BGS.length)]}`}
+            />
             <Image
               alt="Degen Sprite"
               className={styles.image}
               fill
               priority
-              src="https://pixls.blob.core.windows.net/images/animated-sprite/3058.gif"
+              src={Number(tokenId) < 3 ? `/degens/sprites/${tokenId}.gif` : PIXEL_SPRITE_TEST}
             />
           </div>
         )}
