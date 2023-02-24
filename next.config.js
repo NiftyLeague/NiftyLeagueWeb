@@ -9,7 +9,12 @@ const { withSentryConfig } = require('@sentry/nextjs');
 const moduleExports = {
   reactStrictMode: true,
   images: {
-    domains: ['secure.gravatar.com', 'nleagueblog.wpengine.com'],
+    domains: [
+      'secure.gravatar.com',
+      'nleagueblog.wpengine.com',
+      'nifty-league.s3.amazonaws.com',
+      'pixls.blob.core.windows.net',
+    ],
   },
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
