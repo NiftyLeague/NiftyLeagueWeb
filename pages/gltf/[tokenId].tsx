@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import { ButtonGroup, Button } from '@mui/material';
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
@@ -9,7 +10,6 @@ import styles from './gltf.module.scss';
 const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
 const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images/`;
 const PIXEL_SPRITE_TEST = 'https://pixls.blob.core.windows.net/images/animated-sprite/3058.gif';
-const SPRITE_BGS = ['bg2.png', 'bg3.png'];
 
 const LEGGIES = [
   150, 225, 293, 456, 831, 863, 868, 872, 948, 974, 998, 1008, 1041, 1124, 1218, 1362, 1402, 1439, 1453, 1485, 1486,
@@ -104,7 +104,8 @@ export default function DegenViews() {
               className={styles.image}
               fill
               priority
-              src={`/degens/sprites/${SPRITE_BGS[Math.floor(Math.random() * SPRITE_BGS.length)]}`}
+              quality={100}
+              src={'/degens/sprites/bg2.png'}
             />
             <Image
               alt="Degen Sprite"
@@ -162,34 +163,32 @@ export default function DegenViews() {
             <div className={styles.menu__overlay}>
               <div className={styles.menu__overlay__dimension}>
                 <div className={styles.menu__overlay__boggs}>
-                  <button
-                    type="button"
-                    onClick={() => switchSrc('2D')}
-                    style={{ backgroundColor: selected === '2D' ? '#8484e4' : 'White' }}
-                  >
-                    2D
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => switchSrc('3D', `/degens/3D/${tokenId}.glb`)}
-                    style={{ backgroundColor: selected === '3D' ? '#8484e4' : 'White' }}
-                  >
-                    3D
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => switchSrc('Box', `/degens/boxes/${tokenId}.glb`)}
-                    style={{ backgroundColor: selected === 'Box' ? '#8484e4' : 'White' }}
-                  >
-                    Box
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => switchSrc('Sprite')}
-                    style={{ backgroundColor: selected === 'Sprite' ? '#8484e4' : 'White' }}
-                  >
-                    Sprite
-                  </button>
+                  <ButtonGroup variant="contained" aria-label="outlined primary button group">
+                    <Button
+                      onClick={() => switchSrc('2D')}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === '2D' })}
+                    >
+                      2D
+                    </Button>
+                    {/* <Button
+                      onClick={() => switchSrc('3D', `/degens/3D/${tokenId}.glb`)}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === '3D' })}
+                    >
+                      3D
+                    </Button>
+                    <Button
+                      onClick={() => switchSrc('Box', `/degens/boxes/${tokenId}.glb`)}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === 'Box' })}
+                    >
+                      Box
+                    </Button> */}
+                    <Button
+                      onClick={() => switchSrc('Sprite')}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === 'Sprite' })}
+                    >
+                      Sprite
+                    </Button>
+                  </ButtonGroup>
                 </div>
               </div>
               {['3D', 'Box'].includes(selected) && (
