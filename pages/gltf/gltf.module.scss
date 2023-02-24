@@ -75,6 +75,7 @@
   .image {
     width: 100vw;
     height: auto !important;
+    min-height: 100vh;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges; /* Firefox */
     image-rendering: -o-crisp-edges; /* Opera */
@@ -101,7 +102,7 @@
 
   .menu__overlay {
     position: absolute;
-    top: 1rem;
+    top: 2rem;
     left: 1rem;
     right: 1rem;
     display: flex;
