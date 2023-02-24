@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
@@ -36,14 +35,12 @@ type Color =
   | 'lightblue'
   | 'ochretwo';
 
-export default function PostView({ preview }: { preview: boolean }) {
+export default function DegenViews() {
   const router = useRouter();
   const { tokenId } = router.query;
   const [selected, setSelected] = useState<SelectGroup>('2D');
   const [color, setColor] = useState<Color>('blue');
   const [src, setSrc] = useState(`/degens/3D/${tokenId}.glb`);
-
-  if (!router.isFallback && !tokenId) return <ErrorPage statusCode={404} />;
 
   const switchSrc = (group: SelectGroup, path: string) => {
     if (['3D', 'Box'].includes(group)) {
@@ -61,59 +58,57 @@ export default function PostView({ preview }: { preview: boolean }) {
   return (
     <>
       <Head>
-        <title>Nifty League | About</title>
+        <title>Nifty League DEGEN #{tokenId}</title>
         <meta name="description" content="About Nifty League and our team" />
       </Head>
+      <style jsx global>{`
+        body,
+        html {
+          margin: 0;
+          height: 100%;
+          overflow: hidden;
+        }
+        body {
+          background-color: #fff;
+          margin: 0;
+          padding: 0;
+        }
+      `}</style>
       <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></Script>
       <div className={styles.root}>
         {selected === '2D' && (
-          <Image
-            alt="NiftyDegen 2D NFT"
-            priority
-            className={styles.image}
-            fill
-            objectFit="cover"
-            objectPosition="top left"
-            src={`/degens/2D/${tokenId}.png`}
-          />
+          <Image alt="NiftyDegen 2D NFT" priority className={styles.image} fill src={`/degens/2D/${tokenId}.png`} />
         )}
         {selected === 'Sprite' && (
           <div className={styles.sprite}>
-            <Image
-              alt="Degen Sprite Background"
-              priority
-              className={styles.image}
-              fill
-              objectFit="cover"
-              src="/degens/sprites/bg-2.png"
-            />
+            <Image alt="Degen Sprite Background" className={styles.image} fill priority src="/degens/sprites/bg.png" />
             <Image
               alt="Degen Sprite"
-              priority
               className={styles.image}
               fill
-              objectFit="cover"
-              objectPosition="top left"
+              priority
               src="https://pixls.blob.core.windows.net/images/animated-sprite/3058.gif"
             />
           </div>
         )}
         <div
           className={cn(styles.wrapper, {
-            [styles.gradient_salmon]: color === 'salmon',
-            [styles.gradient_purple]: color === 'purple',
-            [styles.gradient_blue]: color === 'blue',
-            [styles.gradient_bluegrey]: color === 'bluegrey',
-            [styles.gradient_bluepurple]: color === 'bluepurple',
-            [styles.gradient_green]: color === 'green',
-            [styles.gradient_bluegreen]: color === 'bluegreen',
-            [styles.gradient_brown]: color === 'brown',
-            [styles.gradient_ochre]: color === 'ochre',
-            [styles.gradient_palepink]: color === 'palepink',
-            [styles.gradient_yellow]: color === 'yellow',
-            [styles.gradient_greenish]: color === 'greenish',
-            [styles.gradient_lightblue]: color === 'lightblue',
-            [styles.gradient_ochretwo]: color === 'ochretwo',
+            ...(['3D', 'Box'].includes(selected) && {
+              [styles.gradient_salmon]: color === 'salmon',
+              [styles.gradient_purple]: color === 'purple',
+              [styles.gradient_blue]: color === 'blue',
+              [styles.gradient_bluegrey]: color === 'bluegrey',
+              [styles.gradient_bluepurple]: color === 'bluepurple',
+              [styles.gradient_green]: color === 'green',
+              [styles.gradient_bluegreen]: color === 'bluegreen',
+              [styles.gradient_brown]: color === 'brown',
+              [styles.gradient_ochre]: color === 'ochre',
+              [styles.gradient_palepink]: color === 'palepink',
+              [styles.gradient_yellow]: color === 'yellow',
+              [styles.gradient_greenish]: color === 'greenish',
+              [styles.gradient_lightblue]: color === 'lightblue',
+              [styles.gradient_ochretwo]: color === 'ochretwo',
+            }),
           })}
         >
           <main className={styles.main__wrapper}>
