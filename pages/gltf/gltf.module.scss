@@ -37,6 +37,17 @@
     text-shadow: 0 0 0 #000;
   }
 
+  .btn {
+    border: 1px solid #620edf !important;
+    background-color: #fff;
+    color: #620edf;
+  }
+
+  .btn_selected {
+    background-color: #620edf !important;
+    color: #fff !important;
+  }
+
   .wrapper {
     display: flex;
     flex-direction: column;
