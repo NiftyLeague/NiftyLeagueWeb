@@ -15,6 +15,7 @@
     "@apollo/client": "^3.7.5",
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
+    "@google/model-viewer": "^3.0.2",
     "@mui/icons-material": "^5.4.1",
     "@mui/material": "^5.4.1",
     "@sentry/nextjs": "^7.34.0",
@@ -27,7 +28,8 @@
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.0",
     "sass": "^1.49.7",
-    "sharp": "^0.31.3"
+    "sharp": "^0.31.3",
+    "three": "^0.149.0"
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
