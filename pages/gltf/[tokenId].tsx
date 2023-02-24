@@ -69,7 +69,7 @@ export default function DegenViews() {
   return (
     <>
       <Head>
-        <title>Nifty League DEGEN #{tokenId}</title>
+        <title>NiftyDegen Model Viewer</title>
         <meta name="description" content="Nifty League Degen 2D & 3D Asset" />
       </Head>
       <style jsx global>{`
@@ -90,9 +90,10 @@ export default function DegenViews() {
         {selected === '2D' && (
           <Image
             alt="NiftyDegen 2D NFT"
-            priority
             className={styles.image}
             fill
+            priority
+            quality={100}
             src={`/degens/2D/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`}
           />
         )}
