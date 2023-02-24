@@ -15,7 +15,7 @@ export const LEGGIES = [
   3568, 3667, 3722, 3767, 3776, 3803, 3925, 3963, 3980, 4078, 4193, 4300, 4311, 4342, 4491, 4498, 4576, 4588, 4627,
   4706, 4768, 4857, 4867, 5064, 5073, 5082, 5178, 5504, 5547, 5555, 5783, 5908, 6088, 6140, 6203, 6628, 6963, 7215,
   7222, 7458, 7548, 7616, 7834, 7845, 8039, 8140, 8239, 8290, 8461, 8506, 8614, 8741, 8807, 8812, 8863, 8877, 8902,
-  8994, 9626, 9792, 9810, 9835, 9845,
+  8994, 9626, 9792, 9810, 9835, 9845, 9924,
 ];
 
 declare global {
@@ -51,9 +51,9 @@ export default function DegenViews() {
   const [color, setColor] = useState<Color>('blue');
   const [src, setSrc] = useState(`/degens/3D/${tokenId}.glb`);
 
-  const switchSrc = (group: SelectGroup, path: string) => {
+  const switchSrc = (group: SelectGroup, path?: string) => {
     if (['3D', 'Box'].includes(group)) {
-      setSrc(path);
+      setSrc(path as string);
       if (group === '3D') setColor('salmon');
       else if (group === 'Box') setColor('bluepurple');
     }
@@ -68,7 +68,7 @@ export default function DegenViews() {
     <>
       <Head>
         <title>Nifty League DEGEN #{tokenId}</title>
-        <meta name="description" content="About Nifty League and our team" />
+        <meta name="description" content="Nifty League Degen 2D & 3D Asset" />
       </Head>
       <style jsx global>{`
         body,
@@ -155,7 +155,7 @@ export default function DegenViews() {
                 <div className={styles.menu__overlay__boggs}>
                   <button
                     type="button"
-                    onClick={() => switchSrc('2D', `/degens/2D/${tokenId}.png`)}
+                    onClick={() => switchSrc('2D')}
                     style={{ backgroundColor: selected === '2D' ? '#8484e4' : 'White' }}
                   >
                     2D
@@ -176,7 +176,7 @@ export default function DegenViews() {
                   </button>
                   <button
                     type="button"
-                    onClick={() => switchSrc('Sprite', `/degens/spritess/${tokenId}.webp`)}
+                    onClick={() => switchSrc('Sprite')}
                     style={{ backgroundColor: selected === 'Sprite' ? '#8484e4' : 'White' }}
                   >
                     Sprite
