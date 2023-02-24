@@ -74,8 +74,8 @@
 
   .image {
     width: 100vw;
-    height: auto !important;
-    min-height: 100vh;
+    object-fit: cover;
+    object-position: top left;
     image-rendering: crisp-edges;
     image-rendering: -moz-crisp-edges; /* Firefox */
     image-rendering: -o-crisp-edges; /* Opera */
@@ -102,11 +102,22 @@
 
   .menu__overlay {
     position: absolute;
-    top: 2rem;
+    top: 1rem;
     left: 1rem;
     right: 1rem;
     display: flex;
     justify-content: space-between;
+  }
+
+  @media (max-width: 615px) {
+    .menu__overlay {
+      top: 3.5rem;
+    }
+    .image {
+      min-height: 100vh;
+      top: -20px !important;
+      object-position: center;
+    }
   }
 
   .menu__overlay__animation,
