@@ -8,8 +8,8 @@ import cn from 'classnames';
 import styles from './gltf.module.scss';
 
 const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
-const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images/`;
-const PIXEL_SPRITE_TEST = 'https://pixls.blob.core.windows.net/images/animated-sprite/3058.gif';
+const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images`;
+const DEGEN_BASE_SPRITE_URL = `${DEGEN_BASE_API_URL}/assets/raw/gifs/nesw`;
 
 const LEGGIES = [
   150, 225, 293, 456, 831, 863, 868, 872, 948, 974, 998, 1008, 1041, 1124, 1218, 1362, 1402, 1439, 1453, 1485, 1486,
@@ -105,14 +105,14 @@ export default function DegenViews() {
               fill
               priority
               quality={100}
-              src={'/degens/sprites/bg2.png'}
+              src={'/degens/sprites/bg.png'}
             />
             <Image
               alt="Degen Sprite"
               className={styles.image}
               fill
               priority
-              src={Number(tokenId) < 3 ? `/degens/sprites/${tokenId}.gif` : PIXEL_SPRITE_TEST}
+              src={`${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`}
             />
           </div>
         )}
