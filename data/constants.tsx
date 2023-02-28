@@ -25,12 +25,12 @@ export const HomeDegenData = [
   {
     name: 'Nifty Sonic',
     createdDate: '9/24/2021 2:18 PM',
-    source: '/img/degens/niftysonic.png',
+    source: '/img/degens/233.png',
   },
   {
     name: 'Grape',
     createdDate: '9/24/2021 1:35 PM',
-    source: '/img/degens/grape.png',
+    source: '/img/degens/104.png',
   },
   {
     name: 'Marvin the Martian',
@@ -40,17 +40,17 @@ export const HomeDegenData = [
   {
     name: 'Pirate Morty',
     createdDate: '9/30/2021 3:49 PM',
-    source: '/img/degens/piratemorty.png',
+    source: '/img/degens/3190.png',
   },
   {
     name: 'Beard Kong',
     createdDate: '9/24/2021 1:45 PM',
-    source: '/img/degens/beardkong.png',
+    source: '/img/degens/140.png',
   },
   {
     name: 'Bruno Mars',
     createdDate: '9/24/2021 2:54 PM',
-    source: '/img/degens/brunomars.png',
+    source: '/img/degens/451.png',
   },
   {
     name: 'Degen 3234',
@@ -93,12 +93,12 @@ export const AboutDegenData = [
   {
     name: 'Shih Tzu Doge',
     createdDate: '9/24/2021 2:07 PM',
-    source: '/img/degens/shihtzudoge.png',
+    source: '/img/degens/187.png',
   },
   {
     name: 'CRIBBIT',
     createdDate: '9/24/2021 10:59 AM',
-    source: '/img/degens/cribbit.png',
+    source: '/img/degens/171.png',
   },
   {
     name: 'ALBERT',
@@ -108,7 +108,7 @@ export const AboutDegenData = [
   {
     name: 'Snowball II',
     createdDate: '9/24/2021 2:26 PM',
-    source: '/img/degens/snowballii.png',
+    source: '/img/degens/141.png',
   },
   {
     name: 'Joe Pesci',
@@ -121,9 +121,9 @@ export const AboutDegenData = [
     source: '/img/degens/666.png',
   },
   {
-    name: 'This One is for the Whales',
-    createdDate: '9/30/2021 3:49 PM',
-    source: '/img/degens/thisoneisforthewhales.png',
+    name: 'Seed Phrase',
+    createdDate: '2/17/2023 10:49 AM',
+    source: '/img/degens/9964.png',
   },
   {
     name: 'Degen 18',
@@ -151,7 +151,7 @@ export const CommunityDegenData = [
   {
     name: 'Monopoly Frog',
     createdDate: '9/24/2021 2:53 PM',
-    source: '/img/degens/monopolyfrog.png',
+    source: '/img/degens/443.png',
   },
   {
     name: 'Lil Mayo',
@@ -186,7 +186,7 @@ export const CommunityDegenData = [
   {
     name: 'wagmi',
     createdDate: '9/24/2021 1:35 PM',
-    source: '/img/degens/wagmi.png',
+    source: '/img/degens/101.png',
   },
   {
     name: 'Los Angeles Lakers',

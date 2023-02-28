@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { ButtonGroup, Button } from '@mui/material';
+import ErrorPage from 'next/error';
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
@@ -53,6 +54,8 @@ export default function DegenViews() {
   const [color, setColor] = useState<Color>('blue');
   const [src, setSrc] = useState(`/degens/3D/${tokenId}.glb`);
 
+  if (!tokenId) return <ErrorPage statusCode={404} />;
+
   const switchSrc = (group: SelectGroup, path?: string) => {
     if (['3D', 'Box'].includes(group)) {
       setSrc(path as string);
@@ -94,7 +97,7 @@ export default function DegenViews() {
             fill
             priority
             quality={100}
-            src={`/degens/2D/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`}
+            src={`/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`}
           />
         )}
         {selected === 'Sprite' && (
@@ -105,7 +108,7 @@ export default function DegenViews() {
               fill
               priority
               quality={100}
-              src={'/degens/sprites/bg.png'}
+              src={'/img/sprites/bg.png'}
             />
             <Image
               alt="Degen Sprite"
