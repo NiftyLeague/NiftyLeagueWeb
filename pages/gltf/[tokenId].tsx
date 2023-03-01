@@ -107,7 +107,7 @@ export default function DegenViews() {
               fill
               priority
               quality={100}
-              src={'/img/sprites/bg.png'}
+              src={'/gifs/sprites/bg.gif'}
             />
             <Image
               alt="Degen Sprite"
