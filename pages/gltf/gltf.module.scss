@@ -1,4 +1,100 @@
-.root {
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+}
+
+.sprite {
+  width: 100vw;
+  object-fit: cover;
+  object-position: top left;
+  composes: pixelated;
+}
+
+.image {
+  width: 100vw;
+  object-fit: cover;
+  object-position: top left;
+  composes: pixelated;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main__wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#main__viewer,
+.main__wrapper {
+  min-height: 100vh;
+  width: 100%;
+}
+
+.menu__overlay {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 615px) {
+  .menu__overlay {
+    top: 3rem;
+  }
+  .image,
+  .sprite {
+    min-height: 100vh;
+    top: -20px !important;
+    object-position: center;
+  }
+}
+
+.menu__overlay__boggs {
+  display: flex;
+  margin-right: 5px;
+
+  button {
+    padding: 0.5rem 1rem;
+    margin-right: -1px;
+    border: 1px solid #5f4ce6 !important;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #fff;
+  }
+
+  .btn {
+    background-color: #fff;
+    color: #5f4ce6;
+  }
+
+  .btn_selected {
+    background-color: #5f4ce6 !important;
+    color: #fff !important;
+  }
+}
+
+.menu__overlay__animation,
+.menu__overlay__colorpicker {
+  display: flex;
+
+  .background__picker {
+    margin-right: 5px;
+  }
+
   select {
     cursor: pointer;
     background-color: #fff;
@@ -36,164 +132,60 @@
     color: transparent;
     text-shadow: 0 0 0 #000;
   }
+}
 
-  .btn {
-    border: 1px solid #5f4ce6 !important;
-    background-color: #fff;
-    color: #5f4ce6;
-  }
+.gradient_salmon {
+  background: radial-gradient(#a5676880, #a56768);
+}
 
-  .btn_selected {
-    background-color: #5f4ce6 !important;
-    color: #fff !important;
-  }
+.gradient_purple {
+  background: radial-gradient(#a6679f80, #a6679f);
+}
 
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    width: 100%;
-  }
+.gradient_blue {
+  background: radial-gradient(#6787a680, #6787a6);
+}
 
-  .sprite {
-    width: 100vw;
-  }
+.gradient_bluegrey {
+  background: radial-gradient(#88acb480, #88acb4);
+}
 
-  .sprite img {
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-    image-rendering: pixelated;
-    width: 100vw;
-  }
+.gradient_bluepurple {
+  background: radial-gradient(#6778a580, #6778a5);
+}
 
-  .sprite .image {
-    position: absolute;
-  }
+.gradient_green {
+  background: radial-gradient(#6eaa7880, #6eaa78);
+}
 
-  .image {
-    width: 100vw;
-    object-fit: cover;
-    object-position: top left;
-    image-rendering: crisp-edges;
-    image-rendering: -moz-crisp-edges; /* Firefox */
-    image-rendering: -o-crisp-edges; /* Opera */
-    image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
-    -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
-    image-rendering: pixelated;
-  }
+.gradient_bluegreen {
+  background: radial-gradient(#67a5a480, #67a5a4);
+}
 
-  .main__wrapper {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-  }
+.gradient_brown {
+  background: radial-gradient(#cdb49880, #cdb498);
+}
 
-  #main__viewer,
-  .main__wrapper {
-    min-height: 100vh;
-    width: 100%;
-  }
+.gradient_ochre {
+  background: radial-gradient(#85785280, #857852);
+}
 
-  .background__picker {
-    margin-right: 5px;
-  }
+.gradient_palepink {
+  background: radial-gradient(#faa6ad80, #faa6ad);
+}
 
-  .menu__overlay {
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    right: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
+.gradient_yellow {
+  background: radial-gradient(#d3d07f80, #d3d07f);
+}
 
-  @media (max-width: 615px) {
-    .menu__overlay {
-      top: 3rem;
-    }
-    .image {
-      min-height: 100vh;
-      top: -20px !important;
-      object-position: center;
-    }
-  }
+.gradient_greenish {
+  background: radial-gradient(#829e9080, #829e90);
+}
 
-  .menu__overlay__animation,
-  .menu__overlay__colorpicker {
-    display: flex;
-  }
+.gradient_lightblue {
+  background: radial-gradient(#8bb1c480, #8bb1c4);
+}
 
-  .menu__overlay__boggs {
-    display: flex;
-    margin-right: 5px;
-  }
-
-  .menu__overlay__boggs button {
-    background-color: #fff;
-    border: 1px solid #000;
-    padding: 0.5rem 1rem;
-    margin-right: -1px;
-  }
-
-  .menu__overlay__boggs button:hover {
-    cursor: pointer;
-  }
-
-  .gradient_salmon {
-    background: radial-gradient(#a5676880, #a56768);
-  }
-
-  .gradient_purple {
-    background: radial-gradient(#a6679f80, #a6679f);
-  }
-
-  .gradient_blue {
-    background: radial-gradient(#6787a680, #6787a6);
-  }
-
-  .gradient_bluegrey {
-    background: radial-gradient(#88acb480, #88acb4);
-  }
-
-  .gradient_bluepurple {
-    background: radial-gradient(#6778a580, #6778a5);
-  }
-
-  .gradient_green {
-    background: radial-gradient(#6eaa7880, #6eaa78);
-  }
-
-  .gradient_bluegreen {
-    background: radial-gradient(#67a5a480, #67a5a4);
-  }
-
-  .gradient_brown {
-    background: radial-gradient(#cdb49880, #cdb498);
-  }
-
-  .gradient_ochre {
-    background: radial-gradient(#85785280, #857852);
-  }
-
-  .gradient_palepink {
-    background: radial-gradient(#faa6ad80, #faa6ad);
-  }
-
-  .gradient_yellow {
-    background: radial-gradient(#d3d07f80, #d3d07f);
-  }
-
-  .gradient_greenish {
-    background: radial-gradient(#829e9080, #829e90);
-  }
-
-  .gradient_lightblue {
-    background: radial-gradient(#8bb1c480, #8bb1c4);
-  }
-
-  .gradient_ochretwo {
-    background: radial-gradient(#b0a77a80, #b0a77a);
-  }
+.gradient_ochretwo {
+  background: radial-gradient(#b0a77a80, #b0a77a);
 }
