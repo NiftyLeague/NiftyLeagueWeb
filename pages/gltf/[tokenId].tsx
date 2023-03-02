@@ -9,7 +9,7 @@ import styles from './gltf.module.scss';
 
 const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
 const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images`;
-const DEGEN_BASE_SPRITE_URL = `${DEGEN_BASE_API_URL}/assets/raw/gifs/nesw`;
+const DEGEN_BASE_SPRITE_URL = `${DEGEN_BASE_API_URL}/assets/raw/gifs-retro`;
 
 const LEGGIES = [
   150, 225, 293, 456, 831, 863, 868, 872, 948, 974, 998, 1008, 1041, 1124, 1218, 1362, 1402, 1439, 1453, 1485, 1486,
@@ -100,23 +100,13 @@ export default function DegenViews() {
           />
         )}
         {selected === 'Sprite' && (
-          <div className={styles.sprite}>
-            <Image
-              alt="Degen Sprite Background"
-              className={styles.image}
-              fill
-              priority
-              quality={100}
-              src={'/gifs/sprites/bg.gif'}
-            />
-            <Image
-              alt="Degen Sprite"
-              className={styles.image}
-              fill
-              priority
-              src={`${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`}
-            />
-          </div>
+          <Image
+            alt="Degen Sprite"
+            className={styles.sprite}
+            fill
+            priority
+            src={`${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`}
+          />
         )}
         <div
           className={cn(styles.wrapper, {
