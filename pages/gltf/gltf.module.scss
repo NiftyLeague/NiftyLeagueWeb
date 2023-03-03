@@ -59,6 +59,11 @@
     top: -20px !important;
     object-position: center;
   }
+  .image {
+    width: 110% !important;
+    margin-left: -10%;
+    object-fit: contain;
+  }
 }
 
 .menu__overlay__boggs {
