@@ -281,8 +281,8 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
-    // completed: true,
-    // completionDate: 'Nov 16th, 2022',
+    completed: true,
+    completionDate: 'Nov 16th, 2022',
     image: {
       height: 325,
       src: '/img/roadmap/comics_v01.png',
@@ -315,6 +315,8 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
+    completed: true,
+    completionDate: 'Feb 13th, 2023',
     image: {
       height: 400,
       src: '/img/roadmap/beta_v02.png',
@@ -328,6 +330,31 @@ export const ROADMAP_CARDS = [
         only will this improve lag considerably, but you can expect some cool features such as broadcasting live games
         and having replays readily available through our archive.
       </p>
+    ),
+  },
+  {
+    completed: true,
+    completionDate: 'Feb 17th, 2023',
+    image: {
+      height: 384,
+      src: '/img/roadmap/hydra.png',
+      style: { top: '-180px' },
+      width: 384,
+    },
+    title: 'The Hatching',
+    body: (
+      <>
+        <p>
+          The ultimate sacrifice was made on this day to bring the ancient Hydras back from extinction. Community
+          members lined up to send 8 DEGENs through a portal forever burning their existence from the blockchain. In
+          return? A claim at one of 98 rare Hydra eggs.
+        </p>
+        <p className="mb-0">
+          Hydras are amphibious water dragons that roam freely underwater or on land. Their cuteness belies their wise
+          and fighting prowess. They pack a punch with their tridents, spears, and ranged attacks and bring a wealth of
+          lore knowledge to Nifty League, being the oldest tribe.
+        </p>
+      </>
     ),
   },
   {
