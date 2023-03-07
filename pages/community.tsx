@@ -126,7 +126,7 @@ const Community: NextPage = () => {
 
       {/* <div className="container my-5">
         <div className="community-footer d-flex align-items-center text-center flex-column p-5">
-          <img className="mb-5" src="/img/logo-blue.svg" />
+          <img className="mb-5" src="img/logo/purple.png" />
           <h3>Download Brand Assets</h3>
           <p className="font-16 mt-1">
             Commonly used where the Nifty League Branding needs to be displayed
