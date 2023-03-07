@@ -14,7 +14,7 @@ function Navbar() {
       <div className="container-fluid z-100" style={{ borderStyle: 'none' }}>
         <div className="navbar-nav collapse navbar-collapse px-4 mt-4" id="navbarSupportedContent">
           <Link href="/" passHref className="navbar-brand mt-5 mt-lg-0">
-            <Image src="/img/logo.svg" height={48} width={48} alt="MDB Logo" loading="lazy" />
+            <Image src="/img/logo/white.png" height={48} width={48} alt="MDB Logo" loading="lazy" />
           </Link>
           <ul className="navbar-nav m-auto">
             <li
