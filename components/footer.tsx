@@ -9,7 +9,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
         <div className="row m-0 p-md-5 footer-row position-relative">
           <div className="col-md-6 px-sm-5 col-12 my-md-0 my-2 mt-5 mt-md-0">
             <div className="container-footer">
-              <Image src="/img/logo-blue.svg" alt="Purple Nifty League Logo" width={48} height={48} />
+              <Image src="/img/logo/purple.png" alt="Purple Nifty League Logo" width={48} height={48} />
               <p className="color-grey font-roboto font-13 mt-3">© Copyright 2021. All Rights Reserved.</p>
             </div>
           </div>
