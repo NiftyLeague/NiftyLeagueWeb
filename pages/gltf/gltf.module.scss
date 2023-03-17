@@ -50,19 +50,14 @@
 }
 
 @media (max-width: 615px) {
-  .menu__overlay {
-    top: 3rem;
-  }
   .image,
   .sprite {
     min-height: 100vh;
-    top: -20px !important;
     object-position: center;
   }
   .image {
     width: 106% !important;
     margin-left: -5%;
-    object-fit: contain;
   }
 }
 
