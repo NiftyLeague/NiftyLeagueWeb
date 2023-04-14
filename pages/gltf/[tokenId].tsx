@@ -58,8 +58,8 @@ export default function DegenViews() {
   const switchSrc = (group: SelectGroup, path?: string) => {
     if (['3D', 'Box'].includes(group)) {
       setSrc(path as string);
-      if (group === '3D') setColor('salmon');
-      else if (group === 'Box') setColor('bluepurple');
+      if (group === '3D') setColor('bluepurple');
+      else if (group === 'Box') setColor('brown');
     }
     setSelected(group);
   };
@@ -132,24 +132,27 @@ export default function DegenViews() {
             {['3D', 'Box'].includes(selected) && (
               <model-viewer
                 id={styles.main__viewer}
-                max-camera-orbit="Infinity 100deg auto"
-                min-camera-orbit="-Infinity 0deg 300%"
-                auto-rotate="false"
-                animation-name="Idle"
-                interaction-bounds="none"
-                // @ts-ignore
-                scale="0.5 0.5 0.5"
-                orientation="0 0 200deg"
-                interaction-prompt="none"
-                camera-controls="true"
-                shadow-intensity="1"
-                exposure="1"
-                shadow-softness="0.8"
-                autoplay="true"
-                ar-status="not-presenting"
-                touch-action="pan-y"
                 src={src}
+                // @ts-ignore
+                poster="poster.webp"
                 alt="3D model of Nifty Degen"
+                exposure="0.72"
+                shadow-intensity="1"
+                shadow-softness="0.8"
+                camera-controls="true"
+                ar="true"
+                ar-modes="webxr scene-viewer quick-look"
+                auto-rotate="true"
+                interaction-prompt="none"
+                // max-camera-orbit="Infinity 100deg auto"
+                // min-camera-orbit="-Infinity 0deg 300%"
+                // animation-name="Idle"
+                // interaction-bounds="none"
+                // scale="0.5 0.5 0.5"
+                // orientation="0 0 200deg"
+                // autoplay="true"
+                // ar-status="not-presenting"
+                // touch-action="pan-y"
               />
             )}
             <div className={styles.menu__overlay}>
@@ -167,13 +170,13 @@ export default function DegenViews() {
                       className={cn(styles.btn, { [styles.btn_selected]: selected === '3D' })}
                     >
                       3D
-                    </Button>
+                    </Button> */}
                     <Button
                       onClick={() => switchSrc('Box', `/degens/boxes/${tokenId}.glb`)}
                       className={cn(styles.btn, { [styles.btn_selected]: selected === 'Box' })}
                     >
                       Box
-                    </Button> */}
+                    </Button>
                     <Button
                       onClick={() => switchSrc('Sprite')}
                       className={cn(styles.btn, { [styles.btn_selected]: selected === 'Sprite' })}
@@ -207,6 +210,13 @@ export default function DegenViews() {
                     <option value="salmon">Salmon</option>
                     <option value="yellow">Yellow</option>
                   </select>
+
+                  {/* <button slot="ar-button" id="ar-button">
+                    View in your space
+                  </button>
+                  <div id="ar-prompt">
+                    <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
+                  </div> */}
                 </div>
               )}
             </div>
