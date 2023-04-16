@@ -73,7 +73,7 @@ export default function DegenViews() {
       case SRC.BOX:
         setModelSrc(BOX_SRC);
         setPosterSrc(BOX_POSTER_SRC);
-        setColor('brown');
+        setColor('lightblue');
         break;
       case SRC.UNBOXED:
         setModelSrc(UNBOXED_SRC);
@@ -140,7 +140,7 @@ export default function DegenViews() {
           <main className={styles.main__wrapper}>
             {[SRC.BOX, SRC.UNBOXED].includes(selected) && (
               <model-viewer
-                // https://modelviewer.dev/docs/index.html#entrydocs-loading-attributes-poster
+                // https://modelviewer.dev/docs/index.html#loading-attributes
                 id={styles.main__viewer}
                 src={modelSrc}
                 // @ts-ignore
@@ -151,7 +151,7 @@ export default function DegenViews() {
                 shadow-intensity="1"
                 shadow-softness="0.8"
                 camera-controls="true"
-                touch-action="pan-x"
+                touch-action="pan-y"
                 auto-rotate="true"
                 auto-rotate-delay="1000"
                 interaction-prompt="auto"
