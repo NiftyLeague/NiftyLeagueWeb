@@ -10,6 +10,7 @@ import styles from './gltf.module.scss';
 const DEGEN_BASE_API_URL = 'https://nifty-league.s3.amazonaws.com';
 const DEGEN_BASE_IMAGE_URL = `${DEGEN_BASE_API_URL}/degens/mainnet/images`;
 const DEGEN_BASE_SPRITE_URL = `${DEGEN_BASE_API_URL}/assets/raw/gifs-retro`;
+const DEGEN_3D_BOX_URL = `${DEGEN_BASE_API_URL}/assets/gltfs/v2`;
 
 const LEGGIES = [
   150, 225, 293, 456, 831, 863, 868, 872, 948, 974, 998, 1008, 1041, 1124, 1218, 1362, 1402, 1439, 1453, 1485, 1486,
@@ -28,8 +29,6 @@ declare global {
   }
 }
 
-type SelectGroup = '2D' | '3D' | 'Box' | 'Sprite';
-
 type Color =
   | 'salmon'
   | 'purple'
@@ -46,20 +45,43 @@ type Color =
   | 'lightblue'
   | 'ochretwo';
 
+enum SRC {
+  IMAGE = '2D',
+  SPRITE = 'Sprite',
+  BOX = 'Box',
+  UNBOXED = '3D',
+}
+
 export default function DegenViews() {
   const router = useRouter();
   const { tokenId } = router.query;
-  const [selected, setSelected] = useState<SelectGroup>('2D');
+  const [selected, setSelected] = useState<SRC>(SRC.IMAGE);
   const [color, setColor] = useState<Color>('blue');
-  const [src, setSrc] = useState(`/degens/3D/${tokenId}.glb`);
+  const IMAGE_SRC = `/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`;
+  const SPRITE_SRC = `${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`;
+  const BOX_SRC = `${DEGEN_3D_BOX_URL}/${tokenId}/${tokenId}.gltf`;
+  const BOX_POSTER_SRC = `${DEGEN_3D_BOX_URL}/${tokenId}/${tokenId}.webp`;
+  const UNBOXED_SRC = `${DEGEN_3D_BOX_URL}/${tokenId}/${tokenId}.gltf`;
+  const UNBOXED_POSTER_SRC = `${DEGEN_3D_BOX_URL}/${tokenId}/${tokenId}.webp`;
+  const [modelSrc, setModelSrc] = useState(BOX_SRC);
+  const [posterSrc, setPosterSrc] = useState(BOX_POSTER_SRC);
 
   if (!tokenId) return null;
 
-  const switchSrc = (group: SelectGroup, path?: string) => {
-    if (['3D', 'Box'].includes(group)) {
-      setSrc(path as string);
-      if (group === '3D') setColor('bluepurple');
-      else if (group === 'Box') setColor('brown');
+  const switchSrc = (group: SRC) => {
+    switch (group) {
+      case SRC.BOX:
+        setModelSrc(BOX_SRC);
+        setPosterSrc(BOX_POSTER_SRC);
+        setColor('brown');
+        break;
+      case SRC.UNBOXED:
+        setModelSrc(UNBOXED_SRC);
+        setPosterSrc(UNBOXED_POSTER_SRC);
+        setColor('bluepurple');
+        break;
+      default:
+        break;
     }
     setSelected(group);
   };
@@ -89,28 +111,15 @@ export default function DegenViews() {
       `}</style>
       <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></Script>
       <div className={styles.root}>
-        {selected === '2D' && (
-          <Image
-            alt="NiftyDegen 2D NFT"
-            className={styles.image}
-            fill
-            priority
-            quality={100}
-            src={`/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`}
-          />
+        {selected === SRC.IMAGE && (
+          <Image alt="NiftyDegen 2D NFT" className={styles.image} fill priority quality={100} src={IMAGE_SRC} />
         )}
-        {selected === 'Sprite' && (
-          <Image
-            alt="Degen Sprite"
-            className={styles.sprite}
-            fill
-            priority
-            src={`${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`}
-          />
+        {selected === SRC.SPRITE && (
+          <Image alt="Degen Sprite" className={styles.sprite} fill priority src={SPRITE_SRC} />
         )}
         <div
           className={cn(styles.wrapper, {
-            ...(['3D', 'Box'].includes(selected) && {
+            ...([SRC.BOX, SRC.UNBOXED].includes(selected) && {
               [styles.gradient_salmon]: color === 'salmon',
               [styles.gradient_purple]: color === 'purple',
               [styles.gradient_blue]: color === 'blue',
@@ -129,30 +138,34 @@ export default function DegenViews() {
           })}
         >
           <main className={styles.main__wrapper}>
-            {['3D', 'Box'].includes(selected) && (
+            {[SRC.BOX, SRC.UNBOXED].includes(selected) && (
               <model-viewer
+                // https://modelviewer.dev/docs/index.html#entrydocs-loading-attributes-poster
                 id={styles.main__viewer}
-                src={src}
+                src={modelSrc}
                 // @ts-ignore
-                poster="poster.webp"
-                alt="3D model of Nifty Degen"
+                poster={posterSrc}
+                alt="Nifty League DEGEN 3D model"
+                loading="eager"
                 exposure="0.72"
                 shadow-intensity="1"
                 shadow-softness="0.8"
                 camera-controls="true"
-                ar="true"
-                ar-modes="webxr scene-viewer quick-look"
+                touch-action="pan-x"
                 auto-rotate="true"
-                interaction-prompt="none"
+                auto-rotate-delay="1000"
+                interaction-prompt="auto"
+                interaction-prompt-threshold="5000"
+                disable-tap="true"
+                // ar="true"
+                // ar-modes="webxr scene-viewer quick-look"
+                // ar-status="not-presenting"
+                // interaction-bounds="none"
+                // animation-name="Idle"
                 // max-camera-orbit="Infinity 100deg auto"
                 // min-camera-orbit="-Infinity 0deg 300%"
-                // animation-name="Idle"
-                // interaction-bounds="none"
                 // scale="0.5 0.5 0.5"
                 // orientation="0 0 200deg"
-                // autoplay="true"
-                // ar-status="not-presenting"
-                // touch-action="pan-y"
               />
             )}
             <div className={styles.menu__overlay}>
@@ -160,33 +173,33 @@ export default function DegenViews() {
                 <div className={styles.menu__overlay__boggs}>
                   <ButtonGroup variant="contained" aria-label="outlined primary button group">
                     <Button
-                      onClick={() => switchSrc('2D')}
-                      className={cn(styles.btn, { [styles.btn_selected]: selected === '2D' })}
+                      onClick={() => switchSrc(SRC.IMAGE)}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === SRC.IMAGE })}
                     >
                       2D
                     </Button>
                     {/* <Button
-                      onClick={() => switchSrc('3D', `/degens/3D/${tokenId}.glb`)}
-                      className={cn(styles.btn, { [styles.btn_selected]: selected === '3D' })}
+                      onClick={() => switchSrc(SRC.UNBOXED)}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === SRC.UNBOXED })}
                     >
                       3D
                     </Button> */}
                     <Button
-                      onClick={() => switchSrc('Box', `/degens/boxes/${tokenId}.glb`)}
-                      className={cn(styles.btn, { [styles.btn_selected]: selected === 'Box' })}
+                      onClick={() => switchSrc(SRC.BOX)}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === SRC.BOX })}
                     >
                       Box
                     </Button>
                     <Button
-                      onClick={() => switchSrc('Sprite')}
-                      className={cn(styles.btn, { [styles.btn_selected]: selected === 'Sprite' })}
+                      onClick={() => switchSrc(SRC.SPRITE)}
+                      className={cn(styles.btn, { [styles.btn_selected]: selected === SRC.SPRITE })}
                     >
                       Sprite
                     </Button>
                   </ButtonGroup>
                 </div>
               </div>
-              {['3D', 'Box'].includes(selected) && (
+              {[SRC.BOX, SRC.UNBOXED].includes(selected) && (
                 <div className={styles.menu__overlay__colorpicker}>
                   <select
                     name="background"
