@@ -26,23 +26,6 @@ Copy the `.env.local.example` file in this directory to `.env.local` (which will
 cp .env.local.example .env.local
 ```
 
-Then open `.env.local` and set `WORDPRESS_API_URL` to be the URL to your GraphQL endpoint in WordPress. For example: `https://myapp.wpengine.com/graphql`.
-
-Your `.env.local` file should look like this:
-
-```bash
-WORDPRESS_API_URL=...
-
-# Only required if you want to enable preview mode
-# WORDPRESS_AUTH_REFRESH_TOKEN=
-# WORDPRESS_PREVIEW_SECRET=
-```
-
-### TypeScript
-
-WordPress schema typings are generated using `@graphql-codegen`  
-Anytime you want to regenerate the types (such as if you make changes to the GraphQL schema or install a WPGraphQL extension), you can run `yarn generate` again. This will overwrite your current `types/generated/graphql.ts` file.
-
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
