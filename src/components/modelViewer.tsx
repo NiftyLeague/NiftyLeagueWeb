@@ -1,5 +1,6 @@
 import { useEffect, Dispatch, SetStateAction, useState } from 'react';
 import { useRouter } from 'next/router';
+import { CircularProgress } from '@mui/material';
 import { DEGEN_3D_MODEL_URL } from '@/constants/degens';
 import { SRC, Color } from '@/types/gltf';
 import styles from '@/styles/gltf.module.scss';
@@ -34,35 +35,42 @@ export function ModelView({ selected }: { selected: SRC }) {
   }, []);
 
   return (
-    <model-viewer
-      // https://modelviewer.dev/docs/index.html#loading-attributes
-      id="model-viewer"
-      alt="Nifty League DEGEN 3D model"
-      style={selected === SRC.MODEL ? { minHeight: '100vh', width: '100%' } : { display: 'none' }}
-      src={MODEL_SRC}
-      // @ts-ignore
-      poster={POSTER_SRC}
-      loading="eager"
-      exposure="0.72"
-      shadow-intensity="1"
-      shadow-softness="0.8"
-      camera-controls="true"
-      touch-action="pan-y"
-      auto-rotate="true"
-      auto-rotate-delay="1000"
-      interaction-prompt="auto"
-      interaction-prompt-threshold="10000"
-      disable-tap="true"
-      // ar="true"
-      // ar-modes="webxr scene-viewer quick-look"
-      // ar-status="not-presenting"
-      // interaction-bounds="none"
-      // animation-name="Idle"
-      // max-camera-orbit="Infinity 100deg auto"
-      // min-camera-orbit="-Infinity 0deg 300%"
-      // scale="0.5 0.5 0.5"
-      // orientation="0 0 200deg"
-    />
+    <>
+      {selected === SRC.MODEL && loading ? (
+        <div style={{ minHeight: '100vh', width: '100%', position: 'absolute', display: 'flex', zIndex: 2 }}>
+          <CircularProgress color="secondary" style={{ margin: 'auto', width: 75, height: 'auto' }} />
+        </div>
+      ) : null}
+      <model-viewer
+        // https://modelviewer.dev/docs/index.html#loading-attributes
+        id="model-viewer"
+        alt="Nifty League DEGEN 3D model"
+        style={selected === SRC.MODEL ? { minHeight: '100vh', width: '100%' } : { display: 'none' }}
+        src={MODEL_SRC}
+        // @ts-ignore
+        poster={POSTER_SRC}
+        loading="eager"
+        exposure="0.72"
+        shadow-intensity="1"
+        shadow-softness="0.8"
+        camera-controls="true"
+        touch-action="pan-y"
+        auto-rotate="true"
+        auto-rotate-delay="1000"
+        interaction-prompt="auto"
+        interaction-prompt-threshold="10000"
+        disable-tap="true"
+        // ar="true"
+        // ar-modes="webxr scene-viewer quick-look"
+        // ar-status="not-presenting"
+        // interaction-bounds="none"
+        // animation-name="Idle"
+        // max-camera-orbit="Infinity 100deg auto"
+        // min-camera-orbit="-Infinity 0deg 300%"
+        // scale="0.5 0.5 0.5"
+        // orientation="0 0 200deg"
+      />
+    </>
   );
 }
 
