@@ -9,14 +9,15 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import Layout from '@components/layout';
 import LearnCards from '@components/LearnCards';
 import styles from './index.module.scss';
+import ExternalIcon from '@components/ExternalIcon';
 
-const Learn: NextPage = () => {
+const Overview: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
   return (
     <Layout classes={{ root: 'learn-pg' }}>
       <Head>
-        <title>Learn About Our Compete &amp; Earn Ecosystem | Nifty League</title>
-        <meta name="description" content="Learn how to join and play games at Nifty League" />
+        <title>Nifty League | Overview</title>
+        <meta name="description" content="Overview and FAQ for Nifty League" />
       </Head>
 
       <div className={cn(styles.container, 'mx-auto px-3')}>
@@ -24,13 +25,13 @@ const Learn: NextPage = () => {
         <div className="position-relative">
           <AnimatedWrapper>
             <h1 className="text-center animated-header-text animated-header-text-start transition-delay-small">
-              LEARN
+              OVERVIEW
             </h1>
           </AnimatedWrapper>
           <div className="mt-3">
             <AnimatedWrapper>
               <p className="text-center animated-header-text animated-header-text-start transition-delay-medium">
-                Learn how to navigate the NiftyLeague Platform
+                Learn how to navigate the Nifty League Platform
               </p>
             </AnimatedWrapper>
           </div>
@@ -51,15 +52,14 @@ const Learn: NextPage = () => {
           <MDBAccordion flush className="faq-accordion">
             <AnimatedWrapper>
               <MDBAccordionItem
-                collapseId="faq-collapse1"
+                collapseId={1}
                 headerTitle="What is Nifty League?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                Nifty League is leading competitive gaming in the metaverse - moving away from play-to-earn into a new
-                era of play-and-earn by offering a fun and engaging gaming ecosystem. The Niftyverse is centered around
-                nostalgia where builders, players, and owners spend time connecting, gaming, and earning in Web3. Learn
-                more{' '}
-                <Link href="/docs/overview/intro" passHref>
+                Nifty League is a game studio at the cutting edge of Web3. Our mission is to establish a platform of
+                unparalleled quality and player experience to inspire other indie game developers to build a
+                decentralized future with us. Learn more{' '}
+                <Link href="/docs/overview/intro" passHref legacyBehavior>
                   <a target="_blank" rel="noreferrer">
                     here
                   </a>
@@ -69,28 +69,36 @@ const Learn: NextPage = () => {
             </AnimatedWrapper>
             <AnimatedWrapper>
               <MDBAccordionItem
-                collapseId="faq-collapse2"
-                headerTitle="What is NFTL and how do I earn it by playing Nifty League
-                  games?"
+                collapseId={2}
+                headerTitle="What is the NiftyVerse"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                NFTL is our platform-wide governance token, which is currently available to trade and stake on
+                The NiftyVerse is a digital world centered around nostalgia. It not only acts as a social hub for
+                connecting with friends online, but is THE ultimate Nifty League game hub with fun missions and launch
+                points into our other game titles. Land parcels will be available to build custom areas for holders, and
+                players can show off their digital assets from Nifty League or other partner communities to stand out.
+              </MDBAccordionItem>
+            </AnimatedWrapper>
+            <AnimatedWrapper>
+              <MDBAccordionItem
+                collapseId={3}
+                headerTitle="What is NFTL and what is it used for?"
+                className="animated-fade-quick animated-fade-start transition-delay-medium"
+              >
+                NFTL is our platform-wide governance token and utility token. The token is distributed freely to DEGEN
+                NFT holders and Nifty Smashers players through special events. The team has never, nor will ever, sell
+                NFTL to the public. It is available for trading on decentralized exchanges such as Uniswap and
                 SushiSwap.
                 <br />
-                <br />
-                Players earn NFTL by landing hits and winning matches in our game Nifty Smashers. The more you play and
-                improve your skills the better your chances of earning NFTL tokens through gameplay! NFTL can be used to
-                purchase in-game items and bonuses, trade with other players, or &apos;cash out&apos; of the ecosystem
-                for other cryptocurrencies.
-                <br />
-                <br />
-                In the future, NFTL will serve to give users voting rights on upcoming games and tournaments, and for
-                platform-wide expenses. For now, this only includes naming characters, but will soon be expanded to be
-                used for purchasing additional in-game items and collectibles.
-                <br />
-                <br />
+                Utility includes, but is not limited to:
+                <ol>
+                  <li>Governance: DAO formation planned Q3-Q4 2023</li>
+                  <li> NFT drops: Raffles (ongoing), NiftyVerse Land, special weapons/wearables, others TBA</li>
+                  <li>Ecosystem currency: Compete &amp; Earn wagering, redeem in-game hard currencies (TBD)</li>
+                  <li>Platform fees: rename degens, rentals(deprecated), etc</li>
+                </ol>
                 Learn more{' '}
-                <Link href="/docs/overview/nftl/overview" passHref>
+                <Link href="/docs/overview/nftl/overview" passHref legacyBehavior>
                   <a target="_blank" rel="noreferrer">
                     here
                   </a>
@@ -100,7 +108,7 @@ const Learn: NextPage = () => {
             </AnimatedWrapper>
             <AnimatedWrapper>
               <MDBAccordionItem
-                collapseId="faq-collapse3"
+                collapseId={4}
                 headerTitle="What is Nifty Smashers?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
@@ -115,22 +123,23 @@ const Learn: NextPage = () => {
             </AnimatedWrapper>
             <AnimatedWrapper>
               <MDBAccordionItem
-                collapseId="faq-collapse4"
+                collapseId={4}
                 headerTitle="Does it cost money to play your games?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
                 At the moment you will either need to own or rent a DEGEN to play any games on our platform. A
-                free-2-play version will be coming soon enabling players around the world to hop in our game servers and
-                earn a small amount of NFTL for playing.
+                free-2-play version will be coming soon with our mobile launch enabling players around the world to hop
+                in our game servers and enjoy.
               </MDBAccordionItem>
             </AnimatedWrapper>
           </MDBAccordion>
           <div className="d-flex justify-content-center my-3 my-md-4">
             <AnimatedWrapper>
-              <Link href="/docs/faq/general">
+              <Link href="/docs/faq/general" legacyBehavior>
                 <a target="_blank" rel="noreferrer">
                   <button className="btn theme-btn-primary theme-learn-btn animated-fade-slow animated-fade-start transition-delay-medium">
                     More FAQ
+                    <ExternalIcon />
                   </button>
                 </a>
               </Link>
@@ -183,4 +192,4 @@ const Learn: NextPage = () => {
   );
 };
 
-export default Learn;
+export default Overview;

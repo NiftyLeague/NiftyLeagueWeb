@@ -58,7 +58,7 @@ const NiftyCarousel = ({
       containerClass="carousel-container"
       removeArrowOnDeviceType={isMobileViewOnly ? ['desktop', 'tablet'] : ['desktop', 'tablet', 'mobile']}
       dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-padding-40-px"
+      itemClass="carousel-item-padding-20-px"
     >
       {children}
     </Carousel>

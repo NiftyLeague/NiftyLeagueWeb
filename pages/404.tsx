@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { styled } from '@mui/material/styles';
 import { Card, CardContent, CardMedia, Grid, Typography } from '@mui/material';
 import Layout from '@components/layout';
@@ -54,6 +55,9 @@ const CardMediaPurple = styled('img')({
 const NotFoundPage = () => {
   return (
     <Layout>
+      <Head>
+        <title>Nifty League | 404</title>
+      </Head>
       <ErrorCard>
         <CardContent>
           <Grid container justifyContent="center" spacing={2}>

@@ -11,7 +11,7 @@ const CompeteAndEarn: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Nifty League | Compete and Earn</title>
+        <title>Nifty League | Compete &amp; Earn</title>
         <meta name="description" content="Adrenaline fueled, fast-paced brawl mode where the winner takes ALL" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
@@ -19,7 +19,7 @@ const CompeteAndEarn: NextPage = () => {
           <div className={cn(styles.block, 'd-flex flex-column col-12 col-md-6 pe-0 pe-md-5 position-relative')}>
             <div className="mb-2 mb-md-4">
               <AnimatedWrapper>
-                <h1 className="animated-fade-slow animated-fade-start">COMPETE AND EARN</h1>
+                <h1 className="animated-fade-slow animated-fade-start">COMPETE &amp; EARN</h1>
               </AnimatedWrapper>
             </div>
             <div className="mb-0">
@@ -94,12 +94,13 @@ const CompeteAndEarn: NextPage = () => {
               )}
             >
               <div className="col-4 d-flex flex-column">
-                <h5 className={styles.headerCell}>FEATURES</h5>
-                <p className={styles.cell}>Requires an invite</p>
-                <p className={styles.cell}>Buy-in</p>
-                <p className={styles.cell}>Region</p>
-                <p className={styles.cell}>Player Number</p>
+                <h5 className={styles.headerCell}>FEATURES:</h5>
+                <p className={styles.cell}>Requires an invite:</p>
+                <p className={styles.cell}>Buy-in:</p>
+                <p className={styles.cell}>Region:</p>
+                <p className={styles.cell}>Player Number:</p>
               </div>
+              <hr style={{ height: 'inherit', border: '3px solid white', marginRight: 50 }} />
               <div className="col-4 d-flex flex-column">
                 <h5 className={styles.headerCell}>PUBLIC BRAWL</h5>
                 <p className={styles.cell}>No</p>
@@ -114,7 +115,6 @@ const CompeteAndEarn: NextPage = () => {
                 <p className={styles.cell}>Decided by the Host</p>
                 <p className={styles.cell}>Decided by the Host</p>
               </div>
-              <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
             </div>
           </AnimatedWrapper>
 

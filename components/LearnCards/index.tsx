@@ -2,6 +2,7 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LEARN_CARDS } from './constants';
+import ExternalIcon from '@components/ExternalIcon';
 
 interface LearnCardProps {
   btnText: string;
@@ -44,13 +45,15 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
               <a target="_blank" rel="noreferrer" href={link}>
                 <button className="btn theme-btn-primary theme-learn-btn mt-md-2 animated-fade-slow animated-fade-start transition-delay-large">
                   {btnText}
+                  <ExternalIcon />
                 </button>
               </a>
             ) : (
-              <Link href={link} passHref>
+              <Link href={link} passHref legacyBehavior>
                 <a target="_blank" rel="noreferrer">
                   <button className="btn theme-btn-primary theme-learn-btn mt-md-2 animated-fade-slow animated-fade-start transition-delay-large">
                     {btnText}
+                    <ExternalIcon />
                   </button>
                 </a>
               </Link>
