@@ -7,7 +7,7 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
 import { NIFTY_GAMES } from '@data/games';
 import { Container } from '@mui/material';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 
 const Games: NextPage = () => {
   return (

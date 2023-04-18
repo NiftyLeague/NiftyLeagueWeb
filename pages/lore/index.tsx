@@ -7,7 +7,7 @@ import Image from 'next/image';
 import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 
 const Lore: NextPage = () => {
   const mobile = useMediaQuery('(max-width:600px)');
