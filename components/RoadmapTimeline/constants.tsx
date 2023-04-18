@@ -128,7 +128,7 @@ export const ROADMAP_CARDS = [
       style: { top: '-100px' },
       width: 609,
     },
-    title: 'DEGEN Rentals',
+    title: 'DEGEN Rentals (DEPRECATED)',
     body: (
       <>
         <p>

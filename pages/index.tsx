@@ -8,11 +8,148 @@ import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 import Sponsors from '@components/Sponsors';
 import { SPONSORS } from '@data/constants';
+import Carousel from '@components/carousel';
+import ExternalIcon from '@components/ExternalIcon';
+import { renderDegen } from '@components/carousel/DegenCardItem';
+import { CommunityDegenData } from '@data/constants';
+
+const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => void }) => {
+  return (
+    <div className="p-0 position-relative home-intro">
+      <div>
+        <div className="position-relative flex-grow-1 home-banner animation-zoomin">
+          <Image
+            src="/img/home-hero-bg.png"
+            alt="Nifty Home Banner"
+            layout="responsive"
+            width={3408}
+            height={1849}
+            priority
+          />
+        </div>
+        <AnimatedWrapper parallax parallaxDirection="top" transitionAmount="small">
+          <div className="parallax-hero-child position-absolute home-hero-characters-image flex-grow-1 animation-zoomin-large">
+            <Image
+              src="/img/home-hero-characters.png"
+              alt="Nifty Hero Characters"
+              layout="responsive"
+              width={3408}
+              height={1849}
+              priority
+            />
+          </div>
+        </AnimatedWrapper>
+        <div className="home-hero-companion">
+          <div className="position-relative flex-grow-1">
+            <AnimatedWrapper>
+              <div className="animation-bounce animated-fade-start animated-fade transition-delay-extreme">
+                <Image
+                  src="/img/home-hero-companion-base.png"
+                  alt="Home Hero Companion Base"
+                  layout="responsive"
+                  width={436}
+                  height={436}
+                  className="pixelated"
+                />
+                <div className="position-absolute home-hero-companion-swing animation-propeller" />
+              </div>
+            </AnimatedWrapper>
+          </div>
+        </div>
+        <div className="home-hero-halo">
+          <div className="position-relative flex-grow-1">
+            <AnimatedWrapper>
+              <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-extreme">
+                <Image
+                  src="/img/home-hero-halo.png"
+                  alt="Home Hero Halo"
+                  layout="responsive"
+                  width={325}
+                  height={117}
+                  className="pixelated"
+                />
+              </div>
+            </AnimatedWrapper>
+          </div>
+        </div>
+        <div className="radial-gradient-background" />
+      </div>
+      <div className="home-satoshi-container">
+        <AnimatedWrapper>
+          <div className="position-relative flex-grow-1 home-satoshi satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-medium">
+            <Image alt="Satoshi" layout="fill" objectFit="cover" src="/img/satoshi.png" priority />
+          </div>
+        </AnimatedWrapper>
+      </div>
+      <div className="d-flex flex-column mt-auto home-content">
+        <AnimatedWrapper>
+          <h1 className="home-content-title animated-header-text animated-header-text-start">
+            WELCOME TO NIFTY LEAGUE
+          </h1>
+        </AnimatedWrapper>
+        <div className="my-2 my-lg-4">
+          <AnimatedWrapper>
+            <p className="home-content-description animated-header-text animated-header-text-start transition-delay-small">
+              COMMUNITY GOVERNED GAME STUDIO.
+              <br />
+              BY GAMERS, FOR GAMERS.
+            </p>
+          </AnimatedWrapper>
+        </div>
+        <div>
+          <AnimatedWrapper>
+            <div
+              className="d-inline-block position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large"
+              onClick={scrollToGamingSection}
+            >
+              <Image src="/img/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
+              <p className="my-0 py-0 speech-bubble-text">Learn More</p>
+            </div>
+          </AnimatedWrapper>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const MobileIntro = () => {
+  return (
+    <div className="row m-0 p-0 position-relative pt-5 home-mobile-intro">
+      <div className="overlay-dark min-vh-100" />
+      <div className="radial-gradient-background d-block" />
+      <div className="d-flex flex-column align-items-center text-center my-auto py-3 pt-md-5 home-mobile-content">
+        <h1 className="mt-0 mt-sm-4 mt-md-5">Nifty League</h1>
+        <h4 className="mt-2">By Gamers. For Gamers.</h4>
+        <p className="my-4 text-center">Community Governed Game Studio</p>
+        <AnimatedWrapper>
+          <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+            <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-medium">
+              START PLAYING <ExternalIcon />
+            </button>
+          </a>
+        </AnimatedWrapper>
+        <div className="d-flex align-items-center mt-3 mb-5 social-icons">
+          <a className="pe-3" href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
+            <Image src="/img/socialIcons/discord.svg" alt="Discord Logo" width={20} height={20} />
+          </a>
+          <a className="pe-3" href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
+            <Image src="/img/socialIcons/twitter.svg" alt="Twitter Logo" width={20} height={20} />
+          </a>
+          <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+            <Image src="/img/boat.svg" alt="OpenSea Logo" width={20} height={20} />
+          </a>
+          <a className="pe-3" href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
+            <Image src="/img/twitch.svg" alt="Twitch Logo" width={20} height={20} />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Home: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
-  const md = useMediaQuery('(min-width:921px)');
-
+  const mobile = useMediaQuery('(max-width:768px)');
   const gamingSectionRef = useRef(null);
 
   const scrollToGamingSection = () => {
@@ -23,129 +160,17 @@ const Home: NextPage = () => {
   return (
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
-        <title>Nifty League: Compete &amp; Earn Web3 Gaming Metaverse</title>
-        <meta
-          name="description"
-          content="Compete &amp; earn Web3 gaming metaverse brought to you by the Nifty League"
-        />
-        <meta property="og:title" content="Nifty League: Compete &amp; Earn Web3 Gaming Metaverse" />
+        <title>Nifty League</title>
+        <meta name="description" content="Community Governed Web3 Game Studio" />
+        <meta property="og:title" content="Nifty League: Community Governed Web3 Game Studio" />
         <meta property="og:image" content="https://niftyleague.com/img/home-banner-desktop.png" />
       </Head>
 
-      <div className="p-0 position-relative home-intro">
-        {md ? (
-          <div>
-            <div className="position-relative flex-grow-1 animation-zoomin">
-              <Image
-                src="/img/home-hero-bg.png"
-                alt="Nifty Home Banner"
-                layout="responsive"
-                width={3408}
-                height={1849}
-                priority
-              />
-            </div>
-            <AnimatedWrapper parallax parallaxDirection="top" transitionAmount="medium">
-              <div className="parallax-hero-child position-absolute home-hero-characters-image flex-grow-1 animation-zoomin-large">
-                <Image
-                  src="/img/home-hero-characters.png"
-                  alt="Nifty Hero Characters"
-                  layout="responsive"
-                  width={3408}
-                  height={1849}
-                  priority
-                />
-              </div>
-            </AnimatedWrapper>
-            <div className="home-hero-companion">
-              <div className="position-relative flex-grow-1">
-                <AnimatedWrapper>
-                  <div className="animation-bounce animated-fade-start animated-fade transition-delay-extreme">
-                    <Image
-                      src="/img/home-hero-companion-base.png"
-                      alt="Home Hero Companion Base"
-                      layout="responsive"
-                      width={436}
-                      height={436}
-                      className="pixelated"
-                    />
-                    <div className="position-absolute home-hero-companion-swing animation-propeller" />
-                  </div>
-                </AnimatedWrapper>
-              </div>
-            </div>
-            <div className="home-hero-halo">
-              <div className="position-relative flex-grow-1">
-                <AnimatedWrapper>
-                  <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-extreme">
-                    <Image
-                      src="/img/home-hero-halo.png"
-                      alt="Home Hero Halo"
-                      layout="responsive"
-                      width={325}
-                      height={117}
-                      className="pixelated"
-                    />
-                  </div>
-                </AnimatedWrapper>
-              </div>
-            </div>
-            <div className="radial-gradient-background" />
-          </div>
-        ) : (
-          <div className="position-relative flex-grow-1">
-            <Image
-              src="/img/home-banner-desktop.png"
-              alt="Nifty Home Banner"
-              layout="responsive"
-              width={3408}
-              height={1849}
-              priority
-            />
-          </div>
-        )}
-        <div className="home-satoshi-container">
-          <AnimatedWrapper>
-            <div className="position-relative flex-grow-1 home-satoshi satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-medium">
-              <Image alt="Satoshi" layout="fill" objectFit="cover" src="/img/satoshi.png" />
-            </div>
-          </AnimatedWrapper>
-        </div>
-        <div className="d-flex flex-column mt-auto home-content">
-          <AnimatedWrapper>
-            <h1 className="home-content-title animated-header-text animated-header-text-start">
-              WELCOME TO NIFTYVERSE
-            </h1>
-          </AnimatedWrapper>
-          <div className="my-2 my-lg-4">
-            <AnimatedWrapper>
-              <p className="home-content-description animated-header-text animated-header-text-start transition-delay-small">
-                JOIN THE SEVEN TRIBES OF SATOSHI AND COMPETE TO UNLOCK THE NIFTYVERSE
-              </p>
-            </AnimatedWrapper>
-          </div>
-          <div className="home-content-button-bubble">
-            <AnimatedWrapper>
-              <div
-                className="d-inline-block position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large"
-                onClick={scrollToGamingSection}
-              >
-                <Image src="/img/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
-                <p className="my-0 py-0 speech-bubble-text">Learn More</p>
-              </div>
-            </AnimatedWrapper>
-          </div>
-          <Link href="/land">
-            <a>
-              <button className="btn theme-btn-primary mt-2 mt-md-4 home-content-button">LEARN MORE</button>
-            </a>
-          </Link>
-        </div>
-      </div>
+      {mobile ? <MobileIntro /> : <DesktopIntro scrollToGamingSection={scrollToGamingSection} />}
 
       <div className="row row-top-spacing m-0 p-0 position-relative" ref={gamingSectionRef}>
         <div className="d-flex flex-column text-center position-relative p-0">
-          <div className="my-3 my-lg-5">
+          <div className="mt-3 mt-lg-5">
             <AnimatedWrapper>
               <h2 className="px-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
             </AnimatedWrapper>
@@ -161,6 +186,7 @@ const Home: NextPage = () => {
                     height={3371}
                     layout="responsive"
                     src="/img/home-classic-gaming-reinvented-notv.png"
+                    priority
                   />
                   <video
                     width="100%"
@@ -182,6 +208,7 @@ const Home: NextPage = () => {
                       height={3371}
                       layout="responsive"
                       src="/img/bonk.png"
+                      priority
                     />
                   </div>
                 </div>
@@ -196,6 +223,7 @@ const Home: NextPage = () => {
                       height={3371}
                       layout="responsive"
                       src="/img/gaming_controller_left.png"
+                      priority
                     />
                   </div>
                 </AnimatedWrapper>
@@ -210,6 +238,7 @@ const Home: NextPage = () => {
                       height={3371}
                       layout="responsive"
                       src="/img/gaming_controller_right.png"
+                      priority
                     />
                   </div>
                 </AnimatedWrapper>
@@ -225,6 +254,7 @@ const Home: NextPage = () => {
                 height={3371}
                 layout="responsive"
                 src="/img/home-classic-gaming-reinvented.png"
+                priority
               />
             </div>
           )}
@@ -238,17 +268,17 @@ const Home: NextPage = () => {
             className="game-playing-actions"
           >
             <AnimatedWrapper>
-              <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+              <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-medium">
                   START PLAYING
                 </button>
               </a>
             </AnimatedWrapper>
             <AnimatedWrapper>
-              <Link href="/games">
+              <Link href="/games" legacyBehavior>
                 <a>
                   <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-medium">
-                    LEARN MORE
+                    VIEW MORE
                   </button>
                 </a>
               </Link>
@@ -257,16 +287,31 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="row row-top-spacing m-0 p-0 position-relative sliding-nfts">
+      <div className="row row-top-spacing m-0 p-0 mb-5 position-relative sliding-nfts">
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="my-3 my-lg-5">
             <AnimatedWrapper>
-              <h2 className="px-5 animated-header-text animated-header-text-start">COMMUNITY-GENERATED ART</h2>
+              <h2 className="px-5 animated-header-text animated-header-text-start">COMMUNITY-GENERATED AVATARS</h2>
             </AnimatedWrapper>
           </div>
-          <div className={`position-relative sliding-background-wrapper-${desktop ? 'desktop' : 'mobile'}`}>
-            <div className="sliding-background" />
-            <div className="radial-gradient-background" />
+
+          <div className="row row-top-spacing m-0 p-0 mb-5 position-relative sliding-nfts">
+            <div className="d-flex flex-column text-center position-relative p-0">
+              <div className="nifty-ape-overlay">
+                <Image
+                  className="pixelated nifty-ape-img"
+                  src="/img/community/character.png"
+                  width={856}
+                  height={842}
+                  layout="responsive"
+                  alt="ape degen overlay"
+                />
+              </div>
+              <Carousel mobileItems={2} hideGradient>
+                {CommunityDegenData.map(renderDegen)}
+              </Carousel>
+              <div className="radial-gradient-background d-block" />
+            </div>
           </div>
         </div>
       </div>
@@ -358,7 +403,7 @@ const Home: NextPage = () => {
                   <div className="my-0">
                     <AnimatedWrapper>
                       <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                        4 - 16 PLAYERS POOL NFTL TOGETHER IN A CUTTHROAT BATTLE FOR THE SURVIVAL OF THE FITTEST.
+                        4 - 16 PLAYERS COMPETE IN A CUTTHROAT BATTLE FOR THE SURVIVAL OF THE FITTEST.
                       </p>
                     </AnimatedWrapper>
                   </div>
@@ -373,12 +418,13 @@ const Home: NextPage = () => {
                     <AnimatedWrapper>
                       <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                          TRY BRAWL MODE
+                          {/* TRY BRAWL MODE */}
+                          NIFTY SMASHERS
                         </button>
                       </a>
                     </AnimatedWrapper>
                     <AnimatedWrapper>
-                      <Link href="/compete-and-earn">
+                      <Link href="/compete-and-earn" legacyBehavior>
                         <a>
                           <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
                             LEARN MORE
@@ -462,14 +508,16 @@ const Home: NextPage = () => {
                     <h2
                       className={`section-title section-heading animated-header-text animated-header-text-start transition-delay-small`}
                     >
-                      LAND IN THE NIFTYVERSE
+                      <span style={{ whiteSpace: 'nowrap' }}>DISCOVER THE</span>
+                      <br />
+                      NIFTYVERSE
                     </h2>
                   </AnimatedWrapper>
                 </div>
                 <div className="my-0">
                   <AnimatedWrapper>
                     <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      SOON WE WILL MINT LAND IN OUR METAVERSE, TO DEGEN OWNERS AND THE PUBLIC.
+                      A SOCIAL HUB FOR GAMERS LIKE NO OTHER.
                     </p>
                   </AnimatedWrapper>
                 </div>
@@ -483,11 +531,11 @@ const Home: NextPage = () => {
                 >
                   <AnimatedWrapper>
                     <button className="btn disabled theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                      GET NOTIFIED
+                      COMING SOON
                     </button>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
-                    <Link href="/land">
+                    <Link href="/niftyverse" legacyBehavior>
                       <a>
                         <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
                           LEARN MORE
@@ -502,84 +550,74 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {false && (
-        <div className="row row-top-spacing mx-0 py-3 py-md-5">
-          <div className="px-0 position-relative">
-            {desktop && (
-              <AnimatedWrapper>
-                <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-small">
-                  <Image
-                    src="/img/home-rental.png"
-                    alt="Rent a Degen"
-                    layout="responsive"
-                    width={3590}
-                    height={2192}
-                    className="pixelated"
-                  />
+      <div className="row row-top-spacing mx-0 py-3 py-md-5">
+        <div className="px-0 position-relative">
+          {desktop && (
+            <AnimatedWrapper>
+              <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-small">
+                <Image
+                  src="/img/home-rental.png"
+                  alt="Rent a Degen"
+                  layout="responsive"
+                  width={3590}
+                  height={2192}
+                  className="pixelated"
+                />
+                <div className="radial-gradient-background" />
+              </div>
+            </AnimatedWrapper>
+          )}
+          <div className="d-flex flex-column px-3 home-rental-section">
+            <Stack gap={2}>
+              {!desktop && (
+                <div className="position-relative flex-grow-1 full-width">
+                  <Image src="/img/home-rental.png" alt="Rent a Degen" layout="responsive" width={3590} height={2192} />
                   <div className="radial-gradient-background" />
                 </div>
-              </AnimatedWrapper>
-            )}
-            <div className="d-flex flex-column px-3 home-rental-section">
-              <Stack gap={2}>
-                {!desktop && (
-                  <div className="position-relative flex-grow-1 full-width">
-                    <Image
-                      src="/img/home-rental.png"
-                      alt="Rent a Degen"
-                      layout="responsive"
-                      width={3590}
-                      height={2192}
-                    />
-                    <div className="radial-gradient-background" />
-                  </div>
-                )}
-                <div className="d-flex flex-column home-rental-section-body">
-                  <div className="mb-3">
-                    <AnimatedWrapper>
-                      <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
-                        RENT A DEGEN
-                      </h2>
-                    </AnimatedWrapper>
-                  </div>
-                  <div className="my-0">
-                    <AnimatedWrapper>
-                      <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                        READY TO PLAY? WANT TO TEST OUT ALL THE DEGEN TRIBES BEFORE YOU BUY? REMT A DEGEN FOR A WEEK.
-                      </p>
-                    </AnimatedWrapper>
-                  </div>
-                  <Stack
-                    direction="row"
-                    alignItems={{ xs: 'flex-end', sm: 'center' }}
-                    flexWrap="wrap"
-                    gap={{ xs: 1.25, xl: 4 }}
-                    mt={{ xs: 1.25, xl: 4 }}
-                    className="section-actions"
-                  >
-                    <AnimatedWrapper>
-                      <a href="https://app.niftyleague.com/degen-rentals" target="_blank" rel="noreferrer">
-                        <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                          RENT A DEGEN
-                        </button>
-                      </a>
-                    </AnimatedWrapper>
-                    <AnimatedWrapper>
-                      <Link href="/rentals">
-                        <a>
-                          <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                            LEARN MORE
-                          </button>
-                        </a>
-                      </Link>
-                    </AnimatedWrapper>
-                  </Stack>
+              )}
+              <div className="d-flex flex-column home-rental-section-body">
+                <div className="mb-3">
+                  <AnimatedWrapper>
+                    <h2 className="section-heading animated-header-text animated-header-text-start transition-delay-small">
+                      DASHBOARDS
+                    </h2>
+                  </AnimatedWrapper>
                 </div>
-              </Stack>
-            </div>
+                <div className="my-0">
+                  <AnimatedWrapper>
+                    <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
+                      ACCESS WEB3 ENABLED PLAYER DASHBOARDS TO SEE YOUR GAME STATS, WINNINGS, AND NIFTY LEAGUE ASSETS.
+                    </p>
+                  </AnimatedWrapper>
+                </div>
+                <Stack
+                  direction="row"
+                  alignItems={{ xs: 'flex-end', sm: 'center' }}
+                  flexWrap="wrap"
+                  gap={{ xs: 1.25, xl: 4 }}
+                  mt={{ xs: 1.25, xl: 4 }}
+                  className="section-actions"
+                >
+                  <AnimatedWrapper>
+                    <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
+                      <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
+                        LAUNCH APP
+                      </button>
+                    </a>
+                  </AnimatedWrapper>
+                  <AnimatedWrapper>
+                    <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+                      <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
+                        BUY A DEGEN
+                      </button>
+                    </a>
+                  </AnimatedWrapper>
+                </Stack>
+              </div>
+            </Stack>
           </div>
         </div>
-      )}
+      </div>
 
       <div className="row row-top-spacing mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
@@ -609,8 +647,8 @@ const Home: NextPage = () => {
                   </div>
                   <AnimatedWrapper>
                     <p className="py-1 py-lg-3 home-nftl-token-section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      NFTL IS OUR UTILITY AND GOVERNANCE TOKEN. DEGENs EARN NFTY DAILY FOR THE FIRST 3 YEARS POST-MINT.
-                      WAGER AND WIN NFTL BY COMPETING VIA COMPETE-AND-EARN.
+                      NFTL IS OUR GOVERNANCE &amp; UTILITY TOKEN. DEGENS EARN NFTL DAILY FOR THE FIRST 3 YEARS
+                      POST-MINT. GOVERN THE FUTURE OF NIFTY LEAGUE &amp; ACCESS EXCLUSIVE ASSET DROPS WITH NFTL.
                     </p>
                   </AnimatedWrapper>
                   <Stack
@@ -623,12 +661,12 @@ const Home: NextPage = () => {
                   >
                     <AnimatedWrapper>
                       <a
-                        href="https://app.sushi.com/swap?inputCurrency=ETH&outputCurrency=0x3c8D2FCE49906e11e71cB16Fa0fFeB2B16C29638&chainId=1"
+                        href="https://app.uniswap.org/#/tokens/ethereum/0x3c8d2fce49906e11e71cb16fa0ffeb2b16c29638"
                         target="_blank"
                         rel="noreferrer"
                       >
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                          BUY TOKEN
+                          TRADE NFTL
                         </button>
                       </a>
                     </AnimatedWrapper>
@@ -754,7 +792,7 @@ const Home: NextPage = () => {
                   <div className="mb-3">
                     <AnimatedWrapper>
                       <h2 className="section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
-                        THE BEST COMMUNITY ON EARTH
+                        GAMING COMMUNITY
                       </h2>
                     </AnimatedWrapper>
                   </div>
@@ -762,8 +800,8 @@ const Home: NextPage = () => {
                     <p
                       className={`py-1 home-community-section-description animated-header-text animated-header-text-start transition-delay-medium`}
                     >
-                      WE HATE TO BRAG, BUT OUR OUR COMMUNITY OF OWNERS AND PLAYERS IS TRULY THE BEST IN WEB3. WE MEET UP
-                      IRL OFTEN, ATTEND EVENTS TOGETHER, AND GET TOGETHER GAME (OBVIOUSLY).
+                      WE HATE TO BRAG, BUT OUR COMMUNITY IS TRULY TOP NOTCH. JOIN OUR DISCORD TO CONNECT WITH OTHERS
+                      &amp; HELP SHAPE NIFTY LEAGUE&apos;S FUTURE!
                     </p>
                   </AnimatedWrapper>
                   <Stack
@@ -847,7 +885,7 @@ const Home: NextPage = () => {
             className="section-actions"
           >
             <AnimatedWrapper>
-              <Link href="/careers">
+              <Link href="/careers" legacyBehavior>
                 <a>
                   <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-large">
                     JOIN THE TEAM
@@ -858,7 +896,7 @@ const Home: NextPage = () => {
             <AnimatedWrapper>
               <a href="https://niftyleague.medium.com/" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                  READ OUR POST
+                  READ OUR BLOG
                 </button>
               </a>
             </AnimatedWrapper>

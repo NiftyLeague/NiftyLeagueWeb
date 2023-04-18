@@ -68,17 +68,6 @@ const moduleExports = {
         destination: 'https://opensea.io/assets/ethereum/0x986aea67c7d6a15036e18678065eb663fc5be883/:token_id',
         permanent: false,
       },
-      // For now, disable rentals and land pages
-      {
-        source: '/rentals',
-        destination: '/',
-        permanent: true,
-      },
-      {
-        source: '/land',
-        destination: '/',
-        permanent: true,
-      },
     ];
   },
   sentry: {

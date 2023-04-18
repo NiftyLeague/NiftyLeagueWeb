@@ -35,7 +35,7 @@ const SocialCard = ({ link, title, subtitle, image }: SocialProps) => {
 
 const SocialCards = () => {
   return (
-    <div className="container my-5">
+    <div className="container mt-5">
       <div className="row align-items-center my-sm-0 mt-sm-5">
         {SOCIALS.map(({ link, title, subtitle, image }) => (
           <SocialCard key={title} link={link} title={title} subtitle={subtitle} image={image} />

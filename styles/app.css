@@ -22,8 +22,8 @@
 
 /************************************* Body, Heading, Fonts *************************************/
 body {
-  color: #FFFFFF;
-  background: #090A0B;
+  color: #ffffff;
+  background: #090a0b;
   overflow-x: hidden;
 }
 
@@ -41,7 +41,7 @@ h2 {
 }
 h3 {
   font-size: 64px;
-  line-height: 75px;  
+  line-height: 75px;
   font-weight: 700;
   letter-spacing: 3px;
 }
@@ -111,10 +111,10 @@ a {
   color: #757575;
 }
 .bg-black {
-  background: #090A0B;
+  background: #090a0b;
 }
 .black-bg1 {
-  background: #090A0B;
+  background: #090a0b;
 }
 .bg-purple {
   background: #620edf;
@@ -164,10 +164,10 @@ a {
 }
 
 /************************************* Themes Items *************************************/
-.theme-btn-transparent { 
-  border-radius: 20px; 
-  border: 1px solid #D2D3DB;
-  color: #FAFAFA;
+.theme-btn-transparent {
+  border-radius: 20px;
+  border: 1px solid #d2d3db;
+  color: #fafafa;
   background: transparent;
   display: flex;
   align-items: center;
@@ -175,7 +175,7 @@ a {
   text-transform: uppercase;
   font-size: 24px;
   font-weight: 700;
-  letter-spacing: -0.02em;  
+  letter-spacing: -0.02em;
   box-shadow: none;
   white-space: nowrap;
   padding: 4px 16px;
@@ -188,21 +188,21 @@ a {
 .theme-btn-transparent:hover {
   border-image-slice: 1 !important;
   border-width: 1px;
-  border-image-source: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
-  color: #FFFFFF;
-  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  border-image-source: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+  color: #ffffff;
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   box-shadow: none;
 }
 .theme-btn-transparent.disabled {
-  border: 1px solid #D2D3DB;
+  border: 1px solid #d2d3db;
 }
 .theme-btn-primary {
   border-radius: 20px;
   color: #282932;
-  background: #FFFFFF;  
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -222,19 +222,19 @@ a {
 
 .overview .btn,
 .learn-pg .btn,
-.about-pg .btn {
+.team-pg .btn {
   font-size: 20px;
 }
 
 .theme-learn-btn {
-  color: #FFFFFF;
-  background: #620EDF;
+  color: #ffffff;
+  background: #620edf;
 }
 
 .theme-btn-primary:hover {
-  color: #FFFFFF;
+  color: #ffffff;
   box-shadow: none;
-  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
 }
 
 .iconExternalLink {
@@ -303,7 +303,7 @@ a {
   z-index: 1;
   left: 0;
   width: 100vw;
-  height: 320px;
+  height: 340px;
 }
 
 .degen-scroller-content {
@@ -318,28 +318,24 @@ a {
   width: 100vw;
   position: absolute;
   bottom: 0;
-  background: #090A0B;
+  background: #090a0b;
   z-index: -1;
 }
-.nifty-character {
+.nifty-ape-overlay {
   min-height: 250px;
   height: auto;
-  margin-bottom: -250px;
-  z-index: -1;
-}
-.nifty-mario {
-  width: 90%;
-}
-.nifty-ape {
+  z-index: 2;
   width: 100%;
+  position: absolute;
+  margin-top: -115px;
+}
+.nifty-ape-overlay .nifty-ape-img {
+  max-width: 450px;
 }
 
 @media (min-width: 576px) {
-  .nifty-mario {
-    width: 80%;
-  }
-  .nifty-ape {
-    width: 95%;
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 70%;
   }
 }
 @media (max-width: 768px) {
@@ -363,30 +359,24 @@ a {
   .degen-scroller-content {
     margin-top: -100px;
   }
-  .nifty-mario {
-    width: 550px;
-  }
-  .nifty-ape {
-    width: 85%;
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 65%;
   }
   .dark-gradient-shade {
-    height: 450px;
+    height: 475px;
   }
 }
-@media (min-width: 992px) {  
-  .nifty-ape {
-    width: 700px;
+@media (min-width: 992px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 650px;
   }
   .dark-gradient-shade {
-    height: 500px;
+    height: 530px;
   }
 }
 @media (min-width: 1200px) {
-  .nifty-mario {
-    width: 600px;
-  }
-  .nifty-ape {
-    width: 800px;
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 750px;
   }
   .row-top-spacing {
     padding-top: 100px !important;
@@ -415,12 +405,12 @@ a {
 .faq-accordion .accordion-item {
   border: none;
   margin-bottom: 12px;
-  background: #1E242B;
+  background: #1e242b;
   backdrop-filter: blur(65.0688px);
   border-radius: 10px;
 }
 .faq-accordion .accordion-header button {
-  color: #5820D6;
+  color: #5820d6;
   background-color: transparent;
   font-size: 32px;
   line-height: 1.2;
@@ -429,7 +419,7 @@ a {
 
 /*************************************** Community **********************************************/
 
-.com-pg {  
+.com-pg {
   overflow-x: hidden;
 }
 .com-intro {
@@ -510,6 +500,10 @@ a {
   min-height: 800px;
 }
 
+.carousel-item-padding-20-px {
+  padding: 0px 20px;
+}
+
 .community-footer {
   background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
     rgba(36, 37, 38, 0.6);
@@ -520,9 +514,9 @@ a {
   width: 112px;
 }
 
-/*************************************** About **********************************************/
+/*************************************** TEAM **********************************************/
 
-.about-pg {
+.team-pg {
   overflow-x: hidden;
 }
 
@@ -586,30 +580,6 @@ a {
   -webkit-box-orient: vertical;
 }
 
-.nifty-rentals-img .icons-placement1 img {
-  position: relative;
-}
-.nifty-rentals-img .icons-placement1 .icon8 {
-  top: 0px;
-  left: 200px;
-}
-.nifty-rentals-img .icons-placement1 .icon1 {
-  top: 0px;
-  left: 200px;
-}
-.nifty-rentals-img .icons-placement1 .icon2 {
-  top: 50px;
-  left: 100px;
-}
-.nifty-rentals-img .icons-placement1 .icon3 {
-  top: 50px;
-  left: 200px;
-}
-.nifty-rentals-img .icons-placement1 .icon4 {
-  top: 80px;
-  left: 200px;
-}
-
 .video-bg {
   position: absolute;
   top: 0;
@@ -670,7 +640,7 @@ a {
 .home-satoshi-container {
   position: absolute;
   bottom: 74px;
-  left: -14px;  
+  left: -14px;
 }
 
 .home-satoshi {
@@ -678,7 +648,7 @@ a {
   height: 240px;
 }
 
-.home-intro {  
+.home-intro {
   width: 100%;
   max-height: 100vh;
   overflow: hidden;
@@ -688,7 +658,7 @@ a {
   position: absolute;
   z-index: 3;
   left: 232px;
-  bottom: 4rem;  
+  bottom: 4rem;
 }
 
 .home-content-title {
@@ -697,11 +667,6 @@ a {
 
 .home-content-description {
   max-width: 440px;
-}
-
-.home-content-button {
-  display: none;
-  width: 450px;
 }
 
 .speech-bubble-text {
@@ -721,7 +686,8 @@ a {
   height: 100%;
 }
 
-.home-hero-characters-image, .home-nftl-token-image {
+.home-hero-characters-image,
+.home-nftl-token-image {
   width: 100%;
   height: 100%;
   bottom: 0px;
@@ -759,6 +725,25 @@ a {
   height: 125px;
   margin-left: -40px;
   cursor: pointer;
+}
+
+.home-mobile-intro {
+  background: #191b1f;
+  background-size: cover;
+  background-image: url(/img/home-banner-mobile.png);
+  min-height: 100vh;
+}
+.home-mobile-intro .overlay-dark {
+  width: 100%;
+  height: 100vh;
+  background: rgba(25, 27, 31, 1);
+  opacity: 0.8999999761581421;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-mobile-content {
+  z-index: 3;
 }
 
 .gaming-controller {
@@ -825,11 +810,25 @@ a {
 
 .radial-gradient-background {
   position: absolute;
-  background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(95, 190, 74, 0) 0%, rgba(21, 18, 27, 0) 19.27%, #08090A 99.74%);
+  background: radial-gradient(
+    189.96% 61.18% at 50% 38.82%,
+    rgba(95, 190, 74, 0) 0%,
+    rgba(21, 18, 27, 0) 19.27%,
+    #08090a 99.74%
+  );
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 100%;
+  height: 102%;
+}
+
+.radial-gradient-background.top {
+  background: radial-gradient(
+    189.96% 61.18% at 50% 50%,
+    rgba(95, 190, 74, 0) 0%,
+    rgba(21, 18, 27, 0) 19.27%,
+    #08090a 85%
+  );
 }
 
 .overview .radial-gradient-background {
@@ -845,7 +844,7 @@ a {
   position: absolute;
   width: 400px;
   height: 400px;
-  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
   opacity: 0.2;
   filter: blur(50px);
   border-radius: 398px;
@@ -872,7 +871,7 @@ a {
   left: -226px;
   top: calc(50% - 110px);
   width: 226px;
-  height: 223px;  
+  height: 223px;
 }
 
 .compete-to-earn-section-token-2 {
@@ -880,7 +879,7 @@ a {
   right: -32px;
   top: 0px;
   width: 226px;
-  height: 221px;  
+  height: 221px;
 }
 
 .compete-to-earn-section-token-3 {
@@ -924,13 +923,13 @@ a {
 .sliding-nfts .sliding-background-wrapper-desktop {
   overflow: hidden;
   min-height: 520px;
-  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
 }
 .sliding-nfts .sliding-background-wrapper-mobile {
   overflow: hidden;
   min-height: 106px;
   margin: 16px 0px;
-  background: linear-gradient(128.04deg, #6600FF 0%, #576FFF 46.93%, #FF00C7 100%);
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
 }
 .sliding-background-wrapper-desktop .sliding-background {
   background: url(/img/icons-set.png) repeat-x;
@@ -1042,7 +1041,7 @@ a {
     display: none;
   }
   .com-intro {
-    max-width: 100% !important;    
+    max-width: 100% !important;
   }
   .com-intro p br {
     display: none;
@@ -1083,7 +1082,7 @@ a {
     line-height: 80px;
   }
   h2 {
-    font-size: 72px;    
+    font-size: 72px;
     line-height: 80px;
   }
   h3 {
@@ -1114,14 +1113,11 @@ a {
   .speech-bubble-text {
     font-size: 20px;
     top: 50px;
-    left: 123px;    
+    left: 123px;
   }
   .home-content {
     left: 188px;
     bottom: 1.5rem;
-  }
-  .home-content-button {
-    width: 400px;
   }
   .home-satoshi-container {
     bottom: 43px;
@@ -1142,7 +1138,7 @@ a {
     width: 180px;
     height: 185px;
     left: -180px;
-    top: calc(50% - 90px)
+    top: calc(50% - 90px);
   }
   .compete-to-earn-section-token-2 {
     width: 180px;
@@ -1187,15 +1183,8 @@ a {
   .faq-accordion .accordion-header button {
     font-size: 24px;
   }
-  .home-content {
-    left: 152px;
-    bottom: 8px;
-  }
   .home-content-description {
-    max-width: 350px;
-  }
-  .home-content-button {
-    width: 350px;
+    max-width: 360px;
   }
   .home-satoshi-container {
     bottom: 44px;
@@ -1209,7 +1198,7 @@ a {
   }
   .section-black-button {
     width: 240px;
-  }  
+  }
   .section-white-button {
     width: 240px;
   }
@@ -1225,8 +1214,8 @@ a {
     line-height: 54px;
   }
   h2 {
-    font-size: 48px;  
-    line-height: 54px;  
+    font-size: 48px;
+    line-height: 54px;
   }
   h3 {
     font-size: 40px;
@@ -1250,21 +1239,26 @@ a {
   .btn {
     font-size: 16px !important;
   }
-  .home-pg .btn {    
-    height: 40px;    
+  .home-pg .btn {
+    height: 40px;
   }
-  .home-content-description {
-    max-width: 300px;
+  .home-content {
+    left: 188px;
+    bottom: 20px;
   }
-  .home-content-button {
-    width: 280px;
+  .home-content-title {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .home-satoshi-container {
+    bottom: 40px;
   }
   .section-description {
     max-width: 340px;
   }
   .section-black-button {
     width: 200px;
-  }  
+  }
   .section-white-button {
     width: 200px;
   }
@@ -1287,7 +1281,7 @@ a {
     line-height: 48px;
   }
   h2 {
-    font-size: 40px;    
+    font-size: 40px;
     line-height: 48px;
   }
   h3 {
@@ -1310,10 +1304,12 @@ a {
     font-size: 20px;
     padding: 1rem;
   }
-  p, a, li {
+  p,
+  a,
+  li {
     font-size: 14px;
     line-height: 18px;
-  }  
+  }
   .accordion-body {
     font-size: 14px;
   }
@@ -1322,15 +1318,15 @@ a {
   }
   .home-content {
     left: 126px;
+    bottom: 0px;
   }
   .home-content-title {
-    max-width: 350px;
+    max-width: 360px;
+    font-size: 48px;
+    line-height: 54px;
   }
   .home-content-description {
-    max-width: 252px;
-  }
-  .home-content-button {
-    width: 240px;
+    max-width: 325px;
   }
   .satoshi-learn-more {
     width: 260px;
@@ -1341,17 +1337,17 @@ a {
     font-size: 16px;
     top: 36px;
     left: 86px;
-  }  
+  }
   .home-satoshi-container {
-    bottom: 32px;
+    bottom: 20px;
   }
   .home-satoshi {
     width: 120px;
     height: 127px;
-  }  
+  }
   .section-black-button {
     width: 180px;
-  }  
+  }
   .section-white-button {
     width: 180px;
   }
@@ -1373,23 +1369,21 @@ a {
   .com-intro {
     min-height: 800px;
   }
-  .nifty-character {
-    margin-bottom: 0px;
-  }
 }
 
-@media (max-width: 920px) {  
+@media (max-width: 920px) {
   .home-intro {
-    margin-bottom: 224px;
-    padding-top: 72px !important;
-    overflow: inherit;
+    margin-top: 90px;
+  }
+  .home-banner,
+  .parallax-hero-child {
+    animation: none !important;
   }
   .home-content {
     left: 0px;
-    top: calc(100% + 32px);
     width: 100%;
   }
-  .home-content-title {    
+  .home-content-title {
     max-width: inherit;
     padding-left: 3rem;
     padding-right: 3rem;
@@ -1405,21 +1399,24 @@ a {
     padding-left: 32px;
     padding-right: 32px;
   }
-  .home-content-button-bubble {
-    display: none;
+  .satoshi-learn-more {
+    margin-left: 75px;
   }
-  .home-content-button {
-    margin-left: auto;
-    margin-right: auto;
-    width: 240px;
-    display: block;
+  .speech-bubble-text {
+    font-size: 16px;
+    top: 36px;
+    left: 86px;
   }
   .home-satoshi-container {
-    bottom: 0px;
+    bottom: 30px;
+    left: 0 !important;
+    display: block;
   }
   .home-satoshi {
     width: 100px;
     height: 105px;
+    left: 0 !important;
+    display: block;
   }
   .section-title {
     max-width: 400px;
@@ -1435,14 +1432,14 @@ a {
   }
   .home-hero-characters-image {
     height: calc(100% - 72px);
-  }  
+  }
   .home-hero-companion {
     top: calc(14% + 50px);
   }
-  
+
   .home-hero-halo {
     right: 25%;
-    top: calc(22.5% + 50px);    
+    top: calc(22.5% + 50px);
   }
 }
 
@@ -1466,10 +1463,13 @@ a {
   .faq-accordion .accordion-header button {
     font-size: 18px;
   }
+  .home-intro {
+    display: none;
+  }
   .home-satoshi {
     width: 80px;
     height: 84px;
-  }  
+  }
   .row {
     margin-left: 0px;
     margin-right: 0px;
@@ -1489,12 +1489,12 @@ a {
 
   .section-description {
     max-width: 600px;
-    text-align: center;    
+    text-align: center;
   }
 
   .compete-to-earn-section-body .section-actions {
     justify-content: center;
-  }  
+  }
   .home-rental-section {
     position: relative;
     top: 0px;
@@ -1502,7 +1502,7 @@ a {
   }
   .home-rental-section-body {
     align-items: center;
-  }  
+  }
   .home-nftl-token-section {
     width: 100%;
   }
@@ -1561,16 +1561,13 @@ a {
   h3 {
     font-size: 22px;
     line-height: 26px;
-  }  
+  }
   .btn {
-    font-size: 14px !important;    
+    font-size: 14px !important;
   }
   .home-pg .btn {
     height: 36px;
     border-radius: 20px;
-  }
-  .home-content-button {
-    width: 172px;
   }
   .home-satoshi {
     width: 60px;
@@ -1579,12 +1576,9 @@ a {
 }
 
 @media (max-width: 400px) {
-  .home-intro {
-    padding-top: 62px !important;
-  }
   .section-black-button {
     width: 135px;
-  }  
+  }
   .section-white-button {
     width: 135px;
   }
@@ -1605,11 +1599,11 @@ a {
   }
   .home-hero-characters-image {
     height: calc(100% - 62px);
-  }  
+  }
   .home-hero-companion {
     display: none;
   }
-  
+
   .home-hero-halo {
     display: none;
   }
@@ -1627,7 +1621,7 @@ a {
   }
   .mobile-block {
     display: block !important;
-  }    
+  }
   .text-m-left {
     text-align: left;
   }
@@ -1637,7 +1631,7 @@ a {
   }
   .community-data {
     min-width: auto;
-  }  
+  }
   .video-details h4 {
     font-size: 15px;
     text-align: center;
@@ -1718,7 +1712,7 @@ a {
     max-width: 145px;
     height: auto;
   }
-  .about-pg .about-intro .display-buttons {
+  .team-pg .about-intro .display-buttons {
     justify-content: center;
   }
   .video-detail-container a img {
@@ -1735,14 +1729,13 @@ a {
   .nr-banner {
     order: 1;
   }
-  .about-pg .DAO-section {
+  .team-pg .DAO-section {
     margin-top: 60px !important;
   }
   .teams-slider .nifty-teams {
     width: 100%;
     text-align: center;
     justify-content: center;
-    align-items: center;
   }
   .slick-dots {
     justify-content: center;
@@ -1773,7 +1766,6 @@ a {
   .com-intro {
     max-width: 100% !important;
     padding-top: 48px;
-
   }
   .com-intro p br {
     display: none;
@@ -1787,7 +1779,7 @@ a {
   }
   .com-content {
     margin-top: 48px;
-  }  
+  }
 }
 
 @media (max-width: 615px) {
@@ -1796,6 +1788,9 @@ a {
   }
   .text-m-center {
     text-align: center;
+  }
+  .home-mobile-intro button {
+    width: 195px;
   }
   .wrapper {
     min-height: 460px;
@@ -1836,7 +1831,7 @@ a {
   }
   .mobile-block {
     display: block !important;
-  }  
+  }
   .sushi-gif-section {
     min-height: 679px;
   }
@@ -2031,7 +2026,7 @@ a {
 
   .animation-bounce2 {
     animation: bounce 4s ease infinite;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   .animation-bounce-coin1 {
@@ -2040,7 +2035,7 @@ a {
 
   .animation-bounce-coin2 {
     animation: coin-bounce2 3s ease infinite;
-    animation-delay: .5s;
+    animation-delay: 0.5s;
   }
 
   .animation-bounce-coin3 {
@@ -2049,7 +2044,7 @@ a {
   }
 
   .animation-propeller {
-    animation: propeller .5s ease infinite;
+    animation: propeller 0.5s ease infinite;
   }
 
   .animation-visible {
@@ -2057,23 +2052,49 @@ a {
   }
 
   @keyframes bounce {
-    0%, 50%, 100% {transform: translateY(0);}
-    25%, 75% {transform: translateY(-20px);}
+    0%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-20px);
+    }
   }
 
   @keyframes coin-bounce {
-    0%, 50%, 100% {transform: translateY(0);}
-    25%, 75% {transform: translateY(-60px);}
+    0%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-60px);
+    }
   }
 
   @keyframes coin-bounce2 {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-60px);}
-    60% {transform: translateY(-30px);}
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-60px);
+    }
+    60% {
+      transform: translateY(-30px);
+    }
   }
 
   @keyframes visibility {
-    0%, 50%, 100% {
+    0%,
+    50%,
+    100% {
       opacity: 1;
     }
     25% {
@@ -2082,7 +2103,8 @@ a {
   }
 
   @keyframes propeller {
-    0%, 100% {
+    0%,
+    100% {
       background-image: url('/img/home-hero-companion-anim1.png');
     }
     25% {
@@ -2103,11 +2125,11 @@ a {
   @keyframes zoomin {
     0% {
       -webkit-transform: scale(1.2);
-		  transform: scale(1.2);
+      transform: scale(1.2);
     }
     100% {
       -webkit-transform: scale(1);
-		  transform: scale(1);
+      transform: scale(1);
     }
   }
 
@@ -2118,26 +2140,26 @@ a {
   @keyframes zoomin-large {
     0% {
       -webkit-transform: scale(2);
-		  transform: scale(2);
+      transform: scale(2);
     }
     100% {
       -webkit-transform: scale(1);
-		  transform: scale(1);
+      transform: scale(1);
     }
   }
 
   .transition-delay-small {
-    transition-delay: 0.5s;
+    transition-delay: 0.2s;
   }
 
   .transition-delay-medium {
-    transition-delay: 0.7s;
+    transition-delay: 0.4s;
   }
 
   .transition-delay-large {
-    transition-delay: 1s;
+    transition-delay: 0.6s;
   }
   .transition-delay-extreme {
-    transition-delay: 3s;
-  }   
+    transition-delay: 2s;
+  }
 }

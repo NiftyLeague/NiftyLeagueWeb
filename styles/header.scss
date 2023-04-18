@@ -26,7 +26,7 @@
 .home-pg .header .eclipse-location {
   display: none;
 }
-.about-pg .header .eclipse-location {
+.team-pg .header .eclipse-location {
   top: 30px;
   max-width: 900px;
 }
@@ -75,7 +75,7 @@
   }
 }
 @media (min-width: 992px) {
-  .about-pg .header .eclipse-location {
+  .team-pg .header .eclipse-location {
     left: 200px;
   }
   .learn-pg .header .eclipse-location {

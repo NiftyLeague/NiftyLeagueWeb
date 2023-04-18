@@ -32,8 +32,8 @@ export const NIFTY_DEGENS = [
     description: `Watch out for the frog’s sticky tongue. If you dont see it, you’re probably trapped already`,
     gif: {
       link: '/img/degens/frog.gif',
-      width: 512,
-      height: 512,
+      width: 500,
+      height: 500,
     },
     image: {
       link: '/img/degens/frog.png',

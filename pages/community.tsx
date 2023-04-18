@@ -1,18 +1,17 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/legacy/image';
+import { useMediaQuery } from '@mui/material';
 import Layout from '@components/layout';
-import Carousel from '@components/carousel';
-import { renderDegen } from '@components/carousel/DegenCardItem';
 import SocialCards from '@components/SocialCards';
-import { CommunityDegenData } from '@data/constants';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 
 const Community: NextPage = () => {
+  const desktop = useMediaQuery('(min-width:769px)');
   return (
     <Layout classes={{ root: 'com-pg' }}>
       <Head>
-        <title>Meet Our Degen Community | Nifty League</title>
+        <title>Nifty League | Community</title>
         <meta name="description" content="Community comes first at Nifty League" />
       </Head>
 
@@ -89,7 +88,7 @@ const Community: NextPage = () => {
               </h3>
             </AnimatedWrapper>
             <AnimatedWrapper>
-              <p className="text-m-center animated-header-text animated-header-text-start transition-delay-medium">
+              <p className="text-m-center animated-header-text animated-header-text-start transition-delay-medium my-3">
                 Nifty League&apos;s community is unlike any other. Get your questions answers and connect with fellow
                 DEGENs!
               </p>
@@ -97,82 +96,17 @@ const Community: NextPage = () => {
           </div>
         </div>
       </div>
-      {false && (
-        <div className="com-grad-1">
-          <Image
-            src="/img/community/com-grad-1.svg"
-            width={856}
-            height={674}
-            layout="responsive"
-            alt="yellow gradient"
-          />
-        </div>
-      )}
+
       <SocialCards />
 
-      <div className="container" style={{ maxWidth: '100%' }}>
-        <div className="row m-0 p-0 position-relative nifty-league-browse py-sm-5" style={{ minHeight: 900 }}>
-          <div className="row m-0 p-0 position-relative py-5" style={{ marginBottom: 550 }}>
-            <section
-              style={{
-                alignItems: 'center',
-                maxWidth: '100%',
-                textAlign: 'center',
-              }}
-            >
-              <Carousel mobileItems={2}>{CommunityDegenData.map(renderDegen)}</Carousel>
-            </section>
-          </div>
-          <div className="com-scroller-dark-background" />
-          <div className="degen-scroller-content text-center d-flex flex-column align-items-center position-absolute">
-            <div className="nifty-character nifty-ape">
-              <Image
-                className="pixelated"
-                src="/img/community/character.png"
-                width={856}
-                height={842}
-                layout="responsive"
-                alt="ape degen header"
-                priority
-              />
-            </div>
-            <AnimatedWrapper>
-              <h3 className="nifty-character-title animated-header-text animated-header-text-start transition-delay-small">
-                Get Involved with
-                <br />
-                the Community
-              </h3>
-            </AnimatedWrapper>
-            <div className="my-sm-4 my-2">
-              <AnimatedWrapper>
-                <p className="text-center animated-header-text animated-header-text-start transition-delay-medium">
-                  Grab your Nifty League DEGEN and join us in the Lair in Discord! We&apos;re ready to meet you.
-                </p>
-              </AnimatedWrapper>
-            </div>
-            <a href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-              <AnimatedWrapper>
-                <button className="btn theme-btn-primary w-auto mt-3 mt-sm-0 animated-fade-start animated-fade transition-delay-medium">
-                  Join our server
-                </button>
-              </AnimatedWrapper>
-            </a>
+      <div className="row row-top-spacing m-0 p-0 position-relative sliding-nfts">
+        <div className="d-flex flex-column text-center position-relative p-0">
+          <div className={`position-relative sliding-background-wrapper-${desktop ? 'desktop' : 'mobile'}`}>
+            <div className="sliding-background" />
+            <div className="radial-gradient-background top" />
           </div>
         </div>
       </div>
-
-      {/* <div className="container my-5">
-        <div className="community-footer d-flex align-items-center text-center flex-column p-5">
-          <img className="mb-5" src="img/logo/purple.png" />
-          <h3>Download Brand Assets</h3>
-          <p className="font-16 mt-1">
-            Commonly used where the Nifty League Branding needs to be displayed
-          </p>
-          <button className="btn theme-btn-primary w-auto mt-2">
-            download brand assets
-          </button>
-        </div>
-      </div> */}
     </Layout>
   );
 };

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
+import ExternalIcon from '@components/ExternalIcon';
 
 const Lore: NextPage = () => {
   const mobile = useMediaQuery('(max-width:600px)');
@@ -136,7 +137,7 @@ const Lore: NextPage = () => {
         </div>
         <div className="d-flex justify-content-center my-5">
           <AnimatedWrapper>
-            <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
+            <a href="https://niftyleague.com/docs/overview/intro" target="_blank" rel="noreferrer">
               <button
                 className={cn(
                   styles.button,
@@ -144,6 +145,7 @@ const Lore: NextPage = () => {
                 )}
               >
                 View Docs
+                <ExternalIcon />
               </button>
             </a>
           </AnimatedWrapper>

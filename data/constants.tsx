@@ -149,7 +149,7 @@ export const AboutDegenData = [
 
 export const CommunityDegenData = [
   {
-    name: 'Monopoly Frog',
+    name: 'Monopoly',
     createdDate: '9/24/2021 2:53 PM',
     source: '/img/degens/443.png',
   },
@@ -169,7 +169,7 @@ export const CommunityDegenData = [
     source: '/img/degens/1260.png',
   },
   {
-    name: 'The Grim Reaper',
+    name: 'Grim Reaper',
     createdDate: '9/24/2021 11:55 AM',
     source: '/img/degens/455.png',
   },
@@ -189,7 +189,7 @@ export const CommunityDegenData = [
     source: '/img/degens/101.png',
   },
   {
-    name: 'Los Angeles Lakers',
+    name: 'LA Lakers',
     createdDate: '9/24/2021 1:37 PM',
     source: '/img/degens/876.png',
   },
@@ -227,53 +227,9 @@ export const CORE_TEAM = [
     link: 'https://twitter.com/mikescottiskiff',
   },
   {
-    name: 'Meghan Vita',
-    source: '/img/degens/team/NiftyMorgan.png',
-    link: 'https://twitter.com/meghanvita',
-  },
-  {
     name: 'Dave Rosser',
     source: '/img/degens/team/bolo.png',
     link: 'https://twitter.com/iambolodave',
-  },
-  {
-    name: 'Jeff Elkind',
-    source: '/img/degens/team/zoiby.png',
-  },
-  {
-    name: 'Brian Wang',
-    title: 'Sr. Web3 Developer',
-    source: '/img/degens/team/brian.png',
-  },
-  {
-    name: 'Nicolas Morga',
-    title: 'Sr. Frontend Developer',
-    source: '/img/degens/team/nicolas.png',
-  },
-  {
-    name: 'Dr. Ashley Godbold',
-    title: 'Sr. Unity Engineer',
-    source: '/img/degens/team/ashley.png',
-  },
-  {
-    name: 'David',
-    title: 'Sr. Unity Engineer',
-    source: '/img/degens/team/david.png',
-  },
-  {
-    name: 'Sahin',
-    title: 'Sr. Unity Engineer',
-    source: '/img/degens/team/sahin.png',
-  },
-  {
-    name: 'Caleb',
-    title: 'Game Economy Designer',
-    source: '/img/degens/team/caleb.png',
-  },
-  {
-    name: 'Gideon Awolesi',
-    title: 'Product Designer',
-    source: '/img/degens/team/gideon.png',
   },
   {
     name: 'Ben Collie',
@@ -285,25 +241,45 @@ export const CORE_TEAM = [
     source: '/img/degens/team/sahin.png',
   },
   {
-    name: 'David H.',
-    source: '/img/degens/team/david.png',
-  },
-  {
     name: 'Renoki',
     source: '/img/degens/team/renoki.png',
+  },
+  {
+    name: 'David Lee',
+    source: '/img/degens/team/davidLee.png',
   },
 ];
 
 export const DEGEN_DELEGATES = [
+  {
+    name: 'Nard',
+    source: '/img/degens/team/nard.png',
+    link: 'https://twitter.com/_NARDLEON',
+  },
+  {
+    name: 'Citra',
+    source: '/img/degens/team/citra.png',
+    link: 'https://twitter.com/fcitra',
+  },
+  {
+    name: 'Big Meech',
+    source: '/img/degens/team/BigMeech.png',
+    link: 'https://twitter.com/TopJag31?s=20',
+  },
+  {
+    name: 'Consty',
+    source: '/img/degens/team/consty.png',
+    link: 'https://twitter.com/ConstyNFT',
+  },
   {
     name: 'Real Deal McKeel',
     source: '/img/degens/team/realdeal.png',
     link: 'https://twitter.com/RealDealMcKeel',
   },
   {
-    name: 'Nard',
-    source: '/img/degens/team/nard.png',
-    link: 'https://twitter.com/_NARDLEON',
+    name: 'Zoiby',
+    source: '/img/degens/team/zoiby.png',
+    link: 'https://twitter.com/_Zoiby',
   },
   {
     name: 'Sacx',
@@ -316,38 +292,24 @@ export const DEGEN_DELEGATES = [
     link: 'https://twitter.com/PaRa80L1C',
   },
   {
-    name: 'Citra',
-    source: '/img/degens/team/citra.png',
-    link: 'https://twitter.com/fcitra',
+    name: 'Doffy',
+    source: '/img/degens/team/doffy.png',
+    link: 'https://twitter.com/DoffySenpai_',
   },
   {
-    name: 'Consty',
-    source: '/img/degens/team/consty.png',
-    link: 'https://twitter.com/ConstyNFT',
+    name: 'Foster',
+    source: '/img/degens/team/foster.png',
+    link: 'https://twitter.com/Fosterato_',
   },
   {
-    name: 'Big Meech',
-    source: '/img/degens/team/BigMeech.png',
+    name: 'SNK',
+    source: '/img/degens/team/snk.png',
+    link: 'https://twitter.com/Lucas_tk9?s=20',
   },
   {
-    name: 'David Lee',
-    source: '/img/degens/team/davidLee.png',
-  },
-  {
-    name: 'Gideon Awolesi',
-    source: '/img/degens/team/gideon.png',
-  },
-  {
-    name: 'Dr. Ashley Godbold',
-    source: '/img/degens/team/ashley.png',
-  },
-  {
-    name: 'Caleb C.',
-    source: '/img/degens/team/caleb.png',
-  },
-  {
-    name: 'Will P.',
-    source: '/img/degens/team/will.png',
+    name: 'Gospodar',
+    source: '/img/degens/team/gospodar.png',
+    link: 'https://twitter.com/_Gospodar?s=20',
   },
 ];
 

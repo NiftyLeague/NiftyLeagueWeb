@@ -2,13 +2,15 @@ export const NIFTY_GAMES = [
   {
     name: 'NIFTY SMASHERS',
     description:
-      'This fortnite style action game will leave you on the edge of your seat with your fingers cramping as you try to out-click and out-smash your opponent in a free for all DEGEN battle. Just in case you’re wondering, the winner does take all. But if you’re lucky to get some hits in before you’re vanquished you might get some mercy rewards. If you’ve got the balls, you should check it out.',
+      'This brawl style action game will leave you on the edge of your seat with your fingers cramping as you try to out-click and out-smash your opponent in a free for all DEGEN battle. Just in case you’re wondering, the winner does take all. But if you’re lucky to get some hits in before you’re vanquished you might get some mercy rewards. If you’ve got the balls, you should check it out.',
     video: 'https://www.youtube.com/embed/ylJzfLcWChc',
     tag: 'GAME',
     action: {
-      title: 'PLAY IF YOU DARE',
+      title: "LET'S BRAWL!",
       link: 'https://app.niftyleague.com/games/smashers',
       isComingSoon: false,
+      secondaryLink: '/compete-and-earn',
+      secondaryTitle: "WHAT'S COMPETE & EARN?",
     },
   },
   // {

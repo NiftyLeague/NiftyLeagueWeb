@@ -6,13 +6,14 @@ import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
 import { NIFTYVERSE_PROPERTIES } from '@data/niftyverse';
+import ExternalIcon from '@components/ExternalIcon';
 
-const Land: NextPage = () => {
+const NiftyVerse: NextPage = () => {
   return (
     <Layout>
       <Head>
-        <title>Nifty League | Real Estate in the Niftyverse</title>
-        <meta name="description" content="Own your own piece of the Niftyverse" />
+        <title>Nifty League | NiftyVerse</title>
+        <meta name="description" content="Own your own land in the NiftyVerse" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <div
@@ -84,7 +85,7 @@ const Land: NextPage = () => {
           </div>
           <div className="d-flex justify-content-center mt-5">
             <AnimatedWrapper>
-              <a href="https://niftyleague.com/docs" target="_blank" rel="noreferrer">
+              <a href="https://niftyleague.com/docs/overview/games/niftyverse" target="_blank" rel="noreferrer">
                 <button
                   className={cn(
                     styles.button,
@@ -92,6 +93,7 @@ const Land: NextPage = () => {
                   )}
                 >
                   View Docs
+                  <ExternalIcon />
                 </button>
               </a>
             </AnimatedWrapper>
@@ -102,4 +104,4 @@ const Land: NextPage = () => {
   );
 };
 
-export default memo(Land);
+export default memo(NiftyVerse);

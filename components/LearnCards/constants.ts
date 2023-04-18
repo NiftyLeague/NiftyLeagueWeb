@@ -3,8 +3,8 @@ export const LEARN_CARDS = [
     btnText: 'Learn More',
     image: '/img/learn/getting-started.png',
     link: '/docs/overview/intro',
-    subtitle: "Here, you'll find curated how-to guides and information to help get you started.",
-    title: 'Overview',
+    subtitle: 'Find curated how-to guides and information to help get you started.',
+    title: 'Intro',
   },
   {
     btnText: 'Begin',

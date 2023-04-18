@@ -52,7 +52,7 @@ const AnimatedWrapper = ({
             if (transitionAmount === 'large') {
               direction = 2;
             } else if (transitionAmount === 'small') {
-              direction = 0.5;
+              direction = 0.3;
             }
             if (parallaxDirection === 'top') {
               direction = -1 * direction;
