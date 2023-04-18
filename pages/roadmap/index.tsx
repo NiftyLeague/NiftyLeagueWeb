@@ -10,7 +10,7 @@ const Roadmap: NextPage = () => {
   return (
     <Layout classes={{ root: roadmapStyles.roadmap_pg }}>
       <Head>
-        <title>Where We Came From. Where We&apos;re Going. | Nifty League</title>
+        <title>Nifty League | Roadmap</title>
         <meta name="description" content="Nifty League roadmap... or moonmap?" />
       </Head>
 

@@ -7,20 +7,21 @@ import { Stack } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import CloseIcon from '@mui/icons-material/Close';
 import MenuIcon from '@mui/icons-material/Menu';
+import ExternalIcon from '@components/ExternalIcon';
 
 function Navbar() {
   const { pathname } = useRouter();
 
   return (
-    <nav id="nav" className="row min-vw-100 m-0 p-0 navbar zindex-fixed position-absolute navbar-expand-lg m-0 desktop">
+    <nav id="nav" className="row min-vw-100 p-0 navbar zindex-fixed position-absolute navbar-expand-md m-0 desktop">
       <div className="container-fluid z-100" style={{ borderStyle: 'none' }}>
         <div
           className="navbar-nav collapse navbar-collapse px-4 my-3 justify-content-between"
           id="navbarSupportedContent"
         >
-          <Link href="/">
+          <Link href="/" legacyBehavior>
             <a className="navbar-brand">
-              <Image src="/img/logo-blue.svg" height={48} width={48} alt="Nifty League Logo" loading="lazy" />
+              <Image src="/img/logo/white.png" height={48} width={48} alt="Nifty League Logo" loading="lazy" />
             </a>
           </Link>
           <div className="d-flex align-items-center">
@@ -34,37 +35,15 @@ function Navbar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Overview
+                    Products
                   </a>
                   <ul className="dropdown-menu py-2" aria-labelledby="navbarOverviewDropdown">
-                    {false && (
-                      <li
-                        className={cn('nav-item', {
-                          ['active']: pathname.includes('land'),
-                        })}
-                      >
-                        <Link href="/land">
-                          <a className="dropdown-item">Land</a>
-                        </Link>
-                      </li>
-                    )}
-                    {false && (
-                      <li
-                        className={cn('nav-item', {
-                          ['active']: pathname.includes('rentals'),
-                        })}
-                      >
-                        <Link href="/rentals">
-                          <a className="dropdown-item">Rentals</a>
-                        </Link>
-                      </li>
-                    )}
                     <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('games'),
                       })}
                     >
-                      <Link href="/games">
+                      <Link href="/games" legacyBehavior>
                         <a className="dropdown-item">Games</a>
                       </Link>
                     </li>
@@ -73,28 +52,28 @@ function Navbar() {
                         ['active']: pathname.includes('degens'),
                       })}
                     >
-                      <Link href="/degens">
-                        <a className="dropdown-item">Degens</a>
+                      <Link href="/degens" legacyBehavior>
+                        <a className="dropdown-item">DEGENs</a>
                       </Link>
                     </li>
                     <li
+                      className={cn('nav-item', {
+                        ['active']: pathname.includes('niftyverse'),
+                      })}
+                    >
+                      <Link href="/niftyverse" legacyBehavior>
+                        <a className="dropdown-item">NiftyVerse</a>
+                      </Link>
+                    </li>
+                    {/* <li
                       className={cn('nav-item', {
                         ['active']: pathname.includes('compete-and-earn'),
                       })}
                     >
-                      <Link href="/compete-and-earn">
+                      <Link href="/compete-and-earn" legacyBehavior>
                         <a className="dropdown-item">Compete & Earn</a>
                       </Link>
-                    </li>
-                    <li
-                      className={cn('nav-item', {
-                        ['active']: pathname.includes('lore'),
-                      })}
-                    >
-                      <Link href="/lore">
-                        <a className="dropdown-item">Lore</a>
-                      </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li
@@ -102,7 +81,7 @@ function Navbar() {
                     ['active']: pathname.includes('roadmap'),
                   })}
                 >
-                  <Link href="/roadmap">
+                  <Link href="/roadmap" legacyBehavior>
                     <a className="nav-link mx-3">Roadmap</a>
                   </Link>
                 </li>
@@ -114,26 +93,60 @@ function Navbar() {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Learn
+                    About
                   </a>
                   <ul className="dropdown-menu py-2" aria-labelledby="navbarLearnDropdown">
                     <li
                       className={cn('nav-item', {
-                        ['active']: pathname.includes('learn'),
+                        ['active']: pathname.includes('overview'),
                       })}
                     >
-                      <Link href="/learn">
+                      <Link href="/overview" legacyBehavior>
                         <a className="dropdown-item">Overview / FAQ</a>
                       </Link>
                     </li>
-                    <li className="nav-item">
-                      <Link href="https://niftyleague.medium.com/">
-                        <a className="dropdown-item">Blog</a>
+                    <li
+                      className={cn('nav-item', {
+                        ['active']: pathname.includes('team'),
+                      })}
+                    >
+                      <Link href="/team" legacyBehavior>
+                        <a className="dropdown-item">Team</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={cn('nav-item', {
+                        ['active']: pathname.includes('community'),
+                      })}
+                    >
+                      <Link href="/community" legacyBehavior>
+                        <a className="dropdown-item">Community</a>
+                      </Link>
+                    </li>
+                    <li
+                      className={cn('nav-item', {
+                        ['active']: pathname.includes('lore'),
+                      })}
+                    >
+                      <Link href="/lore" legacyBehavior>
+                        <a className="dropdown-item">Nifty Lore</a>
                       </Link>
                     </li>
                     <li className="nav-item">
-                      <Link href="/docs">
-                        <a className="dropdown-item">Docs</a>
+                      <a
+                        href="https://niftyleague.medium.com/"
+                        className="dropdown-item"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Blog <ExternalIcon />
+                      </a>
+                    </li>
+                    <li className="nav-item">
+                      <Link href="/docs" legacyBehavior>
+                        <a className="dropdown-item">
+                          Docs <ExternalIcon />
+                        </a>
                       </Link>
                     </li>
                   </ul>
@@ -158,14 +171,6 @@ function MobileNav() {
       href: '/',
       name: 'Home',
     },
-    // {
-    //   href: '/land',
-    //   name: 'Land',
-    // },
-    // {
-    //   href: '/rentals',
-    //   name: 'Rentals',
-    // },
     {
       href: '/games',
       name: 'Games',
@@ -175,32 +180,28 @@ function MobileNav() {
       name: 'Degens',
     },
     {
-      href: '/compete-and-earn',
-      name: 'Compete & Earn',
-    },
-    {
-      href: '/lore',
-      name: 'Lore',
+      href: '/niftyverse',
+      name: 'NiftyVerse',
     },
     {
       href: '/roadmap',
       name: 'Roadmap',
     },
     {
-      href: '/learn',
-      name: 'Learn',
+      href: '/overview',
+      name: 'Overview / FAQ',
     },
     {
-      href: 'https://niftyleague.medium.com/',
-      name: 'Blog',
+      href: '/lore',
+      name: 'Nifty Lore',
     },
     {
-      href: '/docs',
-      name: 'Docs',
+      href: '/team',
+      name: 'Team',
     },
     {
-      href: '/shop',
-      name: 'Shop',
+      href: '/community',
+      name: 'Community',
     },
   ];
   const handleUncheck = () => {
@@ -240,7 +241,7 @@ function MobileNav() {
           {linkList.map(item => {
             return (
               <li key={item.href} onClick={handleUncheck} className="mb-3">
-                <Link href={item.href}>
+                <Link href={item.href} legacyBehavior>
                   <a>{item.name}</a>
                 </Link>
               </li>
@@ -254,7 +255,6 @@ function MobileNav() {
 
 export default function Header() {
   const desktop = useMediaQuery('(min-width:768px)');
-  const expanded = useMediaQuery('(min-width:992px)');
 
   useEffect(() => {
     const nav = document.getElementById('nav');
@@ -272,7 +272,7 @@ export default function Header() {
     return () => {
       window.removeEventListener('scroll', fixOnScroll, false);
     };
-  }, [expanded]);
+  }, [desktop]);
 
-  return <header className="header fixed-top-header">{expanded ? <Navbar /> : <MobileNav />}</header>;
+  return <header className="header fixed-top-header">{desktop ? <Navbar /> : <MobileNav />}</header>;
 }
