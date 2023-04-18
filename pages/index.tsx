@@ -9,7 +9,7 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import Sponsors from '@components/Sponsors';
 import { SPONSORS } from '@data/constants';
 import Carousel from '@components/carousel';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 import { renderDegen } from '@components/carousel/DegenCardItem';
 import { CommunityDegenData } from '@data/constants';
 

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AnimatedWrapper from './AnimatedWrapper';
 import { SOCIAL_LINKS } from '@data/constants';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 
 export default function Footer({ classes }: { classes?: { footer?: string } }) {
   return (

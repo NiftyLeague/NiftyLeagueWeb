@@ -8,7 +8,7 @@ import Layout from '@components/layout';
 import AnimatedWrapper from '@components/AnimatedWrapper';
 import styles from './index.module.scss';
 import { NIFTY_DEGENS } from '@data/degens';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 
 const Games: NextPage = () => {
   const desktop = useMediaQuery('(min-width:768px)');
