@@ -2,7 +2,7 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import Image from 'next/image';
 import Link from 'next/link';
 import { LEARN_CARDS } from './constants';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 
 interface LearnCardProps {
   btnText: string;

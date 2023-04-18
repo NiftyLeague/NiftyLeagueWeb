@@ -9,7 +9,7 @@ import AnimatedWrapper from '@components/AnimatedWrapper';
 import Layout from '@components/layout';
 import LearnCards from '@components/LearnCards';
 import styles from './index.module.scss';
-import ExternalIcon from '@components/ExternalIcon';
+import ExternalIcon from '@components/externalIcon';
 
 const Overview: NextPage = () => {
   const desktop = useMediaQuery('(min-width:769px)');
