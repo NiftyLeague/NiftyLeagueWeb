@@ -5,6 +5,8 @@ import Head from 'next/head';
 
 import * as ga from '@/lib/ga';
 
+import '@/styles/globals.css';
+import '@/styles/animations.css';
 import '@/styles/app.css';
 import '@/styles/slick.css';
 import '@/styles/footer.scss';

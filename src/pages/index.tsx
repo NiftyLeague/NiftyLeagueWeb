@@ -85,7 +85,8 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
       <div className="d-flex flex-column mt-auto home-content">
         <AnimatedWrapper>
           <h1 className="home-content-title animated-header-text animated-header-text-start">
-            WELCOME TO NIFTY LEAGUE
+            WELCOME TO <br />
+            NIFTY LEAGUE
           </h1>
         </AnimatedWrapper>
         <div className="my-2 my-lg-4">
@@ -316,7 +317,9 @@ const Home: NextPage = () => {
                   <div className="mb-3">
                     <AnimatedWrapper>
                       <h2 className="compete-to-earn-section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
-                        COMPETE & EARN
+                        SMASHERS
+                        <br />
+                        <span className="white-space-no-wrap">COMPETE & EARN</span>
                       </h2>
                     </AnimatedWrapper>
                   </div>
@@ -428,7 +431,7 @@ const Home: NextPage = () => {
                     <h2
                       className={`section-title section-heading animated-header-text animated-header-text-start transition-delay-small`}
                     >
-                      <span style={{ whiteSpace: 'nowrap' }}>DISCOVER THE</span>
+                      <span className="white-space-no-wrap">DISCOVER THE</span>
                       <br />
                       NIFTYVERSE
                     </h2>
@@ -437,7 +440,7 @@ const Home: NextPage = () => {
                 <div className="my-0">
                   <AnimatedWrapper>
                     <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      A SOCIAL HUB FOR GAMERS LIKE NO OTHER.
+                      A VIRTUAL SOCIAL HUB FOR GAMERS LIKE NO OTHER.
                     </p>
                   </AnimatedWrapper>
                 </div>
@@ -718,7 +721,7 @@ const Home: NextPage = () => {
                   <div className="mb-3">
                     <AnimatedWrapper>
                       <h2 className="section-title section-heading animated-header-text animated-header-text-start transition-delay-small">
-                        GAMING COMMUNITY
+                        COMMUNITY
                       </h2>
                     </AnimatedWrapper>
                   </div>

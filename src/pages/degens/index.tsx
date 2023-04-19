@@ -110,16 +110,14 @@ const Games: NextPage = () => {
 
         <div className={styles.section}>
           <AnimatedWrapper>
-            <div className="d-flex mb-3 mb-md-5">
+            <div className="d-flex mb-3 mb-md-4">
               <div className="col-3 col-md-5">
                 <h3 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
                   TRIBES
                 </h3>
               </div>
               <div className="col-6">
-                <h3 className="px-2 px-md-3 animated-header-text animated-header-text-start transition-delay-small">
-                  POWERS
-                </h3>
+                <h3 className="px-3 animated-header-text animated-header-text-start transition-delay-small">POWERS</h3>
               </div>
             </div>
             <div className={cn(styles.table, 'position-relative')}>

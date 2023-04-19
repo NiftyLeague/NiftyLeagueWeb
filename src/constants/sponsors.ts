@@ -1,12 +1,13 @@
 export const SPONSORS = [
   { image: '/img/sponsors/rse.png', url: 'https://rseventures.com/', width: 300, height: 98 },
-  { image: '/img/sponsors/lerer.png', url: 'https://www.lererhippeau.com/', width: 2000, height: 153 },
+  { image: '/img/sponsors/imx-logo-horiz.png', url: 'https://www.immutable.com/', width: 300, height: 76 },
+  { image: '/img/sponsors/lerer.png', url: 'https://www.lererhippeau.com/', width: 800, height: 61 },
   { image: '/img/sponsors/spartan.png', url: 'https://www.spartangroup.io/index.html', width: 473, height: 157 },
   { image: '/img/sponsors/vayner2.png', url: 'https://vaynerfund.com/', width: 684, height: 500 },
   { image: '/img/sponsors/PVG.png', url: 'https://www.privateventuresgroup.com/', width: 496, height: 250 },
-  { image: '/img/sponsors/avocado.png', url: 'https://avocadoguild.com/', width: 578, height: 194 },
+  // { image: '/img/sponsors/avocado.png', url: 'https://avocadoguild.com/', width: 578, height: 194 },
   { image: '/img/sponsors/attn-evos.png', url: 'https://careers.attn.sg/', width: 800, height: 232 },
-  { image: '/img/sponsors/nyan.png', url: 'https://nyanheroes.com/', width: 417, height: 190 },
+  // { image: '/img/sponsors/nyan.png', url: 'https://nyanheroes.com/', width: 417, height: 190 },
   { image: '/img/sponsors/advancit.png', url: 'https://www.advancitcapital.com/', width: 330, height: 71 },
   {
     image: '/img/sponsors/matt-kalish.png',

@@ -14,67 +14,56 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
           <div className="d-flex m-0 py-md-5 pt-0 position-relative justify-content-between">
             <div className="px-0 pt-md-0 pt-4">
               <div className="d-flex flex-column m-0 p-0 position-relative">
-                <Link href="/" legacyBehavior>
-                  <a>Home</a>
+                <Link href="/">Home</Link>
+                <Link href="/roadmap" className="mt-2">
+                  Roadmap
                 </Link>
-                <Link href="/roadmap" legacyBehavior>
-                  <a className="mt-2">Roadmap</a>
+                <Link href="/overview" className="mt-2">
+                  Overview
                 </Link>
-                <Link href="/overview" legacyBehavior>
-                  <a className="mt-2">Overview / FAQ</a>
-                </Link>
-                <Link href="/community" legacyBehavior>
-                  <a className="mt-2">Community</a>
+                <Link href="/community" className="mt-2">
+                  Community
                 </Link>
               </div>
             </div>
             <div className="px-0 pt-md-0 pt-4">
               <div className="d-flex flex-column m-0 p-0 position-relative">
-                <Link href="/games" legacyBehavior>
-                  <a>Games</a>
+                <Link href="/games">Games</Link>
+                <Link href="/degens" className="mt-2">
+                  Degens
                 </Link>
-                <Link href="/degens" legacyBehavior>
-                  <a className="mt-2">Degens</a>
+                <Link href="/niftyverse" className="mt-2">
+                  NiftyVerse
                 </Link>
-                <Link href="/niftyverse" legacyBehavior>
-                  <a className="mt-2">NiftyVerse</a>
-                </Link>
-                <Link href="/compete-and-earn" legacyBehavior>
-                  <a className="mt-2">Compete & Earn</a>
+                <Link href="/lore" className="mt-2">
+                  Lore
                 </Link>
               </div>
             </div>
             <div className="px-0 pt-md-0 pt-4">
               <div className="d-flex flex-column m-0 p-0 position-relative">
-                <Link href="/team" legacyBehavior>
-                  <a>Team</a>
+                <Link href="/team">Team</Link>
+                <Link href="/careers" className="mt-2">
+                  Careers
                 </Link>
-                <Link href="/careers" legacyBehavior>
-                  <a className="mt-2">Careers</a>
+                <Link href="/shop" className="mt-2">
+                  Merch {!mobile ? <ExternalIcon /> : null}
                 </Link>
-                <a className="mt-2" href="https://niftyleague.medium.com/" target="_blank" rel="noreferrer">
-                  Blog {!mobile ? <ExternalIcon /> : null}
-                </a>
-                {/* <Link href="/shop" legacyBehavior>
-                  <a className="mt-2">
-                    Merch {!mobile ? <ExternalIcon /> : null}
-                  </a>
-                </Link> */}
-                <Link href="/docs" legacyBehavior>
-                  <a className="mt-2">Docs {!mobile ? <ExternalIcon /> : null}</a>
+                <Link href="/docs" className="mt-2">
+                  Docs {!mobile ? <ExternalIcon /> : null}
                 </Link>
               </div>
             </div>
             <div className="px-0 pt-md-0 pt-4">
               <div className="d-flex flex-column m-0 p-0 position-relative">
-                <Link href="/terms-of-service" legacyBehavior>
-                  <a className="mt-2">Terms of Service</a>
+                <Link href="/terms-of-service" className="mt-2">
+                  Terms
                 </Link>
-                <Link href="/disclaimer" legacyBehavior>
-                  <a className="mt-2">Disclaimer</a>
+                <Link href="/disclaimer" className="mt-2">
+                  Disclaimer
                 </Link>
-                <Link href="/privacy-policy" legacyBehavior>
-                  <a className="mt-2">Privacy Policy</a>
+                <Link href="/privacy-policy" className="mt-2">
+                  Privacy Policy
                 </Link>
               </div>
             </div>
