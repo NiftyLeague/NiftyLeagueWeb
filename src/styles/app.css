@@ -1,0 +1,2133 @@
+@import '~mdb-react-ui-kit/dist/css/mdb.min.css';
+
+* {
+  box-sizing: border-box;
+}
+
+/************************************* Scroll Style *************************************/
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: black;
+}
+::-webkit-scrollbar-thumb {
+  background: #620edf;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #620edf;
+}
+
+/************************************* Body, Heading, Fonts *************************************/
+body {
+  color: #ffffff;
+  background: #090a0b;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 93px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h2 {
+  font-size: 80px;
+  line-height: 93px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h3 {
+  font-size: 64px;
+  line-height: 75px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h4 {
+  font-size: 40px;
+  line-height: 46px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+h5 {
+  font-size: 32px;
+  line-height: 38px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+h6 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+}
+
+.overview h5 {
+  letter-spacing: -0.02em;
+}
+.home-pg {
+  overflow-x: hidden;
+}
+.home-pg p {
+  letter-spacing: 2px;
+}
+
+label {
+  font-size: 15px;
+  font-weight: 400;
+}
+a {
+  color: #5e72eb;
+  font-size: 20px;
+}
+
+/************************************* Font Sizes, Colors, Backgrounds *************************************/
+.color-white {
+  color: #ffffff;
+}
+.color-purple {
+  color: #620edf;
+}
+.color-grey {
+  color: #707070;
+}
+.color-light-grey {
+  color: #e0e0e0;
+}
+.color-blue {
+  color: #5e72eb;
+}
+.color-silver {
+  color: #757575;
+}
+.bg-black {
+  background: #090a0b;
+}
+.black-bg1 {
+  background: #090a0b;
+}
+.bg-purple {
+  background: #620edf;
+}
+.bg-white {
+  background: #ffffff;
+}
+.font-13 {
+  font-size: 13px;
+}
+.font-14 {
+  font-size: 14px;
+  font-weight: 400;
+}
+.font-15 {
+  font-size: 15px;
+  font-weight: 500;
+}
+.font-16 {
+  font-size: 16px;
+}
+.font-18 {
+  font-size: 18px;
+}
+.font-20 {
+  font-size: 20px;
+}
+.font-24 {
+  font-size: 24px;
+}
+.font-32 {
+  font-size: 32px;
+}
+.font-64 {
+  font-size: 64px;
+}
+
+.border-purple {
+  border: 2px solid #620edf;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.accordion-body {
+  font-size: 20px;
+}
+
+/************************************* Themes Items *************************************/
+.theme-btn-transparent {
+  border-radius: 20px;
+  border: 1px solid #d2d3db;
+  color: #fafafa;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: none;
+  white-space: nowrap;
+  padding: 4px 16px;
+}
+.home-pg .theme-btn-transparent {
+  border-radius: 0px;
+  height: 80px;
+  letter-spacing: 2px;
+}
+.theme-btn-transparent:hover {
+  border-image-slice: 1 !important;
+  border-width: 1px;
+  border-image-source: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+  color: #ffffff;
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  box-shadow: none;
+}
+.theme-btn-transparent.disabled {
+  border: 1px solid #d2d3db;
+}
+.theme-btn-primary {
+  border-radius: 20px;
+  color: #282932;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: none;
+  white-space: nowrap;
+  padding: 4px 16px;
+}
+.home-pg .theme-btn-primary {
+  height: 80px;
+  border-radius: 0px;
+  letter-spacing: 2px;
+}
+
+.overview .btn,
+.learn-pg .btn,
+.team-pg .btn {
+  font-size: 20px;
+}
+
+.theme-learn-btn {
+  color: #ffffff;
+  background: #620edf;
+}
+
+.theme-btn-primary:hover {
+  color: #ffffff;
+  box-shadow: none;
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+}
+
+.iconExternalLink {
+  margin-left: 0.5rem;
+  position: relative;
+  top: -2px;
+}
+
+.degens-slider .slick-arrow.slick-next {
+  top: 40%;
+  left: -15px;
+}
+.degens-slider .slick-arrow.slick-prev {
+  top: 40%;
+  right: -30px;
+}
+
+.section-margin {
+  margin-top: 150px !important;
+  margin-bottom: 150px !important;
+}
+.section-padding {
+  padding-top: 150px !important;
+  padding-bottom: 150px !important;
+}
+.browse-single h5 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.browse-single label {
+  font-size: 10px;
+  color: #757575;
+}
+.browse-single button {
+  font-size: 9px;
+  height: 12px;
+  width: 53px;
+  color: #757575;
+  border: 1px solid #757575;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+}
+.browse-single select {
+  color: white;
+  background: transparent;
+  border-style: none;
+  font-size: 14px;
+  margin-top: -10px;
+}
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+}
+
+.dark-gradient-shade {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100vw;
+  height: 340px;
+}
+
+.degen-scroller-content {
+  margin-top: -80px;
+  z-index: 3;
+}
+.degen-scroller-content h1 {
+  text-shadow: #070706 4px 0 5px;
+}
+.com-scroller-dark-background {
+  height: 350px;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  background: #090a0b;
+  z-index: -1;
+}
+.nifty-ape-overlay {
+  min-height: 250px;
+  height: auto;
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  margin-top: -115px;
+}
+.nifty-ape-overlay .nifty-ape-img {
+  max-width: 450px;
+}
+
+@media (min-width: 576px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 70%;
+  }
+}
+@media (max-width: 768px) {
+  .degen-scroller-content h1 {
+    font-size: 55px;
+    margin-top: 100px;
+    line-height: 1;
+  }
+  .com-pg .degen-scroller-content h1 br {
+    display: none;
+  }
+}
+@media (orientation: landscape) and (max-width: 550px) {
+  .degen-scroller-content h1 {
+    font-size: 55px;
+    margin-top: 110px;
+    line-height: 1;
+  }
+}
+@media (min-width: 768px) {
+  .degen-scroller-content {
+    margin-top: -100px;
+  }
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 65%;
+  }
+  .dark-gradient-shade {
+    height: 475px;
+  }
+}
+@media (min-width: 992px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 650px;
+  }
+  .dark-gradient-shade {
+    height: 530px;
+  }
+}
+@media (min-width: 1200px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 750px;
+  }
+  .row-top-spacing {
+    padding-top: 100px !important;
+  }
+}
+@media (min-width: 1500px) {
+  .dark-gradient-shade {
+    height: 600px;
+  }
+}
+
+/*************************************** Learn **********************************************/
+
+.learn-content-wrapper {
+  max-height: 310px;
+}
+.learn-content {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.learn-content button {
+  width: auto;
+}
+
+.faq-accordion .accordion-item {
+  border: none;
+  margin-bottom: 12px;
+  background: #1e242b;
+  backdrop-filter: blur(65.0688px);
+  border-radius: 10px;
+}
+.faq-accordion .accordion-header button {
+  color: white;
+  background-color: transparent;
+  font-size: 32px;
+  line-height: 1.2;
+  padding: 2rem 1.5rem;
+}
+
+/*************************************** Community **********************************************/
+
+.com-pg {
+  overflow-x: hidden;
+}
+.com-intro {
+  min-height: 95vh;
+}
+.career-intro {
+  min-height: 60vh;
+}
+.com-intro-content,
+.com-intro-text {
+  z-index: 2;
+}
+.com-intro-text h4 {
+  white-space: nowrap;
+}
+.com-intro-text {
+  text-align: center !important;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .com-intro-text {
+    text-align: left !important;
+  }
+}
+
+.community-data {
+  border-radius: 8px;
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
+    rgba(36, 37, 38, 0.6);
+  width: 100%;
+  min-width: 100%;
+  min-height: 125px;
+  cursor: pointer;
+}
+.community-data-text {
+  max-width: 80%;
+}
+
+.com-grad-1 {
+  position: absolute;
+  top: 1500px;
+  left: 0;
+  max-width: 100%;
+  right: 0;
+  bottom: auto;
+  z-index: -1;
+}
+.moon-grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.com-content {
+  margin-top: -100px;
+}
+.earth-com {
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  .earth-com {
+    margin-bottom: -100px;
+  }
+}
+
+.earth-grad {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 300px;
+  width: 80%;
+  z-index: -1;
+}
+.com-bg-main {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  min-height: 800px;
+}
+
+.carousel-item-padding-20-px {
+  padding: 0px 20px;
+}
+
+.community-footer {
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
+    rgba(36, 37, 38, 0.6);
+  backdrop-filter: blur(65.0688px);
+  border-radius: 8px;
+}
+.community-footer img {
+  width: 112px;
+}
+
+/*************************************** TEAM **********************************************/
+
+.team-pg {
+  overflow-x: hidden;
+}
+
+.icons-placement {
+  z-index: 1;
+}
+.icons-placement img {
+  position: absolute;
+}
+.icons-placement .icon8 {
+  top: 90px;
+  left: 560px;
+  position: absolute;
+}
+.icons-placement .icon1 {
+  top: -145px;
+  left: 950px;
+  position: absolute;
+}
+.icons-placement .icon3 {
+  top: 370px;
+  left: 750px;
+  position: absolute;
+}
+.icons-placement .icon2 {
+  top: 250px;
+  left: 1100px;
+  position: absolute;
+}
+.icons-placement .icon5 {
+  top: 250px;
+  left: -230px;
+  position: absolute;
+}
+.icons-placement .icon7 {
+  top: 650px;
+  left: 30px;
+  position: absolute;
+}
+.icons-placement .icon4 {
+  top: 530px;
+  left: 1050px;
+  position: absolute;
+}
+.icons-placement .icon6 {
+  top: 590px;
+  left: 550px;
+  position: absolute;
+}
+
+.about-team-grad {
+  margin-top: -50px;
+}
+.about-team-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-break: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  padding: 0;
+  min-height: 80vh;
+  height: 100vh;
+  max-height: 1440px;
+}
+.video-detail-container {
+  max-width: 668px;
+  position: relative;
+  z-index: 1;
+}
+.video-detail-container iframe {
+  max-width: 95%;
+}
+
+@media (max-width: 786px) {
+  .video-detail-container iframe {
+    max-height: 600px;
+  }
+}
+@media (max-width: 615px) {
+  .video-detail-container iframe {
+    max-height: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .video-detail-container iframe {
+    max-height: 350px;
+  }
+}
+
+/*************************************** Home **********************************************/
+
+.row {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fit-width {
+  width: fit-content;
+}
+
+.heading-thin {
+  font-weight: 500;
+}
+
+.home-pg .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.home-satoshi-container {
+  position: absolute;
+  bottom: 74px;
+  left: -14px;
+}
+
+.home-satoshi {
+  width: 226px;
+  height: 240px;
+}
+
+.home-intro {
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.home-content {
+  position: absolute;
+  z-index: 3;
+  left: 232px;
+  bottom: 4rem;
+}
+
+.home-content-title {
+  max-width: 535px;
+}
+
+.home-content-description {
+  max-width: 440px;
+}
+
+.speech-bubble-text {
+  color: #282932 !important;
+  text-transform: uppercase;
+  font-size: 24px;
+  position: absolute;
+  top: 56px;
+  left: 133px;
+  font-weight: 700;
+}
+
+.gaming-bonk {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero-characters-image,
+.home-nftl-token-image {
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.home-nftl-token-bottom-image {
+  right: 50px;
+}
+
+.home-hero-companion-swing {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+}
+
+.home-hero-companion {
+  position: absolute;
+  right: 12%;
+  top: 12%;
+  width: 12%;
+}
+
+.home-hero-halo {
+  position: absolute;
+  right: 25.5%;
+  top: 21.5%;
+  width: 9%;
+}
+
+.satoshi-learn-more {
+  width: 407px;
+  height: 125px;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+.home-mobile-intro {
+  background: #191b1f;
+  background-size: cover;
+  background-image: url(/img/home/banner-mobile.png);
+  min-height: 100vh;
+}
+.home-mobile-intro .overlay-dark {
+  width: 100%;
+  height: 100vh;
+  background: rgba(25, 27, 31, 1);
+  opacity: 0.8999999761581421;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-mobile-content {
+  z-index: 3;
+}
+
+.compete-to-earn-section-title {
+  max-width: 391px;
+}
+
+.section-title {
+  max-width: 510px;
+}
+
+.section-description {
+  max-width: 410px;
+}
+
+.compete-to-earn-section {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.home-rental-section {
+  position: absolute;
+  top: 200px;
+  left: 52px;
+}
+
+.home-community-degens {
+  margin-left: -32px;
+}
+
+.home-community-section-description {
+  max-width: 550px;
+}
+
+.section-black-button {
+  width: 272px;
+}
+
+.section-white-button {
+  width: 254px;
+}
+
+.inner-container {
+  max-width: 1400px;
+}
+
+.home-nftl-token-section-description {
+  max-width: 560px;
+}
+
+.game-playing-actions {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.radial-gradient-background {
+  position: absolute;
+  background: radial-gradient(
+    189.96% 61.18% at 50% 38.82%,
+    rgba(95, 190, 74, 0) 0%,
+    rgba(21, 18, 27, 0) 19.27%,
+    #08090a 99.74%
+  );
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 102%;
+}
+
+.radial-gradient-background.top {
+  background: radial-gradient(
+    189.96% 61.18% at 50% 50%,
+    rgba(95, 190, 74, 0) 0%,
+    rgba(21, 18, 27, 0) 19.27%,
+    #08090a 85%
+  );
+}
+
+.overview .radial-gradient-background {
+  background: radial-gradient(
+    189.96% 61.18% at 50% 38.82%,
+    rgba(24, 20, 37, 0) 0%,
+    rgba(21, 18, 27, 0) 73.22%,
+    #08090a 99.74%
+  );
+}
+
+.radial-gradient-piece {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+  opacity: 0.2;
+  filter: blur(50px);
+  border-radius: 398px;
+  z-index: -1;
+}
+
+.gradient-top-left {
+  top: -100px;
+  left: -100px;
+}
+
+.gradient-top-right {
+  top: -100px;
+  right: 0px;
+}
+
+.gradient-bottom-right {
+  bottom: -100px;
+  right: 0px;
+}
+
+.compete-to-earn-section-token-1 {
+  position: absolute;
+  left: -226px;
+  top: calc(50% - 110px);
+  width: 226px;
+  height: 223px;
+}
+
+.compete-to-earn-section-token-2 {
+  position: absolute;
+  right: -32px;
+  top: 0px;
+  width: 226px;
+  height: 221px;
+}
+
+.compete-to-earn-section-token-3 {
+  position: absolute;
+  bottom: -126px;
+  width: 246px;
+  z-index: -1;
+  left: calc(50% - 123px);
+}
+
+.compete-to-earn-section-token-4 {
+  width: 246px;
+  left: calc(50% - 123px);
+  top: calc(50% - 123px);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.white-space-no-wrap {
+  white-space: nowrap;
+}
+
+.social-icons a:hover {
+  color: #620edf;
+}
+.social-icons a:hover path {
+  fill: #620edf;
+}
+
+.sliding-nfts .sliding-background-wrapper-desktop {
+  overflow: hidden;
+  min-height: 520px;
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+}
+.sliding-nfts .sliding-background-wrapper-mobile {
+  overflow: hidden;
+  min-height: 106px;
+  margin: 16px 0px;
+  background: linear-gradient(128.04deg, #6600ff 0%, #576fff 46.93%, #ff00c7 100%);
+}
+.sliding-background-wrapper-desktop .sliding-background {
+  background: url(/img/community/degen-slider.png) repeat-x;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+
+  height: 100%;
+  width: 5000px;
+  animation: slide 60s linear infinite;
+}
+.sliding-background-wrapper-mobile .sliding-background {
+  background: url(/img/community/degen-slider.png) repeat-x;
+  height: 106px;
+  width: 5000px;
+  animation: slide 240s linear infinite;
+  background-size: contain;
+}
+@media (min-width: 769px) {
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-3010px, 0, 0);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-3750px, 0, 0);
+    }
+  }
+}
+
+.league-floating-nfts {
+  display: flex;
+  height: 100%;
+}
+
+/*************************************** Media Queries **********************************************/
+
+@media (width: 1024px) {
+  .icons-placement .icon1 {
+    top: 60px;
+    left: 666px;
+  }
+  .icons-placement .icon2 {
+    top: 250px;
+    left: 830px;
+    display: none;
+  }
+  .icons-placement .icon3 {
+    top: 419px;
+    left: 582px;
+  }
+  .icons-placement .icon4 {
+    top: 530px;
+    left: 705px;
+  }
+  .icons-placement .icon5 {
+    top: 250px;
+    left: -185px;
+  }
+  .icons-placement .icon8 {
+    top: 0px;
+    left: 460px;
+  }
+  .about-pg .rental-grad {
+    right: 0;
+  }
+  .nifty-degen p br {
+    display: none;
+  }
+  .nifty-rental p br {
+    display: none;
+  }
+  .token-play p br {
+    display: none;
+  }
+  .team-section p br {
+    display: none;
+  }
+  .com-intro {
+    max-width: 100% !important;
+  }
+  .com-intro p br {
+    display: none;
+  }
+  .com-grad-1 {
+    left: 0;
+  }
+}
+
+@media (min-width: 769px) {
+  .desktop {
+    display: flex !important;
+  }
+  .desktop-block {
+    display: block !important;
+  }
+  .mobile {
+    display: none !important;
+  }
+  .mobile-block {
+    display: none !important;
+  }
+}
+
+/*desktop view*/
+@media (min-width: 616px) {
+  .about-intro .display-buttons button {
+    width: auto;
+  }
+  .nifty-league-community {
+    min-height: 900px;
+  }
+}
+
+@media (max-width: 1600px) {
+  h1 {
+    font-size: 72px;
+    line-height: 80px;
+  }
+  h2 {
+    font-size: 72px;
+    line-height: 80px;
+  }
+  h3 {
+    font-size: 56px;
+    line-height: 65px;
+  }
+  h4 {
+    font-size: 34px;
+    line-height: 40px;
+  }
+  h5 {
+    font-size: 28px;
+    line-height: 33px;
+  }
+  h6 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 28px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .btn {
+    font-size: 20px !important;
+  }
+  .speech-bubble-text {
+    font-size: 20px;
+    top: 50px;
+    left: 123px;
+  }
+  .home-content {
+    left: 188px;
+    bottom: 1.5rem;
+  }
+  .home-satoshi-container {
+    bottom: 43px;
+  }
+  .home-satoshi {
+    width: 180px;
+    height: 190px;
+  }
+  .satoshi-learn-more {
+    width: 348px;
+    height: 107px;
+  }
+  .compete-to-earn-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .compete-to-earn-section-token-1 {
+    width: 180px;
+    height: 185px;
+    left: -180px;
+    top: calc(50% - 90px);
+  }
+  .compete-to-earn-section-token-2 {
+    width: 180px;
+    height: 185px;
+  }
+  .compete-to-earn-section-token-3 {
+    width: 200px;
+    left: calc(50% - 100px);
+  }
+  .compete-to-earn-section-token-4 {
+    width: 200px;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+  }
+}
+
+@media (max-width: 1400px) {
+  h1 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  h2 {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  h3 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  h4 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  h5 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h6 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 24px;
+  }
+  .home-content-description {
+    max-width: 360px;
+  }
+  .home-satoshi-container {
+    bottom: 44px;
+  }
+  .home-satoshi {
+    width: 140px;
+    height: 148px;
+  }
+  .home-pg .btn {
+    height: 54px;
+  }
+  .section-black-button {
+    width: 240px;
+  }
+  .section-white-button {
+    width: 240px;
+  }
+  .home-rental-section {
+    top: 100px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  h2 {
+    font-size: 48px;
+    line-height: 54px;
+  }
+  h3 {
+    font-size: 40px;
+    line-height: 46px;
+  }
+  h4 {
+    font-size: 26px;
+    line-height: 30px;
+  }
+  h5 {
+    font-size: 22px;
+    line-height: 25px;
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 22px;
+  }
+  .btn {
+    font-size: 16px !important;
+  }
+  .home-pg .btn {
+    height: 40px;
+  }
+  .home-content {
+    left: 188px;
+    bottom: 20px;
+  }
+  .home-content-title {
+    font-size: 60px;
+    line-height: 72px;
+  }
+  .home-satoshi-container {
+    bottom: 40px;
+  }
+  .section-description {
+    max-width: 340px;
+  }
+  .section-black-button {
+    width: 200px;
+  }
+  .section-white-button {
+    width: 200px;
+  }
+  .home-rental-section {
+    top: 100px;
+  }
+  .row-top-spacing {
+    padding-top: 64px !important;
+  }
+  .compete-to-earn-section-token-4 {
+    width: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
+  }
+}
+
+@media (max-width: 1052px) {
+  h1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  h3 {
+    font-size: 32px;
+    line-height: 37px;
+  }
+  h4 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h5 {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 20px;
+    padding: 1rem;
+  }
+  p,
+  a,
+  li {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .accordion-body {
+    font-size: 14px;
+  }
+  .accordion-body a {
+    font-size: 14px;
+  }
+  .home-content {
+    left: 126px;
+    bottom: 0px;
+  }
+  .home-content-title {
+    max-width: 360px;
+    font-size: 48px;
+    line-height: 54px;
+  }
+  .home-content-description {
+    max-width: 325px;
+  }
+  .satoshi-learn-more {
+    width: 260px;
+    height: 80px;
+    margin-left: -28px;
+  }
+  .speech-bubble-text {
+    font-size: 16px;
+    top: 36px;
+    left: 86px;
+  }
+  .home-satoshi-container {
+    bottom: 20px;
+  }
+  .home-satoshi {
+    width: 120px;
+    height: 127px;
+  }
+  .section-black-button {
+    width: 180px;
+  }
+  .section-white-button {
+    width: 180px;
+  }
+  .section-title {
+    max-width: 460px;
+  }
+  .home-community-section-description {
+    max-width: 450px;
+  }
+  .compete-to-earn-section-token-1 {
+    display: none;
+  }
+  .compete-to-earn-section-token-2 {
+    display: none;
+  }
+  .home-rental-section {
+    top: 100px;
+  }
+  .com-intro {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 920px) {
+  .home-intro {
+    margin-top: 90px;
+  }
+  .home-banner,
+  .parallax-hero-child {
+    animation: none !important;
+  }
+  .home-content {
+    left: 0px;
+    width: 100%;
+  }
+  .home-content-title {
+    max-width: inherit;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-content-description {
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .satoshi-learn-more {
+    margin-left: 75px;
+  }
+  .speech-bubble-text {
+    font-size: 16px;
+    top: 36px;
+    left: 86px;
+  }
+  .home-satoshi-container {
+    bottom: 30px;
+    left: 0 !important;
+    display: block;
+  }
+  .home-satoshi {
+    width: 100px;
+    height: 105px;
+    left: 0 !important;
+    display: block;
+  }
+  .section-title {
+    max-width: 400px;
+  }
+  .section-description {
+    max-width: 280px;
+  }
+  .home-community-section-description {
+    max-width: 400px;
+  }
+  .home-community-section .section-actions {
+    max-width: 400px;
+  }
+  .home-hero-characters-image {
+    height: calc(100% - 72px);
+  }
+  .home-hero-companion {
+    top: calc(14% + 50px);
+  }
+
+  .home-hero-halo {
+    right: 25%;
+    top: calc(22.5% + 50px);
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h4 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .faq-accordion .accordion-header button {
+    font-size: 18px;
+  }
+  .home-intro {
+    display: none;
+  }
+  .home-satoshi {
+    width: 80px;
+    height: 84px;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .row > * {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .gaming-controller div {
+    transform: none !important;
+  }
+  .compete-to-earn-section {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .compete-to-earn-section-title {
+    max-width: 249px;
+  }
+
+  .section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .compete-to-earn-section-body .section-actions {
+    justify-content: center;
+  }
+  .home-rental-section {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .home-rental-section-body {
+    align-items: center;
+  }
+  .home-nftl-token-section {
+    width: 100%;
+  }
+  .home-community-section-container {
+    width: 100%;
+  }
+  .home-community-section .section-actions {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .section-heading {
+    max-width: inherit;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+  .home-nftl-token-section-body {
+    width: 100%;
+    align-items: center;
+  }
+  .home-nftl-token-section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+  .home-community-section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+  .home-community-section-body {
+    align-items: center;
+  }
+  .home-community-characters {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -32px;
+  }
+  .game-playing-actions {
+    position: relative;
+  }
+  .radial-gradient-background {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 30px;
+    line-height: 36px;
+  }
+  h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 26px;
+  }
+  .btn {
+    font-size: 14px !important;
+  }
+  .home-pg .btn {
+    height: 36px;
+    border-radius: 20px;
+  }
+  .home-satoshi {
+    width: 60px;
+    height: 63px;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-black-button {
+    width: 135px;
+  }
+  .section-white-button {
+    width: 135px;
+  }
+  .game-playing-actions > div {
+    flex: 1;
+  }
+  .game-playing-actions button {
+    width: 100% !important;
+  }
+  .section-actions {
+    width: 100%;
+  }
+  .section-actions > div {
+    flex: 1;
+  }
+  .section-actions button {
+    width: 100%;
+  }
+  .home-hero-characters-image {
+    height: calc(100% - 62px);
+  }
+  .home-hero-companion {
+    display: none;
+  }
+
+  .home-hero-halo {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop {
+    display: none !important;
+  }
+  .desktop-block {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .text-m-left {
+    text-align: left;
+  }
+  .browse-single h5 {
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+  .community-data {
+    min-width: auto;
+  }
+  .video-details h4 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .about-nifty-degens {
+    margin-top: 150px;
+  }
+  .about-nifty-degens .browse-single {
+    position: relative;
+  }
+  .about-nifty-degens h2,
+  .about-nifty-degens h4,
+  .about-nifty-degens p {
+    text-align: left;
+  }
+  label {
+    font-size: 13px;
+  }
+  .nifty-league-browse {
+    min-height: 825px !important;
+  }
+  .section-padding {
+    padding-top: 0px !important;
+    padding-bottom: 60px !important;
+  }
+  .stay-informed-section {
+    margin-top: 100px !important;
+  }
+  .discord-btn {
+    max-width: 250px;
+    white-space: normal;
+  }
+  .rental-grad {
+    display: none;
+  }
+  .nifty-rental-banner {
+    width: 100%;
+    height: auto;
+  }
+  .nifty-degen img {
+    width: 100%;
+    height: auto;
+  }
+  .icons-placement .icon1 {
+    top: 60px;
+    left: 666px;
+  }
+  .icons-placement .icon2 {
+    top: 250px;
+    left: 830px;
+    display: none;
+  }
+  .icons-placement .icon3 {
+    top: 419px;
+    left: 582px;
+  }
+  .icons-placement .icon4 {
+    top: 530px;
+    left: 705px;
+  }
+  .icons-placement .icon5 {
+    top: 50px;
+    left: -86px;
+  }
+  .icons-placement .icon6 {
+    top: 214px;
+    left: 214px;
+  }
+  .icons-placement .icon7 {
+    top: 235px;
+    left: 0;
+  }
+  .icons-placement .icon8 {
+    top: -11px;
+    left: 226px;
+  }
+  .icons-placement img {
+    max-width: 145px;
+    height: auto;
+  }
+  .team-pg .about-intro .display-buttons {
+    justify-content: center;
+  }
+  .video-detail-container a img {
+    width: 315px;
+    height: auto;
+  }
+  .video-bg {
+    height: 100%;
+    object-fit: cover;
+  }
+  .nr-content {
+    order: 12;
+  }
+  .nr-banner {
+    order: 1;
+  }
+  .team-pg .DAO-section {
+    margin-top: 60px !important;
+  }
+  .teams-slider .nifty-teams {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .slick-dots {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .slick-dots li {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 8px;
+    background: white !important;
+  }
+  .slick-dots li.slick-active {
+    background: #620edf !important;
+  }
+  .nifty-teams .job-label {
+    background-color: yellow;
+  }
+
+  .com-grad-1,
+  .earth-grad {
+    left: 0;
+    width: 100%;
+  }
+  .com-banner img {
+    width: 100%;
+    height: auto;
+  }
+  .com-intro {
+    max-width: 100% !important;
+    padding-top: 48px;
+  }
+  .com-intro p br {
+    display: none;
+  }
+  .com-banner img:not(.moon-grad) {
+    width: 205px;
+    height: auto;
+  }
+  .earth-com {
+    margin-top: 100px;
+  }
+  .com-content {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 615px) {
+  .nifty-league-browse {
+    min-height: 660px !important;
+  }
+  .text-m-center {
+    text-align: center;
+  }
+  .home-mobile-intro button {
+    width: 195px;
+  }
+  .wrapper {
+    min-height: 460px;
+  }
+  .section-margin {
+    margin-top: 60px !important;
+    margin-bottom: 60px !important;
+  }
+  .league-special-container .eclipse-location {
+    display: none;
+  }
+
+  .browse-single button {
+    width: 18px;
+    font-size: 4px;
+    height: 6px;
+    padding: 0;
+  }
+
+  .browse-single svg {
+    width: 16px;
+    height: auto;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 550px) {
+  .desktop {
+    display: none !important;
+  }
+  .desktop-block {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .sushi-gif-section {
+    min-height: 679px;
+  }
+  .sushi-gif-section h2 {
+    font-size: 28px;
+    padding: 7px;
+  }
+  .sushi-gif-section h2 br {
+    display: none;
+  }
+  .browse-single h5 {
+    font-size: 11px;
+    margin-bottom: 0;
+  }
+  .browse-andy {
+    min-height: 223px;
+    top: 100px;
+    left: 0px;
+  }
+  .community-data {
+    min-width: auto;
+  }
+  .com-pg .com-intro h1 {
+    font-size: 64px;
+    text-align: center;
+  }
+  .com-pg .com-intro h4 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .icons-placement {
+    display: none;
+  }
+  .video-details h4 {
+    font-size: 15px;
+    text-align: center;
+  }
+  .about-nifty-degens {
+    margin-top: 150px;
+  }
+  .about-nifty-degens .browse-single {
+    position: relative;
+  }
+  .about-nifty-degens h2,
+  h4,
+  p {
+    text-align: left;
+  }
+  .DAO-section h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+  .DAO-section p {
+    text-align: center;
+  }
+  .team-section h1 {
+    font-size: 48px;
+    text-align: center;
+  }
+  .team-section p {
+    text-align: center;
+  }
+  label {
+    font-size: 13px;
+  }
+  .nifty-league-browse {
+    min-height: inherit !important;
+  }
+  .section-padding {
+    padding-top: 0px !important;
+    padding-bottom: 60px !important;
+  }
+  .stay-informed-section {
+    margin-top: 100px !important;
+  }
+  .discord-btn {
+    max-width: 250px;
+    white-space: normal;
+  }
+  .league-special-container .eclipse-location {
+    display: none;
+  }
+}
+
+.jobs-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-card {
+  box-shadow: 0 10px 15px -3px rgb(191 191 191 / 50%), 0 4px 6px -2px rgb(149 149 149 / 50%) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.max-w-900 {
+  max-width: 900px;
+}
+.min-h-900 {
+  min-height: 900px;
+}
+
+.mw-9-10 {
+  max-width: 90%;
+}
+
+.collapse-icon {
+  width: 50px;
+  height: 50px;
+}
+.collapse-icon > .fas {
+  float: right;
+}
+
+.md-text-left {
+  text-align: left !important;
+}
+
+.fixed-top-header {
+  width: 100%;
+}
+
+.div-paragraph {
+  opacity: 0.9;
+}
+
+@media (min-width: 769px) {
+  /* animation classes */
+  .animated-header-text {
+    margin-bottom: 0px;
+    transition: opacity 1s, margin-bottom 1s;
+  }
+
+  .animated-header-text-start {
+    margin-bottom: -24px;
+    opacity: 0;
+  }
+
+  .animated-fade {
+    transition: opacity 1s;
+  }
+
+  .animated-fade-quick {
+    transition: opacity 0.75s;
+  }
+
+  .animated-fade-slow {
+    transition: opacity 2s;
+  }
+
+  .animated-fade-start {
+    opacity: 0;
+  }
+
+  .animated-vertical-fade {
+    top: 0px;
+    transition: opacity 2s, top 1s;
+  }
+  .animated-vertical-fade-start {
+    top: -100px;
+    opacity: 0;
+  }
+
+  .quick-pop-anim {
+    transition: opacity 0.5s, transform 1s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .quick-pop-anim-start {
+    opacity: 0;
+    transform: scale(0, 0);
+  }
+
+  .satoshi-quick-pop-anim {
+    transition: opacity 0.2s, transform 0.4s, left 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    left: 0px;
+  }
+
+  .satoshi-quick-pop-anim-start {
+    opacity: 0;
+    transform: scale(0, 0);
+    left: -100px;
+  }
+
+  .animation-bounce {
+    animation: bounce 4s ease infinite;
+  }
+
+  .animation-bounce2 {
+    animation: bounce 4s ease infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animation-bounce-coin1 {
+    animation: coin-bounce2 3s ease infinite;
+  }
+
+  .animation-bounce-coin2 {
+    animation: coin-bounce2 3s ease infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animation-bounce-coin3 {
+    animation: coin-bounce2 3s ease infinite;
+    animation-delay: 1s;
+  }
+
+  .animation-propeller {
+    animation: propeller 0.5s ease infinite;
+  }
+
+  .animation-visible {
+    animation: visibility 2s ease infinite;
+  }
+
+  @keyframes bounce {
+    0%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes coin-bounce {
+    0%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-60px);
+    }
+  }
+
+  @keyframes coin-bounce2 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-60px);
+    }
+    60% {
+      transform: translateY(-30px);
+    }
+  }
+
+  @keyframes visibility {
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes propeller {
+    0%,
+    100% {
+      background-image: url('/img/home/hero-companion-anim1.png');
+    }
+    25% {
+      background-image: url('/img/home/hero-companion-anim2.png');
+    }
+    50% {
+      background-image: url('/img/home/hero-companion-anim3.png');
+    }
+    75% {
+      background-image: url('/img/home/hero-companion-anim4.png');
+    }
+  }
+
+  .animation-zoomin {
+    animation: zoomin 3s;
+  }
+
+  @keyframes zoomin {
+    0% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .animation-zoomin-large {
+    animation: zoomin-large 3s;
+  }
+
+  @keyframes zoomin-large {
+    0% {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .transition-delay-small {
+    transition-delay: 0.2s;
+  }
+
+  .transition-delay-medium {
+    transition-delay: 0.4s;
+  }
+
+  .transition-delay-large {
+    transition-delay: 0.6s;
+  }
+  .transition-delay-extreme {
+    transition-delay: 2s;
+  }
+}
