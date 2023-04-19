@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Container, useMediaQuery } from '@mui/material';
 import Layout from '@/components/Layout';
 import AnimatedWrapper from '@/components/AnimatedWrapper';
-import { NIFTY_DEGENS } from '@/constants/degens';
+import { NIFTY_DEGENS, NIFTY_DEGENS_ALL } from '@/constants/degens';
 import ExternalIcon from '@/components/ExternalIcon';
 import styles from './index.module.scss';
 
@@ -65,11 +65,11 @@ const Games: NextPage = () => {
                 'd-flex flex-wrap align-items-center flex-md-row full-width justify-content-between',
               )}
             >
-              {NIFTY_DEGENS.map(({ name, image }) => (
-                <div className="mb-3 px-3" key={name}>
+              {NIFTY_DEGENS_ALL.map(({ name, image }) => (
+                <div className="mb-3 px-3 col-4" key={name}>
                   <div className="d-flex flex-column">
                     <AnimatedWrapper>
-                      <div className="position-relative animated-fade-slow animated-fade-start transition-delay-small">
+                      <div className="text-align-center position-relative animated-fade-slow animated-fade-start transition-delay-small">
                         <Image
                           src={image.link}
                           alt={name}
