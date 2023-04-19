@@ -1,0 +1,60 @@
+.container {
+  max-width: 1474px;
+}
+
+.body {
+  max-width: 840px;
+}
+
+.section {
+  padding-top: 80px;
+}
+
+.video {
+  max-width: 100%;
+  width: 459px;
+  height: 323px;
+}
+
+.tokenAndPlay {
+  margin-top: 90px;
+  background: white;
+  color: #262930;
+  padding-top: 72px;
+  padding-bottom: 72px;
+}
+
+.button {
+  background: black;
+  color: white;
+}
+
+.gradient1 {
+  right: 0px;
+  top: 0px;
+}
+
+.gradient2 {
+  bottom: -300px;
+  left: -100px;
+}
+
+.gradient3 {
+  bottom: -400px;
+  right: -100px;
+}
+
+@media (max-width: 992px) {
+  .section {
+    padding-top: 64px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section h3 {
+    text-align: center !important;
+  }
+  .section p {
+    text-align: center !important;
+  }
+}
