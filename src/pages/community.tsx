@@ -67,6 +67,7 @@ const Community: NextPage = () => {
               />
             </div>
           </AnimatedWrapper>
+          <div className="radial-gradient-background" />
         </div>
         <span className="earth-grad">
           <Image

@@ -20,7 +20,7 @@ const TeamDesktop = () => {
                 />
               </div>
             </a>
-            <h5 className="mt-4 about-team-name">{member.name}</h5>
+            <h6 className="mt-4 about-team-name">{member.name}</h6>
           </div>
         </div>
       ))}

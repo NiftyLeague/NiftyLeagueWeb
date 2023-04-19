@@ -25,7 +25,7 @@ const DegenCardItem = ({
         <div className="browse-single">
           {!mobile ? (
             <div className="d-flex p-2 p-sm-3 p-md-4 pb-0 align-items-center">
-              <h5 className="me-auto mb-0">{name}</h5>
+              <h6 className="me-auto mb-0">{name}</h6>
               <div className="ms-auto">
                 <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={20} height={20} />
               </div>

@@ -73,9 +73,9 @@ const Games: NextPage = () => {
               <div className={cn(styles.block, 'col-12 col-md-7 pe-md-5')}>
                 <div className="d-flex flex-row align-items-center justify-content-between mb-3">
                   <AnimatedWrapper>
-                    <h3 className="my-0 animated-header-text animated-header-text-start transition-delay-small">
+                    <h4 className="my-0 animated-header-text animated-header-text-start transition-delay-small">
                       {name}
-                    </h3>
+                    </h4>
                   </AnimatedWrapper>
                   <AnimatedWrapper>
                     <p
@@ -93,7 +93,7 @@ const Games: NextPage = () => {
                     {description}
                   </p>
                 </AnimatedWrapper>
-                <div className="d-flex justify-content-center justify-content-md-start mt-5">
+                <div className="d-flex justify-content-center justify-content-md-start mt-4">
                   {action.isComingSoon ? (
                     <AnimatedWrapper>
                       <div className="animated-fade-slow animated-fade-start transition-delay-medium">

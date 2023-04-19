@@ -30,7 +30,7 @@ const RoadmapCard = ({ body, completed, completionDate, divider, image, title }:
           <Image src={image.src} alt={title} width={image.width} height={image.height} layout="responsive" />
         </div>
       )}
-      <h4>{title}</h4>
+      <h5>{title}</h5>
       {completed && (
         <div className={styles.timeline_content_info}>
           <span className={styles.timeline_content_info_title}>Mission Accomplished</span>
