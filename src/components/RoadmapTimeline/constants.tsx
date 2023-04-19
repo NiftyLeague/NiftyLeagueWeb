@@ -86,7 +86,7 @@ export const ROADMAP_CARDS = [
       style: { top: '-100px' },
       width: 586,
     },
-    title: 'Play-&-Earn',
+    title: 'Play-&-Earn (DEPRECATED)',
     body: (
       <>
         <p>
@@ -386,7 +386,7 @@ export const ROADMAP_CARDS = [
       style: { top: '-120px' },
       width: 1618,
     },
-    title: 'Smashers Release Candidate',
+    title: 'Smashers Progression',
     body: (
       <p className="mb-0">
         We are implementing several fundamental tools for our games including progression and marketplace systems. These

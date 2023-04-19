@@ -1,7 +1,3 @@
-.roadmap_pg .header .eclipse-location {
-  z-index: -1;
-}
-
 /* -------------------------------- 
 
 Background
@@ -192,7 +188,7 @@ Timeline
 #cd_timeline {
   position: relative;
   padding: 2em 0;
-  margin-top: 8em;
+  margin-top: 9em;
   margin-bottom: 2em;
 }
 #cd_timeline::before {
@@ -202,7 +198,7 @@ Timeline
   left: 25px;
   height: 100%;
   width: 4px;
-  background: #620edf;
+  background: var(--custom-color-brand);
 }
 
 .cd_timeline_block {
@@ -228,10 +224,11 @@ Timeline
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px #5e72eb, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 4px var(--custom-color-brand-secondary), inset 0 2px 0 rgba(0, 0, 0, 0.08),
+    0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 .cd_timeline_checkpoint {
-  background: linear-gradient(to left, #5e72eb, #620edf);
+  background: linear-gradient(to left, var(--custom-color-brand-secondary), var(--custom-color-brand));
 }
 .cd_timeline_checkpoint.completed {
   background: linear-gradient(to left, #4faa5c, #225953);

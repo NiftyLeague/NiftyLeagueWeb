@@ -104,7 +104,10 @@ const NiftyVerse: NextPage = () => {
               )}
             >
               {NIFTYVERSE_PROPERTIES.map(({ name, description, image }) => (
-                <div className={'d-flex flex-column flex-lg-row position-relative py-3 px-2 mb-3 mb-md-5'} key={name}>
+                <div
+                  className={'full-width d-flex flex-column flex-lg-row position-relative py-3 px-2 mb-3 mb-md-5'}
+                  key={name}
+                >
                   <div className="col-12 col-lg-6 d-flex flex-column">
                     <AnimatedWrapper>
                       <h6 className="my-0 animated-fade-slow animated-fade-start transition-delay-small">{name}</h6>

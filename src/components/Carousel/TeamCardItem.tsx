@@ -21,7 +21,7 @@ const TeamCardItem = ({ name, source, link }: TeamCardProps): JSX.Element => (
             <Image src={source} layout="responsive" width="258" height="278" alt="Team Degen image" />
           </div>
         </a>
-        <h3 className="mt-5 about-team-name">{name}</h3>
+        <h4 className="mt-5 mb-5 about-team-name">{name}</h4>
       </div>
     </div>
   </div>
