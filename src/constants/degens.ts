@@ -201,7 +201,96 @@ export const COMMUNITY_DEGEN_LIST = [
   },
 ];
 
+// export const NIFTY_DEGENS = [
+//   {
+//     name: 'SATOSHI',
+//     image: {
+//       link: '/img/degens/satoshi.svg',
+//       width: 100,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'RUGMAN',
+//     image: {
+//       link: '/img/degens/rugman.svg',
+//       width: 100,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'HYDRA',
+//     image: {
+//       link: '/img/degens/hydra.svg',
+//       width: 100,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'APE',
+//     image: {
+//       link: '/img/degens/ape.png',
+//       width: 91,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'HUMAN',
+//     image: {
+//       link: '/img/degens/human.png',
+//       width: 120,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'DOGE',
+//     image: {
+//       link: '/img/degens/doge.png',
+//       width: 115,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'FROG',
+//     image: {
+//       link: '/img/degens/frog.png',
+//       width: 140,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'CAT',
+//     image: {
+//       link: '/img/degens/cat.png',
+//       width: 120,
+//       height: 100,
+//     },
+//   },
+//   {
+//     name: 'ALIEN',
+//     image: {
+//       link: '/img/degens/alien.png',
+//       width: 100,
+//       height: 100,
+//     },
+//   },
+// ];
+
 export const NIFTY_DEGENS = [
+  {
+    name: 'APE',
+    description: `If this ape is not eating bananas, he’s throwing them. And those bananas hurt.`,
+    gif: {
+      link: '/img/degens/ape.gif',
+      width: 512,
+      height: 512,
+    },
+    image: {
+      link: '/img/degens/ape.png',
+      width: 91,
+      height: 100,
+    },
+  },
   {
     name: 'HUMAN',
     description: 'The primitive humans special powers is bomb dropping. Typical',
@@ -240,7 +329,7 @@ export const NIFTY_DEGENS = [
     },
     image: {
       link: '/img/degens/frog.png',
-      width: 140,
+      width: 120,
       height: 100,
     },
   },
@@ -259,20 +348,6 @@ export const NIFTY_DEGENS = [
     },
   },
   {
-    name: 'APE',
-    description: `If this ape is not eating bananas, he’s throwing them. And those bananas hurt.`,
-    gif: {
-      link: '/img/degens/ape.gif',
-      width: 512,
-      height: 512,
-    },
-    image: {
-      link: '/img/degens/ape.png',
-      width: 91,
-      height: 100,
-    },
-  },
-  {
     name: 'ALIEN',
     description: `Keep your eyes peeled because these apes can teleport across the game screen to your location anytime.`,
     gif: {
@@ -284,6 +359,40 @@ export const NIFTY_DEGENS = [
       link: '/img/degens/alien.png',
       width: 100,
       height: 100,
+    },
+  },
+  {
+    name: 'HYDRA',
+    description: `The Hydras use a trident spear. They have a deep combat lineage and a vicious special move called the Trident Dash.`,
+    gif: {
+      link: '/img/degens/hydra.gif',
+      width: 512,
+      height: 512,
+    },
+    image: {
+      link: '/img/degens/hydra.svg',
+      width: 120,
+      height: 120,
+    },
+  },
+];
+
+export const NIFTY_DEGENS_ALL = [
+  ...NIFTY_DEGENS,
+  {
+    name: 'SATOSHI',
+    image: {
+      link: '/img/degens/satoshi.svg',
+      width: 120,
+      height: 120,
+    },
+  },
+  {
+    name: 'RUGMAN',
+    image: {
+      link: '/img/degens/rugman.svg',
+      width: 140,
+      height: 120,
     },
   },
 ];
