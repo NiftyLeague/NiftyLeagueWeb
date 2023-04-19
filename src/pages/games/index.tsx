@@ -1,8 +1,10 @@
 import { memo } from 'react';
 import cn from 'classnames';
+import useMediaQuery from '@mui/material/useMediaQuery';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import Head from 'next/head';
+import Image from 'next/image';
 import Layout from '@/components/Layout';
 import AnimatedWrapper from '@/components/AnimatedWrapper';
 import { NIFTY_GAMES } from '@/constants/games';
@@ -11,6 +13,7 @@ import ExternalIcon from '@/components/ExternalIcon';
 import styles from './index.module.scss';
 
 const Games: NextPage = () => {
+  const desktop = useMediaQuery('(min-width:769px)');
   return (
     <Layout>
       <Head>
@@ -22,21 +25,49 @@ const Games: NextPage = () => {
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3 position-relative')}>
         <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
-        <div className="mb-4">
-          <AnimatedWrapper>
-            <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small">
-              OUR GAMES
-            </h1>
-          </AnimatedWrapper>
-        </div>
-        <div className="mb-5">
-          <AnimatedWrapper>
-            <p className="text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
-              JOIN THOUSANDS OF PLAYERS ALL OVER THE WORLD COMPETING FOR THE TOP SPOT IN THE NIFTY LEAGUE
-            </p>
-          </AnimatedWrapper>
-        </div>
         <Container>
+          <div className="d-flex align-items-center justify-content-center flex-wrap px-lg-5">
+            {desktop ? (
+              <div className="col-6 desktop px-2 px-lg-3">
+                <AnimatedWrapper>
+                  <div className="animation-zoomin animated-fade-start animated-fade transition-delay-large">
+                    <Image
+                      alt="Smashers Apartment"
+                      width={1920}
+                      height={1080}
+                      layout="responsive"
+                      src="/img/smashers/apartment.png"
+                    />
+                  </div>
+                </AnimatedWrapper>
+              </div>
+            ) : (
+              <div className="col-4">
+                <AnimatedWrapper>
+                  <div className="animation-zoomin animated-fade-start animated-fade transition-delay-large">
+                    <Image alt="Arcade" width={339} height={661} layout="responsive" src="/img/smashers/arcade.png" />
+                  </div>
+                </AnimatedWrapper>
+              </div>
+            )}
+            <div className="col-8 col-md-6 px-2 px-lg-3">
+              <div className="mb-4">
+                <AnimatedWrapper>
+                  <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small white-space-no-wrap">
+                    OUR GAMES
+                  </h1>
+                </AnimatedWrapper>
+              </div>
+              <div className="mb-5">
+                <AnimatedWrapper>
+                  <p className="text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
+                    JOIN THOUSANDS OF PLAYERS ALL OVER THE WORLD COMPETING FOR THE TOP SPOT IN THE NIFTY LEAGUE
+                  </p>
+                </AnimatedWrapper>
+              </div>
+            </div>
+          </div>
+
           {NIFTY_GAMES.map(({ name, description, video, tag, action }, index) => (
             <div className={cn(styles.section, 'd-flex flex-column-reverse flex-md-row position-relative')} key={name}>
               <div className={cn(styles.block, 'col-12 col-md-7 pe-md-5')}>

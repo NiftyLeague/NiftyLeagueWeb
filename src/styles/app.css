@@ -746,14 +746,6 @@ a {
   z-index: 3;
 }
 
-.gaming-controller {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
-}
-
 .compete-to-earn-section-title {
   max-width: 391px;
 }
@@ -904,20 +896,15 @@ a {
   text-align: right;
 }
 
+.white-space-no-wrap {
+  white-space: nowrap;
+}
+
 .social-icons a:hover {
   color: #620edf;
 }
 .social-icons a:hover path {
   fill: #620edf;
-}
-
-.sushi-video {
-  left: 32.1%;
-  width: 36.2%;
-  height: 39.1%;
-  bottom: 32%;
-  object-fit: cover;
-  border-radius: 8%;
 }
 
 .sliding-nfts .sliding-background-wrapper-desktop {
@@ -1458,6 +1445,9 @@ a {
   .row > * {
     padding-left: 0px;
     padding-right: 0px;
+  }
+  .gaming-controller div {
+    transform: none !important;
   }
   .compete-to-earn-section {
     width: 100%;

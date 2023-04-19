@@ -9,6 +9,7 @@ import AnimatedWrapper from '@/components/AnimatedWrapper';
 import Sponsors from '@/components/Sponsors';
 import Carousel from '@/components/Carousel';
 import ExternalIcon from '@/components/ExternalIcon';
+import ConsoleGame from '@/components/ConsoleGame';
 import { renderDegen } from '@/components/Carousel/DegenCardItem';
 import { COMMUNITY_DEGEN_LIST } from '@/constants/degens';
 import { SPONSORS } from '@/constants/sponsors';
@@ -175,89 +176,8 @@ const Home: NextPage = () => {
               <h2 className="px-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
             </AnimatedWrapper>
           </div>
-          {desktop ? (
-            <div className="position-relative">
-              <AnimatedWrapper>
-                <div className="position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-small">
-                  <Image
-                    alt="Classic Gaming Reinvented"
-                    className="pixelated"
-                    width={4842}
-                    height={3371}
-                    layout="responsive"
-                    src="/img/home/classic-gaming-reinvented-notv.png"
-                    priority
-                  />
-                  <video
-                    width="100%"
-                    height="100%"
-                    muted
-                    autoPlay
-                    loop
-                    playsInline
-                    data-keepplaying
-                    className="position-absolute sushi-video"
-                  >
-                    <source src="/video/sushi.mp4" type="video/mp4" />
-                  </video>
-                  <div className="position-absolute gaming-bonk animated-fade-start animated-fade transition-delay-medium">
-                    <Image
-                      alt="Classic Gaming Reinvented Bonk"
-                      className="pixelated"
-                      width={4842}
-                      height={3371}
-                      layout="responsive"
-                      src="/img/home/bonk.png"
-                      priority
-                    />
-                  </div>
-                </div>
-              </AnimatedWrapper>
-              <div className="gaming-controller">
-                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="large">
-                  <div className="animation-bounce animated-fade-start animated-fade transition-delay-large">
-                    <Image
-                      alt="Classic Gaming Reinvented Controller Left"
-                      className="pixelated"
-                      width={4842}
-                      height={3371}
-                      layout="responsive"
-                      src="/img/home/gaming_controller_left.png"
-                      priority
-                    />
-                  </div>
-                </AnimatedWrapper>
-              </div>
-              <div className="gaming-controller">
-                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="large">
-                  <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-large">
-                    <Image
-                      alt="Classic Gaming Reinvented Controller Right"
-                      className="pixelated"
-                      width={4842}
-                      height={3371}
-                      layout="responsive"
-                      src="/img/home/gaming_controller_right.png"
-                      priority
-                    />
-                  </div>
-                </AnimatedWrapper>
-              </div>
-              <div className="radial-gradient-background" />
-            </div>
-          ) : (
-            <div className="position-relative flex-grow-1">
-              <Image
-                alt="Classic Gaming Reinvented"
-                className="pixelated"
-                width={4842}
-                height={3371}
-                layout="responsive"
-                src="/img/home/classic-gaming-reinvented.png"
-                priority
-              />
-            </div>
-          )}
+          <ConsoleGame src="/video/smashers.mp4" />
+
           <Stack
             direction="row"
             justifyContent="center"
