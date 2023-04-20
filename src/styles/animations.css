@@ -42,6 +42,71 @@
   background-size: contain;
 }
 
+.animated-fade {
+  transition: opacity 1s;
+}
+
+.animated-fade-quick {
+  transition: opacity 0.75s;
+}
+
+.animated-fade-slow {
+  transition: opacity 2s;
+}
+
+.animated-fade-start {
+  opacity: 0;
+}
+
+.animated-vertical-fade {
+  top: 0px;
+  transition: opacity 2s, top 1s;
+}
+.animated-vertical-fade-start {
+  top: -100px;
+  opacity: 0;
+}
+
+.quick-pop-anim {
+  transition: opacity 0.5s, transform 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.quick-pop-anim-start {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+.animation-visible {
+  animation: visibility 1s ease infinite;
+}
+
+@keyframes visibility {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+.transition-delay-small {
+  transition-delay: 0.2s;
+}
+
+.transition-delay-medium {
+  transition-delay: 0.4s;
+}
+
+.transition-delay-large {
+  transition-delay: 0.6s;
+}
+.transition-delay-extreme {
+  transition-delay: 2s;
+}
+
 @media (max-width: 920px) {
   .animation-md-hidden {
     animation: none !important;
@@ -69,41 +134,6 @@
   .animated-header-text-start {
     margin-bottom: -24px;
     opacity: 0;
-  }
-
-  .animated-fade {
-    transition: opacity 1s;
-  }
-
-  .animated-fade-quick {
-    transition: opacity 0.75s;
-  }
-
-  .animated-fade-slow {
-    transition: opacity 2s;
-  }
-
-  .animated-fade-start {
-    opacity: 0;
-  }
-
-  .animated-vertical-fade {
-    top: 0px;
-    transition: opacity 2s, top 1s;
-  }
-  .animated-vertical-fade-start {
-    top: -100px;
-    opacity: 0;
-  }
-
-  .quick-pop-anim {
-    transition: opacity 0.5s, transform 1s;
-    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
-
-  .quick-pop-anim-start {
-    opacity: 0;
-    transform: scale(0, 0);
   }
 
   .satoshi-quick-pop-anim {
@@ -143,10 +173,6 @@
 
   .animation-propeller {
     animation: propeller 0.5s ease infinite;
-  }
-
-  .animation-visible {
-    animation: visibility 2s ease infinite;
   }
 
   @keyframes slide {
@@ -198,17 +224,6 @@
     }
   }
 
-  @keyframes visibility {
-    0%,
-    50%,
-    100% {
-      opacity: 1;
-    }
-    25% {
-      opacity: 0;
-    }
-  }
-
   @keyframes propeller {
     0%,
     100% {
@@ -253,20 +268,5 @@
       -webkit-transform: scale(1);
       transform: scale(1);
     }
-  }
-
-  .transition-delay-small {
-    transition-delay: 0.2s;
-  }
-
-  .transition-delay-medium {
-    transition-delay: 0.4s;
-  }
-
-  .transition-delay-large {
-    transition-delay: 0.6s;
-  }
-  .transition-delay-extreme {
-    transition-delay: 2s;
   }
 }
