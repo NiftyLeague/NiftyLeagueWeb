@@ -1,0 +1,1273 @@
+/************************************* Font Sizes, Colors, Backgrounds *************************************/
+.color-white {
+  color: #ffffff;
+}
+.color-purple {
+  color: var(--custom-color-brand);
+}
+.color-grey {
+  color: #707070;
+}
+.color-light-grey {
+  color: #e0e0e0;
+}
+.color-blue {
+  color: var(--custom-color-brand-secondary);
+}
+.color-silver {
+  color: #757575;
+}
+.bg-black {
+  background: var(--custom-bg-color);
+}
+.black-bg1 {
+  background: var(--custom-bg-color);
+}
+.bg-purple {
+  background: var(--custom-color-brand);
+}
+.bg-white {
+  background: #ffffff;
+}
+
+/************************************* Themes Items *************************************/
+.theme-btn-transparent {
+  border-radius: 20px;
+  border: 1px solid #d2d3db;
+  color: #fafafa;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: none;
+  white-space: nowrap;
+  padding: 4px 16px;
+}
+.home-pg .theme-btn-transparent {
+  border-radius: 0px;
+  height: 80px;
+  letter-spacing: 2px;
+}
+.theme-btn-transparent:hover {
+  border-image-slice: 1 !important;
+  border-width: 1px;
+  border-image-source: linear-gradient(
+    128.04deg,
+    var(--custom-color-brand) 0%,
+    var(--custom-color-brand-secondary) 46.93%,
+    #ff00c7 100%
+  );
+  color: #ffffff;
+  background: linear-gradient(
+    128.04deg,
+    var(--custom-color-brand) 0%,
+    var(--custom-color-brand-secondary) 46.93%,
+    #ff00c7 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  box-shadow: none;
+}
+.theme-btn-transparent.disabled {
+  border: 1px solid #d2d3db;
+}
+.theme-btn-primary {
+  border-radius: 20px;
+  color: #282932;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  box-shadow: none;
+  white-space: nowrap;
+  padding: 4px 16px;
+}
+.home-pg .theme-btn-primary {
+  height: 80px;
+  border-radius: 0px;
+  letter-spacing: 2px;
+}
+
+.border-purple {
+  border: 2px solid var(--custom-color-brand);
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+.overview h5 {
+  letter-spacing: -0.02em;
+}
+
+.home-pg {
+  overflow-x: hidden;
+}
+
+.home-pg p {
+  letter-spacing: 2px;
+}
+
+.theme-learn-btn {
+  color: #ffffff;
+  background: var(--custom-color-brand);
+}
+
+.theme-btn-primary:hover {
+  color: #ffffff;
+  box-shadow: none;
+  background: linear-gradient(
+    128.04deg,
+    var(--custom-color-brand) 0%,
+    var(--custom-color-brand-secondary) 46.93%,
+    #ff00c7 100%
+  );
+}
+
+.iconExternalLink {
+  margin-left: 0.5rem;
+  position: relative;
+  top: -2px;
+}
+
+.degens-slider .slick-arrow.slick-next {
+  top: 40%;
+  left: -15px;
+}
+.degens-slider .slick-arrow.slick-prev {
+  top: 40%;
+  right: -30px;
+}
+
+.section-padding {
+  padding-top: 150px !important;
+  padding-bottom: 150px !important;
+}
+.browse-single label {
+  font-size: 10px;
+  color: #757575;
+}
+.browse-single button {
+  font-size: 9px;
+  height: 12px;
+  width: 53px;
+  color: #757575;
+  border: 1px solid #757575;
+  border-radius: 2px;
+  text-transform: uppercase;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 8px;
+}
+.browse-single select {
+  color: white;
+  background: transparent;
+  border-style: none;
+  font-size: 14px;
+  margin-top: -10px;
+}
+.pixelated {
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+}
+
+.dark-gradient-shade {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 100vw;
+  height: 340px;
+}
+
+.nifty-ape-overlay {
+  min-height: 250px;
+  height: auto;
+  z-index: 2;
+  width: 100%;
+  position: absolute;
+  margin-top: -115px;
+}
+.nifty-ape-overlay .nifty-ape-img {
+  max-width: 450px;
+}
+
+@media (min-width: 576px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 768px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 80%;
+  }
+  .dark-gradient-shade {
+    height: 475px;
+  }
+}
+@media (min-width: 992px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 700px;
+  }
+  .dark-gradient-shade {
+    height: 530px;
+  }
+}
+@media (min-width: 1200px) {
+  .nifty-ape-overlay .nifty-ape-img {
+    max-width: 800px;
+  }
+  .row-top-spacing {
+    padding-top: 100px !important;
+  }
+}
+@media (min-width: 1500px) {
+  .dark-gradient-shade {
+    height: 600px;
+  }
+}
+
+/*************************************** Learn **********************************************/
+
+.learn-content-wrapper {
+  max-height: 310px;
+}
+.learn-content {
+  height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.learn-content button {
+  width: auto;
+}
+
+.faq-accordion .accordion-item {
+  border: none;
+  margin-bottom: 12px;
+  background: #1e242b;
+  backdrop-filter: blur(65.0688px);
+  border-radius: 10px;
+}
+.faq-accordion .accordion-header button {
+  color: white;
+  background-color: transparent;
+  padding: 2rem 1.5rem;
+}
+
+/*************************************** Community **********************************************/
+
+.com-pg {
+  overflow-x: hidden;
+}
+.com-intro {
+  min-height: 95vh;
+}
+.career-intro {
+  min-height: 60vh;
+}
+.com-intro-content,
+.com-intro-text {
+  z-index: 2;
+}
+.com-intro-text h4 {
+  white-space: nowrap;
+}
+.com-intro-text {
+  text-align: center !important;
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  .com-intro-text {
+    text-align: left !important;
+  }
+}
+
+.community-data {
+  border-radius: 8px;
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
+    rgba(36, 37, 38, 0.6);
+  width: 100%;
+  min-width: 100%;
+  min-height: 125px;
+  cursor: pointer;
+}
+.community-data-text {
+  max-width: 80%;
+}
+
+.com-grad-1 {
+  position: absolute;
+  top: 1500px;
+  left: 0;
+  max-width: 100%;
+  right: 0;
+  bottom: auto;
+  z-index: -1;
+}
+.moon-grad {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+.com-content {
+  margin-top: -100px;
+}
+@media (min-width: 1200px) {
+  .earth-com {
+    margin-bottom: -100px;
+  }
+}
+
+.earth-grad {
+  position: absolute;
+  right: 0;
+  left: auto;
+  top: 300px;
+  width: 80%;
+  z-index: -1;
+}
+.com-bg-main {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  top: 0;
+  min-height: 800px;
+}
+
+.carousel-item-padding-20-px {
+  padding: 0px 20px;
+}
+
+.community-footer {
+  background: linear-gradient(26.04deg, rgba(110, 51, 237, 0.05) -0.03%, rgba(123, 97, 255, 0.025) 99.2%),
+    rgba(36, 37, 38, 0.6);
+  backdrop-filter: blur(65.0688px);
+  border-radius: 8px;
+}
+.community-footer img {
+  width: 112px;
+}
+
+/*************************************** TEAM **********************************************/
+
+.team-pg {
+  overflow-x: hidden;
+}
+
+.about-team-grad {
+  margin-top: -50px;
+}
+.about-team-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-break: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  min-width: 100%;
+  padding: 0;
+  min-height: 80vh;
+  height: 100vh;
+  max-height: 1440px;
+}
+.video-detail-container {
+  max-width: 668px;
+  position: relative;
+  z-index: 1;
+}
+.video-detail-container iframe {
+  max-width: 95%;
+}
+
+@media (max-width: 786px) {
+  .video-detail-container iframe {
+    max-height: 600px;
+  }
+}
+@media (max-width: 615px) {
+  .video-detail-container iframe {
+    max-height: 500px;
+  }
+}
+@media (max-width: 500px) {
+  .video-detail-container iframe {
+    max-height: 350px;
+  }
+}
+
+/*************************************** Home **********************************************/
+
+.row {
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.fit-width {
+  width: fit-content;
+}
+
+.heading-thin {
+  font-weight: 500;
+}
+
+.home-pg .container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.home-satoshi-container {
+  position: absolute;
+  bottom: 74px;
+  left: -14px;
+}
+
+.home-satoshi {
+  width: 226px;
+  height: 240px;
+}
+
+.home-intro {
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.home-content {
+  position: absolute;
+  z-index: 3;
+  left: 232px;
+  bottom: 4rem;
+}
+
+.home-content-description {
+  max-width: 450px;
+}
+
+.speech-bubble-text {
+  color: #282932 !important;
+  text-transform: uppercase;
+  font-size: 24px;
+  position: absolute;
+  top: 56px;
+  left: 133px;
+  font-weight: 700;
+}
+
+.gaming-bonk {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.home-hero-characters-image,
+.home-nftl-token-image {
+  width: 100%;
+  height: 100%;
+  bottom: 0px;
+  right: 0px;
+}
+
+.home-nftl-token-bottom-image {
+  right: 50px;
+}
+
+.home-hero-companion-swing {
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background-size: cover;
+}
+
+.home-hero-companion {
+  position: absolute;
+  right: 12%;
+  top: 12%;
+  width: 12%;
+}
+
+.home-hero-halo {
+  position: absolute;
+  right: 25.5%;
+  top: 21.5%;
+  width: 9%;
+}
+
+.satoshi-learn-more {
+  width: 407px;
+  height: 125px;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+.home-mobile-intro {
+  background: var(--custom-panel-color);
+  background-size: cover;
+  background-image: url(/img/home/banner-mobile.png);
+  min-height: 100vh;
+}
+.home-mobile-intro .overlay-dark {
+  width: 100%;
+  height: 100vh;
+  background: rgba(25, 27, 31, 1);
+  opacity: 0.8999999761581421;
+  position: absolute;
+  top: 0px;
+  overflow: hidden;
+}
+.home-mobile-content {
+  z-index: 3;
+}
+
+.compete-to-earn-section-title {
+  max-width: 400px;
+}
+
+.section-title {
+  max-width: 545px;
+}
+
+.section-description {
+  max-width: 410px;
+}
+
+.compete-to-earn-section {
+  width: fit-content;
+  margin-left: auto;
+  margin-right: 30px;
+}
+
+.home-rental-section {
+  position: absolute;
+  top: 200px;
+  left: 52px;
+}
+
+.home-community-degens {
+  margin-left: -32px;
+}
+
+.home-community-section-description {
+  max-width: 550px;
+}
+
+.section-black-button {
+  width: 272px;
+}
+
+.section-white-button {
+  width: 254px;
+}
+
+.inner-container {
+  max-width: 1400px;
+}
+
+.home-nftl-token-section-description {
+  max-width: 560px;
+}
+
+.game-playing-actions {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.radial-gradient-background {
+  position: absolute;
+  background: radial-gradient(
+    189.96% 61.18% at 50% 38.82%,
+    rgba(95, 190, 74, 0) 0%,
+    rgba(21, 18, 27, 0) 19.27%,
+    #08090a 99.74%
+  );
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 102%;
+}
+
+.radial-gradient-background.top {
+  background: radial-gradient(
+    189.96% 61.18% at 50% 50%,
+    rgba(95, 190, 74, 0) 0%,
+    rgba(21, 18, 27, 0) 19.27%,
+    #08090a 85%
+  );
+}
+
+.overview .radial-gradient-background {
+  background: radial-gradient(
+    189.96% 61.18% at 50% 38.82%,
+    rgba(24, 20, 37, 0) 0%,
+    rgba(21, 18, 27, 0) 73.22%,
+    #08090a 99.74%
+  );
+}
+
+.radial-gradient-piece {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(
+    128.04deg,
+    var(--custom-color-brand) 0%,
+    var(--custom-color-brand-secondary) 46.93%,
+    #ff00c7 100%
+  );
+  opacity: 0.2;
+  filter: blur(50px);
+  border-radius: 398px;
+  z-index: -1;
+}
+
+.gradient-top-left {
+  top: -100px;
+  left: -100px;
+}
+
+.gradient-top-right {
+  top: -100px;
+  right: 0px;
+}
+
+.gradient-bottom-right {
+  bottom: -100px;
+  right: 0px;
+}
+
+.compete-to-earn-section-token-1 {
+  position: absolute;
+  left: -226px;
+  top: calc(50% - 110px);
+  width: 226px;
+  height: 223px;
+}
+
+.compete-to-earn-section-token-2 {
+  position: absolute;
+  right: -32px;
+  top: 0px;
+  width: 226px;
+  height: 221px;
+}
+
+.compete-to-earn-section-token-3 {
+  position: absolute;
+  bottom: -126px;
+  width: 246px;
+  z-index: -1;
+  left: calc(50% - 123px);
+}
+
+.compete-to-earn-section-token-4 {
+  width: 246px;
+  left: calc(50% - 123px);
+  top: calc(50% - 123px);
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.white-space-no-wrap {
+  white-space: nowrap;
+}
+
+.social-icons a {
+  font-size: 20px;
+}
+.social-icons a:hover {
+  color: var(--custom-color-brand);
+}
+.social-icons a:hover path {
+  fill: var(--custom-color-brand);
+}
+
+.league-floating-nfts {
+  display: flex;
+  height: 100%;
+}
+
+.jobs-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.job-card,
+.accordion-item {
+  box-shadow: 0 10px 15px -3px rgb(191 191 191 / 20%), 0 4px 6px -2px rgb(149 149 149 / 20%) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.max-w-900 {
+  max-width: 900px;
+}
+.min-h-900 {
+  min-height: 900px;
+}
+
+.mw-9-10 {
+  max-width: 90%;
+}
+
+.collapse-icon {
+  width: 50px;
+  height: 50px;
+}
+.collapse-icon > .fas {
+  float: right;
+}
+
+.md-text-left {
+  text-align: left !important;
+}
+
+.fixed-top-header {
+  width: 100%;
+}
+
+.div-paragraph {
+  opacity: 0.9;
+}
+
+/*************************************** Media Queries **********************************************/
+
+/* desktop view */
+@media (min-width: 769px) {
+  .desktop {
+    display: flex !important;
+  }
+  .desktop-block {
+    display: block !important;
+  }
+  .mobile {
+    display: none !important;
+  }
+  .mobile-block {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1600px) {
+  .speech-bubble-text {
+    font-size: 20px;
+    top: 50px;
+    left: 123px;
+  }
+  .home-content {
+    left: 188px;
+    bottom: 1.5rem;
+  }
+  .home-satoshi-container {
+    bottom: 43px;
+  }
+  .home-satoshi {
+    width: 180px;
+    height: 190px;
+  }
+  .satoshi-learn-more {
+    width: 348px;
+    height: 107px;
+  }
+  .compete-to-earn-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .compete-to-earn-section-token-1 {
+    width: 180px;
+    height: 185px;
+    left: -180px;
+    top: calc(50% - 90px);
+  }
+  .compete-to-earn-section-token-2 {
+    width: 180px;
+    height: 185px;
+  }
+  .compete-to-earn-section-token-3 {
+    width: 200px;
+    left: calc(50% - 100px);
+  }
+  .compete-to-earn-section-token-4 {
+    width: 200px;
+    left: calc(50% - 100px);
+    top: calc(50% - 100px);
+  }
+}
+
+@media (max-width: 1400px) {
+  .home-satoshi-container {
+    bottom: 44px;
+  }
+  .home-satoshi {
+    width: 140px;
+    height: 148px;
+  }
+  .home-pg .btn {
+    height: 54px;
+  }
+  .section-black-button {
+    width: 240px;
+  }
+  .section-white-button {
+    width: 240px;
+  }
+  .home-rental-section {
+    top: 100px;
+    left: 8px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .home-pg .btn {
+    height: 40px;
+  }
+  .home-content {
+    left: 188px;
+    bottom: 20px;
+  }
+  .home-satoshi-container {
+    bottom: 40px;
+  }
+  .section-description {
+    max-width: 340px;
+  }
+  .section-black-button {
+    width: 200px;
+  }
+  .section-white-button {
+    width: 200px;
+  }
+  .home-rental-section {
+    top: 100px;
+  }
+  .row-top-spacing {
+    padding-top: 64px !important;
+  }
+  .compete-to-earn-section-token-4 {
+    width: 160px;
+    left: calc(50% - 80px);
+    top: calc(50% - 80px);
+  }
+}
+
+@media (max-width: 1052px) {
+  .faq-accordion .accordion-header button {
+    padding: 1rem;
+  }
+  .home-content {
+    left: 126px;
+    bottom: 0px;
+  }
+  .satoshi-learn-more {
+    width: 260px;
+    height: 80px;
+    margin-left: -28px;
+  }
+  .speech-bubble-text {
+    font-size: 16px;
+    top: 36px;
+    left: 86px;
+  }
+  .home-satoshi-container {
+    bottom: 20px;
+  }
+  .home-satoshi {
+    width: 120px;
+    height: 127px;
+  }
+  .section-black-button {
+    width: 180px;
+  }
+  .section-white-button {
+    width: 180px;
+  }
+  .section-title {
+    max-width: 460px;
+  }
+  .home-community-section-description {
+    max-width: 450px;
+  }
+  .compete-to-earn-section-token-1 {
+    display: none;
+  }
+  .compete-to-earn-section-token-2 {
+    display: none;
+  }
+  .home-rental-section {
+    top: 100px;
+  }
+  .com-intro {
+    min-height: 800px;
+  }
+}
+
+@media (max-width: 920px) {
+  .home-intro {
+    margin-top: 90px;
+  }
+  .home-content {
+    left: 0px;
+    width: 100%;
+  }
+  .home-content-title {
+    max-width: inherit;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home-content-description {
+    max-width: 600px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .satoshi-learn-more {
+    margin-left: 75px;
+  }
+  .speech-bubble-text {
+    font-size: 16px;
+    top: 36px;
+    left: 86px;
+  }
+  .home-satoshi-container {
+    bottom: 30px;
+    left: 0 !important;
+    display: block;
+  }
+  .home-satoshi {
+    width: 100px;
+    height: 105px;
+    left: 0 !important;
+    display: block;
+  }
+  .section-title {
+    max-width: 400px;
+  }
+  .section-description {
+    max-width: 280px;
+  }
+  .home-community-section-description {
+    max-width: 400px;
+  }
+  .home-community-section .section-actions {
+    max-width: 400px;
+  }
+  .home-hero-characters-image {
+    height: calc(100% - 72px);
+  }
+  .home-hero-companion {
+    top: calc(14% + 50px);
+  }
+  .home-hero-halo {
+    right: 25%;
+    top: calc(22.5% + 50px);
+  }
+}
+
+@media (max-width: 768px) {
+  .home-intro {
+    display: none;
+  }
+  .home-satoshi {
+    width: 80px;
+    height: 84px;
+  }
+  .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .row > * {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .compete-to-earn-section {
+    width: 100%;
+    margin-left: 0px;
+  }
+
+  .section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+
+  .compete-to-earn-section-body .section-actions {
+    justify-content: center;
+  }
+  .home-rental-section {
+    position: relative;
+    top: 0px;
+    left: 0px;
+  }
+  .home-rental-section-body {
+    align-items: center;
+  }
+  .home-nftl-token-section {
+    width: 100%;
+  }
+  .home-community-section-container {
+    width: 100%;
+  }
+  .home-community-section .section-actions {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .section-heading {
+    max-width: inherit;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+  }
+  .home-nftl-token-section-body {
+    width: 100%;
+    align-items: center;
+  }
+  .home-nftl-token-section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+  .home-nftl-token-bottom-image {
+    right: 25px;
+  }
+  .home-community-section-description {
+    max-width: 600px;
+    text-align: center;
+  }
+  .home-community-section-body {
+    align-items: center;
+  }
+  .home-community-characters {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -32px;
+  }
+  .game-playing-actions {
+    position: relative;
+  }
+  .desktop {
+    display: none !important;
+  }
+  .desktop-block {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .text-m-left {
+    text-align: left;
+  }
+  .community-data {
+    min-width: auto;
+  }
+  .section-padding {
+    padding-top: 0px !important;
+    padding-bottom: 60px !important;
+  }
+  .stay-informed-section {
+    margin-top: 100px !important;
+  }
+  .discord-btn {
+    max-width: 250px;
+    white-space: normal;
+  }
+  .team-pg .about-intro .display-buttons {
+    justify-content: center;
+  }
+  .video-detail-container a img {
+    width: 315px;
+    height: auto;
+  }
+  .video-bg {
+    height: 100%;
+    object-fit: cover;
+  }
+  .nr-content {
+    order: 12;
+  }
+  .nr-banner {
+    order: 1;
+  }
+  .teams-slider .nifty-teams {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+  .slick-dots {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .slick-dots li {
+    width: 8px !important;
+    height: 8px !important;
+    border-radius: 8px;
+    background: white !important;
+  }
+  .slick-dots li.slick-active {
+    background: var(--custom-color-brand) !important;
+  }
+  .nifty-teams .job-label {
+    background-color: yellow;
+  }
+  .com-grad-1,
+  .earth-grad {
+    left: 0;
+    width: 100%;
+  }
+  .com-banner img {
+    width: 100%;
+    height: auto;
+  }
+  .com-intro {
+    max-width: 100% !important;
+    padding-top: 48px;
+  }
+  .com-intro p br {
+    display: none;
+  }
+  .com-banner img:not(.moon-grad) {
+    width: 205px;
+    height: auto;
+  }
+  .earth-com {
+    margin-top: 100px;
+  }
+  .com-content {
+    margin-top: 48px;
+  }
+}
+
+@media (max-width: 600px) {
+  .home-pg .btn {
+    height: 36px;
+    border-radius: 20px;
+  }
+  .home-satoshi {
+    width: 60px;
+    height: 63px;
+  }
+  .text-m-center {
+    text-align: center;
+  }
+  .home-mobile-intro button {
+    width: 195px;
+  }
+  .wrapper {
+    min-height: 460px;
+  }
+  .browse-single button {
+    width: 18px;
+    font-size: 4px;
+    height: 6px;
+    padding: 0;
+  }
+  .browse-single svg {
+    width: 16px;
+    height: auto;
+  }
+}
+
+@media (orientation: landscape) and (max-width: 550px) {
+  .desktop {
+    display: none !important;
+  }
+  .desktop-block {
+    display: none !important;
+  }
+  .mobile {
+    display: flex !important;
+  }
+  .mobile-block {
+    display: block !important;
+  }
+  .browse-andy {
+    min-height: 223px;
+    top: 100px;
+    left: 0px;
+  }
+  .community-data {
+    min-width: auto;
+  }
+  .section-padding {
+    padding-top: 0px !important;
+    padding-bottom: 60px !important;
+  }
+  .stay-informed-section {
+    margin-top: 100px !important;
+  }
+  .discord-btn {
+    max-width: 250px;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 400px) {
+  .section-black-button {
+    width: 135px;
+  }
+  .section-white-button {
+    width: 135px;
+  }
+  .game-playing-actions > div {
+    flex: 1;
+  }
+  .game-playing-actions button {
+    width: 100% !important;
+  }
+  .section-actions {
+    width: 100%;
+  }
+  .section-actions > div {
+    flex: 1;
+  }
+  .section-actions button {
+    width: 100%;
+  }
+  .home-hero-characters-image {
+    height: calc(100% - 62px);
+  }
+  .home-hero-companion {
+    display: none;
+  }
+  .home-hero-halo {
+    display: none;
+  }
+}

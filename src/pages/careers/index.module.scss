@@ -1,0 +1,19 @@
+/*************************************** Careers **********************************************/
+.container {
+  max-width: 1436px;
+}
+
+.topSection {
+  padding-top: 12rem;
+}
+
+.description {
+  flex: 1;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .topSection {
+    padding-top: 8rem !important;
+  }
+}
