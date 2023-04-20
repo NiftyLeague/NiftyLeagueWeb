@@ -61,7 +61,7 @@ const Games: NextPage = () => {
               <div className="mb-5">
                 <AnimatedWrapper>
                   <p className="text-align-center animated-fade-slow animated-fade-start transition-delay-medium">
-                    JOIN THOUSANDS OF PLAYERS ALL OVER THE WORLD COMPETING FOR THE TOP SPOT IN THE NIFTY LEAGUE
+                    Join thousands of players around the world competing for the top spot in Nifty League!{' '}
                   </p>
                 </AnimatedWrapper>
               </div>

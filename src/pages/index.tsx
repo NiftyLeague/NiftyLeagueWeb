@@ -93,9 +93,9 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
         <div className="my-2 my-lg-4">
           <AnimatedWrapper>
             <p className="home-content-description animated-header-text animated-header-text-start transition-delay-small">
-              COMMUNITY GOVERNED GAME STUDIO.
+              <span className="white-space-no-wrap">COMMUNITY-GOVERNED GAME STUDIO.</span>
               <br />
-              BY GAMERS, FOR GAMERS.
+              <span className="white-space-no-wrap">BY GAMERS, FOR GAMERS.</span>
             </p>
           </AnimatedWrapper>
         </div>
@@ -106,7 +106,7 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
               onClick={scrollToGamingSection}
             >
               <Image src="/img/home/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
-              <p className="my-0 py-0 speech-bubble-text">Learn More</p>
+              <p className="my-0 py-0 speech-bubble-text">Learn More!</p>
             </div>
           </AnimatedWrapper>
         </div>
@@ -123,7 +123,7 @@ const MobileIntro = () => {
       <div className="d-flex flex-column align-items-center text-center my-auto py-3 pt-md-5 home-mobile-content">
         <h1 className="mt-0 mt-sm-4 mt-md-5">Nifty League</h1>
         <h5 className="mt-2">By Gamers. For Gamers.</h5>
-        <p className="my-4 text-center">Community Governed Game Studio</p>
+        <p className="my-4 text-center white-space-no-wrap">Community-Governed Game Studio</p>
         <AnimatedWrapper>
           <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
             <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-medium">
@@ -164,8 +164,8 @@ const Home: NextPage = () => {
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League</title>
-        <meta name="description" content="Community Governed Web3 Game Studio" />
-        <meta property="og:title" content="Nifty League: Community Governed Web3 Game Studio" />
+        <meta name="description" content="Community-Governed Web3 Game Studio" />
+        <meta property="og:title" content="Nifty League: Community-Governed Web3 Game Studio" />
         <meta property="og:image" content="https://niftyleague.com/img/home/banner-desktop.png" />
       </Head>
 
@@ -201,7 +201,7 @@ const Home: NextPage = () => {
               <Link href="/games" legacyBehavior>
                 <a>
                   <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-medium">
-                    VIEW MORE
+                    MORE GAMES
                   </button>
                 </a>
               </Link>
@@ -301,7 +301,7 @@ const Home: NextPage = () => {
                 {!desktop && (
                   <div className="position-relative flex-grow-1 full-width">
                     <AnimatedWrapper>
-                      <div className="animated-fade animated-fade-start">
+                      <div className="quick-pop-anim quick-pop-anim-start transition-delay-small">
                         <Image
                           src="/img/home/compete-and-earn-mobile.png"
                           alt="Compete and Earn"
@@ -328,7 +328,7 @@ const Home: NextPage = () => {
                   <div className="my-0">
                     <AnimatedWrapper>
                       <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                        4 - 16 PLAYERS COMPETE IN A CUTTHROAT BATTLE FOR THE SURVIVAL OF THE FITTEST.
+                        4 - 16 PLAYERS COMPETE IN A CUT-THROAT BATTLE FOR THE SURVIVAL OF THE FITTEST!
                       </p>
                     </AnimatedWrapper>
                   </div>
@@ -442,7 +442,7 @@ const Home: NextPage = () => {
                 <div className="my-0">
                   <AnimatedWrapper>
                     <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      A VIRTUAL SOCIAL HUB FOR GAMERS LIKE NO OTHER.
+                      A VIRTUAL SOCIAL HUB LIKE NONE OTHER FOR GAMERS.
                     </p>
                   </AnimatedWrapper>
                 </div>
@@ -521,7 +521,7 @@ const Home: NextPage = () => {
                 <div className="my-0">
                   <AnimatedWrapper>
                     <p className="py-1 py-lg-3 section-description animated-header-text animated-header-text-start transition-delay-medium">
-                      ACCESS WEB3 ENABLED PLAYER DASHBOARDS TO SEE YOUR GAME STATS, WINNINGS, AND NIFTY LEAGUE ASSETS.
+                      ACCESS WEB3-ENABLED PLAYER DASHBOARDS TO SEE YOUR GAME STATS, WINNINGS, AND NIFTY LEAGUE ASSETS.
                     </p>
                   </AnimatedWrapper>
                 </div>
@@ -648,7 +648,7 @@ const Home: NextPage = () => {
               <Stack gap={2} className="home-community-section-container">
                 {!desktop && (
                   <AnimatedWrapper>
-                    <div className="position-relative flex-grow-1 full-width quick-pop-anim quick-pop-anim-start transition-delay-medium">
+                    <div className="position-relative flex-grow-1 full-width quick-pop-anim quick-pop-anim-start transition-delay-small">
                       <Image
                         src="/img/home/community.png"
                         alt="The Best Community on Earth"
@@ -662,7 +662,7 @@ const Home: NextPage = () => {
                 )}
                 {!desktop && (
                   <AnimatedWrapper>
-                    <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-large home-community-characters">
+                    <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-small home-community-characters">
                       <Image
                         src="/img/home/community-characters.png"
                         alt="Community DEGENs"
@@ -687,8 +687,8 @@ const Home: NextPage = () => {
                     <p
                       className={`py-1 home-community-section-description animated-header-text animated-header-text-start transition-delay-medium`}
                     >
-                      WE HATE TO BRAG, BUT OUR COMMUNITY IS TRULY TOP NOTCH. JOIN OUR DISCORD TO CONNECT WITH OTHERS
-                      &amp; HELP SHAPE NIFTY LEAGUE&apos;S FUTURE!
+                      WE HATE TO BRAG, BUT OUR COMMUNITY IS TRULY TOP-NOTCH! JOIN OUR DISCORD TO CONNECT WITH OTHERS
+                      DEGENS &amp; HELP SHAPE NIFTY LEAGUE&apos;S FUTURE.
                     </p>
                   </AnimatedWrapper>
                   <Stack
