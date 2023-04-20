@@ -1077,9 +1077,6 @@
   .game-playing-actions {
     position: relative;
   }
-  .radial-gradient-background {
-    display: none;
-  }
   .desktop {
     display: none !important;
   }

@@ -111,7 +111,7 @@ const Games: NextPage = () => {
         <div className={styles.section}>
           <AnimatedWrapper>
             <div className="d-flex mb-3 mb-md-4">
-              <div className="col-3 col-md-5">
+              <div className="col-4 col-md-5">
                 <h3 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
                   TRIBES
                 </h3>
@@ -138,9 +138,9 @@ const Games: NextPage = () => {
                         </div>
                       </AnimatedWrapper>
                       <AnimatedWrapper>
-                        <p className="text-align-center mt-2 animated-fade-slow animated-fade-start transition-delay-small">
+                        <h6 className="text-align-center mt-2 animated-fade-slow animated-fade-start transition-delay-small">
                           {name}
-                        </p>
+                        </h6>
                       </AnimatedWrapper>
                     </div>
                   </div>

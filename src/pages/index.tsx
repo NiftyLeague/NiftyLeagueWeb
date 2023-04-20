@@ -121,7 +121,7 @@ const MobileIntro = () => {
       <div className="radial-gradient-background d-block" />
       <div className="d-flex flex-column align-items-center text-center my-auto py-3 pt-md-5 home-mobile-content">
         <h1 className="mt-0 mt-sm-4 mt-md-5">Nifty League</h1>
-        <h4 className="mt-2">By Gamers. For Gamers.</h4>
+        <h5 className="mt-2">By Gamers. For Gamers.</h5>
         <p className="my-4 text-center">Community Governed Game Studio</p>
         <AnimatedWrapper>
           <a href="https://app.niftyleague.com/" target="_blank" rel="noreferrer">
