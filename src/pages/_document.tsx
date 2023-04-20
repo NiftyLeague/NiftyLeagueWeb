@@ -43,7 +43,12 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;400;500;700&family=Press+Start+2P&display=swap"
           rel="stylesheet"
         />
-        <link href="/fonts/style.css" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" />
+
+        <link rel="preconnect" href="/fonts/style.css" />
+        <link rel="preconnect" href="/fonts" crossOrigin="anonymous" />
+        {/* eslint-disable-next-line @next/next/no-css-tags */}
+        <link href="/fonts/style.css" rel="stylesheet" />
+        {/* <link href="/fonts/style.css" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
       </Head>
       <body>
         <Main />
