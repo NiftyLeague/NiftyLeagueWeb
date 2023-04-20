@@ -99,7 +99,7 @@ h3 {
   font-family: var(--custom-header-font-family);
   font-style: normal;
   font-weight: var(--custom-font-weight-bold);
-  letter-spacing: 3px;
+  letter-spacing: 0.02em;
   line-height: 1.2;
 }
 h4,

@@ -93,3 +93,12 @@
     bottom: 175px;
   }
 }
+
+@media (max-width: 420px) {
+  .inner {
+    padding: 400px 20% 400px 16%;
+  }
+  .satoshiContainer {
+    top: 200px;
+  }
+}

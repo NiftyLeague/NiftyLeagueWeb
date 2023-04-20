@@ -56,7 +56,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
             </div>
             <div className="px-0 pt-md-0 pt-4">
               <div className="d-flex flex-column m-0 p-0 position-relative">
-                <Link href="/terms-of-service" className="mt-2">
+                <Link href="/terms-of-service" className="mt-3">
                   Terms
                 </Link>
                 <Link href="/disclaimer" className="mt-2">

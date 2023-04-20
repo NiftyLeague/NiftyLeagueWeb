@@ -54,7 +54,7 @@ const Games: NextPage = () => {
               <div className="mb-4">
                 <AnimatedWrapper>
                   <h1 className="text-align-center animated-fade-slow animated-fade-start transition-delay-small white-space-no-wrap">
-                    OUR GAMES
+                    GAMES
                   </h1>
                 </AnimatedWrapper>
               </div>
