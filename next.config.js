@@ -8,7 +8,6 @@ const { withSentryConfig } = require('@sentry/nextjs');
 /** @type {import('next').NextConfig} */
 const moduleExports = {
   reactStrictMode: true,
-  optimizeFonts: false,
   images: {
     domains: ['nifty-league.s3.amazonaws.com'],
   },
