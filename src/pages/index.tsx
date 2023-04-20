@@ -174,7 +174,7 @@ const Home: NextPage = () => {
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="mt-3 mt-lg-5">
             <AnimatedWrapper>
-              <h2 className="px-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
+              <h2 className="px-sm-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
             </AnimatedWrapper>
           </div>
           <ConsoleGame src="/video/smashers.mp4" />
@@ -212,7 +212,7 @@ const Home: NextPage = () => {
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="my-3 my-lg-5">
             <AnimatedWrapper>
-              <h2 className="px-5 animated-header-text animated-header-text-start">COMMUNITY-GENERATED AVATARS</h2>
+              <h2 className="px-sm-5 animated-header-text animated-header-text-start">COMMUNITY-GENERATED AVATARS</h2>
             </AnimatedWrapper>
           </div>
 
@@ -341,7 +341,6 @@ const Home: NextPage = () => {
                     <AnimatedWrapper>
                       <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
-                          {/* TRY BRAWL MODE */}
                           LET&apos;S BRAWL!
                         </button>
                       </a>
@@ -493,7 +492,10 @@ const Home: NextPage = () => {
           <div className="d-flex flex-column px-3 home-rental-section">
             <Stack gap={2}>
               {!desktop && (
-                <div className="position-relative flex-grow-1 full-width">
+                <div
+                  className="position-relative flex-grow-1 full-width"
+                  style={{ width: '100vw', marginLeft: '-1rem' }}
+                >
                   <Image
                     src="/img/home/dashboard.png"
                     alt="App Dashboard"
@@ -749,11 +751,13 @@ const Home: NextPage = () => {
                       </a>
                     </AnimatedWrapper>
                     <AnimatedWrapper>
-                      <a href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-                        <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
-                          BUY A DEGEN
-                        </button>
-                      </a>
+                      <Link href="/community" legacyBehavior>
+                        <a>
+                          <button className="btn theme-btn-transparent section-white-button animated-fade animated-fade-start transition-delay-large">
+                            VIEW MORE
+                          </button>
+                        </a>
+                      </Link>
                     </AnimatedWrapper>
                   </Stack>
                   {desktop && (
