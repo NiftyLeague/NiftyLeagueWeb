@@ -1,3 +1,5 @@
+/*************************************** Files **********************************************/
+
 .pixelated {
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges; /* Firefox */
@@ -20,6 +22,20 @@
   object-position: top left;
   composes: pixelated;
 }
+
+@media (max-width: 615px) {
+  .image,
+  .sprite {
+    min-height: 100vh;
+    object-position: center;
+  }
+  .image {
+    width: 106% !important;
+    margin-left: -5%;
+  }
+}
+
+/*************************************** Options **********************************************/
 
 .wrapper {
   display: flex;
@@ -45,38 +61,22 @@
   justify-content: space-between;
 }
 
-@media (max-width: 615px) {
-  .image,
-  .sprite {
-    min-height: 100vh;
-    object-position: center;
-  }
-  .image {
-    width: 106% !important;
-    margin-left: -5%;
-  }
-}
-
 .menu__overlay__boggs {
   display: flex;
   margin-right: 5px;
-
   button {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.8rem;
     margin-right: -1px;
     border: 1px solid #5f4ce6 !important;
   }
-
   button:hover {
     cursor: pointer;
     background-color: #fff;
   }
-
   .btn {
     background-color: #fff;
     color: #5f4ce6;
   }
-
   .btn_selected {
     background-color: #5f4ce6 !important;
     color: #fff !important;
@@ -86,49 +86,16 @@
 .menu__overlay__animation,
 .menu__overlay__colorpicker {
   display: flex;
-
   .background__picker {
-    margin-right: 5px;
-  }
-
-  select {
-    cursor: pointer;
-    background-color: #fff;
-    border: thin solid #333;
-    display: inline-block;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-    font-family: Nokora, sans-serif;
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    min-width: 120px;
-    background-image: linear-gradient(45deg, transparent 50%, gray 0), linear-gradient(135deg, gray 50%, transparent 0),
-      linear-gradient(90deg, #ccc, #ccc);
-    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  }
-
-  select,
-  select:focus {
-    color: #000;
-    background-size: 5px 5px, 5px 5px, 1px 1.5em;
-    background-repeat: no-repeat;
-  }
-
-  select:focus {
-    background-image: linear-gradient(45deg, #333 50%, transparent 0), linear-gradient(135deg, transparent 50%, #333 0),
-      linear-gradient(90deg, #ccc, #ccc);
-    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-    border-color: #333;
-    outline: 0;
-  }
-
-  select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
+    color: #5f4ce6;
+    svg {
+      color: #5f4ce6;
+      padding-left: 3px;
+    }
   }
 }
+
+/*************************************** Colors **********************************************/
 
 .gradient_salmon {
   background: radial-gradient(#a5676880, #a56768);

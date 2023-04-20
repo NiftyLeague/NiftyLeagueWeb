@@ -1,6 +1,11 @@
 import { useEffect, Dispatch, SetStateAction, useState } from 'react';
 import { useRouter } from 'next/router';
-import { CircularProgress } from '@mui/material';
+import { styled } from '@mui/material/styles';
+import CircularProgress from '@mui/material/CircularProgress';
+import FormControl from '@mui/material/FormControl';
+import InputBase from '@mui/material/InputBase';
+import MenuItem from '@mui/material/MenuItem';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 import { DEGEN_3D_MODEL_URL } from '@/constants/degens';
 import { SRC, Color } from '@/types/gltf';
 import styles from '@/styles/gltf.module.scss';
@@ -79,42 +84,73 @@ type ModelActionsProps = {
   setColor: Dispatch<SetStateAction<Color>>;
 };
 
+const COLOR_OPTIONS = [
+  ['blue', 'Blue'],
+  ['bluegreen', 'Blue Green'],
+  ['bluepurple', 'Blue Purple'],
+  ['bluegrey', 'Blue Grey'],
+  ['brown', 'Brown'],
+  ['green', 'Green'],
+  ['greenish', 'Greenish'],
+  ['lightblue', 'Light Blue'],
+  ['ochre', 'Ochre'],
+  ['ochretwo', 'Ochre Two'],
+  ['palepink', 'Pale Pink'],
+  ['purple', 'Purple'],
+  ['salmon', 'Salmon'],
+  ['yellow', 'Yellow'],
+];
+
+const BootstrapInput = styled(InputBase)(({ theme }) => ({
+  'label + &': {
+    marginTop: 20,
+  },
+  '& .MuiInputBase-input': {
+    borderRadius: 4,
+    position: 'relative',
+    color: '#5f4ce6',
+    backgroundColor: '#fff',
+    border: '1px solid #5f4ce6',
+    padding: '0.3rem 1rem 0.3rem 0.8rem',
+    fontSize: '0.8125rem',
+    textTransform: 'uppercase',
+    boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
+    '&:focus': {
+      borderRadius: 4,
+      borderColor: '#80bdff',
+      backgroundColor: '#fff',
+      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+    },
+  },
+}));
+
 export function ModelActions({ color, setColor }: ModelActionsProps) {
-  const handleSelectColor = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handleSelectColor = (e: SelectChangeEvent) => {
     setColor(e.target.value as Color);
   };
 
   return (
     <div className={styles.menu__overlay__colorpicker}>
-      <select
-        name="background"
-        className={styles.background__picker}
-        title="Background"
-        onChange={e => handleSelectColor(e)}
-        value={color}
-      >
-        <option value="blue">Blue</option>
-        <option value="bluegreen">Blue Green</option>
-        <option value="bluepurple">Blue Purple</option>
-        <option value="bluegrey">Blue Grey</option>
-        <option value="brown">Brown</option>
-        <option value="green">Green</option>
-        <option value="greenish">Greenish</option>
-        <option value="lightblue">Light Blue</option>
-        <option value="ochre">Ochre</option>
-        <option value="ochretwo">Ochre Two</option>
-        <option value="palepink">Pale Pink</option>
-        <option value="purple">Purple</option>
-        <option value="salmon">Salmon</option>
-        <option value="yellow">Yellow</option>
-      </select>
+      <FormControl style={{ minWidth: 135 }} size="small" variant="standard">
+        <Select
+          id="background-select"
+          className={styles.background__picker}
+          value={color}
+          label="Background"
+          onChange={handleSelectColor}
+          input={<BootstrapInput />}
+        >
+          {COLOR_OPTIONS.map(([value, name]) => (
+            <MenuItem value={value} key={value}>
+              {name}
+            </MenuItem>
+          ))}
+        </Select>
+      </FormControl>
 
-      {/* <button slot="ar-button" id="ar-button">
+      {/* <Button slot="ar-button" id="ar-button">
         View in your space
-      </button>
-      <div id="ar-prompt">
-        <img src="https://modelviewer.dev/shared-assets/icons/hand.png" />
-      </div> */}
+      </Button> */}
     </div>
   );
 }

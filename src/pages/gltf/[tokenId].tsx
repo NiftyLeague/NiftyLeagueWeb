@@ -11,8 +11,8 @@ import { SRC, Color } from '@/types/gltf';
 
 import styles from '@/styles/gltf.module.scss';
 
-const ModelView = dynamic(() => import('@/components/ModelViewer').then(mod => mod.ModelView));
-const ModelActions = dynamic(() => import('@/components/ModelViewer').then(mod => mod.ModelActions));
+const ModelView = dynamic(() => import('@/components/ModelView'));
+const ModelActions = dynamic(() => import('@/components/ModelView').then(mod => mod.ModelActions));
 
 export default function DegenViews() {
   const router = useRouter();
@@ -80,7 +80,7 @@ export default function DegenViews() {
             <div className={styles.menu__overlay}>
               <div className={styles.menu__overlay__dimension}>
                 <div className={styles.menu__overlay__boggs}>
-                  <ButtonGroup variant="contained" aria-label="outlined primary button group">
+                  <ButtonGroup variant="contained" size="small" aria-label="outlined primary button group">
                     <Button
                       onClick={() => switchSrc(SRC.IMAGE)}
                       className={cn(styles.btn, { [styles.btn_selected]: selected === SRC.IMAGE })}
