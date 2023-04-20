@@ -1,8 +1,7 @@
 export const NIFTY_GAMES = [
   {
     name: 'NIFTY SMASHERS',
-    description:
-      'This brawl style action game will leave you on the edge of your seat with your fingers cramping as you try to out-click and out-smash your opponent in a free for all DEGEN battle. Just in case you’re wondering, the winner does take all. But if you’re lucky to get some hits in before you’re vanquished you might get some mercy rewards. Yes, you should check it out.',
+    description: `As Nifty League's main game, this brawl-style action game will have you white-knuckled and on the edge of your seat as you try to out-click, out-smart and out-smash your opponent in a winner-takes-all DEGEN battle!`,
     video: 'https://www.youtube.com/embed/ylJzfLcWChc',
     tag: 'GAME',
     action: {
@@ -27,8 +26,7 @@ export const NIFTY_GAMES = [
   // },
   {
     name: 'WEN GAME',
-    description:
-      'Never thought you’d see a batting cage on the blockchain huh? Well think again. Put your baseball team cap on and get ready to hit the balls in the WEN game for your first blockchain homerun. Wen lambo!',
+    description: `Never thought you'd see a batting cage on the blockchain huh? Think again. Put your baseball team cap on and get ready to hit the balls in the WEN game for your first blockchain home run. Easy to pick up, difficult to master. Wen lambo?!`,
     video: 'https://www.youtube.com/embed/OF_JrECYpvM',
     tag: 'MINI-GAME',
     action: {
@@ -39,8 +37,7 @@ export const NIFTY_GAMES = [
   },
   {
     name: 'CRYPTO WINTER',
-    description:
-      'The Crypto Market is currently going through a winter season. Only few will make it to the next cycle. You’ll have to dodge different snowballs, rugs and icicles to get a seat at the ranking table. Weak hands need not apply. Diamond hands only!',
+    description: `The crypto market is currently going through an extended winter season, and only few will survive until the next cycle. Dodge snowballs, bombs and icicles and utilise pickups to defeat Pengweevil to achieve a seat at the ranking table. Weak hands need not apply, diamond hands only!`,
     video: 'https://www.youtube.com/embed/ZiY-TwtzYVk',
     tag: 'MINI-GAME',
     action: {

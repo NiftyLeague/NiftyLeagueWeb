@@ -22,17 +22,16 @@
 }
 
 .inner {
-  padding: 300px 20% 300px 16%;
-  & p {
-    line-height: 1.5;
-    color: #262930;
-  }
-
+  padding: 325px 20% 325px 16%;
   height: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   width: 100%;
+  & p {
+    line-height: 1.5;
+    color: #262930;
+  }
 }
 
 .button {
@@ -41,13 +40,13 @@
 
 .satoshiContainer {
   position: absolute;
-  top: 110px;
+  top: 145px;
   left: calc(50% - 50px);
 }
 
 .degensContainer {
   position: absolute;
-  bottom: 125px;
+  bottom: 160px;
   left: calc(50% - 150px);
 }
 
@@ -78,27 +77,39 @@
 
 @media (max-width: 1200px) {
   .degensContainer {
-    bottom: 140px;
+    bottom: 170px;
+  }
+}
+
+@media (max-width: 920px) {
+  .satoshiContainer {
+    top: 175px;
+  }
+  .degensContainer {
+    bottom: 185px;
   }
 }
 
 @media (max-width: 768px) {
   .inner {
-    padding: 330px 20% 330px 16%;
+    padding: 400px 18% 400px 14%;
   }
   .satoshiContainer {
-    top: 150px;
+    top: 185px;
   }
   .degensContainer {
-    bottom: 175px;
+    bottom: 200px;
   }
 }
 
 @media (max-width: 420px) {
+  .content {
+    top: -200px;
+  }
   .inner {
-    padding: 400px 20% 400px 16%;
+    padding: 550px 17% 550px 13%;
   }
   .satoshiContainer {
-    top: 200px;
+    top: 280px;
   }
 }

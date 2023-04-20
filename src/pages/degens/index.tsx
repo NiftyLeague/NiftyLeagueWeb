@@ -113,16 +113,16 @@ const Games: NextPage = () => {
             <div className="d-flex mb-3 mb-md-4">
               <div className="col-4 col-md-5">
                 <h3 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
-                  TRIBES
+                  TRIBE
                 </h3>
               </div>
               <div className="col-6 mt-1">
-                <h4 className="px-3 animated-header-text animated-header-text-start transition-delay-small">POWERS</h4>
+                <h4 className="px-3 animated-header-text animated-header-text-start transition-delay-small">SPECIAL</h4>
               </div>
             </div>
             <div className={cn(styles.table, 'position-relative')}>
               <hr className={styles.divider} />
-              {NIFTY_DEGENS.map(({ name, description, gif, image }) => (
+              {NIFTY_DEGENS.map(({ name, description, specialName, gif, image }) => (
                 <div className="d-flex align-items-center" key={name}>
                   <div className="col-3 col-md-5 p-3 p-md-4">
                     <div className="d-flex flex-column">
@@ -152,19 +152,18 @@ const Games: NextPage = () => {
                     </AnimatedWrapper>
                   </div>
                   <div className="col-3 col-md-3 p-md-3">
-                    {gif && (
-                      <AnimatedWrapper>
-                        <div className="position-relative text-align-center animated-fade-slow animated-fade-start transition-delay-small">
-                          <Image
-                            src={gif.link}
-                            alt={name}
-                            layout="responsive"
-                            width={desktop ? gif.width : gif.width * 0.7}
-                            height={desktop ? gif.height : gif.height * 0.7}
-                          />
-                        </div>
-                      </AnimatedWrapper>
-                    )}
+                    <AnimatedWrapper>
+                      <div className="position-relative text-align-center animated-fade-slow animated-fade-start transition-delay-small">
+                        <Image
+                          src={gif.link}
+                          alt={name}
+                          layout="responsive"
+                          width={desktop ? gif.width : gif.width * 0.7}
+                          height={desktop ? gif.height : gif.height * 0.7}
+                        />
+                      </div>
+                    </AnimatedWrapper>
+                    <h6 className="text-align-center">{specialName}</h6>
                   </div>
                 </div>
               ))}

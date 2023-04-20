@@ -204,7 +204,8 @@ export const COMMUNITY_DEGEN_LIST = [
 export const NIFTY_DEGENS = [
   {
     name: 'APE',
-    description: `If this ape is not eating bananas, he’s throwing them. And those bananas hurt.`,
+    description: `If this ape is not eating bananas, he's throwing them. And those bananas hurt.`,
+    specialName: 'Banana Boomerang',
     gif: {
       link: '/img/degens/ape.gif',
       width: 512,
@@ -218,7 +219,8 @@ export const NIFTY_DEGENS = [
   },
   {
     name: 'HUMAN',
-    description: 'The primitive humans special powers is bomb dropping. Typical',
+    description: `The primitive human's special move is dropping bombs… typical.`,
+    specialName: 'Bomb',
     gif: {
       link: '/img/degens/human.gif',
       width: 512,
@@ -232,7 +234,8 @@ export const NIFTY_DEGENS = [
   },
   {
     name: 'DOGE',
-    description: `Doge's power is eponymous. The DEGEN perforrms an acrobatic roll like a coin`,
+    description: `Doge performs a Doge Roll by rolling up into a Doge coin token and rolling left and right at high speed.`,
+    specialName: 'Doge Roll',
     gif: {
       link: '/img/degens/doge.gif',
       width: 512,
@@ -246,7 +249,8 @@ export const NIFTY_DEGENS = [
   },
   {
     name: 'FROG',
-    description: `Watch out for the frog’s sticky tongue. If you dont see it, you’re probably trapped already`,
+    description: `Watch out for the frog's sticky tongue! Draws another player in so that frog can issue a bönk. Also attaches to ceilings, walls and some platforms.`,
+    specialName: 'Sticky Tongue',
     gif: {
       link: '/img/degens/frog.gif',
       width: 500,
@@ -255,12 +259,13 @@ export const NIFTY_DEGENS = [
     image: {
       link: '/img/degens/frog.png',
       width: 120,
-      height: 100,
+      height: 95,
     },
   },
   {
     name: 'CAT',
-    description: `This cat may not have nine lives but it’s faster than the average cat and, hits harder with a bat and pounces with a vengeance`,
+    description: `Charging up Cat's wiggle results in a temporary speed and power buff. The longer the charge-up, the longer and more powerful the buffs. Me-OW.`,
+    specialName: 'Charge Up',
     gif: {
       link: '/img/degens/cat.gif',
       width: 512,
@@ -274,7 +279,8 @@ export const NIFTY_DEGENS = [
   },
   {
     name: 'ALIEN',
-    description: `Keep your eyes peeled because these apes can teleport across the game screen to your location anytime.`,
+    description: `Keep your eyes peeled because these aliens can teleport across the game screen quickly. Also a great way to avoid falling off the map.`,
+    specialName: 'Teleport',
     gif: {
       link: '/img/degens/alien.gif',
       width: 512,
@@ -288,7 +294,8 @@ export const NIFTY_DEGENS = [
   },
   {
     name: 'HYDRA',
-    description: `The Hydras use a trident spear. They have a deep combat lineage and a vicious special move called the Trident Dash.`,
+    description: `The Hydras use a trident spear. They are an ancient tribe with a deep combat lineage and a VERY vicious special move.`,
+    specialName: 'Trident Dash',
     gif: {
       link: '/img/degens/hydra.gif',
       width: 512,
