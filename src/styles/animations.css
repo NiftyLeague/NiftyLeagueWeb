@@ -109,6 +109,8 @@
   .animation-md-hidden {
     animation: none !important;
     transform: none !important;
+    transition: none !important;
+    transition-delay: none !important;
   }
 }
 
@@ -126,6 +128,7 @@
     animation: none !important;
     transform: none !important;
     transition: none !important;
+    transition-delay: none !important;
   }
   .transition-delay-small {
     transition-delay: 0.05s;
