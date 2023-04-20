@@ -1,0 +1,291 @@
+/*************************************** Animation Classes **********************************************/
+
+.sliding-nfts .sliding-background-wrapper-desktop {
+  overflow: hidden;
+  min-height: 520px;
+  background: linear-gradient(
+    128.04deg,
+    var(--custom-color-brand) 0%,
+    var(--custom-color-brand-secondary) 46.93%,
+    #ff00c7 100%
+  );
+}
+.sliding-nfts .sliding-background-wrapper-mobile {
+  overflow: hidden;
+  min-height: 106px;
+  margin: 16px 0px;
+  background: linear-gradient(
+    128.04deg,
+    var(--custom-color-brand) 0%,
+    var(--custom-color-brand-secondary) 46.93%,
+    #ff00c7 100%
+  );
+}
+.sliding-background-wrapper-desktop .sliding-background {
+  background: url(/img/community/degen-slider.png) repeat-x;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: -o-crisp-edges; /* Opera */
+  image-rendering: -webkit-optimize-contrast; /* Webkit (non-standard naming)*/
+  -ms-interpolation-mode: nearest-neighbor; /* IE (non-standard property) */
+  image-rendering: pixelated;
+
+  height: 100%;
+  width: 5000px;
+  animation: slide 60s linear infinite;
+}
+.sliding-background-wrapper-mobile .sliding-background {
+  background: url(/img/community/degen-slider.png) repeat-x;
+  height: 106px;
+  width: 5000px;
+  animation: slide 240s linear infinite;
+  background-size: contain;
+}
+
+.animated-fade {
+  transition: opacity 1s;
+}
+
+.animated-fade-quick {
+  transition: opacity 0.75s;
+}
+
+.animated-fade-slow {
+  transition: opacity 2s;
+}
+
+.animated-fade-start {
+  opacity: 0;
+}
+
+.animated-vertical-fade {
+  top: 0px;
+  transition: opacity 2s, top 1s;
+}
+.animated-vertical-fade-start {
+  top: -100px;
+  opacity: 0;
+}
+
+.quick-pop-anim {
+  transition: opacity 0.5s, transform 1s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.quick-pop-anim-start {
+  opacity: 0;
+  transform: scale(0, 0);
+}
+
+.animation-visible {
+  animation: visibility 1s ease infinite;
+}
+
+@keyframes visibility {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+.transition-delay-small {
+  transition-delay: 0.2s;
+}
+.transition-delay-medium {
+  transition-delay: 0.4s;
+}
+.transition-delay-large {
+  transition-delay: 0.6s;
+}
+.transition-delay-extreme {
+  transition-delay: 2s;
+}
+
+@media (max-width: 920px) {
+  .animation-md-hidden {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-3750px, 0, 0);
+    }
+  }
+  .animation-sm-hidden,
+  .btn.animated-fade {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    transition-delay: none !important;
+  }
+  .transition-delay-small {
+    transition-delay: 0.05s;
+  }
+  .transition-delay-medium {
+    transition-delay: 0.2s;
+  }
+  .transition-delay-large {
+    transition-delay: 0.3s;
+  }
+  .transition-delay-extreme {
+    transition-delay: 1s;
+  }
+}
+
+@media (min-width: 768px) {
+  .animated-header-text {
+    margin-bottom: 0px;
+    transition: opacity 1s, margin-bottom 1s;
+  }
+
+  .animated-header-text-start {
+    margin-bottom: -24px;
+    opacity: 0;
+  }
+
+  .satoshi-quick-pop-anim {
+    transition: opacity 0.2s, transform 0.4s, left 0.3s;
+    transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    left: 0px;
+  }
+
+  .satoshi-quick-pop-anim-start {
+    opacity: 0;
+    transform: scale(0, 0);
+    left: -100px;
+  }
+
+  .animation-bounce {
+    animation: bounce 4s ease infinite;
+  }
+
+  .animation-bounce2 {
+    animation: bounce 4s ease infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animation-bounce-coin1 {
+    animation: coin-bounce2 3s ease infinite;
+  }
+
+  .animation-bounce-coin2 {
+    animation: coin-bounce2 3s ease infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animation-bounce-coin3 {
+    animation: coin-bounce2 3s ease infinite;
+    animation-delay: 1s;
+  }
+
+  .animation-propeller {
+    animation: propeller 0.5s ease infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-3010px, 0, 0);
+    }
+  }
+
+  @keyframes bounce {
+    0%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @keyframes coin-bounce {
+    0%,
+    50%,
+    100% {
+      transform: translateY(0);
+    }
+    25%,
+    75% {
+      transform: translateY(-60px);
+    }
+  }
+
+  @keyframes coin-bounce2 {
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-60px);
+    }
+    60% {
+      transform: translateY(-30px);
+    }
+  }
+
+  @keyframes propeller {
+    0%,
+    100% {
+      background-image: url('/img/home/hero-companion-anim1.png');
+    }
+    25% {
+      background-image: url('/img/home/hero-companion-anim2.png');
+    }
+    50% {
+      background-image: url('/img/home/hero-companion-anim3.png');
+    }
+    75% {
+      background-image: url('/img/home/hero-companion-anim4.png');
+    }
+  }
+
+  .animation-zoomin {
+    animation: zoomin 3s;
+  }
+
+  @keyframes zoomin {
+    0% {
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+
+  .animation-zoomin-large {
+    animation: zoomin-large 3s;
+  }
+
+  @keyframes zoomin-large {
+    0% {
+      -webkit-transform: scale(2);
+      transform: scale(2);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}
