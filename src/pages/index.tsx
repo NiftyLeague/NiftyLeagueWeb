@@ -132,16 +132,16 @@ const MobileIntro = () => {
         </AnimatedWrapper>
         <div className="d-flex align-items-center mt-3 mb-5 social-icons">
           <a className="pe-3" href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-            <Image src="/icons/discord.svg" alt="Discord Logo" width={20} height={20} />
+            <Image src="/icons/discord.svg" alt="Discord Logo" width={22} height={22} />
           </a>
           <a className="pe-3" href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
-            <Image src="/icons/twitter.svg" alt="Twitter Logo" width={20} height={20} />
+            <Image src="/icons/twitter.svg" alt="Twitter Logo" width={22} height={22} />
           </a>
           <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-            <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={20} height={20} />
+            <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={22} height={22} />
           </a>
-          <a className="pe-3" href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
-            <Image src="/icons/twitch.svg" alt="Twitch Logo" width={20} height={20} />
+          <a href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
+            <Image src="/icons/twitch.svg" alt="Twitch Logo" width={22} height={22} />
           </a>
         </div>
       </div>
@@ -342,7 +342,7 @@ const Home: NextPage = () => {
                       <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
                           {/* TRY BRAWL MODE */}
-                          NIFTY SMASHERS
+                          LET&apos;S BRAWL!
                         </button>
                       </a>
                     </AnimatedWrapper>
@@ -374,7 +374,7 @@ const Home: NextPage = () => {
                 </div>
               </AnimatedWrapper>
               <div className="position-absolute compete-to-earn-section-token-4">
-                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="large">
+                <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="extreme">
                   <div className="animated-fade-start animated-fade transition-delay-large">
                     <Image
                       alt="Compete and Earn NFTL Token"
@@ -416,7 +416,7 @@ const Home: NextPage = () => {
                 <div className="position-relative full-width text-align-center">
                   <Image
                     src="/img/home/land-in-the-niftyverse.png"
-                    alt="Land in the Niftyverse"
+                    alt="Land in the NiftyVerse"
                     layout="responsive"
                     width={1920}
                     height={1512}

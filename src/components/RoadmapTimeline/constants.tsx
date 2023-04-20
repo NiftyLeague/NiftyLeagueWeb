@@ -164,7 +164,7 @@ export const ROADMAP_CARDS = [
         </p>
         <p>
           We&apos;ll include game stats for daily, weekly, monthly, and of course all-time leaders for all of our games
-          in the Niftyverse. Some early honorary DEGENS:
+          in the NiftyVerse. Some early honorary DEGENS:
         </p>
         <ul className={styles.content_skills}>
           <li>fvsvy 🌊</li>
@@ -294,7 +294,7 @@ export const ROADMAP_CARDS = [
       <>
         <p>
           Our team has been slowly hinting at the upcoming utilities for comics - as you may already be aware you will
-          be able to burn each page for special in-game items that increase your DEGEN&apos;S multiplier... but the fun
+          be able to burn each page for special in-game items or an exclusive key to the Citadel... but the fun
           doesn&apos;t stop there!
         </p>
         <div className="row">
@@ -368,8 +368,8 @@ export const ROADMAP_CARDS = [
     body: (
       <>
         <p>
-          If you read the last point you&apos;ll know that scaling our platform is a high priority. Part of this process
-          is onboarding new users who may not be able to afford to own or rent a DEGEN.
+          Scaling our platform is a high priority. Part of this process is onboarding new users who may not be able to
+          afford to own or rent a DEGEN.
         </p>
         <p className="mb-0">
           Our free-2-play option will allow new users to hop in matches using a generic character which allows them to
@@ -440,25 +440,25 @@ export const ROADMAP_CARDS = [
       width: 757,
       height: 675,
     },
-    title: 'Niftyverse',
+    title: 'NiftyVerse',
     body: (
       <>
         <p>
-          Welcome to the Niftyverse; a world filled with DEGENS and NFT communities alike with a shared vision to have
+          Welcome to the NiftyVerse; a world filled with DEGENS and NFT communities alike with a shared vision to have
           fun and build a thriving gaming ecosystem. What makes the Niftyverse stand apart from other metaverses is our
           games being the centerpiece. Walk into our arcade room filled with fun mini-games or venture to destinations
           on the map to jump into our classic titles like Nifty Smashers and Nifty Kart.
         </p>
         <p>
           While Nifty League focuses on building a decentralized game platform with titles such as Nifty Smashers and
-          other Nintendo-inspired games, Niftyverse stands at the heart of our ecosystem tying everything together.
+          other Nintendo-inspired games, NiftyVerse stands at the heart of our ecosystem tying everything together.
           It&apos;s not only the central lobby system or launch point for many of these games, but the main hub for all
           social interactions (and quite frankly our biggest game in and of itself).
         </p>
         <p>
           If you&apos;re a creative type, don&apos;t miss this opportunity - we will have an asset store for you to
           design assets such as buildings or trees and list them for sale based on your defined limits and pricing. Do
-          you want a cool DEGEN theme park or Cyber Kongz meetup? Build out the Niftyverse to whatever your heart
+          you want a cool DEGEN theme park or Cyber Kongz meetup? Build out the NiftyVerse to whatever your heart
           desires!
         </p>
       </>
@@ -474,10 +474,10 @@ export const ROADMAP_CARDS = [
     title: 'DAO',
     body: (
       <p className="mb-0">
-        We will gradually be transferring ownership of the Nifty League to our DAO in order to decentralize the platform
-        and encourage devs to help us build! Our vision is to power rapid growth and development through community
-        contributions, enabling us to build a gaming platform like no other. Simply put, DAOs are the future. We see
-        only one route to becoming the world&apos;s leading GameFi platform and that&apos;s by building together. 💜
+        We will gradually transfer ownership of Nifty League to our DAO in order to decentralize the platform and
+        encourage others to build with us! Our vision is to power rapid growth and development through community
+        contributions enabling us to build a gaming platform like no other. Simply put, DAOs are the future. We see only
+        one route to becoming the world&apos;s leading gaming platform and that&apos;s by building together. 💜
       </p>
     ),
   },
@@ -493,14 +493,14 @@ export const ROADMAP_CARDS = [
     body: (
       <>
         <p>
-          Land parcels give you ownership in the Niftyverse. Each DEGEN NFT will recieve 1 free plot of land if and when
+          Land parcels give you ownership in the NiftyVerse. Each DEGEN NFT will recieve 1 free plot of land if and when
           the mint goes live. As a land holder you can build freely on your parcels as long as they meet platform
           guidelines. For larger developments that span across a region we will introduce an HOA model for build
           proposals.
         </p>
         <p className="mb-0">
           Oh... and it&apos;s probably worth noting the land and assets will be sold with <strong>NFTL</strong> (a
-          portion of which will be burned) so it might be worth hodling your p2e earnings.
+          portion of which will be burned).
         </p>
       </>
     ),
@@ -516,7 +516,7 @@ export const ROADMAP_CARDS = [
     body: (
       <>
         <p>
-          Following our Niftyverse launch we will introduce cool pets for your DEGENS! A lot of community members have
+          Following our NiftyVerse launch we will introduce cool pets for your DEGENS! A lot of community members have
           asked us to dust off and bring back Satoshi&apos;s{' '}
           <strong>
             <a href="https://app.niftyleague.com/mint-o-matic" target="_blank" rel="noreferrer">
@@ -559,7 +559,7 @@ export const ROADMAP_CARDS = [
     body: (
       <p className="mb-0">
         It&apos;s important to note that any subsequent games will be voted upon by the DAO. One of the first games
-        we&apos;d like to introduce is a fun battle royale based in the Niftyverse.
+        we&apos;d like to introduce is a fun battle royale based in the NiftyVerse.
       </p>
     ),
   },
@@ -588,8 +588,8 @@ export const ROADMAP_CARDS = [
     title: 'Gen2 DEGENs',
     body: (
       <p className="mb-0">
-        As our platform grows and demand increases DEGEN rental costs - we may consider a future NFT sale introducing
-        new tribes. Do note that the final decision to go this route will rest with the DAO.
+        As our platform grows and demand increases for DEGENs - we may consider introducing new tribes. Do note that the
+        final decision to go this route will rest with the DAO.
       </p>
     ),
   },

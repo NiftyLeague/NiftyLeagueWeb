@@ -23,7 +23,7 @@ const Games: NextPage = () => {
           <div className="mb-4">
             <AnimatedWrapper>
               <h1 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
-                DEGENS
+                DEGENs
               </h1>
             </AnimatedWrapper>
           </div>
@@ -38,7 +38,7 @@ const Games: NextPage = () => {
             <AnimatedWrapper>
               <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
                 The Nifty League DEGENs were specially crafted by the community with members pitching in and deciding
-                how THEY wanted their DEGENS to look. This involved selecting special features that they wanted
+                how THEY wanted their DEGENs to look. This involved selecting special features that they wanted
                 including selection of cothing, tribe, and weapons among a few others. This led to the birth of 10,000
                 Nifty League NFTs on the Ethereum blockchain. The NFTs are all sold out however they are forever
                 tradable on secondary markets such as OpenSea.
