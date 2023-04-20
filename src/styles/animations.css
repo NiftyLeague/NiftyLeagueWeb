@@ -123,6 +123,20 @@
       transform: translate3d(-3750px, 0, 0);
     }
   }
+  .transition-delay-small {
+    transition-delay: 0.05s;
+  }
+
+  .transition-delay-medium {
+    transition-delay: 0.2s;
+  }
+
+  .transition-delay-large {
+    transition-delay: 0.3s;
+  }
+  .transition-delay-extreme {
+    transition-delay: 1s;
+  }
 }
 
 @media (min-width: 768px) {
