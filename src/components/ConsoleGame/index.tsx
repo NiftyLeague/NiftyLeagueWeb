@@ -1,9 +1,15 @@
 import { memo } from 'react';
 import Image from 'next/image';
+import cn from 'classnames';
 import AnimatedWrapper from '@/components/AnimatedWrapper';
 import styles from './index.module.scss';
 
 const ConsoleGame = ({ src }: { src: string }) => {
+  function playVid() {
+    const vid = document.getElementById('console-video') as HTMLVideoElement;
+    vid?.play();
+  }
+
   return (
     <div className="position-relative">
       <AnimatedWrapper>
@@ -18,6 +24,7 @@ const ConsoleGame = ({ src }: { src: string }) => {
             priority
           />
           <video
+            id="console-video"
             width="100%"
             height="100%"
             muted
@@ -29,7 +36,13 @@ const ConsoleGame = ({ src }: { src: string }) => {
           >
             <source src={src} type="video/mp4" />
           </video>
-          <div className="position-absolute gaming-bonk animated-fade-start animated-fade transition-delay-medium">
+          <div
+            onClick={playVid}
+            className={cn(
+              styles.bonk_note,
+              'position-absolute gaming-bonk animated-fade-start animated-fade transition-delay-medium',
+            )}
+          >
             <Image
               alt="Classic Gaming Reinvented Bonk"
               className="pixelated"
