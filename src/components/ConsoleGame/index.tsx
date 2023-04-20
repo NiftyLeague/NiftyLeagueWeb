@@ -7,7 +7,7 @@ const ConsoleGame = ({ src }: { src: string }) => {
   return (
     <div className="position-relative">
       <AnimatedWrapper>
-        <div className="position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-small">
+        <div className="position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-small animation-sm-hidden">
           <Image
             alt="Classic Gaming Reinvented"
             className="pixelated"
