@@ -11,8 +11,8 @@ import { SRC, Color } from '@/types/gltf';
 
 import styles from '@/styles/gltf.module.scss';
 
-const ModelView = dynamic(() => import('@components/modelViewer').then(mod => mod.ModelView));
-const ModelActions = dynamic(() => import('@components/modelViewer').then(mod => mod.ModelActions));
+const ModelView = dynamic(() => import('@/components/ModelViewer').then(mod => mod.ModelView));
+const ModelActions = dynamic(() => import('@/components/ModelViewer').then(mod => mod.ModelActions));
 
 export default function DegenViews() {
   const router = useRouter();
