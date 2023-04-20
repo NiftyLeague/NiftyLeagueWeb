@@ -29,9 +29,9 @@ const Games: NextPage = () => {
           </div>
           <div className="mb-4">
             <AnimatedWrapper>
-              <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
+              <h6 className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
                 COMMUNITY DESIGNED DEGEN NFTs
-              </p>
+              </h6>
             </AnimatedWrapper>
           </div>
           <div className="mb-5 position-relative">
