@@ -49,8 +49,12 @@ const AnimatedWrapper = ({
             }
           } else if (parallaxDirection === 'top' || parallaxDirection === 'bottom') {
             let direction = 1;
-            if (transitionAmount === 'large') {
+            if (transitionAmount === 'extreme') {
+              direction = 3;
+            } else if (transitionAmount === 'large') {
               direction = 2;
+            } else if (transitionAmount === 'medium') {
+              direction = 1;
             } else if (transitionAmount === 'small') {
               direction = 0.3;
             }

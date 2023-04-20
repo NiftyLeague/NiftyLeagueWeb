@@ -93,9 +93,9 @@ const Overview: NextPage = () => {
                 Utility includes, but is not limited to:
                 <ol>
                   <li>Governance: DAO formation planned Q3-Q4 2023</li>
-                  <li> NFT drops: Raffles (ongoing), NiftyVerse Land, special weapons/wearables, others TBA</li>
+                  <li>NFT drops: Raffles (ongoing), NiftyVerse Land, special weapons/wearables, others TBA</li>
                   <li>Ecosystem currency: Compete &amp; Earn wagering, redeem in-game hard currencies (TBD)</li>
-                  <li>Platform fees: rename degens, rentals(deprecated), etc</li>
+                  <li>Platform fees: rename DEGENs, rentals(deprecated), etc</li>
                 </ol>
                 Learn more{' '}
                 <Link href="/docs/overview/nftl/overview" passHref legacyBehavior>
@@ -127,9 +127,9 @@ const Overview: NextPage = () => {
                 headerTitle="Does it cost money to play your games?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                At the moment you will either need to own or rent a DEGEN to play any games on our platform. A
-                free-2-play version will be coming soon with our mobile launch enabling players around the world to hop
-                in our game servers and enjoy.
+                At the moment you need to own a DEGEN or hold a partner NFT from CyberKongz or Forgotten Runes to play.
+                A free-2-play version will be coming soon with our mobile launch enabling players around the world to
+                hop in our game servers and enjoy.
               </MDBAccordionItem>
             </AnimatedWrapper>
           </MDBAccordion>

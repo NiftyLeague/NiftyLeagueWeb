@@ -30,7 +30,7 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
               <div className="d-flex flex-column m-0 p-0 position-relative">
                 <Link href="/games">Games</Link>
                 <Link href="/degens" className="mt-2">
-                  Degens
+                  DEGENs
                 </Link>
                 <Link href="/niftyverse" className="mt-2">
                   NiftyVerse

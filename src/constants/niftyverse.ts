@@ -44,7 +44,7 @@ export const NIFTYVERSE_PROPERTIES = [
   },
   {
     name: 'FINANCIAL DISTRICT',
-    description: `The birthplace of decentralized finance (DeFi) and a hub for high-risk investors, often referred to as degenerates`,
+    description: `The birthplace of decentralized finance (DeFi) and a hub for high-risk investors, often referred to as degenerates.`,
     image: '/img/niftyverse/bank_night.png',
   },
   {

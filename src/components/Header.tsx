@@ -177,7 +177,7 @@ function MobileNav() {
     },
     {
       href: '/degens',
-      name: 'Degens',
+      name: 'DEGENs',
     },
     {
       href: '/niftyverse',

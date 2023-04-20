@@ -2,7 +2,7 @@ export const NIFTY_GAMES = [
   {
     name: 'NIFTY SMASHERS',
     description:
-      'This brawl style action game will leave you on the edge of your seat with your fingers cramping as you try to out-click and out-smash your opponent in a free for all DEGEN battle. Just in case you’re wondering, the winner does take all. But if you’re lucky to get some hits in before you’re vanquished you might get some mercy rewards. If you’ve got the balls, you should check it out.',
+      'This brawl style action game will leave you on the edge of your seat with your fingers cramping as you try to out-click and out-smash your opponent in a free for all DEGEN battle. Just in case you’re wondering, the winner does take all. But if you’re lucky to get some hits in before you’re vanquished you might get some mercy rewards. Yes, you should check it out.',
     video: 'https://www.youtube.com/embed/ylJzfLcWChc',
     tag: 'GAME',
     action: {
@@ -52,7 +52,7 @@ export const NIFTY_GAMES = [
   // {
   //   name: 'MT. GAWX',
   //   description:
-  //     'No DEGEN story is ever complete without a kickass lore behind it. DEGENS come here to sink NFTL and watch the volcano roar, belching molten lava in response. It would be cute if it wasn’t so scary.',
+  //     'No DEGEN story is ever complete without a kickass lore behind it. DEGENs come here to sink NFTL and watch the volcano roar, belching molten lava in response. It would be cute if it wasn’t so scary.',
   //   video: 'https://www.youtube.com/embed/OF_JrECYpvM',
   //   tag: 'MINI-GAME',
   //   action: {

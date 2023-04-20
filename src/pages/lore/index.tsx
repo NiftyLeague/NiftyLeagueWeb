@@ -1,6 +1,5 @@
 import { memo } from 'react';
 import cn from 'classnames';
-import { useMediaQuery } from '@mui/material';
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -10,7 +9,6 @@ import ExternalIcon from '@/components/ExternalIcon';
 import styles from './index.module.scss';
 
 const Lore: NextPage = () => {
-  const mobile = useMediaQuery('(max-width:600px)');
   return (
     <Layout>
       <Head>
@@ -27,85 +25,94 @@ const Lore: NextPage = () => {
         </div>
         <div className={styles.content}>
           <div className={styles.background}>
-            <AnimatedWrapper>
-              <div className="position-relative animated-fade-slow animated-fade-start">
-                <Image
-                  src={`/img/lore/background${!mobile ? '' : '-mobile'}.png`}
-                  alt="Lore"
-                  layout="responsive"
-                  width={!mobile ? 1328 : 396}
-                  height={!mobile ? 2655 : 1415}
-                />
-              </div>
-            </AnimatedWrapper>
-          </div>
-          <div className={styles.inner}>
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                Satoshi Nakamoto lived in Japan as an inventor. After he created Bitcoin he retired and lived a very
-                private life out of the public eye.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                One day Satoshi met a being from a parallel dimension - it was a Frog. The Frog explained that The
-                NiftyVerse was in trouble due to an inter-tribal war that had been raging for decades, and they needed
-                help.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                Satoshi got into his Space Bubble and warp-jumped to The NiftyVerse.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                There, Satoshi learned that 6 tribes in The NiftyVerse had each got themselves in various states of
-                trouble, and that they had all declared war amongst each other due to simple misunderstandings.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                Satoshi was impressed with the various (cute) tribes’ competitiveness and decided to form The Nifty
-                League - a project whereby tribes from all over would be able to compete in fun games that were a safe
-                way to exhibit competitiveness. He started up tournaments as a way to formalize the competitions, and
-                set out providing rewards for those who contributed most towards the Nifty League’s success.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                Satoshi built The Citadel, a place of peace and prosperity for all Degens to strive towards living in,
-                whereby a Key to The Citadel would grant only the most dedicated Degens access to, and these would be
-                the Degens Satoshi considered assets to the Nifty League community, and to whom numerous benefits and
-                freebies were awarded to.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                The tribes agreed to neutral territory where Satoshi’s Nifty League was.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                Satoshi built out fantastic districts for the Degens to live, work and play, and dubbed it ‘The
-                NiftyVerse’.
-              </p>
-            </AnimatedWrapper>
-            <br />
-            <AnimatedWrapper immediate>
-              <p className="animated-fade-slow animated-fade-start transition-delay-small">
-                Furthermore, Satoshi invited tribes from other metaverses too to share in the fun in what he and his
-                Degens were creating in The NiftyVerse, and also let them compete in Nifty League games as well as give
-                them access to The NiftyVerse.
-              </p>
-            </AnimatedWrapper>
+            <div className={styles.inner}>
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  Satoshi Nakamoto is a quiet genius. He lived in Japan as an inventor. After he created Bitcoin he
+                  retired and lived a private life.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  One day Satoshi met a panicked Frog from a parallel dimension. The Frog explained that his NiftyGalaxy
+                  was in trouble due to an inter-tribal war that had been raging for decades, and they needed Satoshi’s
+                  help immediately.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  Satoshi got into his Space Bubble and warp-jumped to The NiftyGalaxy.{' '}
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  There, Satoshi learned that 6 tribes (Frogs, Cats, Doges, Humans, Aliens and Apes) in The NiftyGalaxy
+                  had all declared war amongst each other due to simple misunderstandings.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  Satoshi was impressed with the various tribes’ competitiveness and decided to form The Nifty League -
+                  a project whereby tribes from all over The NiftyGalaxy would be able to compete in fun, friendly and
+                  safe competitive games. He formalized anyone’s entrance into the Nifty League by minting them with
+                  unique attributes in his novel Mint-O-Matic machine, and named those enrollees ‘DEGENs’. Satoshi
+                  started up tournaments as a way to formalize the competitions, and provided rewards to those who
+                  contributed towards the Nifty League’s success.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  Satoshi built The Citadel on Planet Degen; an oasis of peace and prosperity. Any Degen with a special
+                  Citadel Key would be granted access to this idyllic area, and would be the Degens Satoshi considered
+                  assets to the Nifty League community, and to whom numerous benefits and freebies would be awarded to.
+                  Satoshi created Comics and gave them out free to Degens, letting them burn them in Mt. Gawx in
+                  exchange for unique items.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  The tribes made a pact that Satoshi’s Nifty League was considered neutral and peaceful territory.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  With the help of the Degens, Satoshi built out fantastic districts for the Degens to live, work and
+                  play, and dubbed it ‘The NiftyVerse’.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  Satoshi also invited tribes from other universes such as The Kongz and Forgotten Runes Wizards to
+                  share in the fun in what he and his Degens were creating in The NiftyVerse, and also allowed them to
+                  compete in Nifty League games.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  Satoshi also discovered an ancient 7th tribe - the Hydras. They had lived on Planet Degen long before
+                  Satoshi arrived. He figured out a way to bring them back from extinction, and they joined the ranks of
+                  Degens. Satoshi is still learning a lot from them, including more about the planet’s history, their
+                  ways of life, and their history with RugMan.
+                </p>
+              </AnimatedWrapper>
+              <br />
+              <AnimatedWrapper immediate>
+                <p className="animated-fade-slow animated-fade-start transition-delay-small">
+                  As the Degens explored their new Planet Degen, they discovered the evil Pengweevil who rules the
+                  Northern Ice Cap, as well as learned about a constant annoyance and arguably the most powerfully evil
+                  being in the NiftyGalaxy - RugMan, who lives with his Grunts in the fiery Mt. Gawx volcano.
+                </p>
+              </AnimatedWrapper>
+            </div>
           </div>
           <div className={styles.satoshiContainer}>
             <AnimatedWrapper>
@@ -127,7 +134,7 @@ const Lore: NextPage = () => {
                   'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-large',
                 )}
               >
-                <Image alt="Degens" layout="fill" objectFit="cover" src="/img/home/community-characters.png" />
+                <Image alt="DEGENs" layout="fill" objectFit="cover" src="/img/home/community-characters.png" />
               </div>
             </AnimatedWrapper>
           </div>
@@ -135,7 +142,7 @@ const Lore: NextPage = () => {
           <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
           <div className={cn(styles.gradient3, 'radial-gradient-piece')} />
         </div>
-        <div className="d-flex justify-content-center my-5">
+        <div className="d-flex justify-content-center mb-5">
           <AnimatedWrapper>
             <a href="https://niftyleague.com/docs/overview/intro" target="_blank" rel="noreferrer">
               <button
