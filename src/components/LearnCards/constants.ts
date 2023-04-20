@@ -10,14 +10,14 @@ export const LEARN_CARDS = [
     btnText: 'Begin',
     image: '/img/learn/gitbook.png',
     link: '/docs/guides/set-up',
-    subtitle: 'Setup your Ethereum wallet and buy or rent a DEGEN to play for NFTL',
+    subtitle: 'Setup your Ethereum wallet and buy a DEGEN for premium content.',
     title: 'Getting Started',
   },
   {
     btnText: 'See tutorials',
     image: '/img/learn/tutorials.png',
     link: '/docs/guides/nifty-smashers/general-info',
-    subtitle: 'Learn about Smashers gameplay and how points are counted',
+    subtitle: 'Learn about Nifty Smashers gameplay and how points are counted.',
     title: 'Nifty Smashers',
   },
   {
@@ -25,7 +25,7 @@ export const LEARN_CARDS = [
     external: true,
     image: '/img/learn/community.png',
     link: 'https://discord.gg/niftyleague',
-    subtitle: 'Join our Discord server to get your questions answered live by our community',
+    subtitle: 'Join our Discord server to get your questions answered live by our community.',
     title: 'Community',
   },
 ];
