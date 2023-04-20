@@ -48,7 +48,6 @@ export default function Document() {
         <link rel="preconnect" href="/fonts" crossOrigin="anonymous" />
         {/* eslint-disable-next-line @next/next/no-css-tags */}
         <link href="/fonts/style.css" rel="stylesheet" />
-        {/* <link href="/fonts/style.css" rel="preload" as="font" type="font/woff2" crossOrigin="anonymous" /> */}
       </Head>
       <body>
         <Main />
