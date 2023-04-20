@@ -21,7 +21,7 @@ function Navbar() {
         >
           <Link href="/" legacyBehavior>
             <a className="navbar-brand">
-              <Image src="/img/logo/white.png" height={48} width={48} alt="Nifty League Logo" loading="lazy" />
+              <Image src="/img/logo/white.png" height={50} width={52} alt="Nifty League Logo" loading="lazy" />
             </a>
           </Link>
           <div className="d-flex align-items-center">

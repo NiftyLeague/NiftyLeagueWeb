@@ -80,9 +80,9 @@ const Games: NextPage = () => {
                       </div>
                     </AnimatedWrapper>
                     <AnimatedWrapper>
-                      <p className="text-align-center px-3 mt-3 animated-fade-slow animated-fade-start transition-delay-small">
+                      <h6 className="text-align-center px-3 mt-3 animated-fade-slow animated-fade-start transition-delay-small">
                         {name}
-                      </p>
+                      </h6>
                     </AnimatedWrapper>
                   </div>
                 </div>
@@ -116,8 +116,8 @@ const Games: NextPage = () => {
                   TRIBES
                 </h3>
               </div>
-              <div className="col-6">
-                <h3 className="px-3 animated-header-text animated-header-text-start transition-delay-small">POWERS</h3>
+              <div className="col-6 mt-1">
+                <h4 className="px-3 animated-header-text animated-header-text-start transition-delay-small">POWERS</h4>
               </div>
             </div>
             <div className={cn(styles.table, 'position-relative')}>
