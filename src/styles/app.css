@@ -205,13 +205,13 @@
 
 @media (min-width: 576px) {
   .nifty-ape-overlay .nifty-ape-img {
-    max-width: 70%;
+    max-width: 75%;
   }
 }
 
 @media (min-width: 768px) {
   .nifty-ape-overlay .nifty-ape-img {
-    max-width: 65%;
+    max-width: 80%;
   }
   .dark-gradient-shade {
     height: 475px;
@@ -219,7 +219,7 @@
 }
 @media (min-width: 992px) {
   .nifty-ape-overlay .nifty-ape-img {
-    max-width: 650px;
+    max-width: 700px;
   }
   .dark-gradient-shade {
     height: 530px;
@@ -227,7 +227,7 @@
 }
 @media (min-width: 1200px) {
   .nifty-ape-overlay .nifty-ape-img {
-    max-width: 750px;
+    max-width: 800px;
   }
   .row-top-spacing {
     padding-top: 100px !important;

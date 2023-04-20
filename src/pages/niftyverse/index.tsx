@@ -69,10 +69,11 @@ const NiftyVerse: NextPage = () => {
               <div className="mb-3 mb-md-0">
                 <AnimatedWrapper>
                   <p className="animated-header-text animated-header-text-start transition-delay-small">
-                    NiftyVerse is a virtual world designed to provide a space for gamers to connect, collaborate, and
-                    compete with each other in a shared virtual environment. It&apos;s an open platform that allows
-                    developers to create their own games, ensuring a wide variety of experiences for users. It&apos;s a
-                    dynamic and immersive world that promises endless entertainment possibilities for gamers.
+                    NiftyVerse is a virtual space for gamers to connect, collaborate, and compete with each other. The
+                    initial districts are designed by the Nifty League team, but ultimately the vision is for NiftyVerse
+                    to be a dynamic and interoperable platform for developers to create their own games, ensuring a wide
+                    variety of immersive experiences for players. Do note: all DEGEN holders have been promised free
+                    land parcels in the NiftyVerse!
                   </p>
                 </AnimatedWrapper>
               </div>
