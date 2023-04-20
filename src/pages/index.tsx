@@ -10,6 +10,7 @@ import Sponsors from '@/components/Sponsors';
 import Carousel from '@/components/Carousel';
 import ExternalIcon from '@/components/ExternalIcon';
 import ConsoleGame from '@/components/ConsoleGame';
+import MintOMatic from '@/components/MintOMatic';
 import { renderDegen } from '@/components/Carousel/DegenCardItem';
 import { COMMUNITY_DEGEN_LIST } from '@/constants/degens';
 import { SPONSORS } from '@/constants/sponsors';
@@ -131,17 +132,17 @@ const MobileIntro = () => {
           </a>
         </AnimatedWrapper>
         <div className="d-flex align-items-center mt-3 mb-5 social-icons">
-          <a className="pe-3" href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-            <Image src="/icons/discord.svg" alt="Discord Logo" width={22} height={22} />
+          <a className="pe-4" href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
+            <Image src="/icons/discord.svg" alt="Discord Logo" width={26} height={22} />
           </a>
-          <a className="pe-3" href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
-            <Image src="/icons/twitter.svg" alt="Twitter Logo" width={22} height={22} />
+          <a className="pe-4" href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
+            <Image src="/icons/twitter.svg" alt="Twitter Logo" width={26} height={22} />
           </a>
-          <a className="pe-3" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-            <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={22} height={22} />
+          <a className="pe-4" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
+            <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={24} height={22} />
           </a>
           <a href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
-            <Image src="/icons/twitch.svg" alt="Twitch Logo" width={22} height={22} />
+            <Image src="/icons/twitch.svg" alt="Twitch Logo" width={24} height={22} />
           </a>
         </div>
       </div>
@@ -170,6 +171,7 @@ const Home: NextPage = () => {
 
       {mobile ? <MobileIntro /> : <DesktopIntro scrollToGamingSection={scrollToGamingSection} />}
 
+      {/* SMASHERS */}
       <div className="row row-top-spacing m-0 p-0 position-relative" ref={gamingSectionRef}>
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="mt-3 mt-lg-5">
@@ -208,6 +210,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* DEGENS */}
       <div className="row row-top-spacing m-0 p-0 mb-5 position-relative sliding-nfts">
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="my-3 my-lg-5">
@@ -237,63 +240,62 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* COMPETE & EARN */}
       <div className="row row-top-spacing px-0 mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           <div className={`${desktop ? 'col-6' : 'full-width'}`}>
             <div className="d-flex flex-column compete-to-earn-section position-relative">
               {desktop && (
-                <div className="compete-to-earn-section-token-1">
-                  <div className="position-relative flex-grow-1">
-                    <AnimatedWrapper parallax parallaxDirection="left">
-                      <div className="animation-bounce-coin1 animated-fade animated-fade-start transition-delay-large">
-                        <Image
-                          src="/img/home/compete-and-earn-token-1.png"
-                          alt="Compete and Earn NFTL 1"
-                          layout="responsive"
-                          width={413}
-                          height={408}
-                          className="pixelated"
-                        />
-                      </div>
-                    </AnimatedWrapper>
+                <>
+                  <div className="compete-to-earn-section-token-1">
+                    <div className="position-relative flex-grow-1">
+                      <AnimatedWrapper parallax parallaxDirection="left">
+                        <div className="animation-bounce-coin1 animated-fade animated-fade-start transition-delay-large">
+                          <Image
+                            src="/img/home/compete-and-earn-token-1.png"
+                            alt="Compete and Earn NFTL 1"
+                            layout="responsive"
+                            width={413}
+                            height={408}
+                            className="pixelated"
+                          />
+                        </div>
+                      </AnimatedWrapper>
+                    </div>
                   </div>
-                </div>
-              )}
-              {desktop && (
-                <div className="compete-to-earn-section-token-2">
-                  <div className="position-relative flex-grow-1">
-                    <AnimatedWrapper parallax parallaxDirection="right">
-                      <div className="animation-bounce-coin2 animated-fade animated-fade-start transition-delay-large">
-                        <Image
-                          src="/img/home/compete-and-earn-token-2.png"
-                          alt="Compete and Earn NFTL 2"
-                          layout="responsive"
-                          width={398}
-                          height={390}
-                          className="pixelated"
-                        />
-                      </div>
-                    </AnimatedWrapper>
+                  <div className="compete-to-earn-section-token-2">
+                    <div className="position-relative flex-grow-1">
+                      <AnimatedWrapper parallax parallaxDirection="right">
+                        <div className="animation-bounce-coin2 animated-fade animated-fade-start transition-delay-large">
+                          <Image
+                            src="/img/home/compete-and-earn-token-2.png"
+                            alt="Compete and Earn NFTL 2"
+                            layout="responsive"
+                            width={398}
+                            height={390}
+                            className="pixelated"
+                          />
+                        </div>
+                      </AnimatedWrapper>
+                    </div>
                   </div>
-                </div>
-              )}
-              {desktop && (
-                <div className="compete-to-earn-section-token-3">
-                  <div className="position-relative flex-grow-1">
-                    <AnimatedWrapper parallax parallaxDirection="top">
-                      <div className="animation-bounce-coin3 animated-fade animated-fade-start transition-delay-large">
-                        <Image
-                          src="/img/home/compete-and-earn-token-3.png"
-                          alt="Compete and Earn NFTL 3"
-                          layout="responsive"
-                          width={492}
-                          height={192}
-                          className="pixelated"
-                        />
-                      </div>
-                    </AnimatedWrapper>
+                  <div className="compete-to-earn-section-token-3">
+                    <div className="position-relative flex-grow-1">
+                      <AnimatedWrapper parallax parallaxDirection="top">
+                        <div className="animation-bounce-coin3 animated-fade animated-fade-start transition-delay-large">
+                          <Image
+                            src="/img/home/compete-and-earn-token-3.png"
+                            alt="Compete and Earn NFTL 3"
+                            layout="responsive"
+                            width={492}
+                            height={192}
+                            className="pixelated"
+                          />
+                        </div>
+                      </AnimatedWrapper>
+                    </div>
                   </div>
-                </div>
+                </>
               )}
               <Stack gap={2} alignItems="center">
                 {!desktop && (
@@ -391,6 +393,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* NIFTYVERSE */}
       <div className="row row-top-spacing mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           {desktop && (
@@ -472,6 +475,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* DASHBOARDS */}
       <div className="row row-top-spacing mx-0 py-3 py-md-5">
         <div className="px-0 position-relative">
           {desktop && (
@@ -550,6 +554,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* NFTL */}
       <div className="row row-top-spacing mx-auto inner-container">
         <div className="d-flex px-3 px-md-4 position-relative align-items-center">
           <div className={`${desktop ? 'col-6' : 'full-width'}`}>
@@ -557,14 +562,7 @@ const Home: NextPage = () => {
               <Stack gap={2}>
                 {!desktop && (
                   <div className="position-relative full-width text-align-center">
-                    <Image
-                      src="/img/home/nftl-token.png"
-                      alt="NFTL Token"
-                      width={1470}
-                      height={1778}
-                      layout="responsive"
-                    />
-                    <div className="radial-gradient-background" />
+                    <MintOMatic />
                   </div>
                 )}
                 <div className={`d-flex flex-column position-relative home-nftl-token-section-body`}>
@@ -615,59 +613,13 @@ const Home: NextPage = () => {
           </div>
           {desktop && (
             <div className="col-6 text-align-right position-relative">
-              <AnimatedWrapper parallax parallaxDirection="top" transitionAmount="medium">
-                <div className="position-relative">
-                  <Image
-                    src="/img/home/nftl-token-top.png"
-                    alt="NFTL Token Top"
-                    width={1470}
-                    height={1778}
-                    layout="responsive"
-                    className="pixelated"
-                  />
-                </div>
-              </AnimatedWrapper>
-              <AnimatedWrapper>
-                <div className="position-absolute home-nftl-token-image flex-grow-1">
-                  <Image
-                    src="/img/home/nftl-token-coin.png"
-                    alt="NFTL Token Coin"
-                    width={1470}
-                    height={1778}
-                    layout="responsive"
-                    className="pixelated"
-                  />
-                </div>
-              </AnimatedWrapper>
-              <AnimatedWrapper>
-                <div className="position-absolute animation-visible home-nftl-token-image flex-grow-1">
-                  <Image
-                    src="/img/home/nftl-token-tears.png"
-                    alt="NFTL Token Tears"
-                    width={1470}
-                    height={1778}
-                    layout="responsive"
-                    className="pixelated"
-                  />
-                </div>
-              </AnimatedWrapper>
-              <AnimatedWrapper parallax parallaxDirection="right" transitionAmount="medium">
-                <div className="parallax-child position-absolute home-nftl-token-image home-nftl-token-bottom-image flex-grow-1">
-                  <Image
-                    src="/img/home/nftl-token-bottom.png"
-                    alt="NFTL Token Bottom"
-                    width={1470}
-                    height={1778}
-                    layout="responsive"
-                    className="pixelated"
-                  />
-                </div>
-              </AnimatedWrapper>
+              <MintOMatic />
             </div>
           )}
         </div>
       </div>
 
+      {/* COMMUNITY */}
       <div className="row inner-container row-top-spacing mx-auto">
         <div className="d-flex px-3 px-md-4 position-relative align-items-end">
           {desktop && (
@@ -695,28 +647,32 @@ const Home: NextPage = () => {
             >
               <Stack gap={2} className="home-community-section-container">
                 {!desktop && (
-                  <div className="position-relative flex-grow-1 full-width">
-                    <Image
-                      src="/img/home/community.png"
-                      alt="The Best Community on Earth"
-                      layout="responsive"
-                      width={1417}
-                      height={1525}
-                    />
-                    <div className="radial-gradient-background" />
-                  </div>
+                  <AnimatedWrapper>
+                    <div className="position-relative flex-grow-1 full-width quick-pop-anim quick-pop-anim-start transition-delay-medium">
+                      <Image
+                        src="/img/home/community.png"
+                        alt="The Best Community on Earth"
+                        layout="responsive"
+                        width={1417}
+                        height={1525}
+                      />
+                      <div className="radial-gradient-background" />
+                    </div>
+                  </AnimatedWrapper>
                 )}
                 {!desktop && (
-                  <div className="position-relative flex-grow-1 home-community-characters">
-                    <Image
-                      src="/img/home/community-characters.png"
-                      alt="Community DEGENs"
-                      width={1910}
-                      height={620}
-                      layout="responsive"
-                    />
-                    <div className="radial-gradient-background" />
-                  </div>
+                  <AnimatedWrapper>
+                    <div className="position-relative flex-grow-1 animated-fade animated-fade-start transition-delay-large home-community-characters">
+                      <Image
+                        src="/img/home/community-characters.png"
+                        alt="Community DEGENs"
+                        width={1910}
+                        height={620}
+                        layout="responsive"
+                      />
+                      <div className="radial-gradient-background" />
+                    </div>
+                  </AnimatedWrapper>
                 )}
                 <div className={`d-flex flex-column position-relative home-community-section-body`}>
                   <div className="gradient-top-right radial-gradient-piece" />
@@ -781,6 +737,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* SPONSORS */}
       <div className="row row-top-spacing mx-0 py-3 py-md-5 position-relative">
         <div className="d-flex flex-column text-center position-relative p-0">
           <div className="my-3 my-lg-5">
