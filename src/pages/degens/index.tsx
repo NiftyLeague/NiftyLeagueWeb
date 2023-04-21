@@ -20,31 +20,50 @@ const Games: NextPage = () => {
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <Container>
-          <div className="mb-4">
-            <AnimatedWrapper>
-              <h1 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
-                DEGENs
-              </h1>
-            </AnimatedWrapper>
-          </div>
-          <div className="mb-4">
-            <AnimatedWrapper>
-              <h6 className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
-                COMMUNITY DESIGNED DEGEN NFTs
-              </h6>
-            </AnimatedWrapper>
-          </div>
-          <div className="mb-5 position-relative">
-            <AnimatedWrapper>
-              <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
-                The Nifty League DEGENs were specially crafted by the community with members pitching in and deciding
-                how THEY wanted their DEGENs to look. This involved selecting special features that they wanted
-                including selection of cothing, tribe, and weapons among a few others. This led to the birth of 10,000
-                Nifty League NFTs on the Ethereum blockchain. The NFTs are all sold out however they are forever
-                tradable on secondary markets such as OpenSea.
-              </p>
-            </AnimatedWrapper>
-            <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
+          <div className="d-flex align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
+            <div className="col-12 col-md-6 pe-md-4">
+              <div className="mb-4">
+                <AnimatedWrapper>
+                  <h1 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
+                    DEGENs
+                  </h1>
+                </AnimatedWrapper>
+              </div>
+              <div className="mb-4">
+                <AnimatedWrapper>
+                  <h6 className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
+                    COMMUNITY DESIGNED DEGEN NFTs
+                  </h6>
+                </AnimatedWrapper>
+              </div>
+              <div className="position-relative">
+                <AnimatedWrapper>
+                  <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
+                    The Nifty League DEGENs were specially crafted by the community with members pitching in and
+                    deciding how THEY wanted their DEGENs to look. This involved selecting special features that they
+                    wanted including selection of cothing, tribe, and weapons among a few others. This led to the birth
+                    of 10,000 Nifty League NFTs on the Ethereum blockchain. The NFTs are all sold out however they are
+                    forever tradable on secondary markets such as OpenSea.
+                  </p>
+                </AnimatedWrapper>
+                <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
+              </div>
+            </div>
+            <div className="col-12 col-md-6">
+              <AnimatedWrapper>
+                <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-medium mb-4 mb-md-0 ps-0 ps-lg-5">
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/WWLqE1tnf6U"
+                    // @ts-ignore
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </AnimatedWrapper>
+            </div>
           </div>
 
           <div className="d-flex justify-content-center">
