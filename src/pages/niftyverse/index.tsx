@@ -119,7 +119,7 @@ const NiftyVerse: NextPage = () => {
                       </p>
                     </AnimatedWrapper>
                   </div>
-                  <div className="col-12 col-lg-6 position-relative">
+                  <div className="col-12 col-lg-6 ps-lg-2 position-relative">
                     <AnimatedWrapper>
                       <div className="animated-fade animated-fade-start transition-delay-medium">
                         <Image
