@@ -1,8 +1,9 @@
 export const NIFTYVERSE_PROPERTIES = [
   {
-    name: 'MARINA',
-    description: `Hire a Nifty speedboat or store your luxury yacht down at the Waterfront Marina, and spend some of your hard-earned NFTL at one of the many boutique stores along the boardwalk.`,
-    image: '/img/niftyverse/marina_01.png',
+    name: 'NAKED BEACH',
+    description:
+      'Experience breathtaking beach views from pre-built coastal apartments, including a designated section for neked DEGENs.',
+    image: '/img/niftyverse/nakedbeach_03.png',
   },
   {
     name: 'THE HILLS',
@@ -12,7 +13,7 @@ export const NIFTYVERSE_PROPERTIES = [
   {
     name: `RUGMAN'S PEAK`,
     description:
-      'A toasty and dangerous area at the foot of an active volcano with plenty of dungeons and loot. Enter the psychedelic volcano if you dare!',
+      'A dangerous area at the foot of an active volcano with plenty of dungeons and loot. Enter the psychedelic volcano if you dare!',
     image: '/img/niftyverse/RugmanMenacing.png',
   },
   {
@@ -22,15 +23,14 @@ export const NIFTYVERSE_PROPERTIES = [
     image: '/img/niftyverse/undeveloped_land.png',
   },
   {
-    name: 'NAKED BEACH',
-    description:
-      'Experience breathtaking beach views from our pre-built coastal apartments, including a designated section for neked DEGENs to enjoy.',
-    image: '/img/niftyverse/nakedbeach_03.png',
+    name: 'MARINA',
+    description: `Hire a Nifty speedboat or store your luxury yacht down at the Waterfront Marina. Spend your NFTL at one of the many boutique stores along the boardwalk.`,
+    image: '/img/niftyverse/marina_01.png',
   },
   {
     name: 'ENTERTAINMENT DISTRICT',
     description:
-      'A vibrant and lively atmosphere that never sleeps including bars, nightclubs, restaurants and tentpole attractions like the Smashers Emporium.',
+      'A vibrant atmosphere that never sleeps including bars, nightclubs, restaurants and tentpole attractions like the Smashers Emporium.',
     image: '/img/niftyverse/FlyingBurger.png',
   },
   {
