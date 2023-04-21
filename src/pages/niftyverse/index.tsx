@@ -109,7 +109,7 @@ const NiftyVerse: NextPage = () => {
                   className={'full-width d-flex flex-column flex-lg-row position-relative py-3 px-2 mb-3 mb-md-5'}
                   key={name}
                 >
-                  <div className="col-12 col-lg-6 d-flex flex-column">
+                  <div className="col-12 col-lg-6 pe-lg-2 d-flex flex-column">
                     <AnimatedWrapper>
                       <h6 className="my-0 animated-fade-slow animated-fade-start transition-delay-small">{name}</h6>
                     </AnimatedWrapper>
