@@ -17,7 +17,10 @@ const Overview: NextPage = () => {
     <Layout classes={{ root: 'learn-pg' }}>
       <Head>
         <title>Nifty League | Overview</title>
-        <meta name="description" content="Overview and FAQ for Nifty League" />
+        <meta property="og:title" content="Nifty League | Overview" />
+        <meta name="description" content="Overview and FAQ for Nifty League" key="desc" />
+        <meta property="og:description" content="Overview and FAQ for Nifty League" />
+        <meta property="og:image" content="https://niftyleague.com/img/about/bg-DAO.png" />
       </Head>
 
       <div className={cn(styles.container, 'mx-auto px-3')}>
