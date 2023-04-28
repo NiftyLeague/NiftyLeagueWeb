@@ -12,7 +12,10 @@ const Community: NextPage = () => {
     <Layout classes={{ root: 'com-pg' }}>
       <Head>
         <title>Nifty League | Community</title>
-        <meta name="description" content="Community comes first at Nifty League" />
+        <meta property="og:title" content="Nifty League | Community" />
+        <meta name="description" content="Community comes first at Nifty League" key="desc" />
+        <meta property="og:description" content="Community comes first at Nifty League" />
+        <meta property="og:image" content="https://niftyleague.com/img/home/banner-mobile.png" />
       </Head>
 
       <div className="position-relative pt-md-5 mt-md-5 com-intro">

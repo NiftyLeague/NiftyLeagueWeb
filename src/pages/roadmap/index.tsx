@@ -11,7 +11,10 @@ const Roadmap: NextPage = () => {
     <Layout classes={{ root: roadmapStyles.roadmap_pg }}>
       <Head>
         <title>Nifty League | Roadmap</title>
-        <meta name="description" content="Nifty League roadmap... or moonmap?" />
+        <meta property="og:title" content="Nifty League | Roadmap" />
+        <meta name="description" content="Nifty League roadmap... or moonmap?" key="desc" />
+        <meta property="og:description" content="Nifty League roadmap... or moonmap?" />
+        <meta property="og:image" content="https://niftyleague.com/img/roadmap/roadmap.png" />
       </Head>
 
       <div className={roadmapStyles.stars}>
