@@ -18,10 +18,17 @@ const Games: NextPage = () => {
     <Layout>
       <Head>
         <title>Nifty League | Games</title>
+        <meta property="og:title" content="Nifty League | Games" />
         <meta
           name="description"
           content="JOIN THOUSANDS OF PLAYERS ALL OVER THE WORLD COMPETING FOR THE TOP SPOT IN THE NIFTY LEAGUE"
+          key="desc"
         />
+        <meta
+          property="og:description"
+          content="JOIN THOUSANDS OF PLAYERS ALL OVER THE WORLD COMPETING FOR THE TOP SPOT IN THE NIFTY LEAGUE"
+        />
+        <meta property="og:image" content="https://niftyleague.com/img/home/classic-gaming-reinvented.png" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3 position-relative')}>
         <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
