@@ -37,8 +37,8 @@ export const SOCIAL_LINKS = [
   },
   {
     name: 'Facebook',
-    description: 'Nifty League Medium',
-    link: 'https://facebook.com/TheNiftyLeague/',
+    description: 'Nifty League Facebook',
+    link: 'https://facebook.com/NiftyLeague/',
     image: '/icons/facebook.svg',
   },
   {
