@@ -13,7 +13,10 @@ const Lore: NextPage = () => {
     <Layout>
       <Head>
         <title>Nifty League | Lore</title>
-        <meta name="description" content="" />
+        <meta property="og:title" content="Nifty League | Lore" />
+        <meta name="description" content="Discover the origin story behind Nifty League" key="desc" />
+        <meta property="og:description" content="Discover the origin story behind Nifty League" />
+        <meta property="og:image" content="https://niftyleague.com/img/bg/dgen-network.png" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <div>

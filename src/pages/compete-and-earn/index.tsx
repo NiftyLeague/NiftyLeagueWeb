@@ -13,7 +13,14 @@ const CompeteAndEarn: NextPage = () => {
     <Layout>
       <Head>
         <title>Nifty League | Compete &amp; Earn</title>
-        <meta name="description" content="Adrenaline fueled, fast-paced brawl mode where the winner takes ALL" />
+        <meta property="og:title" content="Nifty League | Compete & Earn" />
+        <meta
+          name="description"
+          content="Adrenaline fueled, fast-paced brawl mode where the winner takes ALL"
+          key="desc"
+        />
+        <meta property="og:description" content="Adrenaline fueled, fast-paced brawl mode where the winner takes ALL" />
+        <meta property="og:image" content="https://niftyleague.com/img/compete-and-earn/splash.png" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <div className="d-flex flex-column-reverse flex-md-row align-items-center justify-content-center position-relative">

@@ -10,13 +10,23 @@ import { NIFTY_DEGENS, NIFTY_DEGENS_ALL } from '@/constants/degens';
 import ExternalIcon from '@/components/ExternalIcon';
 import styles from './index.module.scss';
 
-const Games: NextPage = () => {
+const Degens: NextPage = () => {
   const desktop = useMediaQuery('(min-width:768px)');
   return (
     <Layout>
       <Head>
         <title>Nifty League | DEGENs</title>
-        <meta name="description" content="COMMUNITY GENERATED DEGEN NFTs" />
+        <meta property="og:title" content="Nifty League | DEGENs" />
+        <meta
+          name="description"
+          content="Community-generated DEGEN NFTs. Playable avatars in all Nifty League and partner games."
+          key="desc"
+        />
+        <meta
+          property="og:description"
+          content="Community-generated DEGEN NFTs. Playable avatars in all Nifty League and partner games."
+        />
+        <meta property="og:image" content="https://niftyleague.com/img/careers/careers_v02_2x.png" />
       </Head>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <Container>
@@ -212,4 +222,4 @@ const Games: NextPage = () => {
   );
 };
 
-export default memo(Games);
+export default memo(Degens);

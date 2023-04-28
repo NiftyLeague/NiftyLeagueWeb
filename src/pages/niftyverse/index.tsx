@@ -16,7 +16,17 @@ const NiftyVerse: NextPage = () => {
     <Layout>
       <Head>
         <title>Nifty League | NiftyVerse</title>
-        <meta name="description" content="Own your own land in the NiftyVerse" />
+        <meta property="og:title" content="Nifty League | NiftyVerse" />
+        <meta
+          name="description"
+          content="A virtual space for gamers to connect, collaborate, and compete with each other"
+          key="desc"
+        />
+        <meta
+          property="og:description"
+          content="A virtual space for gamers to connect, collaborate, and compete with each other"
+        />
+        <meta property="og:image" content="https://niftyleague.com/img/niftyverse/beachfront_night.png" />
       </Head>
       <div className="position-relative">
         <div className={cn(styles.introContainer, 'row m-0 p-0 position-relative')}>

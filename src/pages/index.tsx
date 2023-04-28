@@ -164,8 +164,16 @@ const Home: NextPage = () => {
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League</title>
-        <meta name="description" content="Community-Governed Web3 Game Studio" />
-        <meta property="og:title" content="Nifty League: Community-Governed Web3 Game Studio" />
+        <meta property="og:title" content="Nifty League: Community-Governed Game Studio" />
+        <meta
+          name="description"
+          content="A game studio at the cutting edge of Web3 with a mission to inspire other indie game developers to build a decentralized future with us."
+          key="desc"
+        />
+        <meta
+          property="og:description"
+          content="A game studio at the cutting edge of Web3 with a mission to inspire other indie game developers to build a decentralized future with us."
+        />
         <meta property="og:image" content="https://niftyleague.com/img/home/banner-desktop.png" />
       </Head>
 
