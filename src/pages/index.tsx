@@ -174,7 +174,7 @@ const Home: NextPage = () => {
           property="og:description"
           content="A game studio at the cutting edge of Web3 with a mission to inspire other indie game developers to build a decentralized future with us."
         />
-        <meta property="og:image" content="https://niftyleague.com/img/home/banner-desktop.png" />
+        <meta property="og:image" content="https://niftyleague.com/img/home/classic-gaming-reinvented.png" />
       </Head>
 
       {mobile ? <MobileIntro /> : <DesktopIntro scrollToGamingSection={scrollToGamingSection} />}
