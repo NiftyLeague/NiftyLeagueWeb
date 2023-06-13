@@ -593,6 +593,7 @@
   position: absolute;
   bottom: 0px;
   width: 100%;
+  z-index: 1;
 }
 
 .radial-gradient-background {
