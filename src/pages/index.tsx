@@ -199,7 +199,7 @@ const Home: NextPage = () => {
             className="game-playing-actions"
           >
             <AnimatedWrapper>
-              <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
+              <a href="https://niftysmashers.com" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-medium">
                   START PLAYING
                 </button>
@@ -349,7 +349,7 @@ const Home: NextPage = () => {
                     className="section-actions"
                   >
                     <AnimatedWrapper>
-                      <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
+                      <a href="https://niftysmashers.com" target="_blank" rel="noreferrer">
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
                           LET&apos;S BRAWL!
                         </button>
