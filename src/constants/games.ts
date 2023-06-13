@@ -6,7 +6,7 @@ export const NIFTY_GAMES = [
     tag: 'GAME',
     action: {
       title: "LET'S BRAWL!",
-      link: 'https://app.niftyleague.com/games/smashers',
+      link: 'https://niftysmashers.com',
       isComingSoon: false,
       secondaryLink: '/compete-and-earn',
       secondaryTitle: "WHAT'S COMPETE & EARN?",
