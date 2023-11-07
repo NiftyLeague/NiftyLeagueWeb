@@ -1,6 +1,6 @@
 import AnimatedWrapper from '@/components/AnimatedWrapper';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { SOCIALS } from './constants';
 
 interface SocialProps {
@@ -23,7 +23,16 @@ const SocialCard = ({ link, title, subtitle, image }: SocialProps) => {
                 <p className="color-white">{subtitle}</p>
               </div>
               <div className="ms-auto d-flex align-items-center">
-                <Image alt={`${title} icon`} height={40} src={image} width={desktop ? 63 : 40} />
+                <Image
+                  alt={`${title} icon`}
+                  height={40}
+                  src={image}
+                  width={desktop ? 63 : 40}
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </div>
             </div>
           </div>

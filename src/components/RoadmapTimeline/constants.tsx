@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 export const ROADMAP_CARDS = [
@@ -322,16 +322,56 @@ export const ROADMAP_CARDS = [
         </p>
         <div className="d-flex flex-wrap">
           <div className="col-6 p-1">
-            <Image alt="comic 1" height={500} layout="responsive" src="/img/roadmap/page1.png" width={500} />
+            <Image
+              alt="comic 1"
+              height={500}
+              src="/img/roadmap/page1.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
           <div className="col-6 p-1">
-            <Image alt="comic 2" height={500} layout="responsive" src="/img/roadmap/page2.png" width={500} />
+            <Image
+              alt="comic 2"
+              height={500}
+              src="/img/roadmap/page2.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
           <div className="col-6 p-1">
-            <Image alt="comic 3" height={500} layout="responsive" src="/img/roadmap/page3.png" width={500} />
+            <Image
+              alt="comic 3"
+              height={500}
+              src="/img/roadmap/page3.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
           <div className="col-6 p-1">
-            <Image alt="comic 4" height={500} layout="responsive" src="/img/roadmap/page4.png" width={500} />
+            <Image
+              alt="comic 4"
+              height={500}
+              src="/img/roadmap/page4.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </div>
       </>
@@ -403,6 +443,8 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
+    completed: true,
+    completionDate: 'Sept 22nd, 2023',
     image: {
       height: 1070,
       src: '/img/roadmap/release-candidate.png',
@@ -420,6 +462,7 @@ export const ROADMAP_CARDS = [
     ),
   },
   {
+    current: true,
     image: {
       src: '/img/roadmap/mobile_v02.png',
       style: { top: '-140px' },
@@ -429,31 +472,9 @@ export const ROADMAP_CARDS = [
     title: 'Nifty Smashers Mobile',
     body: (
       <p className="mb-0">
-        Bringing Smashers to Mobile (Android first). Going forward all of our games will be mobile compatible. With a
+        Bringing Smashers to Mobile (Android & iOS). Going forward all of our games will be mobile compatible. With a
         high concentration of gamers using mobile platforms, we envision this release will be pivotal to the project.
       </p>
-    ),
-  },
-  {
-    image: {
-      height: 375,
-      src: '/img/roadmap/marketplace_v02.png',
-      style: { top: '-90px' },
-      width: 609,
-    },
-    title: 'Items Marketplace',
-    body: (
-      <>
-        <p>
-          We are working with the Immutable X team to launch our items marketplace. Offerings will include cool skins,
-          weapons, consumable items, and more to enhance your DEGENS in-game. While some items may be cool cosmetic
-          additions, many will include <strong>NFTL</strong> multipliers for play-&-earn.
-        </p>
-        <p className="mb-0">
-          Items will be sold via <strong>NFTL</strong> in limited quantities. 70% of all proceeds will be burned while
-          the remainder will be sent to the DAO for its initial revenue stream.
-        </p>
-      </>
     ),
   },
   {
@@ -483,6 +504,44 @@ export const ROADMAP_CARDS = [
           design assets such as buildings or trees and list them for sale based on your defined limits and pricing. Do
           you want a cool DEGEN theme park or Cyber Kongz meetup? Build out the NiftyVerse to whatever your heart
           desires!
+        </p>
+      </>
+    ),
+  },
+  {
+    image: {
+      src: '/img/roadmap/niftyroyale_v01.png',
+      style: { top: '-120px' },
+      width: 541,
+      height: 381,
+    },
+    title: 'Nifty Royale',
+    body: (
+      <p className="mb-0">
+        One of the first games we&apos;d like to introduce to the NiftyVerse is a fun battle royale, codename &apos;GEM
+        HUNTER&apos;. Development kicked off in August 2023 with help from an external game studio as part of our test
+        run transitioning to a DAO and polishing our public services/SDK.
+      </p>
+    ),
+  },
+  {
+    image: {
+      height: 375,
+      src: '/img/roadmap/marketplace_v02.png',
+      style: { top: '-90px' },
+      width: 609,
+    },
+    title: 'Items Marketplace',
+    body: (
+      <>
+        <p>
+          We are working with the Immutable X team to launch our items marketplace. Offerings will include cool skins,
+          weapons, consumable items, and more to enhance your DEGENS in-game. While some items may be cool cosmetic
+          additions, many will include <strong>NFTL</strong> multipliers for play-&-earn.
+        </p>
+        <p className="mb-0">
+          Items will be sold via <strong>NFTL</strong> in limited quantities. 70% of all proceeds will be burned while
+          the remainder will be sent to the DAO for its initial revenue stream.
         </p>
       </>
     ),
@@ -566,23 +625,9 @@ export const ROADMAP_CARDS = [
     title: 'Nifty Tennis',
     body: (
       <p className="mb-0">
-        Early development of Nifty Tennis already started in 2022. We plan to accommodate all playstyles whether playing
-        competitively or just for fun.
-      </p>
-    ),
-  },
-  {
-    image: {
-      src: '/img/roadmap/niftyroyale_v01.png',
-      style: { top: '-120px' },
-      width: 541,
-      height: 381,
-    },
-    title: 'Nifty Royale',
-    body: (
-      <p className="mb-0">
-        It&apos;s important to note that any subsequent games will be voted upon by the DAO. One of the first games
-        we&apos;d like to introduce is a fun battle royale based in the NiftyVerse.
+        It&apos;s important to note that any subsequent games will be voted upon by the DAO. Early development of Nifty
+        Tennis started in 2022, making Tennis a top release candidate. We plan to accommodate all playstyles whether
+        playing competitively or just for fun.
       </p>
     ),
   },

@@ -97,6 +97,10 @@ export default function DegenViews() {
             priority
             quality={100}
             src={`/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+            }}
           />
         )}
         {selected === 'Sprite' && (
@@ -106,6 +110,10 @@ export default function DegenViews() {
             fill
             priority
             src={`${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`}
+            style={{
+              maxWidth: '100%',
+              height: 'auto',
+            }}
           />
         )}
         <div
@@ -163,17 +171,17 @@ export default function DegenViews() {
                       2D
                     </Button>
                     {/* <Button
-                      onClick={() => switchSrc('3D', `/degens/3D/${tokenId}.glb`)}
-                      className={cn(styles.btn, { [styles.btn_selected]: selected === '3D' })}
-                    >
-                      3D
-                    </Button>
-                    <Button
-                      onClick={() => switchSrc('Box', `/degens/boxes/${tokenId}.glb`)}
-                      className={cn(styles.btn, { [styles.btn_selected]: selected === 'Box' })}
-                    >
-                      Box
-                    </Button> */}
+                    onClick={() => switchSrc('3D', `/degens/3D/${tokenId}.glb`)}
+                    className={cn(styles.btn, { [styles.btn_selected]: selected === '3D' })}
+                  >
+                    3D
+                  </Button>
+                  <Button
+                    onClick={() => switchSrc('Box', `/degens/boxes/${tokenId}.glb`)}
+                    className={cn(styles.btn, { [styles.btn_selected]: selected === 'Box' })}
+                  >
+                    Box
+                  </Button> */}
                     <Button
                       onClick={() => switchSrc('Sprite')}
                       className={cn(styles.btn, { [styles.btn_selected]: selected === 'Sprite' })}

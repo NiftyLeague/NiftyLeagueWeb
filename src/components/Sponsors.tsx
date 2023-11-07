@@ -1,5 +1,5 @@
 import { useMediaQuery } from '@mui/material';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import React, { CSSProperties } from 'react';
 
 type Sponsor = {
@@ -39,7 +39,18 @@ const SponsorItem = ({ image, url, width, height }: Sponsor): JSX.Element => {
   return (
     <a href={url} target="_blank" rel="noreferrer">
       <div style={desktop ? styles.item.desktop : styles.item.mobile}>
-        <Image alt="sponsor image" src={image} layout="responsive" width={width} height={height} priority />
+        <Image
+          alt="sponsor image"
+          src={image}
+          width={width}
+          height={height}
+          priority
+          sizes="100vw"
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
+        />
       </div>
     </a>
   );

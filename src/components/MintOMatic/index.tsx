@@ -11,8 +11,12 @@ export default function MintOMatic() {
             alt="NFTL Token Top"
             width={1470}
             height={1778}
-            layout="responsive"
             className="pixelated"
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
       </AnimatedWrapper>
@@ -23,8 +27,12 @@ export default function MintOMatic() {
             alt="NFTL Token Coin"
             width={1470}
             height={1778}
-            layout="responsive"
             className="pixelated"
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
       </AnimatedWrapper>
@@ -35,8 +43,12 @@ export default function MintOMatic() {
             alt="NFTL Token Tears"
             width={1470}
             height={1778}
-            layout="responsive"
             className="pixelated"
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
       </AnimatedWrapper>
@@ -47,8 +59,12 @@ export default function MintOMatic() {
             alt="NFTL Token Bottom"
             width={1470}
             height={1778}
-            layout="responsive"
             className="pixelated"
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
       </AnimatedWrapper>

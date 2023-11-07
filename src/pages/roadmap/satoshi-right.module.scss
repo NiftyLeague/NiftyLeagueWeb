@@ -3,9 +3,9 @@ $breakpoint-md: 850px;
 $breakpoint-lg: 1000px;
 $breakpoint-xl: 1170px;
 
-$mobile-position: 6700px;
+$mobile-position: 4000px;
 $medium-position: 5500px;
-$desktop-position: 9500px;
+$desktop-position: 10000px;
 
 .satoshiMove {
   position: absolute;
@@ -338,101 +338,5 @@ Others
 @keyframes hide {
   100% {
     opacity: 0;
-  }
-}
-
-/* -------------------------------- 
-
-Stationary
-
--------------------------------- */
-
-.satoshiStationary {
-  position: absolute;
-  z-index: 3;
-  top: $mobile-position;
-  left: calc(100% - 120px);
-  transform: scaleX(-1);
-  width: 120px;
-  opacity: 0;
-  -webkit-animation-name: display, float-inverse;
-  -webkit-animation-duration: 1ms, infinite;
-  -webkit-animation-delay: 10099ms;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: display, float-inverse;
-  animation-duration: 1ms, 2000ms;
-  animation-delay: 9999ms, 100ms;
-  animation-iteration-count: 1, infinite;
-  animation-fill-mode: forwards;
-}
-
-@media only screen and (min-width: $breakpoint-sm) {
-  .satoshiStationary {
-    top: $medium-position;
-  }
-}
-
-@media only screen and (min-width: $breakpoint-md) {
-  .satoshiStationary {
-    left: calc(100% - 135px);
-    width: 175px;
-  }
-}
-@media only screen and (min-width: $breakpoint-lg) {
-  .satoshiStationary {
-    left: calc(100% - 155px);
-    width: 200px;
-  }
-}
-@media only screen and (min-width: $breakpoint-xl) {
-  .satoshiStationary {
-    top: $desktop-position;
-    left: 50%;
-    width: 250px;
-  }
-}
-
-@-ms-keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-25px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-@keyframes float-inverse {
-  0% {
-    transform: scaleX(-1) translatey(0px);
-  }
-  50% {
-    transform: scaleX(-1) translatey(-25px);
-  }
-  100% {
-    transform: scaleX(-1) translatey(0px);
   }
 }

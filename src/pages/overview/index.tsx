@@ -61,13 +61,13 @@ const Overview: NextPage = () => {
               >
                 Nifty League is a game studio at the cutting edge of Web3. Our mission is to establish a platform of
                 unparalleled quality and player experience to inspire other indie game developers to build a
-                decentralized future with us. Learn more{' '}
+                decentralized future with us. Read our{' '}
                 <Link href="/docs/overview/intro" passHref legacyBehavior>
                   <a target="_blank" rel="noreferrer">
-                    here
+                    docs
                   </a>
-                </Link>
-                .
+                </Link>{' '}
+                to learn more.
               </MDBAccordionItem>
             </AnimatedWrapper>
             <AnimatedWrapper>
@@ -79,7 +79,10 @@ const Overview: NextPage = () => {
                 The NiftyVerse is a digital world centered around nostalgia. It not only acts as a social hub for
                 connecting with friends online, but is THE ultimate Nifty League game hub with fun missions and launch
                 points into our other game titles. Land parcels will be available to build custom areas for holders, and
-                players can show off their digital assets from Nifty League or other partner communities to stand out.
+                players can show off their digital assets from Nifty League or other partner communities to stand out.{' '}
+                <Link href="/niftyverse" passHref legacyBehavior>
+                  Learn more
+                </Link>
               </MDBAccordionItem>
             </AnimatedWrapper>
             <AnimatedWrapper>
@@ -93,20 +96,22 @@ const Overview: NextPage = () => {
                 NFTL to the public. It is available for trading on decentralized exchanges such as Uniswap and
                 SushiSwap.
                 <br />
+                <br />
                 Utility includes, but is not limited to:
                 <ol>
-                  <li>Governance: DAO formation planned Q3-Q4 2023</li>
+                  <li>Governance: DAO formation planned Q4 2023</li>
                   <li>NFT drops: Raffles (ongoing), NiftyVerse Land, special weapons/wearables, others TBA</li>
                   <li>Ecosystem currency: Compete &amp; Earn wagering, redeem in-game hard currencies (TBD)</li>
                   <li>Platform fees: rename DEGENs, rentals(deprecated), etc</li>
                 </ol>
-                Learn more{' '}
+                Read our{' '}
                 <Link href="/docs/overview/nftl/overview" passHref legacyBehavior>
                   <a target="_blank" rel="noreferrer">
-                    here
+                    docs
                   </a>
-                </Link>
-                .
+                </Link>{' '}
+                to learn more.
+                <br />
               </MDBAccordionItem>
             </AnimatedWrapper>
             <AnimatedWrapper>
@@ -130,9 +135,9 @@ const Overview: NextPage = () => {
                 headerTitle="Does it cost money to play your games?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                At the moment you need to own a DEGEN or hold a partner NFT from CyberKongz or Forgotten Runes to play.
-                A free-2-play version will be coming soon with our mobile launch enabling players around the world to
-                hop in our game servers and enjoy.
+                Nope! Our games such as Nifty Smashers are free-to-play. If you own a DEGEN or hold a partner NFT from
+                CyberKongz, Forgotten Runes, or Degods your avatars will be available once you create an account and
+                connect your wallet.
               </MDBAccordionItem>
             </AnimatedWrapper>
           </MDBAccordion>
@@ -158,22 +163,30 @@ const Overview: NextPage = () => {
                   alt="DGEN Network background desktop"
                   className="pixelated"
                   height={813}
-                  layout="responsive"
-                  objectFit="cover"
                   src="/img/bg/dgen-network.png"
                   width={1440}
                   priority
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
                 />
               ) : (
                 <Image
                   alt="DGEN Network background mobile"
                   className="pixelated"
                   height={500}
-                  layout="responsive"
-                  objectFit="cover"
                   src="/img/bg/dgen-network-mobile.png"
                   width={375}
                   priority
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
                 />
               )}
             </div>
