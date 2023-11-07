@@ -149,6 +149,16 @@ function Navbar() {
                         </a>
                       </Link>
                     </li>
+                    <li className="nav-item">
+                      <a
+                        href="https://maddies.co/official/nifty-league/"
+                        className="dropdown-item"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Merch <ExternalIcon />
+                      </a>
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -202,6 +212,14 @@ function MobileNav() {
     {
       href: '/community',
       name: 'Community',
+    },
+    {
+      href: '/docs',
+      name: 'Docs',
+    },
+    {
+      href: 'https://maddies.co/official/nifty-league/',
+      name: 'Merch',
     },
   ];
   const handleUncheck = () => {
