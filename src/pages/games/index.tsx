@@ -38,13 +38,9 @@ const Games: NextPage = () => {
               <div className="col-6 desktop px-2 px-lg-3">
                 <AnimatedWrapper>
                   <div className="animation-zoomin animated-fade-start animated-fade transition-delay-large">
-                    <Image
-                      alt="Smashers Apartment"
-                      width={1920}
-                      height={1080}
-                      layout="responsive"
-                      src="/img/smashers/apartment.png"
-                    />
+                    <video id="lobby" width="100%" height="100%" muted autoPlay loop playsInline data-keepplaying>
+                      <source src="/video/lobby.mp4" type="video/mp4" />
+                    </video>
                   </div>
                 </AnimatedWrapper>
               </div>
@@ -107,39 +103,54 @@ const Games: NextPage = () => {
                         <button className="btn theme-btn-transparent disabled px-3">COMING SOON</button>
                       </div>
                     </AnimatedWrapper>
-                  ) : (
-                    <>
-                      <AnimatedWrapper>
-                        <a href={action.link} target="_blank" rel="noreferrer">
-                          <button className="btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-medium">
-                            {action.title}
-                          </button>
-                        </a>
-                      </AnimatedWrapper>
-                      {action.secondaryLink ? (
-                        <AnimatedWrapper>
-                          <Link href={action.secondaryLink}>
-                            <button className="btn theme-btn-primary mx-3 animated-fade-slow animated-fade-start transition-delay-medium">
-                              {action.secondaryTitle}
-                            </button>
-                          </Link>
-                        </AnimatedWrapper>
-                      ) : null}
-                    </>
-                  )}
+                  ) : null}
+                  {action.link ? (
+                    <AnimatedWrapper>
+                      <a href={action.link} target="_blank" rel="noreferrer">
+                        <button className="btn theme-btn-primary px-3 animated-fade-slow animated-fade-start transition-delay-medium">
+                          {action.title}
+                        </button>
+                      </a>
+                    </AnimatedWrapper>
+                  ) : null}
+                  {action.secondaryLink ? (
+                    <AnimatedWrapper>
+                      <Link href={action.secondaryLink}>
+                        <button className="btn theme-btn-primary mx-3 animated-fade-slow animated-fade-start transition-delay-medium">
+                          {action.secondaryTitle}
+                        </button>
+                      </Link>
+                    </AnimatedWrapper>
+                  ) : null}
                 </div>
               </div>
               <div className="col-12 col-md-5">
                 <AnimatedWrapper>
                   <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-medium mb-4">
-                    <iframe
-                      src={video}
-                      frameBorder="0"
-                      allow="autoplay; encrypted-media"
-                      allowFullScreen
-                      title={name}
-                      className={styles.video}
-                    />
+                    {video.includes('youtube') ? (
+                      <iframe
+                        src={video}
+                        frameBorder="0"
+                        allow="autoplay; encrypted-media"
+                        allowFullScreen
+                        title={name}
+                        className={styles.video}
+                      />
+                    ) : (
+                      <video
+                        id="console-video"
+                        width="100%"
+                        height="100%"
+                        muted
+                        autoPlay
+                        loop
+                        playsInline
+                        data-keepplaying
+                        className={styles.video}
+                      >
+                        <source src={video} type="video/mp4" />
+                      </video>
+                    )}
                   </div>
                 </AnimatedWrapper>
               </div>
