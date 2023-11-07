@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { CORE_TEAM, DEGEN_DELEGATES } from '@/constants/team';
 
 const TeamDesktop = () => {
@@ -14,9 +14,13 @@ const TeamDesktop = () => {
                   alt={`${member.name} DEGEN`}
                   className="pixelated"
                   height={293}
-                  layout="responsive"
                   src={member.source}
                   width={268}
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
               </div>
             </a>

@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { memo } from 'react';
 import { useMediaQuery } from '@mui/material';
 
@@ -27,7 +27,16 @@ const DegenCardItem = ({
             <div className="d-flex p-2 p-sm-3 p-md-4 pb-0 align-items-center">
               <h6 className="me-auto mb-0">{name}</h6>
               <div className="ms-auto">
-                <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={20} height={20} />
+                <Image
+                  src="/icons/opensea.svg"
+                  alt="OpenSea Logo"
+                  width={20}
+                  height={20}
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </div>
             </div>
           ) : null}
@@ -39,7 +48,18 @@ const DegenCardItem = ({
           ) : null}
 
           <div style={{ borderRadius: '20px' }}>
-            <Image src={source} layout="responsive" width="258" height="278" alt="degen image" priority />
+            <Image
+              src={source}
+              width="258"
+              height="278"
+              alt="degen image"
+              priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </div>
       </div>
