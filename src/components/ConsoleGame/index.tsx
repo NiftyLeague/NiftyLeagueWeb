@@ -19,9 +19,13 @@ const ConsoleGame = ({ src }: { src: string }) => {
             className="pixelated"
             width={4842}
             height={3371}
-            layout="responsive"
             src="/img/home/classic-gaming-reinvented-notv.png"
             priority
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
           <video
             id="console-video"
@@ -48,9 +52,13 @@ const ConsoleGame = ({ src }: { src: string }) => {
               className="pixelated"
               width={4842}
               height={3371}
-              layout="responsive"
               src="/img/home/bonk.png"
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </div>
@@ -63,9 +71,13 @@ const ConsoleGame = ({ src }: { src: string }) => {
               className="pixelated"
               width={4842}
               height={3371}
-              layout="responsive"
               src="/img/home/gaming_controller_left.png"
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </AnimatedWrapper>
@@ -78,9 +90,13 @@ const ConsoleGame = ({ src }: { src: string }) => {
               className="pixelated"
               width={4842}
               height={3371}
-              layout="responsive"
               src="/img/home/gaming_controller_right.png"
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </AnimatedWrapper>

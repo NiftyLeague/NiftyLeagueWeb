@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import cn from 'classnames';
 
 import { Container, useMediaQuery } from '@mui/material';
@@ -34,8 +34,12 @@ const Careers: NextPage = () => {
                   alt="Satoshi moon"
                   width={648}
                   height={406}
-                  layout="responsive"
                   priority
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
               </div>
             </AnimatedWrapper>

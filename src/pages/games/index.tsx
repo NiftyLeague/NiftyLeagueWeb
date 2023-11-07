@@ -48,7 +48,17 @@ const Games: NextPage = () => {
               <div className="col-4">
                 <AnimatedWrapper>
                   <div className="animation-zoomin animated-fade-start animated-fade transition-delay-large">
-                    <Image alt="Arcade" width={339} height={661} layout="responsive" src="/img/smashers/arcade.png" />
+                    <Image
+                      alt="Arcade"
+                      width={339}
+                      height={661}
+                      src="/img/smashers/arcade.png"
+                      sizes="100vw"
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                      }}
+                    />
                   </div>
                 </AnimatedWrapper>
               </div>

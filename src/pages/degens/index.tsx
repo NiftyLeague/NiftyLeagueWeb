@@ -102,7 +102,6 @@ const Degens: NextPage = () => {
                         <Image
                           src={image.link}
                           alt={name}
-                          layout="fixed"
                           width={desktop ? image.width : image.width / 2}
                           height={desktop ? image.height : image.height / 2}
                         />
@@ -160,7 +159,6 @@ const Degens: NextPage = () => {
                           <Image
                             src={image.link}
                             alt={name}
-                            layout="fixed"
                             width={desktop ? image.width : image.width / 2}
                             height={desktop ? image.height : image.height / 2}
                           />
@@ -186,9 +184,13 @@ const Degens: NextPage = () => {
                         <Image
                           src={gif.link}
                           alt={name}
-                          layout="responsive"
                           width={desktop ? gif.width : gif.width * 0.7}
                           height={desktop ? gif.height : gif.height * 0.7}
+                          sizes="100vw"
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                          }}
                         />
                       </div>
                     </AnimatedWrapper>

@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import styles from './index.module.scss';
 
 export const ROADMAP_CARDS = [
@@ -322,16 +322,56 @@ export const ROADMAP_CARDS = [
         </p>
         <div className="d-flex flex-wrap">
           <div className="col-6 p-1">
-            <Image alt="comic 1" height={500} layout="responsive" src="/img/roadmap/page1.png" width={500} />
+            <Image
+              alt="comic 1"
+              height={500}
+              src="/img/roadmap/page1.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
           <div className="col-6 p-1">
-            <Image alt="comic 2" height={500} layout="responsive" src="/img/roadmap/page2.png" width={500} />
+            <Image
+              alt="comic 2"
+              height={500}
+              src="/img/roadmap/page2.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
           <div className="col-6 p-1">
-            <Image alt="comic 3" height={500} layout="responsive" src="/img/roadmap/page3.png" width={500} />
+            <Image
+              alt="comic 3"
+              height={500}
+              src="/img/roadmap/page3.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
           <div className="col-6 p-1">
-            <Image alt="comic 4" height={500} layout="responsive" src="/img/roadmap/page4.png" width={500} />
+            <Image
+              alt="comic 4"
+              height={500}
+              src="/img/roadmap/page4.png"
+              width={500}
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
           </div>
         </div>
       </>
