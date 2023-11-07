@@ -1,7 +1,7 @@
 import { LegacyRef, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import cn from 'classnames';
 import { Stack } from '@mui/material';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -21,7 +21,17 @@ function Navbar() {
         >
           <Link href="/" legacyBehavior>
             <a className="navbar-brand">
-              <Image src="/img/logo/white.png" height={50} width={52} alt="Nifty League Logo" loading="lazy" />
+              <Image
+                src="/img/logo/white.png"
+                height={50}
+                width={52}
+                alt="Nifty League Logo"
+                loading="lazy"
+                style={{
+                  maxWidth: '100%',
+                  height: 'auto',
+                }}
+              />
             </a>
           </Link>
           <div className="d-flex align-items-center">

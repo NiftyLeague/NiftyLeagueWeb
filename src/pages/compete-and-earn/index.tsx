@@ -46,10 +46,14 @@ const CompeteAndEarn: NextPage = () => {
                   <Image
                     src="/img/compete-and-earn/splash.png"
                     alt="Nifty League Compete & Earn"
-                    layout="responsive"
                     width={3343}
                     height={2615}
                     priority
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                 </div>
               </AnimatedWrapper>

@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import DoneIcon from '@mui/icons-material/Done';
 import styles from './index.module.scss';
 
@@ -36,7 +36,17 @@ const RoadmapCard = ({
     <div className={styles.cd_timeline_content}>
       {image && (
         <div className={styles.timeline_content_img} style={image.style}>
-          <Image src={image.src} alt={title} width={image.width} height={image.height} layout="responsive" />
+          <Image
+            src={image.src}
+            alt={title}
+            width={image.width}
+            height={image.height}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
+          />
         </div>
       )}
       <h5>{title}</h5>
@@ -56,7 +66,11 @@ const RoadmapCard = ({
           alt="satoshi stationary"
           width={200}
           height={200}
-          layout="responsive"
+          sizes="100vw"
+          style={{
+            width: '100%',
+            height: 'auto',
+          }}
         />
       </div>
     ) : null}

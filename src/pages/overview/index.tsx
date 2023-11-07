@@ -163,22 +163,30 @@ const Overview: NextPage = () => {
                   alt="DGEN Network background desktop"
                   className="pixelated"
                   height={813}
-                  layout="responsive"
-                  objectFit="cover"
                   src="/img/bg/dgen-network.png"
                   width={1440}
                   priority
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
                 />
               ) : (
                 <Image
                   alt="DGEN Network background mobile"
                   className="pixelated"
                   height={500}
-                  layout="responsive"
-                  objectFit="cover"
                   src="/img/bg/dgen-network-mobile.png"
                   width={375}
                   priority
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'cover',
+                  }}
                 />
               )}
             </div>
