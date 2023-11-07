@@ -5,6 +5,7 @@ import styles from './index.module.scss';
 
 interface RoadmapCardProps {
   body: JSX.Element;
+  current?: boolean;
   completed?: boolean;
   completionDate?: string;
   divider?: boolean;
@@ -14,7 +15,15 @@ interface RoadmapCardProps {
 
 export const renderRoadmapCard = (item: RoadmapCardProps) => <RoadmapCard key={item.title} {...item} />;
 
-const RoadmapCard = ({ body, completed, completionDate, divider, image, title }: RoadmapCardProps): JSX.Element => (
+const RoadmapCard = ({
+  body,
+  current,
+  completed,
+  completionDate,
+  divider,
+  image,
+  title,
+}: RoadmapCardProps): JSX.Element => (
   <div className={cn(styles.cd_timeline_block, styles.fade_in)}>
     {divider ? (
       <h4 className={styles.cd_timeline_divider}>Options below are TBD!</h4>
@@ -39,6 +48,18 @@ const RoadmapCard = ({ body, completed, completionDate, divider, image, title }:
       )}
       {body}
     </div>
+
+    {current ? (
+      <div className={styles.satoshiStationary}>
+        <Image
+          src="/img/roadmap/satoshi_stationary.gif"
+          alt="satoshi stationary"
+          width={200}
+          height={200}
+          layout="responsive"
+        />
+      </div>
+    ) : null}
   </div>
 );
 
