@@ -29,15 +29,6 @@ const Roadmap: NextPage = () => {
               priority
             />
           </div>
-          <div className={satoshiStyles.satoshiStationary}>
-            <Image
-              src="/img/roadmap/satoshi_stationary.gif"
-              alt="satoshi stationary"
-              width={200}
-              height={200}
-              layout="responsive"
-            />
-          </div>
           <div className={roadmapStyles.earth} />
           <h2 className={roadmapStyles.roadmap_title}>Nifty League Moonmap</h2>
           <div className={roadmapStyles.cat_planet} />
