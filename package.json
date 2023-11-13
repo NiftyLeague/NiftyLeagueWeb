@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.19.6",
-    "@types/gtag.js": "^0.0.12",
+    "@types/gtag.js": "^0.0.18",
     "@types/jquery": "^3.5.16",
     "@types/node": "20.8.10",
     "@types/react": "18.2.36",
