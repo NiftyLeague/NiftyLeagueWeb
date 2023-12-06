@@ -64,7 +64,7 @@ const ConsoleGame = ({ src }: { src: string }) => {
         </div>
       </AnimatedWrapper>
       <div className={styles.gaming_controller}>
-        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="medium">
+        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="small">
           <div className="animation-bounce animated-fade-start animated-fade transition-delay-large">
             <Image
               alt="Classic Gaming Reinvented Controller Left"
@@ -83,7 +83,7 @@ const ConsoleGame = ({ src }: { src: string }) => {
         </AnimatedWrapper>
       </div>
       <div className={styles.gaming_controller}>
-        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="medium">
+        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="small">
           <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-large">
             <Image
               alt="Classic Gaming Reinvented Controller Right"

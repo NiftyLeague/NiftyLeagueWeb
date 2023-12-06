@@ -8,6 +8,7 @@ import Layout from '@/components/Layout';
 import AnimatedWrapper from '@/components/AnimatedWrapper';
 import { NIFTY_DEGENS, NIFTY_DEGENS_ALL } from '@/constants/degens';
 import ExternalIcon from '@/components/ExternalIcon';
+import ConsoleGame from '@/components/ConsoleGame';
 import styles from './index.module.scss';
 
 const Degens: NextPage = () => {
@@ -28,6 +29,9 @@ const Degens: NextPage = () => {
         />
         <meta property="og:image" content="https://niftyleague.com/img/careers/careers_v02_2x.png" />
       </Head>
+      <div className="row m-0 p-0 position-relative">
+        <ConsoleGame src="/video/unboxing.mp4" />
+      </div>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <Container>
           <div className="d-flex align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
@@ -86,6 +90,7 @@ const Degens: NextPage = () => {
               </a>
             </AnimatedWrapper>
           </div>
+
           <div className={cn(styles.section, 'position-relative')}>
             <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
             <div
@@ -118,7 +123,7 @@ const Degens: NextPage = () => {
             </div>
             <div className="mb-4">
               <AnimatedWrapper>
-                <h3 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
+                <h3 className="mt-2 text-align-center animated-header-text animated-header-text-start transition-delay-small">
                   DEGEN TRIBES
                 </h3>
               </AnimatedWrapper>
