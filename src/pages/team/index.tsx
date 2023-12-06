@@ -34,9 +34,9 @@ const Team: NextPage = () => {
             <div className={cn(styles.body, 'mt-5 mt-sm-3')}>
               <AnimatedWrapper>
                 <p className="text-center p1 animated-header-text animated-header-text-start transition-delay-medium">
-                  Nifty League is a game studio at the cutting edge of Web3. Our mission is to establish a platform of
-                  unparalleled quality and player experience to inspire other indie game developers to build a
-                  decentralized future with us.
+                  Nifty League is a game studio at the cutting edge of Web3. Our mission is to inspire indie game
+                  developers to build a decentralized future with us by establishing a game studio focused on
+                  unparalleled quality and player experiences.
                 </p>
                 <br />
               </AnimatedWrapper>
