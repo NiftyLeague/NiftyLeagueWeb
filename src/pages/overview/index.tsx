@@ -59,9 +59,9 @@ const Overview: NextPage = () => {
                 headerTitle="What is Nifty League?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                Nifty League is a game studio at the cutting edge of Web3. Our mission is to establish a platform of
-                unparalleled quality and player experience to inspire other indie game developers to build a
-                decentralized future with us. Read our{' '}
+                Nifty League is a game studio at the cutting edge of Web3. Our mission is to inspire indie game
+                developers to build a decentralized future with us by establishing a game studio focused on unparalleled
+                quality and player experiences. Read our{' '}
                 <Link href="/docs/overview/intro" passHref legacyBehavior>
                   <a target="_blank" rel="noreferrer">
                     docs
@@ -120,8 +120,10 @@ const Overview: NextPage = () => {
                 headerTitle="What is Nifty Smashers?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                Nifty Smashers is the first title offered by Nifty League based off of the popular game Super Smash
-                Bros.
+                <a href="https://niftysmashers.com" target="_blank" rel="noreferrer">
+                  Nifty Smashers
+                </a>{' '}
+                is the first title offered by Nifty League based off of the popular game Super Smash Bros.
                 <br />
                 <br />
                 Battle it out amongst the community and get in as many bat bonks on your friends as you can! Nifty
@@ -135,9 +137,12 @@ const Overview: NextPage = () => {
                 headerTitle="Does it cost money to play your games?"
                 className="animated-fade-quick animated-fade-start transition-delay-medium"
               >
-                Nope! Our games such as Nifty Smashers are free-to-play. If you own a DEGEN or hold a partner NFT from
-                CyberKongz, Forgotten Runes, or Degods your avatars will be available once you create an account and
-                connect your wallet.
+                Nope! Our games such as{' '}
+                <a href="https://niftysmashers.com" target="_blank" rel="noreferrer">
+                  Nifty Smashers
+                </a>{' '}
+                are free-to-play. If you own a DEGEN or hold a partner NFT from CyberKongz, Forgotten Runes, or Degods
+                your avatars will be available once you create an account and connect your wallet.
               </MDBAccordionItem>
             </AnimatedWrapper>
           </MDBAccordion>

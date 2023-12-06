@@ -49,10 +49,10 @@ export const NIFTY_GAMES = [
   {
     name: 'WEN GAME',
     description: `Never thought you'd see a batting cage on the blockchain huh? Think again. Put your baseball team cap on and get ready to hit the balls in the WEN game for your first blockchain home run. Easy to pick up, difficult to master. Wen lambo?!`,
-    video: 'https://www.youtube.com/embed/OF_JrECYpvM',
+    video: '/video/wen-ape.mp4',
     tag: 'MINI-GAME',
     action: {
-      title: 'START PLAYING',
+      title: 'SWING AWAY!',
       link: 'https://app.niftyleague.com/games/wen-game',
       isComingSoon: false,
     },
