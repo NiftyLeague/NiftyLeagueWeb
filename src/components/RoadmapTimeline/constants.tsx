@@ -76,15 +76,6 @@ export const ROADMAP_CARDS = [
           launcher to house our games going forward. Avoiding browser memory limits allows us to introduce additional
           animations, movesets, and other NFT integrations - all while significantly improving ping for our players.
         </p>
-        <p>
-          The{' '}
-          <strong>
-            <a href="https://app.niftyleague.com/games" target="_blank" rel="noreferrer">
-              Desktop App
-            </a>
-          </strong>{' '}
-          is now live for Windows users!
-        </p>
       </>
     ),
   },
@@ -129,8 +120,19 @@ export const ROADMAP_CARDS = [
     title: 'Merch',
     body: (
       <p className="mb-0">
-        We know our community can&apos;t wait to showcase their cool DEGENS on the streets! We are excited to unveil our
-        merchandise marketplace powered by Shopify.
+        We know our community couldn&apos;t wait to showcase their cool DEGENS on the streets! We are excited to unveil
+        our{' '}
+        <a href="https://maddies.co/official/nifty-league/" target="_blank" rel="noreferrer">
+          Nifty League merch
+        </a>{' '}
+        provided by Maddies.
+        <br />
+        <br />
+        Looking for our old Shopify merch? Links{' '}
+        <a href="https://niftyleague.com/shop" target="_blank" rel="noreferrer">
+          here
+        </a>
+        !
       </p>
     ),
   },
@@ -211,10 +213,10 @@ export const ROADMAP_CARDS = [
               WEN
             </a>
           </strong>{' '}
-          is a game of timing and reflex. The purpose of the game is to try and hit as many baseballs (launched from a
-          baseball machine) as possible in a row to get a high score. Arcade Tokens are used to play WEN Game. Players
-          earn Arcade Tokens every day they complete a Nifty Smashers match! This game marks our first Arcade Game
-          launched and can be played without owning or renting a DEGEN.
+          is a game of timing and reflex. The purpose of the mini-game is to try and hit as many baseballs (launched
+          from a baseball machine) as possible in a row to get a high score. Arcade Tokens are used to play WEN Game.
+          Players earn Arcade Tokens every day they complete a Nifty Smashers match! This game marks our first Arcade
+          Game launched and can be played without owning or renting a DEGEN.
         </p>
       </>
     ),
@@ -263,8 +265,8 @@ export const ROADMAP_CARDS = [
               Crypto Winter
             </a>
           </strong>{' '}
-          is a our second arcade style game which also depends on skillful timing and reflex. Play this single-player
-          dodgeball-inspired arcade game and rank as high as you can!
+          is a our second arcade style mini-game which also depends on skillful timing and reflex. Play this
+          single-player dodgeball-inspired arcade game and rank as high as you can!
         </p>
       </>
     ),
@@ -301,7 +303,7 @@ export const ROADMAP_CARDS = [
     image: {
       height: 325,
       src: '/img/roadmap/comics_v01.png',
-      style: { top: '-170px', right: '-80px' },
+      style: { top: '-190px', right: '-130px' },
       width: 323,
     },
     title: 'Comics Burning',
@@ -454,15 +456,17 @@ export const ROADMAP_CARDS = [
     title: 'Smashers Progression',
     body: (
       <p className="mb-0">
-        We are implementing several fundamental tools for our games including progression and marketplace systems. These
+        We developed several fundamental tools for our games including progression and marketplace systems. These
         systems incentivize players to stick around by rewarding them for milestones that drive engagement and
-        retention. Nifty Smashers will be the first game we integrate with live ops tooling as part of its mobile
-        launch. In addition, we are training Smashers AI to keep lobbies full and accomodate multiple skill levels.
+        retention. Nifty Smashers is the first game we integrated with live ops tooling as part of its mobile launch. In
+        addition, we are training Smashers AI to keep lobbies full and accomodate multiple skill levels.
       </p>
     ),
   },
   {
     current: true,
+    completed: true,
+    completionDate: 'Dec 10th, 2023',
     image: {
       src: '/img/roadmap/mobile_v02.png',
       style: { top: '-140px' },
@@ -536,12 +540,19 @@ export const ROADMAP_CARDS = [
       <>
         <p>
           We are working with the Immutable X team to launch our items marketplace. Offerings will include cool skins,
-          weapons, consumable items, and more to enhance your DEGENS in-game. While some items may be cool cosmetic
-          additions, many will include <strong>NFTL</strong> multipliers for play-&-earn.
+          weapons, consumable items, and more to enhance your DEGENS in-game. Our very first items are available on{' '}
+          <a
+            href="https://market.immutable.com/collections/0xc21909b7e596000c01318668293a7dfb4b37a578"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Immutable
+          </a>{' '}
+          but will soon migrated to IMX / Polygon zkEVM.
         </p>
         <p className="mb-0">
-          Items will be sold via <strong>NFTL</strong> in limited quantities. 70% of all proceeds will be burned while
-          the remainder will be sent to the DAO for its initial revenue stream.
+          Future items will be provided to community testers as well as found in our games. Free-2-play mobile players
+          that includes you! Players may get lucky and find rare wearables or weapons in game that are mintable on IMX!
         </p>
       </>
     ),
@@ -581,8 +592,7 @@ export const ROADMAP_CARDS = [
           proposals.
         </p>
         <p className="mb-0">
-          Oh... and it&apos;s probably worth noting the land and assets will be sold with <strong>NFTL</strong> (a
-          portion of which will be burned).
+          Oh... and it&apos;s probably worth noting the land and assets will be sold with <strong>NFTL</strong>.
         </p>
       </>
     ),
@@ -598,8 +608,8 @@ export const ROADMAP_CARDS = [
     body: (
       <>
         <p>
-          Following our NiftyVerse launch we will introduce cool pets for your DEGENS! A lot of community members have
-          asked us to dust off and bring back Satoshi&apos;s{' '}
+          Following our NiftyVerse launch we want to introduce cool pets for your DEGENS! A lot of community members
+          have asked us to dust off and bring back Satoshi&apos;s{' '}
           <strong>
             <a href="https://app.niftyleague.com/mint-o-matic" target="_blank" rel="noreferrer">
               Mint-O-Matic
@@ -608,7 +618,7 @@ export const ROADMAP_CARDS = [
           , and we couldn&apos;t agree more!
         </p>
         <p className="mb-0">
-          DEGEN NFT holders will receive whitelist spots so our community can create pets at their leisure. A public
+          DEGEN NFT holders would receive whitelist spots so our community can create pets at their leisure. A public
           offering will follow for any remaining pets. If you missed the first minting experience be sure to keep this
           one on your calendar!
         </p>
