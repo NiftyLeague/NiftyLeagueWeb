@@ -101,9 +101,7 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
               priority
               fill
               sizes="100vw"
-              style={{
-                objectFit: 'cover',
-              }}
+              style={{ objectFit: 'cover' }}
             />
           </div>
         </AnimatedWrapper>
