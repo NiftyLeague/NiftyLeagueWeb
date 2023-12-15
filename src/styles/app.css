@@ -724,7 +724,9 @@
 
 .job-card,
 .accordion-item {
-  box-shadow: 0 10px 15px -3px rgb(191 191 191 / 20%), 0 4px 6px -2px rgb(149 149 149 / 20%) !important;
+  box-shadow:
+    0 10px 15px -3px rgb(191 191 191 / 20%),
+    0 4px 6px -2px rgb(149 149 149 / 20%) !important;
 }
 
 .cursor-pointer {

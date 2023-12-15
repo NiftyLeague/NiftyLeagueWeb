@@ -97,10 +97,7 @@ export default function DegenViews() {
             priority
             quality={100}
             src={`/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`}
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-            }}
+            style={{ maxWidth: '100%' }}
           />
         )}
         {selected === 'Sprite' && (
@@ -110,10 +107,7 @@ export default function DegenViews() {
             fill
             priority
             src={`${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`}
-            style={{
-              maxWidth: '100%',
-              height: 'auto',
-            }}
+            style={{ maxWidth: '100%' }}
           />
         )}
         <div

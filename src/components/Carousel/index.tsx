@@ -28,9 +28,7 @@ const NiftyCarousel = ({
           alt="Dark gradient shade"
           fill
           sizes="100vw"
-          style={{
-            objectFit: 'cover',
-          }}
+          style={{ objectFit: 'cover' }}
         />
       </span>
     )}

@@ -13,8 +13,12 @@ footer {
   }
   a:hover {
     color: #ffffff;
-    text-shadow: 0px 0px 5px var(--custom-panel-color), 0px 0px 10px #f5f5f5, 0px 0px 15px #f5f5f5,
-      0px 0px 25px var(--custom-panel-color), 0px 0px 40px var(--custom-panel-color);
+    text-shadow:
+      0px 0px 5px var(--custom-panel-color),
+      0px 0px 10px #f5f5f5,
+      0px 0px 15px #f5f5f5,
+      0px 0px 25px var(--custom-panel-color),
+      0px 0px 40px var(--custom-panel-color);
   }
   .container-footer {
     display: flex;
