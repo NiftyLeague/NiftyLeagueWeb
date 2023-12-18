@@ -4,6 +4,7 @@ export function useOnScreen<T extends Element>(ref: MutableRefObject<T>, rootMar
   // State and setter for storing whether element is visible
   const [isIntersecting, setIntersecting] = useState<boolean>(false);
   useEffect(() => {
+    const wrapperRef = ref.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         // Update our state when observer callback fires
@@ -13,14 +14,15 @@ export function useOnScreen<T extends Element>(ref: MutableRefObject<T>, rootMar
         rootMargin,
       },
     );
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (wrapperRef) {
+      observer.observe(wrapperRef);
     }
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (wrapperRef) {
+        observer.unobserve(wrapperRef);
       }
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []); // Empty array ensures that effect is only run on mount and unmount
   return isIntersecting;
 }
