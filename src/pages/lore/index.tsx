@@ -140,15 +140,7 @@ const Lore: NextPage = () => {
                   'position-relative flex-grow-1 animated-fade-slow animated-fade-start transition-delay-large',
                 )}
               >
-                <Image
-                  alt="Satoshi"
-                  src="/img/home/satoshi.png"
-                  fill
-                  sizes="100vw"
-                  style={{
-                    objectFit: 'cover',
-                  }}
-                />
+                <Image alt="Satoshi" src="/img/home/satoshi.png" fill sizes="100vw" style={{ objectFit: 'cover' }} />
               </div>
             </AnimatedWrapper>
           </div>
@@ -165,9 +157,7 @@ const Lore: NextPage = () => {
                   src="/img/home/community-characters.png"
                   fill
                   sizes="100vw"
-                  style={{
-                    objectFit: 'cover',
-                  }}
+                  style={{ objectFit: 'cover' }}
                 />
               </div>
             </AnimatedWrapper>

@@ -60,7 +60,7 @@ export const NIFTY_GAMES = [
   {
     name: 'CRYPTO WINTER',
     description: `The crypto market is currently going through an extended winter season, and only few will survive until the next cycle. Dodge snowballs, bombs and icicles and utilise pickups to defeat Pengweevil to achieve a seat at the ranking table. Weak hands need not apply, diamond hands only!`,
-    video: 'https://www.youtube.com/embed/ZiY-TwtzYVk',
+    video: 'video/crypto-winter.mp4',
     tag: 'MINI-GAME',
     action: {
       title: 'START PLAYING',

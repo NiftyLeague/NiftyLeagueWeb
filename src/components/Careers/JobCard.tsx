@@ -54,7 +54,7 @@ const JobCard = ({ details }: JobCardProps): JSX.Element => {
           </div>
         </div>
 
-        <MDBCollapse show={open} className="p-md-5 p-3 pt-md-1 pt-2 h-auto">
+        <MDBCollapse open={open} className="p-md-5 p-3 pt-md-1 pt-2 h-auto">
           <AnimatedWrapper>
             <h6 className="color-purple md-text-left animated-fade-start animated-fade transition-delay-small">
               About the Role

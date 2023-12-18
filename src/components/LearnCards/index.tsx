@@ -26,9 +26,7 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
                 src={image}
                 fill
                 sizes="100vw"
-                style={{
-                  objectFit: 'cover',
-                }}
+                style={{ objectFit: 'cover' }}
               />
             </div>
           </AnimatedWrapper>

@@ -249,7 +249,7 @@ export const NIFTY_DEGENS = [
   },
   {
     name: 'FROG',
-    description: `Watch out for the frog's sticky tongue! Draws another player in so that frog can issue a bönk. Also attaches to ceilings, walls and some platforms.`,
+    description: `Watch out for the frog's sticky tongue! Draws another player in so that frog can issue a bonk. Also attaches to ceilings, walls and some platforms.`,
     specialName: 'Sticky Tongue',
     gif: {
       link: '/img/degens/frog.gif',

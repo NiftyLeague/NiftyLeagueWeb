@@ -110,20 +110,29 @@
     min-width: 120px;
     background-image: linear-gradient(45deg, transparent 50%, gray 0), linear-gradient(135deg, gray 50%, transparent 0),
       linear-gradient(90deg, #ccc, #ccc);
-    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
   }
 
   select,
   select:focus {
     color: #000;
-    background-size: 5px 5px, 5px 5px, 1px 1.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
     background-repeat: no-repeat;
   }
 
   select:focus {
     background-image: linear-gradient(45deg, #333 50%, transparent 0), linear-gradient(135deg, transparent 50%, #333 0),
       linear-gradient(90deg, #ccc, #ccc);
-    background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+    background-position:
+      calc(100% - 15px) 1em,
+      calc(100% - 20px) 1em,
+      calc(100% - 2.5em) 0.5em;
     border-color: #333;
     outline: 0;
   }
