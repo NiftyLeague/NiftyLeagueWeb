@@ -9,8 +9,8 @@
     "start": "next start",
     "lint": "next lint --ignore-path .gitignore",
     "lint:fix": "next lint --ignore-path .gitignore --fix",
-    "format": "prettier --check --ignore-path .gitignore .",
-    "format:fix": "prettier --write --ignore-path .gitignore .",
+    "format": "prettier --check --ignore-path .prettierignore .",
+    "format:fix": "prettier --write --ignore-path .prettierignore .",
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
