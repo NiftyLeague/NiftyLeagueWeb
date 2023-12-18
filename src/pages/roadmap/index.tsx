@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 
 import Layout from '@/components/Layout';
 import RoadmapTimeline, { styles as roadmapStyles } from '@/components/RoadmapTimeline';
@@ -11,7 +11,10 @@ const Roadmap: NextPage = () => {
     <Layout classes={{ root: roadmapStyles.roadmap_pg }}>
       <Head>
         <title>Nifty League | Roadmap</title>
-        <meta name="description" content="Nifty League roadmap... or moonmap?" />
+        <meta property="og:title" content="Nifty League | Roadmap" />
+        <meta name="description" content="Nifty League roadmap... or moonmap?" key="desc" />
+        <meta property="og:description" content="Nifty League roadmap... or moonmap?" />
+        <meta property="og:image" content="https://niftyleague.com/img/roadmap/roadmap.png" />
       </Head>
 
       <div className={roadmapStyles.stars}>
@@ -22,17 +25,12 @@ const Roadmap: NextPage = () => {
               alt="satoshi moving"
               width={200}
               height={200}
-              layout="responsive"
               priority
-            />
-          </div>
-          <div className={satoshiStyles.satoshiStationary}>
-            <Image
-              src="/img/roadmap/satoshi_stationary.gif"
-              alt="satoshi stationary"
-              width={200}
-              height={200}
-              layout="responsive"
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
           <div className={roadmapStyles.earth} />
@@ -51,7 +49,18 @@ const Roadmap: NextPage = () => {
           <div className={roadmapStyles.animated_star9} />
           <div className="w-100 d-flex justify-content-center">
             <div className={roadmapStyles.moon}>
-              <Image src="/img/roadmap/moon.png" alt="moon" width={800} height={800} layout="responsive" priority />
+              <Image
+                src="/img/roadmap/moon.png"
+                alt="moon"
+                width={800}
+                height={800}
+                priority
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
             </div>
           </div>
         </div>

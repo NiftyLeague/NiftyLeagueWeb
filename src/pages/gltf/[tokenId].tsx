@@ -18,7 +18,7 @@ export default function DegenViews() {
   const router = useRouter();
   const { tokenId } = router.query;
   const [selected, setSelected] = useState<SRC>(SRC.IMAGE);
-  const [color, setColor] = useState<Color>('lightblue');
+  const [color, setColor] = useState<Color>('purple');
   const IMAGE_SRC = `/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`;
   const SPRITE_SRC = `${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`;
 

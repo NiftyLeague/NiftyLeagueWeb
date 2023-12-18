@@ -23,10 +23,14 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
           <Image
             src="/img/home/hero-bg.png"
             alt="Nifty Home Banner"
-            layout="responsive"
             width={3408}
             height={1849}
             priority
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </div>
         <AnimatedWrapper parallax parallaxDirection="top" transitionAmount="small">
@@ -34,10 +38,14 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
             <Image
               src="/img/home/hero-characters.png"
               alt="Nifty Hero Characters"
-              layout="responsive"
               width={3408}
               height={1849}
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </AnimatedWrapper>
@@ -48,10 +56,14 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
                 <Image
                   src="/img/home/hero-companion-base.png"
                   alt="Home Hero Companion Base"
-                  layout="responsive"
                   width={436}
                   height={436}
                   className="pixelated"
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
                 <div className="position-absolute home-hero-companion-swing animation-propeller" />
               </div>
@@ -65,10 +77,14 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
                 <Image
                   src="/img/home/hero-halo.png"
                   alt="Home Hero Halo"
-                  layout="responsive"
                   width={325}
                   height={117}
                   className="pixelated"
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
               </div>
             </AnimatedWrapper>
@@ -79,7 +95,14 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
       <div className="home-satoshi-container">
         <AnimatedWrapper>
           <div className="position-relative flex-grow-1 home-satoshi satoshi-quick-pop-anim satoshi-quick-pop-anim-start transition-delay-medium">
-            <Image alt="Satoshi" layout="fill" objectFit="cover" src="/img/home/satoshi.png" priority />
+            <Image
+              alt="Satoshi"
+              src="/img/home/satoshi.png"
+              priority
+              fill
+              sizes="100vw"
+              style={{ objectFit: 'cover' }}
+            />
           </div>
         </AnimatedWrapper>
       </div>
@@ -105,7 +128,17 @@ const DesktopIntro = ({ scrollToGamingSection }: { scrollToGamingSection: () => 
               className="d-inline-block position-relative flex-grow-1 satoshi-learn-more animated-fade-slow animated-fade-start transition-delay-large"
               onClick={scrollToGamingSection}
             >
-              <Image src="/img/home/speech-bubble.png" alt="Learn More" layout="responsive" width={407} height={125} />
+              <Image
+                src="/img/home/speech-bubble.png"
+                alt="Learn More"
+                width={407}
+                height={125}
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
+              />
               <p className="my-0 py-0 speech-bubble-text">Learn More!</p>
             </div>
           </AnimatedWrapper>
@@ -133,16 +166,52 @@ const MobileIntro = () => {
         </AnimatedWrapper>
         <div className="d-flex align-items-center mt-3 mb-5 social-icons">
           <a className="pe-4" href="https://discord.gg/niftyleague" target="_blank" rel="noreferrer">
-            <Image src="/icons/discord.svg" alt="Discord Logo" width={26} height={22} />
+            <Image
+              src="/icons/discord.svg"
+              alt="Discord Logo"
+              width={26}
+              height={22}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </a>
           <a className="pe-4" href="https://twitter.com/NiftyLeague" target="_blank" rel="noreferrer">
-            <Image src="/icons/twitter.svg" alt="Twitter Logo" width={26} height={22} />
+            <Image
+              src="/icons/twitter.svg"
+              alt="Twitter Logo"
+              width={26}
+              height={22}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </a>
           <a className="pe-4" href="https://opensea.io/collection/niftydegen" target="_blank" rel="noreferrer">
-            <Image src="/icons/opensea.svg" alt="OpenSea Logo" width={24} height={22} />
+            <Image
+              src="/icons/opensea.svg"
+              alt="OpenSea Logo"
+              width={24}
+              height={22}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </a>
           <a href="https://www.twitch.tv/niftyleagueofficial" target="_blank" rel="noreferrer">
-            <Image src="/icons/twitch.svg" alt="Twitch Logo" width={24} height={22} />
+            <Image
+              src="/icons/twitch.svg"
+              alt="Twitch Logo"
+              width={24}
+              height={22}
+              style={{
+                maxWidth: '100%',
+                height: 'auto',
+              }}
+            />
           </a>
         </div>
       </div>
@@ -164,9 +233,17 @@ const Home: NextPage = () => {
     <Layout classes={{ root: 'home-pg' }}>
       <Head>
         <title>Nifty League</title>
-        <meta name="description" content="Community-Governed Web3 Game Studio" />
-        <meta property="og:title" content="Nifty League: Community-Governed Web3 Game Studio" />
-        <meta property="og:image" content="https://niftyleague.com/img/home/banner-desktop.png" />
+        <meta property="og:title" content="Nifty League: Community-Governed Game Studio" />
+        <meta
+          name="description"
+          content="A game studio at the cutting edge of Web3 with a mission to inspire other indie game developers to build a decentralized future with us."
+          key="desc"
+        />
+        <meta
+          property="og:description"
+          content="A game studio at the cutting edge of Web3 with a mission to inspire other indie game developers to build a decentralized future with us."
+        />
+        <meta property="og:image" content="https://niftyleague.com/img/home/classic-gaming-reinvented.png" />
       </Head>
 
       {mobile ? <MobileIntro /> : <DesktopIntro scrollToGamingSection={scrollToGamingSection} />}
@@ -191,7 +268,7 @@ const Home: NextPage = () => {
             className="game-playing-actions"
           >
             <AnimatedWrapper>
-              <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
+              <a href="https://niftysmashers.com" target="_blank" rel="noreferrer">
                 <button className="btn theme-btn-primary section-black-button animated-fade animated-fade-start transition-delay-medium">
                   START PLAYING
                 </button>
@@ -227,8 +304,12 @@ const Home: NextPage = () => {
                   src="/img/home/nifty-ape.png"
                   width={856}
                   height={842}
-                  layout="responsive"
                   alt="ape degen overlay"
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
               </div>
               <Carousel mobileItems={2} hideGradient>
@@ -254,10 +335,14 @@ const Home: NextPage = () => {
                           <Image
                             src="/img/home/compete-and-earn-token-1.png"
                             alt="Compete and Earn NFTL 1"
-                            layout="responsive"
                             width={413}
                             height={408}
                             className="pixelated"
+                            sizes="100vw"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                            }}
                           />
                         </div>
                       </AnimatedWrapper>
@@ -270,10 +355,14 @@ const Home: NextPage = () => {
                           <Image
                             src="/img/home/compete-and-earn-token-2.png"
                             alt="Compete and Earn NFTL 2"
-                            layout="responsive"
                             width={398}
                             height={390}
                             className="pixelated"
+                            sizes="100vw"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                            }}
                           />
                         </div>
                       </AnimatedWrapper>
@@ -286,10 +375,14 @@ const Home: NextPage = () => {
                           <Image
                             src="/img/home/compete-and-earn-token-3.png"
                             alt="Compete and Earn NFTL 3"
-                            layout="responsive"
                             width={492}
                             height={192}
                             className="pixelated"
+                            sizes="100vw"
+                            style={{
+                              width: '100%',
+                              height: 'auto',
+                            }}
                           />
                         </div>
                       </AnimatedWrapper>
@@ -305,9 +398,13 @@ const Home: NextPage = () => {
                         <Image
                           src="/img/home/compete-and-earn-mobile.png"
                           alt="Compete and Earn"
-                          layout="responsive"
                           width={3208}
                           height={1342}
+                          sizes="100vw"
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                          }}
                         />
                         <div className="radial-gradient-background" />
                       </div>
@@ -341,7 +438,7 @@ const Home: NextPage = () => {
                     className="section-actions"
                   >
                     <AnimatedWrapper>
-                      <a href="https://app.niftyleague.com/games/smashers" target="_blank" rel="noreferrer">
+                      <a href="https://niftysmashers.com" target="_blank" rel="noreferrer">
                         <button className="btn theme-btn-primary ms-0 mx-0 section-black-button animated-fade animated-fade-start transition-delay-large">
                           LET&apos;S BRAWL!
                         </button>
@@ -368,9 +465,13 @@ const Home: NextPage = () => {
                   <Image
                     src="/img/home/compete-and-earn.png"
                     alt="Compete and Earn"
-                    layout="responsive"
                     width={1648}
                     height={1319}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                 </div>
               </AnimatedWrapper>
@@ -382,8 +483,12 @@ const Home: NextPage = () => {
                       className="pixelated"
                       width={641}
                       height={640}
-                      layout="responsive"
                       src="/img/home/compete-and-earn-token-4.png"
+                      sizes="100vw"
+                      style={{
+                        width: '100%',
+                        height: 'auto',
+                      }}
                     />
                   </div>
                 </AnimatedWrapper>
@@ -403,9 +508,13 @@ const Home: NextPage = () => {
                   <Image
                     src="/img/home/land-in-the-niftyverse.png"
                     alt="Land in the Niftyverse"
-                    layout="responsive"
                     width={3055}
                     height={2406}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                   <div className="radial-gradient-background" />
                 </div>
@@ -419,9 +528,13 @@ const Home: NextPage = () => {
                   <Image
                     src="/img/home/land-in-the-niftyverse.png"
                     alt="Land in the NiftyVerse"
-                    layout="responsive"
                     width={1920}
                     height={1512}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                   <div className="radial-gradient-background" />
                 </div>
@@ -484,10 +597,14 @@ const Home: NextPage = () => {
                 <Image
                   src="/img/home/dashboard.png"
                   alt="App Dashboard"
-                  layout="responsive"
                   width={3590}
                   height={2192}
                   className="pixelated"
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
                 <div className="radial-gradient-background" />
               </div>
@@ -503,9 +620,13 @@ const Home: NextPage = () => {
                   <Image
                     src="/img/home/dashboard.png"
                     alt="App Dashboard"
-                    layout="responsive"
                     width={3590}
                     height={2192}
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                   <div className="radial-gradient-background" />
                 </div>
@@ -629,10 +750,14 @@ const Home: NextPage = () => {
                   <Image
                     src="/img/home/community.png"
                     alt="The Best Community on Earth"
-                    layout="responsive"
                     width={1417}
                     height={1525}
                     className="pixelated"
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                   <div className="radial-gradient-background" />
                 </div>
@@ -652,9 +777,13 @@ const Home: NextPage = () => {
                       <Image
                         src="/img/home/community.png"
                         alt="The Best Community on Earth"
-                        layout="responsive"
                         width={1417}
                         height={1525}
+                        sizes="100vw"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
                       />
                       <div className="radial-gradient-background" />
                     </div>
@@ -668,7 +797,11 @@ const Home: NextPage = () => {
                         alt="Community DEGENs"
                         width={1910}
                         height={620}
-                        layout="responsive"
+                        sizes="100vw"
+                        style={{
+                          width: '100%',
+                          height: 'auto',
+                        }}
                       />
                       <div className="radial-gradient-background" />
                     </div>
@@ -723,8 +856,12 @@ const Home: NextPage = () => {
                           alt="Community DEGENs"
                           width={1910}
                           height={620}
-                          layout="responsive"
                           src="/img/home/community-characters.png"
+                          sizes="100vw"
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                          }}
                         />
                         <div className="radial-gradient-background" />
                       </div>
@@ -755,8 +892,12 @@ const Home: NextPage = () => {
                   className="pixelated"
                   width={3600}
                   height={1735}
-                  layout="responsive"
                   src="/img/home/sponsors.png"
+                  sizes="100vw"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
                 />
                 <div className="radial-gradient-background" />
               </div>

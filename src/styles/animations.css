@@ -60,7 +60,9 @@
 
 .animated-vertical-fade {
   top: 0px;
-  transition: opacity 2s, top 1s;
+  transition:
+    opacity 2s,
+    top 1s;
 }
 .animated-vertical-fade-start {
   top: -100px;
@@ -68,7 +70,9 @@
 }
 
 .quick-pop-anim {
-  transition: opacity 0.5s, transform 1s;
+  transition:
+    opacity 0.5s,
+    transform 1s;
   transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -147,7 +151,9 @@
 @media (min-width: 768px) {
   .animated-header-text {
     margin-bottom: 0px;
-    transition: opacity 1s, margin-bottom 1s;
+    transition:
+      opacity 1s,
+      margin-bottom 1s;
   }
 
   .animated-header-text-start {
@@ -156,7 +162,10 @@
   }
 
   .satoshi-quick-pop-anim {
-    transition: opacity 0.2s, transform 0.4s, left 0.3s;
+    transition:
+      opacity 0.2s,
+      transform 0.4s,
+      left 0.3s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
     left: 0px;
   }

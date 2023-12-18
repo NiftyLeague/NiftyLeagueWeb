@@ -6,7 +6,8 @@
   font-style: normal;
   font-weight: 400;
   src: url('./DM_SANS/DMSans-Regular.eot'); /* IE9 Compat Modes */
-  src: url('./DM_SANS/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
+  src:
+    url('./DM_SANS/DMSans-Regular.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('./DM_SANS/DMSans-Regular.woff2') format('woff2'),
     /* Super Modern Browsers */ url('./DM_SANS/DMSans-Regular.woff') format('woff'),
     /* Modern Browsers */ url('./DM_SANS/DMSans-Regular.ttf') format('truetype');
@@ -18,7 +19,8 @@
   font-style: italic;
   font-weight: 400;
   src: url('./DM_SANS/DMSans-RegularItalic.eot'); /* IE9 Compat Modes */
-  src: url('./DM_SANS/DMSans-RegularItalic.eot?#iefix') format('embedded-opentype'),
+  src:
+    url('./DM_SANS/DMSans-RegularItalic.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('./DM_SANS/DMSans-RegularItalic.woff2') format('woff2'),
     /* Super Modern Browsers */ url('./DM_SANS/DMSans-RegularItalic.woff') format('woff'),
     /* Modern Browsers */ url('./DM_SANS/DMSans-RegularItalic.ttf') format('truetype');
@@ -30,7 +32,8 @@
   font-style: normal;
   font-weight: 700;
   src: url('./DM_SANS/DMSans-Bold.eot'); /* IE9 Compat Modes */
-  src: url('./DM_SANS/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
+  src:
+    url('./DM_SANS/DMSans-Bold.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('./DM_SANS/DMSans-Bold.woff2') format('woff2'),
     /* Super Modern Browsers */ url('./DM_SANS/DMSans-Bold.woff') format('woff'),
     /* Modern Browsers */ url('./DM_SANS/DMSans-Bold.ttf') format('truetype');
@@ -42,7 +45,8 @@
   font-style: italic;
   font-weight: 700;
   src: url('./DM_SANS/DMSans-BoldItalic.eot'); /* IE9 Compat Modes */
-  src: url('./DM_SANS/DMSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+  src:
+    url('./DM_SANS/DMSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('./DM_SANS/DMSans-BoldItalic.woff2') format('woff2'),
     /* Super Modern Browsers */ url('./DM_SANS/DMSans-BoldItalic.woff') format('woff'),
     /* Modern Browsers */ url('./DM_SANS/DMSans-BoldItalic.ttf') format('truetype');
@@ -56,7 +60,8 @@
   font-style: normal;
   font-weight: 700;
   src: url('./Nexa_Rust_Sans_Black/NexaRustSans-Black.eot'); /* IE9 Compat Modes */
-  src: url('./Nexa_Rust_Sans_Black/NexaRustSans-Black.eot?#iefix') format('embedded-opentype'),
+  src:
+    url('./Nexa_Rust_Sans_Black/NexaRustSans-Black.eot?#iefix') format('embedded-opentype'),
     /* IE6-IE8 */ url('./Nexa_Rust_Sans_Black/NexaRustSans-Black.woff2') format('woff2'),
     /* Super Modern Browsers */ url('./Nexa_Rust_Sans_Black/NexaRustSans-Black.woff') format('woff'),
     /* Modern Browsers */ url('./Nexa_Rust_Sans_Black/NexaRustSans-Black.ttf') format('truetype');

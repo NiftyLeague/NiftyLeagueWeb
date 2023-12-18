@@ -1,4 +1,4 @@
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { memo } from 'react';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
@@ -23,7 +23,13 @@ const NiftyCarousel = ({
   <>
     {!hideGradient && (
       <span className="dark-gradient-shade">
-        <Image src="/img/dark-gradient-shade.svg" alt="Dark gradient shade" layout="fill" objectFit="cover" />
+        <Image
+          src="/img/dark-gradient-shade.svg"
+          alt="Dark gradient shade"
+          fill
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+        />
       </span>
     )}
     <Carousel

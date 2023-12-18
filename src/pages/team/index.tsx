@@ -17,7 +17,10 @@ const Team: NextPage = () => {
     <Layout classes={{ root: 'team-pg' }}>
       <Head>
         <title>Nifty League | Team</title>
-        <meta name="description" content="Build a decentralized future with the Nifty DAO" />
+        <meta property="og:title" content="Nifty League | Team" />
+        <meta name="description" content="Build a decentralized future with the Nifty DAO" key="desc" />
+        <meta property="og:description" content="Build a decentralized future with the Nifty DAO" />
+        <meta property="og:image" content="https://niftyleague.com/img/niftyverse/mansion_livingroom_int_03.png" />
       </Head>
 
       <div className={cn(styles.container, 'mx-auto px-3')}>
@@ -31,9 +34,9 @@ const Team: NextPage = () => {
             <div className={cn(styles.body, 'mt-5 mt-sm-3')}>
               <AnimatedWrapper>
                 <p className="text-center p1 animated-header-text animated-header-text-start transition-delay-medium">
-                  Nifty League is a game studio at the cutting edge of Web3. Our mission is to establish a platform of
-                  unparalleled quality and player experience to inspire other indie game developers to build a
-                  decentralized future with us.
+                  Nifty League is a game studio at the cutting edge of Web3. Our mission is to inspire indie game
+                  developers to build a decentralized future with us by establishing a game studio focused on
+                  unparalleled quality and player experiences.
                 </p>
                 <br />
               </AnimatedWrapper>

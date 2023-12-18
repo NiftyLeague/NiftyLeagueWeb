@@ -16,7 +16,17 @@ const NiftyVerse: NextPage = () => {
     <Layout>
       <Head>
         <title>Nifty League | NiftyVerse</title>
-        <meta name="description" content="Own your own land in the NiftyVerse" />
+        <meta property="og:title" content="Nifty League | NiftyVerse" />
+        <meta
+          name="description"
+          content="A virtual space for gamers to connect, collaborate, and compete with each other"
+          key="desc"
+        />
+        <meta
+          property="og:description"
+          content="A virtual space for gamers to connect, collaborate, and compete with each other"
+        />
+        <meta property="og:image" content="https://niftyleague.com/img/niftyverse/beachfront_night.png" />
       </Head>
       <div className="position-relative">
         <div className={cn(styles.introContainer, 'row m-0 p-0 position-relative')}>
@@ -109,7 +119,7 @@ const NiftyVerse: NextPage = () => {
                   className={'full-width d-flex flex-column flex-lg-row position-relative py-3 px-2 mb-3 mb-md-5'}
                   key={name}
                 >
-                  <div className="col-12 col-lg-6 d-flex flex-column">
+                  <div className="col-12 col-lg-6 pe-lg-2 d-flex flex-column">
                     <AnimatedWrapper>
                       <h6 className="my-0 animated-fade-slow animated-fade-start transition-delay-small">{name}</h6>
                     </AnimatedWrapper>
@@ -119,15 +129,19 @@ const NiftyVerse: NextPage = () => {
                       </p>
                     </AnimatedWrapper>
                   </div>
-                  <div className="col-12 col-lg-6 position-relative">
+                  <div className="col-12 col-lg-6 ps-lg-2 position-relative">
                     <AnimatedWrapper>
                       <div className="animated-fade animated-fade-start transition-delay-medium">
                         <Image
                           src={image}
                           alt="NiftyVerse District Highlight"
-                          style={{ width: '100%', height: 'auto' }}
                           width={500}
                           height={283}
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                            maxWidth: '100%',
+                          }}
                         />
                       </div>
                     </AnimatedWrapper>

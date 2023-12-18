@@ -1,3 +1,12 @@
+$breakpoint-sm: 615px;
+$breakpoint-md: 850px;
+$breakpoint-lg: 1000px;
+$breakpoint-xl: 1170px;
+
+$mobile-position: 4000px;
+$medium-position: 5500px;
+$desktop-position: 10000px;
+
 .satoshiMove {
   position: absolute;
   z-index: 3;
@@ -13,27 +22,27 @@
   animation-fill-mode: forwards;
 }
 
-@media only screen and (min-width: 615px) {
+@media only screen and (min-width: $breakpoint-sm) {
   .satoshiMove {
     -webkit-animation-name: moveRightXs, moveDownMd, spin, hide;
     animation-name: moveRightXs, moveDownMd, spin, hide;
   }
 }
-@media only screen and (min-width: 850px) {
+@media only screen and (min-width: $breakpoint-md) {
   .satoshiMove {
     width: 175px;
     -webkit-animation-name: moveRightSm, moveDownMd, spin, hide;
     animation-name: moveRightSm, moveDownMd, spin, hide;
   }
 }
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: $breakpoint-lg) {
   .satoshiMove {
     width: 200px;
     -webkit-animation-name: moveRightMd, moveDownMd, spin, hide;
     animation-name: moveRightMd, moveDownMd, spin, hide;
   }
 }
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: $breakpoint-xl) {
   .satoshiMove {
     width: 250px;
     -webkit-animation-name: moveRightLg, moveDownLg, spin, hide;
@@ -190,7 +199,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 7000px;
+    top: $mobile-position;
   }
 }
 @-moz-keyframes moveDownSm {
@@ -198,7 +207,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 7000px;
+    top: $mobile-position;
   }
 }
 @-webkit-keyframes moveDownSm {
@@ -206,7 +215,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 7000px;
+    top: $mobile-position;
   }
 }
 @keyframes moveDownSm {
@@ -214,7 +223,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 7000px;
+    top: $mobile-position;
   }
 }
 
@@ -223,7 +232,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 5500px;
+    top: $medium-position;
   }
 }
 @-moz-keyframes moveDownMd {
@@ -231,7 +240,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 5500px;
+    top: $medium-position;
   }
 }
 @-webkit-keyframes moveDownMd {
@@ -239,7 +248,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 5500px;
+    top: $medium-position;
   }
 }
 @keyframes moveDownMd {
@@ -247,7 +256,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 5500px;
+    top: $medium-position;
   }
 }
 
@@ -256,7 +265,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 8800px;
+    top: $desktop-position;
   }
 }
 @-moz-keyframes moveDownLg {
@@ -264,7 +273,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 8800px;
+    top: $desktop-position;
   }
 }
 @-webkit-keyframes moveDownLg {
@@ -272,7 +281,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 8800px;
+    top: $desktop-position;
   }
 }
 @keyframes moveDownLg {
@@ -280,7 +289,7 @@ Move Down
     top: 15%;
   }
   to {
-    top: 8800px;
+    top: $desktop-position;
   }
 }
 
@@ -329,101 +338,5 @@ Others
 @keyframes hide {
   100% {
     opacity: 0;
-  }
-}
-
-/* -------------------------------- 
-
-Stationary
-
--------------------------------- */
-
-.satoshiStationary {
-  position: absolute;
-  z-index: 3;
-  top: 7000px;
-  left: calc(100% - 120px);
-  transform: scaleX(-1);
-  width: 120px;
-  opacity: 0;
-  -webkit-animation-name: display, float-inverse;
-  -webkit-animation-duration: 1ms, infinite;
-  -webkit-animation-delay: 10099ms;
-  -webkit-animation-fill-mode: forwards;
-  animation-name: display, float-inverse;
-  animation-duration: 1ms, 2000ms;
-  animation-delay: 9999ms, 100ms;
-  animation-iteration-count: 1, infinite;
-  animation-fill-mode: forwards;
-}
-
-@media only screen and (min-width: 615px) {
-  .satoshiStationary {
-    top: 5500px;
-  }
-}
-
-@media only screen and (min-width: 850px) {
-  .satoshiStationary {
-    left: calc(100% - 135px);
-    width: 175px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .satoshiStationary {
-    left: calc(100% - 155px);
-    width: 200px;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .satoshiStationary {
-    top: 8800px;
-    left: 50%;
-    width: 250px;
-  }
-}
-
-@-ms-keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-@-moz-keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-@-webkit-keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes display {
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes float {
-  0% {
-    transform: translatey(0px);
-  }
-  50% {
-    transform: translatey(-25px);
-  }
-  100% {
-    transform: translatey(0px);
-  }
-}
-
-@keyframes float-inverse {
-  0% {
-    transform: scaleX(-1) translatey(0px);
-  }
-  50% {
-    transform: scaleX(-1) translatey(-25px);
-  }
-  100% {
-    transform: scaleX(-1) translatey(0px);
   }
 }

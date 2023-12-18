@@ -46,9 +46,12 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
                 <Link href="/careers" className="mt-2">
                   Careers
                 </Link>
-                <Link href="/shop" className="mt-2">
+                {/* <Link href="/shop" className="mt-2">
                   Merch {!mobile ? <ExternalIcon /> : null}
-                </Link>
+                </Link> */}
+                <a href="https://maddies.co/official/nifty-league/" className="mt-2" target="_blank" rel="noreferrer">
+                  Merch {!mobile ? <ExternalIcon /> : null}
+                </a>
                 <Link href="/docs" className="mt-2">
                   Docs {!mobile ? <ExternalIcon /> : null}
                 </Link>
@@ -72,7 +75,16 @@ export default function Footer({ classes }: { classes?: { footer?: string } }) {
             <div className="d-flex flex-wrap align-items-center justify-content-center social-icons">
               {SOCIAL_LINKS.map(social => (
                 <a className="px-2 px-md-3 py-2" href={social.link} target="_blank" rel="noreferrer" key={social.name}>
-                  <Image src={social.image} width={20} height={20} alt={social.description} />
+                  <Image
+                    src={social.image}
+                    width={20}
+                    height={20}
+                    alt={social.description}
+                    style={{
+                      maxWidth: '100%',
+                      height: 'auto',
+                    }}
+                  />
                 </a>
               ))}
             </div>

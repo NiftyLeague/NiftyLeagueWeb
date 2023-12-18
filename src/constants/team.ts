@@ -12,7 +12,7 @@ export const CORE_TEAM = [
   {
     name: 'Mike Scott',
     source: '/img/degens/team/NiftySpike.png',
-    link: 'https://twitter.com/mikescottiskiff',
+    link: 'https://twitter.com/niftyspike',
   },
   {
     name: 'Dave Rosser',
@@ -55,6 +55,11 @@ export const DEGEN_DELEGATES = [
     link: 'https://twitter.com/TopJag31?s=20',
   },
   {
+    name: 'Doffy',
+    source: '/img/degens/team/doffy.png',
+    link: 'https://twitter.com/DoffySenpai_',
+  },
+  {
     name: 'Consty',
     source: '/img/degens/team/consty.png',
     link: 'https://twitter.com/ConstyNFT',
@@ -78,11 +83,6 @@ export const DEGEN_DELEGATES = [
     name: 'Parabolic',
     source: '/img/degens/team/Parabolic.png',
     link: 'https://twitter.com/PaRa80L1C',
-  },
-  {
-    name: 'Doffy',
-    source: '/img/degens/team/doffy.png',
-    link: 'https://twitter.com/DoffySenpai_',
   },
   {
     name: 'Foster',

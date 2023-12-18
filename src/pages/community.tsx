@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { useMediaQuery } from '@mui/material';
 import Layout from '@/components/Layout';
 import SocialCards from '@/components/SocialCards';
@@ -12,7 +12,10 @@ const Community: NextPage = () => {
     <Layout classes={{ root: 'com-pg' }}>
       <Head>
         <title>Nifty League | Community</title>
-        <meta name="description" content="Community comes first at Nifty League" />
+        <meta property="og:title" content="Nifty League | Community" />
+        <meta name="description" content="Community comes first at Nifty League" key="desc" />
+        <meta property="og:description" content="Community comes first at Nifty League" />
+        <meta property="og:image" content="https://niftyleague.com/img/home/banner-mobile.png" />
       </Head>
 
       <div className="position-relative pt-md-5 mt-md-5 com-intro">
@@ -43,13 +46,26 @@ const Community: NextPage = () => {
                     alt="Satoshi moon"
                     width={445}
                     height={437}
-                    layout="responsive"
                     priority
+                    sizes="100vw"
+                    style={{
+                      width: '100%',
+                      height: 'auto',
+                    }}
                   />
                 </div>
               </AnimatedWrapper>
               <div className="moon-grad">
-                <Image src="/img/community/moon-grad.svg" alt="gradient background" width={685} height={685} />
+                <Image
+                  src="/img/community/moon-grad.svg"
+                  alt="gradient background"
+                  width={685}
+                  height={685}
+                  style={{
+                    maxWidth: '100%',
+                    height: 'auto',
+                  }}
+                />
               </div>
             </div>
           </div>
@@ -59,11 +75,15 @@ const Community: NextPage = () => {
             <div className="position-relative animated-fade-start animated-fade transition-delay-medium">
               <Image
                 src="/img/community/community-bg-1.png"
-                layout="responsive"
                 width={1684}
                 height={525}
                 alt="Earth"
                 priority
+                sizes="100vw"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                }}
               />
             </div>
           </AnimatedWrapper>
@@ -73,9 +93,13 @@ const Community: NextPage = () => {
           <Image
             src="/img/community/earth-grad.svg"
             alt="Purple eclipse"
-            layout="responsive"
             width={704}
             height={704}
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
         </span>
       </div>

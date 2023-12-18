@@ -11,6 +11,7 @@
 
 .sprite {
   width: 100vw;
+  max-width: 100%;
   object-fit: cover;
   object-position: top left;
   composes: pixelated;
@@ -18,6 +19,7 @@
 
 .image {
   width: 100vw;
+  max-width: 100%;
   object-fit: cover;
   object-position: top left;
   composes: pixelated;
@@ -86,11 +88,12 @@
 .menu__overlay__animation,
 .menu__overlay__colorpicker {
   display: flex;
+
   .background__picker {
     color: #5f4ce6;
     svg {
       color: #5f4ce6;
-      padding-left: 3px;
+      padding-left: 5px;
     }
   }
 }
@@ -102,7 +105,7 @@
 }
 
 .gradient_purple {
-  background: radial-gradient(#5e73eb61, #620edfc9);
+  background: radial-gradient(rgba(94, 115, 235, 0.88), rgba(98, 14, 223, 0.78));
 }
 
 .gradient_blue {

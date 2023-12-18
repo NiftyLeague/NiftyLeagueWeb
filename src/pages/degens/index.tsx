@@ -8,43 +8,76 @@ import Layout from '@/components/Layout';
 import AnimatedWrapper from '@/components/AnimatedWrapper';
 import { NIFTY_DEGENS, NIFTY_DEGENS_ALL } from '@/constants/degens';
 import ExternalIcon from '@/components/ExternalIcon';
+import ConsoleGame from '@/components/ConsoleGame';
 import styles from './index.module.scss';
 
-const Games: NextPage = () => {
+const Degens: NextPage = () => {
   const desktop = useMediaQuery('(min-width:768px)');
   return (
     <Layout>
       <Head>
         <title>Nifty League | DEGENs</title>
-        <meta name="description" content="COMMUNITY GENERATED DEGEN NFTs" />
+        <meta property="og:title" content="Nifty League | DEGENs" />
+        <meta
+          name="description"
+          content="Community-generated DEGEN NFTs. Playable avatars in all Nifty League and partner games."
+          key="desc"
+        />
+        <meta
+          property="og:description"
+          content="Community-generated DEGEN NFTs. Playable avatars in all Nifty League and partner games."
+        />
+        <meta property="og:image" content="https://niftyleague.com/img/careers/careers_v02_2x.png" />
       </Head>
+      <div className="row m-0 p-0 position-relative">
+        <ConsoleGame src="/video/unboxing.mp4" />
+      </div>
       <div className={cn(styles.container, 'overview mx-auto px-3')}>
         <Container>
-          <div className="mb-4">
-            <AnimatedWrapper>
-              <h1 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
-                DEGENs
-              </h1>
-            </AnimatedWrapper>
-          </div>
-          <div className="mb-4">
-            <AnimatedWrapper>
-              <h6 className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
-                COMMUNITY DESIGNED DEGEN NFTs
-              </h6>
-            </AnimatedWrapper>
-          </div>
-          <div className="mb-5 position-relative">
-            <AnimatedWrapper>
-              <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
-                The Nifty League DEGENs were specially crafted by the community with members pitching in and deciding
-                how THEY wanted their DEGENs to look. This involved selecting special features that they wanted
-                including selection of cothing, tribe, and weapons among a few others. This led to the birth of 10,000
-                Nifty League NFTs on the Ethereum blockchain. The NFTs are all sold out however they are forever
-                tradable on secondary markets such as OpenSea.
-              </p>
-            </AnimatedWrapper>
-            <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
+          <div className="d-flex align-items-center justify-content-center flex-wrap mb-4 mb-md-5">
+            <div className="col-12 col-md-6 pe-md-4">
+              <div className="mb-4">
+                <AnimatedWrapper>
+                  <h1 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
+                    DEGENs
+                  </h1>
+                </AnimatedWrapper>
+              </div>
+              <div className="mb-4">
+                <AnimatedWrapper>
+                  <h6 className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
+                    COMMUNITY DESIGNED DEGEN NFTs
+                  </h6>
+                </AnimatedWrapper>
+              </div>
+              <div className="position-relative">
+                <AnimatedWrapper>
+                  <p className="text-align-center animated-header-text animated-header-text-start transition-delay-medium">
+                    The Nifty League DEGENs were specially crafted by the community with members pitching in and
+                    deciding how THEY wanted their DEGENs to look. This involved selecting special features that they
+                    wanted including selection of cothing, tribe, and weapons among a few others. This led to the birth
+                    of 10,000 Nifty League NFTs on the Ethereum blockchain. The NFTs are all sold out however they are
+                    forever tradable on secondary markets such as OpenSea.
+                  </p>
+                </AnimatedWrapper>
+                <div className={cn(styles.gradient1, 'radial-gradient-piece')} />
+              </div>
+            </div>
+            <div className="col-12 col-md-6">
+              <AnimatedWrapper>
+                <div className="position-relative text-align-right animated-fade-slow animated-fade-start transition-delay-medium mb-4 mb-md-0 ps-0 ps-lg-5">
+                  <iframe
+                    width="100%"
+                    height="315"
+                    src="https://www.youtube.com/embed/WWLqE1tnf6U"
+                    // @ts-ignore
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </AnimatedWrapper>
+            </div>
           </div>
 
           <div className="d-flex justify-content-center">
@@ -57,6 +90,7 @@ const Games: NextPage = () => {
               </a>
             </AnimatedWrapper>
           </div>
+
           <div className={cn(styles.section, 'position-relative')}>
             <div className={cn(styles.gradient2, 'radial-gradient-piece')} />
             <div
@@ -73,7 +107,6 @@ const Games: NextPage = () => {
                         <Image
                           src={image.link}
                           alt={name}
-                          layout="fixed"
                           width={desktop ? image.width : image.width / 2}
                           height={desktop ? image.height : image.height / 2}
                         />
@@ -90,7 +123,7 @@ const Games: NextPage = () => {
             </div>
             <div className="mb-4">
               <AnimatedWrapper>
-                <h3 className="text-align-center animated-header-text animated-header-text-start transition-delay-small">
+                <h3 className="mt-2 text-align-center animated-header-text animated-header-text-start transition-delay-small">
                   DEGEN TRIBES
                 </h3>
               </AnimatedWrapper>
@@ -131,7 +164,6 @@ const Games: NextPage = () => {
                           <Image
                             src={image.link}
                             alt={name}
-                            layout="fixed"
                             width={desktop ? image.width : image.width / 2}
                             height={desktop ? image.height : image.height / 2}
                           />
@@ -157,9 +189,13 @@ const Games: NextPage = () => {
                         <Image
                           src={gif.link}
                           alt={name}
-                          layout="responsive"
                           width={desktop ? gif.width : gif.width * 0.7}
                           height={desktop ? gif.height : gif.height * 0.7}
+                          sizes="100vw"
+                          style={{
+                            width: '100%',
+                            height: 'auto',
+                          }}
                         />
                       </div>
                     </AnimatedWrapper>
@@ -193,4 +229,4 @@ const Games: NextPage = () => {
   );
 };
 
-export default memo(Games);
+export default memo(Degens);

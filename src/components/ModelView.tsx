@@ -1,11 +1,14 @@
 import { useEffect, Dispatch, SetStateAction, useState } from 'react';
 import { useRouter } from 'next/router';
+
 import { styled } from '@mui/material/styles';
+// import Button from '@mui/material/Button';
 import CircularProgress from '@mui/material/CircularProgress';
 import FormControl from '@mui/material/FormControl';
 import InputBase from '@mui/material/InputBase';
 import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
+
 import { DEGEN_3D_MODEL_URL } from '@/constants/degens';
 import { SRC, Color } from '@/types/gltf';
 import styles from '@/styles/gltf.module.scss';
@@ -23,7 +26,8 @@ export function ModelView({ selected }: { selected: SRC }) {
   const { tokenId } = router.query;
   const [loading, setLoading] = useState(true);
   const MODEL_SRC = `${DEGEN_3D_MODEL_URL}/${tokenId}/${tokenId}.gltf`;
-  const POSTER_SRC = `${DEGEN_3D_MODEL_URL}/${tokenId}/${tokenId}.webp`;
+  // const POSTER_SRC = `${DEGEN_3D_MODEL_URL}/${tokenId}/${tokenId}.webp`;
+  // const TEXTURE_SRC = `${DEGEN_3D_MODEL_URL}/${tokenId}/${tokenId}.png`;
 
   const handleProgress = (event: Event) => {
     // @ts-ignore
@@ -52,9 +56,9 @@ export function ModelView({ selected }: { selected: SRC }) {
         alt="Nifty League DEGEN 3D model"
         style={selected === SRC.MODEL ? { minHeight: '100vh', width: '100%' } : { display: 'none' }}
         src={MODEL_SRC}
-        // @ts-ignore
-        poster={POSTER_SRC}
+        // poster={POSTER_SRC}
         loading="eager"
+        // @ts-ignore
         exposure="0.72"
         shadow-intensity="1"
         shadow-softness="0.8"
@@ -117,9 +121,9 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     boxShadow: '0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12)',
     '&:focus': {
       borderRadius: 4,
-      borderColor: '#80bdff',
+      borderColor: '#5f4ce6',
       backgroundColor: '#fff',
-      boxShadow: '0 0 0 0.2rem rgba(0,123,255,.25)',
+      boxShadow: '0 0 0 0.2rem rgba(95,76,230,.25)',
     },
   },
 }));

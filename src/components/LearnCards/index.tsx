@@ -20,7 +20,14 @@ const LearnCard = ({ btnText, external, image, link, subtitle, title }: LearnCar
         <div className="position-absolute w-100 h-100">
           <AnimatedWrapper>
             <div className="animated-fade-quick animated-fade-start transition-delay-small">
-              <Image alt={`${title} card background`} layout="fill" objectFit="cover" priority src={image} />
+              <Image
+                alt={`${title} card background`}
+                priority
+                src={image}
+                fill
+                sizes="100vw"
+                style={{ objectFit: 'cover' }}
+              />
             </div>
           </AnimatedWrapper>
         </div>

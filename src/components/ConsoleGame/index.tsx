@@ -19,9 +19,13 @@ const ConsoleGame = ({ src }: { src: string }) => {
             className="pixelated"
             width={4842}
             height={3371}
-            layout="responsive"
             src="/img/home/classic-gaming-reinvented-notv.png"
             priority
+            sizes="100vw"
+            style={{
+              width: '100%',
+              height: 'auto',
+            }}
           />
           <video
             id="console-video"
@@ -48,39 +52,51 @@ const ConsoleGame = ({ src }: { src: string }) => {
               className="pixelated"
               width={4842}
               height={3371}
-              layout="responsive"
               src="/img/home/bonk.png"
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </div>
       </AnimatedWrapper>
       <div className={styles.gaming_controller}>
-        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="medium">
+        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="small">
           <div className="animation-bounce animated-fade-start animated-fade transition-delay-large">
             <Image
               alt="Classic Gaming Reinvented Controller Left"
               className="pixelated"
               width={4842}
               height={3371}
-              layout="responsive"
               src="/img/home/gaming_controller_left.png"
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </AnimatedWrapper>
       </div>
       <div className={styles.gaming_controller}>
-        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="medium">
+        <AnimatedWrapper parallax parallaxDirection="bottom" transitionAmount="small">
           <div className="animation-bounce2 animated-fade-start animated-fade transition-delay-large">
             <Image
               alt="Classic Gaming Reinvented Controller Right"
               className="pixelated"
               width={4842}
               height={3371}
-              layout="responsive"
               src="/img/home/gaming_controller_right.png"
               priority
+              sizes="100vw"
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
             />
           </div>
         </AnimatedWrapper>

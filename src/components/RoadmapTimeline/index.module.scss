@@ -153,7 +153,7 @@ Background
 }
 @media only screen and (min-width: 1170px) {
   .moon {
-    margin-top: -185px;
+    margin-top: -200px;
   }
 }
 
@@ -225,7 +225,9 @@ Timeline
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--custom-color-brand-secondary), inset 0 2px 0 rgba(0, 0, 0, 0.08),
+  box-shadow:
+    0 0 0 4px var(--custom-color-brand-secondary),
+    inset 0 2px 0 rgba(0, 0, 0, 0.08),
     0 3px 0 4px rgba(0, 0, 0, 0.05);
 }
 .cd_timeline_checkpoint {
@@ -425,5 +427,75 @@ Timeline
   }
   100% {
     opacity: 1;
+  }
+}
+
+/* -------------------------------- 
+
+Satoshi
+
+-------------------------------- */
+
+$breakpoint-md: 850px;
+$breakpoint-lg: 1000px;
+$breakpoint-xl: 1170px;
+
+.satoshiStationary {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: calc(100% - 90px);
+  transform: scaleX(-1);
+  width: 125px;
+  -webkit-animation-name: float-inverse;
+  -webkit-animation-delay: 100ms;
+  -webkit-animation-duration: 2000ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-name: float-inverse;
+  animation-delay: 100ms;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+}
+
+@media only screen and (min-width: $breakpoint-md) {
+  .satoshiStationary {
+    width: 175px;
+  }
+}
+@media only screen and (min-width: $breakpoint-lg) {
+  .satoshiStationary {
+    width: 200px;
+  }
+}
+@media only screen and (min-width: $breakpoint-xl) {
+  .satoshiStationary {
+    left: 50%;
+    width: 250px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-25px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+@keyframes float-inverse {
+  0% {
+    transform: scaleX(-1) translatey(0px);
+  }
+  50% {
+    transform: scaleX(-1) translatey(-25px);
+  }
+  100% {
+    transform: scaleX(-1) translatey(0px);
   }
 }
