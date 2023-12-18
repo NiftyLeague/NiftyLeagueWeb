@@ -11,7 +11,6 @@
 
 .sprite {
   width: 100vw;
-  max-width: 100%;
   object-fit: cover;
   object-position: top left;
   composes: pixelated;
@@ -19,7 +18,6 @@
 
 .image {
   width: 100vw;
-  max-width: 100%;
   object-fit: cover;
   object-position: top left;
   composes: pixelated;
@@ -38,6 +36,18 @@
 }
 
 /*************************************** Options **********************************************/
+
+.nftlUnclaimed {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  color: #5f4ce6;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #5f4ce6;
+  border-radius: 4px;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+}
 
 .wrapper {
   display: flex;

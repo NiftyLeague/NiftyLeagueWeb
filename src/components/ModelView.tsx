@@ -21,7 +21,7 @@ declare global {
   }
 }
 
-export function ModelView({ selected }: { selected: SRC }) {
+export function ModelView({ source }: { source: SRC }) {
   const router = useRouter();
   const { tokenId } = router.query;
   const [loading, setLoading] = useState(true);
@@ -45,7 +45,7 @@ export function ModelView({ selected }: { selected: SRC }) {
 
   return (
     <>
-      {selected === SRC.MODEL && loading ? (
+      {source === SRC.MODEL && loading ? (
         <div style={{ minHeight: '100vh', width: '100%', position: 'absolute', display: 'flex', zIndex: 2 }}>
           <CircularProgress color="secondary" style={{ margin: 'auto', width: 75, height: 'auto' }} />
         </div>
@@ -54,7 +54,7 @@ export function ModelView({ selected }: { selected: SRC }) {
         // https://modelviewer.dev/docs/index.html#loading-attributes
         id="model-viewer"
         alt="Nifty League DEGEN 3D model"
-        style={selected === SRC.MODEL ? { minHeight: '100vh', width: '100%' } : { display: 'none' }}
+        style={source === SRC.MODEL ? { minHeight: '100vh', width: '100%' } : { display: 'none' }}
         src={MODEL_SRC}
         // poster={POSTER_SRC}
         loading="eager"
