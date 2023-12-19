@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
-import dynamic from 'next/dynamic';
+// import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import Image from 'next/image';
-import Script from 'next/script';
+// import Script from 'next/script';
 import cn from 'classnames';
 import { ButtonGroup, Button } from '@mui/material';
 
 import { DEGEN_BASE_SPRITE_URL, LEGGIES } from '@/constants/degens';
 import { SRC, Color } from '@/types/gltf';
-import useClaimableNFTL from '@/hooks/useClaimableNFTL';
-import { formatNumberToDisplay } from '@/lib/numbers';
+// import useClaimableNFTL from '@/hooks/useClaimableNFTL';
+// import { formatNumberToDisplay } from '@/lib/numbers';
 
 import styles from '@/styles/gltf.module.scss';
 
@@ -24,7 +24,7 @@ export default function DegenViews() {
   const [color, setColor] = useState<Color>('purple');
   const IMAGE_SRC = `/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`;
   const SPRITE_SRC = `${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`;
-  const { totalAccrued } = useClaimableNFTL(tokenId as string);
+  // const { totalAccrued } = useClaimableNFTL(tokenId as string);
 
   if (!tokenId) return null;
 
@@ -108,11 +108,11 @@ export default function DegenViews() {
             </div>
             {/* {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />} */}
           </div>
-          {source === SRC.IMAGE && (
+          {/* {source === SRC.IMAGE && (
             <div className={styles.menu__nftlUnclaimed}>
               <strong>NFTL Unclaimed:</strong> {formatNumberToDisplay(totalAccrued)}
             </div>
-          )}
+          )} */}
         </main>
       </>
     </>
