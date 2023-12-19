@@ -251,7 +251,7 @@ const Home: NextPage = () => {
       {/* SMASHERS */}
       <div className="row row-top-spacing m-0 p-0 position-relative" ref={gamingSectionRef}>
         <div className="d-flex flex-column text-center position-relative p-0">
-          <div className="mt-2 mt-md-4 mt-lg-5 move-position-down">
+          <div className="mt-3 mt-lg-5">
             <AnimatedWrapper>
               <h2 className="px-sm-5 animated-header-text animated-header-text-start">CLASSIC GAMING REINVENTED</h2>
             </AnimatedWrapper>
