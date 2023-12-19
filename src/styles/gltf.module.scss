@@ -1,3 +1,5 @@
+/*************************************** Files **********************************************/
+
 .pixelated {
   image-rendering: crisp-edges;
   image-rendering: -moz-crisp-edges; /* Firefox */
@@ -8,34 +10,41 @@
 }
 
 .sprite {
-  width: 100vw;
   object-fit: cover;
-  object-position: top left;
+  object-position: center;
   composes: pixelated;
 }
 
 .image {
-  width: 100vw;
-  object-fit: cover;
-  object-position: top left;
+  position: absolute;
+  width: 112%;
+  height: auto;
+  min-height: 100%;
+  top: 45%;
+  left: 48%;
+  transform: translate(-50%, -50%);
   composes: pixelated;
 }
 
-.wrapper {
+@media (max-width: 450px) {
+  .image {
+    width: 105%;
+  }
+}
+
+/*************************************** Options **********************************************/
+
+.main__wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width: 100%;
 }
 
-.main__wrapper {
+.model__wrapper {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-}
-
-#main__viewer,
-.main__wrapper {
   min-height: 100vh;
   width: 100%;
 }
@@ -49,38 +58,22 @@
   justify-content: space-between;
 }
 
-@media (max-width: 615px) {
-  .image,
-  .sprite {
-    min-height: 100vh;
-    object-position: center;
-  }
-  .image {
-    width: 106% !important;
-    margin-left: -5%;
-  }
-}
-
 .menu__overlay__boggs {
   display: flex;
   margin-right: 5px;
-
   button {
-    padding: 0.5rem 1rem;
+    padding: 0.3rem 0.8rem;
     margin-right: -1px;
     border: 1px solid #5f4ce6 !important;
   }
-
   button:hover {
     cursor: pointer;
     background-color: #fff;
   }
-
   .btn {
     background-color: #fff;
     color: #5f4ce6;
   }
-
   .btn_selected {
     background-color: #5f4ce6 !important;
     color: #fff !important;
@@ -92,63 +85,37 @@
   display: flex;
 
   .background__picker {
-    margin-right: 5px;
-  }
-
-  select {
-    cursor: pointer;
-    background-color: #fff;
-    border: thin solid #333;
-    display: inline-block;
-    line-height: 1.5em;
-    padding: 0.5em 3.5em 0.5em 1em;
-    font-family: Nokora, sans-serif;
-    margin: 0;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    min-width: 120px;
-    background-image: linear-gradient(45deg, transparent 50%, gray 0), linear-gradient(135deg, gray 50%, transparent 0),
-      linear-gradient(90deg, #ccc, #ccc);
-    background-position:
-      calc(100% - 20px) calc(1em + 2px),
-      calc(100% - 15px) calc(1em + 2px),
-      calc(100% - 2.5em) 0.5em;
-  }
-
-  select,
-  select:focus {
-    color: #000;
-    background-size:
-      5px 5px,
-      5px 5px,
-      1px 1.5em;
-    background-repeat: no-repeat;
-  }
-
-  select:focus {
-    background-image: linear-gradient(45deg, #333 50%, transparent 0), linear-gradient(135deg, transparent 50%, #333 0),
-      linear-gradient(90deg, #ccc, #ccc);
-    background-position:
-      calc(100% - 15px) 1em,
-      calc(100% - 20px) 1em,
-      calc(100% - 2.5em) 0.5em;
-    border-color: #333;
-    outline: 0;
-  }
-
-  select:-moz-focusring {
-    color: transparent;
-    text-shadow: 0 0 0 #000;
+    color: #5f4ce6;
+    svg {
+      color: #5f4ce6;
+      padding-left: 5px;
+    }
   }
 }
+
+.menu__nftlUnclaimed {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  color: #5f4ce6;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #5f4ce6;
+  border-radius: 4px;
+  box-shadow:
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+
+/*************************************** Colors **********************************************/
 
 .gradient_salmon {
   background: radial-gradient(#a5676880, #a56768);
 }
 
 .gradient_purple {
-  background: radial-gradient(#a6679f80, #a6679f);
+  background: radial-gradient(rgba(94, 115, 235, 0.88), rgba(98, 14, 223, 0.78));
 }
 
 .gradient_blue {
