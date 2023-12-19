@@ -3,8 +3,8 @@ import { useRouter } from 'next/router';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-// import { WagmiConfig, createConfig, configureChains, mainnet } from 'wagmi';
-// import { publicProvider } from 'wagmi/providers/public';
+import { WagmiConfig, createConfig, configureChains, mainnet } from 'wagmi';
+import { publicProvider } from 'wagmi/providers/public';
 
 import * as ga from '@/lib/ga';
 
@@ -15,13 +15,13 @@ import '@/styles/slick.css';
 import '@/styles/footer.scss';
 import '@/styles/header.scss';
 
-// const { publicClient, webSocketPublicClient } = configureChains([mainnet], [publicProvider()]);
+const { publicClient, webSocketPublicClient } = configureChains([mainnet], [publicProvider()]);
 
-// const config = createConfig({
-//   autoConnect: true,
-//   publicClient,
-//   webSocketPublicClient,
-// });
+const config = createConfig({
+  autoConnect: true,
+  publicClient,
+  webSocketPublicClient,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -48,9 +48,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       </Head>
-      {/* <WagmiConfig config={config}> */}
-      <Component {...pageProps} />
-      {/* </WagmiConfig> */}
+      <WagmiConfig config={config}>
+        <Component {...pageProps} />
+      </WagmiConfig>
     </>
   );
 }
