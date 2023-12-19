@@ -17,18 +17,18 @@
 
 .image {
   position: absolute;
-  width: 110%;
+  width: 112%;
   height: auto;
   min-height: 100%;
-  top: 46%;
-  left: 50%;
+  top: 45%;
+  left: 48%;
   transform: translate(-50%, -50%);
   composes: pixelated;
 }
 
 @media (max-width: 450px) {
   .image {
-    width: 100%;
+    width: 105%;
   }
 }
 
