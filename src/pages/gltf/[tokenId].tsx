@@ -14,8 +14,8 @@ import { formatNumberToDisplay } from '@/lib/numbers';
 
 import styles from '@/styles/gltf.module.scss';
 
-const ModelView = dynamic(() => import('@/components/ModelView'));
-const ModelActions = dynamic(() => import('@/components/ModelView').then(mod => mod.ModelActions));
+// const ModelView = dynamic(() => import('@/components/ModelView'));
+// const ModelActions = dynamic(() => import('@/components/ModelView').then(mod => mod.ModelActions));
 
 export default function DegenViews() {
   const router = useRouter();
@@ -46,7 +46,7 @@ export default function DegenViews() {
           background-color: #fff;
         }
       `}</style>
-      <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></Script>
+      {/* <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></Script> */}
       <>
         {source === SRC.IMAGE && (
           <Image
@@ -80,7 +80,7 @@ export default function DegenViews() {
             }),
           })}
         >
-          <ModelView source={source} />
+          {/* <ModelView source={source} /> */}
           <div className={styles.menu__overlay}>
             <div className={styles.menu__overlay__dimension}>
               <div className={styles.menu__overlay__boggs}>
@@ -91,12 +91,12 @@ export default function DegenViews() {
                   >
                     2D
                   </Button>
-                  <Button
+                  {/* <Button
                     onClick={() => setSource(SRC.MODEL)}
                     className={cn(styles.btn, { [styles.btn_selected]: source === SRC.MODEL })}
                   >
                     3D
-                  </Button>
+                  </Button> */}
                   <Button
                     onClick={() => setSource(SRC.SPRITE)}
                     className={cn(styles.btn, { [styles.btn_selected]: source === SRC.SPRITE })}
@@ -106,7 +106,7 @@ export default function DegenViews() {
                 </ButtonGroup>
               </div>
             </div>
-            {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />}
+            {/* {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />} */}
           </div>
           {source === SRC.IMAGE && (
             <div className={styles.menu__nftlUnclaimed}>
