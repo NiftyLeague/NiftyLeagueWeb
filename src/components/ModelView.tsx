@@ -44,7 +44,7 @@ export function ModelView({ source }: { source: SRC }) {
   }, []);
 
   return (
-    <>
+    <div className={styles.model__wrapper}>
       {source === SRC.MODEL && loading ? (
         <div style={{ minHeight: '100vh', width: '100%', position: 'absolute', display: 'flex', zIndex: 2 }}>
           <CircularProgress color="secondary" style={{ margin: 'auto', width: 75, height: 'auto' }} />
@@ -79,7 +79,7 @@ export function ModelView({ source }: { source: SRC }) {
         // scale="0.5 0.5 0.5"
         // orientation="0 0 200deg"
       />
-    </>
+    </div>
   );
 }
 

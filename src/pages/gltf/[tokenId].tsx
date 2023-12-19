@@ -36,19 +36,18 @@ export default function DegenViews() {
       </Head>
       <style jsx global>{`
         body,
-        html {
-          margin: 0;
-          height: 100%;
-          overflow: hidden;
-        }
-        body {
-          background-color: #fff;
+        html,
+        #__next {
           margin: 0;
           padding: 0;
+          height: 100%;
+          width: 100%;
+          overflow: hidden;
+          background-color: #fff;
         }
       `}</style>
       <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></Script>
-      <div className={styles.root}>
+      <>
         {source === SRC.IMAGE && (
           <Image
             alt="NiftyDegen 2D NFT"
@@ -61,11 +60,8 @@ export default function DegenViews() {
           />
         )}
         {source === SRC.SPRITE && <Image alt="Degen Sprite" className={styles.sprite} fill priority src={SPRITE_SRC} />}
-        {source === SRC.IMAGE && (
-          <div className={styles.nftlUnclaimed}>NFTL Unclaimed: {formatNumberToDisplay(totalAccrued)}</div>
-        )}
-        <div
-          className={cn(styles.wrapper, {
+        <main
+          className={cn(styles.main__wrapper, {
             ...(source === SRC.MODEL && {
               [styles.gradient_salmon]: color === 'salmon',
               [styles.gradient_purple]: color === 'purple',
@@ -84,38 +80,41 @@ export default function DegenViews() {
             }),
           })}
         >
-          <main className={styles.main__wrapper}>
-            <ModelView source={source} />
-            <div className={styles.menu__overlay}>
-              <div className={styles.menu__overlay__dimension}>
-                <div className={styles.menu__overlay__boggs}>
-                  <ButtonGroup variant="contained" size="small" aria-label="outlined primary button group">
-                    <Button
-                      onClick={() => setSource(SRC.IMAGE)}
-                      className={cn(styles.btn, { [styles.btn_selected]: source === SRC.IMAGE })}
-                    >
-                      2D
-                    </Button>
-                    <Button
-                      onClick={() => setSource(SRC.MODEL)}
-                      className={cn(styles.btn, { [styles.btn_selected]: source === SRC.MODEL })}
-                    >
-                      3D
-                    </Button>
-                    <Button
-                      onClick={() => setSource(SRC.SPRITE)}
-                      className={cn(styles.btn, { [styles.btn_selected]: source === SRC.SPRITE })}
-                    >
-                      Sprite
-                    </Button>
-                  </ButtonGroup>
-                </div>
+          <ModelView source={source} />
+          <div className={styles.menu__overlay}>
+            <div className={styles.menu__overlay__dimension}>
+              <div className={styles.menu__overlay__boggs}>
+                <ButtonGroup variant="contained" size="small" aria-label="outlined primary button group">
+                  <Button
+                    onClick={() => setSource(SRC.IMAGE)}
+                    className={cn(styles.btn, { [styles.btn_selected]: source === SRC.IMAGE })}
+                  >
+                    2D
+                  </Button>
+                  <Button
+                    onClick={() => setSource(SRC.MODEL)}
+                    className={cn(styles.btn, { [styles.btn_selected]: source === SRC.MODEL })}
+                  >
+                    3D
+                  </Button>
+                  <Button
+                    onClick={() => setSource(SRC.SPRITE)}
+                    className={cn(styles.btn, { [styles.btn_selected]: source === SRC.SPRITE })}
+                  >
+                    Sprite
+                  </Button>
+                </ButtonGroup>
               </div>
-              {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />}
             </div>
-          </main>
-        </div>
-      </div>
+            {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />}
+          </div>
+          {source === SRC.IMAGE && (
+            <div className={styles.menu__nftlUnclaimed}>
+              <strong>NFTL Unclaimed:</strong> {formatNumberToDisplay(totalAccrued)}
+            </div>
+          )}
+        </main>
+      </>
     </>
   );
 }
