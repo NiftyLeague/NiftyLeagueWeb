@@ -764,6 +764,11 @@
   opacity: 0.9;
 }
 
+.move-position-down {
+  margin-bottom: -8rem;
+  z-index: 2;
+}
+
 /*************************************** Media Queries **********************************************/
 
 /* desktop view */
@@ -882,6 +887,9 @@
     left: calc(50% - 80px);
     top: calc(50% - 80px);
   }
+  .move-position-down {
+    margin-bottom: -7rem;
+  }
 }
 
 @media (max-width: 1052px) {
@@ -999,6 +1007,9 @@
   .home-hero-halo {
     right: 25%;
     top: calc(22.5% + 50px);
+  }
+  .move-position-down {
+    margin-bottom: -3rem;
   }
 }
 
