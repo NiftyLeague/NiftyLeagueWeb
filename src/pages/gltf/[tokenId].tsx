@@ -50,7 +50,15 @@ export default function DegenViews() {
       <Script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></Script>
       <div className={styles.root}>
         {source === SRC.IMAGE && (
-          <Image alt="NiftyDegen 2D NFT" className={styles.image} fill priority quality={100} src={IMAGE_SRC} />
+          <Image
+            alt="NiftyDegen 2D NFT"
+            className={styles.image}
+            width={584}
+            height={640}
+            priority
+            quality={100}
+            src={IMAGE_SRC}
+          />
         )}
         {source === SRC.SPRITE && <Image alt="Degen Sprite" className={styles.sprite} fill priority src={SPRITE_SRC} />}
         {source === SRC.IMAGE && (

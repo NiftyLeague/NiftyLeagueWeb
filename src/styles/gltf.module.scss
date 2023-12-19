@@ -10,29 +10,20 @@
 }
 
 .sprite {
-  width: 100vw;
   object-fit: cover;
-  object-position: top left;
+  object-position: center;
   composes: pixelated;
 }
 
 .image {
-  width: 100vw;
-  object-fit: cover;
-  object-position: top left;
+  position: absolute;
+  width: 110%;
+  height: auto;
+  min-height: 100%;
+  top: 45%;
+  left: 49%;
+  transform: translate(-50%, -50%);
   composes: pixelated;
-}
-
-@media (max-width: 615px) {
-  .image,
-  .sprite {
-    min-height: 100vh;
-    object-position: center;
-  }
-  .image {
-    width: 106% !important;
-    margin-left: -5%;
-  }
 }
 
 /*************************************** Options **********************************************/
@@ -46,7 +37,10 @@
   padding: 0.3rem 0.8rem;
   border: 1px solid #5f4ce6;
   border-radius: 4px;
-  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 1px 5px 0px rgba(0,0,0,0.12);
+  box-shadow:
+    0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 }
 
 .wrapper {
