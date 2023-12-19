@@ -29,8 +29,7 @@
     "react-multi-carousel": "^2.8.0",
     "sass": "^1.49.7",
     "three": "^0.159.0",
-    "viem": "^1.20.1",
-    "wagmi": "^1.4.12"
+    "viem": "^1.20.1"
   },
   "devDependencies": {
     "@types/gtag.js": "^0.0.18",

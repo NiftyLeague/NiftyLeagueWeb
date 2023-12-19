@@ -1,13 +1,8 @@
 import { useEffect, useState } from 'react';
-// import { useContractRead } from 'wagmi';
-import { formatEther, createPublicClient, http, Abi } from 'viem';
+import type { Abi, GetBlockNumberErrorType } from 'viem';
+import { formatEther } from 'viem';
 import CONTRACTS from '@/constants/contracts';
-import { mainnet } from 'viem/chains';
-
-export const publicClient = createPublicClient({
-  chain: mainnet,
-  transport: http(),
-});
+import { publicClient } from '@/lib/viemClient';
 
 const NFTL_CONTRACT = CONTRACTS.NFTLToken;
 
@@ -17,29 +12,22 @@ interface NFTLClaimableState {
 }
 
 export default function useClaimableNFTL(tokenId: number | string): NFTLClaimableState {
-  // const { data, isLoading: loading } = useContractRead({
-  //   address: NFTL_CONTRACT.address,
-  //   abi: NFTL_CONTRACT.abi,
-  //   functionName: 'accumulated',
-  //   args: [tokenId],
-  //   cacheTime: 300_000,
-  //   enabled: !!tokenId,
-  //   select: (data: unknown) => (data ? parseFloat(formatEther(data as bigint)) : 0),
-  // });
-
-  // return { totalAccrued: data || 0, loading };
-
   const [totalAccrued, setTotalAccrued] = useState(0);
 
   useEffect(() => {
     const readContract = async () => {
-      const data = await publicClient.readContract({
-        address: NFTL_CONTRACT.address,
-        abi: NFTL_CONTRACT.abi as Abi,
-        functionName: 'accumulated',
-        args: [tokenId],
-      });
-      setTotalAccrued(data ? parseFloat(formatEther(data as bigint)) : 0);
+      try {
+        const data = await publicClient.readContract({
+          address: NFTL_CONTRACT.address,
+          abi: NFTL_CONTRACT.abi as Abi,
+          functionName: 'accumulated',
+          args: [tokenId],
+        });
+        setTotalAccrued(data ? parseFloat(formatEther(data as bigint)) : 0);
+      } catch (e) {
+        const error = e as GetBlockNumberErrorType;
+        console.error(error);
+      }
     };
     if (tokenId) readContract();
   }, [tokenId]);

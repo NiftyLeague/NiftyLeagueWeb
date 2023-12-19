@@ -11,20 +11,29 @@ import { DEGEN_BASE_SPRITE_URL, LEGGIES } from '@/constants/degens';
 import { SRC, Color } from '@/types/gltf';
 import useClaimableNFTL from '@/hooks/useClaimableNFTL';
 import { formatNumberToDisplay } from '@/lib/numbers';
+import ErrorBoundary from '@/components/ErrorBoundry';
 
 import styles from '@/styles/gltf.module.scss';
 
 // const ModelView = dynamic(() => import('@/components/ModelView'));
 // const ModelActions = dynamic(() => import('@/components/ModelView').then(mod => mod.ModelActions));
 
+const TokenMenu = ({ tokenId }: { tokenId: string }) => {
+  const { totalAccrued } = useClaimableNFTL(tokenId as string);
+  return (
+    <div className={styles.menu__nftlUnclaimed}>
+      <strong>NFTL Unclaimed:</strong> {formatNumberToDisplay(totalAccrued)}
+    </div>
+  );
+};
+
 export default function DegenViews() {
   const router = useRouter();
-  const { tokenId } = router.query;
+  const { tokenId } = router.query as { tokenId?: string };
   const [source, setSource] = useState<SRC>(SRC.IMAGE);
   const [color, setColor] = useState<Color>('purple');
   const IMAGE_SRC = `/img/degens/${tokenId}.${LEGGIES.includes(Number(tokenId)) ? 'gif' : 'png'}`;
   const SPRITE_SRC = `${DEGEN_BASE_SPRITE_URL}/${tokenId}.gif`;
-  const { totalAccrued } = useClaimableNFTL(tokenId as string);
 
   if (!tokenId) return null;
 
@@ -109,9 +118,9 @@ export default function DegenViews() {
             {/* {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />} */}
           </div>
           {source === SRC.IMAGE && (
-            <div className={styles.menu__nftlUnclaimed}>
-              <strong>NFTL Unclaimed:</strong> {formatNumberToDisplay(totalAccrued)}
-            </div>
+            <ErrorBoundary>
+              <TokenMenu tokenId={tokenId} />
+            </ErrorBoundary>
           )}
         </main>
       </>
