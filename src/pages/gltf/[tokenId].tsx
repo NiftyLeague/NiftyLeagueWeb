@@ -127,7 +127,7 @@ export default function DegenViews() {
                 alt="Nifty League Logo"
                 width={200}
                 height={70}
-                style={{ maxWidth: '30vw', height: 'auto' }}
+                style={{ maxWidth: '24vw', height: 'auto' }}
                 quality={100}
                 src="/img/logo/wordmark.png"
               />
