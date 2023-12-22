@@ -117,6 +117,15 @@ export default function DegenViews() {
             </div>
             {source === SRC.MODEL && <ModelActions color={color} setColor={setColor} />}
           </div>
+          <div className={styles.menu__logo}>
+            <Image
+              alt="Nifty League Logo"
+              width={200}
+              height={70}
+              style={{ maxWidth: '30vw', height: 'auto' }}
+              src="/img/logo/wordmark.png"
+            />
+          </div>
           {source === SRC.IMAGE && (
             <ErrorBoundary>
               <TokenMenu tokenId={tokenId} />
