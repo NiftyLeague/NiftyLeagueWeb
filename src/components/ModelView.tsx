@@ -47,7 +47,7 @@ export function ModelView({ source }: { source: SRC }) {
     <div className={styles.model__wrapper}>
       {source === SRC.MODEL && loading ? (
         <div style={{ minHeight: '100vh', width: '100%', position: 'absolute', display: 'flex', zIndex: 2 }}>
-          <CircularProgress color="secondary" style={{ margin: 'auto', width: 75, height: 'auto' }} />
+          <CircularProgress style={{ margin: 'auto', width: 75, height: 'auto', color: '#FFF' }} />
         </div>
       ) : null}
       <model-viewer
