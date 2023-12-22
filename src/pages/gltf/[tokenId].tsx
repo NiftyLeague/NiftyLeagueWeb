@@ -128,6 +128,7 @@ export default function DegenViews() {
                 width={200}
                 height={70}
                 style={{ maxWidth: '30vw', height: 'auto' }}
+                quality={100}
                 src="/img/logo/wordmark.png"
               />
             </div>
