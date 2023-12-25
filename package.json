@@ -28,7 +28,7 @@
     "react-dom": "18.2.0",
     "react-multi-carousel": "^2.8.0",
     "sass": "^1.49.7",
-    "three": "^0.159.0",
+    "three": "^0.160.0",
     "viem": "^1.20.1"
   },
   "devDependencies": {
