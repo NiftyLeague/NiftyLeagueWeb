@@ -77,7 +77,7 @@ const moduleExports = {
         permanent: false,
       },
       {
-        source: '/invite/smashers/:ref_code(\\w{7})',
+        source: '/invite/smashers/:ref_code(\\w{1,})',
         destination: 'https://niftysmashers.com/invite/:ref_code',
         permanent: false,
       },
