@@ -72,6 +72,11 @@ const moduleExports = {
         permanent: true,
       },
       {
+        source: '/NFTL/supply',
+        destination: 'https://api.niftyleague.com/NFTL/supply',
+        permanent: true,
+      },
+      {
         source: '/d/:token_id(\\d{1,})',
         destination: 'https://opensea.io/assets/ethereum/0x986aea67c7d6a15036e18678065eb663fc5be883/:token_id',
         permanent: false,
