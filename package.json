@@ -19,7 +19,7 @@
     "@google/model-viewer": "^3.0.2",
     "@mui/icons-material": "^5.15.0",
     "@mui/material": "^5.15.0",
-    "@sentry/nextjs": "^7.88.0",
+    "@sentry/nextjs": "^7.105.0",
     "classnames": "^2.3.1",
     "mdb-react-ui-kit": "^7.0.0",
     "next": "14.0.4",
