@@ -14,7 +14,7 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
+    "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.6.0",
     "@google/model-viewer": "^3.0.2",
     "@mui/icons-material": "^5.15.0",
